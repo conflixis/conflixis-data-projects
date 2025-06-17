@@ -102,8 +102,7 @@ bq_auth()
 conflixis-analytics/
 ├── claude-plans/          # Planning and documentation
 ├── projects/              # Analysis projects (notebooks, scripts, outputs)
-│   └── examples/         # Example projects
-├── r-scripts/            # Shared R analysis scripts
+│   └── examples/         # Example projects with Python and R scripts
 ├── src/                  # Shared Python modules
 │   ├── data/            # Data loading utilities
 │   ├── analysis/        # Analysis functions
@@ -138,11 +137,13 @@ conflixis-analytics/
 
 ### For R Users
 
-1. Work in the `r-scripts/` directory
+1. Create your project folder in the `projects/` directory alongside Python notebooks
 
 2. Use the `bigrquery` package for BigQuery access
 
 3. Consider using `reticulate` to interface with Python code when needed
+
+4. Store R scripts in your project folder with `.R` extension
 
 ### Version Control Guidelines
 
