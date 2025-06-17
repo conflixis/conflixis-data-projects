@@ -101,15 +101,15 @@ bq_auth()
 ```
 conflixis-analytics/
 ├── claude-plans/          # Planning and documentation
-├── notebooks/             # Jupyter notebooks (Python)
-│   └── examples/         # Example notebooks
-├── r-scripts/            # R analysis scripts
+├── projects/              # Analysis projects (notebooks, scripts, outputs)
+│   └── examples/         # Example projects
+├── r-scripts/            # Shared R analysis scripts
 ├── src/                  # Shared Python modules
 │   ├── data/            # Data loading utilities
 │   ├── analysis/        # Analysis functions
 │   └── visualization/   # Plotting utilities
+├── common/              # Shared secrets and config (git-ignored)
 ├── data/                # Local data cache (git-ignored)
-├── outputs/             # Analysis outputs (selective commit)
 ├── pyproject.toml       # Poetry configuration
 ├── .gitignore          # Git ignore rules
 └── README.md           # Project overview
@@ -130,9 +130,11 @@ conflixis-analytics/
    poetry add google-cloud-bigquery
    ```
 
-3. Create notebooks in the `notebooks/` directory
+3. Create your project folder in the `projects/` directory
 
 4. Share reusable code in the `src/` directory
+
+5. Store project-specific secrets in the `common/` folder
 
 ### For R Users
 
@@ -162,17 +164,21 @@ conflixis-analytics/
 
 ### Sharing Findings
 
-1. **Export notebooks** to HTML/PDF for sharing:
+1. **Organize your project**:
+   - Keep all project files in a dedicated folder under `projects/`
+   - Include notebooks, scripts, and outputs in your project folder
+
+2. **Export notebooks** to HTML/PDF for sharing:
    ```bash
    jupyter nbconvert --to html notebook.ipynb
    ```
 
-2. **Upload to Google Drive**:
+3. **Upload to Google Drive**:
    - Create a folder for your analysis
    - Include: exported notebooks, visualizations, summary documents
 
-3. **Document in repository**:
-   - Add a README in your analysis folder
+4. **Document in repository**:
+   - Add a README in your project folder
    - Link to Google Drive resources
 
 ## Common Tasks
@@ -233,6 +239,8 @@ df <- dbGetQuery(con, "SELECT * FROM table LIMIT 100")
 ## Next Steps
 
 1. Complete the setup process
-2. Run the example notebook in `notebooks/examples/`
-3. Start exploring the available datasets
-4. Create your first analysis branch
+2. Run the example notebook in `projects/examples/`
+3. Create your own project folder under `projects/`
+4. Set up any project-specific credentials in `common/`
+5. Start exploring the available datasets
+6. Create your first analysis branch
