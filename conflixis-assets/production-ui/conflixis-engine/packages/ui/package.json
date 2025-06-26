@@ -1,0 +1,76 @@
+{
+  "name": "@conflixis/ui",
+  "version": "2025.05.20",
+  "private": true,
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "sideEffects": false,
+  "files": [
+    "dist"
+  ],
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    },
+    "./button": {
+      "types": "./dist/button/index.d.ts",
+      "import": "./dist/button/index.js",
+      "require": "./dist/button/index.cjs"
+    },
+    "./card": {
+      "types": "./dist/card/index.d.ts",
+      "import": "./dist/card/index.js",
+      "require": "./dist/card/index.cjs"
+    },
+    "./loader": {
+      "types": "./dist/loader/index.d.ts",
+      "import": "./dist/loader/index.js",
+      "require": "./dist/loader/index.cjs"
+    }
+  },
+  "scripts": {
+    "build": "tsup src/index.tsx \"src/*/index.tsx\" --format cjs,esm --dts",
+    "dev": "tsup --watch",
+    "lint": "eslint src/**/*.ts*",
+    "clean": "rm -rf .turbo && rm -rf node_modules && rm -rf dist",
+    "storybook": "storybook dev -p 6006",
+    "storybook:build": "storybook build"
+  },
+  "devDependencies": {
+    "@material-tailwind/react": "^2.1.10",
+    "@swc/core": "^1.11.1",
+    "@types/react": "18.3.1",
+    "@types/react-dom": "18.3.1",
+    "eslint": "^8.47.0",
+    "react": "18.3.1",
+    "tsup": "8.4.0",
+    "typescript": "^5.1.6",
+    "@storybook/react": "^8.4.5",
+    "@storybook/react-vite": "^8.4.5",
+    "@storybook/cli": "^8.4.5",
+    "@storybook/addon-essentials": "^8.4.5",
+    "@storybook/addon-a11y": "^8.4.5",
+    "@storybook/addon-interactions": "^8.4.5",
+    "storybook": "^8.4.5",
+    "vite": "^6.3.5",
+    "ts-node": "^10.9.1",
+    "postcss": "^8.4.31",
+    "tailwindcss": "^3.4.14",
+    "autoprefixer": "^10.4.16"
+  },
+  "peerDependencies": {
+    "react": "18.3.1",
+    "@tailwindcss/typography": "^0.5.15",
+    "@types/react": "18.3.1",
+    "@types/react-dom": "18.3.1",
+    "classnames": "2.5.1",
+    "eslint": "^8.47.0",
+    "tailwindcss": "^3.4.14",
+    "tsup": "^7.2.0",
+    "typescript": "^5.1.6",
+    "react-dom": "18.3.1",
+    "@material-tailwind/react": "^2.1.10"
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "name": "conflixis-engine",
+  "version": "2025.05.20",
+  "private": true,
+  "packageManager": "npm@8.5.0",
+  "workspaces": [
+    "packages/*",
+    "functions/*"
+  ],
+  "scripts": {
+    "build": "npx turbo run build && docker compose build",
+    "dev": "docker compose up -d && npx turbo run dev --filter=@conflixis/ui --filter=@conflixis/core",
+    "dev:manager": "docker compose up -d manager api portal core_db reference_db postgrest && npx turbo run dev --filter=@conflixis/ui --filter=@conflixis/core",
+    "build:api": "npx turbo run build --filter=@conflixis/api && docker compose build api",
+    "dev:api": "docker compose up -d api && npx turbo run dev --filter=@conflixis/api",
+    "db:reset": "docker compose down -v",
+    "db:reset:core": "docker compose stop core_db && docker compose rm -f core_db && docker volume rm conflixis-engine_core-postgres-data && docker compose up -d --build core_db",
+    "check-types": "npx turbo run check-types",
+    "test": "jest",
+    "test:all": "jest --projects",
+    "gen:bom": "npx @cyclonedx/cyclonedx-npm package.json -o bill-of-materials.json",
+    "gen:docs": "node ./swagger.js && redocly build-docs docs/api-spec.json --output=docs/index.html"
+  },
+  "devDependencies": {
+    "@cyclonedx/cyclonedx-npm": "^4.3.0",
+    "@types/jest": "^29.5.14",
+    "@types/node": "^22.13.5",
+    "@types/react": "18.3.1",
+    "@types/react-dom": "18.3.1",
+    "@types/sanitize-html": "^2.11.0",
+    "@types/supertest": "^6.0.2",
+    "escodegen": "^1.14.3",
+    "jest": "^29.7.0",
+    "jsdoc": "^4.0.4",
+    "nodemon": "^3.1.9",
+    "supertest": "^7.1.0",
+    "swagger-autogen": "^2.23.6",
+    "tmp": "^0.2.3",
+    "ts-jest": "^29.2.6",
+    "turbo": "^2.3.4",
+    "typescript": "^5.7.3",
+    "uglify-js": "^3.19.3"
+  },
+  "dependencies": {
+    "@ai-sdk/ui-utils": "^1.2.11",
+    "@types/react-dom": "18.3.1",
+    "@types/rimraf": "^3.0.2",
+    "cookies": "^0.8.0",
+    "keygrip": "^1.1.0",
+    "text-decoding": "^1.0.0"
+  }
+}
