@@ -1,0 +1,62 @@
+# Name Matching Configuration File
+# This configuration controls the behavior of the name matching process
+
+# Input files configuration
+input:
+  file_a: "input/dh_hospitals.csv"
+  file_b: "input/PE Hospital Tracker_trim.csv"
+  column_a: "name"  # Column name in file A containing names to match
+  column_b: "Name"  # Column name in file B containing names to match against
+
+# Output configuration
+output:
+  directory: "output"
+  # Each run creates a timestamped file: {base_name}_matched_{YYYYMMDDHHMMSS}.csv
+  include_timestamp: true
+  
+# Processing parameters
+processing:
+  limit: 100000  # Number of rows to process from file A (null for all rows)
+  chunk_size: 50  # Chunk size for parallel processing
+  max_workers: 10  # Number of parallel workers
+
+# Stopwords for preprocessing (uncomment and modify as needed)
+# stopwords:
+#   - "inc"
+#   - "corporation"
+#   - "corp"
+#   - "llc"
+#   - "ltd"
+#   - "company"
+#   - "co"
+
+# Matching algorithm weights (must sum to 1.0)
+scoring_weights:
+  rapidfuzz: 0.1      # Basic string similarity
+  jellyfish: 0.2      # Jaro-Winkler similarity
+  thefuzz: 0.1        # Token sort ratio
+  token_based: 0.1    # Custom token-based matching
+  first_word: 0.4     # First word exact match (important for organizations)
+  partial_match: 0.1  # Partial string matching
+
+# Matching configuration
+matching:
+  # Minimum score threshold for a match to be considered valid (0-100)
+  min_score_threshold: 60.0
+  # Number of top matches to return for each name (set to 1 for single best match)
+  return_top_n_matches: 3
+  # Confidence level thresholds
+  confidence_thresholds:
+    high: 80.0      # Scores >= 80 are high confidence
+    medium: 60.0    # Scores 60-79 are medium confidence
+    low: 40.0       # Scores 40-59 are low confidence
+    # Scores below 40 are considered "no match"
+
+# Advanced options
+advanced:
+  # Whether to preprocess names (lowercase, remove special chars, etc.)
+  preprocess_names: true
+  # Cache preprocessed names for file B to improve performance
+  cache_preprocessed: true
+  # Include matches below threshold with "No Match" label
+  include_no_matches: false
