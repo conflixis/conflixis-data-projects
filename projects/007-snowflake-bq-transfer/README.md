@@ -6,11 +6,8 @@ This project transfers tables from Snowflake to BigQuery via Google Cloud Storag
 
 ```
 007-snowflake-bq-transfer/
-├── main/                    # Main execution scripts
-│   ├── dh_snowflake_bigquery_singlefile.py  # Primary transfer script (RECOMMENDED)
-│   ├── dh_snowflake_biqquery.py            # Legacy transfer script
-│   ├── transfer_from_existing_staging.py    # Transfer from existing staging
-│   └── transfer_large_table.sh              # Wrapper for large table transfers
+├── main/                    # Main execution script
+│   └── dh_snowflake_bigquery_singlefile.py  # Primary transfer script
 ├── setup/                   # Setup utilities
 │   └── setup_gcs_bucket.py                  # Configure GCS bucket
 ├── utils/                   # Utility scripts
@@ -34,7 +31,6 @@ This project transfers tables from Snowflake to BigQuery via Google Cloud Storag
 ├── config/                 # Configuration files (git-ignored)
 ├── logs/                   # Transfer logs
 ├── notebooks/              # Jupyter notebooks
-├── tests/                  # Test scripts
 └── docs/                   # Documentation
 
 ```
@@ -76,7 +72,7 @@ This project transfers tables from Snowflake to BigQuery via Google Cloud Storag
 
 ## Usage
 
-### Primary Transfer Script (Recommended)
+### Primary Transfer Script
 
 Navigate to the main directory:
 ```bash
@@ -100,16 +96,9 @@ python dh_snowflake_bigquery_singlefile.py --dry-run
 
 ### Large Table Transfers
 
-For very large tables, use the wrapper script:
+For very large tables, run in the background:
 ```bash
-./transfer_large_table.sh
-```
-
-### Transfer from Existing Staging
-
-If data is already staged in GCS:
-```bash
-python transfer_from_existing_staging.py
+nohup python dh_snowflake_bigquery_singlefile.py --table LARGE_TABLE_NAME > transfer.log 2>&1 &
 ```
 
 ## Validation and Monitoring
