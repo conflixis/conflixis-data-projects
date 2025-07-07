@@ -6,8 +6,7 @@ This project transfers tables from Snowflake to BigQuery via Google Cloud Storag
 
 ```
 007-snowflake-bq-transfer/
-├── main/                    # Main execution script
-│   └── dh_snowflake_bigquery_singlefile.py  # Primary transfer script
+├── dh_snowflake_bigquery_singlefile.py      # Main transfer script
 ├── setup/                   # Setup utilities
 │   └── setup_gcs_bucket.py                  # Configure GCS bucket
 ├── utils/                   # Utility scripts
@@ -26,12 +25,8 @@ This project transfers tables from Snowflake to BigQuery via Google Cloud Storag
 │   └── cleanup/            # Cleanup utilities
 │       ├── delete_bq_table.py              # Remove BigQuery tables
 │       └── delete_gcs_files.py             # Clean up GCS files
-├── sql/                    # SQL queries
-│   └── get_snowflake_service_account.sql   # Get service account info
-├── config/                 # Configuration files (git-ignored)
-├── logs/                   # Transfer logs
-├── notebooks/              # Jupyter notebooks
-└── docs/                   # Documentation
+├── .gitignore              # Git ignore file
+└── README.md               # This file
 
 ```
 
@@ -74,11 +69,6 @@ This project transfers tables from Snowflake to BigQuery via Google Cloud Storag
 
 ### Primary Transfer Script
 
-Navigate to the main directory:
-```bash
-cd main/
-```
-
 Transfer a single table:
 ```bash
 python dh_snowflake_bigquery_singlefile.py --table TABLE_NAME
@@ -106,25 +96,25 @@ nohup python dh_snowflake_bigquery_singlefile.py --table LARGE_TABLE_NAME > tran
 Before transfer:
 ```bash
 # Check source tables
-python ../utils/checks/check_source_tables.py
+python utils/checks/check_source_tables.py
 
 # Verify storage integration
-python ../utils/checks/check_storage_integration.py
+python utils/checks/check_storage_integration.py
 
 # Check GCS access
-python ../utils/checks/check_gcs_access.py
+python utils/checks/check_gcs_access.py
 ```
 
 After transfer:
 ```bash
 # Verify BigQuery table
-python ../utils/checks/check_bq_table.py
+python utils/checks/check_bq_table.py
 
 # Check GCS files
-python ../utils/checks/check_gcs_files.py
+python utils/checks/check_gcs_files.py
 
 # Validate Parquet files
-python ../utils/checks/check_parquet_file.py
+python utils/checks/check_parquet_file.py
 ```
 
 ## How it works
