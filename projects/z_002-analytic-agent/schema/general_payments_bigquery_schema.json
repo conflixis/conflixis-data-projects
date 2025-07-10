@@ -1,0 +1,548 @@
+[
+  {
+    "name": "Change_Type",
+    "type": "STRING",
+    "mode": "NULLABLE",
+    "description": "An indicator showing if the payment record is New, Added, Changed, or Unchanged in the current publication compared to the previous publication."
+  },
+  {
+    "name": "Covered_Recipient_Type",
+    "type": "STRING",
+    "mode": "NULLABLE",
+    "description": "An indicator showing if the recipient of the payment or transfer of value is a physician-covered recipient or non-physician practitioner or a teaching hospital."
+  },
+  {
+    "name": "Teaching_Hospital_CCN",
+    "type": "STRING",
+    "mode": "NULLABLE",
+    "description": "A unique identifying number (CMS Certification Number) of the Teaching Hospital receiving the payment or other transfer of value."
+  },
+  {
+    "name": "Teaching_Hospital_ID",
+    "type": "INT64",
+    "mode": "NULLABLE",
+    "description": "The system generated a unique identifier of the Teaching Hospital receiving the payment or other transfer of value."
+  },
+  {
+    "name": "Teaching_Hospital_Name",
+    "type": "STRING",
+    "mode": "NULLABLE",
+    "description": "The name of the Teaching Hospital receiving the payment or other transfer of value. The name displayed is as listed in CMS teaching hospital list under Hospital name."
+  },
+  {
+    "name": "Covered_Recipient_Profile_ID",
+    "type": "INT64",
+    "mode": "NULLABLE",
+    "description": "System generated unique identifier for covered recipient physician or covered recipient non-physician practitioner profile receiving the payment or other transfer of value."
+  },
+  {
+    "name": "Covered_Recipient_NPI",
+    "type": "INT64",
+    "mode": "NULLABLE",
+    "description": "National Provider Identifier is a unique identification number for covered recipient physician or covered recipient non-physician practitioner (and not the NPI of a group the physician/non-physician practitioner belongs to)."
+  },
+  {
+    "name": "Covered_Recipient_First_Name",
+    "type": "STRING",
+    "mode": "NULLABLE",
+    "description": "First name of the covered recipient physician or covered recipient non-physician practitioner receiving the payment or transfer of value, as reported by the submitting entity."
+  },
+  {
+    "name": "Covered_Recipient_Middle_Name",
+    "type": "STRING",
+    "mode": "NULLABLE",
+    "description": "Middle name of the covered recipient physician or covered recipient non-physician practitioner receiving the payment or transfer of value, as reported by the submitting entity."
+  },
+  {
+    "name": "Covered_Recipient_Last_Name",
+    "type": "STRING",
+    "mode": "NULLABLE",
+    "description": "Last name of the covered recipient physician or covered recipient non-physician practitioner receiving the payment or transfer of value, as reported by the submitting entity."
+  },
+  {
+    "name": "Covered_Recipient_Name_Suffix",
+    "type": "STRING",
+    "mode": "NULLABLE",
+    "description": "Name suffix of the covered recipient physician or covered recipient non-physician practitioner receiving the payment or transfer of value, as reported by the submitting entity."
+  },
+  {
+    "name": "Recipient_Primary_Business_Street_Address_Line1",
+    "type": "STRING",
+    "mode": "NULLABLE",
+    "description": "The first line of the primary practice/business street address of the physician or teaching hospital (covered recipient) receiving the payment or other transfer of value."
+  },
+  {
+    "name": "Recipient_Primary_Business_Street_Address_Line2",
+    "type": "STRING",
+    "mode": "NULLABLE",
+    "description": "The second line of the primary practice/business street address of the physician or teaching hospital (covered recipient) receiving the payment or other transfer of value."
+  },
+  {
+    "name": "Recipient_City",
+    "type": "STRING",
+    "mode": "NULLABLE",
+    "description": "The primary practice/business city of the physician or teaching hospital (covered recipient) receiving the payment or other transfer of value."
+  },
+  {
+    "name": "Recipient_State",
+    "type": "STRING",
+    "mode": "NULLABLE",
+    "description": "The primary practice/business state or territory abbreviation of the physician or teaching hospital (covered recipient) receiving the payment or transfer of value, if the primary practice/business address is in United States."
+  },
+  {
+    "name": "Recipient_Zip_Code",
+    "type": "STRING",
+    "mode": "NULLABLE",
+    "description": "The 9-digit zip code for the primary practice/business location of the physician or teaching hospital (covered recipient) receiving the payment or transfer of value."
+  },
+  {
+    "name": "Recipient_Country",
+    "type": "STRING",
+    "mode": "NULLABLE",
+    "description": "The primary practice/business address country name of the physician or teaching hospital (covered recipient) receiving the payment or transfer of value."
+  },
+  {
+    "name": "Recipient_Province",
+    "type": "STRING",
+    "mode": "NULLABLE",
+    "description": "The primary practice/business province name of the physician (covered recipient) receiving the payment or other transfer of value, if the primary practice/business address is outside the United States, and if applicable."
+  },
+  {
+    "name": "Recipient_Postal_Code",
+    "type": "STRING",
+    "mode": "NULLABLE",
+    "description": "The international postal code for the primary practice/business location of the physician (covered recipient) receiving the payment or other transfer of value, if the primary practice/business address is outside the United States."
+  },
+  {
+    "name": "Covered_Recipient_Primary_Type_1",
+    "type": "STRING",
+    "mode": "NULLABLE",
+    "description": "Primary type of medicine practiced by the physician or Non-Physician Practitioner (covered recipient)."
+  },
+  {
+    "name": "Covered_Recipient_Primary_Type_2",
+    "type": "STRING",
+    "mode": "NULLABLE",
+    "description": "Primary type of medicine practiced by the physician or Non-Physician Practitioner (covered recipient). Note: OP began accepting this field in PY2021."
+  },
+  {
+    "name": "Covered_Recipient_Primary_Type_3",
+    "type": "STRING",
+    "mode": "NULLABLE",
+    "description": "Primary type of medicine practiced by the physician or Non-Physician Practitioner (covered recipient). Note: OP began accepting this field in PY2021."
+  },
+  {
+    "name": "Covered_Recipient_Primary_Type_4",
+    "type": "STRING",
+    "mode": "NULLABLE",
+    "description": "Primary type of medicine practiced by the physician or Non-Physician Practitioner (covered recipient). Note: OP began accepting this field in PY2021."
+  },
+  {
+    "name": "Covered_Recipient_Primary_Type_5",
+    "type": "STRING",
+    "mode": "NULLABLE",
+    "description": "Primary type of medicine practiced by the physician or Non-Physician Practitioner (covered recipient). Note: OP began accepting this field in PY2021."
+  },
+  {
+    "name": "Covered_Recipient_Primary_Type_6",
+    "type": "STRING",
+    "mode": "NULLABLE",
+    "description": "Primary type of medicine practiced by the physician or Non-Physician Practitioner (covered recipient). Note: OP began accepting this field in PY2021."
+  },
+  {
+    "name": "Covered_Recipient_Specialty_1",
+    "type": "STRING",
+    "mode": "NULLABLE",
+    "description": "Physician's or non-physician practitioner's specialty chosen from the standardized \"provider taxonomy\" code list. Note: OP began accepting this field in PY2021."
+  },
+  {
+    "name": "Covered_Recipient_Specialty_2",
+    "type": "STRING",
+    "mode": "NULLABLE",
+    "description": "Physician's or non-physician practitioner's specialty chosen from the standardized \"provider taxonomy\" code list. Note: OP began accepting this field in PY2021."
+  },
+  {
+    "name": "Covered_Recipient_Specialty_3",
+    "type": "STRING",
+    "mode": "NULLABLE",
+    "description": "Physician's or non-physician practitioner's specialty chosen from the standardized \"provider taxonomy\" code list. Note: OP began accepting this field in PY2021."
+  },
+  {
+    "name": "Covered_Recipient_Specialty_4",
+    "type": "STRING",
+    "mode": "NULLABLE",
+    "description": "Physician's or non-physician practitioner's specialty chosen from the standardized \"provider taxonomy\" code list. Note: OP began accepting this field in PY2021."
+  },
+  {
+    "name": "Covered_Recipient_Specialty_5",
+    "type": "STRING",
+    "mode": "NULLABLE",
+    "description": "Physician's or non-physician practitioner's specialty chosen from the standardized \"provider taxonomy\" code list. Note: OP began accepting this field in PY2021."
+  },
+  {
+    "name": "Covered_Recipient_Specialty_6",
+    "type": "STRING",
+    "mode": "NULLABLE",
+    "description": "Physician's or non-physician practitioner's specialty chosen from the standardized \"provider taxonomy\" code list. Note: OP began accepting this field in PY2021."
+  },
+  {
+    "name": "Covered_Recipient_License_State_code1",
+    "type": "STRING",
+    "mode": "NULLABLE",
+    "description": "The state license number of the covered recipient physician or covered recipient non-physician practitioner, which is a 2-letter state abbreviation; the record may include up to 5 license states, if a physician is licensed in multiple states."
+  },
+  {
+    "name": "Covered_Recipient_License_State_code2",
+    "type": "STRING",
+    "mode": "NULLABLE",
+    "description": "The state license number of the covered recipient physician or covered recipient non-physician practitioner, which is a 2-letter state abbreviation; the record may include up to 5 license states, if a physician is licensed in multiple states."
+  },
+  {
+    "name": "Covered_Recipient_License_State_code3",
+    "type": "STRING",
+    "mode": "NULLABLE",
+    "description": "The state license number of the covered recipient physician or covered recipient non-physician practitioner, which is a 2-letter state abbreviation; the record may include up to 5 license states, if a physician is licensed in multiple states."
+  },
+  {
+    "name": "Covered_Recipient_License_State_code4",
+    "type": "STRING",
+    "mode": "NULLABLE",
+    "description": "The state license number of the covered recipient physician or covered recipient non-physician practitioner, which is a 2-letter state abbreviation; the record may include up to 5 license states, if a physician is licensed in multiple states."
+  },
+  {
+    "name": "Covered_Recipient_License_State_code5",
+    "type": "STRING",
+    "mode": "NULLABLE",
+    "description": "The state license number of the covered recipient physician or covered recipient non-physician practitioner, which is a 2-letter state abbreviation; the record may include up to 5 license states, if a physician is licensed in multiple states."
+  },
+  {
+    "name": "Submitting_Applicable_Manufacturer_or_Applicable_GPO_Name",
+    "type": "STRING",
+    "mode": "NULLABLE",
+    "description": "The textual proper name of the submitting applicable manufacturer or submitting applicable GPO."
+  },
+  {
+    "name": "Applicable_Manufacturer_or_Applicable_GPO_Making_Payment_ID",
+    "type": "STRING",
+    "mode": "NULLABLE",
+    "description": "System generated unique identifier of the Applicable Manufacturer or Applicable Group Purchasing Organization (GPO) Making a payment or other transfer of value."
+  },
+  {
+    "name": "Applicable_Manufacturer_or_Applicable_GPO_Making_Payment_Name",
+    "type": "STRING",
+    "mode": "NULLABLE",
+    "description": "The textual proper name of the applicable manufacturer or applicable GPO making the payment or other transfer of value."
+  },
+  {
+    "name": "Applicable_Manufacturer_or_Applicable_GPO_Making_Payment_State",
+    "type": "STRING",
+    "mode": "NULLABLE",
+    "description": "State name of the submitting applicable manufacturer or submitting applicable GPO as provided in Open Payments."
+  },
+  {
+    "name": "Applicable_Manufacturer_or_Applicable_GPO_Making_Payment_Country",
+    "type": "STRING",
+    "mode": "NULLABLE",
+    "description": "Country name of the Submitting Applicable Manufacturer or Submitting Applicable Group Purchasing Organization (GPO) as provided in Open Payments."
+  },
+  {
+    "name": "Total_Amount_of_Payment_USDollars",
+    "type": "FLOAT64",
+    "mode": "NULLABLE",
+    "description": "U.S. dollar amount of payment or other transfer of value to the recipient (manufacturer must convert to dollar currency if necessary)."
+  },
+  {
+    "name": "Date_of_Payment",
+    "type": "DATE",
+    "mode": "NULLABLE",
+    "description": "If a singular payment, then this is the actual date the payment was issued; if a series of payments or an aggregated set of payments, this is the date of the first payment to the covered recipient in this PY."
+  },
+  {
+    "name": "Number_of_Payments_Included_in_Total_Amount",
+    "type": "INT64",
+    "mode": "NULLABLE",
+    "description": "The number of discrete payments being reported in the \"Total Amount of Payment\"."
+  },
+  {
+    "name": "Form_of_Payment_or_Transfer_of_Value",
+    "type": "STRING",
+    "mode": "NULLABLE",
+    "description": "The method of payment used to pay the covered recipient or to make the transfer of value."
+  },
+  {
+    "name": "Nature_of_Payment_or_Transfer_of_Value",
+    "type": "STRING",
+    "mode": "NULLABLE",
+    "description": "The nature of payment used to pay the covered recipient or to make the transfer of value."
+  },
+  {
+    "name": "City_of_Travel",
+    "type": "STRING",
+    "mode": "NULLABLE",
+    "description": "For \"Travel and Lodging\" payments, destination city where covered recipient traveled."
+  },
+  {
+    "name": "State_of_Travel",
+    "type": "STRING",
+    "mode": "NULLABLE",
+    "description": "For \"Travel and Lodging\" payments, the destination state where the covered recipient traveled."
+  },
+  {
+    "name": "Country_of_Travel",
+    "type": "STRING",
+    "mode": "NULLABLE",
+    "description": "For \"Travel and Lodging\" payments, the destination country where the covered recipient traveled."
+  },
+  {
+    "name": "Physician_Ownership_Indicator",
+    "type": "STRING",
+    "mode": "NULLABLE",
+    "description": "Indicates whether the physician holds an ownership or investment interest in the applicable manufacturer; this indicator is limited to physician's ownership, not the physician's family members' ownership."
+  },
+  {
+    "name": "Third_Party_Payment_Recipient_Indicator",
+    "type": "STRING",
+    "mode": "NULLABLE",
+    "description": "Indicates if a payment or transfer of value was paid to a third party entity or individual at the request of or on behalf of a covered recipient (physician or teaching hospital)."
+  },
+  {
+    "name": "Name_of_Third_Party_Entity_Receiving_Payment_or_Transfer_of_Value",
+    "type": "STRING",
+    "mode": "NULLABLE",
+    "description": "The name of the entity that received the payment or other transfer of value."
+  },
+  {
+    "name": "Charity_Indicator",
+    "type": "STRING",
+    "mode": "NULLABLE",
+    "description": "Indicates the third party entity that received the payment or other transfer of value is a charity."
+  },
+  {
+    "name": "Third_Party_Equals_Covered_Recipient_Indicator",
+    "type": "STRING",
+    "mode": "NULLABLE",
+    "description": "An indicator showing the \"Third Party\" that received the payment or other transfer of value is a Covered Recipient."
+  },
+  {
+    "name": "Contextual_Information",
+    "type": "STRING",
+    "mode": "NULLABLE",
+    "description": "Any free String, which the reporting entity deems helpful or appropriate regarding this payment or other transfer of value."
+  },
+  {
+    "name": "Delay_in_Publication_Indicator",
+    "type": "STRING",
+    "mode": "NULLABLE",
+    "description": "An indicator showing if an Applicable Manufacturer/GPO is requesting a delay in the publication of a payment or other transfer of value."
+  },
+  {
+    "name": "Record_ID",
+    "type": "INT64",
+    "mode": "NULLABLE",
+    "description": "System-assigned identifier to the general transaction at the time of submission."
+  },
+  {
+    "name": "Dispute_Status_for_Publication",
+    "type": "STRING",
+    "mode": "NULLABLE",
+    "description": "Indicates whether the payment or other transfer of value is disputed by the covered recipient or not."
+  },
+  {
+    "name": "Related_Product_Indicator",
+    "type": "STRING",
+    "mode": "NULLABLE",
+    "description": "The indicator allows the applicable manufacturer or applicable GPO to select whether the payment or other transfer of value is related to one or more product(s) (drugs, devices, biologicals, or medical supplies). If the payment was not made in relation to a product, select \"No\". If the payment was related to one or more products, select \"Yes\"."
+  },
+  {
+    "name": "Covered_or_Noncovered_Indicator_1",
+    "type": "STRING",
+    "mode": "NULLABLE",
+    "description": "Each product listed in relation to the payment or other transfer of value, indicates if the product is a covered or non-covered product per the covered product definition in the Open Payments final rule."
+  },
+  {
+    "name": "Indicate_Drug_or_Biological_or_Device_or_Medical_Supply_1",
+    "type": "STRING",
+    "mode": "NULLABLE",
+    "description": "Each product listed in relation to the payment or other transfer of value, indicates if the product is a drug, device, biological, or medical supply."
+  },
+  {
+    "name": "Product_Category_or_Therapeutic_Area_1",
+    "type": "STRING",
+    "mode": "NULLABLE",
+    "description": "Provide the product category or therapeutic area for the covered drug, device, biological, or medical supply listed in relation to the payment or other transfer of value."
+  },
+  {
+    "name": "Name_of_Drug_or_Biological_or_Device_or_Medical_Supply_1",
+    "type": "STRING",
+    "mode": "NULLABLE",
+    "description": "The marketed name of the drug, device, biological, or medical supply. May report the marketed name of up to five products (drugs, devices, biologicals, or medical supplies) associated with the payment or other transfer of value."
+  },
+  {
+    "name": "Associated_Drug_or_Biological_NDC_1",
+    "type": "STRING",
+    "mode": "NULLABLE",
+    "description": "The National Drug Code, if any, of the drug or biological associated with the payment or other transfer of value (if applicable); the record may report up to 5 codes."
+  },
+  {
+    "name": "Associated_Device_or_Medical_Supply_PDI_1",
+    "type": "STRING",
+    "mode": "NULLABLE",
+    "description": "The Primary Device Identifier, if any, of the covered device or covered medical supply associated with the payment or other transfer of values (if applicable); the record may report up to 5 codes. Note: OP Program began collecting PDI information during PY 2021."
+  },
+  {
+    "name": "Covered_or_Noncovered_Indicator_2",
+    "type": "STRING",
+    "mode": "NULLABLE",
+    "description": "For each product listed in relation to the payment or other transfer of value, indicates if the product is a covered or non-covered product per the covered product definition in the Open Payments final rule."
+  },
+  {
+    "name": "Indicate_Drug_or_Biological_or_Device_or_Medical_Supply_2",
+    "type": "STRING",
+    "mode": "NULLABLE",
+    "description": "For each product listed in relation to the payment or other transfer of value, indicates if the product is a drug, device, biological, or medical supply."
+  },
+  {
+    "name": "Product_Category_or_Therapeutic_Area_2",
+    "type": "STRING",
+    "mode": "NULLABLE",
+    "description": "Provide the product category or therapeutic area for the covered drug, device, biological, or medical supply listed in relation to the payment or other transfer of value."
+  },
+  {
+    "name": "Name_of_Drug_or_Biological_or_Device_or_Medical_Supply_2",
+    "type": "STRING",
+    "mode": "NULLABLE",
+    "description": "The marketed name of the drug, device, biological, or medical supply. May report the marketed name of up to five products (drugs, devices, biologicals, or medical supplies) associated with the payment or other transfer of value."
+  },
+  {
+    "name": "Associated_Drug_or_Biological_NDC_2",
+    "type": "STRING",
+    "mode": "NULLABLE",
+    "description": "The National Drug Code, if any, of the drug or biological associated with the payment or other transfer of value (if applicable); the record may report up to 5 codes."
+  },
+  {
+    "name": "Associated_Device_or_Medical_Supply_PDI_2",
+    "type": "STRING",
+    "mode": "NULLABLE",
+    "description": "The Primary Device Identifier, if any, of the covered device or covered medical supply associated with the payment or other transfer of values (if applicable); the record may report up to 5 codes. Note: OP Program began collecting PDI information during PY 2021."
+  },
+  {
+    "name": "Covered_or_Noncovered_Indicator_3",
+    "type": "STRING",
+    "mode": "NULLABLE",
+    "description": "For each product listed in relation to the payment or other transfer of value, indicates if the product is a covered or non-covered product per the covered product definition in the Open Payments final rule."
+  },
+  {
+    "name": "Indicate_Drug_or_Biological_or_Device_or_Medical_Supply_3",
+    "type": "STRING",
+    "mode": "NULLABLE",
+    "description": "For each product listed in relation to the payment or other transfer of value, indicates if the product is a drug, device, biological, or medical supply."
+  },
+  {
+    "name": "Product_Category_or_Therapeutic_Area_3",
+    "type": "STRING",
+    "mode": "NULLABLE",
+    "description": "Provide the product category or therapeutic area for the covered drug, device, biological, or medical supply listed in relation to the payment or other transfer of value."
+  },
+  {
+    "name": "Name_of_Drug_or_Biological_or_Device_or_Medical_Supply_3",
+    "type": "STRING",
+    "mode": "NULLABLE",
+    "description": "The marketed name of the drug, device, biological, or medical supply. May report the marketed name of up to five products (drugs, devices, biologicals, or medical supplies) associated with the payment or other transfer of value."
+  },
+  {
+    "name": "Associated_Drug_or_Biological_NDC_3",
+    "type": "STRING",
+    "mode": "NULLABLE",
+    "description": "The National Drug Code, if any, of the drug or biological associated with the payment or other transfer of value (if applicable); the record may report up to 5 codes."
+  },
+  {
+    "name": "Associated_Device_or_Medical_Supply_PDI_3",
+    "type": "STRING",
+    "mode": "NULLABLE",
+    "description": "The Primary Device Identifier, if any, of the covered device or covered medical supply associated with the payment or other transfer of values (if applicable); the record may report up to 5 codes. Note: OP Program began collecting PDI information during PY 2021."
+  },
+  {
+    "name": "Covered_or_Noncovered_Indicator_4",
+    "type": "STRING",
+    "mode": "NULLABLE",
+    "description": "For each product listed in relation to the payment or other transfer of value, indicates if the product is a covered or non-covered product per the covered product definition in the Open Payments final rule."
+  },
+  {
+    "name": "Indicate_Drug_or_Biological_or_Device_or_Medical_Supply_4",
+    "type": "STRING",
+    "mode": "NULLABLE",
+    "description": "For each product listed in relation to the payment or other transfer of value, indicates if the product is a drug, device, biological, or medical supply."
+  },
+  {
+    "name": "Product_Category_or_Therapeutic_Area_4",
+    "type": "STRING",
+    "mode": "NULLABLE",
+    "description": "Provide the product category or therapeutic area for the covered drug, device, biological, or medical supply listed in relation to the payment or other transfer of value."
+  },
+  {
+    "name": "Name_of_Drug_or_Biological_or_Device_or_Medical_Supply_4",
+    "type": "STRING",
+    "mode": "NULLABLE",
+    "description": "The marketed name of the drug, device, biological, or medical supply. May report the marketed name of up to five products (drugs, devices, biologicals, or medical supplies) associated with the payment or other transfer of value."
+  },
+  {
+    "name": "Associated_Drug_or_Biological_NDC_4",
+    "type": "STRING",
+    "mode": "NULLABLE",
+    "description": "The National Drug Code, if any, of the drug or biological associated with the payment or other transfer of value (if applicable); the record may report up to 5 codes."
+  },
+  {
+    "name": "Associated_Device_or_Medical_Supply_PDI_4",
+    "type": "STRING",
+    "mode": "NULLABLE",
+    "description": "The Primary Device Identifier, if any, of the covered device or covered medical supply associated with the payment or other transfer of values (if applicable); the record may report up to 5 codes. Note: OP Program began collecting PDI information during PY 2021."
+  },
+  {
+    "name": "Covered_or_Noncovered_Indicator_5",
+    "type": "STRING",
+    "mode": "NULLABLE",
+    "description": "For each product listed in relation to the payment or other transfer of value, indicates if the product is a covered or non-covered product per the covered product definition in the Open Payments final rule."
+  },
+  {
+    "name": "Indicate_Drug_or_Biological_or_Device_or_Medical_Supply_5",
+    "type": "STRING",
+    "mode": "NULLABLE",
+    "description": "For each product listed in relation to the payment or other transfer of value, indicates if the product is a drug, device, biological, or medical supply."
+  },
+  {
+    "name": "Product_Category_or_Therapeutic_Area_5",
+    "type": "STRING",
+    "mode": "NULLABLE",
+    "description": "Provide the product category or therapeutic area for the covered drug, device, biological, or medical supply listed in relation to the payment or other transfer of value."
+  },
+  {
+    "name": "Name_of_Drug_or_Biological_or_Device_or_Medical_Supply_5",
+    "type": "STRING",
+    "mode": "NULLABLE",
+    "description": "The marketed name of the drug, device, biological, or medical supply. May report the marketed name of up to five products (drugs, devices, biologicals, or medical supplies) associated with the payment or other transfer of value."
+  },
+  {
+    "name": "Associated_Drug_or_Biological_NDC_5",
+    "type": "STRING",
+    "mode": "NULLABLE",
+    "description": "The National Drug Code, if any, of the drug or biological associated with the payment or other transfer of value (if applicable); the record may report up to 5 codes."
+  },
+  {
+    "name": "Associated_Device_or_Medical_Supply_PDI_5",
+    "type": "STRING",
+    "mode": "NULLABLE",
+    "description": "The Primary Device Identifier, if any, of the covered device or covered medical supply associated with the payment or other transfer of values (if applicable); the record may report up to 5 codes. Note: OP Program began collecting PDI information during PY 2021."
+  },
+  {
+    "name": "Program_Year",
+    "type": "STRING",
+    "mode": "NULLABLE",
+    "description": "The year in which the payment occurred, as reported by submitting entity."
+  },
+  {
+    "name": "Payment_Publication_Date",
+    "type": "DATE",
+    "mode": "NULLABLE",
+    "description": "The predefined date when the payment or other transfer of value is scheduled to be published."
+  }
+]
