@@ -1,0 +1,98 @@
+[
+  {
+    "name": "Change_Type",
+    "description": "An indicator showing if the payment record is New, Added, Changed, or Unchanged in the current publication compared to the previous publication.",
+    "sample_data": "",
+    "data_type": "",
+    "format": "",
+    "max_length": ""
+  },
+  {
+    "name": "NEW",
+    "description": "- To identify \u201cnew\u201d records added from the end of the",
+    "sample_data": "previous submission deadline until the current submission period deadline",
+    "data_type": "date",
+    "format": "",
+    "max_length": ""
+  },
+  {
+    "name": "ADDED",
+    "description": "- To identify records that were not eligible at the time of previous publication, which is eligible for current publication.",
+    "sample_data": "",
+    "data_type": "",
+    "format": "",
+    "max_length": ""
+  },
+  {
+    "name": "CHANGED",
+    "description": "- To identify previously published records modified after the last publication.",
+    "sample_data": "",
+    "data_type": "",
+    "format": "",
+    "max_length": ""
+  },
+  {
+    "name": "UNCHANGED",
+    "description": "- To identify previously published records that",
+    "sample_data": "remain \u201cunchanged\u201d in current publication. NEW",
+    "data_type": "VARCHAR",
+    "format": "",
+    "max_length": ""
+  },
+  {
+    "name": "Covered_Recipient_Type",
+    "description": "An indicator showing if the recipient of the payment or transfer of value is a physician -covered recipient or non -",
+    "sample_data": "physician practitioner or a teaching hospital. Physician",
+    "data_type": "VARCHAR",
+    "format": "",
+    "max_length": ""
+  },
+  {
+    "name": "Teaching_Hospital_CCN",
+    "description": "A unique identifying number (CMS Certification Number) of the Teaching Hospital receiving the payment or other",
+    "sample_data": "transfer of value. 330024",
+    "data_type": "VARCHAR",
+    "format": "",
+    "max_length": ""
+  },
+  {
+    "name": "Teaching_Hospital_ID",
+    "description": "The system generated a unique identifier of the Teaching",
+    "sample_data": "",
+    "data_type": "",
+    "format": "",
+    "max_length": ""
+  },
+  {
+    "name": "Hospital",
+    "description": "receiving the payment or other transfer of value.  1000000999  NUMBER(",
+    "sample_data": "38,0)",
+    "data_type": "number",
+    "format": "38",
+    "max_length": ""
+  },
+  {
+    "name": "Teaching_Hospital_Name",
+    "description": "The name of the Teaching Hospital receiving the payment or other transfer of value. The name displayed is as listed in",
+    "sample_data": "",
+    "data_type": "",
+    "format": "",
+    "max_length": ""
+  },
+  {
+    "name": "CMS",
+    "description": "teaching hospital list under Hospital name.  Healthy Heart",
+    "sample_data": "",
+    "data_type": "",
+    "format": "",
+    "max_length": ""
+  },
+  {
+    "name": "Hospital",
+    "description": "VARCHAR 2",
+    "sample_data": "",
+    "data_type": "",
+    "format": "",
+    "max_length": ""
+  }
+]

@@ -1,0 +1,1882 @@
+[
+  {
+    "name": "Length",
+    "description": "",
+    "sample_data": "",
+    "data_type": "",
+    "format": "",
+    "max_length": ""
+  },
+  {
+    "name": "Change_Type",
+    "description": "An indicator showing if the payment record is New, Added, Changed, or Unchanged in the current publication compared to the previous publication.",
+    "sample_data": "",
+    "data_type": "",
+    "format": "",
+    "max_length": ""
+  },
+  {
+    "name": "NEW",
+    "description": "- To identify “new” records added from the end of the",
+    "sample_data": "previous submission deadline until the current submission period deadline",
+    "data_type": "date",
+    "format": "",
+    "max_length": ""
+  },
+  {
+    "name": "ADDED",
+    "description": "- To identify records that were not eligible at the time of previous publication, which is eligible for current publication.",
+    "sample_data": "",
+    "data_type": "",
+    "format": "",
+    "max_length": ""
+  },
+  {
+    "name": "CHANGED",
+    "description": "- To identify previously published records modified after the last publication.",
+    "sample_data": "",
+    "data_type": "",
+    "format": "",
+    "max_length": ""
+  },
+  {
+    "name": "UNCHANGED",
+    "description": "- To identify previously published records that remain “unchanged” in current publication.  NEW  VARCHAR 2(20) string  20",
+    "sample_data": "",
+    "data_type": "",
+    "format": "",
+    "max_length": ""
+  },
+  {
+    "name": "Covered_Recipient_Type",
+    "description": "An indicator showing if the recipient of the payment or transfer of value is a physician -covered recipient or non - physician practitioner or a teaching hospital.  Physician  VARCHAR 2(50) string  50",
+    "sample_data": "",
+    "data_type": "",
+    "format": "",
+    "max_length": ""
+  },
+  {
+    "name": "Teaching_Hospital_CCN",
+    "description": "A unique identifying number (CMS Certification Number) of the Teaching Hospital receiving the payment or other transfer of value.  330024  VARCHAR 2(06) string  6",
+    "sample_data": "",
+    "data_type": "",
+    "format": "",
+    "max_length": ""
+  },
+  {
+    "name": "Teaching_Hospital_ID",
+    "description": "The system generated a unique identifier of the Teaching",
+    "sample_data": "",
+    "data_type": "",
+    "format": "",
+    "max_length": ""
+  },
+  {
+    "name": "Hospital",
+    "description": "receiving the payment or other transfer of value.  1000000999  NUMBER( 38,0)  number  38",
+    "sample_data": "",
+    "data_type": "",
+    "format": "",
+    "max_length": ""
+  },
+  {
+    "name": "Teaching_Hospital_Name",
+    "description": "The name of the Teaching Hospital receiving the payment or other transfer of value. The name displayed is as listed in",
+    "sample_data": "",
+    "data_type": "",
+    "format": "",
+    "max_length": ""
+  },
+  {
+    "name": "CMS",
+    "description": "teaching hospital list under Hospital name.  Healthy Heart",
+    "sample_data": "",
+    "data_type": "",
+    "format": "",
+    "max_length": ""
+  },
+  {
+    "name": "Hospital",
+    "description": "VARCHAR 2 22 Field Name Field Description  Sample Data  Data Type  Format  Max",
+    "sample_data": "",
+    "data_type": "",
+    "format": "",
+    "max_length": ""
+  },
+  {
+    "name": "Length",
+    "description": "",
+    "sample_data": "",
+    "data_type": "",
+    "format": "",
+    "max_length": ""
+  },
+  {
+    "name": "Covered_Recipient_Profile_ID",
+    "description": "System generated unique identifier for covered recipient physician or covered recipient non- physician practitioner profile receiving the payment or other transfer of value.  1000000378  NUMBER (38,0)  number  38",
+    "sample_data": "",
+    "data_type": "",
+    "format": "",
+    "max_length": ""
+  },
+  {
+    "name": "Covered_Recipient_NPI",
+    "description": "National Provider Identifier is a unique identification number for covered recipient physician or covered recipient non-physician practitioner (and not the NPI of a group the physician/non -physician practitioner belongs to).  2495351826  NUMBER (10,0)  number  10",
+    "sample_data": "",
+    "data_type": "",
+    "format": "",
+    "max_length": ""
+  },
+  {
+    "name": "Covered_Recipient_First_Name",
+    "description": "First name of the covered recipient physician or covered recipient non- physician practitioner receiving the payment or transfer of value, as reported by the submitting entity.  John  VARCHAR 2 (20) string  20",
+    "sample_data": "",
+    "data_type": "",
+    "format": "",
+    "max_length": ""
+  },
+  {
+    "name": "Covered_Recipient_Middle_Name",
+    "description": "Middle name of the covered recipient physician or covered recipient non- physician practitioner receiving the payment or transfer of value, as reported by the submitting entity.  A VARCHAR 2 (20) string  20",
+    "sample_data": "",
+    "data_type": "",
+    "format": "",
+    "max_length": ""
+  },
+  {
+    "name": "Covered_Recipient_Last_Name",
+    "description": "Last name of the covered recipient physician or covered recipient non- physician practitioner receiving the payment or transfer of value, as reported by the submitting entity.  Smith  VARCHAR 2 (35) string  35",
+    "sample_data": "",
+    "data_type": "",
+    "format": "",
+    "max_length": ""
+  },
+  {
+    "name": "Covered_Recipient_Name_Suffix",
+    "description": "Name suffix of the covered recipient physician or covered recipient non- physician practitioner receiving the payment or transfer of value, as reported by the submitting entity.  III VARCHAR 2 (5) string  5",
+    "sample_data": "",
+    "data_type": "",
+    "format": "",
+    "max_length": ""
+  },
+  {
+    "name": "Recipient_Primary_Business_St",
+    "description": "reet_A ddress_Line1  The first line of the primary practice/business street address of the physician or teaching hospital (covered recipient) receiving the payment or other transfer of value.  7500 Security Blvd.  VARCHAR 2 (55) string  55",
+    "sample_data": "",
+    "data_type": "",
+    "format": "",
+    "max_length": ""
+  },
+  {
+    "name": "Recipient_Primary_Business_St",
+    "description": "reet_A ddress_Line2  The second line of the primary practice/business street address of the physician or teaching hospital (covered recipient) receiving the payment or other transfer of value.  Suite 100  VARCHAR 2 (55) string  55",
+    "sample_data": "",
+    "data_type": "",
+    "format": "",
+    "max_length": ""
+  },
+  {
+    "name": "Recipient_City",
+    "description": "The primary practice/business city of the physician or teaching hospital (covered recipient) receiving the payment or other transfer of value.  Baltimore  VARCHAR 2 (40) string  40",
+    "sample_data": "",
+    "data_type": "",
+    "format": "",
+    "max_length": ""
+  },
+  {
+    "name": "Recipient_State",
+    "description": "The primary practice/business state or territory abbreviation of the physician or teaching hospital (covered recipient) receiving the payment or transfer of value, if the 23 Field Name Field Description  Sample Data  Data Type  Format  Max",
+    "sample_data": "",
+    "data_type": "",
+    "format": "",
+    "max_length": ""
+  },
+  {
+    "name": "Length",
+    "description": "",
+    "sample_data": "",
+    "data_type": "",
+    "format": "",
+    "max_length": ""
+  },
+  {
+    "name": "Recipient_Zip_Code",
+    "description": "The 9 -digit zip code for the primary practice/business location of the physician or teaching hospital (covered recipient) receiving the payment or transfer of value.  21244 -3712 VARCHAR 2 (10) number - number  10",
+    "sample_data": "",
+    "data_type": "",
+    "format": "",
+    "max_length": ""
+  },
+  {
+    "name": "Recipient_Country",
+    "description": "The primary practice/business address country name of the physician or teaching hospital (covered recipient) receiving the payment or transfer of value.  US VARCHAR 2 (100)  string  100",
+    "sample_data": "",
+    "data_type": "",
+    "format": "",
+    "max_length": ""
+  },
+  {
+    "name": "Recipient_Province",
+    "description": "The primary practice/business province name of the physician (covered recipient) receiving the payment or other transfer of value, if the primary practice/business address is outside the United States, and if applicable.  Manitoba  VARCHAR 2 (20) string  20",
+    "sample_data": "",
+    "data_type": "",
+    "format": "",
+    "max_length": ""
+  },
+  {
+    "name": "Recipient_Postal_Code",
+    "description": "The international postal code for the primary practice/business location of the physician (covered recipient) receiving the payment or other transfer of value, if the primary practice/business address is outside the",
+    "sample_data": "",
+    "data_type": "",
+    "format": "",
+    "max_length": ""
+  },
+  {
+    "name": "United",
+    "description": "States  5600098 VARCHAR 2 (20) string  20",
+    "sample_data": "",
+    "data_type": "",
+    "format": "",
+    "max_length": ""
+  },
+  {
+    "name": "Covered_Recipient_Primary_Type_1",
+    "description": "Primary type of medicine practiced by the physician or Non-",
+    "sample_data": "",
+    "data_type": "",
+    "format": "",
+    "max_length": ""
+  },
+  {
+    "name": "Physician",
+    "description": "Practitioner (covered recipient).  Medical Doctor (MD)/ Physician",
+    "sample_data": "",
+    "data_type": "",
+    "format": "",
+    "max_length": ""
+  },
+  {
+    "name": "Assistant",
+    "description": "(PA)  VARCHAR 2 (100)  string  100",
+    "sample_data": "",
+    "data_type": "",
+    "format": "",
+    "max_length": ""
+  },
+  {
+    "name": "Covered_Recipient_Primary_Type_2",
+    "description": "Primary type of medicine practiced by the physician or Non -",
+    "sample_data": "",
+    "data_type": "",
+    "format": "",
+    "max_length": ""
+  },
+  {
+    "name": "Physician",
+    "description": "Practitioner (covered recipient). Note: OP began accepting this field in PY2021.  Medical Doctor (MD)/ Physician",
+    "sample_data": "",
+    "data_type": "",
+    "format": "",
+    "max_length": ""
+  },
+  {
+    "name": "Assistant",
+    "description": "(PA)  VARCHAR 2 (100)  string  100",
+    "sample_data": "",
+    "data_type": "",
+    "format": "",
+    "max_length": ""
+  },
+  {
+    "name": "Covered_Recipient_Primary_Type_3",
+    "description": "Primary type of medicine practiced by the physician or Non-",
+    "sample_data": "",
+    "data_type": "",
+    "format": "",
+    "max_length": ""
+  },
+  {
+    "name": "Physician",
+    "description": "Practitioner (covered recipient). Note: OP began accepting this field in PY2021.  Medical Doctor (MD)/ Physician",
+    "sample_data": "",
+    "data_type": "",
+    "format": "",
+    "max_length": ""
+  },
+  {
+    "name": "Assistant",
+    "description": "(PA)  VARCHAR 2 (100) string  100",
+    "sample_data": "",
+    "data_type": "",
+    "format": "",
+    "max_length": ""
+  },
+  {
+    "name": "Covered_Recipient_Primary_Type_4",
+    "description": "Primary type of medicine practiced by the physician or Non-Physician Practitioner (covered recipient). Note: OP began accepting this field in PY2021.  Medical Doctor (MD)/ Physician",
+    "sample_data": "",
+    "data_type": "",
+    "format": "",
+    "max_length": ""
+  },
+  {
+    "name": "Assistant",
+    "description": "(PA)  VARCHAR 2 (100) string  100",
+    "sample_data": "",
+    "data_type": "",
+    "format": "",
+    "max_length": ""
+  },
+  {
+    "name": "Covered_Recipient_Primary_Type_5",
+    "description": "Primary type of medicine practiced by the physician or Non-Physician Practitioner (covered recipient). Note: OP began accepting this field in PY2021.  Medical Doctor (MD)/ Physician",
+    "sample_data": "",
+    "data_type": "",
+    "format": "",
+    "max_length": ""
+  },
+  {
+    "name": "Assistant",
+    "description": "(PA)  VARCHAR 2 24 Field Name Field Description  Sample Data  Data Type  Format  Max",
+    "sample_data": "",
+    "data_type": "",
+    "format": "",
+    "max_length": ""
+  },
+  {
+    "name": "Length",
+    "description": "",
+    "sample_data": "",
+    "data_type": "",
+    "format": "",
+    "max_length": ""
+  },
+  {
+    "name": "Covered_Recipient_Primary_Type_6",
+    "description": "Primary type of medicine practiced by the physician or Non-",
+    "sample_data": "",
+    "data_type": "",
+    "format": "",
+    "max_length": ""
+  },
+  {
+    "name": "Physician",
+    "description": "Practitioner (covered recipient). Note: OP began accepting this field in PY2021.  Medical Doctor (MD)/  Physician",
+    "sample_data": "",
+    "data_type": "",
+    "format": "",
+    "max_length": ""
+  },
+  {
+    "name": "Assistant",
+    "description": "(PA)  VARCHAR 2 (100) string  100",
+    "sample_data": "",
+    "data_type": "",
+    "format": "",
+    "max_length": ""
+  },
+  {
+    "name": "Covered_Recipient_Specialty_1",
+    "description": "Physician's or non -physician practitioner’s specialty chosen from the standardized \"provider taxonomy\" code list. Note: OP began accepting this field in PY2021.  Allopathic &",
+    "sample_data": "",
+    "data_type": "",
+    "format": "",
+    "max_length": ""
+  },
+  {
+    "name": "Osteopathic",
+    "description": "Physicians|Obst etrics &",
+    "sample_data": "",
+    "data_type": "",
+    "format": "",
+    "max_length": ""
+  },
+  {
+    "name": "Gynecology",
+    "description": "VARCHAR 2 (300) string  300",
+    "sample_data": "",
+    "data_type": "",
+    "format": "",
+    "max_length": ""
+  },
+  {
+    "name": "Covered_Recipient_Specialty_2",
+    "description": "Physician's or non -physician practitioner’s specialty chosen from the standardized \"provider taxonomy\" code list. Note: OP began accepting this field in PY2021.  Allopathic &",
+    "sample_data": "",
+    "data_type": "",
+    "format": "",
+    "max_length": ""
+  },
+  {
+    "name": "Osteopathic",
+    "description": "Physicians|Obst etrics &",
+    "sample_data": "",
+    "data_type": "",
+    "format": "",
+    "max_length": ""
+  },
+  {
+    "name": "Gynecology",
+    "description": "VARCHAR 2 (300) string  300",
+    "sample_data": "",
+    "data_type": "",
+    "format": "",
+    "max_length": ""
+  },
+  {
+    "name": "Covered_Recipient_Specialty_3",
+    "description": "Physician's or non -physician practitioner’s specialty chosen from the standardized \"provider taxonomy\" code list. Note: OP began accepting this field in PY2021.  Allopathic &",
+    "sample_data": "",
+    "data_type": "",
+    "format": "",
+    "max_length": ""
+  },
+  {
+    "name": "Osteopathic",
+    "description": "Physicians|Obst etrics &",
+    "sample_data": "",
+    "data_type": "",
+    "format": "",
+    "max_length": ""
+  },
+  {
+    "name": "Gynecology",
+    "description": "VARCHAR 2 (300) string  300",
+    "sample_data": "",
+    "data_type": "",
+    "format": "",
+    "max_length": ""
+  },
+  {
+    "name": "Covered_Recipient_Specialty_4",
+    "description": "Physician's or non -physician practitioner’s specialty chosen from the standardized \"provider taxonomy\" code list. Note: OP began accepting this field in PY2021.  Allopathic &",
+    "sample_data": "",
+    "data_type": "",
+    "format": "",
+    "max_length": ""
+  },
+  {
+    "name": "Osteopathic",
+    "description": "Physicians|Obst etrics &",
+    "sample_data": "",
+    "data_type": "",
+    "format": "",
+    "max_length": ""
+  },
+  {
+    "name": "Gynecology",
+    "description": "VARCHAR 2 (300) string  300",
+    "sample_data": "",
+    "data_type": "",
+    "format": "",
+    "max_length": ""
+  },
+  {
+    "name": "Covered_Recipient_Specialty_5",
+    "description": "Physician's or non -physician practitioner’s specialty chosen from the standardized \"provider taxonomy\" code list. Note: OP began accepting this field in PY2021.  Allopathic &",
+    "sample_data": "",
+    "data_type": "",
+    "format": "",
+    "max_length": ""
+  },
+  {
+    "name": "Osteopathic",
+    "description": "Physicians|Obst etrics &",
+    "sample_data": "",
+    "data_type": "",
+    "format": "",
+    "max_length": ""
+  },
+  {
+    "name": "Gynecology",
+    "description": "VARCHAR 2 25 Field Name Field Description  Sample Data  Data Type  Format  Max",
+    "sample_data": "",
+    "data_type": "",
+    "format": "",
+    "max_length": ""
+  },
+  {
+    "name": "Length",
+    "description": "",
+    "sample_data": "",
+    "data_type": "",
+    "format": "",
+    "max_length": ""
+  },
+  {
+    "name": "Covered_Recipient_Specialty_6",
+    "description": "Physician's or non -physician practitioner’s specialty chosen from the standardized \"provider taxonomy\" code list. Note: OP began accepting this field in PY2021.  Allopathic &",
+    "sample_data": "",
+    "data_type": "",
+    "format": "",
+    "max_length": ""
+  },
+  {
+    "name": "Osteopathic",
+    "description": "Physicians|Obst etrics &",
+    "sample_data": "",
+    "data_type": "",
+    "format": "",
+    "max_length": ""
+  },
+  {
+    "name": "Gynecology",
+    "description": "VARCHAR 2 (300) string  300",
+    "sample_data": "",
+    "data_type": "",
+    "format": "",
+    "max_length": ""
+  },
+  {
+    "name": "Covered_Recipient_License_State_cod",
+    "description": "e1 The state license number of the covered recipient physician or covered recipient non -physician practitioner, which is a 2-letter state abbreviation; the record may include up to 5",
+    "sample_data": "license states, if a physician is licensed in multiple states.  MA",
+    "data_type": "CHAR(2)",
+    "format": "string",
+    "max_length": "2"
+  },
+  {
+    "name": "Covered_Recipient_License_State_code2",
+    "description": "The state license number of the covered recipient physician or covered recipient non -physician practitioner, which is a 2-letter state abbreviation; the record may include up to 5",
+    "sample_data": "license states, if a physician is licensed in multiple states.  PA",
+    "data_type": "CHAR(2)",
+    "format": "string",
+    "max_length": "2"
+  },
+  {
+    "name": "Covered_Recipient_License_State_code3",
+    "description": "The state license number of the covered recipient physician or covered recipient non -physician practitioner, which is a 2-letter state abbreviation; the record may include up to 5",
+    "sample_data": "license states, if a physician is licensed in multiple states.  VA",
+    "data_type": "CHAR(2)",
+    "format": "string",
+    "max_length": "2"
+  },
+  {
+    "name": "Covered_Recipient_License_State_code4",
+    "description": "The state license number of the covered recipient physician or covered recipient non -physician practitioner, which is a 2-letter state abbreviation; the record may include up to 5",
+    "sample_data": "license states, if a physician is licensed in multiple states.  MI",
+    "data_type": "CHAR(2)",
+    "format": "string",
+    "max_length": "2"
+  },
+  {
+    "name": "Covered_Recipient_License_State_cod",
+    "description": "e5 The state license number of the covered recipient physician or covered recipient non -physician practitioner, which is a 2-letter state abbreviation; the record may include up to 5",
+    "sample_data": "license states, if a physician is licensed in multiple states.  WI",
+    "data_type": "CHAR(2)",
+    "format": "string",
+    "max_length": "2"
+  },
+  {
+    "name": "Submitting_Applicable_Manufa",
+    "description": "cturer_ or_Applicable_GPO_Name  The textual proper name of the submitting applicable manufacturer or submitting applicable GPO.  ABCDE",
+    "sample_data": "",
+    "data_type": "",
+    "format": "",
+    "max_length": ""
+  },
+  {
+    "name": "Manufacturing",
+    "description": "VARCHAR 2 (100)  string  100",
+    "sample_data": "",
+    "data_type": "",
+    "format": "",
+    "max_length": ""
+  },
+  {
+    "name": "Applicable_Manufacturer_or_Ap",
+    "description": "plicab le_GPO_Making_Payment_ID  System generated unique identifier of the Applicable",
+    "sample_data": "",
+    "data_type": "",
+    "format": "",
+    "max_length": ""
+  },
+  {
+    "name": "Manufacturer",
+    "description": "or Applicable Group Purchasing Organization (GPO) Making a payment or other transfer of value  1000000049  VARCHAR 2 26 Field Name Field Description  Sample Data  Data Type  Format  Max",
+    "sample_data": "",
+    "data_type": "",
+    "format": "",
+    "max_length": ""
+  },
+  {
+    "name": "Length",
+    "description": "",
+    "sample_data": "",
+    "data_type": "",
+    "format": "",
+    "max_length": ""
+  },
+  {
+    "name": "Applicable_Manufacturer_or_Ap",
+    "description": "plicab le_GPO_Making_Payment_Name  The textual proper name of the applicable manufacturer or applicable GPO making the payment or other transfer of value  ABCDE",
+    "sample_data": "",
+    "data_type": "",
+    "format": "",
+    "max_length": ""
+  },
+  {
+    "name": "Manufacturing",
+    "description": "VARCHAR 2 (100)  string  100",
+    "sample_data": "",
+    "data_type": "",
+    "format": "",
+    "max_length": ""
+  },
+  {
+    "name": "Applicable_Manufacturer_or_A",
+    "description": "pplicab le_GPO_Making_Payment_State  State name of the submitting applicable manufacturer or",
+    "sample_data": "submitting applicable GPO as provided in Open  Payments  VA",
+    "data_type": "CHAR(2)",
+    "format": "string",
+    "max_length": "2"
+  },
+  {
+    "name": "Applicable_Manufacturer_or_Ap",
+    "description": "plicab le_GPO_Making_Payment_Country  Country name of the Submitting Applicable Manufacturer or",
+    "sample_data": "",
+    "data_type": "",
+    "format": "",
+    "max_length": ""
+  },
+  {
+    "name": "Submitting",
+    "description": "Applicable Group Purchasing Organization (GPO) as provided in Open Payments  United States  VARCHAR 2 (100)  string  100",
+    "sample_data": "",
+    "data_type": "",
+    "format": "",
+    "max_length": ""
+  },
+  {
+    "name": "Total_Amount_of_Payment_US",
+    "description": "Dollars  U.S. dollar amount of payment or other transfer of value to the recipient (manufacturer must convert to dollar currency if necessary)  1978.00  NUMBER (12,2)  decimal  12",
+    "sample_data": "",
+    "data_type": "",
+    "format": "",
+    "max_length": ""
+  },
+  {
+    "name": "Date_of_Payment",
+    "description": "If a singular payment, then this is the actual date the payment was issued; if a series of payments or an",
+    "sample_data": "payment to the covered recipient in this PY 04/01/2015",
+    "data_type": "DATE",
+    "format": "Date",
+    "max_length": "the"
+  },
+  {
+    "name": "Number_of_Payments_Included_in_To",
+    "description": "tal_Amount  The number of discrete payments being reported in the \"Total Amount of Payment\".  1 NUMBER (3,0)  number  3",
+    "sample_data": "",
+    "data_type": "",
+    "format": "",
+    "max_length": ""
+  },
+  {
+    "name": "Form_of_Payment_or_Transfer",
+    "description": "_of_Val ue The method of payment used to pay the covered recipient or to make the transfer of value.  In-kind items and services  VARCHAR 2 (100)  string  100",
+    "sample_data": "",
+    "data_type": "",
+    "format": "",
+    "max_length": ""
+  },
+  {
+    "name": "Nature_of_Payment_or_Transf",
+    "description": "er_of_V alue  The nature of payment used to pay the covered recipient or to make the transfer of value.  Consulting Fee  VARCHAR 2 (200)  string  200",
+    "sample_data": "",
+    "data_type": "",
+    "format": "",
+    "max_length": ""
+  },
+  {
+    "name": "City_of_Travel",
+    "description": "For \"Travel and Lodging\" payments, destination city where covered recipient traveled.  San Diego  VARCHAR 2 (40) string  40",
+    "sample_data": "",
+    "data_type": "",
+    "format": "",
+    "max_length": ""
+  },
+  {
+    "name": "State_of_Travel",
+    "description": "For \"Travel and Lodging\" payments, the destination state",
+    "sample_data": "where the covered recipient traveled.  CA",
+    "data_type": "CHAR(2)",
+    "format": "string",
+    "max_length": "2"
+  },
+  {
+    "name": "Country_of_Travel",
+    "description": "For \"Travel and Lodging\" payments, the destination country where the covered recipient traveled. United States  VARCHAR 2 27 Field Name Field Description  Sample Data  Data Type  Format  Max",
+    "sample_data": "",
+    "data_type": "",
+    "format": "",
+    "max_length": ""
+  },
+  {
+    "name": "Length",
+    "description": "",
+    "sample_data": "",
+    "data_type": "",
+    "format": "",
+    "max_length": ""
+  },
+  {
+    "name": "Physician_Ownership_Indicator",
+    "description": "Indicates whether the physician holds an ownership or investment interest in the applicable manufacturer; this indicator is limited to physician's ownership, not the",
+    "sample_data": "physician's family members' ownership  No",
+    "data_type": "CHAR(3)",
+    "format": "string",
+    "max_length": "3"
+  },
+  {
+    "name": "Third_Party_Payment_Recipient_Indicator",
+    "description": "Indicates if a payment or transfer of value was paid to a third party entity or individual at the request of or on behalf of a covered recipient (physician or teaching hospital).  Entity  VARCHAR 2 (50) string  50",
+    "sample_data": "",
+    "data_type": "",
+    "format": "",
+    "max_length": ""
+  },
+  {
+    "name": "Name_of_Third_Party_Entity_R",
+    "description": "eceivin g_Payment_or_Transfer_o f_Value  The name of the entity that received the payment or other transfer of value.  EDCBA",
+    "sample_data": "",
+    "data_type": "",
+    "format": "",
+    "max_length": ""
+  },
+  {
+    "name": "Manufacturing",
+    "description": "VARCHAR 2 (50) string  50",
+    "sample_data": "",
+    "data_type": "",
+    "format": "",
+    "max_length": ""
+  },
+  {
+    "name": "Charity_Indicator",
+    "description": "Indicates the third party entity that received the payment or",
+    "sample_data": "other transfer of value is a charity.  No",
+    "data_type": "CHAR(3)",
+    "format": "string",
+    "max_length": "3"
+  },
+  {
+    "name": "Third_Party_Equals_Covered_R",
+    "description": "ecipien t_Indicator  An indicator showing the \"Third Party\" that received the",
+    "sample_data": "payment or other transfer of value is a Covered Recipient.  No",
+    "data_type": "CHAR(3)",
+    "format": "string",
+    "max_length": "3"
+  },
+  {
+    "name": "Contextual_Information",
+    "description": "Any free String, which the reporting entity deems helpful or appropriate regarding this payment or other transfer of value.  Transfer made to promote the use of the product  VARCHAR 2 (500)  string  500",
+    "sample_data": "",
+    "data_type": "",
+    "format": "",
+    "max_length": ""
+  },
+  {
+    "name": "Delay_in_Publication_Indicator",
+    "description": "An indicator showing if an Applicable Manufacturer/GPO is requesting a delay in the publication of a payment or other",
+    "sample_data": "transfer of value  No",
+    "data_type": "CHAR(3)",
+    "format": "string",
+    "max_length": "3"
+  },
+  {
+    "name": "Record_ID",
+    "description": "System -assigned identifier to the general transaction at the time of submission  100000000241  NUMBER (38,0)  number  38",
+    "sample_data": "",
+    "data_type": "",
+    "format": "",
+    "max_length": ""
+  },
+  {
+    "name": "Dispute_Status_for_Publication",
+    "description": "Indicates whether the payment or other transfer of value is",
+    "sample_data": "disputed by the covered recipient or not  Yes",
+    "data_type": "CHAR(3)",
+    "format": "string",
+    "max_length": "3"
+  },
+  {
+    "name": "Related_Product_Indicator",
+    "description": "The indicator allows the applicable manufacturer or applicable GPO to select whether the payment or other transfer of value is related to one or more product(s) (drugs, devices, biologicals, or medical supplies). If the payment was not made in relation to a product, select \"No\". If the payment was related to one or more products, select \"Yes\".  Y VARCHAR 2 28 Field Name Field Description  Sample Data  Data Type  Format  Max",
+    "sample_data": "",
+    "data_type": "",
+    "format": "",
+    "max_length": ""
+  },
+  {
+    "name": "Length",
+    "description": "",
+    "sample_data": "",
+    "data_type": "",
+    "format": "",
+    "max_length": ""
+  },
+  {
+    "name": "Covered_or_Noncovered_Indic",
+    "description": "ator_1  Each product listed in relation to the payment or other transfer of value, indicates if the product is a covered or non- covered product per the covered product definition in the Open Payments final rule.  Covered  VARCHAR 2 (100) string  100",
+    "sample_data": "",
+    "data_type": "",
+    "format": "",
+    "max_length": ""
+  },
+  {
+    "name": "Indicate_Drug_or_Biological_or_Device_or_Medical_Supply_1",
+    "description": "Each product listed in relation to the payment or other transfer of value, indicates if the product is a drug, device, biological, or medical supply.  Drug  VARCHAR 2 (100)  string  100",
+    "sample_data": "",
+    "data_type": "",
+    "format": "",
+    "max_length": ""
+  },
+  {
+    "name": "Product_Category_or_Therap",
+    "description": "eutic_Ar ea_1  Provide the product category or therapeutic area for the covered drug, device, biological, or medical supply listed in relation to the payment or other transfer of value.  Endocrinology  VARCHAR 2 (100)  string  100",
+    "sample_data": "",
+    "data_type": "",
+    "format": "",
+    "max_length": ""
+  },
+  {
+    "name": "Name_of_Drug_or_Biological_or_Device_or_Medical_Supply_1",
+    "description": "The marketed name of the drug, device, biological, or medical supply. May report the marketed name of up to five products (drugs, devices, biologicals, or medical supplies) associated with the payment or other transfer of value.  Sample Drug 1  VARCHAR 2 (500) string  500",
+    "sample_data": "",
+    "data_type": "",
+    "format": "",
+    "max_length": ""
+  },
+  {
+    "name": "Associated_Drug_or_Biological",
+    "description": "_NDC_1  The National Drug Code, if any, of the drug or biological associated with the payment or other transfer of value (if applicable); the record may report up to 5 codes  3698- 7272- 61 VARCHAR 2 (100)  string  12",
+    "sample_data": "",
+    "data_type": "",
+    "format": "",
+    "max_length": ""
+  },
+  {
+    "name": "Associated_Device_or_Medical_Supply",
+    "description": "_PDI_1  The Primary Device Identifier, if any, of the covered device or covered medical supply associated with the payment or other transfer of values (if applicable); the record may report up to 5 codes. Note: OP Program began collecting PDI information during",
+    "sample_data": "",
+    "data_type": "",
+    "format": "",
+    "max_length": ""
+  },
+  {
+    "name": "PY",
+    "description": "2021.  0084865700026 0 VARCHAR (100) string  100",
+    "sample_data": "",
+    "data_type": "",
+    "format": "",
+    "max_length": ""
+  },
+  {
+    "name": "Covered_or_Noncovered_Indic",
+    "description": "ator_2  For each product listed in relation to the payment or other transfer of value, indicates if the product is a covered or non- covered product per the covered product definition in the Open Payments final rule.  Covered  VARCHAR 2 (100) string  100",
+    "sample_data": "",
+    "data_type": "",
+    "format": "",
+    "max_length": ""
+  },
+  {
+    "name": "Indicate_Drug_or_Biological_or",
+    "description": "_Devic e_or_Medical_Supply_2  For each product listed in relation to the payment or other transfer of value, indicates if the product is a drug, device, biological, or medical supply.  Drug  VARCHAR 2 29 Field Name Field Description  Sample Data  Data Type  Format  Max",
+    "sample_data": "",
+    "data_type": "",
+    "format": "",
+    "max_length": ""
+  },
+  {
+    "name": "Length",
+    "description": "",
+    "sample_data": "",
+    "data_type": "",
+    "format": "",
+    "max_length": ""
+  },
+  {
+    "name": "Product_Category_or_Therap",
+    "description": "eutic_Ar ea_2  Provide the product category or therapeutic area for the covered drug, device, biological, or medical supply listed in relation to the payment or other transfer of value.  Endocrinology  VARCHAR 2 (100)  string  100",
+    "sample_data": "",
+    "data_type": "",
+    "format": "",
+    "max_length": ""
+  },
+  {
+    "name": "Name_of_Drug_or_Biological_or_Devi",
+    "description": "ce_or_Medical_Supply_2  The marketed name of the drug, device, biological, or medical supply. May report the marketed name of up to five products (drugs, devices, biologicals, or medical supplies) associated with the payment or other transfer of value.  Sample Drug 2  VARCHAR 2 (500) string  500",
+    "sample_data": "",
+    "data_type": "",
+    "format": "",
+    "max_length": ""
+  },
+  {
+    "name": "Associated_Drug_or_Biological",
+    "description": "_NDC_2  The National Drug Code, if any, of the drug or biological associated with the payment or other transfer of value (if applicable); the record may report up to 5 codes  3698- 7272- 62 VARCHAR 2 (100)  string  12",
+    "sample_data": "",
+    "data_type": "",
+    "format": "",
+    "max_length": ""
+  },
+  {
+    "name": "Associated_Device_or_Medical_Supply_PDI_2",
+    "description": "The Primary Device Identifier, if any, of the covered device or covered medical supply associated with the payment or other transfer of values (if applicable); the record may report up to 5 codes. Note: OP Program began collecting PDI information during",
+    "sample_data": "",
+    "data_type": "",
+    "format": "",
+    "max_length": ""
+  },
+  {
+    "name": "PY",
+    "description": "2021.  0084865700026 0 VARCHAR (100) string  100",
+    "sample_data": "",
+    "data_type": "",
+    "format": "",
+    "max_length": ""
+  },
+  {
+    "name": "Covered_or_Noncovered_Indicator_3",
+    "description": "For each product listed in relation to the payment or other transfer of value, indicates if the product is a covered or non- covered product per the covered product definition in the Open Payments final rule.  Covered  VARCHAR 2 (100) string  100",
+    "sample_data": "",
+    "data_type": "",
+    "format": "",
+    "max_length": ""
+  },
+  {
+    "name": "Indicate_Drug_or_Biological_or",
+    "description": "_Devic e_or_Medical_Supply_3  For each product listed in relation to the payment or other transfer of value, indicates if the product is a drug, device, biological, or medical supply.  Drug  VARCHAR 2 (100) string  100",
+    "sample_data": "",
+    "data_type": "",
+    "format": "",
+    "max_length": ""
+  },
+  {
+    "name": "Product_Category_or_Therap",
+    "description": "eutic_Ar ea_3  Provide the product category or therapeutic area for the covered drug, device, biological, or medical supply listed in relation to the payment or other transfer of value.  Endocrinology  VARCHAR 2 30 Field Name Field Description  Sample Data  Data Type  Format  Max",
+    "sample_data": "",
+    "data_type": "",
+    "format": "",
+    "max_length": ""
+  },
+  {
+    "name": "Length",
+    "description": "",
+    "sample_data": "",
+    "data_type": "",
+    "format": "",
+    "max_length": ""
+  },
+  {
+    "name": "Name_of_Drug_or_Biological_or_Devi",
+    "description": "ce_or_Medical_Supply_3  The marketed name of the drug, device, biological, or medical supply. May report the marketed name of up to five products (drugs, devices, biologicals, or medical supplies) associated with the payment or other transfer of value.  Sample Drug 3  VARCHAR 2 (500) string  500",
+    "sample_data": "",
+    "data_type": "",
+    "format": "",
+    "max_length": ""
+  },
+  {
+    "name": "Associated_Drug_or_Biological",
+    "description": "_NDC_3  The National Drug Code, if any, of the drug or biological associated with the payment or other transfer of value (if applicable); the record may report up to 5 codes  36987 -272-63 VARCHAR 2 (100) string  12",
+    "sample_data": "",
+    "data_type": "",
+    "format": "",
+    "max_length": ""
+  },
+  {
+    "name": "Associated_Device_or_Medical_Supply_PDI_3",
+    "description": "The Primary Device Identifier, if any, of the covered device or covered medical supply associated with the payment or other transfer of values (if applicable); the record may report up to 5 codes. Note: OP Program began collecting PDI information during",
+    "sample_data": "",
+    "data_type": "",
+    "format": "",
+    "max_length": ""
+  },
+  {
+    "name": "PY",
+    "description": "2021.  0084865700026 0 VARCHAR (100) string  100",
+    "sample_data": "",
+    "data_type": "",
+    "format": "",
+    "max_length": ""
+  },
+  {
+    "name": "Covered_or_Noncovered_Indicator_4",
+    "description": "For each product listed in relation to the payment or other transfer of value, indicates if the product is a covered or non- covered product per the covered product definition in the Open Payments final rule.  Covered  VARCHAR 2 (100) string  100",
+    "sample_data": "",
+    "data_type": "",
+    "format": "",
+    "max_length": ""
+  },
+  {
+    "name": "Indicate_Drug_or_Biological_or",
+    "description": "_Devic e_or_Medical_Supply_4  For each product listed in relation to the payment or other transfer of value, indicates if the product is a drug, device, biological, or medical supply.  Biological  VARCHAR 2 (100) string  100",
+    "sample_data": "",
+    "data_type": "",
+    "format": "",
+    "max_length": ""
+  },
+  {
+    "name": "Product_Category_or_Therap",
+    "description": "eutic_Ar ea_4  Provide the product category or therapeutic area for the covered drug, device, biological, or medical supply listed in relation to the payment or other transfer of value.  Endocrinology  VARCHAR 2 (100) string  100",
+    "sample_data": "",
+    "data_type": "",
+    "format": "",
+    "max_length": ""
+  },
+  {
+    "name": "Name_of_Drug_or_Biological_or_Devi",
+    "description": "ce_or_Medical_Supply_4  The marketed name of the drug, device, biological, or medical supply. May report the marketed name of up to five products (drugs, devices, biologicals, or medical supplies) associated with the payment or other transfer of value.  Sample Drug 4  VARCHAR 2 31 Field Name Field Description  Sample Data  Data Type  Format  Max",
+    "sample_data": "",
+    "data_type": "",
+    "format": "",
+    "max_length": ""
+  },
+  {
+    "name": "Length",
+    "description": "",
+    "sample_data": "",
+    "data_type": "",
+    "format": "",
+    "max_length": ""
+  },
+  {
+    "name": "Associated_Drug_or_Biological_NDC_4",
+    "description": "The National Drug Code, if any, of the drug or biological associated with the payment or other transfer of value (if applicable); the record may report up to 5 codes  3698- 7272- 64 VARCHAR 2 (100) string  12",
+    "sample_data": "",
+    "data_type": "",
+    "format": "",
+    "max_length": ""
+  },
+  {
+    "name": "Associated_Device_or_Medical_Supply",
+    "description": "_PDI_4  The Primary Device Identifier, if any, of the covered device or covered medical supply associated with the payment or other transfer of values (if applicable); the record may report up to 5 codes. Note: OP Program began collecting PDI information during",
+    "sample_data": "",
+    "data_type": "",
+    "format": "",
+    "max_length": ""
+  },
+  {
+    "name": "PY",
+    "description": "2021.  0084865700026 0 VARCHAR (100) string  100",
+    "sample_data": "",
+    "data_type": "",
+    "format": "",
+    "max_length": ""
+  },
+  {
+    "name": "Covered_or_Noncovered_Indic",
+    "description": "ator_5  For each product listed in relation to the payment or other transfer of value, indicates if the product is a covered or non- covered product per the covered product definition in the Open Payments final rule.  Covered  VARCHAR 2 (100) string  100",
+    "sample_data": "",
+    "data_type": "",
+    "format": "",
+    "max_length": ""
+  },
+  {
+    "name": "Indicate_Drug_or_Biological_or",
+    "description": "_Devic e_or_Medical_Supply_5  For each product listed in relation to the payment or other transfer of value, indicates if the product is a drug, device, biological, or medical supply.  Device  VARCHAR 2 (100) string  100",
+    "sample_data": "",
+    "data_type": "",
+    "format": "",
+    "max_length": ""
+  },
+  {
+    "name": "Product_Category_or_Therap",
+    "description": "eutic_Ar ea_5  Provide the product category or therapeutic area for the covered drug, device, biological, or medical supply listed in relation to the payment or other transfer of value.  Endocrinology  VARCHAR 2 (100) string  100",
+    "sample_data": "",
+    "data_type": "",
+    "format": "",
+    "max_length": ""
+  },
+  {
+    "name": "Name_of_Drug_or_Biological_or_Devi",
+    "description": "ce_or_Medical_Supply_5  The marketed name of the drug, device, biological, or medical supply. May report the marketed name of up to five products (drugs, devices, biologicals, or medical supplies) associated with the payment or other transfer of value.  Sample Drug 5  VARCHAR 2 (500) string  500",
+    "sample_data": "",
+    "data_type": "",
+    "format": "",
+    "max_length": ""
+  },
+  {
+    "name": "Associated_Drug_or_Biological",
+    "description": "_NDC_5  The National Drug Code, if any, of the drug or biological associated with the payment or other transfer of value (if applicable); the record may report up to 5 codes  36987 -272-65 VARCHAR 2 32 Field Name Field Description  Sample Data  Data Type  Format  Max",
+    "sample_data": "",
+    "data_type": "",
+    "format": "",
+    "max_length": ""
+  },
+  {
+    "name": "Length",
+    "description": "",
+    "sample_data": "",
+    "data_type": "",
+    "format": "",
+    "max_length": ""
+  },
+  {
+    "name": "Associated_Device_or_Medical_Supply",
+    "description": "_PDI_5  The Primary Device Identifier, if any, of the covered device or covered medical supply associated with the payment or other transfer of values (if applicable); the record may report up to 5 codes. Note: OP Program began collecting PDI information during",
+    "sample_data": "",
+    "data_type": "",
+    "format": "",
+    "max_length": ""
+  },
+  {
+    "name": "PY",
+    "description": "2021.  0084865700026 0 VARCHAR (100) string  100",
+    "sample_data": "",
+    "data_type": "",
+    "format": "",
+    "max_length": ""
+  },
+  {
+    "name": "Program_Year",
+    "description": "The year in which the payment occurred, as reported by",
+    "sample_data": "submitting entity.  2016",
+    "data_type": "CHAR(4)",
+    "format": "number",
+    "max_length": "4"
+  },
+  {
+    "name": "Payment_Publication_Date",
+    "description": "The predefined date when the payment or other transfer of value is scheduled to be published  06/30/2017 DATE  DATE MM/DD /YYYY  12 33",
+    "sample_data": "",
+    "data_type": "",
+    "format": "",
+    "max_length": ""
+  },
+  {
+    "name": "Appendix",
+    "description": "C:  General Payments Detail  (PYs 2013- 2015 )",
+    "sample_data": "",
+    "data_type": "",
+    "format": "",
+    "max_length": ""
+  },
+  {
+    "name": "Table",
+    "description": "C-1: General Payment File Attributes (PY 201 3-2015)",
+    "sample_data": "",
+    "data_type": "",
+    "format": "",
+    "max_length": ""
+  },
+  {
+    "name": "Attribute",
+    "description": "Name  Description  Sample Data  Data Type  Format  Max Length",
+    "sample_data": "",
+    "data_type": "",
+    "format": "",
+    "max_length": ""
+  },
+  {
+    "name": "Change_Type",
+    "description": "An indicator showing if the payment record is New, Added,  Changed, or Unchanged in the current publication compared to the previous publication. • NEW  - To identify “new” records added from the end of the previous submission deadline until the current submission period deadline",
+    "sample_data": "publication.  NEW",
+    "data_type": "VARCHAR2(20)",
+    "format": "String",
+    "max_length": "20"
+  },
+  {
+    "name": "Covered_Recipient_Type",
+    "description": "An indicator showing if the recipient of the payment or other transfer of value is a physician covered",
+    "sample_data": "recipient or a teaching hospital  Physician",
+    "data_type": "VARCHAR2(50)",
+    "format": "string",
+    "max_length": "50"
+  },
+  {
+    "name": "Teaching_Hospital_CCN",
+    "description": "A unique identifying number (CMS Certification Number) of the Teaching Hospital receiving the",
+    "sample_data": "payment or other transfer of value  330024",
+    "data_type": "VARCHAR2(06)",
+    "format": "string",
+    "max_length": "6"
+  },
+  {
+    "name": "Teaching_Hospital_ID",
+    "description": "Open Payments system -generated unique identifier of the teaching hospital receiving the payment or 34",
+    "sample_data": "",
+    "data_type": "",
+    "format": "",
+    "max_length": ""
+  },
+  {
+    "name": "Attribute",
+    "description": "Name  Description  Sample Data  Data Type  Format  Max Length",
+    "sample_data": "",
+    "data_type": "",
+    "format": "",
+    "max_length": ""
+  },
+  {
+    "name": "Teaching_Hospital_Name",
+    "description": "The name of the teaching hospital receiving the payment or other transfer of value – the name displayed is as  listed in the CMS teaching hospital list Healthy Heart",
+    "sample_data": "",
+    "data_type": "",
+    "format": "",
+    "max_length": ""
+  },
+  {
+    "name": "Hospital",
+    "description": "VARCHAR2(100) string  100",
+    "sample_data": "",
+    "data_type": "",
+    "format": "",
+    "max_length": ""
+  },
+  {
+    "name": "Physician_Profile_ID",
+    "description": "Open Payments system -generated unique identifier for physician profile receiving the payment or other",
+    "sample_data": "transfer of value  1000000378",
+    "data_type": "NUMBER(38,0)",
+    "format": "number",
+    "max_length": "38"
+  },
+  {
+    "name": "Physician_NPI",
+    "description": "National Provider Identifier is a unique identification number for covered recipient physician (and not the NPI of a group the physician",
+    "sample_data": "belongs to).  2495351826",
+    "data_type": "NUMBER(10,0)",
+    "format": "number",
+    "max_length": "10"
+  },
+  {
+    "name": "Physician_First_Name",
+    "description": "First name of the physician (covered recipient) receiving the payment or other transfer of value, as",
+    "sample_data": "reported by the submitting entity  John",
+    "data_type": "VARCHAR2(20)",
+    "format": "string",
+    "max_length": "20"
+  },
+  {
+    "name": "Physician_Middle_Name",
+    "description": "The middle name of the physician (covered recipient) receiving the payment or other transfer",
+    "sample_data": "of value, as reported by the submitting entity  A",
+    "data_type": "VARCHAR2(20)",
+    "format": "string",
+    "max_length": "20"
+  },
+  {
+    "name": "Physician_Last_Name",
+    "description": "Last name of the physician (covered recipient) receiving the payment or other transfer of value, as",
+    "sample_data": "reported by the submitting entity  Smith",
+    "data_type": "VARCHAR2(35)",
+    "format": "string",
+    "max_length": "35"
+  },
+  {
+    "name": "Physician_Name_Suffix",
+    "description": "Name suffix of the physician (covered recipient) receiving the payment or other transfer of value, as 35",
+    "sample_data": "",
+    "data_type": "",
+    "format": "",
+    "max_length": ""
+  },
+  {
+    "name": "Attribute",
+    "description": "Name  Description  Sample Data  Data Type  Format  Max Length",
+    "sample_data": "",
+    "data_type": "",
+    "format": "",
+    "max_length": ""
+  },
+  {
+    "name": "Recipient_Primary_Business_Street_Ad",
+    "description": "dress_Line1  The first line of the primary practice/business street address of the physician or teaching hospital (covered recipient) receiving the payment or other",
+    "sample_data": "transfer of value  7500 Security Blvd.",
+    "data_type": "VARCHAR2(55)",
+    "format": "string",
+    "max_length": "55"
+  },
+  {
+    "name": "Recipient_Primary_Business",
+    "description": "_Street_Ad dress_Line2  The second line of the primary practice/business street address of the physician or teaching hospital (covered recipient) receiving the payment or other",
+    "sample_data": "transfer of value  Suite 100",
+    "data_type": "VARCHAR2(55)",
+    "format": "string",
+    "max_length": "55"
+  },
+  {
+    "name": "Recipient_City",
+    "description": "The primary practice/business city of the physician or teaching hospital (covered recipient) receiving",
+    "sample_data": "the payment or other transfer of value  Baltimore",
+    "data_type": "VARCHAR2(40)",
+    "format": "string",
+    "max_length": "40"
+  },
+  {
+    "name": "Recipient_State",
+    "description": "The primary practice/business state or territory abbreviation of the physician or teaching hospital (covered recipient) receiving the payment or other transfer of value, if the primary practice/business",
+    "sample_data": "address is in the United States  MD",
+    "data_type": "CHAR(2)",
+    "format": "string",
+    "max_length": "2"
+  },
+  {
+    "name": "Recipient_Zip_Code",
+    "description": "The 9 -digit zip code for the primary practice/business location of the physician or teaching hospital (covered recipient) receiving the number  10",
+    "sample_data": "payment or other transfer of value  21244 -3712",
+    "data_type": "VARCHAR2(10)",
+    "format": "number",
+    "max_length": "-"
+  },
+  {
+    "name": "Recipient_Country",
+    "description": "The primary practice/business address country name of the physician or teaching hospital (covered recipient) receiving the payment or other transfer 36",
+    "sample_data": "",
+    "data_type": "",
+    "format": "",
+    "max_length": ""
+  },
+  {
+    "name": "Attribute",
+    "description": "Name  Description  Sample Data  Data Type  Format  Max Length",
+    "sample_data": "",
+    "data_type": "",
+    "format": "",
+    "max_length": ""
+  },
+  {
+    "name": "Recipient_Province",
+    "description": "The primary practice/business province name of the physician (covered recipient) receiving the payment or other transfer of value, if the primary practice/business address is outside the United",
+    "sample_data": "States, and if applicable  Manitoba",
+    "data_type": "VARCHAR2(20)",
+    "format": "string",
+    "max_length": "20"
+  },
+  {
+    "name": "Recipient_Postal_Code",
+    "description": "The international postal code for the primary practice/business location of the physician (covered recipient) receiving the payment or other transfer of value, if the primary practice/business address is",
+    "sample_data": "outside the United States  5600098",
+    "data_type": "VARCHAR2(20)",
+    "format": "string",
+    "max_length": "20"
+  },
+  {
+    "name": "Physician_Primary_Type",
+    "description": "The primary type of medicine practiced by the physician (covered recipient)  Medical Doctor",
+    "sample_data": "(MD)",
+    "data_type": "VARCHAR2(100)",
+    "format": "string",
+    "max_length": "100"
+  },
+  {
+    "name": "Physician_Specialty",
+    "description": "Physician's single -specialty chosen from the standardized \"provider taxonomy\" code list  Allopathic &",
+    "sample_data": "",
+    "data_type": "",
+    "format": "",
+    "max_length": ""
+  },
+  {
+    "name": "Osteopathic",
+    "description": "",
+    "sample_data": "",
+    "data_type": "",
+    "format": "",
+    "max_length": ""
+  },
+  {
+    "name": "Physicians",
+    "description": "|Obstetrics &",
+    "sample_data": "",
+    "data_type": "",
+    "format": "",
+    "max_length": ""
+  },
+  {
+    "name": "Gynecology",
+    "description": "VARCHAR2(300) string  300",
+    "sample_data": "",
+    "data_type": "",
+    "format": "",
+    "max_length": ""
+  },
+  {
+    "name": "Physician_License_State_cod",
+    "description": "e1 The state license number of the covered recipient physician, which is a 2 -letter state abbreviation; the record may include up to 5 physician license states",
+    "sample_data": "if a physician is licensed in multiple states  MA",
+    "data_type": "CHAR(2)",
+    "format": "string",
+    "max_length": "2"
+  },
+  {
+    "name": "Physician_License_State_code2",
+    "description": "The state license number of the covered recipient physician, which is a 2 -letter state abbreviation; the record may include up to 5 physician license states 37",
+    "sample_data": "",
+    "data_type": "",
+    "format": "",
+    "max_length": ""
+  },
+  {
+    "name": "Attribute",
+    "description": "Name  Description  Sample Data  Data Type  Format  Max Length",
+    "sample_data": "",
+    "data_type": "",
+    "format": "",
+    "max_length": ""
+  },
+  {
+    "name": "Physician_License_State_code3",
+    "description": "The state license number of the covered recipient physician, which is a 2 -letter state abbreviation; the record may include up to 5 physician license states",
+    "sample_data": "if a physician is licensed in multiple states  VA",
+    "data_type": "CHAR(2)",
+    "format": "string",
+    "max_length": "2"
+  },
+  {
+    "name": "Physician_License_State_code4",
+    "description": "The state license number of the covered recipient physician, which is a 2-letter state abbreviation; the record may include up to 5 physician license states",
+    "sample_data": "if a physician is licensed in multiple states  MI",
+    "data_type": "CHAR(2)",
+    "format": "string",
+    "max_length": "2"
+  },
+  {
+    "name": "Physician_License_State_code5",
+    "description": "The state license number of the covered recipient physician, which is a 2 -letter state abbreviation; the record may include up to 5 physician license states",
+    "sample_data": "if a physician is licensed in multiple states  WI",
+    "data_type": "CHAR(2)",
+    "format": "string",
+    "max_length": "2"
+  },
+  {
+    "name": "Submitting_Applicable_Manu",
+    "description": "facturer_o r_Applicable_GPO _Name  The textual proper name of the submitting applicable manufacturer or applicable GPO  ABCDE",
+    "sample_data": "",
+    "data_type": "",
+    "format": "",
+    "max_length": ""
+  },
+  {
+    "name": "Manufacturing",
+    "description": "VARCHAR2(100) string  100",
+    "sample_data": "",
+    "data_type": "",
+    "format": "",
+    "max_length": ""
+  },
+  {
+    "name": "Applicable_Manufacturer_or_Applicable",
+    "description": "_GPO_Making_Payment_ID  Open Payments system -generated unique identifier of the applicable manufacturer or applicable GPO",
+    "sample_data": "making payment or other transfer of value  1000000049",
+    "data_type": "VARCHAR2(38)",
+    "format": "Number",
+    "max_length": "38"
+  },
+  {
+    "name": "Applicable_Manufacturer_or_Applicable",
+    "description": "_GPO_Making_Payment_Name  The textual proper name of the applicable manufacturer or applicable GPO making the payment or other transfer of value  ABCDE",
+    "sample_data": "",
+    "data_type": "",
+    "format": "",
+    "max_length": ""
+  },
+  {
+    "name": "Manufacturing",
+    "description": "VARCHAR2(100) string  100",
+    "sample_data": "",
+    "data_type": "",
+    "format": "",
+    "max_length": ""
+  },
+  {
+    "name": "Applicable_Manufacturer_or_Applicable",
+    "description": "_GPO_Making_Payment_State  State name of the applicable manufacturer or applicable GPO making the payment or other",
+    "sample_data": "transfer of value  VA",
+    "data_type": "CHAR(2)",
+    "format": "string",
+    "max_length": "2"
+  },
+  {
+    "name": "Applicable_Manufacturer_or",
+    "description": "_Applicable _GPO_Making_Pay ment_Country  Country name of the applicable manufacturer or applicable GPO making the payment or other 38",
+    "sample_data": "",
+    "data_type": "",
+    "format": "",
+    "max_length": ""
+  },
+  {
+    "name": "Attribute",
+    "description": "Name  Description  Sample Data  Data Type  Format  Max Length",
+    "sample_data": "",
+    "data_type": "",
+    "format": "",
+    "max_length": ""
+  },
+  {
+    "name": "Total_Amount_of_Payment_USDollars",
+    "description": "US dollar amount of payment or other transfer of value to the recipient (manufacturer must convert",
+    "sample_data": "to dollar currency if necessary)  1978.00",
+    "data_type": "NUMBER(12,2)",
+    "format": "decimal",
+    "max_length": "12"
+  },
+  {
+    "name": "Date_of_Payment",
+    "description": "If a singular payment, then this is the actual date the payment was issued; if a series of payments or",
+    "sample_data": "the first payment to the covered recipient in this PY 04/01/2015",
+    "data_type": "DATE",
+    "format": "Date",
+    "max_length": ""
+  },
+  {
+    "name": "YYYY",
+    "description": "12",
+    "sample_data": "",
+    "data_type": "",
+    "format": "",
+    "max_length": ""
+  },
+  {
+    "name": "Number_of_Payments_Inclu",
+    "description": "ded_in_Tot al_Amount  The number of discrete payments being reported in",
+    "sample_data": "the \"Total Amount of Payment\"  1",
+    "data_type": "NUMBER(3,0)",
+    "format": "number",
+    "max_length": "3"
+  },
+  {
+    "name": "Form_of_Payment_or_Transf",
+    "description": "er_of_Valu e The method of payment used to pay the covered recipient or to make the transfer of value  In-kind items and",
+    "sample_data": "services",
+    "data_type": "VARCHAR2(100)",
+    "format": "string",
+    "max_length": "100"
+  },
+  {
+    "name": "Nature_of_Payment_or_Tran",
+    "description": "sfer_of_Va lue The nature of payment used to pay the covered",
+    "sample_data": "recipient or to make the transfer of value  Consulting Fee",
+    "data_type": "VARCHAR2(200)",
+    "format": "string",
+    "max_length": "200"
+  },
+  {
+    "name": "City_of_Travel",
+    "description": "For \"Travel and Lodging\" payments, destination city",
+    "sample_data": "where covered recipient traveled  San Diego",
+    "data_type": "VARCHAR2(40)",
+    "format": "string",
+    "max_length": "40"
+  },
+  {
+    "name": "State_of_Travel",
+    "description": "For \"Travel and Lodging\" payments, destination",
+    "sample_data": "state where covered recipient traveled  CA",
+    "data_type": "CHAR(2)",
+    "format": "string",
+    "max_length": "2"
+  },
+  {
+    "name": "Country_of_Travel",
+    "description": "For \"Travel and Lodging\" payments, the destination",
+    "sample_data": "country where the covered recipient traveled  United States",
+    "data_type": "VARCHAR2(100)",
+    "format": "string",
+    "max_length": "100"
+  },
+  {
+    "name": "Physician_Ownership_Indicat",
+    "description": "or Indicates whether the physician holds ownership or investment interest in the applicable manufacturer; this indicator is limited to physician's ownership, 39",
+    "sample_data": "",
+    "data_type": "",
+    "format": "",
+    "max_length": ""
+  },
+  {
+    "name": "Attribute",
+    "description": "Name  Description  Sample Data  Data Type  Format  Max Length",
+    "sample_data": "",
+    "data_type": "",
+    "format": "",
+    "max_length": ""
+  },
+  {
+    "name": "Third_Party_Payment_Recipi",
+    "description": "ent_Indicat or Indicates if payment or other transfer of value was paid to a third party entity or individual at the request of or on behalf of a covered recipient",
+    "sample_data": "(physician or teaching hospital)  Entity",
+    "data_type": "VARCHAR2(50)",
+    "format": "string",
+    "max_length": "50"
+  },
+  {
+    "name": "Name_of_Third_Party_Entity_",
+    "description": "Receiving _Payment_or_Transfer_of_Value  The name of the entity that received the payment or other transfer of value  EDCBA",
+    "sample_data": "",
+    "data_type": "",
+    "format": "",
+    "max_length": ""
+  },
+  {
+    "name": "Manufacturing",
+    "description": "VARCHAR2(50)  string  50",
+    "sample_data": "",
+    "data_type": "",
+    "format": "",
+    "max_length": ""
+  },
+  {
+    "name": "Charity_Indicator",
+    "description": "Indicates the third party entity that received the",
+    "sample_data": "payment or other transfer of value is a charity  No",
+    "data_type": "CHAR(3)",
+    "format": "string",
+    "max_length": "3"
+  },
+  {
+    "name": "Third_Party_Equals_Covered_",
+    "description": "Recipient _Indicator  An indicator showing the \"Third Party\" that received the payment or other transfer of value is a covered",
+    "sample_data": "recipient  No",
+    "data_type": "CHAR(3)",
+    "format": "string",
+    "max_length": "3"
+  },
+  {
+    "name": "Contextual_Information",
+    "description": "Any free text which the reporting entity deems helpful or appropriate regarding this payment or other transfer of value  Transfer made to promote use of the",
+    "sample_data": "product",
+    "data_type": "VARCHAR2(500)",
+    "format": "string",
+    "max_length": "500"
+  },
+  {
+    "name": "Delay_in_Publication_Indicator",
+    "description": "An indicator showing if an applicable manufacturer or applicable GPO is requesting a delay in the",
+    "sample_data": "publication of a payment or other transfer of value  No",
+    "data_type": "CHAR(3)",
+    "format": "string",
+    "max_length": "3"
+  },
+  {
+    "name": "Record_ID",
+    "description": "Open Payments system -assigned identifier to the",
+    "sample_data": "general transaction at the time of submission  100000000241",
+    "data_type": "NUMBER(38,0)",
+    "format": "number",
+    "max_length": "38"
+  },
+  {
+    "name": "Dispute_Status_for_Publication",
+    "description": "Indicates whether the payment or other transfer of value is being disputed by the covered recipient or 40",
+    "sample_data": "",
+    "data_type": "",
+    "format": "",
+    "max_length": ""
+  },
+  {
+    "name": "Attribute",
+    "description": "Name  Description  Sample Data  Data Type  Format  Max Length",
+    "sample_data": "",
+    "data_type": "",
+    "format": "",
+    "max_length": ""
+  },
+  {
+    "name": "Product_Indicator",
+    "description": "An indicator that allows the applicable manufacturer or applicable GPO to select whether the payment or other transfer of value is associated with only covered drugs, devices, biologicals, or medical supplies (\"Covered\"), or only non -covered drugs, devices, biologicals, or medical supplies (\"Non -covered\"), or neither covered or non -covered drugs, devices, biologicals or medical supplies (\"None\"), or both covered and/or non -covered drugs, devices, biologicals or medical supplies",
+    "sample_data": "(\"Covered\" or \"Combination\")  Covered",
+    "data_type": "VARCHAR2(50)",
+    "format": "string",
+    "max_length": "50"
+  },
+  {
+    "name": "Name_of_Associated_Covered_Drug_or",
+    "description": "_Biological1  The marketed name of the drug or biological associated with this payment or other transfer of value; the record may report the marketed name of up to 5 covered products (drugs, devices,",
+    "sample_data": "biologicals, or medical supplies)  Sample Drug 1",
+    "data_type": "VARCHAR2(500)",
+    "format": "string",
+    "max_length": "500"
+  },
+  {
+    "name": "Name_of_Associated_Covered_Drug_or",
+    "description": "_Biological2  The marketed name of the drug or biological associated with this payment or other transfer of value; the record may report the marketed name of up to 5 covered products (drugs, devices,",
+    "sample_data": "biologicals, or medical supplies)  Sample Drug 2",
+    "data_type": "VARCHAR2(500)",
+    "format": "string",
+    "max_length": "500"
+  },
+  {
+    "name": "Name_of_Associated_Covered",
+    "description": "_Dru g_or _Biological3  The marketed name of the drug or biological associated with this payment or other transfer of value; the record may report the marketed name of up to 5 covered products (drugs, devices, 41",
+    "sample_data": "",
+    "data_type": "",
+    "format": "",
+    "max_length": ""
+  },
+  {
+    "name": "Attribute",
+    "description": "Name  Description  Sample Data  Data Type  Format  Max Length",
+    "sample_data": "",
+    "data_type": "",
+    "format": "",
+    "max_length": ""
+  },
+  {
+    "name": "Name_of_Associated_Covered_Drug_or",
+    "description": "_Biological4  The marketed name of the drug or biological associated with this payment or other transfer of value; the record may report the marketed name of up to 5 covered products (drugs, devices,",
+    "sample_data": "biologicals, or medical supplies)  Sample Drug 4",
+    "data_type": "VARCHAR2(500)",
+    "format": "string",
+    "max_length": "500"
+  },
+  {
+    "name": "Name_of_Associated_Covered_Drug_or",
+    "description": "_Biological5  The marketed name of the drug or biological associated with this payment or other transfer of value; the record may report the marketed name of up to 5 covered products (drugs, devices,",
+    "sample_data": "biologicals, or medical supplies)  Sample Drug 5",
+    "data_type": "VARCHAR2(500)",
+    "format": "string",
+    "max_length": "500"
+  },
+  {
+    "name": "NDC_of_Associated_Covered",
+    "description": "_Drug_or_",
+    "sample_data": "",
+    "data_type": "",
+    "format": "",
+    "max_length": ""
+  },
+  {
+    "name": "Biological1",
+    "description": "The National Drug Code, if any, of the drug or biological associated with the payment or other transfer of value (if applicable); the record may",
+    "sample_data": "report up to 5 codes  3698- 7272- 62",
+    "data_type": "VARCHAR2(12)",
+    "format": "string",
+    "max_length": "12"
+  },
+  {
+    "name": "NDC",
+    "description": "_of_Associated_Covered_ Drug_or_",
+    "sample_data": "",
+    "data_type": "",
+    "format": "",
+    "max_length": ""
+  },
+  {
+    "name": "Biological2",
+    "description": "The National Drug Code, if any, of the drug or biological associated with the payment or other transfer of value (if applicable); the record may",
+    "sample_data": "report up to 5 codes  36987 -272-62",
+    "data_type": "VARCHAR2(12)",
+    "format": "string",
+    "max_length": "12"
+  },
+  {
+    "name": "NDC_of_Associated_Covered_Drug_or_",
+    "description": "",
+    "sample_data": "",
+    "data_type": "",
+    "format": "",
+    "max_length": ""
+  },
+  {
+    "name": "Biological3",
+    "description": "The National Drug Code, if any, of the drug or biological associated with the payment or other transfer of value (if applicable); the record may",
+    "sample_data": "report up to 5 codes  36987 -2726 -2",
+    "data_type": "VARCHAR2(12)",
+    "format": "string",
+    "max_length": "12"
+  },
+  {
+    "name": "NDC_of_Associated_Covered_Drug_or_",
+    "description": "",
+    "sample_data": "",
+    "data_type": "",
+    "format": "",
+    "max_length": ""
+  },
+  {
+    "name": "Biological4",
+    "description": "The National Drug Code, if any, of the drug or biological associated with the payment or other transfer of value (if applicable); the record may 42",
+    "sample_data": "",
+    "data_type": "",
+    "format": "",
+    "max_length": ""
+  },
+  {
+    "name": "Attribute",
+    "description": "Name  Description  Sample Data  Data Type  Format  Max Length",
+    "sample_data": "",
+    "data_type": "",
+    "format": "",
+    "max_length": ""
+  },
+  {
+    "name": "NDC_of_Associated_Covered_Drug_or_",
+    "description": "",
+    "sample_data": "",
+    "data_type": "",
+    "format": "",
+    "max_length": ""
+  },
+  {
+    "name": "Biological5",
+    "description": "The National Drug Code, if any, of the drug or biological associated with the payment or other transfer of value (if applicable); the record may",
+    "sample_data": "report up to 5 codes  36987 -2726 -2",
+    "data_type": "VARCHAR2(12)",
+    "format": "string",
+    "max_length": "12"
+  },
+  {
+    "name": "Name_of_Associated_Covered_Device_",
+    "description": "or_Medical_Supply1  The marketed name of the device or medical supply associated with this payment or other transfer of value; the record may report the marketed name of up to 5 covered products (drugs, devices,",
+    "sample_data": "biologicals, or medical supplies)  Sample Device 1",
+    "data_type": "VARCHAR2(500)",
+    "format": "string",
+    "max_length": "500"
+  },
+  {
+    "name": "Name_of_Associated_Covered_Device_",
+    "description": "or_Medical_Supply2  The marketed name of the device or medical supply associated with this payment or other transfer of value; the record may report the marketed name of up to 5 covered products (drugs, devices,",
+    "sample_data": "biologicals, or medical supplies)  Sample Device 2",
+    "data_type": "VARCHAR2(500)",
+    "format": "string",
+    "max_length": "500"
+  },
+  {
+    "name": "Name_of_Associated_Covered_Device_",
+    "description": "or_Medical_Supply3  The marketed name of the device or medical supply associated with this payment or other transfer of value; the record may report the marketed name of up to 5 covered products (drugs, devices,",
+    "sample_data": "biologicals, or medical supplies)  Sample Device 3",
+    "data_type": "VARCHAR2(500)",
+    "format": "string",
+    "max_length": "500"
+  },
+  {
+    "name": "Name_of_Associated_Covered_Device_",
+    "description": "or_Medical_Supply4  The marketed name of the device or medical supply associated with this payment or other transfer of value; the record may report the marketed name of up to 5 covered products (drugs, devices, 43",
+    "sample_data": "",
+    "data_type": "",
+    "format": "",
+    "max_length": ""
+  },
+  {
+    "name": "Attribute",
+    "description": "Name  Description  Sample Data  Data Type  Format  Max Length",
+    "sample_data": "",
+    "data_type": "",
+    "format": "",
+    "max_length": ""
+  },
+  {
+    "name": "Name_of_Associated_Covered_Device_",
+    "description": "or_Medical_Supply5  The marketed name of the device or medical supply associated with this payment or other transfer of value; the record may report the marketed name of up to 5 covered products (drugs, devices,",
+    "sample_data": "biologicals, or medical supplies)  Sample Device 5",
+    "data_type": "VARCHAR2(500)",
+    "format": "string",
+    "max_length": "500"
+  },
+  {
+    "name": "Program_Year",
+    "description": "The year in which the payment occurred  2014  CHAR(4) number  4",
+    "sample_data": "",
+    "data_type": "",
+    "format": "",
+    "max_length": ""
+  },
+  {
+    "name": "Payment_Publication_Date",
+    "description": "The predefined date when the payment or other",
+    "sample_data": "transfer of value is scheduled to be published  06/30/2015",
+    "data_type": "DATE",
+    "format": "DATE",
+    "max_length": ""
+  }
+]
