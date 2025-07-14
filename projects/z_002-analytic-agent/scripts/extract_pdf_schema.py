@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Extract schema information from Open Payments data dictionary PDF."""
 
-import PyPDF2
+import pypdf
 import re
 from pathlib import Path
 import json
@@ -10,7 +10,7 @@ def extract_pdf_text(pdf_path):
     """Extract text from PDF file."""
     text = ""
     with open(pdf_path, 'rb') as file:
-        reader = PyPDF2.PdfReader(file)
+        reader = pypdf.PdfReader(file)
         for page_num in range(len(reader.pages)):
             page = reader.pages[page_num]
             text += page.extract_text()
