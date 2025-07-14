@@ -1,0 +1,50 @@
+[
+  {
+    "name": "Table",
+    "description": "D-1: Research Payment File Attributes (PY 2016  and Onwards )",
+    "sample_data": "",
+    "data_type": "",
+    "format": "",
+    "max_length": ""
+  },
+  {
+    "name": "Chang",
+    "description": "e_Type An indicator showing if the payment rec ord is New, Added , Changed, or Unchang ed in the cu rrent publication compar ed to the previous pub lication. \u2022 NEW - To identify \u201cn ew\u201d records add ed from the end o f the previous submi ssion dead line until the current",
+    "sample_data": "submi ssion period dead line",
+    "data_type": "date",
+    "format": "",
+    "max_length": ""
+  },
+  {
+    "name": "Covered_Recipient_Type",
+    "description": "An indicator showing if the recipient of the payment or other transf er of v alue is a physic ian covered recipient, or non-physician practitioner , tea ching hospital covered recipient, non-covere d recipient entity, o r non-cover ed recipient i ndividual Cover ed Recipient",
+    "sample_data": "",
+    "data_type": "",
+    "format": "",
+    "max_length": ""
+  },
+  {
+    "name": "Teachin",
+    "description": "g Hospital VARCH AR2(50) string 50",
+    "sample_data": "",
+    "data_type": "",
+    "format": "",
+    "max_length": ""
+  },
+  {
+    "name": "Noncov",
+    "description": "ered_ Recipi ent_Entit y_N ame The name of the non-cover ed recipient e ntity rece iving the",
+    "sample_data": "paym ent or othe r transfer of value EDCBA Corporation",
+    "data_type": "VARCHAR2(50",
+    "format": ")",
+    "max_length": "string"
+  },
+  {
+    "name": "Teaching_Hospital_CCN",
+    "description": "A unique identifyin g number (CMS  Certificatio n Number ) of the Te achin g Hospital rece iving the paym ent or othe r",
+    "sample_data": "",
+    "data_type": "",
+    "format": "",
+    "max_length": ""
+  }
+]

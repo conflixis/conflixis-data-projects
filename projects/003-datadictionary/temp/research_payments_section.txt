@@ -1,0 +1,2133 @@
+Table D-1: Research Payment File Attributes (PY 2016  and Onwards ) 
+Field Name Field Descr iption Sample Data Data Type Format Max 
+Length 
+Chang e_Type An indicator showing if the payment rec ord is New, Added , 
+Changed, or Unchang ed in the cu rrent publication 
+compar ed to the previous pub lication. 
+• NEW - To identify “n ew” records add ed from the end o f 
+the previous submi ssion dead line until the current 
+submi ssion period dead line date 
+• ADDED - To identif y reco rds that were not eligible at 
+the time of previous publication , which  is eligible fo r 
+current pub licati on. 
+• CHANGED - To identify previousl y published records 
+modified after the last publication. 
+• UNCHANGED - To ident ify previously publishe d records 
+that rem ain “unchanged ” in current pub lication. NEW VARCH AR2(20) string 20 
+Covered_Recipient_Type An indicator showing if the recipient of the payment or 
+other transf er of v alue is a physic ian covered recipient, or 
+non-physician practitioner , tea ching hospital covered 
+recipient, non-covere d recipient entity, o r non-cover ed 
+recipient i ndividual Cover ed Recipient 
+Teachin g Hospital VARCH AR2(50) string 50 
+Noncov ered_ Recipi ent_Entit y_N
+ame The name of the non-cover ed recipient e ntity rece iving the 
+paym ent or othe r transfer of value EDCBA Corporation  VARCHAR2(50 ) string 50 
+Teaching_Hospital_CCN A unique identifyin g number (CMS  Certificatio n Number ) of 
+the Te achin g Hospital rece iving the paym ent or othe r 
+transfer of value. 330024  VARCHAR2(06 ) string 6 Open Payments Methodology Overview & Data Dictionary   OMB Control No: 0938 -1237 
+Expiration Date: 07/31/2026  
+ 
+45 
+ Field Name Field Description Sample Data Data Type Format Max 
+Length 
+Teaching_Hospital_ID  System generated unique identifier of the Teaching 
+Hospital receiving the payment or other transfer of value.  1000000999  NUMBER(38,0) number  38 
+Teaching_Hospital_Name The name of the Teaching Hospital receiving the payment or 
+other transfer of value. The name displayed is as listed in 
+CMS  teaching hospital list under Hospital name. Healthy Heart 
+Hospital VARCH AR2(100) string 100 
+Covered_Recipient _Profile_ID  System generated unique identifier for covered recipient 
+physician profile or covered recipient non -physician 
+practitioner profile receiving the payment or other transfer 
+of value. 1000000378  NUMBER(38,0) num ber 38 
+Covered_Recipient_NPI  National Provider Identifier is a unique identification 
+number for covered recipient physician or non- physician 
+practitioner (and not the NPI of a group the physician/non -
+physician practitioner belongs to).  2495351826  NUMBER(10,0) number  10 
+Covered_Recipient _First_Name First name of the physician (covered recipient) or covered 
+recipient non -physician practitioner receiving the payment 
+or transfer of value, as reported by the submitting entity. John  VARCH AR2(20) string 20 
+Covered_Recipient _Middle_Name  Middle name of the covered recipient physician or covered 
+recipient non -physician practitioner receiving the payment or 
+transfer of value, as reported by the submitting entity. A VARCH AR2(20) string 20 
+Covered_Recipient_ Last_Name Last name of the covered recipient physician or covered 
+recipient non -physician practitioner receiving the payment 
+or transfer of value, as reported by the submitting entity. Smith  VARCH AR2(35 string 35 
+Covered_Recipient_Na me_Suffix Name suffix of the covered recipient physician or covered 
+recipient non -physician practitioner receiving the payment 
+or transfer of value, as reported by the submitting entity. III VARCH AR2(5) string 5 Open Payments Methodology Overview & Data Dictionary   OMB Control No: 0938 -1237 
+Expiration Date: 07/31/2026  
+ 
+46 
+ Field Name Field Description Sample Data Data Type Format Max 
+Length 
+Recipient_Primary_Business_Stre
+et_Address _Line1 The first line of the primary business street addr ess of the 
+physician or non-physician practitioner or t eaching hospital 
+or non-covered recipient entity receiving the payment or 
+other transfer of value 7500 Se curity Blvd. VARCH AR2(55) string 55 
+Recipient_Primary_Business_Stre
+et_Address_Line2 The second line of the primary business street address of 
+the physician or teaching hospital or non-covered recipient 
+entity receiving the payment or other transfer of value Suite 100 VARCH AR2(55) string 55 
+Recipient_City The primary practice/business address city of the physician 
+or teaching hospital or non-covered recipient entity 
+receiving the payment or other transfer of value Baltimore VARCH AR2(40) string 40 
+Recipient_State The state or territory abbreviation of the primary business 
+address of the physician or teaching hospital or non-covered 
+recipient entity receiving the payment or other transfer of 
+value if the primary business address is in the United S tates. MD CHAR(2) string 2 
+Recipient_Zip_Code The 9-digit zip code for the primary business location of the 
+physician or teaching hospital or non-covered recipient 
+entity receiving the payment or other transfer of value if the 
+primary practice address is in the United S tates 21244 -3712  VARCH AR2(10) num ber- 
+num ber 10 
+Recipient_Country The primary practice/business address country of the 
+physician or teaching hospital or non-covered recipient 
+entity receiving the payment or other transfer of value if the 
+primary practice address is in the United S tates US VARCH AR2(100) string 100 
+Recipient_Province The primary practice/business province name of the 
+physician or teaching hospital or non-covered recipient 
+entity receiving the payment or other transfer of value, if 
+the primary practice/business address is outside the Un ited 
+States, and if applicable. Manitoba VARCH AR2(20) string 20 Open Payments Methodology Overview & Data Dictionary   OMB Control No: 0938 -1237 
+Expiration Date: 07/31/2026  
+ 
+47 
+ Field Name Field Description Sample Data Data Type Format Max 
+Length 
+Recipient_Postal_Code The international postal code for the primary business 
+location of the physician or teaching hospital or non-
+covered recipient entity receiving the payment or other 
+transfer of value if the primary business address is outside 
+the United S tates 5600098  VARCH AR2(20) string 20 
+Covered_Recipient_Primary_Typ
+e_1 Primary type of medicine practiced by the physician or 
+Non -Physician Practitioner (covered recipient).  Medical Doctor 
+(MD)/ Physician 
+Assistant (PA)  VARCHAR2(100) string  100 
+Covered_Recipient_ Primary _Typ
+e_2 Primary type of medicine practiced by the physician or 
+Non -Physician Practitioner (covered recipient).  
+Note: OP began accepting this field in PY2021.  Medical Doctor 
+(MD)/ Physician 
+Assistant (PA)  VARCHAR2(100) string  100 
+Covered_Recipient_Primary_Typ
+e_3 Primary type of medicine practiced by the physician or 
+Non -Physician Practitioner (covered recipient).  
+Note: OP began accepting this field in PY2021.  Medical Doctor 
+(MD)/ Physician 
+Assistant (PA)  VARCHAR2(100) string  100 
+Covered_Recipient_Primary_Typ
+e_4 Primary type of medicine practiced by the physician or 
+Non -Physician Practitioner (covered recipient).  
+Note: OP began accepting this field in PY2021.  Medical Doctor 
+(MD)/ Physician 
+Assistant (PA)  VARCHAR2(100) string  100 
+Covered_Recipient_Primary_Typ
+e_5 Primary type of medicine practiced by the physician or 
+Non -Physician Practitioner (covered recipient).  
+Note: OP began accepting this field in PY2021.  Medical Doctor 
+(MD)/ Physician 
+Assistant (PA)  VARCHAR2(100) string  100 
+Covered_Recipient_Primary_Typ
+e_6 Primary type of medicine practiced by the physician or  
+Non -Physician Practitioner (covered recipient).  Medical Doctor 
+(MD)/ Physician 
+Assistant (PA)  VARCHAR2(100) string  100 Open Payments Methodology Overview & Data Dictionary   OMB Control No: 0938 -1237 
+Expiration Date: 07/31/2026  
+ 
+48 
+ Field Name Field Description Sample Data Data Type Format Max 
+Length 
+Covered_Recipient_Specialty_1  Physician's or non -physician practitioner’s specialty chosen 
+from the standardized "provider taxonomy" code list.  Allopathic & 
+Osteopathic 
+Physicians  
+|Obstetrics & 
+Gynecology  VARCHAR2(300) string  300 
+Covered_Recipient_Specialty_2  Physician's or non -physician practitioner’s specialty chosen 
+from the standardized "provider taxonomy" code list.  
+Note: OP began accepting this field in PY2021.  Allopathic & 
+Osteopathic 
+Physicians  
+|Obstetrics & 
+Gynecology  VARCHAR2(300) string  300 
+Covered_Recipient_Specialty_3  Physician's or non -physician practitioner’s specialty chosen 
+from the standardized "provider taxonomy" code list.  
+Note: OP began accepting this field in PY2021.  Allopathic & 
+Osteopathic 
+Physicians|Obstetri
+cs & Gynecology  VARCHAR2(300) string  300 
+Covered_Recipient_Specialty_4  Physician's or non -physician practitioner’s specialty chosen 
+from the standardized "provider taxonomy" code list.  
+Note: OP began accepting this field in PY2021.  Allopathic & 
+Osteopathic 
+Physicians|Obstetri
+cs & Gynecology  VARCHAR2(300) string  300 
+Covered_Recipient_Specialty_5  Physician's or non -physician practitioner’s specialty chosen 
+from the standardized "provider taxonomy" code list.  
+Note: OP began accepting this field in PY2021.  Allopathic & 
+Osteopathic 
+Physicians|Obstetri
+cs & Gynecology  VARCHAR2(300) string  300 
+Covered_Recipient_Specialty_6  Physician's or non -physician practitioner’s specialty chosen 
+from the standardized "provider taxonomy" code list.  
+Note: OP began accepting this field in PY2021.  Allopathic & 
+Osteopathic 
+Physicians|Obstetri
+cs & Gynecology  VARCHAR2(300) string  300 Open Payments Methodology Overview & Data Dictionary   OMB Control No: 0938 -1237 
+Expiration Date: 07/31/2026  
+ 
+49 
+ Field Name Field Description Sample Data Data Type Format Max 
+Length 
+Covered_Recipient_License_Stat
+e_code1  The state license num ber of the covered recipient physician 
+or covered recipient non -physician practitioner,  which is a 
+2-letter state abbr eviation; the record may include up to 5 
+physician license states, if a ph ysician or non -physician 
+practitioner is  licensed in  multiple states. MD CHAR(2) string 2 
+Covered_Recipient_License_Stat
+e_code2  The state license num ber of the covered recipient physician 
+or covered recipient non -physician practitioner,  which is a 
+2-letter state abbr eviation; the record may include up to 5 
+physician license states, if a ph ysician or non -physician 
+practitioner is  licensed in  multiple states. CA CHAR(2) string 2 
+Covered_Recipient_License_Stat
+e_code3  The state license num ber of the covered recipient physician 
+or covered recipient non -physician practitioner,  which is a 
+2-letter state abbr eviation; the record may include up to 5 
+physician license states, if a ph ysician or non -physician 
+practitioner is  licensed in  multiple states. TX CHAR(2) string 2 
+Covered_Recipient_License_Stat
+e_code4  The state license num ber of the covered recipient physician 
+or covered recipient non -physician practitioner,  which is a 
+2-letter state abbr eviation; the record may include up to 5 
+physician license states, if a ph ysician or non -physician 
+practitioner is  licensed in  multiple states. VA CHAR(2) string 2 
+Covered_Recipient_License_Stat
+e_code5  The state license num ber of the covered recipient physician 
+or covered recipient non -physician practitioner,  which is a 
+2-letter state abbr eviation; the record may include up to 5 
+physician license states, if a ph ysician or non -physician 
+practitioner is  licensed in  multiple states. MA CHAR(2) string 2 
+Principal_Investigator_1_Profile_
+ID An identifier for Principal Investigator profile after validation 3843332  NUMBER(38,0) num ber 38 Open Payments Methodology Overview & Data Dictionary   OMB Control No: 0938 -1237 
+Expiration Date: 07/31/2026  
+ 
+50 
+ Field Name Field Description Sample Data Data Type Format Max 
+Length 
+Principal_Investigator_1_NPI  National Provider Identifier is a unique identification 
+number for principal investigator, if available.  2495351826  NUMBER (10,0)  number  10 
+Principal_Investigator_1_First_N
+ame The first name of the Principal I nvestigator associated with 
+the payment  or transfer of value, as reported by the 
+submitting entity. John VARCH AR2(20) string 20 
+Principal_Investigator_1_Middle_
+Name The m iddle name of the Principal Investigator associated 
+with the payment  or transfer of value, as reported by the 
+submitting entity. A VARCH AR2(20) string 20 
+Principal_Investigator_1_Last_Na
+me Last name of the Principal Investigator associated with the 
+payment  or transfer of value, as reported by the submitting 
+entity. Smith VARCH AR2(35 string 35 
+Principal_Investigator_1_Name_
+Suffix_ Name suffix of the Principal Investigator associated with the 
+payment  or transfer of value, as reported by the submitting 
+entity. III VARCH AR2(5) string 5 
+Principal_Investigator_1_Busines
+s_Street_Address_ Line1 The first line of the primary practice/business street address 
+of the Principal Investigator associated with the payment or 
+other transfer of value. 7500  Security Blvd. VARCH AR2(55) string 55 
+Principal_Investigator_1_Busi 
+ness_S treet_Address_ Line2 The second line of the primary practice/business street 
+address of the Principal Investigator associated with the 
+payment  or other transfer of value. Suite 100 VARCH AR2(55) string 55 
+Principal_Investigator_1_City The primary practice/business city of the Principal 
+Investigator associated  with the payment or other transfer 
+of value if the primary practice address is in the United 
+States. Baltimore VARCH AR2(40) string 40 Open Payments Methodology Overview & Data Dictionary   OMB Control No: 0938 -1237 
+Expiration Date: 07/31/2026  
+ 
+51 
+ Field Name Field Description Sample Data Data Type Format Max 
+Length 
+Principal_Investigator_1_State The primary practice/business state or territory 
+abbreviation of the Principal Investigator associated  with 
+the payment  or other transfer of value if the primary 
+practice address is in the United S tates. MD CHAR(2) string 2 
+Principal_Investigator_1_Zip_Cod
+e The 9-digit zip code for the primary business location of the 
+Principal Investigator associated with the payment  or other 
+transfer of value if the primary practice address is in the 
+United S tates 21244 -3712  VARCH AR2(10) num ber- 
+num ber 10 
+Principal_Investigator_1_Country The primary practice/business address country name of the 
+Principal Investigator associated with the payment  or other 
+transfer of value if the primary practice address is in the 
+United S tates United S tates VARCH AR2(100) string 100 
+Principal_Investigator_1_Provinc
+e The primary practice/business province name of the 
+Principal Investigator associated with the payment or other 
+transfer of value, if the primary practice/business address is 
+outside the United S tates, and if applicable. Manitoba VARCH AR2(20) string 20 
+Principal_Investigator_1_Postal_
+Code The international postal code for the primary 
+practice/business location of the principal investigator 
+associated with the payment  or other transfer of value, if 
+the primary practice/business address is outside the United 
+States 5600098  VARCH AR2(20) string 20 
+Principal_Investigator_1_Primary
+_Type_1 Primary type name of medicine practiced by the principal 
+investigator Medical Doctor VARCH AR2(50) string 50 
+Principal_Investigator_1_Primary
+_Type_2 Primary type name of medicine practiced by the principal 
+investigator Medical Doctor  VARCHAR2(50)  string  50 
+Principal_Investigator_1_Primary
+_Type_3 Primary type name of medicine practiced by the principal 
+investigator Medical Doctor  VARCHAR2(50)  string  50 Open Payments Methodology Overview & Data Dictionary   OMB Control No: 0938 -1237 
+Expiration Date: 07/31/2026  
+ 
+52 
+ Field Name Field Description Sample Data Data Type Format Max 
+Length 
+Principal_Investigator_1_Primary
+_Type_4 Primary type name of medicine practiced by the principal 
+investigator Medical Doctor  VARCHAR2(50)  string  50 
+Principal_Investigator_1_Primary
+_Type_5 Primary type name of medicine practiced by the principal 
+investigator Medical Doctor  VARCHAR2(50)  string  50 
+Principal_Investigator_1_Primary
+_Type_6 Primary type name of medicine practiced by the principal 
+investigator Medical Doctor  VARCHAR2(50)  string  50 
+Principal_Investigator_1_Specialt
+y_1 Principal Investigator's single-specialty chosen from the 
+standardized "provider taxonomy" code list. Allopathic & 
+Osteopathic 
+Physicians/ 
+Independent 
+Medical Examiner VARCH AR2(300) string 300 
+Principal_Investigator_1_Speci alt
+y_2 Principal Investigator's single-specialty chosen from the 
+standard ized "provider taxonomy" code list. Allopathic & 
+Osteopathic 
+Physicians/ 
+Independent 
+Medical  Examiner VARCHAR2(300) string  300 
+Principal_Investigator_1_Speci alt
+y_3 Principal Investigator's single-specialty chosen from the 
+standard ized "provider taxonomy" code list. Allopathic & 
+Osteopathic 
+Physicians/ 
+Independent 
+Medical Examiner  VARCHAR2(300) string  300 
+Principal_Investigator_1_Speci alt
+y_4 Principal Investigator's single-specialty chosen from the 
+standard ized "provider taxonomy" code list. Allopathic & 
+Osteopathic 
+Physicians/ 
+Independent 
+Medical Examiner  VARCHAR2(300) string  300 Open Payments Methodology Overview & Data Dictionary   OMB Control No: 0938 -1237 
+Expiration Date: 07/31/2026  
+ 
+53 
+ Field Name Field Description Sample Data Data Type Format Max 
+Length 
+Principal_Investigator_1_Speci alt
+y_5 Principal Investigator's single-specialty chosen from the 
+standard ized "provider taxonomy" code list. Allopathic & 
+Osteopathic 
+Physicians/ 
+Independent 
+Medical Examiner  VARCHAR2(300) string  300 
+Principal_Investigator_1_Specialt
+y_6 Principal Investigator's single-specialty chosen from the 
+standard ized "provider  taxonomy" code list. Allopathic & 
+Osteopathic 
+Physicians/ 
+Independent 
+Medical Examiner  VARCHAR2(300) string  300 
+Principal_Investigator_1_License
+_State_cod e1 The state license num ber of the principal investigator, 
+which is a 2-letter state abbr eviation; the record may 
+include up to 5 physician license states if a physician is 
+licensed in multiple states. MD CHAR(2) string 2 
+Principal_Investigator_1_License
+_State_cod e2 The state license num ber of the principal investigator, 
+which is a 2-letter state abbr eviation; the record may 
+include up to 5 physician license states if a physician is 
+licensed in multiple states. VA CHAR(2) string 2 
+Principal_Investigator_1_License
+_State_cod e3 The state license num ber of the principal investigator, which 
+is a 2-letter s tate abbreviation; the record may include up to 
+5 physician license states if a physician is licensed in multiple 
+states. ME CHAR(2) string 2 
+Principal_Investigator_1_License
+_State_cod e4 The state license num ber of the principal investigator, which 
+is a 2-letter s tate abbreviation; the record may include up to 
+5 physician license states if a physician is licensed in multiple 
+states. NY CHAR(2) string 2 Open Payments Methodology Overview & Data Dictionary   OMB Control No: 0938 -1237 
+Expiration Date: 07/31/2026  
+ 
+54 
+ Field Name Field Description Sample Data Data Type Format Max 
+Length 
+Principal_Investigator_1_Licen 
+se_State_cod e5 The state license num ber of the principal investigator, which 
+is a 2-letter s tate abbreviation; the record may include up to 
+5 physician license states if a physician is licensed in multiple 
+states. MI CHAR(2) string 2 
+Principal_Investigator_2_Profile_
+ID An identifier for Principal Investigator profile after validation 3843342  NUMBER(38,0) num ber 38 
+Principal_Investigator_2_NPI  National Provider Identifier is a unique identification 
+number for principal investigator, if available.  2495351826  NUMBER (10,0)  number  10 
+Principal_Investigator_2_First_N
+ame The first name of the Principal I nvestigator associated with 
+the payment  or transfer of value, as reported by the 
+submitting entity. John VARCH AR2(20) string 20 
+Principal_Investigator_2_Middle_
+Name The m iddle name of the Principal Investigator associated 
+with the payment  or transfer of value, as reported by the 
+submitting entity. A VARCH AR2(20) string 20 
+Principal_Investigator_2_Last_Na
+me The l ast name of the Principal Investigator associated  with 
+the payment  or transfer of value, as reported by the 
+submitting entity. Smith VARCH AR2(35 string 35 
+Principal_Investigator_2_Name_
+Suffix Name suffix of the Principal Investigator associated with the 
+payment  or transfer of value, as reported by the submitting 
+entity. III VARCH AR2(5) string 5 
+Principal_Investigator_2_Busines
+s_Street_Address_ Line1 The first line of the primary practice/business street address 
+of the Principal Investigator associated  with the payment or 
+other transfer of value. 7500  Security Blvd. VARCH AR2(55) string 55 
+Principal_Investigator_2_Busines
+s_Street_Address_ Line2 The second line of the primary practice/business street 
+address of the Principal Investigator associated  with the 
+payment  or other transfer of value. Suite 100 VARCH AR2(55) string 55 Open Payments Methodology Overview & Data Dictionary   OMB Control No: 0938 -1237 
+Expiration Date: 07/31/2026  
+ 
+55 
+ Field Name Field Description Sample Data Data Type Format Max 
+Length 
+Principal_Investigator_2_City The primary practice/business city of the Principal 
+Investigator associated  with the payment or other transfer 
+of value if the primary practice address is in the United 
+States. Baltimore VARCH AR2(40) string 40 
+Principal_Investigator_2_state The primary practice/business state or territory 
+abbreviation of the Principal Investigator associated  with 
+the payment  or other transfer of value if the primary 
+practice address is in the United S tates. MD CHAR(2) string 2 
+Principal_Investigator_2_Zip_Cod
+e The 9-digit zip code for the primary business location of the 
+Principal Investigator associated with the payment  or other 
+transfer of value if the primary practice address is in the 
+United S tates 21244 -3712  VARCH AR2(10) num ber- 
+num ber 10 
+Principal_Investigator_2_Country The primary practice/business address country name of the 
+Principal Investigator associated with the payment  or other 
+transfer of value if the primary practice address is in the 
+United S tates United S tates VARCH AR2(100) string 100 
+Principal_Investigator_2_Provinc
+e The primary practice/business province name of the 
+Principal Investigator associated  with the payment or other 
+transfer of value, if the primary practice/business address is 
+outside the United S tates, and if applicable. Manitoba VARCH AR2(20) string 20 
+Principal_Investigator_2_Postal_
+Code The international postal code for the primary 
+practice/business location of the principal Investigator 
+associated  with the payment  or other transfer of value if the 
+primary practice/business address is outside the United 
+States 5600098  VARCH AR2(20) string 20 
+Principal_Investigator_2_Primary
+_Type_1 Primary type name of medicine practiced by the principal 
+investigator Medical Doctor  VARCHAR2(50)  string  50 Open Payments Methodology Overview & Data Dictionary   OMB Control No: 0938 -1237 
+Expiration Date: 07/31/2026  
+ 
+56 
+ Field Name Field Description Sample Data Data Type Format Max 
+Length 
+Principal_Investigator_2_Primary
+_Type_2  Primary type name of medicine practiced by the principal 
+investigator  Medical Doctor  VARCHAR2(50)  string  50 
+Principal_Investigator_2_Primary
+_Type_3  Primary type name of medicine practiced by the principal 
+investigator  Medical Doctor  VARCHAR2(50)  string  50 
+Principal_Investigator_2_Primary
+_Type_4  Primary type name of medicine practiced by the principal 
+investigator  Medical Doctor  VARCHAR2(50)  string  50 
+Principal_Investigator_2_P rimary
+_Type_5  Primary type name of medicine practiced by the principal 
+investigator  Medical Doctor  VARCHAR2(50)  string  50 
+Principal_Investigator_2_Primary
+_Type_6 Primary type name of medicine practiced by the principal 
+investigator Medical Doctor  VARCHAR2(50)  string  50 
+Principal_Investigator_2_Speci alty
+_1 Principal Investigator's single-specialty chosen from the 
+standardized "provider taxonomy" code list. Allopathic & 
+Osteopathic 
+Physicians/ 
+Independent 
+Medical  Examiner VARCHAR2(300) string  300 
+Principal_ Investigator _2_Speci alty
+_2 Principal Investigator's single-specialty chosen from the 
+standardized "provider taxonomy" code list. Allopathic & 
+Osteopathic 
+Physicians/ 
+Independent 
+Medical  Examiner VARCHAR2(300) string  300 
+Principal_Investigator_2_Speci alt
+y_3 Principal Investigator's single-specialty chosen from the 
+standardized  "provider taxonomy" code list. Allopathic & 
+Osteopathic 
+Physicians/ 
+Independent 
+Medical  Examiner VARCHAR2(300)  string  300  Open Payments Methodology Overview & Data Dictionary   OMB Control No: 0938 -1237 
+Expiration Date: 07/31/2026  
+ 
+57 
+ Field Name Field Description Sample Data Data Type Format Max 
+Length 
+Principal_Investigator_2_Speci alt
+y_4 Principal Investigator's single-specialty chosen from the 
+standardized "provider taxonomy" code list. Allopathic & 
+Osteopathic 
+Physicians/ 
+Independent 
+Medical  Examiner VARCHAR2(300)  string  300  
+Principal_Investigator_2_Speci alt
+y_5 Principal Investigator's single-specialty chosen from the 
+standardized  "provider taxonomy" code list. Allopathic & 
+Osteopathic 
+Physicians/ 
+Independent 
+Medical  Examiner VARCHAR2(300)  string  300  
+Principal_Investigator_2_Speci alt
+y_6 Principal Investigator's single-specialty chosen from the 
+standardized "provider taxonomy" code list. Allopathic & 
+Osteopathic 
+Physicians/ 
+Independent 
+Medical  Examiner VARCHAR2(300)  string  300  
+Principal_Investigator_2_License
+_State_cod e1 The state license num ber of the principal investigator, which 
+is a 2-letter s tate abbreviation; the record may include up to 
+5 physician license states  if a physician is licensed in multiple 
+states. MD CHAR(2) string 2 
+Principal_Investigator_2_License
+_State_cod e2 The state license num ber of the principal investigator, which 
+is a 2-letter s tate abbreviation; the record may include up to 
+5 physician license states  if a physician is licensed in multiple 
+states. VA CHAR(2) string 2 
+Principal_Investigator_2_License
+_State_cod e3 The state license num ber of the principal investigator, which 
+is a 2-letter s tate abbreviation; the record may include up to 
+5 physician license states  if a physician is licensed in multiple 
+states. TX CHAR(2) string 2 Open Payments Methodology Overview & Data Dictionary   OMB Control No: 0938 -1237 
+Expiration Date: 07/31/2026  
+ 
+58 
+ Field Name Field Description Sample Data Data Type Format Max 
+Length 
+Principal_Investigator_2_License
+_State_cod e4 The state license num ber of the principal investigator, which 
+is a 2-letter s tate abbreviation; the record may include up to 
+5 physician license states  if a physician is licensed in multiple 
+states. CA CHAR(2) string 2 
+Principal_Investigator_2_License
+_State_cod e5 The state license num ber of the principal investigator, which 
+is a 2-letter s tate abbreviation; the record may include up to 
+5 physician license states  if a physician is licensed in multiple 
+states. AL CHAR(2) string 2 
+Principal_Investigator_3_Profile_
+ID An identifier for Principal Investigator profile after validation 3843347  NUMBER(38,0) num ber 38 
+Principal_Investigator_3_NPI  National Provider Identifier is a unique identification 
+number for principal investigator, if available.  2495351826  NUMBER (10,0)  number  10 
+Principal_Investigator_3_First_N
+ame The first name of the Principal Investigator associated with 
+the payment  or transfer of value, as reported by the 
+submitting entity. John VARCH AR2(20) string 20 
+Principal_Investigator_3_Midd 
+le_Name The m iddle name of the Principal Investigator associated 
+with the payment  or transfer of value, as reported by the 
+submitting entity. A VARCH AR2(20) string 20 
+Principal_Investigator_3_Last_ 
+Name The l ast name of the Principal Investigator associated  with 
+the payment  or transfer of value, as reported by the 
+submitting entity. Smith VARCH AR2(35 string 35 
+Principal_Investigator_3_Nam 
+e_Suffix Name suffix of the Principal Investigator associated with the 
+payment  or transfer of value, as reported by the submitting 
+entity. III VARCH AR2(5) string 5 Open Payments Methodology Overview & Data Dictionary   OMB Control No: 0938 -1237 
+Expiration Date: 07/31/2026  
+ 
+59 
+ Field Name Field Description Sample Data Data Type Format Max 
+Length 
+Principal_Investigator_3_Busi 
+ness_S treet_Address_ Line1 The first line of the primary practice/business street address 
+of the Principal Investigator associated  with the payment or 
+other transfer of value. 7500  Security Blvd. VARCH AR2(55) string 55 
+Principal_Investigator_3_Busi 
+ness_S treet_Address_ Line2 The second line of the primary practice/business street 
+address of the Principal Investigator associated  with the 
+payment  or other transfer of value. Suite 100 VARCH AR2(55) string 55 
+Principal_Investigator_3_City The primary practice/business city of the Principal 
+Investigator associated  with the payment or other transfer 
+of value if the primary practice address is in the United 
+States. Baltimore VARCH AR2(40) string 40 
+Principal_Investigator_3_State The primary practice/business state or territory 
+abbreviation of the Principal Investigator associated  with 
+the payment  or other transfer of value if the primary 
+practice address is in the United S tates. MD CHAR(2) string 2 
+Principal_Investigator_3_Zip_Cod
+e The 9-digit zip code for the primary business location of the 
+Principal Investigator associated  with the payment or other 
+transfer of value if the primary practice address is in the 
+United S tates 21244 -3712  VARCH AR2(10) num ber- 
+num ber 10 
+Principal_Investigator_3_Country The primary practice/business address country name of the 
+Principal Investigator associated  with the payment  or other 
+transfer of value if the primary practice address is in the 
+United S tates United S tates VARCH AR2(100) string 100 
+Principal_Investigator_3_Provinc
+e The primary practice/business province name of the 
+Principal Investigator associated  with the payment  or other 
+transfer of value, if the primary practice/business address is 
+outside the United S tates, and if applicable. Manitoba VARCH AR2(20) string 20 Open Payments Methodology Overview & Data Dictionary   OMB Control No: 0938 -1237 
+Expiration Date: 07/31/2026  
+ 
+60 
+ Field Name Field Description Sample Data Data Type Format Max 
+Length 
+Principal_Investigator_3_Postal_
+Code The international postal code for the primary 
+practice/business location of the principal Investigator 
+associated  with the payment  or other transfer of value, if 
+the primary practice/business address is outside the United 
+States 5600098  VARCH AR2(20) string 20 
+Principal_Investigator_3_Primary
+_Type_1 Primary type name of medicine practiced by the principal 
+investigator Medical Doctor  VARCHAR2(50)  string  50 
+Principal_Investigator_ 3_Prim ary
+_Type_2  Primary type name of medicine practiced by the principal 
+investigator  Medical Doctor  VARCHAR2(50)  string  50 
+Principal_Investigator_3_Prim ary
+_Type_3  Primary type name of medicine practiced by the principal 
+investigator  Medical Doctor  VARCHAR2(50)  string  50 
+Principal_Investigator_3 _Prim ary
+_Type_4  Primary type name of medicine practiced by the principal 
+investigator  Medical Doctor  VARCHAR2(50)  string  50 
+Principal_Investigator_3_Prim ary
+_Type_5  Primary type name of medicine practiced by the principal 
+investigator  Medical Doctor  VARCHAR2(50)  string  50 
+Principal_Investigator_3_P rimary
+_Type_6 Primary type name of medicine practiced by the principal 
+investigator Medical Doctor  VARCHAR2(50)  string  50 
+Principal_Investigator_ 3_Speci alt
+y_1 Principal Investigator's single-specialty chosen from the 
+standard ized "provider taxonomy" code list. Allopathic & 
+Osteopathic 
+Physicians/ 
+Independent 
+Medical  Examiner VARCHAR2(300) string  300 Open Payments Methodology Overview & Data Dictionary   OMB Control No: 0938 -1237 
+Expiration Date: 07/31/2026  
+ 
+61 
+ Field Name Field Description Sample Data Data Type Format Max 
+Length 
+Principal_Investigator_ 3_Speci alt
+y_2 Principal Investigator's single-specialty chosen from the 
+standard ized "provider  taxonomy" code list. Allopathic & 
+Osteopathic 
+Physicians/ 
+Independent 
+Medical  Examiner VARCHAR2(300) string  300  
+Principal_Investigator_ 3_Speci alt
+y_3 Principal Investigator's single-specialty chosen from the 
+standardized  "provider taxonomy" code list. Allopathic & 
+Osteopathic 
+Physicians/ 
+Independent 
+Medical  Examiner VARCHAR2(300) string  300  
+Principal_Investigator_ 3_Speci alt
+y_4 Principal Investigator's single-specialty chosen from the 
+standard ized "provider taxonomy " code list. Allopathic & 
+Osteopathic 
+Physicians/ 
+Independent 
+Medical  Examiner VARCHAR2(300) string  300  
+Principal_Investigator_ 3_Speci alt
+y_5 Principal Investigator's single-specialty chosen from the 
+standardized  "provider taxonomy" code list. Allopathic & 
+Osteopathic 
+Physicians/ 
+Independent 
+Medical  Examiner VARCHAR2(300)  string  300  
+Principal_Investigator_ 3_Specialt
+y_6 Principal Investigator's single-specialty chosen from the 
+standardized "provider taxonomy" code list. Allopathic & 
+Osteopathic 
+Physicians/ 
+Independent 
+Medical  Examiner VARCHAR2(300)  string  300  Open Payments Methodology Overview & Data Dictionary   OMB Control No: 0938 -1237 
+Expiration Date: 07/31/2026  
+ 
+62 
+ Field Name Field Description Sample Data Data Type Format Max 
+Length 
+Principal_Investigator_3_License
+_State_cod e1 The state license num ber of the principal investigator, which 
+is a 2-letter s tate abbreviation; the record may include up to 
+5 physician license states  if a physician is licensed in multiple 
+states. MD CHAR(2) string 2 
+Principal_Investigator_3_License
+_State_cod e2 The state license num ber of the principal investigator, which 
+is a 2-letter s tate abbreviation; the record may include up to 
+5 physician license states  if a physician is licensed in multiple 
+states. VA CHAR(2) string 2 
+Principal_Investigator_3_License
+_State_cod e3 The state license num ber of the principal investigator, which 
+is a 2-letter s tate abbreviation; the record may include up to 
+5 physician license states  if a physician is licensed in multiple 
+states. CA CHAR(2) string 2 
+Principal_Investigator_3_License
+_State_cod e4 The state license num ber of the principal investigator, which 
+is a 2-letter s tate abbreviation; the record may include up to 
+5 physician license states  if a physician is licensed in multiple 
+states. TX CHAR(2) string 2 
+Principal_Investigator_3_License
+_State_cod e5 The state license num ber of the principal investigator, which 
+is a 2-letter s tate abbreviation; the record may include up to 
+5 physician license states  if a physician is licensed in multiple 
+states. AL CHAR(2) string 2 
+Principal_Investigator_4_Profile_
+ID An identifier for Principal Investigator profile after validation 3843347  NUMBER(38,0) num ber 38 
+Principal_Investigator_4_NPI  National Provider Identifier is a unique identification 
+number for principal investigator, if available.  2495351826  NUMBER (10,0)  number  10 
+Principal_Investigator_4_First_N
+ame The first name of the Principal Investigator associated with 
+the payment  or transfer of value, as reported by the 
+submitting entity. John VARCH AR2(20) string 20 Open Payments Methodology Overview & Data Dictionary   OMB Control No: 0938 -1237 
+Expiration Date: 07/31/2026  
+ 
+63 
+ Field Name Field Description Sample Data Data Type Format Max 
+Length 
+Principal_Investigator_4_Middle_
+Name The m iddle name of the Principal Investigator associated 
+with the payment  or transfer of value, as reported by the 
+submitting entity. A VARCH AR2(20) string 20 
+Principal_Investigator_4_Last_Na
+me The l ast name of the Principal Investigator associated  with 
+the payment  or transfer of value, as reported by the 
+submitting entity. Smith VARCH AR2(35 string 35 
+Principal_Investigator_4_Name_
+Suffix Name suffix of the Principal Investigator associated with the 
+payment  or transfer of value, as reported by the submitting 
+entity. III VARCH AR2(5) string 5 
+Principal_Investigator_4_Busines
+s_Street_Address_ Line1 The first line of the primary practice/business street address 
+of the Principal Investigator associated  with the payment or 
+other transfer of value. 7500  Security Blvd. VARCH AR2(55) string 55 
+Principal_Investigator_4_Busines
+s_Street_Address_ Line2 The second line of the primary practice/business street 
+address of the Principal Investigator associated  with the 
+payment  or other transfer of value. Suite 100 VARCH AR2(55) string 55 
+Principal_Investigator_4_City The primary practice/business city of the Principal 
+Investigator associated  with the payment or other transfer 
+of value if the primary practice address is in the United 
+States. Baltimore VARCH AR2(40) string 40 
+Principal_Investigator_4_State The primary practice/business state or territory 
+abbreviation of the Principal Investigator associated  with 
+the payment  or other transfer of value if the primary 
+practice address is in the United S tates. MD CHAR(2) string 2 
+Principal_Investigator_4_Zip_Cod
+e The 9-digit zip code for the primary business location of the 
+Principal Investigator associated with the payment  or other 
+transfer of value if the primary practice address is in the 
+United S tates 21244 -3712  VARCH AR2(10) num ber- 
+number 10 Open Payments Methodology Overview & Data Dictionary   OMB Control No: 0938 -1237 
+Expiration Date: 07/31/2026  
+ 
+64 
+ Field Name Field Description Sample Data Data Type Format Max 
+Length 
+Principal_Investigator_4_Country The primary practice/business address country name of the 
+Principal Investigator associated with the payment  or other 
+transfer of value if the primary practice address is in the 
+United S tates United S tates VARCH AR2(100) string 100 
+Principal_Investigator_4_Provinc
+e The primary practice/business province name of the 
+Principal Investigator associated  with the payment or other 
+transfer of value, if the primary practice/business address is 
+outside the United S tates, and if applicable. Manitoba VARCH AR2(20) string 20 
+Principal_Investigator_4_Postal_
+Code The international postal code for the primary 
+practice/business location of the principal Investigator 
+associated  with the payment  or other transfer of value, if 
+the primary practice/business address is outside the United 
+States 5600098  VARCH AR2(20) string 20 
+Principal_Investigator_4_Primary
+_Type_1 Primary type name of medicine practiced by the principal 
+investigator Medical Doctor  VARCHAR2(50)  string  50 
+Principal_Investigator_4_Primary
+_Type_2  Primary type name of medicine practiced by the principal 
+investigator  Medical Doctor  VARCHAR2(50)  string  50 
+Principal_Investigator_4_Primary
+_Type_3  Primary type name of medicine practiced by the principal 
+investigator  Medical Doctor  VARCHAR2(50)  string  50 
+Principal_Investigator_4_Primary
+_Type_4  Primary type name of medicine practiced by the principal 
+investigator  Medical Doctor  VARCHAR2(50)  string  50 
+Principal_Investigator_4_Primary
+_Type_5  Primary type name of medicine practiced by the principal 
+investigator  Medical Doctor  VARCHAR2(50)  string  50 
+Principal_Investigator_4_P rimary
+_Type_6 Primary type name of medicine practiced by the principal 
+investigator Medical Doctor  VARCHAR2(50)  string  50 Open Payments Methodology Overview & Data Dictionary   OMB Control No: 0938 -1237 
+Expiration Date: 07/31/2026  
+ 
+65 
+ Field Name Field Description Sample Data Data Type Format Max 
+Length 
+Principal_Investigator_4_Speci alty
+_1 Principal Investigator's single-specialty chosen from the 
+standardized "provider taxonomy" code list. Allopathic & 
+Osteopathic 
+Physicians/ 
+Independent 
+Medical  Examiner VARCHAR2(300) string  300 
+Principal_Investigator_4_Speci alt
+y_2 Principal Investigator's single-specialty chosen from the 
+standard ized "provider  taxonomy" code list. Allopathic & 
+Osteopathic 
+Physicians/ 
+Independent 
+Medical  Examiner VARCHAR2(300)  string  300  
+Principal_ Investigator _4_Speci alt
+y_3 Principal Investigator's single-specialty chosen from the 
+standardized  "provider taxonomy" code list. Allopathic & 
+Osteopathic 
+Physicians/ 
+Independent 
+Medical  Examiner VARCHAR2(300)  string  300  
+Principal_Investigator_4_Speci alt
+y_4 Principal Investigator's  single-specialty chosen from the 
+standardized "provider taxonomy " code list. Allopathic & 
+Osteopathic 
+Physicians/ 
+Independent 
+Medical  Examiner VARCHAR2(300)  string  300  
+Principal_Investigator_4_Speci alt
+y_5 Principal Investigator's single-specialty chosen from the 
+standardized  "provider taxonomy" code list. Allopathic & 
+Osteopathic 
+Physicians/ 
+Independent 
+Medical  Examiner VARCHAR2(300)  string  300  Open Payments Methodology Overview & Data Dictionary   OMB Control No: 0938 -1237 
+Expiration Date: 07/31/2026  
+ 
+66 
+ Field Name Field Description Sample Data Data Type Format Max 
+Length 
+Principal_Investigato r_4_Speci alt
+y_6 Principal Investigator's single-specialty chosen from the 
+standardized  "provider taxonomy" code list. Allopathic & 
+Osteopathic 
+Physicians/ 
+Independent 
+Medical  Examiner VARCHAR2(300)  string  300  
+Principal_Investigator_4_License
+_State_cod e1 The state license num ber of the principal investigator, which 
+is a 2-letter s tate abbreviation; the record may include up to 
+5 physician license states  if a physician is licensed in multiple 
+states. MD CHAR(2) string 2 
+Principal_Investigator_4_License
+_State_cod e2 The state license num ber of the principal investigator, which 
+is a 2-letter s tate abbreviation; the record may include up to 
+5 physician license states  if a physician is licensed in multiple 
+states. VA CHAR(2) string 2 
+Principal_Investigator_4_Licen 
+se_State_cod e3 The state license num ber of the principal investigator, which 
+is a 2-letter s tate abbreviation; the record may include up to 
+5 physician license states  if a physician is licensed in multiple 
+states. CA CHAR(2) string 2 
+Principal_Investigator_4_Licen 
+se_State_cod e4 The state license num ber of the principal investigator, which 
+is a 2-letter s tate abbreviation; the record may include up to 
+5 physician license states  if a physician is licensed in multiple 
+states. TX CHAR(2) string 2 
+Principal_Investigator_4_Licen 
+se_State_cod e5 The state license num ber of the principal investigator, which 
+is a 2-letter s tate abbreviation; the record may include up to 
+5 physician license states  if a physician is licensed in multiple 
+states. AL CHAR(2) string 2 
+Principal_Investigator_5_Profil 
+e_ID  An identifier for Principal Investigator profile after validation 3843347  NUMBER(38,0) num ber 38 Open Payments Methodology Overview & Data Dictionary   OMB Control No: 0938 -1237 
+Expiration Date: 07/31/2026  
+ 
+67 
+ Field Name Field Description Sample Data Data Type Format Max 
+Length 
+Principal_Investigator_5_NPI  National Provider Identifier is a unique identification 
+number for principal investigator, if available.  2495351826  NUMBER (10,0)  number  10 
+Principal_Investigator_5_First_N
+ame The first name of the Principal Investigator associated with 
+the payment  or transfer of value, as reported by the 
+submitting entity. John VARCH AR2(20) string 20 
+Principal_Investigator_5_Midd 
+le_Name Middle name of the Principal Investigator associated with 
+the payment  or transfer of value, as reported by the 
+submitting entity. A VARCH AR2(20) string 20 
+Principal_Investigator_5_Last_ 
+Name Last name of the Principal Investigator associated  with the 
+payment  or transfer of value, as reported by the submitting 
+entity. Smith VARCH AR2(35 string 35 
+Principal_Investigator_5_Name_
+Suffix Name suffix of the Principal Investigator associated with the 
+payment  or transfer of value, as reported by the submitting 
+entity. III VARCH AR2(5) string 5 
+Principal_Investigator_5_Busines
+s_Street_Address_ Line1 The first line of the primary practice/business street address 
+of the Principal Investigator associated  with the payment or 
+other transfer of value. 7500  Security Blvd. VARCH AR2(55) string 55 
+Principal_Investigator_5_Busines
+s_Street_Address_ Line2 The second line of the primary practice/business street 
+address of the Principal Investigator associated  with the 
+payment  or other transfer of value. Suite 100 VARCH AR2(55) string 55 
+Principal_Investigator_5_City The primary practice/business city of the Principal 
+Investigator associated  with the payment or other transfer 
+of value if the primary practice address is in the United 
+States. Baltimore VARCH AR2(40) string 40 Open Payments Methodology Overview & Data Dictionary   OMB Control No: 0938 -1237 
+Expiration Date: 07/31/2026  
+ 
+68 
+ Field Name Field Description Sample Data Data Type Format Max 
+Length 
+Principal_Investigator_5_State The primary practice/business state or territory 
+abbreviation of the Principal Investigator associated  with 
+the payment  or other transfer of value if the primary 
+practice address is in the United S tates. MD CHAR(2) string 2 
+Principal_Investigator_5_Zip_Cod
+e The 9-digit zip code for the primary business location of the 
+Principal Investigator associated with the payment  or other 
+transfer of value if the primary practice address is in the 
+United S tates 21244 -3712  VARCH AR2(10) num ber- 
+number 10 
+Principal_Investigator_5_Country The primary practice/business address country name of the 
+Principal Investigator associated with the payment  or other 
+transfer of value if the primary practice address is in the 
+United S tates United S tates VARCH AR2(100) string 100 
+Principal_Investigator_5_Provinc
+e The primary practice/business province name of the 
+Principal Investigator associated  with the payment or other 
+transfer of value, if the primary practice/business address is 
+outside the United S tates, and if applicable. Manitoba VARCH AR2(20) string 20 
+Principal_Investigator_5_Postal_
+Code The international postal code for the primary 
+practice/business location of the principal Investigator 
+associated  with the payment  or other transfer of value, if 
+the primary practice/business address is outside the United 
+States 5600098  VARCH AR2(20) string 20 
+Principal_Investigator_5_Primary
+_Type_1 Primary type name of medicine practiced by the principal 
+investigator Medical Doctor  VARCHAR2(50)  string  50 
+Principal_Investigator_5_Primary
+_Type_2  Primary type name of medicine practiced by the principal 
+investigator  Medical Doctor  VARCHAR2(50)  string  50 Open Payments Methodology Overview & Data Dictionary   OMB Control No: 0938 -1237 
+Expiration Date: 07/31/2026  
+ 
+69 
+ Field Name Field Description Sample Data Data Type Format Max 
+Length 
+Principal_Investigator_5_Primary
+_Type_3  Primary type name of medicine practiced by the principal 
+investigator  Medical Doctor  VARCHAR2(50)  string  50 
+Principal_Investigator_5_Primary
+_Type_4  Primary type name of medicine practiced by the principal 
+investigator  Medical Doctor  VARCHAR2(50)  string  50 
+Principal_Investigator_5_Prim ary
+_Type_5  Primary type name of medicine practiced by the principal 
+investigator  Medical Doctor  VARCHAR2(50)  string  50 
+Principal_Investigator_5_P rimary
+_Type_6 Primary type name of medicine practiced by the principal 
+investigator Medical Doctor  VARCHAR2(50)  string  50 
+Principal_Investigator_ 5_Speci alty
+_1 Principal Investigator's single-specialty chosen from the 
+standardized "provider taxonomy" code list. Allopathic & 
+Osteopathic 
+Physicians/ 
+Independent 
+Medical  Examiner VARCHAR2(300) string  300 
+Principal_Investigator_ 5_Speci alt
+y_2 Principal Investigator's  single-specialty chosen from the 
+standard ized "provider  taxonomy" code list. Allopathic & 
+Osteopathic 
+Physicians/ 
+Independent 
+Medical  Examiner VARCHAR2(300)  string  300  
+Principal_Investigator_ 5_Specialt
+y_3 Principal Investigator's single-specialty chosen from the 
+standardized  "provider taxonomy" code list. Allopathic & 
+Osteopathic 
+Physicians/ 
+Independent 
+Medical  Examiner VARCHAR2(300)  string  300  Open Payments Methodology Overview & Data Dictionary   OMB Control No: 0938 -1237 
+Expiration Date: 07/31/2026  
+ 
+70 
+ Field Name Field Description Sample Data Data Type Format Max 
+Length 
+Principal_Investigator_ 5_Specialt
+y_4 Principal Investigator's  single-specialty chosen from the 
+standard ized "provider taxonomy " code list. Allopathic & 
+Osteopathic 
+Physicians/ 
+Independent 
+Medical  Examiner VARCHAR2(300)  string  300  
+Principal_Investigator_ 5_Specialt
+y_5 Principal Investigator's single -specialty chosen from the 
+standardized  "provider taxonomy" code list. Allopathic & 
+Osteopathic 
+Physicians/ 
+Independent 
+Medical  Examiner VARCHAR2(300)  string  300  
+Principal_Investigator_ 5_Specialt
+y_6 Principal Investigator's single-specialty chosen from the 
+standardized  "provider taxonomy" code list. Allopathic & 
+Osteopathic 
+Physicians/ 
+Independent 
+Medical  Examiner VARCHAR2(300)  string  300  
+Principal_Investigator_5_License
+_State_cod e1 The state license num ber of the principal investigator, which 
+is a 2-letter s tate abbreviation; the record may include up to 
+5 physician license states  if a physician is licensed in multiple 
+states. MD CHAR(2) string 2 
+Principal_Investigator_5_License
+_State_cod e2 The state license num ber of the principal investigator, which 
+is a 2-letter s tate abbreviation; the record may include up to 
+5 physician license states  if a physician is licensed in multiple 
+states. VA CHAR(2) string 2 
+Principal_Investigator_5_License
+_State_cod e3 The state license num ber of the principal investigator, which 
+is a 2-letter s tate abbreviation; the record may include up to 
+5 physician license states  if a physician is licensed in multiple 
+states. CA CHAR(2) string 2 Open Payments Methodology Overview & Data Dictionary   OMB Control No: 0938 -1237 
+Expiration Date: 07/31/2026  
+ 
+71 
+ Field Name Field Description Sample Data Data Type Format Max 
+Length 
+Principal_Investigator_5_License
+_State_cod e4 The state license num ber of the principal investigator, which 
+is a 2-letter s tate abbreviation; the record may include up to 
+5 physician license states  if a physician is licensed in multiple 
+states. TX CHAR(2) string 2 
+Principal_Investigator_5_License
+_State_cod e5 The state license num ber of the principal investigator, which 
+is a 2-letter s tate abbreviation; the record may include up to 
+5 physician license states  if a physician is licensed in multiple 
+states. AL CHAR(2) string 2 
+Submitting_Applicable_M anufact
+urer_or_Applicable_GPO_Name Textual prop er name of either the Subm itting Applicable 
+Manufacturer or Submitting Applicable Group Purch asing 
+Organization (GPO). ABCDE 
+Manufacturing VARCH AR2(100) string 100 
+Applicable_M anufacturer_or_Ap
+plicable_GPO_Making_Payment_
+ID System generated unique identifier of the Applicable 
+Manufacturer or Applicable Group Purchasing Organization 
+(GPO) Making payment or other transfer of value 1000000049  NUMBER(38,0) num ber 38 
+Applicable_M anufacturer_or_Ap
+plicable_GPO_Making_Payment_
+Name Textual prop er name of the applicable manufacturer or 
+applicable GPO making the payment or other transfer of 
+value ABCDE 
+Manufacturing VARCH AR2(100) string 100 
+Applicable_M anufacturer_or_Ap
+plicable_GPO_Making_Payment_
+State State name of the submitting applicable manufacturer or 
+submitting applicable GPO as provided in Open  Pa yments VA CHAR(2) string 2 
+Applicable_M anufacturer_or_Ap
+plicable_GPO_Making_Payment_
+Country Country name of the Submitting Applicable Manufacturer 
+or 
+Submitting Applicable Group Purchasing Organization 
+(GPO) as provided in Open Payments  United S tates VARCH AR2(100) string 100 Open Payments Methodology Overview & Data Dictionary   OMB Control No: 0938 -1237 
+Expiration Date: 07/31/2026  
+ 
+72 
+ Field Name Field Description Sample Data Data Type Format Max 
+Length 
+Related_Produc t_Indicator Indicator allows the applicable manufacturer or applicable 
+GPO to select whether the payment or other transfer of 
+value is related to one or more product(s) (drugs, devices, 
+biologicals, or medical supplies). If the payment was not 
+made in relation to a product , select "No". If the payment 
+was related to one or more product, select "Yes". Y VARCH AR2(100) string 100 
+Covered_or_Noncovered_Indicat
+or_1 For each product listed in relation to the payment or other 
+transfer of value, indicates if the product is a covered or 
+non-covered product per the covered product definition in 
+the Open Payments final rule. Covered VARCH AR2(100) string 100 
+Indicate_Drug_or_Biological_or_
+Device_or_Medical_Supply_1 For each product listed in relation to the payment or other 
+transfer of value, indicates if the product is a drug, device, 
+biological, or medical supply. Drug VARCH AR2(100) string 100 
+Produc t_Category_or_Therapeuti
+c_Area_1 Provide the product category or therapeutic area for the 
+covered drug, device, biological, or medical supply listed in 
+relation to the payment or other transfer of value. Endocrinology VARCH AR2(100) string 100 
+Name_of_Drug_or_Biological_or
+_Device_or_Medical_Supply_1 The marketed name of the drug, device, biological, or 
+medical supply. May report the marketed name of up to five 
+products (drugs, devices, biologicals, or medical supplies) 
+assoc iated w ith the payment or other transfer of value. Sample Drug 1 VARCH AR2(500) string 500 
+Assoc iated_Drug_or_Biological_
+NDC_1 The National Drug Code, if any, of the drug or biological 
+assoc iated w ith the payment or other transfer of value (if 
+applicable); the record may report up to 5 codes 3698- 7272-61 VARCH AR2(100) string 12 Open Payments Methodology Overview & Data Dictionary   OMB Control No: 0938 -1237 
+Expiration Date: 07/31/2026  
+ 
+73 
+ Field Name Field Description Sample Data Data Type Format Max 
+Length 
+Associated_Device_or_Medical_
+Supply_PDI_1  The Primary Device Identifier, if any, of the covered device 
+or covered medical supply associated with the payment or 
+other transfer of values (if applicable); the record may 
+report up to 5 codes.  
+Note: OP Program began collecting PDI information during 
+PY 2021.  00848657000260  VARCHAR(100)  string  100 
+Covered_or_Noncovered_Indicat
+or_2 For each product listed in relation to the payment or other 
+transfer of value, indicates if the product is a covered or 
+non-covered product per the covered product definition in 
+the Open Payments final rule. Covered VARCH AR2(100) string 100 
+Indicate_Drug_or_Biological_or_
+Device_or_Medical_Supply_ 2 For each product listed in relation to the payment or other 
+transfer of value, indicates if the product is a drug, device, 
+biological, or medical supply. Device VARCH AR2(100) string 100 
+Produc t_Category_or_Therapeuti
+c_Area_2 Provide the product category or therapeutic area for the 
+covered drug, device, biological, or medical supply listed in 
+relation to the payment or other transfer of value. Endocrinology VARCH AR2(100) string 100 
+Name_of_Drug_or_Biological_or
+_Device_or_Medical_Supply_2 The marketed name of the drug, device, biological, or 
+medical supply. May report the marketed name of up to five 
+products (drugs, devices, biologicals, or medical supplies) 
+assoc iated w ith the payment or other transfer of value. Sample Drug 2 VARCH AR2(500) string 500 
+Assoc iated_Drug_or_Biological_
+NDC_2 The National Drug Code, if any, of the drug or biological 
+assoc iated w ith the payment or other transfer of value (if 
+applicable); the record may report up to 5 codes 36987 -272-62 VARCH AR2(100) string 12 Open Payments Methodology Overview & Data Dictionary   OMB Control No: 0938 -1237 
+Expiration Date: 07/31/2026  
+ 
+74 
+ Field Name Field Description Sample Data Data Type Format Max 
+Length 
+Associated_Device_or_Medical_
+Supply_PDI_2  The Primary Device Identifier, if any, of the covered device 
+or covered medical supply associated with the payment or 
+other transfer of values (if applicable); the record may 
+report up to 5 codes.  
+Note: OP Program began collecting PDI information during 
+PY 2021.  00848657000260  VARCHAR(100)  string  100  
+Covered_or_Noncovered_Indicat
+or_3 For each product listed in relation to the payment or other 
+transfer of value, indicates if the product is a covered or 
+non-covered product per the covered product definition in 
+the Open Payments final rule. Covered VARCH AR2(100) string 100 
+Indicate_Drug_or_Biological_or_
+Device_or_Medical_Supply_3 For each product listed in relation to the payment or other 
+transfer of value, indicates if the product is a drug, device, 
+biological, or medical supply. Device VARCH AR2(100) string 100 
+Produc t_Category_or_Therapeuti
+c_Area_3 Provide the product category or therapeutic area for the 
+covered drug, device, biological, or medical supply listed in 
+relation to the payment or other transfer of value. Endocrinology VARCH AR2(100) string 100 
+Name_of_Drug_or_Biological_or
+_Device_or_Medical_Supply_3 The marketed name of the drug, device, biological, or 
+medical supply. May report the marketed name of up to five 
+products (drugs, devices, biologicals, or medical supplies) 
+assoc iated w ith the payment or other transfer of value. Sample Drug 3 VARCH AR2(500) string 500 
+Assoc iated_Drug_or_Biological_
+NDC_3 The National Drug Code, if any, of the drug or biological 
+assoc iated w ith the payment or other transfer of value (if 
+applicable); the record may report up to 5 codes 36987 -2726 -3 VARCH AR2(100) string 12 Open Payments Methodology Overview & Data Dictionary   OMB Control No: 0938 -1237 
+Expiration Date: 07/31/2026  
+ 
+75 
+ Field Name Field Description Sample Data Data Type Format Max 
+Length 
+Associated_Device_or_Medical_
+Supply_PDI_3  The Primary Device Identifier, if any, of the covered device 
+or covered medical supply associated with the payment or 
+other transfer of values (if applicable); the record may 
+report up to 5 codes.  
+Note: OP Program began collecting PDI information during 
+PY 2021.  00848657000260  VARCHAR(100)  string  100  
+Covered_or_Noncovered_Indicat
+or_4 For each product listed in relation to the payment or other 
+transfer of value, indicates if the product is a covered or 
+non-covered product per the covered product definition in 
+the Open Payments final rule. Covered VARCH AR2(100) string 100 
+Indicate_Drug_or_B iological_or_
+Device_or_M edical_Supply_4 For each product listed in relation to the payment or other 
+transfer of value, indicates if the product  is a drug, device, 
+biological, or medical supply. Drug VARCH AR2(100) string 100 
+Produc t_Category_or_Therapeuti
+c_Area_4 Provide the product category or therapeutic area for the 
+covered drug, device, biological, or medical supply listed in 
+relation to the payment or other transfer of value. Endocrinology VARCH AR2(100) string 100 
+Name_of_Drug_or_Biological_or
+_Device_or_Med ical_Supply_4 The marketed name of the drug, device, biological, or 
+medical supply. May rep ort the marketed n ame of up to five 
+products (drugs, devices, biologicals, or medical supplies) 
+assoc iated w ith the payment or other transfer of v alue. Sample Drug 4 VARCH AR2(500) string 500 
+Assoc iated_Drug_or_B iological_N
+DC_4 The National Drug Code,  if any, of the drug or biological 
+assoc iated w ith the payment or other transfer of value (if 
+applicable); the record  may report up to 5 codes 3698- 7272-64 VARCH AR2(100) string 12 Open Payments Methodology Overview & Data Dictionary   OMB Control No: 0938 -1237 
+Expiration Date: 07/31/2026  
+ 
+76 
+ Field Name Field Description Sample Data Data Type Format Max 
+Length 
+Associated_Device_or_Medical_
+Supply_PDI_4  The Primary Device Identifier, if any, of the covered device 
+or covered medical supply associated with the payment or 
+other transfer of values (if applicable); the record may 
+report up to 5 codes.  
+Note: OP Program began collecting PDI information during 
+PY 2021.  00848657000260  VARCHAR(100)  string  100  
+Covered_or_N oncovered_Indic at
+or_5  For each product listed in relation to the payment or other 
+transfer of value, indicates if the product  is a covered or 
+non-covered product per the covered pro duct definition in 
+the Open Payments final rule. Covered VARCH AR2(100) string 100 
+Indicate_Drug_or_B iological_or_
+Device_or_M edical_Supply_5 For each product listed in relation to the payment or other 
+transfer of value, indicates if the product is a drug, device, 
+biological, or medical supply. Drug VARCH AR2(100) string 100 
+Produc t_Category_or_Therapeuti
+c_Area_5 Provide the product category or therapeutic area for the 
+covered drug, device, biological, or medical supply listed in 
+relation to the p ayment or other transfer of value. Endocrinology VARCH AR2(100) string 100 
+Name_of_Drug_or_Biological_or
+_Device_or_Medical_Supply_5 The marketed name of the drug, device, biological, or 
+medical supply. May report the marketed name of up to five 
+products (drugs, devices, biologicals, or medical supplies) 
+assoc iated w ith the payment or other transfer of value. Sample Drug 5 VARCH AR2(500) string 500 
+Assoc iated_Drug_or_Biological_
+NDC_5 The National Drug Code, if any, of the drug or biological 
+assoc iated w ith the payment or other transfer of value (if 
+applicable); the record may report up to 5 codes 36987 -2726 -5 VARCH AR2(100) string 12 Open Payments Methodology Overview & Data Dictionary   OMB Control No: 0938 -1237 
+Expiration Date: 07/31/2026  
+ 
+77 
+ Field Name Field Description Sample Data Data Type Format Max 
+Length 
+Associated_Device_or_Medical_
+Supply_PDI_5  The Primary Device Identifier, if any, of the covered device 
+or covered medical supply associated with the payment or 
+other transfer of values (if applicable); the record may 
+report up to 5 codes.  
+Note: OP Program began collecting PDI information during 
+PY 2021.  00848657000260  VARCHAR(100)  string  100  
+Total_Amount_of_Payment_USD
+ollars U.S. dollar amount of payment or transfer of value to 
+recipient (manufacturer must convert to dollar currency if 
+necessa ry). 2016  NUMBER(12,2) decimal 12 
+Date_of_Payment If a singular payment, then this is the actual date the 
+payment was issued; if a series of payments or an 
+aggregated set of payments, this is the date of the first 
+payment to the covered recipient in this PY 06/30/2017  DATE Date 
+MM /DD/ 
+YYYY 12 
+Form_of_Payment_or_Transfer_
+of_Value The method of payment used to pay the covered recipient 
+or to make the transfer of value. In-kind items and 
+services VARCH AR2(100) string 100 
+Expenditure_Category1 Contextual category for this research payment or other 
+transfer of value Patient Care VARCH AR2(50) string 50 
+Expenditure_Category2 Contextual category for this research payment or other 
+transfer of value Patient Care VARCH AR2(50) string 50 
+Expenditure_Category3 Contextual category for this research payment or other 
+transfer of value Patient Care VARCH AR2(50) string 50 
+Expenditure_Category4 Contextual category for this research payment or other 
+transfer of value Patient Care VARCH AR2(50) string 50 
+Expenditure_Category5 Contextual category for this research payment or other 
+transfer of value Patient Care VARCH AR2(50) string 50 Open Payments Methodology Overview & Data Dictionary   OMB Control No: 0938 -1237 
+Expiration Date: 07/31/2026  
+ 
+78 
+ Field Name Field Description Sample Data Data Type Format Max 
+Length 
+Expenditure_Category6 Contextual category for this research payment or other 
+transfer of value Patient Care VARCH AR2(50) string 50 
+Preclinical_Research_Indicator An indicator showing if payment or other transfer of value 
+is related to research, which is pre-clinical Yes CHAR(3) string 3 
+Delay_in_Publication_Ind icator An indicator showing if an applicable manufacturer or 
+applicable GPO is requesting a delay in publi cation of a 
+payment or other transfer of value when the payment or 
+other transfer of value is made in conn ection with: (1) 
+research on or development of a new product (drug, device, 
+biological, or medical supply) or (2) clinical investigation 
+regarding a new product (drug, device, biological, or 
+medical supply) No CHAR(3) string 3 
+Name_of_Study The textual name of the study for which the covered 
+recipient is receiving this payment or other transfer of 
+value. The textual name of the study for which the covered 
+recipient is receiving this payment or other transfer of value A Comparison of 
+the Heart VARCH AR2(500) string 500 
+Dispute_Status_for_Publication Indicates whether the payment or other transfer of value is 
+disputed by the covered recipient or not Yes CHAR(3) string 3 
+Record_ID System assigned identifier to the research transaction at the 
+time of submission 100000000023  NUMBER(38,0) num ber 38 
+Program_Year The year in which the payment occurred, as reported by 
+submitting entity. 2016  CHAR(4) num ber 4 
+Payment_Publication_Date The predefined date when the payment or other transfer of 
+value is scheduled to be published 06/30/2017  DATE Date 
+MM /DD/ 
+YYYY 12 
+ClinicalTrials_Gov_Identifier Identifier assigned if research study is registered on 
+clinicaltrials.gov NCT21498631  VARCH AR2(11) string 11 Open Payments Methodology Overview & Data Dictionary   OMB Control No: 0938 -1237 
+Expiration Date: 07/31/2026  
+ 
+79 
+ Field Name Field Description Sample Data Data Type Format Max 
+Length 
+Research_ Information_Li nk Optional link to information relevant to the rese arch study 
+for which this payment or other transfer of value is being 
+reported (there  can be a maximum of five links re ported) Research VARCH AR2(2083)  string 2083  
+Context_of_Research Textual descr iption of resea rch context or rese arch 
+objectives Objective is new  
+designs for he art 
+valve replacements VARCH AR2(500) string 500 Open Payments Methodology Overview & Data Dictionar y   OMB Control No: 0938 -1237 
+Expiration Date: 07/31/2026  
+ 
+80 
+ Appendix E:  Research Payments Deta il (PYs 2013- 2015) 
+Table E-1: Research Payment File Attributes (PY 20 13-2015) 
+Name  Description  Sample  Data Data Ty pe Form at Max Length 
+Chang e_Type An indicator showing if the payment rec ord is New, Added, 
+Changed, or Unchang ed in the cu rrent publication 
+compar ed to the previous pub lication. 
+ 
+NEW - To identify “n ew” records add ed from the end o f the 
+previous submi ssion dead line until the current submi ssion 
+period dead line date 
+ADDED - To identify reco rds that were not eligible at the 
+time of previous publication , which is eligible fo r current 
+publication. 
+CHANGED - To identif y previousl y published records 
+modified after the last publication. 
+UNCHANGED - To ident ify previously publishe d records that 
+remain “unchanged ” in current pub lication. NEW VARCH AR2(20) String 20 
+Covered_Recipient_Type An indicator showing if the recipient of the payment or 
+other transf er of v alue is a physic ian covered recipient , 
+teaching hospital covered recipient, non-covere d recipient 
+entity, o r non-cover ed recipient i ndividual Cover ed 
+Recipient 
+Teachin g Hospita l VARCH AR2(50) string 50 
+Teaching_Hospit al_CCN  A unique ident ifying numb er (CMS Certificatio n Number ) of 
+the Teaching Hospital receiving the payment or othe r 
+transf er of v alue 330024  VARCH AR2(06) string 6 
+Noncovered_Recipient_Entity_Na
+me The name of the non-cover ed recipient entit y receivin g the 
+payment or other transfer o f value EDCBA 
+Corporation VARCH AR2(50) string 50 Open Payments Methodology Overview & Data Dictionary   OMB Control No: 0938 -1237 
+Expiration Date: 07/31/2026  
+ 
+81 
+ Name  Description  Sample  Data Data Type Form at Max Length 
+Teaching_Hospital_ID Open Payments system-generated unique identifier of the 
+teaching hospital receiving the payment or other transfer of 
+value 1000000999  NUMBER(38,0) num ber 38 
+Teaching_Hospital_Name The name of the teaching hospital receiving the payment or 
+other transfer of value – the name displayed is as  listed in 
+the CMS  teaching hospital list Healthy Heart 
+Hospital VARCH AR2(100) string 100 
+Physician_Profile_ID  Open Payments system-generated unique identifier for 
+physician profile receiving the payment or other transfer of 
+value 1000000378  NUMBER(38,0) num ber 38 
+Physician_NPI  National Provider Identifier is a unique identification 
+number for covered recipient physician (and not the NPI 
+of a group the physician  belongs to).  2495351826  NUMBER(10,0) number  10 
+Physician_First_Name First name of the physician (covered recipient) receiving the 
+payment or other transfer of value, as reported by the 
+submitting entity John VARCH AR2(20) string 20 
+Physician_Middle_Name The m iddle name of the physician (covered recipient) 
+receiving the payment or other transfer of value, as 
+reported by the subm itting entity A VARCH AR2(20) string 20 
+Physician_Last_Name Last name of the physician (covered recipient) receiving the 
+payment or other transfer of value, as reported by the 
+submitting entity Smith VARCH AR2(35) string 35 
+Physician_Name_Suffix Name suffix of the physician (covered recipient) receiving 
+the payment or other transfer of value, as reported by the 
+subm itting entity III VARCH AR2(5) string 5 Open Payments Methodology Overview & Data Dictionary   OMB Control No: 0938 -1237 
+Expiration Date: 07/31/2026  
+ 
+82 
+ Name  Description  Sample  Data Data Type Form at Max Length 
+Recipient_Primary_Business_Stree
+t_Address_ Line1 The first line of the primary business street address of the 
+physician or teaching hospital or non-covered recipient 
+entity receiving the payment or other transfer of value 7500  Security 
+Blvd. VARCH AR2(55) string 55 
+Recipient_Primary_Business_Stree
+t_Address_ Line2 The second line of the primary business street address of 
+the physician or teaching hospital or non-covered recipient 
+entity receiving the payment or other transfer of value Suite 100 VARCH AR2(55) string 55 
+Recipient_City The primary practice/business address city of the physician 
+or teaching hospital or non-covered recipient entity 
+receiving the payment or other transfer of value Baltimore VARCH AR2(40) string 40 
+Recipient_State The state or territory abbreviation of the primary business 
+address of the physician or teaching hospital or non-covered 
+recipient entity receiving the payment or other transfer of 
+value if the primary business address is in the United S tates MD CHAR(2) string 2 
+Recipient_Zip_Code The 9-digit zip code for the primary business location of the 
+physician or teaching hospital or non-covered recipient 
+entity receiving the payment or other transfer of value if the 
+primary practice address is in the United S tates 2124 4-3712  VARCH AR2(10) num ber- 
+num ber 10 
+Recipient_Country The primary practice/business address country of the 
+physician or teaching hospital or non-covered recipient 
+entity receiving the payment or other transfer of value if the 
+primary practice address is in the United S tates US VARCH AR2(100) string 100 
+Recipient_Province The primary practice/business province name of the 
+physician or teaching hospital or non-covered recipient 
+entity receiving the payment or other transfer of value, if 
+the primary practice/business address is outside the Un ited 
+States, and if applicable Manitoba VARCH AR2(20) string 20 Open Payments Methodology Overview & Data Dictionary   OMB Control No: 0938 -1237 
+Expiration Date: 07/31/2026  
+ 
+83 
+ Name  Description  Sample  Data Data Type Form at Max Length 
+Recipient_Postal_Code The international postal code for the primary business 
+location of the physician or teaching hospital or non-
+covered recipient entity receiving the payment or other 
+transfer of value if the primary business address is outside 
+the United S tates 5600098  VARCH AR2(20) string 20 
+Physician_Primary_Type Primary type name of medicine practiced by the phy sician 
+covered rec ipient Doctor of 
+Osteopathy (DO) VARCH AR2(50) string 50 
+Physician_Specialty Physician's single-specialty chosen from the standard ized 
+"provider taxonomy" code list Allopathic & 
+Osteopathic 
+Physicians 
+|Obstetrics & 
+Gynecology VARCH AR2(300) string 300 
+Physician_License_State_co de1 The state license num ber of the covered recipient 
+physician, which is a 2-letter state abbr eviation; the record 
+may include up to 5 physician license states if a phy sician is 
+licensed in  multiple states MD CHAR(2) string 2 
+Physician_License_State_co de2 The state license num ber of the covered recipient 
+physician, which is a 2-letter state abbr eviation; the record 
+may include up to 5 physician license states if a phy sician is 
+licensed in  multiple states CA CHAR(2) string 2 
+Physician_License_State_co de3 The state license num ber of the covered recipient 
+physician, which is a 2-letter state abbr eviation; the record 
+may include up to 5 physician license states if a phy sician is 
+licensed in  multiple states TX CHAR(2) string 2 Open Payments Methodology Overview & Data Dictionary   OMB Control No: 0938 -1237 
+Expiration Date: 07/31/2026  
+ 
+84 
+ Name  Description  Sample  Data Data Type Form at Max Length 
+Physician_License_State_code4 The state license num ber of the covered recipient physician, 
+which is a 2-letter state abbreviation; the record may 
+include up to 5 physician license states  if a physician is 
+licensed in multiple states VA CHAR(2) string 2 
+Physician_License_State_code5 The state license num ber of the covered recipient physician, 
+which is a 2-letter state abbreviation; the record may 
+include up to 5 physician license states  if a physician is 
+licensed in multiple states MA CHAR(2) string 2 
+Principal_Investigator_1_Profile_I
+D An Open Payments system-generated unique identifier for 
+principal investigator profile after validation 3843332  NUMBER(38,0) num ber 38 
+Principal_Investigator_1_NPI  National Provider Identifier is a unique identification 
+number for principal investigator, if available.  2495351826  NUMBER (10,0)  number  10 
+Principal_Investigator_1_First_Na
+me The first name of the Principal investigator assoc iated with 
+the payment or other transfer of value John VARCH AR2(20) string 20 
+Principal_Investigator_1_Middle_
+Name Middle name of the principal investigator assoc iated w ith 
+the payment or other transfer of value A VARCH AR2(20) string 20 
+Principal_Investigator_1_Last_Na
+me Last name of the principal investigator assoc iated w ith the 
+payment or other transfer of value Smith VARCH AR2(35) string 35 
+Principal_Investigator_1_Name_S
+uffix_ Name suffix of the principal investigator assoc iated with the 
+payment or other transfer of value III VARCH AR2(5) string 5 
+Principal_Investigator_1_Business
+_Street_Address_Line1 The first line of the primary practice/business street address 
+of the principal investigator associated with the payment or 
+other transfer of value 7500  Security 
+Blvd. VARCH AR2(55) string 55 Open Payments Methodology Overview & Data Dictionary   OMB Control No: 0938 -1237 
+Expiration Date: 07/31/2026  
+ 
+85 
+ Name  Description  Sample  Data Data Type Form at Max Length 
+Principal_Investigator_1_Business
+_Street_Address_Line2 The second line of the primary practice/business street 
+address of the principal investigator assoc iated w ith the 
+payment or other transfer of value Suite 100 VARCH AR2(55) string 55 
+Principal_Investigator_1_City The primary practice/business city of the principal 
+investigator assoc iated w ith the payment or other transfer 
+of value if the primary practice address is in the United 
+States Baltimore VARCH AR2(40) string 40 
+Principal_Investigator_1_State The primary practice/business state or territory 
+abbreviation of the principal investigator assoc iated w ith 
+the payment or other transfer of value if the primary 
+practice address is in the United States MD CHAR(2) string 2 
+Principal_Investigator_1_Zip_Cod
+e The 9-digit zip code for the primary business location of the 
+principal investigator assoc iated w ith the payment or other 
+transfer of value if the primary practice address is in the 
+United S tates 21244 -3712  VARCH AR2(10) num ber- 
+num ber 10 
+Principal_Investigator_1 _Country The primary pr actice/business address country name of the 
+principal investigator assoc iated w ith the payment or other 
+transfer of value if the primary pr actice address is in the 
+United S tates United S tates VARCH AR2(100) string 100 
+Principal_Investigator_1 _Province The primary pr actice/business province name of the 
+principal investigator assoc iated w ith the payment or other 
+transfer of value, if the primary pr actice/business address  is 
+outside the United S tates, and if applicable Manitoba VARCH AR2(20) string 20 Open Payments Methodology Overview & Data Dictionary   OMB Control No: 0938 -1237 
+Expiration Date: 07/31/2026  
+ 
+86 
+ Name  Description  Sample  Data Data Type Form at Max Length 
+Principal_Investigator_1 _Postal_C
+ode The international postal code  for the primary 
+practice/business  location of the principal investigator 
+assoc iated w ith the payment or other transfer of value, if 
+the primary pr actice/business address  is outside the Un ited 
+States 5600098  VARCH AR2(20) string 20 
+Principal_Investigator_1 _Primary_
+Type Primary type name of medicine practiced by the pr incipal 
+investigator Med ical Doctor VARCH AR2(50) string 50 
+Principal_Investigator_1 _Specialty Principal investigator's single-specialty chosen  from the 
+standardized "provider taxonomy" code list Allopathic & 
+Osteopathic 
+Physicians/ 
+Inde pendent 
+Med ical Examiner VARCH AR2(300) string 300 
+Principal_Investigator_1 _License_
+State_code1  The state license num ber of the principal investigator, wh ich 
+is a 2-letter s tate abbre viation; the record may include up to 
+5 physician license states  if a physician is licensed in multiple 
+states MD CHAR(2) string 2 
+Principal_Investigator_1 _License_
+State_code2  The state license num ber of the principal investigator, wh ich 
+is a 2-letter s tate abbre viation; the record may include up to 
+5 physician license states  if a physician is licensed in multiple 
+states VA CHAR(2) string 2 
+Principal_Investigator_1 _License_
+State_code3  The state license num ber of the principal investigator, wh ich 
+is a 2-letter s tate abbre viation; the record may include up to 
+5 physician license states  if a physician is licensed in multiple 
+states ME CHAR(2) string 2 Open Payments Methodology Overview & Data Dictionary   OMB Control No: 0938 -1237 
+Expiration Date: 07/31/2026  
+ 
+87 
+ Name  Description  Sample  Data Data Type Form at Max Length 
+Principal_Investigator_1 _License_
+State_code4  The state license num ber of the principal investigator, wh ich 
+is a 2-letter s tate abbre viation; the record may include up to 
+5 physician license states  if a physician is licensed in multiple 
+states NY CHAR(2) string 2 
+Principal_Investigator_1_License_
+State_cod e5 The state license num ber of the principal investigator, which 
+is a 2-letter s tate abbreviation; the record may include up to 
+5 physician license states  if a physician is licensed in multiple 
+states MI CHAR(2) string 2 
+Principal_Investigator_2_Profile_I
+D An Open Payments system-generated unique identifier for 
+principal investigator profile after validation 3843342  NUMBER(38,0) num ber 38 
+Principal_Investigator_2_NPI  National Provider Identifier is a unique identification 
+number for principal  investigator, if available.  2495351826  NUMBER (10,0)  number  10 
+Principal_Investigator_2_First_Na
+me The first name of the Principal investigator assoc iated w ith 
+the payment or other transfer of value, as reported by the 
+submitting entity John VARCH AR2(20) string 20 
+Principal_Investigator_2_Middle_
+Name The m iddle name of the principal investigator assoc iated 
+with the payment or other transfer of value, as reported by 
+the submitting entity A VARCH AR2(20) string 20 
+Principal_Investigator_2_Last_Na
+me Last name of the principal investigator assoc iated with the 
+payment or other transfer of value, as reported by the 
+submitting entity Smith VARCH AR2(35) string 35 
+Principal_Investigator_2_Name_S
+uffix Name suffix of the principal investigator assoc iated with the 
+payment or other transfer of value, as reported by the 
+submitting entity III VARCH AR2(5) string 5 Open Payments Methodology Overview & Data Dictionary   OMB Control No: 0938 -1237 
+Expiration Date: 07/31/2026  
+ 
+88 
+ Name  Description  Sample  Data Data Type Form at Max Length 
+Principal_Investigator_2_Business
+_Street_Address_Line1 The first line of the primary practice/business street address 
+of the principal investigator associated with the payment or 
+other transfer of value 7500  Security 
+Blvd. VARCH AR2(55) string 55 
+Principal_Investigator_2_Business
+_Street_Address_Line2 The second line of the primary practice/business street 
+address of the principal investigator assoc iated w ith the 
+payment or other transfer of value Suite 100 VARCH AR2(55) string 55 
+Principal_Investigator_2_City The primary practice/business city of the principal 
+investigator assoc iated w ith the payment or other transfer 
+of value if the primary practice address is in the United 
+States Baltimore VARCH AR2(40) string 40 
+Principal_Investigator_2_state The primary practice/business state or territory 
+abbreviation of the principal investigator assoc iated w ith 
+the payment or other transfer of value if the primary 
+practice address is in the United S tates MD CHAR(2) string 2 
+Principal_Investigator_2_Zip_Cod
+e The 9-digit zip code for the primary business location of the 
+principal investigator assoc iated w ith the payment or other 
+transfer of value if the primary practice address is in the 
+United S tates 21244 -3712  VARCH AR2(10) number- 
+num ber 10 
+Principal_Investigator_2 _Country The primary pr actice/business address country name of the 
+principal investigator assoc iated w ith the payment or other 
+transfer of value if the primary pr actice address is in the 
+United S tates United S tates VARCH AR2(100) string 100 
+Principal_Investigator_2 _Province The primary pr actice/business province name of the 
+principal investigator assoc iated w ith the payment or other 
+transfer of value, if the primary pr actice/business address  is 
+outside the United S tates, and if applicable Manitoba VARCH AR2(20) string 20 Open Payments Methodology Overview & Data Dictionary   OMB Control No: 0938 -1237 
+Expiration Date: 07/31/2026  
+ 
+89 
+ Name  Description  Sample  Data Data Type Form at Max Length 
+Principal_Investigator_2_Postal_C
+ode The international postal code for the primary 
+practice/business location of the principal investigator 
+assoc iated w ith the payment or other transfer of value, if 
+the primary practice/business address is outside the Un ited 
+States 5600098  VARCH AR2(20) string 20 
+Principal_Investigator_2_Primary_
+Type Primary type name of medicine practiced by the principal 
+investigator Medical Doctor VARCH AR2(50) string 50 
+Principal_Investigator_2_Specialty Principal investigator's single-specialty chosen from the 
+standardized "provider taxonomy" code list Allopathic & 
+Osteopathic 
+Physicians/ 
+Independent 
+Medical Examiner VARCH AR2(300) string 300 
+Principal_Investigator_2_License_
+State_cod e1 The state license num ber of the principal investigator, which 
+is a 2-letter s tate abbreviation; the record may include up to 
+5 physician license states  if a physician is licensed in multiple 
+states MD CHAR(2) string 2 
+_Investigator_2_License_State_co
+de2 The state license number of the principal investigator, which 
+is a 2-letter s tate abbreviation; the record may include up to 
+5 physician license states  if a physician is licensed in multiple 
+states VA CHAR(2) string 2 
+_Investigator_2_License_State_co
+de3 The state license number of the principal investigator, which 
+is a 2-letter s tate abbreviation; the record may include up to 
+5 physician license states  if a physician is licensed in multiple 
+states TX CHAR(2) string 2 
+Principal_Investigator_2_License_
+State_cod e4 The state license num ber of the principal investigator, which 
+is a 2-letter s tate abbreviation; the record may include up to 
+5 physician license states  if a physician is licensed in multiple 
+states CA CHAR(2) string 2 Open Payments Methodology Overview & Data Dictionary   OMB Control No: 0938 -1237 
+Expiration Date: 07/31/2026  
+ 
+90 
+ Name  Description  Sample  Data Data Type Form at Max Length 
+Principal_Investigator_2_License_
+State_cod e5 The state license num ber of the principal investigator, which 
+is a 2-letter s tate abbreviation; the record may include up to 
+5 physician license states  if a physician is licensed in multiple 
+states AL CHAR(2) string 2 
+Principal_Investigator_3_Profile_I
+D An Open Payments system-generated unique identifier for 
+principal investigator profile after validation 3843347  NUMBER(38,0) num ber 38 
+Principal_Investigator_3_NPI  National Provider Identifier is a unique identification 
+number for principal  investigator, if available.  2495351826  NUMBER (10,0)  number  10 
+Principal_Investigator_3_First_Na
+me The first name of the Principal investigator assoc iated with 
+the payment or other transfer of value John VARCH AR2(20) string 20 
+Principal_Investigator_3_Middle_
+Name The m iddle name of the principal investigator assoc iated 
+with the payment or other transfer of value A VARCH AR2(20) string 20 
+Principal_Investigator_3_Last_Na
+me Last name of the principal investigator assoc iated w ith the 
+payment or other transfer of value Smith VARCH AR2(35) string 35 
+Principal_Investigator_3_Name_S
+uffix Name suffix of the principal investigator assoc iated with the 
+payment or other transfer of value III VARCH AR2(5) string 5 
+Principal_Investigator_3_Business
+_Street_Address_Line1 The first line of the primary practice/business street address 
+of the principal investigator associated with the payment or 
+other transfer of value 7500  Security 
+Blvd. VARCH AR2(55) string 55 
+Principal_Investigator_3_Business
+_Street_Address_Line2 The second line of the primary practice/business street 
+address of the principal investigator assoc iated w ith the 
+payment or other transfer of value Suite 100 VARCH AR2(55) string 55 Open Payments Methodology Overview & Data Dictionary   OMB Control No: 0938 -1237 
+Expiration Date: 07/31/2026  
+ 
+91 
+ Name  Description  Sample  Data Data Type Form at Max Length 
+Principal_Investigator_3_City The primary practice/business city of the principal 
+investigator assoc iated w ith the payment or other transfer 
+of value if the primary practice address is in the United 
+States Baltimore VARCH AR2(40) string 40 
+Principal_Investigator_3_State The primary practice/business state or territory 
+abbreviation of the principal investigator assoc iated wit h 
+the payment or other transfer of value if the primary 
+practice address is in the United S tates MD CHAR(2) string 2 
+Principal_Investigator_3_Zip_Cod
+e The 9-digit zip code for the primary business location of the 
+principal investigator assoc iated wit h the payment or other 
+transfer of value if the primary practice address is in the 
+United S tates 21244 -3712  VARCH AR2(10) num ber-
+num ber 10 
+Principal_Investigator_3_Country The primary practice/business address count ry name of the 
+principal investigator assoc iated wit h the payment or other 
+transfer of value if the primary practice address is in the 
+United S tates United S tates VARCH AR2(100) string 100 
+Principal_Investigator_3_Province The primary practice/business province name of the 
+principal investigator assoc iated with the payment or other 
+transfer of value, if the primary practice/business a ddress is 
+outside the United S tates, and if applicable Manitoba VARCH AR2(20) string 20 
+Principal_Investigator_3_Postal_C
+ode The international postal code for the primary 
+practice/business location of the principal investigator 
+assoc iated w ith the payment or other transfer of value, if 
+the primary practice/business address is outside the Un ited 
+States 5600098  VARCH AR2(20) string 20 
+Principal_Investigator_3 _Primary_
+Type Primary type name of medicine practiced by the pr incipal 
+investigator Medical Doctor VARCH AR2(50) string 50 Open Payments Methodology Overview & Data Dictionary   OMB Control No: 0938 -1237 
+Expiration Date: 07/31/2026  
+ 
+92 
+ Name  Description  Sample  Data Data Type Form at Max Length 
+Principal_Investigator_3 _Specialty Principal investigator's single-specialty chosen  from the 
+standardized "provider taxonomy" code list Allopathic & 
+Osteopathic 
+Physicians/ 
+Inde pendent 
+Med ical Examiner VARCH AR2(300) string 300 
+Principal_Investigator_3 _License_
+State_code1  The state license num ber of the principal investigator, wh ich 
+is a 2-letter s tate abbre viation; the record may include up to 
+5 physician license states  if a physician is licensed in multiple 
+states MD CHAR(2) string 2 
+Principal_Investigator_3 _License_
+State_code2  The state license num ber of the principal investigator, wh ich 
+is a 2-letter s tate abbre viation; the record may include up to 
+5 physician license states  if a physician is licensed in multiple 
+states VA CHAR(2) string 2 
+Principal_Investigator_3 _License_
+State_code3  The state license num ber of the principal investigator, wh ich 
+is a 2-letter s tate abbre viation; the record may include up to 
+5 physician license states  if a physician is licensed in multiple 
+states CA CHAR(2) string 2 
+Principal_Investigator_3 _License_
+State_code4  The state license num ber of the principal investigator, wh ich 
+is a 2-letter s tate abbre viation; the record may include up to 
+5 physician license states  if a physician is licensed in multiple 
+states TX CHAR(2) string 2 
+Principal_Investigator_3 _License_
+State_code5  The state license num ber of the principal investigator, wh ich 
+is a 2-letter s tate abbre viation; the record may include up to 
+5 physician license states  if a physician is licensed in multiple 
+states AL CHAR(2) string 2 
+Principal_Investigator_4 _Profile_I
+D An Open Payments system-generated unique identifier for 
+principal investigator pro file after validation 3843347  NUMBER(38,0) num ber 38 Open Payments Methodology Overview & Data Dictionary   OMB Control No: 0938 -1237 
+Expiration Date: 07/31/2026  
+ 
+93 
+ Name  Description  Sample  Data Data Type Form at Max Length 
+Principal_Investigator_4_NPI  National Provider Identifier is a unique identification 
+number for principal  investigator, if available.  2495351826  NUMBER (10,0)  number  10 
+Principal_Investigator_4 _First_Na
+me The first name of the Principal investigator assoc iated w ith 
+the payment or other transfer of value John  VARCH AR2(20) string 20 
+Principal_Investigator_4_Middle_
+Name The m iddle name of the principal investigator assoc iated 
+with the payment or other transfer of value A VARCH AR2(20) string 20 
+Principal_Investigator_4_Last_Na
+me Last name of the principal investigator assoc iated w ith the 
+payment or other transfer of value Smith VARCH AR2(35) string 35 
+Principal_Investigator_4_Name_S
+uffix Name suffix of the principal investigator assoc iated with the 
+payment or other transfer of value III VARCH AR2(5) string 5 
+Principal_Investigator_4_Business
+_Street_Address_Line1 The first line of the primary practice/business street address 
+of the principal investigator associated with the payment or 
+other transfer of value 7500  Security 
+Blvd. VARCH AR2(55) string 55 
+Principal_Investigator_4_Business
+_Street_Address_Line2 The second line of the primary practice/business street 
+address of the principal investigator assoc iated w ith the 
+payment or other transfer of value Suite 100 VARCH AR2(55) string 55 
+Principal_Investigator_4_City The primary practice/business city of the principal 
+investigator assoc iated w ith the payment or other transfer 
+of value if the primary practice address is in the United 
+States Baltimore VARCH AR2(40) string 40 
+Principal_Investigator_4_State The primary practice/business state or territory 
+abbreviation of the principal investigator associated w ith 
+the payment or other transfer of value if the primary 
+practice address is in the United S tates MD CHAR(2) string 2 Open Payments Methodology Overview & Data Dictionary   OMB Control No: 0938 -1237 
+Expiration Date: 07/31/2026  
+ 
+94 
+ Name  Description  Sample  Data Data Type Form at Max Length 
+Principal_Investigator_4_Zip_Cod
+e The 9-digit zip code for the primary business location of the 
+principal investigator assoc iated w ith the payment or other 
+transfer of value if the primary practice address is in the 
+United S tates 21244 -3712  VARCH AR2(10) num ber-
+num ber 10 
+Principal_Investigator_4_Country The primary practice/business address country name of the 
+principal investigator assoc iated w ith the payment or other 
+transfer of value if the primary practice address is in the 
+United S tates United S tates VARCH AR2(100) string 100 
+Principal_Investigator_4_Province The primary practice/business province name of the 
+principal investigator assoc iated with the payment or other 
+transfer of value, if the primary practice/business address is 
+outside the United S tates, and if applicable Manitoba VARCH AR2(20) string 20 
+Principal_Investigator_4_Postal_C
+ode The international postal code for the primary 
+practice/business location of the principal investigator 
+assoc iated w ith the payment or other transfer of value, if 
+the primary practice/business address is outside the Un ited 
+States 5600098  VARCH AR2(20) string 20 
+Principal_Investigator_4_Primary_
+Type Primary type name of medicine practiced by the principal 
+investigator Medical Doctor VARCH AR2(50) string 50 
+Principal_Investigator_4_Specialty Principal investigator's single specialty chosen from the 
+standardized "provider taxonomy" code list Allopathic & 
+Osteopathic 
+Physicians/ 
+Independent 
+Medical Examiner VARCH AR2(300) string 300 Open Payments Methodology Overview & Data Dictionary   OMB Control No: 0938 -1237 
+Expiration Date: 07/31/2026  
+ 
+95 
+ Name  Description  Sample  Data Data Type Form at Max Length 
+Principal_Investigator_4_License_
+State_cod e1 The state license num ber of the principal investigator, which 
+is a 2-letter s tate abbreviation; the record may include up to 
+5 physician license states  if a physician is licensed in multiple 
+states MD CHAR(2) string 2 
+Principal_Investigator_4_License_
+State_cod e2 The state license num ber of the principal investigator, which 
+is a 2-letter s tate abbreviation; the record may include up to 
+5 physician license states  if a physician is licensed in multiple 
+states VA CHAR(2) string 2 
+Principal_Investigator_4_License_
+State_cod e3 The state license num ber of the principal investigator, which 
+is a 2-letter s tate abbreviation; the record may include up to 
+5 physician license states  if a physician is licensed in multiple 
+states CA CHAR(2) string 2 
+Principal_Investigator_4_License_
+State_cod e4 The state license num ber of the principal investigator, 
+which is a 2-letter state abbreviation; the record may 
+include up to 5 physician license states  if a physician is 
+licensed in multiple states TX CHAR(2) string 2 
+Principal_Investigator_4_License_
+State_cod e5 The state license num ber of the principal investigator, 
+which is a 2-letter state abbreviation; the record may 
+include up to 5 physician license states  if a physician is 
+licensed in multiple states AL CHAR(2) string 2 
+Principal_Investigator_5_Profil 
+e_ID  An Open Payments- system-generated unique identifier for 
+principal investigator profile after validation 3843347  NUMBER(38,0) num ber 38 
+Principal_ Investigator _5_NPI  National Provider Identifier is a unique identification 
+number for principal  investigator, if available.  2495351826  NUMBER (10,0)  number  10 
+Principal_Investigator_5_First_Na
+me The first name of the Principal investigator assoc iated with 
+the payment or other transfer of value John VARCH AR2(20) string 20 Open Payments Methodology Overview & Data Dictionary   OMB Control No: 0938 -1237 
+Expiration Date: 07/31/2026  
+ 
+96 
+ Name  Description  Sample  Data Data Type Form at Max Length 
+Principal_Investigator_5_Middle_
+Name Middle name of the principal investigator assoc iated w ith 
+the payment or other transfer of value A VARCH AR2(20) string 20 
+Principal_Investigator_5_Last_Na
+me Last name of the principal investigator assoc iated w ith the 
+payment or other transfer of value Smith VARCH AR2(35) string 35 
+Principal_Investigator_5_Name_S
+uffix Name suffix of the principal investigator assoc iated with the 
+payment or other transfer of value III VARCH AR2(5) string 5 
+Principal_Investigator_5_Business
+_Street_Address_Line1 The first line of the primary practice/business street address 
+of the principal investigator associated with the payment or 
+other transfer of value 7500  Security 
+Blvd. VARCH AR2(55) string 55 
+Principal_Investigator_5_Business
+_Street_Address_Line2 The second line of the primary practice/business street 
+address of the principal investigator assoc iated w ith the 
+payment or other transfer of value Suite 100 VARCH AR2(55) string 55 
+Principal_Investigator_5_City The primary practice/business city of the principal 
+investigator assoc iated w ith the payment or other transfer 
+of value if the primary practice address is in the United 
+States Baltimore VARCH AR2(40) string 40 
+Principal_Investigator_5_State The primary practice/business state or territory 
+abbreviation of the principal investigator assoc iated wit h 
+the payment or other transfer of value if the primary 
+practice addr ess is in the United S tates MD CHAR(2) string 2 
+Principal_Investigator_5_Zip_Cod
+e The 9-digit zip code for the primary business location of the 
+principal investigator assoc iated wit h the payment or other 
+transfer of value if the primary practice address is in the 
+United S tates 21244 -3712  VARCH AR2(10) number-
+num ber 10 Open Payments Methodology Overview & Data Dictionary   OMB Control No: 0938 -1237 
+Expiration Date: 07/31/2026  
+ 
+97 
+ Name  Description  Sample  Data Data Type Form at Max Length 
+Principal_Investigator_5_Country The primary practice/business address count ry name of the 
+principal investigator assoc iated wit h the payment or other 
+transfer of value if the primary practice address is in the 
+United S tates United S tates VARCH AR2(100) string 100 
+Principal_Investigator_5_Province The primary practice/business province name of the 
+principal investigator assoc iated with the payment or other 
+transfer of value, if the primary practice/business a ddress is 
+outside the United S tates, and if applicable Manitoba VARCH AR2(20) string 20 
+Principal_Investigator_5_Postal_C
+ode The international postal code for the primary 
+practice/business location of the principal investigator 
+assoc iated w ith the payment or other transfer of value, if 
+the primary practice/business address is outside the Un ited 
+States 5600098  VARCH AR2(20) string 20 
+Principal_Investigator_5_Primary_
+Type Primary type name of medicine practiced by the principal 
+investigator Medical Doctor VARCH AR2(50) string 50 
+Principal_Investigator_5 _Specialty Principal investigator's single-specialty chosen  from the 
+standardized "provider taxonomy" code list Allopathic & 
+Osteopathic 
+Physicians/ 
+Inde pendent 
+Med ical Examiner VARCH AR2(300) string 300 
+Principal_Investigator_5 _License_
+State_code1  The state license num ber of the principal investigator, wh ich 
+is a 2-letter s tate abbre viation; the record may include up to 
+5 physician license states  if a physician is licensed in multiple 
+states MD CHAR(2) string 2 Open Payments Methodology Overview & Data Dictionary   OMB Control No: 0938 -1237 
+Expiration Date: 07/31/2026  
+ 
+98 
+ Name  Description  Sample  Data Data Type Form at Max Length 
+Principal_Investigator_5 _License_
+State_code2  The state license num ber of the principal investigator, wh ich 
+is a 2-letter s tate abbre viation; the record may include up to 
+5 physician license states  if a physician is licensed in multiple 
+states VA CHAR(2) string 2 
+Principal_Investigator_5 _License_
+State_code3  The state license num ber of the principal investigator, wh ich 
+is a 2-letter s tate abbre viation; the record may include up to 
+5 physician license states  if a physician is licensed in multiple 
+states CA CHAR(2) string 2 
+Principal_Investigator_5_License_
+State_cod e4 The state license num ber of the principal investigator, which 
+is a 2-letter s tate abbreviation; the record may include up to 
+5 physician license states  if a physician is licensed in multiple 
+states TX CHAR(2) string 2 
+Principal_Investigator_5_License_
+State_cod e5 The state license num ber of the principal investigator, which 
+is a 2-letter s tate abbreviation; the record may include up to 
+5 physician license states  if a physician is licensed in multiple 
+states AL CHAR(2) string 2 
+Submitting_Applicable_M anufactu
+rer_or_A pplicable_GPO_Name The t extual prop er name of either the subm itting applicable 
+manufacturer or applicable GPO ABCDE 
+Manufacturing VARCH AR2(100) string 100 
+Applicable_M anufacturer_or_App l
+icable_GPO_Making_Payment_ID Open Payments system-generated un ique identifier of the 
+applicable manufacturer or applicable GPO making the 
+payment or other transfer of value 1000000049  NUMBER(38,0) num ber 38 
+Applicable_M anufacturer_or_App l
+icable_GPO_Making_Payment_Na
+me The t extual prop er name of the applicable manufacturer or 
+applicable GPO making the payment or other transfer of 
+value ABCDE 
+Manufacturing VARCH AR2(100) string 100 Open Payments Methodology Overview & Data Dictionary   OMB Control No: 0938 -1237 
+Expiration Date: 07/31/2026  
+ 
+99 
+ Name  Description  Sample  Data Data Type Form at Max Length 
+Applicable_M anufacturer_or_App l
+icable_GPO_Making_Payment_Sta
+te State name of the submitting applicable manufacturer or 
+applicable GPO VA CHAR(2) string 2 
+Applicable_M anufacturer_or_App l
+icable_GPO_Making_Payment_Co
+untry Coun try name of the applicable manufacturer  or applicable 
+GPO United S tates VARCH AR2(100) string 100 
+Produc t_Indicator An indicator that allows the applicable manufacturer  or 
+applicable GPO to select whe ther the payment or other 
+transfer of value is assoc iated w ith only covered drugs, 
+devices, biologicals, or medical supplies ("Covered"), only 
+non-covered drugs, devices, biologicals, or medical supplies 
+("Non-covered"), neither covered or non-covered drugs, 
+devices, biologicals or medical supplies ("None"), or both 
+covered and/or non-covered drugs, devices, biologicals or 
+medical supplies ("Covered" or "Com bination") Covered VARCH AR2(50) string 50 
+Name_of_Associated_Covered_Dr
+ug_or_Biological1 The marketed name of the drug or biological assoc iated 
+with this payment or other transfer of value; may report the 
+marketed name of up to 5 covered products (drugs, devices, 
+biologicals, or medical supplies) Sample Drug 1 VARCH AR2(500) string 500 
+Name_of_Associated_Covered_Dr
+ug_or_Biological2 The marketed name of the drug or biological assoc iated 
+with this payment or other transfer of value; may report the 
+marketed name of up to 5 covered products (drugs, devices, 
+biologicals, or medical supplies) Sample Drug 2 VARCH AR2(500) string 500 
+Name_of_Associated_Covered_Dr
+ug_or_Biological3 The marketed name of the drug or biological assoc iated 
+with this payment or other transfer of value; may report the 
+marketed name of up to 5 covered products (drugs, devices, 
+biologicals, or medical supplies) Sample Drug 3 VARCH AR2(500) string 500 Open Payments Methodology Overview & Data Dictionary   OMB Control No: 0938 -1237 
+Expiration Date: 07/31/2026  
+ 
+100 
+ Name  Description  Sample  Data Data Type Form at Max Length 
+Name_of_Associated_Covered_Dr
+ug_or_Biological4 The marketed name of the drug or biological assoc iated 
+with this payment or other transfer of value; may report the 
+marketed name of up to 5 covered products (drugs, devices, 
+biologicals, or medical supplies) Sample Drug 4 VARCH AR2(500) string 500 
+Name_of_Associated_Covered_Dr
+ug_or_Biological5 The marketed name of the drug or biological assoc iated 
+with this payment or other transfer of value; may report the 
+marketed name of up to 5 covered products (drugs, devices, 
+biologicals, or medical supplies) Sample Drug 5 VARCH AR2(500) string 500 
+NDC_of_Associated_Covered_Dru
+g_or_Biological1 The National Drug Code, if any, of the drug or biological 
+assoc iated w ith the payment or other transfer of value (if 
+applicable); the record may report up to 5 codes 3698- 7272 -62 VARCH AR2(12) string 12 
+NDC_of_Associated_Covered_Dru
+g_or_Biological2 The National Drug Code, if any, of the drug or biological 
+assoc iated w ith the payment or other transfer of value (if 
+applicable); the record may report up to 5 codes 36987 -272-62 VARCH AR2(12) string 12 
+NDC_of_Associated_Covered_Dru
+g_or_Biological3 The National Drug Code, if any, of the drug or biological 
+assoc iated w ith the payment or other transfer of value (if 
+applicable); the record may report up to 5 codes 36987 -2726 -2 VARCH AR2(12) string 12 
+NDC_of_Associated_Covered_Dru
+g_or_Biological4 The National Drug Code, if any, of the drug or biological 
+assoc iated w ith the payment or other transfer of value (if 
+applicable); the record may report up to 5 codes 3698- 7272 -62 VARCH AR2(12) string 12 
+NDC_of_Associated_Covered_Dru
+g_or_Biological5 The National Drug Code, if any, of the drug or biological 
+assoc iated w ith the payment or other transfer of value (if 
+applicable); the record may report up to 5 codes 3698- 7272 -62 VARCH AR2(12) string 12 
+Name_of_Associated_Covered_De
+vice_or_Medical_Supp ly1 The marketed name of the device or medical supply 
+assoc iated w ith this payment or other transfer of value; the 
+record may report the marketed name of up to 5 covered 
+products (drugs, devices, biologicals, or medical supplies) Sample Device 1 VARCH AR2(500) string 500 Open Payments Methodology Overview & Data Dictionary   OMB Control No: 0938 -1237 
+Expiration Date: 07/31/2026  
+ 
+101 
+ Name  Description  Sample  Data Data Type Form at Max Length 
+Name_of_Associated_Covered_De
+vice_or_Medical_Supp ly2 The marketed name of the device or medical supply 
+assoc iated w ith this payment or other transfer of value; the 
+record may report the marketed name of up to 5 covered 
+products (drugs, devices, biologicals, or medical supplies) Sample Device 2 VARCH AR2(500) string 500 
+Name_of_Associated_Covered_De
+vice_or_Medical_Supp ly3 The marketed name of the device or medical supply 
+assoc iated w ith this payment or other transfer of value; the 
+record may report the marketed name of up to 5 covered 
+products (drugs, devices, biologicals, or medical supplies) Sample Device 3 VARCH AR2(500) string 500 
+Name_of_Associated_Covered_De
+vice_or_Medical_Supp ly4 The marketed name of the device or medical supply 
+assoc iated w ith this payment or other transfer of value; the 
+record may report the marketed name of up to 5 covered 
+products (drugs, devices, biologicals, or medical supplies) Sample Device 4 VARCH AR2(500) string 500 
+Name_of_Associated_Covered_De
+vice_or_Medical_Supp ly5 The marketed name of the device or medical supply 
+assoc iated w ith this payment or other transfer of value; the 
+record may report the marketed name of up to 5 covered 
+products (drugs, devices, biologicals, or medical supplies) Sample Device 5 VARCH AR2(500) string 500 
+Total_Amount_of_Payment_US 
+Dollars US dollar amount of payment or other transfer of value to 
+the recipient (manufacturer must convert to dollar currency 
+if necessa ry) 1978. 00 NUMBER(12,2) decimal 12 
+Date_of_Payment If a singular payment, then this is the actual date the 
+payment was issued; if a series of payments or an 
+aggregated set of payments, this is the date of the first 
+payment to the covered recipient in this PY 04/01/2014  DATE Date 
+MM /DD/ 
+YYYY 12 
+Form_of_Payment_or_Transfer_o
+f_Value The method of payment used to pay the covered recipient 
+or to make the transfer of value In-kind items and 
+services VARCH AR2(100) string 100 
+Expenditure_Category1 Contextual category for this research payment or other 
+transfer of value (up to 6) Patient Care VARCH AR2(50) string 50 Open Payments Methodology Overview & Data Dictionary   OMB Control No: 0938 -1237 
+Expiration Date: 07/31/2026  
+ 
+102 
+ Name  Description  Sample  Data Data Type Form at Max Length 
+Expenditure_Category2 Contextual category for this research payment or other 
+transfer of value (up to 6) Patient Care VARCH AR2(50) string 50 
+Expenditure_Category3 Contextual category for this research payment or other 
+transfer of value (up to 6) Patient Care VARCH AR2(50) string 50 
+Expenditure_Category4 Contextual category for this research payment or other 
+transfer of value (up to 6) Patient Care VARCH AR2(50) string 50 
+Expenditure_Category5 Contextual category for this research payment or other 
+transfer of value (up to 6) Patient Care VARCH AR2(50) string 50 
+Expenditure_Category6 Contextual category for this research payment or other 
+transfer of value (up to 6) Patient Care VARCH AR2(50) string 50 
+Preclinical_Research_Indicator An indicator showing if payment or other transfer of value 
+is related to research, which is pre-clinical Yes CHAR(3) string 3 
+Delay_in_Publication_Ind icator An indicator showing if an applicable manufacturer or 
+applicable GPO is requesting a delay in the publication of a 
+payment or other transfer of value when the payment or 
+other transfer of value is made in conn ection with: (1) 
+research on or development of a new product (drug, device, 
+biological, or medical supply) or (2) clinical investigation 
+regarding a new product (drug, device, biological, or 
+medical supply) No CHAR(3) string 3 
+Name_of_Study The textual name of the study for which the covered 
+recipient is receiving this payment or other transfer of value A Comparison of 
+the Heart VARCH AR2(500) string 500 
+Dispute_Status_for_Publication Indicates whether the payment or other transfer of value is 
+disputed by the covered recipient or not Yes CHAR(3) string 3 Open Payments Methodology Overview & Data Dictionary   OMB Control No: 0938 -1237 
+Expiration Date: 07/31/2026  
+ 
+103 
+ Name  Description  Sample  Data Data Type Form at Max Length 
+Record_ID Open Payments system-generated unique identifier of the 
+research transaction at the time of submission 100000000023  NUMBER(38,0) num ber 38 
+Program_Year The year in which the payment occurred, as reported by 
+submitting entity 2014  CHAR(4) num ber 4 
+Payment_Publication_Date The predefined date when the payment or other transfer of 
+value is scheduled to be published 06/30/2015  DATE Date 
+MM /DD/ 
+YYYY 12 
+ClinicalTrials_ Gov_Identifier Open Payments identifier assi gned if a r esearch study is 
+registered on https://clinicaltrials.gov NCT21498631  VARCH AR2(11) string 11 
+Research_ Information_Li nk Optional link to information relevant to the rese arch study 
+for which this payment or other transfer of value is being 
+reported (there  can be a maximum of five links re ported) Research VARCH AR2(2083)  string 2083  
+Context_of_Research Textual descr iption of resea rch context or rese arch 
+objectives Objective is new  
+designs for heart 
+valve 
+replacements VARCH AR2(500) string 500 Open Payments Methodology Overview & Data Dictionar y   OMB Control No: 0938 -1237 
+Expiration Date: 07/31/2026  
+ 
+104 

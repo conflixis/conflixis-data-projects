@@ -1,0 +1,914 @@
+[
+  {
+    "name": "Programs",
+    "description": "; Transparency Reports and Reporting of Physician Ownership or Investment Interests Final Rule codified at 42 CFR Parts 402 and 403 [CMS-5060-F]. This document is not intended as a supplement or replacement of t he Final Rule.",
+    "type": null,
+    "format": null,
+    "required": null,
+    "notes": []
+  },
+  {
+    "name": "Open",
+    "description": "Payments Methodology Overview & Data Dictionary   OMB Control No: 0938 -1237",
+    "type": null,
+    "format": null,
+    "required": null,
+    "notes": []
+  },
+  {
+    "name": "Expiration",
+    "description": "Date: 07/31/2026",
+    "type": null,
+    "format": null,
+    "required": null,
+    "notes": []
+  },
+  {
+    "name": "Table",
+    "description": "of Contents 1 Introduction  ................................................................................................................................ 5 2 Methodology  ............................................................................................................................... 6 2.1 Steps 1 and 2: Data Collection and Submission .......................................................................... 7 2.2 Step 3: Review and Dispute Data/Review and Correct Data  ...................................................... 7 2.3 Step 4: Data Publication  .............................................................................................................. 8 2.3.1  Effect of Disputes on Data Publication  ....................................................................................... 9 2.4 Data Sources and Types  ............................................................................................................ 10 2.5 Reporting Limitations and Exclusions  ....................................................................................... 11 2.6 Publication Rules  ....................................................................................................................... 11 2.6.1  Publishing Limitations  ............................................................................................................... 11 3 Accessing the Public Data  ......................................................................................................... 13 3.1 Online Data Access  .................................................................................................................... 13 3.2 Downloading the Data  .............................................................................................................. 13 3.3 PY 2023 Files  ............................................................................................................................. 15 3.4 PY 2022 Files  ............................................................................................................................. 16 3.5 PY 2021 Files  ............................................................................................................................. 16 3.6 PY 2020 Files  ............................................................................................................................. 16 3.7 PY 2019 Files  ............................................................................................................................. 17 3.8 PY 2018 Files  ............................................................................................................................. 17 3.9 PY 2017 Files  ............................................................................................................................. 18 3.10 Covered Recipient Profile Supplement File  .............................................................................. 18 3.10.1  Contents of the Covered Recipient Profile Supplement File  ............................................. 19 3.10.2  How to Use the Covered Recipient Profile Supplement File  ............................................. 19",
+    "type": null,
+    "format": null,
+    "required": null,
+    "notes": []
+  },
+  {
+    "name": "Reporting",
+    "description": "entities collect data on payments made to covered recipients from January 1 through December 31 of each year, along with any ownership or investment interests held by physicians or physicains \u2019 immediate family members in the reporting entity during that time. Following the data collection, r eporting entities  are require d to submi t this data to CMS.",
+    "type": null,
+    "format": null,
+    "required": null,
+    "notes": []
+  },
+  {
+    "name": "This",
+    "description": "data may be reviewed and, if necessary, disputed by the covered recipient  associated with the record(s) in the Open Payments system ..",
+    "type": null,
+    "format": null,
+    "required": null,
+    "notes": []
+  },
+  {
+    "name": "Data",
+    "description": "submitted to Open Payments that are eligible for publication is published twice annually: first, in an initial publication, and then in a refresh publication. Refer to Section 2.3 for more information.",
+    "type": null,
+    "format": null,
+    "required": null,
+    "notes": []
+  },
+  {
+    "name": "Publishing",
+    "description": "rules, limitations, and exclusions are given in Section 2.6. The data is made available on the",
+    "type": null,
+    "format": null,
+    "required": null,
+    "notes": []
+  },
+  {
+    "name": "Open",
+    "description": "Payments public data site, also called the search tool,  at ( https://op enpay mentsdata.cms.gov/).",
+    "type": null,
+    "format": null,
+    "required": null,
+    "notes": []
+  },
+  {
+    "name": "Figure",
+    "description": "2-1, below, provides a high-level representation of the various steps  during a given PY. Exact transfers of value, and ownership or investment interests are categorized into three (3) payment types: 1. General Payments: Payments or other transfers of value made that are not in connection with a research agreement or research protocol. 2. Research Payments: Payments or other transfers of value made in connection with a research agreement or research protocol. Open Payments Methodology Overview & Data Dictionary   OMB Control No: 0938 -1237",
+    "type": null,
+    "format": null,
+    "required": null,
+    "notes": []
+  },
+  {
+    "name": "Expiration",
+    "description": "Date: 07/31/2026 3. Physician Ownership or Investment Interest Information: Information about physicians who hold an ownership or investment interest in an applicable manufacturer or applicable GPO or who have an immediate family member holding such interest. 2.5 Reporting Limitations and Exclusions",
+    "type": null,
+    "format": null,
+    "required": null,
+    "notes": []
+  },
+  {
+    "name": "The",
+    "description": "Open Payments data published by CMS is subject to limitations and exclusions.",
+    "type": null,
+    "format": null,
+    "required": null,
+    "notes": []
+  },
+  {
+    "name": "Certain",
+    "description": "payments or other transfers of value are excluded from reporting, such as product samples and educational materials intended for patient use. Records of such payments and other transfers of value shoul d not be submitted to the Open Payments system. These exclusions are outlined in the Open",
+    "type": null,
+    "format": null,
+    "required": null,
+    "notes": []
+  },
+  {
+    "name": "Payments",
+    "description": "final rule, at 42 C.F.R. \u00a7 403.904(i), available at https://www.cms.gov/OpenPayments/Law - and-Policy.",
+    "type": null,
+    "format": null,
+    "required": null,
+    "notes": []
+  },
+  {
+    "name": "Payment",
+    "description": "records are only accepted by the Open Payments system if they are both successfully validated and successfully matched to a valid physician, NPP , or teaching hospital. 2.6 Publication Rules",
+    "type": null,
+    "format": null,
+    "required": null,
+    "notes": []
+  },
+  {
+    "name": "The",
+    "description": "publication rules for Open Payments are as follows: \u2022 Eligible records submitted and attested before the end of the data submission period will be published in that year\u2019s initial and data refresh publications. \u2022 The data published in the June (initial) publication is the latest attested version of the data at the end of the correction period. \u2022 The data published in the early year (refresh) publication is the latest attested version of the data at the end of the preceding calendar year (December 31) .",
+    "type": null,
+    "format": null,
+    "required": null,
+    "notes": []
+  },
+  {
+    "name": "Records",
+    "description": "may not be eligible for publication based upon publishing limitations. See Section 2.6.1 for 2.6.1  Publishing Limitations",
+    "type": null,
+    "format": null,
+    "required": null,
+    "notes": []
+  },
+  {
+    "name": "The",
+    "description": "following limitations apply to what records are published: 1. Data attested after the submission closing date is considered late and will not be included in the initial publication or the next data refresh publication. Late submissions may be eligible for publication in the following calendar year\u2019s data publication. 2. Records in which physician /NPP or principal investigator identifying information is changed after the submission end date will not be included in the initial publication or the next data refresh publication. Such a change requires the deletion of the original record and submission of a new corrected record; after the submission closing date, the corrected record would be a late submission. a. These corrected records may be eligible for publication in the following calendar year\u2019s initial data publication.  Open Payments Methodology Overview & Data Dictionar y   OMB Control No: 0938 -1237",
+    "type": null,
+    "format": null,
+    "required": null,
+    "notes": []
+  },
+  {
+    "name": "Expiration",
+    "description": "Date: 07/31/2026 3. Records deleted prior to the end of the correction period for that year will not be published in the initial data publication or in any subsequent publications. a. Records deleted after the correction period but prior to December 31 of that calendar year will be published in the initial publication but will be removed in the data refresh publication and any subsequent publications. ecords without disputes that are updated after the submission period will not be published in the initial data publication. a. The record may be eligible for the next data refresh publication if it was resubmitted and attested by the modified- without -dispute cutoff date in November of that year. b. Updates to undisputed records that are resubmitted and attested after the modified - without -dispute cutoff date in November will not be published in the subsequent refresh publication but may be eligible for publication in the following calendar year\u2019s publication. 5. Records that were  previously published and were edited after their publication  and not re - attested by the end of the next correction period are not published. 6. Reporting entities may request a delay in the publication of research payment record(s)  if the record (s) relate to research or development of a new drug, biological, device, or medical supply; a new application of an existing drug, biological, device, or medical supply; or clinical investigations regarding a new drug, biological, device, or medical supply. These payments will be published in later publications of Open Payments as appropriate. See the Open Payments Final",
+    "type": null,
+    "format": null,
+    "required": null,
+    "notes": []
+  },
+  {
+    "name": "Rule",
+    "description": ", 42 C.F.R. \u00a7 403.910, available at https://www.cms.gov/OpenPayments/Law -and-Policy. a. Records for which submitters requested a delay in publication or a renewal of a delay in a publication prior to the end of the submission period will not be published for the year they are delayed. These records will be eligible for publication in the next year\u2019s publication, unless the delay in publication is renewed. b. Records may be delayed up to four years from the year of the payment (i.e., the record\u2019s PY). c. Records without disputes that are updated to remove the delay in publication after the submission period will not be published in the initial publication but will be published in the refresh publication. 7. Reporting entities may not submit records for PYs that are closed or archived.  PY s 2013 \u2013 -2018 are no longer eligible for submissions. 8. Open Payments archives older PY data.   Archived PYs 2013 - 2016 are available publically through the archived PY  Dataset Downloads ( https://www.cms.gov/OpenPayments/Archived -",
+    "type": null,
+    "format": null,
+    "required": null,
+    "notes": []
+  },
+  {
+    "name": "Datasets",
+    "description": ").   PYs 2017 and 2018 are no longer eligible for submissions, and PY  2017  will be archived with the June 2025 Publication.  Open Payments Methodology Overview & Data Dictionary   OMB Control No: 0938 -1237",
+    "type": null,
+    "format": null,
+    "required": null,
+    "notes": []
+  },
+  {
+    "name": "Expiration",
+    "description": "Date: 07/31/2026 3 Accessing the Public Data",
+    "type": null,
+    "format": null,
+    "required": null,
+    "notes": []
+  },
+  {
+    "name": "Open",
+    "description": "Payments data is  published at https://op enpay mentsdata.cms.gov. From this site, all published",
+    "type": null,
+    "format": null,
+    "required": null,
+    "notes": []
+  },
+  {
+    "name": "Open",
+    "description": "Payments data can be viewed online and downloaded. 3.1 Online Data Access",
+    "type": null,
+    "format": null,
+    "required": null,
+    "notes": []
+  },
+  {
+    "name": "The",
+    "description": "Open Payments data is accessible through the Open Payments Search Tool and the Open Payments",
+    "type": null,
+    "format": null,
+    "required": null,
+    "notes": []
+  },
+  {
+    "name": "Data",
+    "description": "Explorer . The Search Tool  (https://op enpay mentsdata.cms.gov/search) allows users to search Open",
+    "type": null,
+    "format": null,
+    "required": null,
+    "notes": []
+  },
+  {
+    "name": "Payments",
+    "description": "data for physicians, NPPs , teaching hospitals , and companies. The Data Explorer (https://openpaymentsdata.cms.gov/datasets ) allows users to browse PY datasetsand filter by reported record fields 3.2 Downloading the Data",
+    "type": null,
+    "format": null,
+    "required": null,
+    "notes": []
+  },
+  {
+    "name": "CMS",
+    "description": "allows anyone  to download complete Open Payments data sets. Data sets for all PYs are available.",
+    "type": null,
+    "format": null,
+    "required": null,
+    "notes": []
+  },
+  {
+    "name": "The",
+    "description": "data sets are contained in downloadable ZIP files. Each PY ZIP file contains several comma- delimited character-separated value (CSV) files and a README text file. The PY is included in each ZIP file\u2019s name.",
+    "type": null,
+    "format": null,
+    "required": null,
+    "notes": []
+  },
+  {
+    "name": "Also",
+    "description": "available for download is a supplement file that contains detailed information about physicians/NPPs  indicated as recipients of payments, other transfers of value, or physicians as holding ownership or investment interests in applicable manufacturers on records that were published through the Open Payments program. The supplement file also contains information about principal investigators who were associated with research payments or other transfers of value in records published by CMS through the Open Payments program. The supplement file contains only physicians/NPPs  who have at least one payment record associated with them that has been published.",
+    "type": null,
+    "format": null,
+    "required": null,
+    "notes": []
+  },
+  {
+    "name": "This",
+    "description": "list is available in a downloadable ZIP file, which contains a comma-delimited character-separated value (CSV) file and a README text file.",
+    "type": null,
+    "format": null,
+    "required": null,
+    "notes": []
+  },
+  {
+    "name": "Programs",
+    "description": "recommended for file decompression are WinZip, WinRAR, and 7-Zip. CMS does not recommend using Windo ws File Compression to decompress downloaded files.",
+    "type": null,
+    "format": null,
+    "required": null,
+    "notes": []
+  },
+  {
+    "name": "The",
+    "description": "Program Year ZIP files contain CSV files of the following types: \u2022 General Payments Details o General payment records provide the total value of general payments or other transfers of value to a particular recipient for a particular date. o Each record includes identifying information for the applicable manufacturer or applicable",
+    "type": null,
+    "format": null,
+    "required": null,
+    "notes": []
+  },
+  {
+    "name": "GPO",
+    "description": "who made the payment and identifying information for the recipient.",
+    "type": null,
+    "format": null,
+    "required": null,
+    "notes": []
+  },
+  {
+    "name": "Open",
+    "description": "Payments Methodology Overview & Data Dictionary   OMB Control No: 0938 -1237",
+    "type": null,
+    "format": null,
+    "required": null,
+    "notes": []
+  },
+  {
+    "name": "Expiration",
+    "description": "Date: 07/31/2026 \u2022 Research Payments Details o Research payment records provide the total value of a payment or other transfer of value made for research purposes to a particular recipient for a particular date. o Each record includes identifying information for the applicable manufacturer or applicable",
+    "type": null,
+    "format": null,
+    "required": null,
+    "notes": []
+  },
+  {
+    "name": "GPO",
+    "description": "who made the payment, as well as identifying information for the recipient.",
+    "type": null,
+    "format": null,
+    "required": null,
+    "notes": []
+  },
+  {
+    "name": "Information",
+    "description": "is provided for up to five principal investigators associated with the payment. \u2022 Physician Ownership Details \u2013 The complete published data set for physician ownership or investment interest data. Physician ownership records provide information on physician ownership or investment interests in an applicable manufacturer or applicable GPO.",
+    "type": null,
+    "format": null,
+    "required": null,
+    "notes": []
+  },
+  {
+    "name": "Records",
+    "description": "for all the three payment categories (general, research, physician ownership) include a Change",
+    "type": null,
+    "format": null,
+    "required": null,
+    "notes": []
+  },
+  {
+    "name": "Type",
+    "description": "indicator that explains the record\u2019s status relating to previous publications.",
+    "type": null,
+    "format": null,
+    "required": null,
+    "notes": []
+  },
+  {
+    "name": "Table",
+    "description": "3-1: Change Type Values and Meanings",
+    "type": null,
+    "format": null,
+    "required": null,
+    "notes": []
+  },
+  {
+    "name": "Change",
+    "description": "Type value Meaning",
+    "type": null,
+    "format": null,
+    "required": null,
+    "notes": []
+  },
+  {
+    "name": "NEW",
+    "description": "The payment record was submitted during the most recent submission windo w and is being published for the first time.",
+    "type": null,
+    "format": null,
+    "required": null,
+    "notes": []
+  },
+  {
+    "name": "ADD",
+    "description": "The payment record was submitted prior to the most recent submission windo w but was not eligible for publication until the current publication. The record is being published for the first time.",
+    "type": null,
+    "format": null,
+    "required": null,
+    "notes": []
+  },
+  {
+    "name": "CHANGED",
+    "description": "The payment record has been published in a previous publication and has been modified since its last publication, which may include an update to its dispute",
+    "type": null,
+    "format": null,
+    "required": null,
+    "notes": []
+  },
+  {
+    "name": "UNCHANGED",
+    "description": "The payment record has been  published in the previous publication and is being republished without  change in the current publication. \u2022 Deleted and Removed Records \u2013  The Deleted Records File contains the Record ID, Payment Type, and PY of records that were previously published and have been deleted or removed from the",
+    "type": null,
+    "format": null,
+    "required": null,
+    "notes": []
+  },
+  {
+    "name": "Open",
+    "description": "Payments system for that PY . Each record also has a Change Type indicator, which shows if the record was deleted or removed. o The initial publication of the latest PY \u2019s data will not include a Deleted and Removed",
+    "type": null,
+    "format": null,
+    "required": null,
+    "notes": []
+  },
+  {
+    "name": "Record",
+    "description": "file, as the initial publication contains records that have not been deleted or o In the event , there are no REMOVED or DELETED records for a PY, the Removed and",
+    "type": null,
+    "format": null,
+    "required": null,
+    "notes": []
+  },
+  {
+    "name": "Deleted",
+    "description": "Records file will not be included in the compressed (.zip) file. o Starting for the PY  2023 submssion window, records that have been attested cannot be Open Payments Methodology Overview & Data Dictionary   OMB Control No: 0938 -1237",
+    "type": null,
+    "format": null,
+    "required": null,
+    "notes": []
+  },
+  {
+    "name": "Expiration",
+    "description": "Date: 07/31/2026 deleted without providing a reason for deletion. Records that are deleted and resubmitted must also be linked when resubmitting using the Record ID.",
+    "type": null,
+    "format": null,
+    "required": null,
+    "notes": []
+  },
+  {
+    "name": "The",
+    "description": "text file in the PY ZIP files is: \u2022 README  - A text file that provides information about the files available for download, their formats, special handling considerations, and other alternatives for viewing the Open Payments",
+    "type": null,
+    "format": null,
+    "required": null,
+    "notes": []
+  },
+  {
+    "name": "Also",
+    "description": "available for download is the Covered Recipient Profile S upplement  Detail ZIP file, which contains one (1) CSV file and one (1) README file. The CSV file contains all of the identifying information for physicians and NPPs  who were indicated as recipients of payments, other transfers of value, or ownership and investment interest in Open Payments records, as well as principal investigators who were associated with payments or other transfers of value. The README file provides information about the contents of the CSV file.",
+    "type": null,
+    "format": null,
+    "required": null,
+    "notes": []
+  },
+  {
+    "name": "Payments",
+    "description": "Details files, Physician Ownership Details files, and Deleted Records files. These appendices ownership and investment interest in records published by CMS through Open Payments as well as principal investigators who were associated with payments or other transfers of value in records published in Open Payments. This list can be used as a resource when analyzing Open Payments",
+    "type": null,
+    "format": null,
+    "required": null,
+    "notes": []
+  },
+  {
+    "name": "The",
+    "description": "ZIP file OP_CVRD_RCPNT _PRFL_SPLMTL_P01172025. zip contains one (1) CSV file with the Covered",
+    "type": null,
+    "format": null,
+    "required": null,
+    "notes": []
+  },
+  {
+    "name": "Recipient",
+    "description": "Profile Supplement File  and one (1) text file, a README file that provides information about the file available for download, its format, special handling considerations, and other alternatives for viewing the data. Open Payments Methodology Overview & Data Dictionary   OMB Control No: 0938 -1237",
+    "type": null,
+    "format": null,
+    "required": null,
+    "notes": []
+  },
+  {
+    "name": "Expiration",
+    "description": "Date: 07/31/2026",
+    "type": null,
+    "format": null,
+    "required": null,
+    "notes": []
+  },
+  {
+    "name": "Table",
+    "description": "3-9: Covered Recipient Profile Supplement File",
+    "type": null,
+    "format": null,
+    "required": null,
+    "notes": []
+  },
+  {
+    "name": "File",
+    "description": "Name  Number of Rows  Number of Columns  Raw Data File Size",
+    "type": null,
+    "format": null,
+    "required": null,
+    "notes": []
+  },
+  {
+    "name": "Covered",
+    "description": "Recipient Profile",
+    "type": null,
+    "format": null,
+    "required": null,
+    "notes": []
+  },
+  {
+    "name": "Supplement",
+    "description": "1,530, 412 32 340.3 MB 3.10.1  Contents of the Covered Recipient Profile Supplement File",
+    "type": null,
+    "format": null,
+    "required": null,
+    "notes": []
+  },
+  {
+    "name": "The",
+    "description": "file contains physicians who were associated with at least one payment record published in Open",
+    "type": null,
+    "format": null,
+    "required": null,
+    "notes": []
+  },
+  {
+    "name": "Payments",
+    "description": "since PY  2017 , and NPPs  with at least one associated payment record from PY  2021.  Each record includes the physician\u2019s or NPP\u2019s  demographic information, specialties, and states in which the physician holds a medical license(s), as well as the Open Payments\u2019 unique identification num ber (Covered Recipient  Profile ID) for each physician/NPP . The Covered Recipient  Profile ID is a unique identifier for a physician or NPP  within the Open Payments system and can be used to search the data files to find payments made to that specific physician/NPP  as well as to link physician/NPP  records across PYs. 3.10.2  How to Use the Covered Recipient Profile Supplement File",
+    "type": null,
+    "format": null,
+    "required": null,
+    "notes": []
+  },
+  {
+    "name": "Individuals",
+    "description": "and organizations can use the identifying information provided in the Covered Recipient Profile",
+    "type": null,
+    "format": null,
+    "required": null,
+    "notes": []
+  },
+  {
+    "name": "Supplement",
+    "description": "File  as an analytical resource to search for records of payments or other transfers of value made to a particular physician/NPP , as well as to link phys ician/NPP  data across PYs. A complete list of ownership or investment interest being reported A VARCH AR2(20) string 20",
+    "type": null,
+    "format": null,
+    "required": null,
+    "notes": []
+  },
+  {
+    "name": "Physician_Last_Name",
+    "description": "Last name of the physician (covered recipient) with the ownership or investment interest being reported Smith VARCHAR2(35) string 35",
+    "type": null,
+    "format": null,
+    "required": null,
+    "notes": []
+  },
+  {
+    "name": "Physician_Name_Su",
+    "description": "ffix Name suffix of the physician (covered recipient) with the ownership or investment interest being reported Jr. VARCHAR2(5) string 5",
+    "type": null,
+    "format": null,
+    "required": null,
+    "notes": []
+  },
+  {
+    "name": "Recipient_Primary_Business_S",
+    "description": "",
+    "type": null,
+    "format": null,
+    "required": null,
+    "notes": []
+  },
+  {
+    "name": "treet_Address_Line1",
+    "description": "The first line of the primary practice street address of the physician with the ownership or investment interest being reported 7500  Security",
+    "type": null,
+    "format": null,
+    "required": null,
+    "notes": []
+  },
+  {
+    "name": "Blvd",
+    "description": ". VARCHAR2(55) string 55",
+    "type": null,
+    "format": null,
+    "required": null,
+    "notes": []
+  },
+  {
+    "name": "Recipient_Primary_Business_S",
+    "description": "",
+    "type": null,
+    "format": null,
+    "required": null,
+    "notes": []
+  },
+  {
+    "name": "treet_Address_Line2",
+    "description": "The second line of the primary practice street address of the physician with the ownership or investment interest being reported Suite 100 VARCHAR2(55) string 55",
+    "type": null,
+    "format": null,
+    "required": null,
+    "notes": []
+  },
+  {
+    "name": "Recipient_City",
+    "description": "The primary practice city of the physician with the ownership or investment interest being reported Baltimore VARCHAR2(40) string 40",
+    "type": null,
+    "format": null,
+    "required": null,
+    "notes": []
+  },
+  {
+    "name": "Recipient_State",
+    "description": "The primary practice/business state or territory abbreviation of the physician with the ownership or investment interest being reported, if the primary practice/business address is in the United S tates MD CHAR(2) string 2",
+    "type": null,
+    "format": null,
+    "required": null,
+    "notes": []
+  },
+  {
+    "name": "Recipient_Zip_Code",
+    "description": "The 9-digit zip code for the primary practice location of the physician with the ownership or investment interest being reported, if the primary practice address is in the United",
+    "type": null,
+    "format": null,
+    "required": null,
+    "notes": []
+  },
+  {
+    "name": "States",
+    "description": "21244 -3712  VARCH AR2(10) num ber- num ber 10 Open Payments Methodology Overview & Data Dictionary   OMB Control No: 0938 -1237",
+    "type": null,
+    "format": null,
+    "required": null,
+    "notes": []
+  },
+  {
+    "name": "Expiration",
+    "description": "Date: 07/31/2026",
+    "type": null,
+    "format": null,
+    "required": null,
+    "notes": []
+  },
+  {
+    "name": "Name",
+    "description": "Description Sample  Data Data Type Form at Max Length",
+    "type": null,
+    "format": null,
+    "required": null,
+    "notes": []
+  },
+  {
+    "name": "Recipient_Country",
+    "description": "The primary practice/business address country name of the physician with the ownership or investment interest being reported US VARCH AR2(100) string 100",
+    "type": null,
+    "format": null,
+    "required": null,
+    "notes": []
+  },
+  {
+    "name": "Recipient_Province",
+    "description": "The primary practice/business province name of the physician with the ownership or investment interest being reported, if the primary practice/business address is outside the United S tates, and if applicable Ontario VARCH AR2(20) string 20",
+    "type": null,
+    "format": null,
+    "required": null,
+    "notes": []
+  },
+  {
+    "name": "Recipient_Postal_Code",
+    "description": "The international postal code for the primary practice/business location of the physician with the ownership or investment interest being reported, if the primary practice/business address is outside the United",
+    "type": null,
+    "format": null,
+    "required": null,
+    "notes": []
+  },
+  {
+    "name": "States",
+    "description": "5600098  VARCH AR2(20) string 20",
+    "type": null,
+    "format": null,
+    "required": null,
+    "notes": []
+  },
+  {
+    "name": "Physician_Primary_Type",
+    "description": "The p rimary type of medicine practiced by the physician covered recipient with the ownership or investment interest being reported Doctor of",
+    "type": null,
+    "format": null,
+    "required": null,
+    "notes": []
+  },
+  {
+    "name": "Dentistry",
+    "description": "(DDS) VARCH AR2(50) string 50",
+    "type": null,
+    "format": null,
+    "required": null,
+    "notes": []
+  },
+  {
+    "name": "Physician_Specialty",
+    "description": "Physician's single-specialty chosen from the standardized \"provider taxonomy\" code list Allopathic &",
+    "type": null,
+    "format": null,
+    "required": null,
+    "notes": []
+  },
+  {
+    "name": "Osteopathic",
+    "description": "",
+    "type": null,
+    "format": null,
+    "required": null,
+    "notes": []
+  },
+  {
+    "name": "Physicians",
+    "description": " |Obstetrics &",
+    "type": null,
+    "format": null,
+    "required": null,
+    "notes": []
+  },
+  {
+    "name": "Gynecology",
+    "description": "VARCH AR2(300) string 300",
+    "type": null,
+    "format": null,
+    "required": null,
+    "notes": []
+  },
+  {
+    "name": "Record_ID",
+    "description": "Open Payments system-generated unique identifier for the ownership payment record 10000000052  NUMBER(38,0) num ber 38",
+    "type": null,
+    "format": null,
+    "required": null,
+    "notes": []
+  },
+  {
+    "name": "Program_Year",
+    "description": "The year in which the ownership/investment interest occurred 2015  CHAR(4) num ber 4 Open Payments Methodology Overview & Data Dictionary   OMB Control No: 0938 -1237",
+    "type": null,
+    "format": null,
+    "required": null,
+    "notes": []
+  },
+  {
+    "name": "Expiration",
+    "description": "Date: 07/31/2026",
+    "type": null,
+    "format": null,
+    "required": null,
+    "notes": []
+  },
+  {
+    "name": "Name",
+    "description": "Description Sample  Data Data Type Form at Max Length",
+    "type": null,
+    "format": null,
+    "required": null,
+    "notes": []
+  },
+  {
+    "name": "Total_Amount_Invested_USDollar",
+    "description": " s The dollar amount the physician or immediate family member has invested in the applicable manufacturer or applicable GPO during the PY, in US dollars 6000. 22 NUMBER(12,2) decimal 12",
+    "type": null,
+    "format": null,
+    "required": null,
+    "notes": []
+  },
+  {
+    "name": "Value_of",
+    "description": "_Interest The cumulative value of ownership or investment interest held by the physician or immediate family member in the applicable manufacturer or applicable GPO, in US dollars 6000. 22 NUMBER(12,2) decimal 12",
+    "type": null,
+    "format": null,
+    "required": null,
+    "notes": []
+  },
+  {
+    "name": "Terms_of_Interest",
+    "description": "Description of any applicable terms of the ownership or investment interest Terms of interest are standard VARCH AR2(500) string 500",
+    "type": null,
+    "format": null,
+    "required": null,
+    "notes": []
+  },
+  {
+    "name": "Submitting_Applicable_M",
+    "description": "anuf",
+    "type": null,
+    "format": null,
+    "required": null,
+    "notes": []
+  },
+  {
+    "name": "acturer_or_Applicable_GPO_",
+    "description": "",
+    "type": null,
+    "format": null,
+    "required": null,
+    "notes": []
+  },
+  {
+    "name": "Name",
+    "description": "The t extual prop er name of either the submitting applicable manufacturer or applicable GPO ABCDE",
+    "type": null,
+    "format": null,
+    "required": null,
+    "notes": []
+  },
+  {
+    "name": "Manufacturing",
+    "description": "VARCH AR2(100) string 100",
+    "type": null,
+    "format": null,
+    "required": null,
+    "notes": []
+  },
+  {
+    "name": "Applicable_M",
+    "description": "anufacturer_or_App",
+    "type": null,
+    "format": null,
+    "required": null,
+    "notes": []
+  },
+  {
+    "name": "licable_GPO_Making_Payment_ID",
+    "description": "Open Payments ID of either the submitting applicable manufacturer or applicable GPO 1000000049  NUMBER(38,0) num ber 38",
+    "type": null,
+    "format": null,
+    "required": null,
+    "notes": []
+  },
+  {
+    "name": "Applicable_M",
+    "description": "anufacturer_or_App",
+    "type": null,
+    "format": null,
+    "required": null,
+    "notes": []
+  },
+  {
+    "name": "licable_GPO_Making_Payment_N",
+    "description": " ame The t extual prop er name of either the submitting applicable manufacturer or applicable GPO EDCBA VARCH AR2(100) string 100",
+    "type": null,
+    "format": null,
+    "required": null,
+    "notes": []
+  },
+  {
+    "name": "Applicable_M",
+    "description": "anufacturer_or_App",
+    "type": null,
+    "format": null,
+    "required": null,
+    "notes": []
+  },
+  {
+    "name": "licable_GPO_Making_Payment_St",
+    "description": " ate State name of either the submitting applicable manufacturer or applicable GPO VA CHAR(2) string 2",
+    "type": null,
+    "format": null,
+    "required": null,
+    "notes": []
+  },
+  {
+    "name": "Applicable_M",
+    "description": "anufacturer_or_App",
+    "type": null,
+    "format": null,
+    "required": null,
+    "notes": []
+  },
+  {
+    "name": "licable_GPO_Making_Payment_C",
+    "description": " ountry Coun try name of the submitting applicable manufacturer or applicable GPO US VARCH AR2(100) string 100",
+    "type": null,
+    "format": null,
+    "required": null,
+    "notes": []
+  },
+  {
+    "name": "Dispute_Status_for_Publication",
+    "description": "Indicates whe ther the own ership or investment interest is disputed by t he physician Yes CHAR(3) string 3 Open Payments Methodology Overview & Data Dictionary   OMB Control No: 0938 -1237",
+    "type": null,
+    "format": null,
+    "required": null,
+    "notes": []
+  },
+  {
+    "name": "Expiration",
+    "description": "Date: 07/31/2026",
+    "type": null,
+    "format": null,
+    "required": null,
+    "notes": []
+  },
+  {
+    "name": "Name",
+    "description": "Description Sample  Data Data Type Form at Max Length",
+    "type": null,
+    "format": null,
+    "required": null,
+    "notes": []
+  },
+  {
+    "name": "Interes",
+    "description": "t_Held_by_Physician_or_a",
+    "type": null,
+    "format": null,
+    "required": null,
+    "notes": []
+  },
+  {
+    "name": "n_Immediate_Family_Me",
+    "description": "mber An indicator showing if the own ership or investment interest  is held by the physician or by an immediate family member Immediate family member VARCH AR2(50) string 50",
+    "type": null,
+    "format": null,
+    "required": null,
+    "notes": []
+  },
+  {
+    "name": "Payment_Publication_Date",
+    "description": "The predefined date when the ownership or investment interest is scheduled to be published 06/30/2016  DATE Date",
+    "type": null,
+    "format": null,
+    "required": null,
+    "notes": []
+  },
+  {
+    "name": "YYYY",
+    "description": "12 Open Payments Methodology Overview & Data Dictionar y   OMB Control No: 0938 -1237",
+    "type": null,
+    "format": null,
+    "required": null,
+    "notes": []
+  },
+  {
+    "name": "Expiration",
+    "description": "Date: 07/31/2026",
+    "type": null,
+    "format": null,
+    "required": null,
+    "notes": []
+  }
+]

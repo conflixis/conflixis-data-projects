@@ -1,0 +1,146 @@
+[
+  {
+    "name": "Table",
+    "description": "F-1: Physician Ownership Information File Attributes",
+    "sample_data": "",
+    "data_type": "",
+    "format": "",
+    "max_length": ""
+  },
+  {
+    "name": "Name",
+    "description": "Description Sample  Data Data Ty pe Form at Max Length",
+    "sample_data": "",
+    "data_type": "",
+    "format": "",
+    "max_length": ""
+  },
+  {
+    "name": "Chang",
+    "description": "e_Type An indicator showing if the payment rec ord is New, Added, Changed, or Unchang ed in the cu rrent publication compar ed to the previous pub lication.",
+    "sample_data": "",
+    "data_type": "",
+    "format": "",
+    "max_length": ""
+  },
+  {
+    "name": "NEW",
+    "description": "- To identify \u201cn ew\u201d records add ed from the end o f the previous submi ssion dead line until the current submi ssion",
+    "sample_data": "period dead line",
+    "data_type": "date",
+    "format": "",
+    "max_length": ""
+  },
+  {
+    "name": "ADDED",
+    "description": "- To identif y reco rds that were not eligible at the time of previous publication , which is eligible fo r current publication.",
+    "sample_data": "",
+    "data_type": "",
+    "format": "",
+    "max_length": ""
+  },
+  {
+    "name": "CHANGED",
+    "description": "- To identify previousl y published records modified after the last publication.",
+    "sample_data": "",
+    "data_type": "",
+    "format": "",
+    "max_length": ""
+  },
+  {
+    "name": "UNCHANGED",
+    "description": "- To ident ify previously publishe d records that rem ain \u201cunchanged \u201d in current pub lication. NEW VARCH AR2(20) String 20",
+    "sample_data": "",
+    "data_type": "",
+    "format": "",
+    "max_length": ""
+  },
+  {
+    "name": "Physic",
+    "description": "ian_Profile_ID  Open Payments system-generat ed unique identifi er for physician prof ile wit h the ownership o r investment inter est",
+    "sample_data": "being report ed 1000000378",
+    "data_type": "NUMBER(",
+    "format": "38,0)",
+    "max_length": "number"
+  },
+  {
+    "name": "Physician_NPI",
+    "description": "National Provider Identifier is a unique identification",
+    "sample_data": "",
+    "data_type": "number",
+    "format": "for",
+    "max_length": "covered"
+  },
+  {
+    "name": "Physic",
+    "description": "ian_First _Name First name of the physic ian (covered recipient) with th e ownership or inv estment inter est being reported John VARCH AR2(20) string 20 Open Payments Methodology Overview & Data Dictionary   OMB Control No: 0938 -1237",
+    "sample_data": "",
+    "data_type": "",
+    "format": "",
+    "max_length": ""
+  },
+  {
+    "name": "Name",
+    "description": "Description Sample  Data Data Type Form at Max Length",
+    "sample_data": "",
+    "data_type": "",
+    "format": "",
+    "max_length": ""
+  },
+  {
+    "name": "Physician_Middle_Name",
+    "description": "Middle name of the physician (covered recipient) with the ownership or investment interest being reported A VARCH AR2(20) string 20",
+    "sample_data": "",
+    "data_type": "",
+    "format": "",
+    "max_length": ""
+  },
+  {
+    "name": "Physician_Last_Name",
+    "description": "Last name of the physician (covered recipient) with",
+    "sample_data": "the ownership or investment interest being reported Smith",
+    "data_type": "VARCHAR2(35)",
+    "format": "string",
+    "max_length": "35"
+  },
+  {
+    "name": "Physician_Name_Su",
+    "description": "ffix Name suffix of the physician (covered recipient) with",
+    "sample_data": "the ownership or investment interest being reported Jr.",
+    "data_type": "VARCHAR2(5)",
+    "format": "string",
+    "max_length": "5"
+  },
+  {
+    "name": "Recipient_City",
+    "description": "The primary practice city of the physician with the",
+    "sample_data": "ownership or investment interest being reported Baltimore",
+    "data_type": "VARCHAR2(40)",
+    "format": "string",
+    "max_length": "40"
+  },
+  {
+    "name": "Recipient_State",
+    "description": "The primary practice/business state or territory abbreviation of the physician with the ownership or investment interest being reported, if the primary",
+    "sample_data": "practice/business address is in the United S tates MD",
+    "data_type": "CHAR(2)",
+    "format": "string",
+    "max_length": "2"
+  },
+  {
+    "name": "Recipient_Zip_Code",
+    "description": "The 9-digit zip code for the primary practice location of the physician with the ownership or investment interest being reported, if the primary practice address is in the United",
+    "sample_data": "",
+    "data_type": "",
+    "format": "",
+    "max_length": ""
+  },
+  {
+    "name": "States",
+    "description": "21244 -3712  VARCH AR2(10) num ber-",
+    "sample_data": "",
+    "data_type": "",
+    "format": "",
+    "max_length": ""
+  }
+]
