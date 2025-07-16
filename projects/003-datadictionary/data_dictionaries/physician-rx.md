@@ -8,7 +8,7 @@ This data dictionary describes the fields within the consolidated and optimized 
 
 | Field Name | Description | Sample Data | BigQuery Data Type |
 | :--- | :--- | :--- | :--- |
-| **`NPI`** | A unique 10-digit National Provider Identifier for the prescribing physician. | `1609071448` | `NUMERIC` |
+| **`NPI`** | A unique 10-digit National Provider Identifier for the prescribing physician. | `1609071448` | `INTEGER` |
 | **`CLAIM_YEAR`** | The calendar year in which the prescription claim was processed. | `2023` | `NUMERIC` |
 | **`CLAIM_MONTH`** | The full name of the month in which the prescription claim was processed. | `January` | `STRING` |
 | **`PAYOR_ID`** | A system-assigned unique identifier for the insurance company or entity paying for the claim. | `98765` | `NUMERIC` |
