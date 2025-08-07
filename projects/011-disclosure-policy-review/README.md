@@ -50,10 +50,32 @@ This project develops an automated system to review healthcare provider (HCP) di
 
 ## Data Sources
 
-- Healthcare provider disclosure forms
-- Institutional policy documents
-- Open Payments database
-- Historical compliance records
+### Primary Data Sources
+
+#### 1. Disclosure Forms Table
+- **BigQuery Table**: `conflixis-engine.firestore_export.disclosure_forms_raw_latest_v3`
+  - **Group ID**: `gcO9AHYlNSzFeGTRSFRa` (specific group for analysis)
+  - **Total Rows for Group**: 7,609 disclosure forms
+  - Contains raw disclosure form submissions from healthcare providers
+  - Fields include: document_id, timestamp, group_id, campaign_id, status, start_date, end_date, data, old_data
+
+#### 2. Parsed Disclosures Table  
+- **BigQuery Table**: `conflixis-engine.firestore_export.disclosures_raw_latest_parse`
+  - **Total Rows**: 13,867 total parsed disclosures
+  - **Group ID Rows**: 2,413 rows for group `gcO9AHYlNSzFeGTRSFRa`
+  - Contains structured/parsed disclosure data with 48 columns including:
+    - External entity information (name, compensation value)
+    - Service dates and relationship status
+    - Research indicators and review status
+    - Detailed disclosure fields parsed from form submissions
+
+### Policy Documents
+- **Texas Health Resources COI Policy** (Dec 2013): Located in `/docs/dec_2013_conflict_of_interest.pdf`
+- Comprehensive three-tier management system for research-related conflicts of interest
+
+### Additional Sources (Planned)
+- Open Payments database for cross-referencing
+- Historical compliance records for trend analysis
 
 ## Technical Stack
 

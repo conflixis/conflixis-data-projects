@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Healthcare Provider Disclosure Review Dashboard - Texas Health Resources</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Configure Tailwind with Conflixis colors -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'conflixis-green': '#0c343a',
+                        'conflixis-light-green': '#93baab',
+                        'conflixis-white': '#ffffff',
+                        'conflixis-gray': '#d1d5db',
+                        'conflixis-gray-hover': '#b9bec4',
+                        'conflixis-ivory': '#f8f5ef',
+                        'conflixis-tan': '#c5bdae',
+                        'conflixis-mint': '#93baab',
+                        'conflixis-gold': '#eab96d',
+                        'conflixis-blue': '#4c94ed',
+                        'conflixis-red': '#fd7649',
+                        'conflixis-success-green': '#008000FF',
+                    },
+                    fontFamily: {
+                        'soehneLeicht': ['SoehneLeicht', 'sans-serif'],
+                        'soehneKraftig': ['SoehneKraftig', 'sans-serif'],
+                        'ivarDisplay': ['IvarDisplay', 'serif']
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- Fonts -->
+    <style>
+        @font-face {
+            font-family: 'SoehneLeicht';
+            src: url('../docs/design-system/conflixis-design-system/assets/fonts/soehne-leicht.woff2') format('woff2');
+            font-weight: 300;
+            font-style: normal;
+        }
+        
+        @font-face {
+            font-family: 'SoehneKraftig';
+            src: url('../docs/design-system/conflixis-design-system/assets/fonts/soehne-kraftig.woff2') format('woff2');
+            font-weight: 700;
+            font-style: normal;
+        }
+        
+        @font-face {
+            font-family: 'IvarDisplay';
+            src: url('../docs/design-system/conflixis-design-system/assets/fonts/IvarDisplay-Regular.woff2') format('woff2');
+            font-weight: 400;
+            font-style: normal;
+        }
+        
+        body {
+            font-family: 'SoehneLeicht', sans-serif;
+            background-color: #f8f5ef;
+            color: #0c343a;
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'IvarDisplay', serif;
+            color: #0c343a;
+        }
+        
+        /* Animations */
+        @keyframes fade-in {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .animate-fade-in {
+            animation: fade-in 0.6s ease-out forwards;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="bg-conflixis-green text-white shadow-lg">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center space-x-4">
+                    <img src="../docs/design-system/conflixis-design-system/assets/logos/conflixis-logo.png" 
+                         alt="Conflixis" class="h-10 w-10">
+                    <div>
+                        <span class="text-xl font-soehneKraftig">Texas Health Resources</span>
+                        <span class="text-sm block text-conflixis-light-green">Disclosure Policy Review System</span>
+                    </div>
+                </div>
+                <div class="flex items-center space-x-4">
+                    <span class="text-sm">Group: gcO9AHYlNSzFeGTRSFRa</span>
+                    <button class="bg-conflixis-gold hover:bg-opacity-90 text-conflixis-green px-4 py-2 rounded-lg font-soehneKraftig transition-all">
+                        Export Report
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- Summary Statistics -->
+    <section class="py-6 animate-fade-in">
+        <div class="container mx-auto px-6">
+            <h1 class="text-3xl font-bold mb-6">Disclosure Compliance Dashboard</h1>
+            
+            <div class="grid md:grid-cols-4 gap-4 mb-8">
+                <!-- Total Disclosures -->
+                <div class="bg-white rounded-lg p-4 shadow">
+                    <div class="text-sm text-gray-600 mb-1">Total Disclosures</div>
+                    <div class="text-2xl font-soehneKraftig text-conflixis-green">2,413</div>
+                    <div class="text-xs text-gray-500">For selected group</div>
+                </div>
+                
+                <!-- High Risk -->
+                <div class="bg-white rounded-lg p-4 shadow border-l-4 border-conflixis-red">
+                    <div class="text-sm text-gray-600 mb-1">Tier 3 (>$50k)</div>
+                    <div class="text-2xl font-soehneKraftig text-conflixis-red">12</div>
+                    <div class="text-xs text-gray-500">Executive Review Required</div>
+                </div>
+                
+                <!-- Medium Risk -->
+                <div class="bg-white rounded-lg p-4 shadow border-l-4 border-conflixis-gold">
+                    <div class="text-sm text-gray-600 mb-1">Tier 2 ($10k-$50k)</div>
+                    <div class="text-2xl font-soehneKraftig text-conflixis-gold">86</div>
+                    <div class="text-xs text-gray-500">Management Plan Required</div>
+                </div>
+                
+                <!-- Low Risk -->
+                <div class="bg-white rounded-lg p-4 shadow border-l-4 border-conflixis-success-green">
+                    <div class="text-sm text-gray-600 mb-1">Tier 1 & Below</div>
+                    <div class="text-2xl font-soehneKraftig text-conflixis-success-green">2,315</div>
+                    <div class="text-xs text-gray-500">Standard Review</div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Risk Tier Breakdown -->
+    <section class="pb-6">
+        <div class="container mx-auto px-6">
+            <div class="bg-white rounded-lg shadow p-6">
+                <h2 class="text-xl font-bold mb-4">Risk Tier Analysis (Based on Texas Health Policy)</h2>
+                
+                <div class="space-y-3">
+                    <!-- Tier 3 -->
+                    <div class="flex items-center">
+                        <div class="w-32 text-sm font-soehneKraftig">Tier 3 (>$50k)</div>
+                        <div class="flex-1 bg-gray-200 rounded-full h-8 relative">
+                            <div class="bg-conflixis-red h-8 rounded-full" style="width: 0.5%"></div>
+                        </div>
+                        <div class="w-20 text-right text-sm">12 (0.5%)</div>
+                    </div>
+                    
+                    <!-- Tier 2 -->
+                    <div class="flex items-center">
+                        <div class="w-32 text-sm font-soehneKraftig">Tier 2 ($10-50k)</div>
+                        <div class="flex-1 bg-gray-200 rounded-full h-8 relative">
+                            <div class="bg-conflixis-gold h-8 rounded-full" style="width: 3.6%"></div>
+                        </div>
+                        <div class="w-20 text-right text-sm">86 (3.6%)</div>
+                    </div>
+                    
+                    <!-- Tier 1 -->
+                    <div class="flex items-center">
+                        <div class="w-32 text-sm font-soehneKraftig">Tier 1 ($5-10k)</div>
+                        <div class="flex-1 bg-gray-200 rounded-full h-8 relative">
+                            <div class="bg-conflixis-blue h-8 rounded-full" style="width: 8.2%"></div>
+                        </div>
+                        <div class="w-20 text-right text-sm">198 (8.2%)</div>
+                    </div>
+                    
+                    <!-- Low Risk -->
+                    <div class="flex items-center">
+                        <div class="w-32 text-sm font-soehneKraftig">Below $5k</div>
+                        <div class="flex-1 bg-gray-200 rounded-full h-8 relative">
+                            <div class="bg-conflixis-success-green h-8 rounded-full" style="width: 87.7%"></div>
+                        </div>
+                        <div class="w-20 text-right text-sm">2,117 (87.7%)</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Sample Disclosures for Review -->
+    <section class="pb-6">
+        <div class="container mx-auto px-6">
+            <div class="bg-white rounded-lg shadow">
+                <div class="p-6 border-b border-gray-200">
+                    <h2 class="text-xl font-bold">Disclosures Requiring Review</h2>
+                    <p class="text-sm text-gray-600 mt-1">High-value disclosures and research-related conflicts requiring management plans</p>
+                </div>
+                
+                <div class="overflow-x-auto">
+                    <table class="w-full">
+                        <thead class="bg-conflixis-ivory">
+                            <tr>
+                                <th class="px-4 py-3 text-left text-xs font-soehneKraftig text-gray-700 uppercase">Provider</th>
+                                <th class="px-4 py-3 text-left text-xs font-soehneKraftig text-gray-700 uppercase">Entity</th>
+                                <th class="px-4 py-3 text-left text-xs font-soehneKraftig text-gray-700 uppercase">Value</th>
+                                <th class="px-4 py-3 text-left text-xs font-soehneKraftig text-gray-700 uppercase">Research</th>
+                                <th class="px-4 py-3 text-left text-xs font-soehneKraftig text-gray-700 uppercase">Risk Tier</th>
+                                <th class="px-4 py-3 text-left text-xs font-soehneKraftig text-gray-700 uppercase">Status</th>
+                                <th class="px-4 py-3 text-left text-xs font-soehneKraftig text-gray-700 uppercase">Action</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-gray-200">
+                            <!-- Sample Row 1 - Tier 3 -->
+                            <tr class="hover:bg-gray-50">
+                                <td class="px-4 py-3">
+                                    <div class="text-sm font-soehneKraftig">Dr. Sarah Johnson</div>
+                                    <div class="text-xs text-gray-500">sarahjohnson@texashealth.org</div>
+                                </td>
+                                <td class="px-4 py-3 text-sm">Pharma Corp International</td>
+                                <td class="px-4 py-3 text-sm font-soehneKraftig">$125,000</td>
+                                <td class="px-4 py-3">
+                                    <span class="px-2 py-1 text-xs rounded-full bg-conflixis-blue text-white">Yes</span>
+                                </td>
+                                <td class="px-4 py-3">
+                                    <span class="px-2 py-1 text-xs rounded-full bg-conflixis-red text-white">Tier 3</span>
+                                </td>
+                                <td class="px-4 py-3">
+                                    <span class="px-2 py-1 text-xs rounded-full bg-yellow-100 text-yellow-800">Pending Review</span>
+                                </td>
+                                <td class="px-4 py-3">
+                                    <button class="text-conflixis-blue hover:text-conflixis-green text-sm font-soehneKraftig">
+                                        Review →
+                                    </button>
+                                </td>
+                            </tr>
+                            
+                            <!-- Sample Row 2 - Tier 2 -->
+                            <tr class="hover:bg-gray-50">
+                                <td class="px-4 py-3">
+                                    <div class="text-sm font-soehneKraftig">Dr. Michael Chen</div>
+                                    <div class="text-xs text-gray-500">mchen@texashealth.org</div>
+                                </td>
+                                <td class="px-4 py-3 text-sm">Medical Device Inc</td>
+                                <td class="px-4 py-3 text-sm font-soehneKraftig">$35,000</td>
+                                <td class="px-4 py-3">
+                                    <span class="px-2 py-1 text-xs rounded-full bg-gray-200 text-gray-700">No</span>
+                                </td>
+                                <td class="px-4 py-3">
+                                    <span class="px-2 py-1 text-xs rounded-full bg-conflixis-gold text-white">Tier 2</span>
+                                </td>
+                                <td class="px-4 py-3">
+                                    <span class="px-2 py-1 text-xs rounded-full bg-yellow-100 text-yellow-800">Pending Review</span>
+                                </td>
+                                <td class="px-4 py-3">
+                                    <button class="text-conflixis-blue hover:text-conflixis-green text-sm font-soehneKraftig">
+                                        Review →
+                                    </button>
+                                </td>
+                            </tr>
+                            
+                            <!-- Sample Row 3 - Tier 2 with Research -->
+                            <tr class="hover:bg-gray-50">
+                                <td class="px-4 py-3">
+                                    <div class="text-sm font-soehneKraftig">Dr. Emily Rodriguez</div>
+                                    <div class="text-xs text-gray-500">erodriguez@texashealth.org</div>
+                                </td>
+                                <td class="px-4 py-3 text-sm">Research Foundation</td>
+                                <td class="px-4 py-3 text-sm font-soehneKraftig">$28,500</td>
+                                <td class="px-4 py-3">
+                                    <span class="px-2 py-1 text-xs rounded-full bg-conflixis-blue text-white">Yes</span>
+                                </td>
+                                <td class="px-4 py-3">
+                                    <span class="px-2 py-1 text-xs rounded-full bg-conflixis-gold text-white">Tier 2</span>
+                                </td>
+                                <td class="px-4 py-3">
+                                    <span class="px-2 py-1 text-xs rounded-full bg-green-100 text-green-800">Plan Created</span>
+                                </td>
+                                <td class="px-4 py-3">
+                                    <button class="text-conflixis-blue hover:text-conflixis-green text-sm font-soehneKraftig">
+                                        View Plan →
+                                    </button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Individual Disclosure Review Card -->
+    <section class="pb-8">
+        <div class="container mx-auto px-6">
+            <div class="bg-white rounded-lg shadow p-6">
+                <h2 class="text-xl font-bold mb-4">Sample Disclosure Detail Review</h2>
+                
+                <div class="border border-gray-200 rounded-lg p-6">
+                    <div class="flex justify-between items-start mb-4">
+                        <div>
+                            <h3 class="text-lg font-soehneKraftig">Dr. Sarah Johnson</h3>
+                            <p class="text-sm text-gray-600">Document ID: rUd94Q186GytIU21lgtb</p>
+                            <p class="text-sm text-gray-600">Campaign: 2025 Texas Health COI Survey - Leaders/Providers</p>
+                        </div>
+                        <div class="text-right">
+                            <span class="px-3 py-1 bg-conflixis-red text-white rounded-full text-sm font-soehneKraftig">
+                                Tier 3 - Executive Review Required
+                            </span>
+                        </div>
+                    </div>
+                    
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div>
+                            <h4 class="font-soehneKraftig text-sm text-gray-700 mb-2">Disclosure Information</h4>
+                            <dl class="space-y-2">
+                                <div class="flex">
+                                    <dt class="text-sm text-gray-600 w-32">External Entity:</dt>
+                                    <dd class="text-sm font-soehneKraftig">Pharma Corp International</dd>
+                                </div>
+                                <div class="flex">
+                                    <dt class="text-sm text-gray-600 w-32">Compensation:</dt>
+                                    <dd class="text-sm font-soehneKraftig text-conflixis-red">$125,000</dd>
+                                </div>
+                                <div class="flex">
+                                    <dt class="text-sm text-gray-600 w-32">Service Period:</dt>
+                                    <dd class="text-sm">01/2025 - 12/2025</dd>
+                                </div>
+                                <div class="flex">
+                                    <dt class="text-sm text-gray-600 w-32">Research Related:</dt>
+                                    <dd class="text-sm">
+                                        <span class="px-2 py-1 bg-conflixis-blue text-white rounded text-xs">Yes</span>
+                                    </dd>
+                                </div>
+                            </dl>
+                        </div>
+                        
+                        <div>
+                            <h4 class="font-soehneKraftig text-sm text-gray-700 mb-2">Policy Compliance</h4>
+                            <div class="space-y-2">
+                                <div class="flex items-center">
+                                    <span class="w-4 h-4 bg-conflixis-red rounded-full mr-2"></span>
+                                    <span class="text-sm">Exceeds $50,000 threshold</span>
+                                </div>
+                                <div class="flex items-center">
+                                    <span class="w-4 h-4 bg-conflixis-red rounded-full mr-2"></span>
+                                    <span class="text-sm">Research-related conflict</span>
+                                </div>
+                                <div class="flex items-center">
+                                    <span class="w-4 h-4 bg-conflixis-gold rounded-full mr-2"></span>
+                                    <span class="text-sm">Requires written management plan</span>
+                                </div>
+                                <div class="flex items-center">
+                                    <span class="w-4 h-4 bg-conflixis-gold rounded-full mr-2"></span>
+                                    <span class="text-sm">Executive committee review needed</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-6 pt-6 border-t border-gray-200">
+                        <h4 class="font-soehneKraftig text-sm text-gray-700 mb-2">Required Actions</h4>
+                        <ol class="list-decimal list-inside space-y-1 text-sm text-gray-600">
+                            <li>Submit to Conflict of Interest Executive Committee for review</li>
+                            <li>Develop comprehensive management plan addressing research integrity</li>
+                            <li>Obtain approval from department chair and research committee</li>
+                            <li>Implement monitoring and reporting requirements</li>
+                            <li>Schedule quarterly review meetings</li>
+                        </ol>
+                    </div>
+                    
+                    <div class="mt-6 flex justify-end space-x-3">
+                        <button class="px-4 py-2 border border-gray-300 rounded-lg text-sm hover:bg-gray-50">
+                            Request More Info
+                        </button>
+                        <button class="px-4 py-2 bg-conflixis-gold text-conflixis-green rounded-lg text-sm font-soehneKraftig hover:bg-opacity-90">
+                            Create Management Plan
+                        </button>
+                        <button class="px-4 py-2 bg-conflixis-green text-white rounded-lg text-sm font-soehneKraftig hover:bg-opacity-90">
+                            Approve with Conditions
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer class="bg-conflixis-green text-white py-6">
+        <div class="container mx-auto px-6 text-center">
+            <p class="text-sm">Texas Health Resources Disclosure Review System</p>
+            <p class="text-xs mt-1 text-conflixis-light-green">Powered by Conflixis Analytics Platform</p>
+        </div>
+    </footer>
+</body>
+</html>
