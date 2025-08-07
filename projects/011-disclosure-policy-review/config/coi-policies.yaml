@@ -1,0 +1,271 @@
+# Texas Health Resources - Dualities and Conflicts of Interest Policy Configuration
+# Generated from: Dualities and Conflicts of Interest Policy and Forms
+# Effective Date: 06/19/2025
+# Last Reviewed: 06/19/2025
+
+policy:
+  name: "Dualities and Conflicts of Interest Policy and Forms"
+  owner: "Texas Health Chief Compliance Officer"
+  effective_date: "2025-06-19"
+  last_reviewed: "2025-06-19"
+  approved_by: "Texas Health Audit and Compliance Committee"
+
+# Applicable entities and scope
+scope:
+  applicable_entities:
+    - "Texas Health Resources (Texas Health) and its member entities"
+    - "Texas Health Behavioral Health Virtual Visit"
+  excludes:
+    - "Texas Health joint venture entities (with specific exceptions)"
+  applicable_departments: "all"
+
+# Categories of persons required to disclose
+covered_persons:
+  - category: "board_members"
+    description: "Each member of a Governing Body"
+    disclosure_required: true
+    annual_disclosure: true
+    
+  - category: "committee_members"
+    description: "Each member of a standing or ad hoc committee of the Governing Bodies"
+    disclosure_required: true
+    annual_disclosure: true
+    
+  - category: "contracted_medical_staff"
+    description: "Medical staff under contract with compensation for administrative duties"
+    disclosure_required: true
+    annual_disclosure: true
+    
+  - category: "officers"
+    description: "Each officer of Texas Health or wholly owned/controlled affiliates"
+    disclosure_required: true
+    annual_disclosure: true
+    pre_employment_disclosure: true
+    
+  - category: "designated_employees"
+    description: "Employees specifically designated by Chief Compliance Officer"
+    disclosure_required: true
+    annual_disclosure: true
+    
+  - category: "medical_directors"
+    description: "Medical directors"
+    disclosure_required: true
+    annual_disclosure: true
+    
+  - category: "physician_committee_members"
+    description: "Physicians on councils/committees (medical executive, pharmacy & therapeutics, etc.)"
+    disclosure_required: true
+    annual_disclosure: true
+
+# Disclosure timing requirements
+disclosure_timing:
+  initial:
+    trigger: "Upon first becoming subject to policy"
+    timeline: "promptly"
+  
+  new_situation:
+    trigger: "Becoming aware of new situation requiring disclosure"
+    timeline: "immediately"
+  
+  annual:
+    trigger: "Annual review cycle"
+    timeline: "at least annually"
+  
+  candidates:
+    officers:
+      requirement: "May be required prior to employment"
+      review_by: "Chief Compliance Officer"
+      resolution: "Must resolve conflicts before employment offer"
+    
+    board_members:
+      requirement: "Must complete disclosure form"
+      review_by: "Chief Compliance Officer"
+      resolution: "Must resolve conflicts before invitation"
+
+# Types of interests that must be disclosed
+interests_to_disclose:
+  financial_interests:
+    definition: "Ownership or investment interest in an entity, direct or indirect"
+    exclusion: "Less than 1% of publicly traded securities"
+    includes:
+      - "Direct ownership"
+      - "Indirect ownership through business relationships"
+      - "Ownership through family members"
+      - "Potential ownership interests"
+  
+  compensation_relationships:
+    definition: "Payment or exchange of compensation with individual or entity"
+    includes:
+      - "Direct remuneration"
+      - "Indirect remuneration"
+      - "Gifts or favors substantial in nature"
+  
+  governance_relationships:
+    definition: "Serving as officer, director, or trustee of an entity"
+    
+  duality_of_interest:
+    definition: "Interest in entity providing competitive services or serving as officer/director of such entity"
+
+# Insurmountable conflicts (automatic disqualification)
+insurmountable_conflicts:
+  - type: "major_supplier_relationship"
+    description: "Significant relationship to major supplier of medical equipment, devices, or patient services"
+    excludes: "Physicians on medical staff"
+    
+  - type: "elected_officials"
+    description: "Elected officials at state and national level"
+    
+  - type: "competing_healthcare"
+    description: "Significant relationship with competing hospital, health system, or care facility"
+    
+  - type: "mission_conflict"
+    description: "Significant relationship with organization involved in activities not consistent with Texas Health mission and values"
+
+# Risk assessment and management procedures
+conflict_management:
+  determination:
+    board_members:
+      decided_by: "Governing Body members with Chief Compliance Officer assistance"
+      standard: "Reasonable judgment"
+    
+    others:
+      decided_by: "Chief Compliance Officer"
+      standard: "Reasonable judgment"
+  
+  procedures_when_conflict_exists:
+    discussion_participation:
+      allowed: false
+      exception: "May briefly state position and answer pertinent questions"
+      leave_meeting: true
+      count_for_quorum: true
+    
+    investigation:
+      authority: "Governing Body/committee/management may appoint disinterested person"
+      purpose: "Investigate alternatives to proposed arrangement"
+    
+    approval_requirements:
+      - "Arrangement is in best interests of Corporation"
+      - "Arrangement is fair and reasonable"
+      - "Cannot obtain more advantageous arrangement with reasonable efforts"
+      voting: "Majority of voting members excluding interested parties"
+
+# Compensation-related restrictions
+compensation_restrictions:
+  committee_members:
+    restriction: "Cannot vote on own compensation matters"
+    applies_to: "Voting members receiving compensation from Texas Health"
+  
+  physician_compensation:
+    restriction: "Physicians receiving compensation precluded from membership on compensation committees"
+    exception: "As required by law"
+    allowed: "Providing information to committees"
+
+# Review and reporting requirements
+review_requirements:
+  annual_review:
+    conducted_by: "Chief Compliance Officer and General Counsel"
+    reports_to: "Texas Health Audit and Compliance Committee"
+    distribution:
+      - "Chair of Texas Health Governing Body"
+      - "Entity Triads"
+  
+  periodic_reviews:
+    conducted_by: "Texas Health management"
+    purpose: "Ensure consistency with Compliance Program and tax-exempt status"
+    outside_experts: "May be used but not required"
+  
+  documentation:
+    confidentiality: "All written declarations are confidential"
+    maintained_by: "Chief Compliance Officer"
+    
+  meeting_minutes:
+    must_contain:
+      - "Names of persons with conflicts"
+      - "Nature of financial interest"
+      - "Actions taken to determine conflict"
+      - "Decision on conflict existence"
+      - "Persons present for discussions"
+      - "Content of discussion and alternatives"
+      - "Record of votes"
+
+# Violations and enforcement
+violations:
+  investigation_process:
+    trigger: "Reasonable cause to believe failure to disclose"
+    steps:
+      - "Inform person of basis for belief"
+      - "Provide opportunity to explain"
+      - "Conduct further investigation if warranted"
+    
+  consequences:
+    determination_by: "Governing Body or Chief Compliance Officer"
+    action: "Appropriate disciplinary and corrective action"
+
+# Family member definitions for disclosure purposes
+family_members:
+  included_relationships:
+    - "Parents"
+    - "Spouse"
+    - "Child"
+    - "Grandchild"
+    - "In-laws"
+    - "Siblings (if known)"
+    - "Other persons living in same household"
+
+# Related party definitions (broader than family)
+related_parties:
+  relationships:
+    - "Spouse/domestic partner/cohabitant/romantic partner"
+    - "Child/grandchild"
+    - "Sibling"
+    - "Parent/stepparent/grandparent"
+    - "Son or daughter-in-law"
+    - "Brother or sister-in-law"
+    - "Niece or nephew"
+  established_by:
+    - "Blood"
+    - "Marriage"
+    - "Domestic partnership"
+    - "Cohabitation"
+    - "Romantic relationship"
+    - "Adoption"
+    - "Other legal action"
+
+# Responsible parties and their roles
+responsible_parties:
+  board_of_trustees:
+    responsibilities:
+      - "Approve policy provisions"
+      - "Approve disclosure process"
+    
+  audit_compliance_committee:
+    responsibilities:
+      - "Oversight of policy and disclosure process"
+    
+  chief_compliance_officer:
+    responsibilities:
+      - "Implementation of policy"
+      - "Review all annual disclosures"
+      - "Formulate conflict management plans"
+      - "Coordinate with Legal Services"
+    
+  entity_triads:
+    responsibilities:
+      - "Review annual entity reports"
+
+# System integration notes
+system_notes:
+  automation_opportunities:
+    - "Automated disclosure form generation based on person category"
+    - "Risk tier classification based on compensation values"
+    - "Conflict detection using entity relationship matching"
+    - "Workflow routing based on approval requirements"
+    - "Annual disclosure reminder system"
+    - "Pre-employment screening for officers and board candidates"
+  
+  compliance_checks:
+    - "Verify all covered persons have current disclosures"
+    - "Flag compensation above thresholds"
+    - "Identify insurmountable conflicts"
+    - "Track resolution of identified conflicts"
+    - "Monitor voting recusals"
