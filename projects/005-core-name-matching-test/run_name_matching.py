@@ -20,7 +20,7 @@ sys.path.insert(0, str(project_root))
 
 # Import from the new module structure
 # Python doesn't allow brackets in module names, so we need to add the specific directory
-sys.path.insert(0, str(project_root / 'src' / 'analysis' / '01-core-name-maching'))
+sys.path.insert(0, str(project_root / 'src' / 'analysis' / '01-core-name-matching'))
 
 # Try to import the enhanced v2 module first, then fall back to v1, then original
 try:
