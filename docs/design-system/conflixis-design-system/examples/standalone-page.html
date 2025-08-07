@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conflixis Design System - Standalone Example</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Configure Tailwind with Conflixis colors -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'conflixis-green': '#0c343a',
+                        'conflixis-light-green': '#93baab',
+                        'conflixis-white': '#ffffff',
+                        'conflixis-gray': '#d1d5db',
+                        'conflixis-gray-hover': '#b9bec4',
+                        'conflixis-ivory': '#f8f5ef',
+                        'conflixis-tan': '#c5bdae',
+                        'conflixis-mint': '#93baab',
+                        'conflixis-gold': '#eab96d',
+                        'conflixis-blue': '#4c94ed',
+                        'conflixis-red': '#fd7649',
+                        'conflixis-success-green': '#008000FF',
+                    },
+                    fontFamily: {
+                        'soehneLeicht': ['SoehneLeicht', 'sans-serif'],
+                        'soehneKraftig': ['SoehneKraftig', 'sans-serif'],
+                        'ivarDisplay': ['IvarDisplay', 'serif']
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- Fonts -->
+    <style>
+        @font-face {
+            font-family: 'SoehneLeicht';
+            src: url('../assets/fonts/soehne-leicht.woff2') format('woff2');
+            font-weight: 300;
+            font-style: normal;
+        }
+        
+        @font-face {
+            font-family: 'SoehneKraftig';
+            src: url('../assets/fonts/soehne-kraftig.woff2') format('woff2');
+            font-weight: 700;
+            font-style: normal;
+        }
+        
+        @font-face {
+            font-family: 'IvarDisplay';
+            src: url('../assets/fonts/IvarDisplay-Regular.woff2') format('woff2');
+            font-weight: 400;
+            font-style: normal;
+        }
+        
+        body {
+            font-family: 'SoehneLeicht', sans-serif;
+            background-color: #f8f5ef;
+            color: #0c343a;
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'IvarDisplay', serif;
+            color: #0c343a;
+        }
+        
+        /* Animations */
+        @keyframes fade-in {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        @keyframes pulse-slow {
+            0%, 100% { opacity: 1; transform: scale(1); }
+            50% { opacity: 0.8; transform: scale(0.95); }
+        }
+        
+        .animate-fade-in {
+            animation: fade-in 0.6s ease-out forwards;
+        }
+        
+        .animate-pulse-slow {
+            animation: pulse-slow 3s ease-in-out infinite;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="bg-conflixis-green text-white shadow-lg">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center space-x-4">
+                    <img src="../assets/logos/conflixis-logo.png" alt="Conflixis" class="h-10 w-10">
+                    <span class="text-xl font-soehneKraftig">Conflixis</span>
+                </div>
+                <div class="flex space-x-6">
+                    <a href="#" class="hover:text-conflixis-gold transition-colors">Home</a>
+                    <a href="#" class="hover:text-conflixis-gold transition-colors">About</a>
+                    <a href="#" class="hover:text-conflixis-gold transition-colors">Services</a>
+                    <a href="#" class="hover:text-conflixis-gold transition-colors">Contact</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- Hero Section -->
+    <section class="py-20 animate-fade-in">
+        <div class="container mx-auto px-6 text-center">
+            <h1 class="text-5xl font-bold mb-6">Welcome to Conflixis</h1>
+            <p class="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
+                Experience the power of our comprehensive design system built with modern web technologies.
+            </p>
+            <div class="flex justify-center space-x-4">
+                <button class="bg-conflixis-green hover:bg-opacity-90 text-white px-8 py-3 rounded-lg font-soehneKraftig transition-all hover:shadow-lg">
+                    Get Started
+                </button>
+                <button class="border-2 border-conflixis-green text-conflixis-green hover:bg-conflixis-green hover:text-white px-8 py-3 rounded-lg font-soehneKraftig transition-all">
+                    Learn More
+                </button>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Features Section -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-12">Our Features</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Feature Card 1 -->
+                <div class="bg-conflixis-ivory rounded-lg p-6 hover:shadow-lg transition-shadow">
+                    <div class="w-12 h-12 bg-conflixis-gold rounded-lg mb-4 animate-pulse-slow"></div>
+                    <h3 class="text-xl font-soehneKraftig mb-2">Modern Design</h3>
+                    <p class="text-gray-600">Clean and contemporary design language that represents your brand.</p>
+                </div>
+                
+                <!-- Feature Card 2 -->
+                <div class="bg-conflixis-ivory rounded-lg p-6 hover:shadow-lg transition-shadow">
+                    <div class="w-12 h-12 bg-conflixis-blue rounded-lg mb-4 animate-pulse-slow"></div>
+                    <h3 class="text-xl font-soehneKraftig mb-2">Responsive Layout</h3>
+                    <p class="text-gray-600">Fully responsive components that work on all devices.</p>
+                </div>
+                
+                <!-- Feature Card 3 -->
+                <div class="bg-conflixis-ivory rounded-lg p-6 hover:shadow-lg transition-shadow">
+                    <div class="w-12 h-12 bg-conflixis-green rounded-lg mb-4 animate-pulse-slow"></div>
+                    <h3 class="text-xl font-soehneKraftig mb-2">Easy Integration</h3>
+                    <p class="text-gray-600">Simple to integrate into your existing projects.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Color Palette Demo -->
+    <section class="py-16">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-12">Brand Colors</h2>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                <div class="text-center">
+                    <div class="w-full h-24 bg-conflixis-green rounded-lg mb-2"></div>
+                    <p class="font-soehneKraftig">Primary Green</p>
+                    <p class="text-sm text-gray-600">#0c343a</p>
+                </div>
+                <div class="text-center">
+                    <div class="w-full h-24 bg-conflixis-light-green rounded-lg mb-2"></div>
+                    <p class="font-soehneKraftig">Light Green</p>
+                    <p class="text-sm text-gray-600">#93baab</p>
+                </div>
+                <div class="text-center">
+                    <div class="w-full h-24 bg-conflixis-gold rounded-lg mb-2"></div>
+                    <p class="font-soehneKraftig">Gold</p>
+                    <p class="text-sm text-gray-600">#eab96d</p>
+                </div>
+                <div class="text-center">
+                    <div class="w-full h-24 bg-conflixis-blue rounded-lg mb-2"></div>
+                    <p class="font-soehneKraftig">Blue</p>
+                    <p class="text-sm text-gray-600">#4c94ed</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer class="bg-conflixis-green text-white py-8">
+        <div class="container mx-auto px-6 text-center">
+            <p>&copy; 2025 Conflixis. All rights reserved.</p>
+            <p class="text-sm mt-2 text-conflixis-light-green">Built with Conflixis Design System</p>
+        </div>
+    </footer>
+</body>
+</html>

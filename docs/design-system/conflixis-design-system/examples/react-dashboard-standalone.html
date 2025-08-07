@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conflixis Healthcare Analytics Dashboard</title>
+    
+    <!-- React and Babel for browser -->
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Configure Tailwind with Conflixis colors -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'conflixis-green': '#0c343a',
+                        'conflixis-light-green': '#93baab',
+                        'conflixis-white': '#ffffff',
+                        'conflixis-gray': '#d1d5db',
+                        'conflixis-gray-hover': '#b9bec4',
+                        'conflixis-ivory': '#f8f5ef',
+                        'conflixis-tan': '#c5bdae',
+                        'conflixis-mint': '#93baab',
+                        'conflixis-gold': '#eab96d',
+                        'conflixis-blue': '#4c94ed',
+                        'conflixis-red': '#fd7649',
+                        'conflixis-success-green': '#008000FF',
+                    },
+                    fontFamily: {
+                        'soehneLeicht': ['system-ui', 'sans-serif'],
+                        'soehneKraftig': ['system-ui', 'sans-serif'],
+                        'ivarDisplay': ['Georgia', 'serif']
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <style>
+        /* Using system fonts as fallbacks since we can't load local fonts in this example */
+        body {
+            font-family: system-ui, -apple-system, sans-serif;
+            background-color: #f8f5ef;
+            color: #0c343a;
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            font-family: Georgia, serif;
+            color: #0c343a;
+        }
+        
+        /* Animations */
+        @keyframes fade-in {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .animate-fade-in {
+            animation: fade-in 0.6s ease-out forwards;
+        }
+    </style>
+</head>
+<body>
+    <div id="root"></div>
+
+    <script type="text/babel">
+        const { useState } = React;
+
+        // KPI Card Component
+        const KPICard = ({ title, value, change, color }) => {
+            const colorClasses = {
+                green: 'bg-conflixis-green',
+                blue: 'bg-conflixis-blue',
+                gold: 'bg-conflixis-gold',
+                red: 'bg-conflixis-red',
+            };
+
+            return (
+                <div className="bg-white rounded-lg p-6 shadow-sm hover:shadow-md transition-shadow">
+                    <div className="flex items-center justify-between mb-4">
+                        <div className={`w-12 h-12 ${colorClasses[color]} rounded-lg opacity-20`}></div>
+                        <span className="text-sm text-gray-500">{change}</span>
+                    </div>
+                    <h3 className="text-sm font-bold text-gray-500 mb-1">{title}</h3>
+                    <p className="text-2xl font-bold text-conflixis-green">{value}</p>
+                </div>
+            );
+        };
+
+        // Content Components
+        const OverviewContent = () => (
+            <div>
+                <h2 className="text-2xl font-serif mb-4">Overview</h2>
+                <p className="text-gray-600 mb-4">
+                    This dashboard provides a comprehensive view of healthcare provider compliance 
+                    and disclosure analysis across your organization.
+                </p>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div className="bg-conflixis-ivory rounded-lg p-4">
+                        <h3 className="font-bold text-conflixis-green mb-2">Recent Activity</h3>
+                        <ul className="space-y-2 text-sm">
+                            <li className="flex justify-between">
+                                <span>New disclosures reviewed</span>
+                                <span className="font-bold">24</span>
+                            </li>
+                            <li className="flex justify-between">
+                                <span>Policies updated</span>
+                                <span className="font-bold">3</span>
+                            </li>
+                            <li className="flex justify-between">
+                                <span>Risk assessments completed</span>
+                                <span className="font-bold">18</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div className="bg-conflixis-ivory rounded-lg p-4">
+                        <h3 className="font-bold text-conflixis-green mb-2">Upcoming Tasks</h3>
+                        <ul className="space-y-2 text-sm">
+                            <li className="flex items-center space-x-2">
+                                <div className="w-2 h-2 bg-conflixis-gold rounded-full"></div>
+                                <span>Quarterly compliance review</span>
+                            </li>
+                            <li className="flex items-center space-x-2">
+                                <div className="w-2 h-2 bg-conflixis-blue rounded-full"></div>
+                                <span>Policy training session</span>
+                            </li>
+                            <li className="flex items-center space-x-2">
+                                <div className="w-2 h-2 bg-conflixis-green rounded-full"></div>
+                                <span>Annual audit preparation</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        );
+
+        const DetailsContent = () => (
+            <div>
+                <h2 className="text-2xl font-serif mb-4">Details</h2>
+                <p className="text-gray-600">Detailed provider information and compliance records will be displayed here.</p>
+                <div className="mt-4 space-y-4">
+                    <div className="border-l-4 border-conflixis-green pl-4">
+                        <h3 className="font-bold">Provider Analysis</h3>
+                        <p className="text-sm text-gray-600">In-depth analysis of provider disclosures and relationships</p>
+                    </div>
+                    <div className="border-l-4 border-conflixis-blue pl-4">
+                        <h3 className="font-bold">Compliance History</h3>
+                        <p className="text-sm text-gray-600">Historical compliance data and trends</p>
+                    </div>
+                    <div className="border-l-4 border-conflixis-gold pl-4">
+                        <h3 className="font-bold">Risk Factors</h3>
+                        <p className="text-sm text-gray-600">Identified risk factors and mitigation strategies</p>
+                    </div>
+                </div>
+            </div>
+        );
+
+        const AnalyticsContent = () => (
+            <div>
+                <h2 className="text-2xl font-serif mb-4">Analytics</h2>
+                <p className="text-gray-600 mb-4">Data visualization and trend analysis tools.</p>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div className="bg-gray-100 rounded-lg p-8 text-center">
+                        <div className="text-4xl mb-2">📊</div>
+                        <p className="font-bold">Compliance Trends</p>
+                        <p className="text-sm text-gray-600">Monthly compliance rate analysis</p>
+                    </div>
+                    <div className="bg-gray-100 rounded-lg p-8 text-center">
+                        <div className="text-4xl mb-2">📈</div>
+                        <p className="font-bold">Risk Distribution</p>
+                        <p className="text-sm text-gray-600">Risk score distribution across providers</p>
+                    </div>
+                </div>
+            </div>
+        );
+
+        const ReportsContent = () => (
+            <div>
+                <h2 className="text-2xl font-serif mb-4">Reports</h2>
+                <p className="text-gray-600 mb-4">Generated compliance and disclosure reports.</p>
+                <div className="space-y-3">
+                    <div className="flex items-center justify-between p-3 bg-white rounded border">
+                        <div>
+                            <p className="font-bold text-sm">Q4 2024 Compliance Report</p>
+                            <p className="text-xs text-gray-500">Generated: Jan 5, 2025</p>
+                        </div>
+                        <button className="text-conflixis-blue hover:text-conflixis-green text-sm">Download</button>
+                    </div>
+                    <div className="flex items-center justify-between p-3 bg-white rounded border">
+                        <div>
+                            <p className="font-bold text-sm">Annual Risk Assessment</p>
+                            <p className="text-xs text-gray-500">Generated: Dec 31, 2024</p>
+                        </div>
+                        <button className="text-conflixis-blue hover:text-conflixis-green text-sm">Download</button>
+                    </div>
+                    <div className="flex items-center justify-between p-3 bg-white rounded border">
+                        <div>
+                            <p className="font-bold text-sm">Provider Disclosure Summary</p>
+                            <p className="text-xs text-gray-500">Generated: Jan 7, 2025</p>
+                        </div>
+                        <button className="text-conflixis-blue hover:text-conflixis-green text-sm">Download</button>
+                    </div>
+                </div>
+            </div>
+        );
+
+        // Main Dashboard Component
+        const ConflixisDashboard = () => {
+            const [activeTab, setActiveTab] = useState('overview');
+
+            return (
+                <div className="min-h-screen bg-conflixis-ivory">
+                    {/* Header */}
+                    <header className="bg-conflixis-green text-white shadow-lg">
+                        <div className="container mx-auto px-6 py-4">
+                            <div className="flex items-center justify-between">
+                                <div className="flex items-center space-x-4">
+                                    <div className="h-10 w-10 bg-white rounded-lg flex items-center justify-center">
+                                        <span className="text-conflixis-green font-bold text-xl">C</span>
+                                    </div>
+                                    <span className="text-xl font-bold">Conflixis Dashboard</span>
+                                </div>
+                                <nav className="hidden md:flex space-x-6">
+                                    <a href="#" className="hover:text-conflixis-gold transition-colors">Dashboard</a>
+                                    <a href="#" className="hover:text-conflixis-gold transition-colors">Analytics</a>
+                                    <a href="#" className="hover:text-conflixis-gold transition-colors">Reports</a>
+                                    <a href="#" className="hover:text-conflixis-gold transition-colors">Settings</a>
+                                </nav>
+                            </div>
+                        </div>
+                    </header>
+
+                    {/* Main Content */}
+                    <main className="container mx-auto px-6 py-8">
+                        {/* Page Title */}
+                        <div className="mb-8 animate-fade-in">
+                            <h1 className="text-4xl font-serif font-bold text-conflixis-green mb-2">
+                                Healthcare Analytics Dashboard
+                            </h1>
+                            <p className="text-gray-600">
+                                Monitor key metrics and performance indicators
+                            </p>
+                        </div>
+
+                        {/* KPI Cards */}
+                        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
+                            <KPICard 
+                                title="Total Providers" 
+                                value="2,847" 
+                                change="+12%" 
+                                color="green"
+                            />
+                            <KPICard 
+                                title="Compliance Rate" 
+                                value="94.2%" 
+                                change="+3.1%" 
+                                color="blue"
+                            />
+                            <KPICard 
+                                title="Risk Score" 
+                                value="Low" 
+                                change="Stable" 
+                                color="gold"
+                            />
+                            <KPICard 
+                                title="Active Reviews" 
+                                value="142" 
+                                change="-5" 
+                                color="red"
+                            />
+                        </div>
+
+                        {/* Tabs Section */}
+                        <div className="bg-white rounded-lg shadow-sm">
+                            <div className="border-b border-gray-200">
+                                <nav className="flex space-x-8 px-6" aria-label="Tabs">
+                                    {['overview', 'details', 'analytics', 'reports'].map((tab) => (
+                                        <button
+                                            key={tab}
+                                            onClick={() => setActiveTab(tab)}
+                                            className={`
+                                                py-4 px-1 border-b-2 font-bold text-sm capitalize transition-colors
+                                                ${activeTab === tab 
+                                                    ? 'border-conflixis-green text-conflixis-green' 
+                                                    : 'border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300'
+                                                }
+                                            `}
+                                        >
+                                            {tab}
+                                        </button>
+                                    ))}
+                                </nav>
+                            </div>
+                            
+                            <div className="p-6">
+                                <div className="animate-fade-in">
+                                    {activeTab === 'overview' && <OverviewContent />}
+                                    {activeTab === 'details' && <DetailsContent />}
+                                    {activeTab === 'analytics' && <AnalyticsContent />}
+                                    {activeTab === 'reports' && <ReportsContent />}
+                                </div>
+                            </div>
+                        </div>
+
+                        {/* Action Buttons */}
+                        <div className="mt-8 flex justify-end space-x-4">
+                            <button className="px-6 py-2 border-2 border-conflixis-green text-conflixis-green rounded-lg font-bold hover:bg-conflixis-green hover:text-white transition-all">
+                                Export Report
+                            </button>
+                            <button className="px-6 py-2 bg-conflixis-green text-white rounded-lg font-bold hover:bg-opacity-90 transition-all shadow-sm hover:shadow-md">
+                                Generate Analysis
+                            </button>
+                        </div>
+                    </main>
+
+                    {/* Footer */}
+                    <footer className="mt-16 bg-conflixis-green text-white py-6">
+                        <div className="container mx-auto px-6 text-center">
+                            <p className="text-sm">© 2025 Conflixis Healthcare Analytics. All rights reserved.</p>
+                        </div>
+                    </footer>
+                </div>
+            );
+        };
+
+        // Render the app
+        ReactDOM.render(<ConflixisDashboard />, document.getElementById('root'));
+    </script>
+</body>
+</html>
