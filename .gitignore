@@ -39,3 +39,12 @@ htmlcov/
 dist/
 build/
 *.egg-info/
+
+# Reference directory
+/reference
+
+# GCP Service Account Credentials
+*.json
+!package.json
+!tsconfig.json
+!package-lock.json
