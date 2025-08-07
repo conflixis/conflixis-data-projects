@@ -26,6 +26,9 @@ This repository is managed through Jira: [DA Project Board](https://conflixis.at
 #### Examples & Documentation
 - **examples**: Sample code for BigQuery operations in Python, R, SQL, and Jupyter notebooks
 
+#### Compliance & Policy Review
+- **011-disclosure-policy-review**: Healthcare provider disclosure policy compliance analysis
+
 ### Archived Projects
 Deprecated projects have been moved to the `archive/` directory:
 - **z_002-analytic-agent**: Original analytics agent (moved to [conflixis/conflixis-analytics](https://github.com/conflixis/conflixis-analytics))
@@ -116,6 +119,8 @@ conflixis-data-projects/
 │   ├── z_002-analytic-agent/        # Original analytics agent
 │   └── z_004-gcp-datascience-with-multipleagents/ # Multi-agent framework
 ├── docs/                  # Documentation
+│   ├── design-system/     # Conflixis Design System (UI components, colors, fonts)
+│   │   └── conflixis-design-system/ # Complete design system assets
 │   ├── DEPRECATED_PROJECTS.md       # Archive documentation
 │   └── security_review.md           # Security analysis
 ├── reference/             # Reference materials (gitignored)
@@ -144,9 +149,28 @@ conflixis-data-projects/
 - **Web Scraping**: BeautifulSoup, Requests
 - **Entity Matching**: FuzzyWuzzy, custom matching algorithms
 
+## Conflixis Design System
+
+**IMPORTANT**: All UI development MUST use the Conflixis Design System located at `/docs/design-system/conflixis-design-system/`.
+
+### Design System Resources
+- **Complete Showcase**: View the full design system at `/docs/design-system/conflixis-design-system/examples/conflixis-design-showcase.html`
+- **Colors**: Official brand colors (Conflixis Green #0c343a, Gold #eab96d, Blue #4c94ed, etc.)
+- **Typography**: Soehne (Leicht/Kraftig) and Ivar Display fonts
+- **Components**: Pre-built buttons, cards, badges, alerts with Conflixis styling
+- **Animations**: Professional animations (fade-in, pulse, wave, glow effects)
+
+### Using the Design System
+For any new UI or webpage:
+1. Reference design system assets using relative paths: `../../docs/design-system/conflixis-design-system/`
+2. Use the standalone HTML example as a template for simple pages
+3. Use the React example for more complex applications
+4. Always apply Conflixis colors and fonts to maintain brand consistency
+
 ## Development Guidelines
 
 - See `CLAUDE.md` for AI-assisted development guidelines and repository conventions
+- **ALWAYS use the Conflixis Design System for ANY UI development**
 - Create a Jira epic for each new project under `/projects`
 - Use virtual environments for Python dependencies
 - Store credentials in environment variables, never in code
