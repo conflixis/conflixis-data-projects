@@ -366,105 +366,58 @@
         let sortColumn = null;
         let sortDirection = 'asc';
 
-        // Generate sample data for demonstration
-        function generateSampleData() {
-            const names = ['Dr. Jane Smith', 'Dr. Robert Johnson', 'Dr. Emily Davis', 'Dr. Michael Brown', 
-                          'Dr. Sarah Wilson', 'Dr. David Martinez', 'Dr. Lisa Anderson', 'Dr. James Taylor',
-                          'Dr. Patricia Thomas', 'Dr. Christopher Lee', 'Dr. Nancy White', 'Dr. Daniel Harris'];
-            const specialties = ['Cardiology', 'Orthopedics', 'Neurology', 'Oncology', 'Radiology', 'Surgery'];
-            const entities = ['MedDevice Corp', 'Pharma Solutions Inc', 'Regional Health System', 
-                            'BioTech Innovations', 'Medical Supply Co', 'Healthcare Partners LLC'];
-            const relationships = ['Consultant', 'Speaker', 'Advisory Board', 'Research Grant', 'Board Member', 'Equity Interest'];
-            const statuses = ['pending', 'in_review', 'approved', 'requires_management'];
-            
-            const data = [];
-            for (let i = 0; i < 150; i++) {
-                const financialAmount = Math.floor(Math.random() * 150000) + 500;
-                const riskTier = financialAmount < 5000 ? 'low' : 
-                               financialAmount < 25000 ? 'moderate' : 
-                               financialAmount < 100000 ? 'high' : 'critical';
-                
-                data.push({
-                    id: i + 1,
-                    provider_name: names[Math.floor(Math.random() * names.length)],
-                    provider_npi: '1' + Math.floor(Math.random() * 900000000 + 100000000),
-                    job_title: specialties[Math.floor(Math.random() * specialties.length)],
-                    department: 'Department ' + (Math.floor(Math.random() * 5) + 1),
-                    entity_name: entities[Math.floor(Math.random() * entities.length)],
-                    relationship_type: relationships[Math.floor(Math.random() * relationships.length)],
-                    financial_amount: financialAmount,
-                    open_payments_total: Math.floor(financialAmount * 0.8),
-                    open_payments_matched: Math.random() > 0.3,
-                    risk_tier: riskTier,
-                    risk_score: Math.floor(Math.random() * 100),
-                    review_status: statuses[Math.floor(Math.random() * statuses.length)],
-                    management_plan_required: riskTier === 'high' || riskTier === 'critical',
-                    last_review_date: new Date(2024, Math.floor(Math.random() * 12), Math.floor(Math.random() * 28) + 1).toISOString().split('T')[0],
-                    next_review_date: new Date(2025, Math.floor(Math.random() * 6), Math.floor(Math.random() * 28) + 1).toISOString().split('T')[0],
-                    disclosure_date: new Date(2024, Math.floor(Math.random() * 12), Math.floor(Math.random() * 28) + 1).toISOString().split('T')[0],
-                    relationship_start_date: new Date(2023, Math.floor(Math.random() * 12), Math.floor(Math.random() * 28) + 1).toISOString().split('T')[0],
-                    relationship_ongoing: Math.random() > 0.3,
-                    decision_authority_level: ['staff', 'manager', 'director', 'executive'][Math.floor(Math.random() * 4)]
-                });
-            }
-            
-            return {
-                metadata: {
-                    generated: new Date().toISOString().split('T')[0],
-                    record_count: data.length,
-                    data_range: "2024-01-01 to 2024-12-31"
-                },
-                disclosures: data
-            };
-        }
 
-        // Load data (from JSON file or generate sample)
+        // Load data from API only
         async function loadData() {
             try {
                 // Check if API is available
                 const health = await apiClient.healthCheck();
                 
-                if (health.data_loaded) {
-                    // Load data from API
-                    const response = await apiClient.getDisclosures({ page_size: 1000 });
-                    const stats = await apiClient.getOverviewStats();
-                    
-                    disclosureData = {
-                        metadata: {
-                            generated: new Date().toISOString(),
-                            record_count: response.total,
-                            data_range: "API Data"
-                        },
-                        disclosures: response.data
-                    };
-                } else {
-                    // Fallback to JSON file if API has no data
-                    const response = await fetch('../data/staging/disclosure_data.json');
-                    if (response.ok) {
-                        disclosureData = await response.json();
-                    } else {
-                        disclosureData = generateSampleData();
-                    }
+                if (!health.data_loaded) {
+                    throw new Error('API has no data loaded. Please run scripts/fetch_json_data.py to fetch data from BigQuery.');
                 }
+                
+                // Load data from API
+                const response = await apiClient.getDisclosures({ page_size: 1000 });
+                const stats = await apiClient.getOverviewStats();
+                
+                disclosureData = {
+                    metadata: {
+                        generated: new Date().toISOString(),
+                        record_count: response.total,
+                        data_range: "API Data",
+                        ...stats
+                    },
+                    disclosures: response.data
+                };
+                
+                filteredData = [...disclosureData.disclosures];
+                updateDisplay();
+                updateStats();
+                
             } catch (error) {
-                console.log('API not available, trying JSON file');
-                try {
-                    // Fallback to JSON file
-                    const response = await fetch('../data/staging/disclosure_data.json');
-                    if (response.ok) {
-                        disclosureData = await response.json();
-                    } else {
-                        disclosureData = generateSampleData();
-                    }
-                } catch (jsonError) {
-                    console.log('Using sample data');
-                    disclosureData = generateSampleData();
-                }
+                console.error('Failed to load data:', error);
+                
+                // Show error message to user
+                const tbody = document.getElementById('disclosureTableBody');
+                tbody.innerHTML = `
+                    <tr>
+                        <td colspan="10" class="px-6 py-8 text-center">
+                            <div class="text-red-600 font-semibold mb-2">Failed to Load Data</div>
+                            <div class="text-gray-600">${error.message}</div>
+                            <div class="text-sm text-gray-500 mt-2">
+                                Ensure the FastAPI backend is running: <code class="bg-gray-100 px-2 py-1 rounded">python app/main.py</code>
+                            </div>
+                        </td>
+                    </tr>
+                `;
+                
+                // Update stats to show error
+                document.getElementById('totalRecords').textContent = '0';
+                document.getElementById('highRiskCount').textContent = '0';
+                document.getElementById('pendingReviewCount').textContent = '0';
+                document.getElementById('managementPlansCount').textContent = '0';
             }
-            
-            filteredData = [...disclosureData.disclosures];
-            updateDisplay();
-            updateStats();
         }
 
         // Apply filters
