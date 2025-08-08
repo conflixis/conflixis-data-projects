@@ -147,7 +147,7 @@
                         <label class="block text-sm font-soehneKraftig text-gray-700 mb-1">Search Provider</label>
                         <input type="text" 
                                id="searchInput"
-                               placeholder="Name, NPI, or Entity..."
+                               placeholder="Name, Category, Type, or Entity..."
                                class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-conflixis-green">
                     </div>
                     
@@ -267,7 +267,7 @@
                                         </svg>
                                     </div>
                                 </th>
-                                <th class="px-4 py-3 text-left text-xs font-soehneKraftig text-gray-700 uppercase">NPI</th>
+                                <th class="px-4 py-3 text-left text-xs font-soehneKraftig text-gray-700 uppercase">Category</th>
                                 <th class="px-4 py-3 text-left text-xs font-soehneKraftig text-gray-700 uppercase">Disclosure Type</th>
                                 <th class="px-4 py-3 text-left text-xs font-soehneKraftig text-gray-700 uppercase">Company Name</th>
                                 <th class="px-4 py-3 text-left text-xs font-soehneKraftig text-gray-700 uppercase cursor-pointer hover:bg-conflixis-tan hover:bg-opacity-80" 
@@ -377,18 +377,54 @@
                     throw new Error('API has no data loaded. Please run scripts/fetch_json_data.py to fetch data from BigQuery.');
                 }
                 
-                // Load data from API
-                const response = await apiClient.getDisclosures({ page_size: 1000 });
+                // Load ALL data from API by paginating
+                let allRecords = [];
+                let page = 1;
+                const pageSize = 100;
+                let totalPages = 1;
+                
+                // Show loading message
+                const tbody = document.getElementById('dataTableBody');
+                tbody.innerHTML = `
+                    <tr>
+                        <td colspan="11" class="px-6 py-8 text-center">
+                            <div class="text-gray-600">Loading data...</div>
+                        </td>
+                    </tr>
+                `;
+                
+                // Load all pages
+                while (page <= totalPages) {
+                    const response = await apiClient.getDisclosures({ 
+                        page: page, 
+                        page_size: pageSize 
+                    });
+                    
+                    allRecords = allRecords.concat(response.data);
+                    totalPages = response.total_pages;
+                    
+                    // Update loading message
+                    tbody.innerHTML = `
+                        <tr>
+                            <td colspan="11" class="px-6 py-8 text-center">
+                                <div class="text-gray-600">Loading data... (${allRecords.length} of ${response.total} records)</div>
+                            </td>
+                        </tr>
+                    `;
+                    
+                    page++;
+                }
+                
                 const stats = await apiClient.getOverviewStats();
                 
                 disclosureData = {
                     metadata: {
                         generated: new Date().toISOString(),
-                        record_count: response.total,
+                        record_count: allRecords.length,
                         data_range: "API Data",
                         ...stats
                     },
-                    disclosures: response.data
+                    disclosures: allRecords
                 };
                 
                 filteredData = [...disclosureData.disclosures];
@@ -399,10 +435,10 @@
                 console.error('Failed to load data:', error);
                 
                 // Show error message to user
-                const tbody = document.getElementById('disclosureTableBody');
+                const tbody = document.getElementById('dataTableBody');
                 tbody.innerHTML = `
                     <tr>
-                        <td colspan="10" class="px-6 py-8 text-center">
+                        <td colspan="11" class="px-6 py-8 text-center">
                             <div class="text-red-600 font-semibold mb-2">Failed to Load Data</div>
                             <div class="text-gray-600">${error.message}</div>
                             <div class="text-sm text-gray-500 mt-2">
@@ -413,10 +449,12 @@
                 `;
                 
                 // Update stats to show error
-                document.getElementById('totalRecords').textContent = '0';
+                document.getElementById('totalCount').textContent = '0';
+                document.getElementById('lowRiskCount').textContent = '0';
+                document.getElementById('moderateRiskCount').textContent = '0';
                 document.getElementById('highRiskCount').textContent = '0';
+                document.getElementById('criticalRiskCount').textContent = '0';
                 document.getElementById('pendingReviewCount').textContent = '0';
-                document.getElementById('managementPlansCount').textContent = '0';
             }
         }
 
@@ -435,7 +473,7 @@
                 if (searchTerm) {
                     const searchMatch = 
                         (record.provider_name && record.provider_name.toLowerCase().includes(searchTerm)) ||
-                        (record.provider_npi && record.provider_npi.includes(searchTerm)) ||
+                        (record.category_label && record.category_label.toLowerCase().includes(searchTerm)) ||
                         (record.department && record.department.toLowerCase().includes(searchTerm)) ||
                         (record.job_title && record.job_title.toLowerCase().includes(searchTerm)) ||
                         (record.entity_name && record.entity_name.toLowerCase().includes(searchTerm)) ||
@@ -565,8 +603,8 @@
                             <span>${record.department || 'Healthcare'}</span>
                         </div>
                     </td>
-                    <td class="px-4 py-3 text-sm">${record.provider_npi}</td>
-                    <td class="px-4 py-3 text-sm">${record.relationship_type}</td>
+                    <td class="px-4 py-3 text-sm">${record.category_label || 'Open Payments'}</td>
+                    <td class="px-4 py-3 text-sm">${record.relationship_type || 'Not Specified'}</td>
                     <td class="px-4 py-3 text-sm">${record.entity_name || ''}</td>
                     <td class="px-4 py-3 text-sm font-soehneKraftig">$${record.financial_amount.toLocaleString()}</td>
                     <td class="px-4 py-3">
@@ -693,7 +731,6 @@
                         <h4 class="font-soehneKraftig text-lg mb-4 text-conflixis-green">Provider Information</h4>
                         <dl class="space-y-2">
                             <div><dt class="text-sm text-gray-600">Name</dt><dd class="font-soehneKraftig">${record.provider_name}</dd></div>
-                            <div><dt class="text-sm text-gray-600">NPI</dt><dd>${record.provider_npi}</dd></div>
                             <div><dt class="text-sm text-gray-600">Job Title</dt><dd>${record.job_title}</dd></div>
                             <div><dt class="text-sm text-gray-600">Department</dt><dd>${record.department}</dd></div>
                             <div><dt class="text-sm text-gray-600">Decision Authority</dt><dd class="capitalize">${record.decision_authority_level}</dd></div>
@@ -703,8 +740,9 @@
                     <div>
                         <h4 class="font-soehneKraftig text-lg mb-4 text-conflixis-green">Relationship Details</h4>
                         <dl class="space-y-2">
-                            <div><dt class="text-sm text-gray-600">Entity</dt><dd class="font-soehneKraftig">${record.entity_name}</dd></div>
-                            <div><dt class="text-sm text-gray-600">Type</dt><dd>${record.relationship_type}</dd></div>
+                            <div><dt class="text-sm text-gray-600">Category</dt><dd class="font-soehneKraftig">${record.category_label || 'Open Payments'}</dd></div>
+                            <div><dt class="text-sm text-gray-600">Disclosure Type</dt><dd>${record.relationship_type || 'Not Specified'}</dd></div>
+                            <div><dt class="text-sm text-gray-600">Entity</dt><dd>${record.entity_name}</dd></div>
                             <div><dt class="text-sm text-gray-600">Start Date</dt><dd>${record.relationship_start_date}</dd></div>
                             <div><dt class="text-sm text-gray-600">Status</dt><dd>${record.relationship_ongoing ? 'Ongoing' : 'Terminated'}</dd></div>
                         </dl>
@@ -762,11 +800,11 @@
         // Export data
         function exportData() {
             const csv = [
-                ['Provider Name', 'NPI', 'Relationship', 'Company', 'Amount', 'Risk Tier', 'Status'],
+                ['Provider Name', 'Category', 'Disclosure Type', 'Company', 'Amount', 'Risk Tier', 'Status'],
                 ...filteredData.map(r => [
                     r.provider_name,
-                    r.provider_npi,
-                    r.relationship_type,
+                    r.category_label || 'Open Payments',
+                    r.relationship_type || 'Not Specified',
                     r.entity_name,
                     r.financial_amount,
                     r.risk_tier,

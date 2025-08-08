@@ -4,7 +4,7 @@ Data service for handling disclosure data operations
 from typing import List, Optional, Dict, Any
 from pathlib import Path
 import pandas as pd
-from data_loader import ParquetDataLoader
+from data_loader import JSONDataLoader
 from api.models import (
     DisclosureRecord, DisclosureFilter, DisclosureResponse,
     DisclosureStats
@@ -20,7 +20,7 @@ class DataService:
         Args:
             data_dir: Optional path to data directory
         """
-        self.loader = ParquetDataLoader(data_dir)
+        self.loader = JSONDataLoader(data_dir)
         self._df: Optional[pd.DataFrame] = None
     
     def initialize(self) -> bool:
@@ -139,7 +139,7 @@ class DataService:
         mask = (
             self._df['provider_name'].str.contains(query, case=False, na=False) |
             self._df['entity_name'].str.contains(query, case=False, na=False) |
-            self._df['specialty'].str.contains(query, case=False, na=False) |
+            self._df['category_label'].str.contains(query, case=False, na=False) |
             self._df['relationship_type'].str.contains(query, case=False, na=False) |
             self._df['notes'].str.contains(query, case=False, na=False)
         )
@@ -199,7 +199,7 @@ class DataService:
         else:
             filtered_df = self._df
         
-        stats_dict = self.loader.calculate_stats(filtered_df)
+        stats_dict = self.loader.get_statistics(filtered_df)
         return DisclosureStats(**stats_dict)
     
     def reload_data(self) -> bool:
@@ -209,7 +209,7 @@ class DataService:
             True if successful
         """
         try:
-            self._df = self.loader.load_disclosures(force_reload=True)
+            self._df = self.loader.load_disclosures()
             return True
         except Exception as e:
             print(f"Failed to reload data: {e}")

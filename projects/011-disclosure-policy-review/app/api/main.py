@@ -30,10 +30,10 @@ def create_api_app() -> FastAPI:
         allow_headers=["*"],
     )
     
-    # Include routers
-    app.include_router(disclosures_router, prefix="/api")
-    app.include_router(policies_router, prefix="/api")
-    app.include_router(stats_router, prefix="/api")
+    # Include routers (no prefix needed since this app is mounted at /api)
+    app.include_router(disclosures_router)
+    app.include_router(policies_router)
+    app.include_router(stats_router)
     
     # Root endpoint
     @app.get("/")
@@ -46,16 +46,5 @@ def create_api_app() -> FastAPI:
             "api_base": "/api"
         }
     
-    @app.get("/api")
-    async def api_root():
-        """API root endpoint"""
-        return {
-            "endpoints": {
-                "disclosures": "/api/disclosures",
-                "policies": "/api/policies",
-                "statistics": "/api/stats",
-                "health": "/api/stats/health"
-            }
-        }
     
     return app

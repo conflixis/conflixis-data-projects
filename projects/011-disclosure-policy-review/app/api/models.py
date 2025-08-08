@@ -31,10 +31,10 @@ class DisclosureRecord(BaseModel):
     id: str
     provider_npi: Optional[str] = None
     provider_name: str
-    specialty: Optional[str] = None
     department: Optional[str] = None
     
     entity_name: str
+    category_label: Optional[str] = "Open Payments"
     relationship_type: str
     financial_amount: float = Field(ge=0)
     
@@ -61,6 +61,12 @@ class DisclosureRecord(BaseModel):
     person_with_interest: Optional[str] = None
     notes: Optional[str] = None
     is_research: bool = False
+    
+    # Additional fields for display
+    job_title: Optional[str] = "Not Specified"
+    document_id: Optional[str] = None
+    provider_email: Optional[str] = None
+    reporter_user_id: Optional[str] = None
 
 
 class DisclosureFilter(BaseModel):
