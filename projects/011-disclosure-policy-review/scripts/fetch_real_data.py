@@ -41,15 +41,57 @@ def fetch_disclosure_data():
         
         # Query both tables and join them to get actual NPIs
         group_id = 'gcO9AHYlNSzFeGTRSFRa'
-        disclosures_table = "conflixis-engine.firestore_export.disclosures_raw_latest_parse"
+        campaign_id = 'qyH2ggzVV0WLkuRfem7S'  # 2025 Texas Health COI Survey
+        disclosures_table = "data-analytics-389803.client.disclosures_parsed"
         forms_table = "conflixis-engine.firestore_export.disclosure_forms_raw_latest_v3"
         
         query = f"""
-        WITH disclosures AS (
-            SELECT *
+        WITH pivoted_disclosures AS (
+            -- Pivot the EAV format to columnar format
+            SELECT 
+                document_id,
+                MAX(timestamp) as timestamp,
+                MAX(campaign_id) as campaign_id,
+                MAX(user_npi) as provider_npi,
+                MAX(user_email) as user_email,
+                
+                -- Core reporter info
+                MAX(CASE WHEN Field = 'Reporter Name' THEN Value END) as reporter_name,
+                MAX(CASE WHEN Field = 'Signature Full Name' THEN Value END) as signature_name,
+                
+                -- Disclosure type and question info
+                MAX(CASE WHEN Field = 'Question Title' THEN Value END) as disclosure_type,
+                MAX(CASE WHEN Field = 'Question Description' THEN SUBSTR(Value, 1, 500) END) as question_description,
+                MAX(CASE WHEN Field = 'Question ID' THEN Value END) as question_id,
+                
+                -- Company and relationship info
+                MAX(CASE WHEN Field = 'Company Name' THEN Value END) as company_name,
+                MAX(CASE WHEN Field = 'Reported Value of Relationship' THEN Value END) as compensation_value_str,
+                MAX(CASE WHEN Field = 'Person With Interest' THEN Value END) as person_with_interest,
+                MAX(CASE WHEN Field = 'Type of Interest' THEN Value END) as interest_type,
+                MAX(CASE WHEN Field = 'Interest Type' THEN Value END) as interest_type_alt,
+                MAX(CASE WHEN Field = 'Notes' THEN Value END) as notes,
+                
+                -- Related parties fields
+                MAX(CASE WHEN Field = 'First Name of Related Party' THEN Value END) as related_first_name,
+                MAX(CASE WHEN Field = 'Last Name of Related Party' THEN Value END) as related_last_name,
+                MAX(CASE WHEN Field = 'Related Party Entity Location (e.g. THAL)' THEN Value END) as related_entity,
+                MAX(CASE WHEN Field = 'Job Title' THEN Value END) as related_job_title,
+                
+                -- Other fields
+                MAX(CASE WHEN Field = 'Research Related' THEN Value END) as research_related,
+                MAX(CASE WHEN Field = 'End Date' THEN Value END) as end_date,
+                MAX(CASE WHEN Field = 'Jurisdiction/Location of Office Held' THEN Value END) as office_location,
+                MAX(CASE WHEN Field = 'Person Holding Office' THEN Value END) as office_holder
+                
             FROM `{disclosures_table}`
             WHERE group_id = '{group_id}'
-                AND campaign_title = '2025 Texas Health COI Survey - Leaders/Providers'
+                AND campaign_id = '{campaign_id}'
+            GROUP BY document_id
+        ),
+        disclosures AS (
+            SELECT *
+            FROM pivoted_disclosures
         ),
         forms AS (
             SELECT 
@@ -76,29 +118,48 @@ def fetch_disclosure_data():
         )
         SELECT 
             d.document_id as id,
-            -- Try to get NPI from forms first, then from members by name match
-            COALESCE(f.user_npi, m.npi, '') as provider_npi,
-            COALESCE(d.reporter_name, d.manager, 'Unknown Provider') as provider_name,
-            -- Get job title from members if available, otherwise use answer_3
-            COALESCE(m.job_title, d.answer_3, 'Not Specified') as job_title,
-            -- Get entity from members if available
-            COALESCE(m.entity, d.external_entity_category, 'Healthcare') as department,
-            COALESCE(d.external_entity_name, d.answer_1, 'Unknown Entity') as entity_name,  -- Company from Q1
-            COALESCE(d.answer_3, 'Consulting') as relationship_type,  -- Interest Type from Q3
+            -- Try to get NPI from pivoted data, forms, or members
+            COALESCE(d.provider_npi, f.user_npi, m.npi, '') as provider_npi,
+            COALESCE(d.reporter_name, 'Unknown Provider') as provider_name,
+            -- Get job title from members if available
+            COALESCE(m.job_title, 'Not Specified') as job_title,
+            -- Get entity/department from members if available (where they work)
+            COALESCE(m.entity, 'Texas Health') as department,
             
-            -- Financial information
+            -- Extract company name based on disclosure type
+            CASE
+                -- For Related Parties, show the related party's name
+                WHEN d.disclosure_type = 'Related Parties'
+                THEN CONCAT(
+                    COALESCE(d.related_first_name, ''),
+                    ' ',
+                    COALESCE(d.related_last_name, '')
+                )
+                -- For Elected Office, show the office location
+                WHEN d.disclosure_type = 'Elected Office'
+                THEN COALESCE(d.office_location, 'Not Disclosed')
+                -- Otherwise use company name
+                ELSE COALESCE(d.company_name, 'Not Disclosed')
+            END as entity_name,
+            
+            -- Use the disclosure type from the pivoted data
+            COALESCE(d.disclosure_type, 'General Disclosure') as relationship_type,
+            
+            -- Financial information - parse from string to float
             CASE 
-                WHEN d.compensation_value IS NOT NULL AND d.compensation_value != ''
-                THEN CAST(REGEXP_REPLACE(d.compensation_value, r'[^0-9.]', '') AS FLOAT64)
-                WHEN d.answer_2 IS NOT NULL AND d.answer_2 != ''
-                THEN CAST(REGEXP_REPLACE(d.answer_2, r'[^0-9.]', '') AS FLOAT64)
+                WHEN d.compensation_value_str IS NOT NULL 
+                    AND d.compensation_value_str != ''
+                    AND REGEXP_CONTAINS(d.compensation_value_str, r'^[0-9.,]+$')
+                THEN CAST(REGEXP_REPLACE(d.compensation_value_str, r'[^0-9.]', '') AS FLOAT64)
                 ELSE 0
             END as financial_amount,
             
             -- Simulated Open Payments (since not in this table)
             CASE 
-                WHEN d.compensation_value IS NOT NULL AND d.compensation_value != ''
-                THEN CAST(REGEXP_REPLACE(d.compensation_value, r'[^0-9.]', '') AS FLOAT64) * 0.8
+                WHEN d.compensation_value_str IS NOT NULL 
+                    AND d.compensation_value_str != ''
+                    AND REGEXP_CONTAINS(d.compensation_value_str, r'^[0-9.,]+$')
+                THEN CAST(REGEXP_REPLACE(d.compensation_value_str, r'[^0-9.]', '') AS FLOAT64) * 0.8
                 ELSE 0
             END as open_payments_total,
             
@@ -122,15 +183,30 @@ def fetch_disclosure_data():
             0.0 as equity_percentage,  -- Default
             FALSE as board_position,  -- Default
             
-            -- Person with interest from Q4
-            COALESCE(d.answer_4, d.compensation_received_by, '') as person_with_interest,
+            -- Person with interest - extract from raw_data JSON or use reporter name
+            CASE
+                WHEN JSON_VALUE(d.raw_data, '$.compensation_received_by') IS NOT NULL
+                    AND JSON_VALUE(d.raw_data, '$.compensation_received_by') != ''
+                THEN JSON_VALUE(d.raw_data, '$.compensation_received_by')
+                WHEN d.compensation_received_by IS NOT NULL AND d.compensation_received_by != ''
+                THEN d.compensation_received_by
+                ELSE d.reporter_name
+            END as person_with_interest,
             
-            -- Notes from Q5
-            COALESCE(d.answer_5, d.review_notes, '') as notes,
+            -- Notes - extract from raw_data JSON or use review_notes
+            CASE
+                WHEN JSON_VALUE(d.raw_data, '$.notes') IS NOT NULL
+                    AND JSON_VALUE(d.raw_data, '$.notes') != ''
+                THEN JSON_VALUE(d.raw_data, '$.notes')
+                WHEN d.review_notes IS NOT NULL AND d.review_notes != ''
+                THEN d.review_notes
+                ELSE ''
+            END as notes,
             
-            -- Research flag from Q6
+            -- Research flag - extract from raw_data JSON
             CASE 
-                WHEN d.is_research = 'true' OR d.answer_6 = 'Yes' THEN TRUE
+                WHEN JSON_VALUE(d.raw_data, '$.is_research') = 'true' THEN TRUE
+                WHEN d.is_research = 'true' THEN TRUE
                 ELSE FALSE
             END as is_research,
             

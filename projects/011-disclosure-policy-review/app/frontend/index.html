@@ -268,8 +268,8 @@
                                     </div>
                                 </th>
                                 <th class="px-4 py-3 text-left text-xs font-soehneKraftig text-gray-700 uppercase">NPI</th>
-                                <th class="px-4 py-3 text-left text-xs font-soehneKraftig text-gray-700 uppercase">Job Title</th>
-                                <th class="px-4 py-3 text-left text-xs font-soehneKraftig text-gray-700 uppercase">Relationship</th>
+                                <th class="px-4 py-3 text-left text-xs font-soehneKraftig text-gray-700 uppercase">Disclosure Type</th>
+                                <th class="px-4 py-3 text-left text-xs font-soehneKraftig text-gray-700 uppercase">Company Name</th>
                                 <th class="px-4 py-3 text-left text-xs font-soehneKraftig text-gray-700 uppercase cursor-pointer hover:bg-conflixis-tan hover:bg-opacity-80" 
                                     onclick="sortTable('financial_amount')">
                                     <div class="flex items-center gap-1">
@@ -292,6 +292,7 @@
                                 <th class="px-4 py-3 text-left text-xs font-soehneKraftig text-gray-700 uppercase">Mgmt Plan</th>
                                 <th class="px-4 py-3 text-left text-xs font-soehneKraftig text-gray-700 uppercase">Last Review</th>
                                 <th class="px-4 py-3 text-center text-xs font-soehneKraftig text-gray-700 uppercase">Actions</th>
+                                <th class="px-4 py-3 text-left text-xs font-soehneKraftig text-gray-700 uppercase">Doc ID</th>
                             </tr>
                         </thead>
                         <tbody id="dataTableBody" class="divide-y divide-gray-200">
@@ -484,6 +485,7 @@
                         (record.provider_npi && record.provider_npi.includes(searchTerm)) ||
                         (record.department && record.department.toLowerCase().includes(searchTerm)) ||
                         (record.job_title && record.job_title.toLowerCase().includes(searchTerm)) ||
+                        (record.entity_name && record.entity_name.toLowerCase().includes(searchTerm)) ||
                         (record.relationship_type && record.relationship_type.toLowerCase().includes(searchTerm));
                     if (!searchMatch) return false;
                 }
@@ -604,11 +606,15 @@
                 row.innerHTML = `
                     <td class="px-4 py-3">
                         <div class="text-sm font-soehneKraftig">${record.provider_name}</div>
-                        <div class="text-xs text-gray-500">${record.department}</div>
+                        <div class="flex text-xs text-gray-500 gap-2">
+                            <span>${record.job_title || 'Not Specified'}</span>
+                            <span>•</span>
+                            <span>${record.department || 'Healthcare'}</span>
+                        </div>
                     </td>
                     <td class="px-4 py-3 text-sm">${record.provider_npi}</td>
-                    <td class="px-4 py-3 text-sm">${record.job_title}</td>
                     <td class="px-4 py-3 text-sm">${record.relationship_type}</td>
+                    <td class="px-4 py-3 text-sm">${record.entity_name || ''}</td>
                     <td class="px-4 py-3 text-sm font-soehneKraftig">$${record.financial_amount.toLocaleString()}</td>
                     <td class="px-4 py-3">
                         <span class="px-2 py-1 text-xs rounded-full ${riskColor}">
@@ -631,6 +637,7 @@
                             View →
                         </button>
                     </td>
+                    <td class="px-4 py-3 text-xs font-mono text-gray-500">${record.id || ''}</td>
                 `;
                 
                 tbody.appendChild(row);
@@ -802,12 +809,12 @@
         // Export data
         function exportData() {
             const csv = [
-                ['Provider Name', 'NPI', 'Job Title', 'Relationship', 'Amount', 'Risk Tier', 'Status'],
+                ['Provider Name', 'NPI', 'Relationship', 'Company', 'Amount', 'Risk Tier', 'Status'],
                 ...filteredData.map(r => [
                     r.provider_name,
                     r.provider_npi,
-                    r.job_title,
                     r.relationship_type,
+                    r.entity_name,
                     r.financial_amount,
                     r.risk_tier,
                     r.review_status
