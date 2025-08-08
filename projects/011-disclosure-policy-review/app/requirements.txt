@@ -22,9 +22,6 @@ google-auth>=2.20.0
 python-dotenv>=1.0.0
 pyyaml>=6.0
 
-# API Documentation
-redoc-cli>=0.13.0
-
 # Development
 httpx>=0.25.0  # For testing
 pytest>=7.0.0

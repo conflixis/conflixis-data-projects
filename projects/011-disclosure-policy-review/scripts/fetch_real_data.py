@@ -39,48 +39,81 @@ def fetch_disclosure_data():
         project_id = 'data-analytics-389803'
         client = bigquery.Client(credentials=credentials, project=project_id)
         
-        # Query the parsed disclosures table for our specific group
+        # Query both tables and join them to get actual NPIs
         group_id = 'gcO9AHYlNSzFeGTRSFRa'
-        table_id = "conflixis-engine.firestore_export.disclosures_raw_latest_parse"
+        disclosures_table = "conflixis-engine.firestore_export.disclosures_raw_latest_parse"
+        forms_table = "conflixis-engine.firestore_export.disclosure_forms_raw_latest_v3"
         
         query = f"""
+        WITH disclosures AS (
+            SELECT *
+            FROM `{disclosures_table}`
+            WHERE group_id = '{group_id}'
+                AND campaign_title = '2025 Texas Health COI Survey - Leaders/Providers'
+        ),
+        forms AS (
+            SELECT 
+                user_display_name,
+                user_npi,
+                user_email,
+                campaign_id
+            FROM `{forms_table}`
+            WHERE group_id = '{group_id}'
+                AND user_npi IS NOT NULL
+                AND user_npi != ''
+        ),
+        members AS (
+            SELECT 
+                CONCAT(first_name, ' ', last_name) as full_name,
+                TRIM(LOWER(CONCAT(first_name, ' ', last_name))) as full_name_normalized,
+                npi,
+                email,
+                entity,
+                job_title,
+                manager_name
+            FROM `conflixis-engine.firestore_export.member_shards_raw_latest_parsed`
+            WHERE group_id = '{group_id}'
+        )
         SELECT 
-            document_id as id,
-            document_id as provider_npi,  -- Using document_id as proxy for NPI
-            COALESCE(reporter_name, manager, 'Unknown Provider') as provider_name,
-            COALESCE(answer_3, 'Not Specified') as specialty,  -- Interest Type from Q3
-            COALESCE(external_entity_category, 'Healthcare') as department,
-            COALESCE(external_entity_name, answer_1, 'Unknown Entity') as entity_name,  -- Company from Q1
-            COALESCE(answer_3, 'Consulting') as relationship_type,  -- Interest Type from Q3
+            d.document_id as id,
+            -- Try to get NPI from forms first, then from members by name match
+            COALESCE(f.user_npi, m.npi, '') as provider_npi,
+            COALESCE(d.reporter_name, d.manager, 'Unknown Provider') as provider_name,
+            -- Get job title from members if available, otherwise use answer_3
+            COALESCE(m.job_title, d.answer_3, 'Not Specified') as job_title,
+            -- Get entity from members if available
+            COALESCE(m.entity, d.external_entity_category, 'Healthcare') as department,
+            COALESCE(d.external_entity_name, d.answer_1, 'Unknown Entity') as entity_name,  -- Company from Q1
+            COALESCE(d.answer_3, 'Consulting') as relationship_type,  -- Interest Type from Q3
             
             -- Financial information
             CASE 
-                WHEN compensation_value IS NOT NULL AND compensation_value != ''
-                THEN CAST(REGEXP_REPLACE(compensation_value, r'[^0-9.]', '') AS FLOAT64)
-                WHEN answer_2 IS NOT NULL AND answer_2 != ''
-                THEN CAST(REGEXP_REPLACE(answer_2, r'[^0-9.]', '') AS FLOAT64)
+                WHEN d.compensation_value IS NOT NULL AND d.compensation_value != ''
+                THEN CAST(REGEXP_REPLACE(d.compensation_value, r'[^0-9.]', '') AS FLOAT64)
+                WHEN d.answer_2 IS NOT NULL AND d.answer_2 != ''
+                THEN CAST(REGEXP_REPLACE(d.answer_2, r'[^0-9.]', '') AS FLOAT64)
                 ELSE 0
             END as financial_amount,
             
             -- Simulated Open Payments (since not in this table)
             CASE 
-                WHEN compensation_value IS NOT NULL AND compensation_value != ''
-                THEN CAST(REGEXP_REPLACE(compensation_value, r'[^0-9.]', '') AS FLOAT64) * 0.8
+                WHEN d.compensation_value IS NOT NULL AND d.compensation_value != ''
+                THEN CAST(REGEXP_REPLACE(d.compensation_value, r'[^0-9.]', '') AS FLOAT64) * 0.8
                 ELSE 0
             END as open_payments_total,
             
             FALSE as open_payments_matched,  -- Default since no OP data in table
             
             -- Status and review information
-            COALESCE(review_status, 'pending') as review_status,
+            COALESCE(d.review_status, 'pending') as review_status,
             FALSE as management_plan_required,  -- Will calculate based on amount
             FALSE as recusal_required,  -- Will calculate based on amount
             
             -- Dates
-            CAST(timestamp AS STRING) as disclosure_date,
-            COALESCE(service_start_date, '') as relationship_start_date,
+            CAST(d.timestamp AS STRING) as disclosure_date,
+            COALESCE(d.service_start_date, '') as relationship_start_date,
             CASE 
-                WHEN is_relationship_concluded = 'true' THEN FALSE
+                WHEN d.is_relationship_concluded = 'true' THEN FALSE
                 ELSE TRUE
             END as relationship_ongoing,
             
@@ -90,27 +123,34 @@ def fetch_disclosure_data():
             FALSE as board_position,  -- Default
             
             -- Person with interest from Q4
-            COALESCE(answer_4, compensation_received_by, '') as person_with_interest,
+            COALESCE(d.answer_4, d.compensation_received_by, '') as person_with_interest,
             
             -- Notes from Q5
-            COALESCE(answer_5, review_notes, '') as notes,
+            COALESCE(d.answer_5, d.review_notes, '') as notes,
             
             -- Research flag from Q6
             CASE 
-                WHEN is_research = 'true' OR answer_6 = 'Yes' THEN TRUE
+                WHEN d.is_research = 'true' OR d.answer_6 = 'Yes' THEN TRUE
                 ELSE FALSE
             END as is_research,
             
             -- Metadata
-            timestamp as created_at,
-            timestamp as updated_at,
-            group_id,
-            campaign_title
+            d.timestamp as created_at,
+            d.timestamp as updated_at,
+            d.group_id,
+            d.campaign_title,
+            -- Get email from forms first, then from members
+            COALESCE(f.user_email, m.email, '') as provider_email,
+            -- Add manager from members
+            COALESCE(m.manager_name, d.manager, '') as manager_name
             
-        FROM `{table_id}`
-        WHERE group_id = '{group_id}'
-        ORDER BY timestamp DESC
-        LIMIT 500
+        FROM disclosures d
+        LEFT JOIN forms f 
+            ON d.reporter_name = f.user_display_name 
+            AND d.campaign_id = f.campaign_id
+        LEFT JOIN members m
+            ON TRIM(LOWER(d.reporter_name)) = m.full_name_normalized
+        ORDER BY d.timestamp DESC
         """
         
         print(f"Querying data for group_id: {group_id}")
@@ -145,7 +185,7 @@ def fetch_disclosure_data():
         # Add default dates for missing values
         today = datetime.now().strftime('%Y-%m-%d')
         df['last_review_date'] = today
-        df['next_review_date'] = '2025-06-30'
+        df['next_review_date'] = '2025-12-31'
         
         # Clean up date formats
         for date_col in ['disclosure_date', 'relationship_start_date']:

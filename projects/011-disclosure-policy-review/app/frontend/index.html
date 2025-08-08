@@ -268,8 +268,7 @@
                                     </div>
                                 </th>
                                 <th class="px-4 py-3 text-left text-xs font-soehneKraftig text-gray-700 uppercase">NPI</th>
-                                <th class="px-4 py-3 text-left text-xs font-soehneKraftig text-gray-700 uppercase">Specialty</th>
-                                <th class="px-4 py-3 text-left text-xs font-soehneKraftig text-gray-700 uppercase">Entity</th>
+                                <th class="px-4 py-3 text-left text-xs font-soehneKraftig text-gray-700 uppercase">Job Title</th>
                                 <th class="px-4 py-3 text-left text-xs font-soehneKraftig text-gray-700 uppercase">Relationship</th>
                                 <th class="px-4 py-3 text-left text-xs font-soehneKraftig text-gray-700 uppercase cursor-pointer hover:bg-conflixis-tan hover:bg-opacity-80" 
                                     onclick="sortTable('financial_amount')">
@@ -280,7 +279,6 @@
                                         </svg>
                                     </div>
                                 </th>
-                                <th class="px-4 py-3 text-left text-xs font-soehneKraftig text-gray-700 uppercase">OP Total</th>
                                 <th class="px-4 py-3 text-left text-xs font-soehneKraftig text-gray-700 uppercase cursor-pointer hover:bg-conflixis-tan hover:bg-opacity-80" 
                                     onclick="sortTable('risk_tier')">
                                     <div class="flex items-center gap-1">
@@ -389,7 +387,7 @@
                     id: i + 1,
                     provider_name: names[Math.floor(Math.random() * names.length)],
                     provider_npi: '1' + Math.floor(Math.random() * 900000000 + 100000000),
-                    specialty: specialties[Math.floor(Math.random() * specialties.length)],
+                    job_title: specialties[Math.floor(Math.random() * specialties.length)],
                     department: 'Department ' + (Math.floor(Math.random() * 5) + 1),
                     entity_name: entities[Math.floor(Math.random() * entities.length)],
                     relationship_type: relationships[Math.floor(Math.random() * relationships.length)],
@@ -475,14 +473,18 @@
             const statusFilter = document.getElementById('statusFilter').value;
             const planFilter = document.getElementById('planFilter').value;
             
+            console.log('Applying filters:', { searchTerm, riskFilter, statusFilter, planFilter });
+            console.log('Total records before filter:', disclosureData.disclosures.length);
+            
             filteredData = disclosureData.disclosures.filter(record => {
                 // Search filter
                 if (searchTerm) {
                     const searchMatch = 
-                        record.provider_name.toLowerCase().includes(searchTerm) ||
-                        record.provider_npi.includes(searchTerm) ||
-                        record.entity_name.toLowerCase().includes(searchTerm) ||
-                        record.specialty.toLowerCase().includes(searchTerm);
+                        (record.provider_name && record.provider_name.toLowerCase().includes(searchTerm)) ||
+                        (record.provider_npi && record.provider_npi.includes(searchTerm)) ||
+                        (record.department && record.department.toLowerCase().includes(searchTerm)) ||
+                        (record.job_title && record.job_title.toLowerCase().includes(searchTerm)) ||
+                        (record.relationship_type && record.relationship_type.toLowerCase().includes(searchTerm));
                     if (!searchMatch) return false;
                 }
                 
@@ -500,6 +502,8 @@
                 
                 return true;
             });
+            
+            console.log('Filtered records:', filteredData.length);
             
             currentPage = 1;
             updateDisplay();
@@ -603,14 +607,9 @@
                         <div class="text-xs text-gray-500">${record.department}</div>
                     </td>
                     <td class="px-4 py-3 text-sm">${record.provider_npi}</td>
-                    <td class="px-4 py-3 text-sm">${record.specialty}</td>
-                    <td class="px-4 py-3 text-sm">
-                        <div>${record.entity_name}</div>
-                        ${record.open_payments_matched ? '<span class="text-xs text-conflixis-blue">OP Matched</span>' : ''}
-                    </td>
+                    <td class="px-4 py-3 text-sm">${record.job_title}</td>
                     <td class="px-4 py-3 text-sm">${record.relationship_type}</td>
                     <td class="px-4 py-3 text-sm font-soehneKraftig">$${record.financial_amount.toLocaleString()}</td>
-                    <td class="px-4 py-3 text-sm">$${record.open_payments_total.toLocaleString()}</td>
                     <td class="px-4 py-3">
                         <span class="px-2 py-1 text-xs rounded-full ${riskColor}">
                             ${record.risk_tier.charAt(0).toUpperCase() + record.risk_tier.slice(1)}
@@ -735,7 +734,7 @@
                         <dl class="space-y-2">
                             <div><dt class="text-sm text-gray-600">Name</dt><dd class="font-soehneKraftig">${record.provider_name}</dd></div>
                             <div><dt class="text-sm text-gray-600">NPI</dt><dd>${record.provider_npi}</dd></div>
-                            <div><dt class="text-sm text-gray-600">Specialty</dt><dd>${record.specialty}</dd></div>
+                            <div><dt class="text-sm text-gray-600">Job Title</dt><dd>${record.job_title}</dd></div>
                             <div><dt class="text-sm text-gray-600">Department</dt><dd>${record.department}</dd></div>
                             <div><dt class="text-sm text-gray-600">Decision Authority</dt><dd class="capitalize">${record.decision_authority_level}</dd></div>
                         </dl>
@@ -803,12 +802,11 @@
         // Export data
         function exportData() {
             const csv = [
-                ['Provider Name', 'NPI', 'Specialty', 'Entity', 'Relationship', 'Amount', 'Risk Tier', 'Status'],
+                ['Provider Name', 'NPI', 'Job Title', 'Relationship', 'Amount', 'Risk Tier', 'Status'],
                 ...filteredData.map(r => [
                     r.provider_name,
                     r.provider_npi,
-                    r.specialty,
-                    r.entity_name,
+                    r.job_title,
                     r.relationship_type,
                     r.financial_amount,
                     r.risk_tier,
@@ -825,13 +823,15 @@
         }
 
         // Initialize on page load
-        document.addEventListener('DOMContentLoaded', loadData);
-        
-        // Enter key on search
-        document.getElementById('searchInput').addEventListener('keypress', function(e) {
-            if (e.key === 'Enter') {
-                applyFilters();
-            }
+        document.addEventListener('DOMContentLoaded', function() {
+            loadData();
+            
+            // Enter key on search
+            document.getElementById('searchInput').addEventListener('keypress', function(e) {
+                if (e.key === 'Enter') {
+                    applyFilters();
+                }
+            });
         });
     </script>
 </body>

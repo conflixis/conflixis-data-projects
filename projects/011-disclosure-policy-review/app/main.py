@@ -33,21 +33,34 @@ def create_app() -> FastAPI:
     
     # Mount frontend static files
     frontend_path = Path(__file__).parent / "frontend"
-    app.mount("/frontend", StaticFiles(directory=str(frontend_path), html=True), name="frontend")
     
     # Create symlinks for data and config access
     data_path = Path(__file__).parent.parent / "data"
     config_path = Path(__file__).parent.parent / "config"
+    docs_path = Path(__file__).parent.parent.parent.parent / "docs"
     
     # Serve data files (read-only)
     if data_path.exists():
         app.mount("/data", StaticFiles(directory=str(data_path)), name="data")
+    
+    # Serve design system assets
+    if docs_path.exists():
+        app.mount("/docs", StaticFiles(directory=str(docs_path)), name="docs")
+    
+    # Serve frontend files including api.js
+    app.mount("/frontend", StaticFiles(directory=str(frontend_path), html=True), name="frontend")
     
     # Root redirects to frontend
     @app.get("/")
     async def root():
         """Redirect to main viewer"""
         return FileResponse(str(frontend_path / "index.html"))
+    
+    # Serve api.js at root level
+    @app.get("/api.js")
+    async def get_api_js():
+        """Serve API client JavaScript"""
+        return FileResponse(str(frontend_path / "api.js"))
     
     @app.get("/dashboard")
     async def dashboard():
