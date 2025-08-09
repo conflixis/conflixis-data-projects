@@ -267,9 +267,33 @@
                                         </svg>
                                     </div>
                                 </th>
-                                <th class="px-4 py-3 text-left text-xs font-soehneKraftig text-gray-700 uppercase">Category</th>
-                                <th class="px-4 py-3 text-left text-xs font-soehneKraftig text-gray-700 uppercase">Disclosure Type</th>
-                                <th class="px-4 py-3 text-left text-xs font-soehneKraftig text-gray-700 uppercase">Company Name</th>
+                                <th class="px-4 py-3 text-left text-xs font-soehneKraftig text-gray-700 uppercase cursor-pointer hover:bg-conflixis-tan hover:bg-opacity-80" 
+                                    onclick="sortTable('category_label')">
+                                    <div class="flex items-center gap-1">
+                                        Category
+                                        <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16V4m0 0L3 8m4-4l4 4m6 0v12m0 0l4-4m-4 4l-4-4" />
+                                        </svg>
+                                    </div>
+                                </th>
+                                <th class="px-4 py-3 text-left text-xs font-soehneKraftig text-gray-700 uppercase cursor-pointer hover:bg-conflixis-tan hover:bg-opacity-80" 
+                                    onclick="sortTable('relationship_type')">
+                                    <div class="flex items-center gap-1">
+                                        Disclosure Type
+                                        <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16V4m0 0L3 8m4-4l4 4m6 0v12m0 0l4-4m-4 4l-4-4" />
+                                        </svg>
+                                    </div>
+                                </th>
+                                <th class="px-4 py-3 text-left text-xs font-soehneKraftig text-gray-700 uppercase cursor-pointer hover:bg-conflixis-tan hover:bg-opacity-80" 
+                                    onclick="sortTable('entity_name')">
+                                    <div class="flex items-center gap-1">
+                                        Company Name
+                                        <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16V4m0 0L3 8m4-4l4 4m6 0v12m0 0l4-4m-4 4l-4-4" />
+                                        </svg>
+                                    </div>
+                                </th>
                                 <th class="px-4 py-3 text-left text-xs font-soehneKraftig text-gray-700 uppercase cursor-pointer hover:bg-conflixis-tan hover:bg-opacity-80" 
                                     onclick="sortTable('financial_amount')">
                                     <div class="flex items-center gap-1">
@@ -288,11 +312,42 @@
                                         </svg>
                                     </div>
                                 </th>
-                                <th class="px-4 py-3 text-left text-xs font-soehneKraftig text-gray-700 uppercase">Status</th>
-                                <th class="px-4 py-3 text-left text-xs font-soehneKraftig text-gray-700 uppercase">Mgmt Plan</th>
-                                <th class="px-4 py-3 text-left text-xs font-soehneKraftig text-gray-700 uppercase">Last Review</th>
-                                <th class="px-4 py-3 text-center text-xs font-soehneKraftig text-gray-700 uppercase">Actions</th>
-                                <th class="px-4 py-3 text-left text-xs font-soehneKraftig text-gray-700 uppercase">Doc ID</th>
+                                <th class="px-4 py-3 text-left text-xs font-soehneKraftig text-gray-700 uppercase cursor-pointer hover:bg-conflixis-tan hover:bg-opacity-80" 
+                                    onclick="sortTable('review_status')">
+                                    <div class="flex items-center gap-1">
+                                        Status
+                                        <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16V4m0 0L3 8m4-4l4 4m6 0v12m0 0l4-4m-4 4l-4-4" />
+                                        </svg>
+                                    </div>
+                                </th>
+                                <th class="px-4 py-3 text-left text-xs font-soehneKraftig text-gray-700 uppercase cursor-pointer hover:bg-conflixis-tan hover:bg-opacity-80" 
+                                    onclick="sortTable('management_plan_required')">
+                                    <div class="flex items-center gap-1">
+                                        Mgmt Plan
+                                        <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16V4m0 0L3 8m4-4l4 4m6 0v12m0 0l4-4m-4 4l-4-4" />
+                                        </svg>
+                                    </div>
+                                </th>
+                                <th class="px-4 py-3 text-left text-xs font-soehneKraftig text-gray-700 uppercase cursor-pointer hover:bg-conflixis-tan hover:bg-opacity-80" 
+                                    onclick="sortTable('last_review_date')">
+                                    <div class="flex items-center gap-1">
+                                        Last Review
+                                        <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16V4m0 0L3 8m4-4l4 4m6 0v12m0 0l4-4m-4 4l-4-4" />
+                                        </svg>
+                                    </div>
+                                </th>
+                                <th class="px-4 py-3 text-left text-xs font-soehneKraftig text-gray-700 uppercase cursor-pointer hover:bg-conflixis-tan hover:bg-opacity-80" 
+                                    onclick="sortTable('id')">
+                                    <div class="flex items-center gap-1">
+                                        Doc ID (debug)
+                                        <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16V4m0 0L3 8m4-4l4 4m6 0v12m0 0l4-4m-4 4l-4-4" />
+                                        </svg>
+                                    </div>
+                                </th>
                             </tr>
                         </thead>
                         <tbody id="dataTableBody" class="divide-y divide-gray-200">
@@ -610,7 +665,13 @@
                     <td class="px-4 py-3 text-sm">${record.category_label || 'Open Payments'}</td>
                     <td class="px-4 py-3 text-sm">${record.relationship_type || 'Not Specified'}</td>
                     <td class="px-4 py-3 text-sm">${record.entity_name || ''}</td>
-                    <td class="px-4 py-3 text-sm font-soehneKraftig">$${record.financial_amount.toLocaleString()}</td>
+                    <td class="px-4 py-3 text-sm font-soehneKraftig">
+                        ${record.financial_amount === null || record.financial_amount === undefined ? 
+                            'N/A' : 
+                            record.financial_amount === 0 ? 
+                                '$-' : 
+                                '$' + record.financial_amount.toLocaleString()}
+                    </td>
                     <td class="px-4 py-3">
                         <span class="px-2 py-1 text-xs rounded-full ${riskColor}">
                             ${record.risk_tier.charAt(0).toUpperCase() + record.risk_tier.slice(1)}
@@ -626,12 +687,7 @@
                             '<span class="text-xs text-conflixis-red font-soehneKraftig">Required</span>' : 
                             '<span class="text-xs text-gray-400">—</span>'}
                     </td>
-                    <td class="px-4 py-3 text-sm">${record.last_review_date}</td>
-                    <td class="px-4 py-3 text-center">
-                        <button class="text-conflixis-blue hover:text-conflixis-green text-sm font-soehneKraftig">
-                            View →
-                        </button>
-                    </td>
+                    <td class="px-4 py-3 text-sm whitespace-nowrap">${record.last_review_date}</td>
                     <td class="px-4 py-3 text-xs font-mono text-gray-500">${record.id || ''}</td>
                 `;
                 
@@ -717,83 +773,427 @@
             document.getElementById('pendingReviewCount').textContent = stats.pending;
         }
 
-        // Show details modal
+        // Show details modal with proper form based on category/type
         function showDetails(record) {
             const modal = document.getElementById('detailModal');
             const content = document.getElementById('modalContent');
+            const modalTitle = document.querySelector('#detailModal h3');
+            
+            // Update modal title to show category and type  
+            modalTitle.innerHTML = `${record.category_label || 'Disclosure'} - ${record.relationship_type || 'Details'}`;
             
             const riskColor = {
-                low: 'text-green-600',
-                moderate: 'text-yellow-600',
-                high: 'text-orange-600',
-                critical: 'text-red-600'
-            }[record.risk_tier];
+                low: 'text-green-600 bg-green-50',
+                moderate: 'text-yellow-600 bg-yellow-50', 
+                high: 'text-orange-600 bg-orange-50',
+                critical: 'text-red-600 bg-red-50'
+            }[record.risk_tier] || 'text-gray-600 bg-gray-50';
+            
+            // Get the appropriate form content
+            let formContent = getFormContent(record);
             
             content.innerHTML = `
-                <div class="grid md:grid-cols-2 gap-6">
-                    <div>
-                        <h4 class="font-soehneKraftig text-lg mb-4 text-conflixis-green">Provider Information</h4>
-                        <dl class="space-y-2">
-                            <div><dt class="text-sm text-gray-600">Name</dt><dd class="font-soehneKraftig">${record.provider_name}</dd></div>
-                            <div><dt class="text-sm text-gray-600">Job Title</dt><dd>${record.job_title}</dd></div>
-                            <div><dt class="text-sm text-gray-600">Department</dt><dd>${record.department}</dd></div>
-                            <div><dt class="text-sm text-gray-600">Decision Authority</dt><dd class="capitalize">${record.decision_authority_level}</dd></div>
-                        </dl>
+                <div class="space-y-6">
+                    <!-- Category Badge and Overview -->
+                    <div class="flex items-center justify-between border-b pb-4">
+                        <div>
+                            <span class="inline-block px-3 py-1 rounded-full text-xs font-semibold mr-2
+                                ${getCategoryColor(record.category_label)}">
+                                ${record.category_label}
+                            </span>
+                            <span class="text-sm text-gray-600">${record.relationship_type}</span>
+                        </div>
+                        <div class="text-right">
+                            <span class="inline-block px-3 py-1 rounded-lg text-xs font-semibold ${riskColor}">
+                                ${record.risk_tier.toUpperCase()} RISK
+                            </span>
+                        </div>
                     </div>
                     
-                    <div>
-                        <h4 class="font-soehneKraftig text-lg mb-4 text-conflixis-green">Relationship Details</h4>
-                        <dl class="space-y-2">
-                            <div><dt class="text-sm text-gray-600">Category</dt><dd class="font-soehneKraftig">${record.category_label || 'Open Payments'}</dd></div>
-                            <div><dt class="text-sm text-gray-600">Disclosure Type</dt><dd>${record.relationship_type || 'Not Specified'}</dd></div>
-                            <div><dt class="text-sm text-gray-600">Entity</dt><dd>${record.entity_name}</dd></div>
-                            <div><dt class="text-sm text-gray-600">Start Date</dt><dd>${record.relationship_start_date}</dd></div>
-                            <div><dt class="text-sm text-gray-600">Status</dt><dd>${record.relationship_ongoing ? 'Ongoing' : 'Terminated'}</dd></div>
-                        </dl>
+                    <!-- Provider Information Card -->
+                    <div class="bg-gradient-to-r from-conflixis-green to-teal-700 text-white rounded-lg p-4">
+                        <div class="flex items-start justify-between">
+                            <div>
+                                <h4 class="text-lg font-bold">${record.provider_name}</h4>
+                                <p class="text-sm opacity-90">${record.job_title || 'Not Specified'}</p>
+                                <p class="text-sm opacity-90">${record.department || 'Healthcare'}</p>
+                            </div>
+                            <div class="text-right">
+                                <p class="text-xs opacity-75">NPI</p>
+                                <p class="font-mono text-sm">${record.provider_npi || 'N/A'}</p>
+                            </div>
+                        </div>
                     </div>
                     
+                    <!-- Dynamic Form Content -->
                     <div>
-                        <h4 class="font-soehneKraftig text-lg mb-4 text-conflixis-green">Financial Information</h4>
-                        <dl class="space-y-2">
-                            <div><dt class="text-sm text-gray-600">Disclosed Amount</dt><dd class="font-soehneKraftig text-lg">$${record.financial_amount.toLocaleString()}</dd></div>
-                            <div><dt class="text-sm text-gray-600">Open Payments Total</dt><dd>$${record.open_payments_total.toLocaleString()}</dd></div>
-                            <div><dt class="text-sm text-gray-600">OP Match Status</dt><dd>${record.open_payments_matched ? '✓ Matched' : '○ Not Matched'}</dd></div>
-                        </dl>
+                        <h4 class="text-sm font-semibold text-gray-500 mb-3">Disclosure Form</h4>
+                        ${formContent}
                     </div>
                     
-                    <div>
-                        <h4 class="font-soehneKraftig text-lg mb-4 text-conflixis-green">Risk Assessment</h4>
-                        <dl class="space-y-2">
-                            <div><dt class="text-sm text-gray-600">Risk Tier</dt><dd class="font-soehneKraftig ${riskColor}">${record.risk_tier.toUpperCase()}</dd></div>
-                            <div><dt class="text-sm text-gray-600">Risk Score</dt><dd>${record.risk_score}/100</dd></div>
-                            <div><dt class="text-sm text-gray-600">Management Plan</dt><dd>${record.management_plan_required ? 'Required' : 'Not Required'}</dd></div>
-                        </dl>
+                    <!-- Financial Summary -->
+                    <div class="bg-gradient-to-r from-conflixis-gold to-yellow-400 text-white rounded-lg p-4">
+                        <div class="flex items-center justify-between">
+                            <div>
+                                <p class="text-xs opacity-90 uppercase">Total Disclosed Amount</p>
+                                <p class="text-3xl font-bold">
+                                    ${record.financial_amount === null || record.financial_amount === undefined ? 
+                                        'N/A' : 
+                                        record.financial_amount === 0 ? 
+                                            '$-' : 
+                                            '$' + record.financial_amount.toLocaleString()}
+                                </p>
+                            </div>
+                            ${record.open_payments_total > 0 ? `
+                            <div class="text-right">
+                                <p class="text-xs opacity-90">Open Payments Match</p>
+                                <p class="text-lg font-semibold">$${record.open_payments_total.toLocaleString()}</p>
+                            </div>
+                            ` : ''}
+                        </div>
                     </div>
-                </div>
-                
-                <div class="mt-6 pt-6 border-t border-gray-200">
-                    <h4 class="font-soehneKraftig text-lg mb-4 text-conflixis-green">Review Information</h4>
-                    <dl class="grid md:grid-cols-3 gap-4">
-                        <div><dt class="text-sm text-gray-600">Review Status</dt><dd class="font-soehneKraftig capitalize">${record.review_status.replace('_', ' ')}</dd></div>
-                        <div><dt class="text-sm text-gray-600">Last Review</dt><dd>${record.last_review_date}</dd></div>
-                        <div><dt class="text-sm text-gray-600">Next Review</dt><dd>${record.next_review_date}</dd></div>
-                    </dl>
-                </div>
-                
-                <div class="mt-6 pt-6 border-t border-gray-200 flex gap-3">
-                    <button class="px-4 py-2 bg-conflixis-green text-white rounded-lg hover:bg-opacity-90">
-                        Approve Disclosure
-                    </button>
-                    <button class="px-4 py-2 bg-conflixis-gold text-white rounded-lg hover:bg-opacity-90">
-                        Request Management Plan
-                    </button>
-                    <button class="px-4 py-2 border border-conflixis-red text-conflixis-red rounded-lg hover:bg-red-50">
-                        Flag for Review
-                    </button>
+                    
+                    <!-- Management Actions -->
+                    <div>
+                        <h4 class="text-sm font-semibold text-gray-500 mb-3">Management & Review</h4>
+                        <div class="bg-gray-50 rounded-lg p-4">
+                            <div class="grid grid-cols-2 gap-4">
+                                <div class="border-l-4 border-conflixis-blue pl-3">
+                                    <span class="text-xs text-gray-500">Review Status</span>
+                                    <p class="font-semibold capitalize">${record.review_status.replace('_', ' ')}</p>
+                                </div>
+                                <div class="border-l-4 ${record.management_plan_required ? 'border-red-500' : 'border-green-500'} pl-3">
+                                    <span class="text-xs text-gray-500">Management Plan</span>
+                                    <p class="font-semibold">${record.management_plan_required ? 'Required' : 'Not Required'}</p>
+                                </div>
+                                <div class="border-l-4 border-gray-400 pl-3">
+                                    <span class="text-xs text-gray-500">Last Review</span>
+                                    <p class="font-semibold">${record.last_review_date}</p>
+                                </div>
+                                <div class="border-l-4 border-purple-500 pl-3">
+                                    <span class="text-xs text-gray-500">Next Review</span>
+                                    <p class="font-semibold">${record.next_review_date}</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Policy Guidance (System-generated) -->
+                    ${getPolicyNote(record.category_label, record.relationship_type) ? `
+                    <div class="bg-blue-50 rounded-lg p-4">
+                        <h5 class="font-semibold text-sm mb-2 text-blue-700">Policy Guidance</h5>
+                        <p class="text-sm text-gray-700">${getPolicyNote(record.category_label, record.relationship_type)}</p>
+                    </div>
+                    ` : ''}
+                    
+                    <!-- Document Info Footer -->
+                    <div class="border-t pt-4 flex justify-between items-center text-xs text-gray-500">
+                        <div>
+                            <span>Document ID: </span>
+                            <span class="font-mono">${record.id}</span>
+                        </div>
+                        <div>
+                            <span>Disclosed: </span>
+                            <span>${record.disclosure_date}</span>
+                        </div>
+                    </div>
                 </div>
             `;
             
             modal.classList.remove('hidden');
+        }
+
+        // Get category color classes
+        function getCategoryColor(category) {
+            const colors = {
+                'External Roles & Relationships': 'bg-blue-100 text-blue-700',
+                'Financial & Investment Interests': 'bg-yellow-100 text-yellow-700',
+                'Open Payments (CMS Imports)': 'bg-green-100 text-green-700',
+                'Political & Charitable Activities': 'bg-purple-100 text-purple-700',
+                'Legal & Compliance Matters': 'bg-red-100 text-red-700'
+            };
+            return colors[category] || 'bg-gray-100 text-gray-700';
+        }
+        
+        // Get form content based on category and type
+        function getFormContent(record) {
+            const category = record.category_label;
+            const type = record.relationship_type;
+            
+            // External Roles & Relationships Forms
+            if (category === 'External Roles & Relationships') {
+                if (type === 'Related Parties') {
+                    return `
+                        <div class="bg-white border border-gray-200 rounded-lg p-4">
+                            <div class="space-y-4">
+                                <div class="grid grid-cols-2 gap-4">
+                                    <div>
+                                        <label class="text-xs font-semibold text-gray-600">Related Person Name</label>
+                                        <p class="mt-1 p-2 bg-gray-50 rounded">${record.entity_name || 'Not Specified'}</p>
+                                    </div>
+                                    <div>
+                                        <label class="text-xs font-semibold text-gray-600">Relationship Type</label>
+                                        <p class="mt-1 p-2 bg-gray-50 rounded">Family Member</p>
+                                    </div>
+                                    <div>
+                                        <label class="text-xs font-semibold text-gray-600">Related Person's Entity</label>
+                                        <p class="mt-1 p-2 bg-gray-50 rounded">${record.department || 'Texas Health'}</p>
+                                    </div>
+                                    <div>
+                                        <label class="text-xs font-semibold text-gray-600">Related Person's Job Title</label>
+                                        <p class="mt-1 p-2 bg-gray-50 rounded">${record.job_title || 'Not Specified'}</p>
+                                    </div>
+                                </div>
+                                ${record.notes ? `
+                                <div>
+                                    <label class="text-xs font-semibold text-gray-600">Additional Notes</label>
+                                    <p class="mt-1 p-2 bg-gray-50 rounded italic">${record.notes}</p>
+                                </div>
+                                ` : ''}
+                            </div>
+                        </div>
+                    `;
+                } else if (type === 'Governance/Director Fees') {
+                    return `
+                        <div class="bg-white border border-gray-200 rounded-lg p-4">
+                            <div class="space-y-4">
+                                <div class="grid grid-cols-2 gap-4">
+                                    <div>
+                                        <label class="text-xs font-semibold text-gray-600">Organization Name</label>
+                                        <p class="mt-1 p-2 bg-gray-50 rounded">${record.entity_name}</p>
+                                    </div>
+                                    <div>
+                                        <label class="text-xs font-semibold text-gray-600">Board Position/Role</label>
+                                        <p class="mt-1 p-2 bg-gray-50 rounded">Board Member</p>
+                                    </div>
+                                    <div>
+                                        <label class="text-xs font-semibold text-gray-600">Annual Compensation</label>
+                                        <p class="mt-1 p-2 bg-gray-50 rounded font-semibold">
+                                            ${record.financial_amount ? '$' + record.financial_amount.toLocaleString() : 'N/A'}
+                                        </p>
+                                    </div>
+                                    <div>
+                                        <label class="text-xs font-semibold text-gray-600">Time Commitment</label>
+                                        <p class="mt-1 p-2 bg-gray-50 rounded">Monthly Meetings</p>
+                                    </div>
+                                </div>
+                                ${record.notes ? `
+                                <div>
+                                    <label class="text-xs font-semibold text-gray-600">Additional Notes</label>
+                                    <p class="mt-1 p-2 bg-gray-50 rounded italic">${record.notes}</p>
+                                </div>
+                                ` : ''}
+                            </div>
+                        </div>
+                    `;
+                }
+            }
+            
+            // Financial & Investment Interests Forms
+            if (category === 'Financial & Investment Interests') {
+                if (type === 'Ownership/Investment') {
+                    return `
+                        <div class="bg-white border border-gray-200 rounded-lg p-4">
+                            <div class="space-y-4">
+                                <div class="grid grid-cols-2 gap-4">
+                                    <div>
+                                        <label class="text-xs font-semibold text-gray-600">Company Name</label>
+                                        <p class="mt-1 p-2 bg-gray-50 rounded">${record.entity_name}</p>
+                                    </div>
+                                    <div>
+                                        <label class="text-xs font-semibold text-gray-600">Investment Type</label>
+                                        <p class="mt-1 p-2 bg-gray-50 rounded">Equity Ownership</p>
+                                    </div>
+                                    <div>
+                                        <label class="text-xs font-semibold text-gray-600">Current Value</label>
+                                        <p class="mt-1 p-2 bg-yellow-50 rounded font-bold text-lg">
+                                            ${record.financial_amount ? '$' + record.financial_amount.toLocaleString() : 'N/A'}
+                                        </p>
+                                    </div>
+                                    <div>
+                                        <label class="text-xs font-semibold text-gray-600">Ownership Percentage</label>
+                                        <p class="mt-1 p-2 bg-gray-50 rounded">${record.equity_percentage || '< 5%'}</p>
+                                    </div>
+                                </div>
+                                ${record.notes ? `
+                                <div>
+                                    <label class="text-xs font-semibold text-gray-600">Additional Notes</label>
+                                    <p class="mt-1 p-2 bg-gray-50 rounded italic">${record.notes}</p>
+                                </div>
+                                ` : ''}
+                            </div>
+                        </div>
+                    `;
+                } else if (type === 'Receipt of Remuneration') {
+                    return `
+                        <div class="bg-white border border-gray-200 rounded-lg p-4">
+                            <div class="space-y-4">
+                                <div class="grid grid-cols-2 gap-4">
+                                    <div>
+                                        <label class="text-xs font-semibold text-gray-600">Company Providing Gift</label>
+                                        <p class="mt-1 p-2 bg-gray-50 rounded">${record.entity_name}</p>
+                                    </div>
+                                    <div>
+                                        <label class="text-xs font-semibold text-gray-600">Type of Remuneration</label>
+                                        <p class="mt-1 p-2 bg-gray-50 rounded">Food and Beverage</p>
+                                    </div>
+                                    <div>
+                                        <label class="text-xs font-semibold text-gray-600">Total Value</label>
+                                        <p class="mt-1 p-2 bg-yellow-50 rounded font-semibold">
+                                            ${record.financial_amount ? '$' + record.financial_amount.toLocaleString() : 'N/A'}
+                                        </p>
+                                    </div>
+                                    <div>
+                                        <label class="text-xs font-semibold text-gray-600">Date Received</label>
+                                        <p class="mt-1 p-2 bg-gray-50 rounded">${record.disclosure_date}</p>
+                                    </div>
+                                </div>
+                                ${record.notes ? `
+                                <div>
+                                    <label class="text-xs font-semibold text-gray-600">Additional Notes</label>
+                                    <p class="mt-1 p-2 bg-gray-50 rounded italic">${record.notes}</p>
+                                </div>
+                                ` : ''}
+                            </div>
+                        </div>
+                    `;
+                } else if (type === 'Receipt of Compensation') {
+                    return `
+                        <div class="bg-white border border-gray-200 rounded-lg p-4">
+                            <div class="space-y-4">
+                                <div class="grid grid-cols-2 gap-4">
+                                    <div>
+                                        <label class="text-xs font-semibold text-gray-600">Payer Organization</label>
+                                        <p class="mt-1 p-2 bg-gray-50 rounded">${record.entity_name}</p>
+                                    </div>
+                                    <div>
+                                        <label class="text-xs font-semibold text-gray-600">Service Provided</label>
+                                        <p class="mt-1 p-2 bg-gray-50 rounded">Consulting Services</p>
+                                    </div>
+                                    <div>
+                                        <label class="text-xs font-semibold text-gray-600">Total Compensation</label>
+                                        <p class="mt-1 p-2 bg-yellow-50 rounded font-bold text-lg">
+                                            ${record.financial_amount ? '$' + record.financial_amount.toLocaleString() : 'N/A'}
+                                        </p>
+                                    </div>
+                                    <div>
+                                        <label class="text-xs font-semibold text-gray-600">Payment Period</label>
+                                        <p class="mt-1 p-2 bg-gray-50 rounded">Annual</p>
+                                    </div>
+                                </div>
+                                ${record.notes ? `
+                                <div>
+                                    <label class="text-xs font-semibold text-gray-600">Additional Notes</label>
+                                    <p class="mt-1 p-2 bg-gray-50 rounded italic">${record.notes}</p>
+                                </div>
+                                ` : ''}
+                            </div>
+                        </div>
+                    `;
+                }
+            }
+            
+            // Open Payments Forms
+            if (category === 'Open Payments (CMS Imports)') {
+                return `
+                    <div class="bg-white border border-gray-200 rounded-lg p-4">
+                        <div class="space-y-4">
+                            <div class="bg-green-50 p-3 rounded mb-4">
+                                <p class="text-xs font-semibold text-green-700">CMS Open Payments Import</p>
+                                <p class="text-xs text-green-600 mt-1">This disclosure was automatically imported from the CMS Open Payments database.</p>
+                            </div>
+                            <div class="grid grid-cols-2 gap-4">
+                                <div>
+                                    <label class="text-xs font-semibold text-gray-600">Paying Entity</label>
+                                    <p class="mt-1 p-2 bg-gray-50 rounded">${record.entity_name}</p>
+                                </div>
+                                <div>
+                                    <label class="text-xs font-semibold text-gray-600">Payment Type</label>
+                                    <p class="mt-1 p-2 bg-gray-50 rounded">General Payment</p>
+                                </div>
+                                <div>
+                                    <label class="text-xs font-semibold text-gray-600">Payment Amount</label>
+                                    <p class="mt-1 p-2 bg-green-50 rounded font-bold">
+                                        ${record.financial_amount ? '$' + record.financial_amount.toLocaleString() : 'N/A'}
+                                    </p>
+                                </div>
+                                <div>
+                                    <label class="text-xs font-semibold text-gray-600">CMS Record Date</label>
+                                    <p class="mt-1 p-2 bg-gray-50 rounded">${record.disclosure_date}</p>
+                                </div>
+                            </div>
+                            ${record.notes ? `
+                            <div>
+                                <label class="text-xs font-semibold text-gray-600">Additional Notes</label>
+                                <p class="mt-1 p-2 bg-gray-50 rounded italic">${record.notes}</p>
+                            </div>
+                            ` : ''}
+                            <div class="border-t pt-3">
+                                <p class="text-xs text-gray-500">Provider NPI: ${record.provider_npi || 'Not Available'}</p>
+                            </div>
+                        </div>
+                    </div>
+                `;
+            }
+            
+            // Default form for unmatched types
+            return `
+                <div class="bg-white border border-gray-200 rounded-lg p-4">
+                    <div class="space-y-4">
+                        <div class="grid grid-cols-2 gap-4">
+                            <div>
+                                <label class="text-xs font-semibold text-gray-600">Entity Name</label>
+                                <p class="mt-1 p-2 bg-gray-50 rounded">${record.entity_name}</p>
+                            </div>
+                            <div>
+                                <label class="text-xs font-semibold text-gray-600">Disclosure Type</label>
+                                <p class="mt-1 p-2 bg-gray-50 rounded">${record.relationship_type}</p>
+                            </div>
+                            <div>
+                                <label class="text-xs font-semibold text-gray-600">Financial Amount</label>
+                                <p class="mt-1 p-2 bg-gray-50 rounded font-semibold">
+                                    ${record.financial_amount !== null && record.financial_amount !== undefined ? 
+                                        '$' + record.financial_amount.toLocaleString() : 'N/A'}
+                                </p>
+                            </div>
+                            <div>
+                                <label class="text-xs font-semibold text-gray-600">Status</label>
+                                <p class="mt-1 p-2 bg-gray-50 rounded">${record.review_status}</p>
+                            </div>
+                        </div>
+                        ${record.notes ? `
+                        <div>
+                            <label class="text-xs font-semibold text-gray-600">Additional Notes</label>
+                            <p class="mt-1 p-2 bg-gray-50 rounded italic">${record.notes}</p>
+                        </div>
+                        ` : ''}
+                    </div>
+                </div>
+            `;
+        }
+        
+        // Get policy note based on category and type
+        function getPolicyNote(category, type) {
+            if (category === 'External Roles & Relationships') {
+                if (type === 'Related Parties') {
+                    return 'Family relationships within the organization must be disclosed to ensure appropriate management of potential conflicts.';
+                } else if (type === 'Governance/Director Fees') {
+                    return 'Board positions and governance roles must be disclosed and evaluated for conflicts with organizational interests.';
+                } else {
+                    return 'External activities must be reviewed to ensure they do not interfere with job responsibilities or create conflicts.';
+                }
+            } else if (category === 'Financial & Investment Interests') {
+                if (type === 'Ownership/Investment') {
+                    return 'Ownership interests in vendors, competitors, or related entities require disclosure and may need management plans.';
+                } else if (type === 'Receipt of Remuneration') {
+                    return 'Gifts and meals from vendors must be disclosed per the Sunshine Act and organizational gift policies.';
+                } else if (type === 'Receipt of Compensation') {
+                    return 'External compensation arrangements require review to ensure compliance with Stark Law and Anti-Kickback regulations.';
+                }
+            } else if (category === 'Open Payments (CMS Imports)') {
+                return 'CMS Open Payments data is automatically imported to ensure transparency and compliance with federal reporting requirements.';
+            }
+            return null;
         }
 
         // Close modal
