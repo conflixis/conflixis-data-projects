@@ -395,13 +395,15 @@
                 
                 // Load all pages
                 while (page <= totalPages) {
+                    console.log(`Fetching page ${page} of ${totalPages}...`);
                     const response = await apiClient.getDisclosures({ 
                         page: page, 
                         page_size: pageSize 
                     });
                     
+                    console.log(`Page ${page}: received ${response.data.length} records`);
                     allRecords = allRecords.concat(response.data);
-                    totalPages = response.total_pages;
+                    totalPages = response.pages || Math.ceil(response.total / pageSize);
                     
                     // Update loading message
                     tbody.innerHTML = `
@@ -414,6 +416,8 @@
                     
                     page++;
                 }
+                
+                console.log(`Total records loaded: ${allRecords.length}`);
                 
                 const stats = await apiClient.getOverviewStats();
                 

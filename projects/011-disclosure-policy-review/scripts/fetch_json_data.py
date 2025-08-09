@@ -24,6 +24,16 @@ STAGING_DIR = DATA_DIR / "staging"
 # Ensure directories exist
 STAGING_DIR.mkdir(parents=True, exist_ok=True)
 
+def load_member_data():
+    """Load member data from local file"""
+    member_file = DATA_DIR / "raw" / "disclosures" / "member_shards_2025-08-09.parquet"
+    if member_file.exists():
+        print("Loading member data from local file...")
+        return pd.read_parquet(member_file)
+    else:
+        print("Warning: Member data file not found. Job titles and entities will be missing.")
+        return pd.DataFrame()
+
 def fetch_disclosure_data():
     """Fetch real disclosure data from BigQuery JSON table"""
     
@@ -55,12 +65,26 @@ def fetch_disclosure_data():
                 JSON_VALUE(data, '$.reporter.id') as reporter_user_id,
                 JSON_VALUE(data, '$.reporter.authed_user_id') as authed_user_id,
                 
-                -- Get NPI from separate table join (placeholder for now)
-                '' as provider_npi,
+                -- Will be joined from member_shards
+                '' as provider_npi_placeholder,
                 
                 -- Parse disclosure type and category
-                JSON_VALUE(data, '$.question.title') as relationship_type,
-                JSON_VALUE(data, '$.question.category_label') as category_label,
+                -- For Open Payments imports without a type, use "Open Payments Import"
+                COALESCE(
+                    NULLIF(JSON_VALUE(data, '$.question.title'), ''),
+                    CASE 
+                        WHEN JSON_VALUE(data, '$.question.category_label') IS NULL THEN 'Open Payments Import'
+                        ELSE 'Not Specified'
+                    END
+                ) as relationship_type,
+                -- Fix category names to match standard format (& instead of "and")
+                -- Also handle Open Payments imports that have no category
+                CASE
+                    WHEN JSON_VALUE(data, '$.question.category_label') IS NULL THEN 'Open Payments (CMS Imports)'
+                    WHEN JSON_VALUE(data, '$.question.category_label') = 'External Roles and Relationships' THEN 'External Roles & Relationships'
+                    WHEN JSON_VALUE(data, '$.question.category_label') = 'Financial and Investment Interests' THEN 'Financial & Investment Interests'
+                    ELSE JSON_VALUE(data, '$.question.category_label')
+                END as category_label,
                 JSON_VALUE(data, '$.question.description') as question_description,
                 
                 -- Parse company/entity information
@@ -146,12 +170,12 @@ def fetch_disclosure_data():
         )
         SELECT 
             id,
-            provider_npi,
+            '' as provider_npi,  -- Will be added from member data join
             provider_name,
             provider_email,
             reporter_user_id,
             
-            -- Job title and department (would come from member table)
+            -- Job title and department will be added from member data
             'Not Specified' as job_title,
             'Texas Health' as department,
             
@@ -217,6 +241,35 @@ def fetch_disclosure_data():
         df = query_job.to_dataframe()
         
         print(f"Retrieved {len(df)} records")
+        
+        # Load and join member data
+        member_df = load_member_data()
+        if not member_df.empty:
+            # Prepare member data for joining
+            member_df['normalized_name_member'] = member_df['normalized_name'].astype(str)
+            
+            # Normalize provider names in disclosure data
+            df['normalized_provider_name'] = df['provider_name'].str.lower().str.strip()
+            
+            # Join with member data
+            df = df.merge(
+                member_df[['normalized_name_member', 'npi', 'job_title', 'entity']].drop_duplicates('normalized_name_member'),
+                left_on='normalized_provider_name',
+                right_on='normalized_name_member',
+                how='left',
+                suffixes=('', '_member')
+            )
+            
+            # Update fields with member data
+            df['provider_npi'] = df['npi'].fillna('')
+            df['job_title'] = df['job_title_member'].fillna(df['job_title'])
+            df['department'] = df['entity'].fillna(df['department'])
+            
+            # Drop temporary columns
+            df = df.drop(columns=['normalized_provider_name', 'normalized_name_member', 'npi', 
+                                 'job_title_member', 'entity'], errors='ignore')
+            
+            print(f"Joined with member data: {(df['provider_npi'] != '').sum()} records matched")
         
         # Calculate risk tiers based on financial amounts
         def calculate_risk_tier(amount):
