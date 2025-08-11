@@ -271,9 +271,9 @@
         <div class="container mx-auto px-6">
             <h1 class="text-3xl font-bold mb-6">COI Policy Compliance Dashboard</h1>
             
-            <div class="grid lg:grid-cols-3 gap-6 mb-4">
+            <div class="grid lg:grid-cols-8 gap-6 mb-4">
                 <!-- Left Column: Campaign Selection and Metrics -->
-                <div class="flex flex-col gap-4">
+                <div class="lg:col-span-2 flex flex-col gap-4">
                     <!-- Campaign Selection Card -->
                     <div class="bg-white rounded-lg p-4 shadow">
                         <label class="text-sm font-soehneKraftig text-conflixis-green block mb-2">Campaign Filter</label>
@@ -291,59 +291,70 @@
                     <div class="grid grid-cols-2 gap-4 flex-1">
                         <!-- Total Covered Persons Card -->
                         <div class="bg-white rounded-lg p-4 shadow flex flex-col justify-center items-center text-center">
-                            <h2 class="text-lg font-bold mb-2">Total Covered Persons</h2>
-                            <div class="text-4xl font-soehneKraftig text-conflixis-blue bg-blue-100 rounded-lg px-4 py-2 mb-2" id="uniqueProvidersCount">0</div>
+                            <h2 class="text-sm font-bold mb-2">Total Covered Persons</h2>
+                            <div class="text-3xl font-soehneKraftig text-conflixis-blue bg-blue-100 rounded-lg px-6 py-2 mb-2" id="uniqueProvidersCount">0</div>
                             <div class="text-xs text-blue-600 font-medium">Unique providers</div>
                         </div>
                         
                         <!-- Total Disclosures Card -->
                         <div class="bg-white rounded-lg p-4 shadow flex flex-col justify-center items-center text-center">
-                            <h2 class="text-lg font-bold mb-2">Total Disclosures</h2>
-                            <div class="text-4xl font-soehneKraftig text-conflixis-green bg-conflixis-light-green rounded-lg px-4 py-2 mb-2" id="totalDisclosuresCount">0</div>
+                            <h2 class="text-sm font-bold mb-2">Total Disclosures</h2>
+                            <div class="text-3xl font-soehneKraftig text-conflixis-green bg-conflixis-light-green rounded-lg px-6 py-2 mb-2" id="totalDisclosuresCount">0</div>
                             <div class="text-xs text-conflixis-mint font-medium">Submitted for campaign</div>
                         </div>
                     </div>
                 </div>
                 
                 <!-- Compliance Status Breakdown -->
-                <div class="lg:col-span-2 bg-white rounded-lg shadow p-6 flex flex-col h-full">
+                <div class="lg:col-span-3 bg-white rounded-lg shadow p-6 flex flex-col h-full">
                     <h2 class="text-lg font-bold mb-4">Annual Disclosure Compliance Status</h2>
                     
                     <div class="flex-1 flex flex-col justify-center space-y-3">
                         <!-- Compliant -->
-                        <div class="flex items-center gap-2">
-                            <div class="w-28 text-xs font-soehneKraftig">Compliant</div>
+                        <div class="flex items-center gap-3">
+                            <div class="w-24 text-xs font-soehneKraftig">Compliant</div>
                             <div class="flex-1 bg-gray-200 rounded-full h-6 relative overflow-hidden">
                                 <div class="bg-conflixis-success-green h-6 rounded-full animate-bar" style="width: 72.3%; animation-delay: 0.1s;"></div>
                             </div>
-                            <div class="w-20 text-right text-xs">2,781 (72.3%)</div>
+                            <div class="w-24 text-right text-xs">2,781 (72.3%)</div>
                         </div>
                         
                         <!-- Pending Review -->
-                        <div class="flex items-center gap-2">
-                            <div class="w-28 text-xs font-soehneKraftig">Pending Review</div>
+                        <div class="flex items-center gap-3">
+                            <div class="w-24 text-xs font-soehneKraftig">Pending Review</div>
                             <div class="flex-1 bg-gray-200 rounded-full h-6 relative overflow-hidden">
                                 <div class="bg-conflixis-gold h-6 rounded-full animate-bar" style="width: 18.5%; animation-delay: 0.2s;"></div>
                             </div>
-                            <div class="w-20 text-right text-xs">712 (18.5%)</div>
+                            <div class="w-24 text-right text-xs">712 (18.5%)</div>
                         </div>
                         
                         <!-- Overdue -->
-                        <div class="flex items-center gap-2">
-                            <div class="w-28 text-xs font-soehneKraftig">Overdue</div>
+                        <div class="flex items-center gap-3">
+                            <div class="w-24 text-xs font-soehneKraftig">Overdue</div>
                             <div class="flex-1 bg-gray-200 rounded-full h-6 relative overflow-hidden">
                                 <div class="bg-conflixis-red h-6 rounded-full animate-bar" style="width: 6.8%; animation-delay: 0.3s;"></div>
                             </div>
-                            <div class="w-20 text-right text-xs">261 (6.8%)</div>
+                            <div class="w-24 text-right text-xs">261 (6.8%)</div>
                         </div>
                         
                         <!-- Not Required -->
-                        <div class="flex items-center gap-2">
-                            <div class="w-28 text-xs font-soehneKraftig">Not Required</div>
+                        <div class="flex items-center gap-3">
+                            <div class="w-24 text-xs font-soehneKraftig">Not Required</div>
                             <div class="flex-1 bg-gray-200 rounded-full h-6 relative overflow-hidden">
                                 <div class="bg-gray-400 h-6 rounded-full animate-bar" style="width: 2.4%; animation-delay: 0.4s;"></div>
                             </div>
-                            <div class="w-20 text-right text-xs">93 (2.4%)</div>
+                            <div class="w-24 text-right text-xs">93 (2.4%)</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Covered Persons by Category Bar Chart -->
+                <div class="lg:col-span-3 bg-white rounded-lg shadow p-6 flex flex-col h-full">
+                    <h2 class="text-lg font-bold mb-4">Covered Persons by Category</h2>
+                    
+                    <div id="categoryChart" class="flex-1 flex flex-col justify-center">
+                        <div class="space-y-3">
+                            <!-- Categories will be populated by JavaScript -->
                         </div>
                     </div>
                 </div>
@@ -490,64 +501,6 @@
         </div>
     </section>
     
-    <!-- Covered Persons by Category -->
-    <section class="pb-6">
-        <div class="container mx-auto px-6">
-            <div class="bg-white rounded-lg shadow p-6">
-                <h2 class="text-xl font-bold mb-4">Covered Persons by Category</h2>
-                
-                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
-                    <!-- Board Members -->
-                    <div class="border border-gray-200 rounded-lg p-4">
-                        <div class="text-2xl font-soehneKraftig text-conflixis-green">127</div>
-                        <div class="text-sm text-gray-600">Board Members</div>
-                        <div class="mt-2">
-                            <div class="flex justify-between text-xs">
-                                <span class="text-conflixis-success-green">✓ 118 Compliant</span>
-                                <span class="text-conflixis-red">9 Pending</span>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!-- Officers -->
-                    <div class="border border-gray-200 rounded-lg p-4">
-                        <div class="text-2xl font-soehneKraftig text-conflixis-green">89</div>
-                        <div class="text-sm text-gray-600">Officers</div>
-                        <div class="mt-2">
-                            <div class="flex justify-between text-xs">
-                                <span class="text-conflixis-success-green">✓ 87 Compliant</span>
-                                <span class="text-conflixis-red">2 Pending</span>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!-- Medical Directors -->
-                    <div class="border border-gray-200 rounded-lg p-4">
-                        <div class="text-2xl font-soehneKraftig text-conflixis-green">342</div>
-                        <div class="text-sm text-gray-600">Medical Directors</div>
-                        <div class="mt-2">
-                            <div class="flex justify-between text-xs">
-                                <span class="text-conflixis-success-green">✓ 298 Compliant</span>
-                                <span class="text-conflixis-red">44 Pending</span>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!-- Contracted Physicians -->
-                    <div class="border border-gray-200 rounded-lg p-4">
-                        <div class="text-2xl font-soehneKraftig text-conflixis-green">3,289</div>
-                        <div class="text-sm text-gray-600">Contracted Physicians</div>
-                        <div class="mt-2">
-                            <div class="flex justify-between text-xs">
-                                <span class="text-conflixis-success-green">✓ 2,278 Compliant</span>
-                                <span class="text-conflixis-red">1,011 Pending</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
     
     <!-- Policy Requirements Overview -->
     <section class="pb-8">
@@ -892,6 +845,7 @@
                 updateComplianceStatus();
                 updateInsurmountableConflicts();
                 updateCoveredPersonsByCategory();
+                updateCategoryBarChart();
                 updateSidebarStats();
                 
             } catch (error) {
@@ -948,7 +902,7 @@
                 if (compliantBar) {
                     compliantBar.style.width = `${compliantPercent}%`;
                     const compliantRow = compliantBar.closest('.flex');
-                    const compliantCount = compliantRow.querySelector('.w-20');
+                    const compliantCount = compliantRow.querySelector('.w-24.text-right');
                     compliantCount.textContent = `${statusCounts.approved.toLocaleString()} (${compliantPercent}%)`;
                 }
                 
@@ -957,7 +911,7 @@
                 if (pendingBar) {
                     pendingBar.style.width = `${pendingPercent}%`;
                     const pendingRow = pendingBar.closest('.flex');
-                    const pendingCountEl = pendingRow.querySelector('.w-20');
+                    const pendingCountEl = pendingRow.querySelector('.w-24.text-right');
                     pendingCountEl.textContent = `${pendingCount.toLocaleString()} (${pendingPercent}%)`;
                 }
                 
@@ -966,7 +920,7 @@
                 if (overdueBar) {
                     overdueBar.style.width = `${overduePercent}%`;
                     const overdueRow = overdueBar.closest('.flex');
-                    const overdueCountEl = overdueRow.querySelector('.w-20');
+                    const overdueCountEl = overdueRow.querySelector('.w-24.text-right');
                     overdueCountEl.textContent = `${overdueCount.toLocaleString()} (${overduePercent}%)`;
                 }
             }
@@ -1093,6 +1047,106 @@
             return 'Other';
         }
         
+        // Update Covered Persons by Category Bar Chart
+        function updateCategoryBarChart() {
+            const chartContainer = document.querySelector('#categoryChart .space-y-3');
+            if (!chartContainer) return;
+            
+            // Calculate person counts by seniority level
+            const seniorityCategories = {
+                'Board Members': 0,
+                'Officers': 0,
+                'Medical Directors': 0,
+                'Department Chairs': 0,
+                'Contracted Physicians': 0,
+                'Other Staff': 0
+            };
+            
+            // Count unique providers by job title category
+            const uniqueProvidersByTitle = {};
+            allDisclosures.forEach(disclosure => {
+                const provider = disclosure.provider_name;
+                const title = (disclosure.job_title || '').toLowerCase();
+                
+                // Categorize by job title
+                let category = 'Other Staff';
+                if (title.includes('board') || title.includes('trustee')) {
+                    category = 'Board Members';
+                } else if (title.includes('chief') || title.includes('officer') || title.includes('ceo') || 
+                          title.includes('cfo') || title.includes('coo') || title.includes('president') || 
+                          title.includes('vp') || title.includes('vice president')) {
+                    category = 'Officers';
+                } else if (title.includes('medical director') || title.includes('med director') || 
+                          title.includes('clinical director')) {
+                    category = 'Medical Directors';
+                } else if (title.includes('chair') || title.includes('department head')) {
+                    category = 'Department Chairs';
+                } else if (title.includes('physician') || title.includes('doctor') || 
+                          title.includes('md') || title.includes('surgeon')) {
+                    category = 'Contracted Physicians';
+                }
+                
+                // Track unique providers per category
+                if (!uniqueProvidersByTitle[category]) {
+                    uniqueProvidersByTitle[category] = new Set();
+                }
+                uniqueProvidersByTitle[category].add(provider);
+            });
+            
+            // Convert sets to counts
+            Object.keys(seniorityCategories).forEach(category => {
+                if (uniqueProvidersByTitle[category]) {
+                    seniorityCategories[category] = uniqueProvidersByTitle[category].size;
+                }
+            });
+            
+            // Sort categories by predefined order (most senior first)
+            const sortedCategories = Object.entries(seniorityCategories)
+                .filter(([_, count]) => count > 0); // Only show categories with people
+            
+            // Calculate total for percentages
+            const totalPersons = Object.values(seniorityCategories).reduce((sum, count) => sum + count, 0);
+            
+            // Find max count for scaling bars
+            const maxCount = Math.max(...Object.values(seniorityCategories));
+            
+            // Clear existing content
+            chartContainer.innerHTML = '';
+            
+            // Create bar chart
+            sortedCategories.forEach(([category, count], index) => {
+                const barWidth = maxCount > 0 ? (count / maxCount * 100) : 0;
+                const percentage = totalPersons > 0 ? (count / totalPersons * 100) : 0;
+                
+                const categoryColors = {
+                    'Board Members': 'bg-conflixis-green',
+                    'Officers': 'bg-conflixis-blue',
+                    'Medical Directors': 'bg-purple-500',
+                    'Department Chairs': 'bg-yellow-500',
+                    'Contracted Physicians': 'bg-teal-500',
+                    'Other Staff': 'bg-gray-500'
+                };
+                
+                const color = categoryColors[category] || 'bg-gray-500';
+                
+                const bar = document.createElement('div');
+                bar.className = 'flex items-center gap-3';
+                bar.innerHTML = `
+                    <div class="w-32 text-xs font-soehneKraftig truncate" title="${category}">${category}</div>
+                    <div class="flex-1 bg-gray-200 rounded-full h-6 relative overflow-hidden">
+                        <div class="${color} h-6 rounded-full animate-bar" style="width: ${barWidth}%; animation-delay: ${index * 0.1}s;"></div>
+                    </div>
+                    <div class="w-24 text-right text-xs">${count} (${percentage.toFixed(1)}%)</div>
+                `;
+                chartContainer.appendChild(bar);
+            });
+            
+            // Add a note if there are no categories
+            if (sortedCategories.length === 0) {
+                chartContainer.innerHTML = '<p class="text-sm text-gray-500 text-center">No data available</p>';
+            }
+        }
+        
         // Update individual category card
         function updateCategoryCard(categoryName, data) {
             const cards = document.querySelectorAll('.border.border-gray-200.rounded-lg.p-4');
@@ -1183,6 +1237,7 @@
             updateComplianceStatus();
             updateInsurmountableConflicts();
             updateCoveredPersonsByCategory();
+            updateCategoryBarChart();
         }
         
         // Initialize on page load
