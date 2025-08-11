@@ -50,11 +50,11 @@ def create_app() -> FastAPI:
     # Serve frontend files including api.js
     app.mount("/frontend", StaticFiles(directory=str(frontend_path), html=True), name="frontend")
     
-    # Root redirects to frontend
+    # Root redirects to dashboard (homepage)
     @app.get("/")
     async def root():
-        """Redirect to main viewer"""
-        return FileResponse(str(frontend_path / "index.html"))
+        """Redirect to dashboard (homepage)"""
+        return FileResponse(str(frontend_path / "dashboard.html"))
     
     # Serve api.js at root level
     @app.get("/api.js")
@@ -62,10 +62,10 @@ def create_app() -> FastAPI:
         """Serve API client JavaScript"""
         return FileResponse(str(frontend_path / "api.js"))
     
-    @app.get("/dashboard")
-    async def dashboard():
-        """Serve dashboard"""
-        return FileResponse(str(frontend_path / "dashboard.html"))
+    @app.get("/disclosures")
+    async def disclosures():
+        """Serve disclosure viewer"""
+        return FileResponse(str(frontend_path / "index.html"))
     
     return app
 
@@ -83,8 +83,8 @@ if __name__ == "__main__":
     print()
     print("Starting server...")
     print()
-    print("📊 Main Viewer: http://localhost:8000")
-    print("📈 Dashboard: http://localhost:8000/dashboard")
+    print("📈 Dashboard: http://localhost:8000")
+    print("📊 Disclosure Viewer: http://localhost:8000/disclosures")
     print("🔧 API Docs: http://localhost:8000/api/docs")
     print("📚 ReDoc: http://localhost:8000/api/redoc")
     print()
