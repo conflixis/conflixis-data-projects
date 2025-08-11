@@ -4,6 +4,7 @@ FastAPI application factory for COI Disclosure Review API
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from api.routes import disclosures_router, policies_router, stats_router
+from api.routes.interpretation import router as interpretation_router
 
 
 def create_api_app() -> FastAPI:
@@ -34,6 +35,7 @@ def create_api_app() -> FastAPI:
     app.include_router(disclosures_router)
     app.include_router(policies_router)
     app.include_router(stats_router)
+    app.include_router(interpretation_router)
     
     # Root endpoint
     @app.get("/")
