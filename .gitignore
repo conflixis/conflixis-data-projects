@@ -48,3 +48,20 @@ build/
 !package.json
 !tsconfig.json
 !package-lock.json
+
+# Sensitive data directories
+# COI disclosure review project data
+/projects/011-disclosure-policy-review/data/
+/projects/011-disclosure-policy-review/data/*
+/projects/011-disclosure-policy-review/output/
+/projects/011-disclosure-policy-review/output/*
+
+# Any CSV files with sensitive data
+/projects/011-disclosure-policy-review/*.csv
+/projects/011-disclosure-policy-review/**/*.csv
+
+# Temporary data files
+*.tmp
+*.cache
+*.pkl
+*.parquet

@@ -1,0 +1,674 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Disclosure Forms Showcase - Conflixis Healthcare</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="../../docs/design-system/conflixis-design-system/config/globals.css">
+    <style>
+        :root {
+            --conflixis-green: #0c343a;
+            --conflixis-gold: #eab96d;
+            --conflixis-blue: #4c94ed;
+            --conflixis-light-blue: #e6f3ff;
+            --conflixis-light-gold: #fdf6ea;
+        }
+        
+        .conflixis-gradient {
+            background: linear-gradient(135deg, var(--conflixis-green) 0%, #1a4a51 100%);
+        }
+        
+        .category-card {
+            transition: all 0.3s ease;
+            border-left: 4px solid transparent;
+        }
+        
+        .category-external { border-left-color: #4c94ed; }
+        .category-financial { border-left-color: #eab96d; }
+        .category-open-payments { border-left-color: #10b981; }
+        .category-political { border-left-color: #8b5cf6; }
+        .category-legal { border-left-color: #ef4444; }
+        
+        .disclosure-type-badge {
+            display: inline-block;
+            padding: 0.25rem 0.75rem;
+            border-radius: 9999px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            transition: all 0.2s ease;
+        }
+        
+        .disclosure-type-badge:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 1rem;
+        }
+        
+        .form-preview {
+            background: white;
+            border-radius: 0.5rem;
+            padding: 1.5rem;
+            margin-bottom: 1rem;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+        
+        .form-preview:hover {
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+            transform: translateY(-2px);
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Header with Conflixis Branding -->
+    <div class="conflixis-gradient text-white py-8">
+        <div class="container mx-auto px-4">
+            <div class="flex items-center justify-between">
+                <div>
+                    <h1 class="text-3xl font-bold mb-2">Disclosure Forms Showcase</h1>
+                    <p class="text-gray-200">2025 Texas Health COI Survey - Complete Form Matrix</p>
+                </div>
+                <div class="text-right">
+                    <div class="text-2xl font-bold">1,274</div>
+                    <div class="text-sm text-gray-200">Total Disclosures</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Key Metrics -->
+    <div class="container mx-auto px-4 -mt-6">
+        <div class="bg-white rounded-lg shadow-lg p-6 mb-8">
+            <div class="stats-grid">
+                <div class="text-center">
+                    <div class="text-3xl font-bold text-gray-800">5</div>
+                    <div class="text-sm text-gray-600">Categories</div>
+                </div>
+                <div class="text-center">
+                    <div class="text-3xl font-bold text-gray-800">12</div>
+                    <div class="text-sm text-gray-600">Disclosure Types</div>
+                </div>
+                <div class="text-center">
+                    <div class="text-3xl font-bold text-gray-800">831</div>
+                    <div class="text-sm text-gray-600">Unique Reporters</div>
+                </div>
+                <div class="text-center">
+                    <div class="text-3xl font-bold text-green-600">89.2%</div>
+                    <div class="text-sm text-gray-600">Categorized</div>
+                </div>
+                <div class="text-center">
+                    <div class="text-3xl font-bold" style="color: var(--conflixis-gold);">$20.2M</div>
+                    <div class="text-sm text-gray-600">Total Value</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Categories × Disclosure Types Matrix -->
+    <div class="container mx-auto px-4 pb-8">
+        
+        <!-- 1. External Roles & Relationships -->
+        <div class="category-card category-external bg-white rounded-lg shadow-lg p-6 mb-6">
+            <div class="flex items-center justify-between mb-4">
+                <h2 class="text-xl font-bold text-gray-800 flex items-center">
+                    <span class="w-3 h-3 bg-blue-500 rounded-full mr-3"></span>
+                    External Roles & Relationships
+                </h2>
+                <div class="text-sm text-gray-600">
+                    <span class="font-bold">661 disclosures</span> | 51.9% | 565 reporters
+                </div>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+                <!-- Related Parties Form -->
+                <div class="form-preview">
+                    <div class="flex justify-between items-start mb-3">
+                        <h3 class="font-semibold text-gray-700">Related Parties</h3>
+                        <span class="disclosure-type-badge bg-blue-100 text-blue-700">572</span>
+                    </div>
+                    <div class="text-sm text-gray-600 mb-3">
+                        Family members employed by Texas Health entities
+                    </div>
+                    <div class="border-t pt-3">
+                        <div class="text-xs text-gray-500 mb-2">Required Fields:</div>
+                        <div class="space-y-1">
+                            <div class="text-xs">• First & Last Name</div>
+                            <div class="text-xs">• Entity Location (e.g., THFW)</div>
+                            <div class="text-xs">• Job Title</div>
+                        </div>
+                    </div>
+                    <div class="mt-3 p-2 bg-blue-50 rounded">
+                        <div class="text-xs font-semibold text-gray-600 mb-1">Real Example:</div>
+                        <div class="text-xs text-gray-700">
+                            <div><span class="font-medium">Reporter:</span> Zachary Sypert</div>
+                            <div><span class="font-medium">Related Party:</span> Morgan Peninger</div>
+                            <div><span class="font-medium">Location:</span> THFW (Texas Health Fort Worth)</div>
+                            <div><span class="font-medium">Job:</span> CST</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Governance Form -->
+                <div class="form-preview">
+                    <div class="flex justify-between items-start mb-3">
+                        <h3 class="font-semibold text-gray-700">Governance/Director Fees</h3>
+                        <span class="disclosure-type-badge bg-blue-100 text-blue-700">56</span>
+                    </div>
+                    <div class="text-sm text-gray-600 mb-3">
+                        Board positions and director compensation
+                    </div>
+                    <div class="border-t pt-3">
+                        <div class="text-xs text-gray-500 mb-2">Required Fields:</div>
+                        <div class="space-y-1">
+                            <div class="text-xs">• Organization Name</div>
+                            <div class="text-xs">• Position/Role</div>
+                            <div class="text-xs">• Compensation Amount</div>
+                        </div>
+                    </div>
+                    <div class="mt-3 p-2 bg-blue-50 rounded">
+                        <div class="text-xs font-semibold text-gray-600 mb-1">Real Examples:</div>
+                        <div class="text-xs text-gray-700">
+                            <div>• Compassus Hospice</div>
+                            <div>• Three Oaks Hospice</div>
+                            <div>• Compassion Counseling Center</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Other Activities Form -->
+                <div class="form-preview">
+                    <div class="flex justify-between items-start mb-3">
+                        <h3 class="font-semibold text-gray-700">Other Activities</h3>
+                        <span class="disclosure-type-badge bg-blue-100 text-blue-700">33</span>
+                    </div>
+                    <div class="text-sm text-gray-600 mb-3">
+                        External professional activities and roles
+                    </div>
+                    <div class="border-t pt-3">
+                        <div class="text-xs text-gray-500 mb-2">Required Fields:</div>
+                        <div class="space-y-1">
+                            <div class="text-xs">• Activity Description</div>
+                            <div class="text-xs">• Organization</div>
+                            <div class="text-xs">• Time Commitment</div>
+                        </div>
+                    </div>
+                    <div class="mt-3 p-2 bg-blue-50 rounded">
+                        <div class="text-xs font-semibold text-gray-600 mb-1">Real Examples:</div>
+                        <div class="text-xs text-gray-700">
+                            <div>• Curative</div>
+                            <div>• Starweaver</div>
+                            <div>• OBGYN Associates of Dallas</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- 2. Financial & Investment Interests -->
+        <div class="category-card category-financial bg-white rounded-lg shadow-lg p-6 mb-6">
+            <div class="flex items-center justify-between mb-4">
+                <h2 class="text-xl font-bold text-gray-800 flex items-center">
+                    <span class="w-3 h-3 bg-yellow-500 rounded-full mr-3"></span>
+                    Financial & Investment Interests
+                </h2>
+                <div class="text-sm text-gray-600">
+                    <span class="font-bold">435 disclosures</span> | 34.1% | 269 reporters
+                </div>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+                <!-- Ownership Form -->
+                <div class="form-preview">
+                    <div class="flex justify-between items-start mb-3">
+                        <h3 class="font-semibold text-gray-700">Ownership/Investment</h3>
+                        <span class="disclosure-type-badge bg-yellow-100 text-yellow-700">184</span>
+                    </div>
+                    <div class="text-sm text-gray-600 mb-3">
+                        Ownership in vendors, competitors, or joint ventures
+                    </div>
+                    <div class="border-t pt-3">
+                        <div class="text-xs text-gray-500 mb-2">Required Fields:</div>
+                        <div class="space-y-1">
+                            <div class="text-xs">• Company Name</div>
+                            <div class="text-xs">• Ownership %/Value</div>
+                            <div class="text-xs">• Relationship Type</div>
+                        </div>
+                    </div>
+                    <div class="mt-3 p-2 bg-yellow-50 rounded">
+                        <div class="text-xs font-semibold text-gray-600 mb-1">Real Data:</div>
+                        <div class="text-xs text-gray-700">
+                            <div><span class="font-medium">Average:</span> $231,011</div>
+                            <div><span class="font-medium">Max:</span> $1,617,280</div>
+                            <div><span class="font-medium">Examples:</span> Occupational Health Solutions, Texas Health Southlake</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Remuneration Form -->
+                <div class="form-preview">
+                    <div class="flex justify-between items-start mb-3">
+                        <h3 class="font-semibold text-gray-700">Receipt of Remuneration</h3>
+                        <span class="disclosure-type-badge bg-yellow-100 text-yellow-700">174</span>
+                    </div>
+                    <div class="text-sm text-gray-600 mb-3">
+                        Gifts, meals, or other value received
+                    </div>
+                    <div class="border-t pt-3">
+                        <div class="text-xs text-gray-500 mb-2">Required Fields:</div>
+                        <div class="space-y-1">
+                            <div class="text-xs">• Company Name</div>
+                            <div class="text-xs">• Type (Food, Gift, etc.)</div>
+                            <div class="text-xs">• Value</div>
+                        </div>
+                    </div>
+                    <div class="mt-3 p-2 bg-yellow-50 rounded">
+                        <div class="text-xs font-semibold text-gray-600 mb-1">Real Example:</div>
+                        <div class="text-xs text-gray-700">
+                            <div><span class="font-medium">Reporter:</span> Audrey Puentes</div>
+                            <div><span class="font-medium">Company:</span> Natera</div>
+                            <div><span class="font-medium">Type:</span> Food and Beverage</div>
+                            <div><span class="font-medium">Note:</span> "Please refer inquiries to Janece McClinton..."</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Compensation Form -->
+                <div class="form-preview">
+                    <div class="flex justify-between items-start mb-3">
+                        <h3 class="font-semibold text-gray-700">Receipt of Compensation</h3>
+                        <span class="disclosure-type-badge bg-yellow-100 text-yellow-700">72</span>
+                    </div>
+                    <div class="text-sm text-gray-600 mb-3">
+                        Direct compensation for services
+                    </div>
+                    <div class="border-t pt-3">
+                        <div class="text-xs text-gray-500 mb-2">Required Fields:</div>
+                        <div class="space-y-1">
+                            <div class="text-xs">• Payer Organization</div>
+                            <div class="text-xs">• Service Provided</div>
+                            <div class="text-xs">• Compensation Amount</div>
+                        </div>
+                    </div>
+                    <div class="mt-3 p-2 bg-yellow-50 rounded">
+                        <div class="text-xs font-semibold text-gray-600 mb-1">Real Data:</div>
+                        <div class="text-xs text-gray-700">
+                            <div><span class="font-medium">Average:</span> $93,508</div>
+                            <div><span class="font-medium">Max:</span> $600,000</div>
+                            <div><span class="font-medium">Examples:</span> Texas Medical Diagnostics, Quest Diagnostics</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Charitable Contributions -->
+                <div class="form-preview">
+                    <div class="flex justify-between items-start mb-3">
+                        <h3 class="font-semibold text-gray-700">Charitable Contributions</h3>
+                        <span class="disclosure-type-badge bg-yellow-100 text-yellow-700">5</span>
+                    </div>
+                    <div class="text-sm text-gray-600 mb-3">
+                        Charitable giving disclosures (Part 1 & 2)
+                    </div>
+                    <div class="border-t pt-3">
+                        <div class="text-xs text-gray-500 mb-2">Required Fields:</div>
+                        <div class="space-y-1">
+                            <div class="text-xs">• Charity Name</div>
+                            <div class="text-xs">• Contribution Amount</div>
+                            <div class="text-xs">• Purpose/Designation</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- 3. Open Payments -->
+        <div class="category-card category-open-payments bg-white rounded-lg shadow-lg p-6 mb-6">
+            <div class="flex items-center justify-between mb-4">
+                <h2 class="text-xl font-bold text-gray-800 flex items-center">
+                    <span class="w-3 h-3 bg-green-500 rounded-full mr-3"></span>
+                    Open Payments (CMS Imports)
+                </h2>
+                <div class="text-sm text-gray-600">
+                    <span class="font-bold">138 disclosures</span> | 10.8% | 86 reporters
+                </div>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+                <!-- Open Payments Import -->
+                <div class="form-preview">
+                    <div class="flex justify-between items-start mb-3">
+                        <h3 class="font-semibold text-gray-700">Open Payments Import</h3>
+                        <span class="disclosure-type-badge bg-green-100 text-green-700">138</span>
+                    </div>
+                    <div class="text-sm text-gray-600 mb-3">
+                        Automated imports from CMS database
+                    </div>
+                    <div class="border-t pt-3">
+                        <div class="text-xs text-gray-500 mb-2">Transaction Details:</div>
+                        <div class="space-y-1">
+                            <div class="text-xs">• Payment Date & Amount</div>
+                            <div class="text-xs">• Payment Nature</div>
+                            <div class="text-xs">• Submitting Entity</div>
+                            <div class="text-xs">• CMS Record ID</div>
+                        </div>
+                    </div>
+                    <div class="mt-3 p-2 bg-green-50 rounded">
+                        <div class="text-xs font-semibold text-gray-600 mb-1">Top Companies by Count:</div>
+                        <div class="text-xs text-gray-700">
+                            <div>• Intuitive Surgical (24 imports, avg $13,410)</div>
+                            <div>• Medtronic (8 imports, avg $5,378)</div>
+                            <div>• Abbott Labs (8 imports, avg $3,536)</div>
+                            <div>• Boston Scientific (4 imports, avg $15,772)</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Sample Transaction Details -->
+                <div class="form-preview col-span-2">
+                    <h3 class="font-semibold text-gray-700 mb-3">Sample Transaction Structure</h3>
+                    <div class="bg-gray-50 rounded p-3 text-xs font-mono">
+                        <div class="text-green-600">// Real Transaction: Dr. Quanita Crable - MIMEDX</div>
+                        <div>{</div>
+                        <div class="pl-4">"reporter": "Quanita Crable",</div>
+                        <div class="pl-4">"company": "MIMEDX Group, Inc.",</div>
+                        <div class="pl-4">"total_value": 1547.62,</div>
+                        <div class="pl-4">"transactions": [</div>
+                        <div class="pl-8">{"date": "2024-05-01", "nature": "Consulting Fee", "amount": 400},</div>
+                        <div class="pl-8">{"date": "2024-06-20", "nature": "Food and Beverage", "amount": 147.62},</div>
+                        <div class="pl-8">{"date": "2024-08-01", "nature": "Consulting Fee", "amount": 400}</div>
+                        <div class="pl-4">],</div>
+                        <div class="pl-4">"recipient_npi": "1376735530"</div>
+                        <div>}</div>
+                    </div>
+                    <div class="mt-3 text-xs text-gray-600">
+                        <span class="font-semibold">138 total imports</span> | Average: $17,642 | Total: $2.4M
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- 4. Political, Community & Advocacy -->
+        <div class="category-card category-political bg-white rounded-lg shadow-lg p-6 mb-6">
+            <div class="flex items-center justify-between mb-4">
+                <h2 class="text-xl font-bold text-gray-800 flex items-center">
+                    <span class="w-3 h-3 bg-purple-500 rounded-full mr-3"></span>
+                    Political, Community & Advocacy Activities
+                </h2>
+                <div class="text-sm text-gray-600">
+                    <span class="font-bold">36 disclosures</span> | 2.8% | 34 reporters
+                </div>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-4">
+                <!-- Elected Office Form -->
+                <div class="form-preview">
+                    <div class="flex justify-between items-start mb-3">
+                        <h3 class="font-semibold text-gray-700">Elected Office</h3>
+                        <span class="disclosure-type-badge bg-purple-100 text-purple-700">36</span>
+                    </div>
+                    <div class="text-sm text-gray-600 mb-3">
+                        Elected or appointed government positions
+                    </div>
+                    <div class="border-t pt-3">
+                        <div class="text-xs text-gray-500 mb-2">Required Fields:</div>
+                        <div class="space-y-1">
+                            <div class="text-xs">• Office/Position Title</div>
+                            <div class="text-xs">• Jurisdiction/Location</div>
+                            <div class="text-xs">• Term Dates</div>
+                            <div class="text-xs">• Compensation (if any)</div>
+                        </div>
+                    </div>
+                    <div class="mt-3 p-2 bg-purple-50 rounded">
+                        <div class="text-xs font-semibold text-gray-600 mb-1">Real Data:</div>
+                        <div class="text-xs text-gray-700">
+                            <div><span class="font-medium">Count:</span> 36 disclosures</div>
+                            <div><span class="font-medium">Reporters:</span> 34 unique individuals</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- 5. Legal, Regulatory & Compliance -->
+        <div class="category-card category-legal bg-white rounded-lg shadow-lg p-6 mb-6">
+            <div class="flex items-center justify-between mb-4">
+                <h2 class="text-xl font-bold text-gray-800 flex items-center">
+                    <span class="w-3 h-3 bg-red-500 rounded-full mr-3"></span>
+                    Legal, Regulatory, Ethical & Compliance Matters
+                </h2>
+                <div class="text-sm text-gray-600">
+                    <span class="font-bold">4 disclosures</span> | 0.3% | 3 reporters
+                </div>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-4">
+                <!-- Legal Proceedings Form -->
+                <div class="form-preview">
+                    <div class="flex justify-between items-start mb-3">
+                        <h3 class="font-semibold text-gray-700">Legal Proceedings</h3>
+                        <span class="disclosure-type-badge bg-red-100 text-red-700">3</span>
+                    </div>
+                    <div class="text-sm text-gray-600 mb-3">
+                        Active legal matters or proceedings
+                    </div>
+                    <div class="border-t pt-3">
+                        <div class="text-xs text-gray-500 mb-2">Required Fields:</div>
+                        <div class="space-y-1">
+                            <div class="text-xs">• Case/Matter Description</div>
+                            <div class="text-xs">• Parties Involved</div>
+                            <div class="text-xs">• Status</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Awareness Form -->
+                <div class="form-preview">
+                    <div class="flex justify-between items-start mb-3">
+                        <h3 class="font-semibold text-gray-700">Awareness</h3>
+                        <span class="disclosure-type-badge bg-red-100 text-red-700">1</span>
+                    </div>
+                    <div class="text-sm text-gray-600 mb-3">
+                        Compliance awareness acknowledgments
+                    </div>
+                    <div class="border-t pt-3">
+                        <div class="text-xs text-gray-500 mb-2">Required Fields:</div>
+                        <div class="space-y-1">
+                            <div class="text-xs">• Matter Description</div>
+                            <div class="text-xs">• Acknowledgment</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Matrix Summary -->
+        <div class="bg-white rounded-lg shadow-lg p-6">
+            <h2 class="text-xl font-bold text-gray-800 mb-4">Matrix Summary</h2>
+            
+            <div class="overflow-x-auto">
+                <table class="min-w-full">
+                    <thead class="bg-gray-50">
+                        <tr>
+                            <th class="px-4 py-2 text-left text-xs font-medium text-gray-500 uppercase">Category</th>
+                            <th class="px-4 py-2 text-left text-xs font-medium text-gray-500 uppercase">Disclosure Types</th>
+                            <th class="px-4 py-2 text-center text-xs font-medium text-gray-500 uppercase">Count</th>
+                            <th class="px-4 py-2 text-center text-xs font-medium text-gray-500 uppercase">%</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-gray-200">
+                        <tr>
+                            <td class="px-4 py-3 font-medium">External Roles</td>
+                            <td class="px-4 py-3 text-sm">Related Parties, Governance, Other Activities</td>
+                            <td class="px-4 py-3 text-center font-bold">661</td>
+                            <td class="px-4 py-3 text-center">51.9%</td>
+                        </tr>
+                        <tr class="bg-gray-50">
+                            <td class="px-4 py-3 font-medium">Financial Interests</td>
+                            <td class="px-4 py-3 text-sm">Ownership, Remuneration, Compensation, Charitable</td>
+                            <td class="px-4 py-3 text-center font-bold">435</td>
+                            <td class="px-4 py-3 text-center">34.1%</td>
+                        </tr>
+                        <tr>
+                            <td class="px-4 py-3 font-medium">Open Payments</td>
+                            <td class="px-4 py-3 text-sm">CMS Import Transactions</td>
+                            <td class="px-4 py-3 text-center font-bold">138</td>
+                            <td class="px-4 py-3 text-center">10.8%</td>
+                        </tr>
+                        <tr class="bg-gray-50">
+                            <td class="px-4 py-3 font-medium">Political/Community</td>
+                            <td class="px-4 py-3 text-sm">Elected Office</td>
+                            <td class="px-4 py-3 text-center font-bold">36</td>
+                            <td class="px-4 py-3 text-center">2.8%</td>
+                        </tr>
+                        <tr>
+                            <td class="px-4 py-3 font-medium">Legal/Compliance</td>
+                            <td class="px-4 py-3 text-sm">Legal Proceedings, Awareness</td>
+                            <td class="px-4 py-3 text-center font-bold">4</td>
+                            <td class="px-4 py-3 text-center">0.3%</td>
+                        </tr>
+                        <tr class="bg-green-50 font-bold">
+                            <td class="px-4 py-3">TOTAL</td>
+                            <td class="px-4 py-3">12 Unique Types</td>
+                            <td class="px-4 py-3 text-center text-green-600">1,274</td>
+                            <td class="px-4 py-3 text-center text-green-600">100%</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            
+            <div class="mt-6 p-4 bg-blue-50 rounded-lg">
+                <div class="flex items-start">
+                    <svg class="w-5 h-5 text-blue-600 mt-0.5 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd"/>
+                    </svg>
+                    <div class="text-sm text-blue-900">
+                        <div class="font-semibold mb-1">Form Matrix Formula:</div>
+                        <div class="font-mono">Categories (5) × Disclosure Types (12) = Disclosure Forms (1,274)</div>
+                        <div class="mt-2 text-xs">Note: Not all combinations exist - this is a sparse matrix where each disclosure has exactly one category and one type.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Top Reporters Section -->
+    <div class="container mx-auto px-4 pb-8">
+        <div class="bg-white rounded-lg shadow-lg p-6">
+            <h2 class="text-xl font-bold text-gray-800 mb-4">Top Reporters by Disclosure Count</h2>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+                <!-- Neil Patel -->
+                <div class="border rounded-lg p-4 bg-gray-50">
+                    <div class="flex justify-between items-start mb-2">
+                        <h3 class="font-semibold text-gray-700">Neil Patel</h3>
+                        <span class="bg-blue-100 text-blue-700 px-2 py-1 rounded text-xs font-bold">12</span>
+                    </div>
+                    <div class="text-xs text-gray-600 space-y-1">
+                        <div><span class="font-medium">Types:</span> Other Activities, Compensation, Governance</div>
+                        <div><span class="font-medium">Total Value:</span> $5,432</div>
+                    </div>
+                </div>
+                
+                <!-- Brian Gladnick -->
+                <div class="border rounded-lg p-4 bg-gray-50">
+                    <div class="flex justify-between items-start mb-2">
+                        <h3 class="font-semibold text-gray-700">Brian Gladnick</h3>
+                        <span class="bg-blue-100 text-blue-700 px-2 py-1 rounded text-xs font-bold">9</span>
+                    </div>
+                    <div class="text-xs text-gray-600 space-y-1">
+                        <div><span class="font-medium">Types:</span> Ownership/Investment</div>
+                        <div><span class="font-medium">Total Value:</span> $41,008</div>
+                    </div>
+                </div>
+                
+                <!-- Dale Yoo -->
+                <div class="border rounded-lg p-4 bg-gray-50">
+                    <div class="flex justify-between items-start mb-2">
+                        <h3 class="font-semibold text-gray-700">Dale Yoo</h3>
+                        <span class="bg-blue-100 text-blue-700 px-2 py-1 rounded text-xs font-bold">8</span>
+                    </div>
+                    <div class="text-xs text-gray-600 space-y-1">
+                        <div><span class="font-medium">Types:</span> Receipt of Remuneration</div>
+                        <div><span class="font-medium">Total Value:</span> $53,866</div>
+                    </div>
+                </div>
+                
+                <!-- Courtney Cartier -->
+                <div class="border rounded-lg p-4 bg-gray-50">
+                    <div class="flex justify-between items-start mb-2">
+                        <h3 class="font-semibold text-gray-700">Courtney Cartier</h3>
+                        <span class="bg-blue-100 text-blue-700 px-2 py-1 rounded text-xs font-bold">8</span>
+                    </div>
+                    <div class="text-xs text-gray-600 space-y-1">
+                        <div><span class="font-medium">Types:</span> Receipt of Remuneration</div>
+                        <div><span class="font-medium">Total Value:</span> $16,100</div>
+                    </div>
+                </div>
+                
+                <!-- Barclay Berdan -->
+                <div class="border rounded-lg p-4 bg-gray-50">
+                    <div class="flex justify-between items-start mb-2">
+                        <h3 class="font-semibold text-gray-700">Barclay Berdan</h3>
+                        <span class="bg-blue-100 text-blue-700 px-2 py-1 rounded text-xs font-bold">6</span>
+                    </div>
+                    <div class="text-xs text-gray-600 space-y-1">
+                        <div><span class="font-medium">Types:</span> Governance, Remuneration, Elected Office</div>
+                        <div><span class="font-medium">Total Value:</span> $10,590</div>
+                    </div>
+                </div>
+                
+                <!-- Daniel Sanders -->
+                <div class="border rounded-lg p-4 bg-gray-50">
+                    <div class="flex justify-between items-start mb-2">
+                        <h3 class="font-semibold text-gray-700">Daniel Sanders</h3>
+                        <span class="bg-blue-100 text-blue-700 px-2 py-1 rounded text-xs font-bold">6</span>
+                    </div>
+                    <div class="text-xs text-gray-600 space-y-1">
+                        <div><span class="font-medium">Types:</span> Ownership/Investment</div>
+                        <div><span class="font-medium">Total Value:</span> $75,850</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Footer -->
+    <div class="bg-gray-800 text-white py-6 mt-12">
+        <div class="container mx-auto px-4 text-center">
+            <img src="../../docs/design-system/conflixis-design-system/assets/logos/conflixis-logo-white.png" 
+                 alt="Conflixis" class="h-8 mx-auto mb-2">
+            <p class="text-sm text-gray-400">© 2025 Conflixis Healthcare Analytics</p>
+        </div>
+    </div>
+    
+    <script>
+        // Add interactivity if needed
+        document.addEventListener('DOMContentLoaded', function() {
+            // Animate numbers on load
+            const animateValue = (element, start, end, duration) => {
+                let startTimestamp = null;
+                const step = (timestamp) => {
+                    if (!startTimestamp) startTimestamp = timestamp;
+                    const progress = Math.min((timestamp - startTimestamp) / duration, 1);
+                    element.textContent = Math.floor(progress * (end - start) + start).toLocaleString();
+                    if (progress < 1) {
+                        window.requestAnimationFrame(step);
+                    }
+                };
+                window.requestAnimationFrame(step);
+            };
+            
+            // Animate the total disclosures number
+            const totalElement = document.querySelector('.text-2xl.font-bold');
+            if (totalElement) {
+                animateValue(totalElement, 0, 1274, 1500);
+            }
+        });
+    </script>
+</body>
+</html>

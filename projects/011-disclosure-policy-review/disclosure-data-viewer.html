@@ -1,0 +1,805 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Disclosure Data Viewer - COI Compliance System</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Configure Tailwind with Conflixis colors -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'conflixis-green': '#0c343a',
+                        'conflixis-light-green': '#93baab',
+                        'conflixis-white': '#ffffff',
+                        'conflixis-gray': '#d1d5db',
+                        'conflixis-gray-hover': '#b9bec4',
+                        'conflixis-ivory': '#f8f5ef',
+                        'conflixis-tan': '#c5bdae',
+                        'conflixis-mint': '#93baab',
+                        'conflixis-gold': '#eab96d',
+                        'conflixis-blue': '#4c94ed',
+                        'conflixis-red': '#fd7649',
+                        'conflixis-success-green': '#008000FF',
+                    },
+                    fontFamily: {
+                        'soehneLeicht': ['SoehneLeicht', 'sans-serif'],
+                        'soehneKraftig': ['SoehneKraftig', 'sans-serif'],
+                        'ivarDisplay': ['IvarDisplay', 'serif']
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- Fonts -->
+    <style>
+        @font-face {
+            font-family: 'SoehneLeicht';
+            src: url('../../docs/design-system/conflixis-design-system/assets/fonts/soehne-leicht.woff2') format('woff2');
+            font-weight: 300;
+            font-style: normal;
+        }
+        
+        @font-face {
+            font-family: 'SoehneKraftig';
+            src: url('../../docs/design-system/conflixis-design-system/assets/fonts/soehne-kraftig.woff2') format('woff2');
+            font-weight: 700;
+            font-style: normal;
+        }
+        
+        @font-face {
+            font-family: 'IvarDisplay';
+            src: url('../../docs/design-system/conflixis-design-system/assets/fonts/IvarDisplay-Regular.woff2') format('woff2');
+            font-weight: 400;
+            font-style: normal;
+        }
+        
+        body {
+            font-family: 'SoehneLeicht', sans-serif;
+            background-color: #f8f5ef;
+            color: #0c343a;
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'IvarDisplay', serif;
+            color: #0c343a;
+        }
+        
+        /* Animations */
+        @keyframes fade-in {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .animate-fade-in {
+            animation: fade-in 0.6s ease-out forwards;
+        }
+        
+        /* Custom scrollbar */
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+        
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+        
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: #93baab;
+            border-radius: 4px;
+        }
+        
+        .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+            background: #0c343a;
+        }
+        
+        /* Modal backdrop */
+        .modal-backdrop {
+            background-color: rgba(0, 0, 0, 0.5);
+            backdrop-filter: blur(4px);
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg sticky top-0 z-40">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center space-x-4">
+                    <img src="../../docs/design-system/conflixis-design-system/assets/logos/conflixis-logo.png" 
+                         alt="Conflixis" class="h-10 w-10">
+                    <div>
+                        <h1 class="text-xl font-soehneKraftig text-conflixis-green">Disclosure Data Viewer</h1>
+                        <p class="text-xs text-gray-600">Detailed Provider Disclosure Records</p>
+                    </div>
+                </div>
+                <div class="flex items-center space-x-4">
+                    <a href="dashboard-coi-compliance-overview.html" 
+                       class="flex items-center gap-2 px-4 py-2 bg-conflixis-green text-white rounded-lg hover:bg-opacity-90 transition-all">
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+                        </svg>
+                        Back to Dashboard
+                    </a>
+                    <button onclick="exportData()" 
+                            class="px-4 py-2 border border-conflixis-green text-conflixis-green rounded-lg hover:bg-conflixis-green hover:text-white transition-all">
+                        Export Data
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Filters Section -->
+    <section class="py-6">
+        <div class="container mx-auto px-6">
+            <div class="bg-white rounded-lg shadow p-6">
+                <div class="flex flex-wrap gap-4 items-end">
+                    <!-- Search -->
+                    <div class="flex-1 min-w-[200px]">
+                        <label class="block text-sm font-soehneKraftig text-gray-700 mb-1">Search Provider</label>
+                        <input type="text" 
+                               id="searchInput"
+                               placeholder="Name, NPI, or Entity..."
+                               class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-conflixis-green">
+                    </div>
+                    
+                    <!-- Risk Tier Filter -->
+                    <div class="min-w-[150px]">
+                        <label class="block text-sm font-soehneKraftig text-gray-700 mb-1">Risk Tier</label>
+                        <select id="riskFilter" 
+                                class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-conflixis-green">
+                            <option value="">All Tiers</option>
+                            <option value="low">Low Risk</option>
+                            <option value="moderate">Moderate Risk</option>
+                            <option value="high">High Risk</option>
+                            <option value="critical">Critical Risk</option>
+                        </select>
+                    </div>
+                    
+                    <!-- Review Status Filter -->
+                    <div class="min-w-[150px]">
+                        <label class="block text-sm font-soehneKraftig text-gray-700 mb-1">Review Status</label>
+                        <select id="statusFilter" 
+                                class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-conflixis-green">
+                            <option value="">All Status</option>
+                            <option value="pending">Pending Review</option>
+                            <option value="in_review">In Review</option>
+                            <option value="approved">Approved</option>
+                            <option value="requires_management">Requires Management Plan</option>
+                        </select>
+                    </div>
+                    
+                    <!-- Management Plan Filter -->
+                    <div class="min-w-[150px]">
+                        <label class="block text-sm font-soehneKraftig text-gray-700 mb-1">Management Plan</label>
+                        <select id="planFilter" 
+                                class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-conflixis-green">
+                            <option value="">All</option>
+                            <option value="required">Plan Required</option>
+                            <option value="not_required">No Plan Required</option>
+                        </select>
+                    </div>
+                    
+                    <!-- Apply Filters Button -->
+                    <button onclick="applyFilters()" 
+                            class="px-6 py-2 bg-conflixis-blue text-white rounded-lg hover:bg-opacity-90 transition-all">
+                        Apply Filters
+                    </button>
+                    
+                    <!-- Clear Filters Button -->
+                    <button onclick="clearFilters()" 
+                            class="px-4 py-2 text-conflixis-green hover:text-conflixis-blue transition-all">
+                        Clear
+                    </button>
+                </div>
+                
+                <!-- Active Filters Display -->
+                <div id="activeFilters" class="mt-4 flex flex-wrap gap-2 hidden">
+                    <!-- Active filter tags will be added here -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Summary Stats -->
+    <section class="pb-6">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4">
+                <div class="bg-white rounded-lg shadow p-4">
+                    <div class="text-2xl font-soehneKraftig text-conflixis-green" id="totalCount">0</div>
+                    <div class="text-xs text-gray-600">Total Disclosures</div>
+                </div>
+                <div class="bg-white rounded-lg shadow p-4">
+                    <div class="text-2xl font-soehneKraftig text-green-600" id="lowRiskCount">0</div>
+                    <div class="text-xs text-gray-600">Low Risk</div>
+                </div>
+                <div class="bg-white rounded-lg shadow p-4">
+                    <div class="text-2xl font-soehneKraftig text-yellow-600" id="moderateRiskCount">0</div>
+                    <div class="text-xs text-gray-600">Moderate Risk</div>
+                </div>
+                <div class="bg-white rounded-lg shadow p-4">
+                    <div class="text-2xl font-soehneKraftig text-orange-600" id="highRiskCount">0</div>
+                    <div class="text-xs text-gray-600">High Risk</div>
+                </div>
+                <div class="bg-white rounded-lg shadow p-4">
+                    <div class="text-2xl font-soehneKraftig text-red-600" id="criticalRiskCount">0</div>
+                    <div class="text-xs text-gray-600">Critical Risk</div>
+                </div>
+                <div class="bg-white rounded-lg shadow p-4">
+                    <div class="text-2xl font-soehneKraftig text-conflixis-blue" id="pendingReviewCount">0</div>
+                    <div class="text-xs text-gray-600">Pending Review</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Data Table -->
+    <section class="pb-8">
+        <div class="container mx-auto px-6">
+            <div class="bg-white rounded-lg shadow">
+                <div class="p-6 border-b border-gray-200">
+                    <div class="flex justify-between items-center">
+                        <h2 class="text-xl font-bold">Disclosure Records</h2>
+                        <div class="text-sm text-gray-600">
+                            Showing <span id="recordsShowing">0</span> of <span id="recordsTotal">0</span> records
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="overflow-x-auto custom-scrollbar">
+                    <table class="w-full min-w-[1200px]">
+                        <thead class="bg-conflixis-tan sticky top-0 z-10">
+                            <tr>
+                                <th class="px-4 py-3 text-left text-xs font-soehneKraftig text-gray-700 uppercase cursor-pointer hover:bg-conflixis-tan hover:bg-opacity-80" 
+                                    onclick="sortTable('provider_name')">
+                                    <div class="flex items-center gap-1">
+                                        Provider
+                                        <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16V4m0 0L3 8m4-4l4 4m6 0v12m0 0l4-4m-4 4l-4-4" />
+                                        </svg>
+                                    </div>
+                                </th>
+                                <th class="px-4 py-3 text-left text-xs font-soehneKraftig text-gray-700 uppercase">NPI</th>
+                                <th class="px-4 py-3 text-left text-xs font-soehneKraftig text-gray-700 uppercase">Job Title</th>
+                                <th class="px-4 py-3 text-left text-xs font-soehneKraftig text-gray-700 uppercase">Entity</th>
+                                <th class="px-4 py-3 text-left text-xs font-soehneKraftig text-gray-700 uppercase">Relationship</th>
+                                <th class="px-4 py-3 text-left text-xs font-soehneKraftig text-gray-700 uppercase cursor-pointer hover:bg-conflixis-tan hover:bg-opacity-80" 
+                                    onclick="sortTable('financial_amount')">
+                                    <div class="flex items-center gap-1">
+                                        Amount
+                                        <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16V4m0 0L3 8m4-4l4 4m6 0v12m0 0l4-4m-4 4l-4-4" />
+                                        </svg>
+                                    </div>
+                                </th>
+                                <th class="px-4 py-3 text-left text-xs font-soehneKraftig text-gray-700 uppercase">OP Total</th>
+                                <th class="px-4 py-3 text-left text-xs font-soehneKraftig text-gray-700 uppercase cursor-pointer hover:bg-conflixis-tan hover:bg-opacity-80" 
+                                    onclick="sortTable('risk_tier')">
+                                    <div class="flex items-center gap-1">
+                                        Risk Tier
+                                        <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16V4m0 0L3 8m4-4l4 4m6 0v12m0 0l4-4m-4 4l-4-4" />
+                                        </svg>
+                                    </div>
+                                </th>
+                                <th class="px-4 py-3 text-left text-xs font-soehneKraftig text-gray-700 uppercase">Status</th>
+                                <th class="px-4 py-3 text-left text-xs font-soehneKraftig text-gray-700 uppercase">Mgmt Plan</th>
+                                <th class="px-4 py-3 text-left text-xs font-soehneKraftig text-gray-700 uppercase">Last Review</th>
+                                <th class="px-4 py-3 text-center text-xs font-soehneKraftig text-gray-700 uppercase">Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody id="dataTableBody" class="divide-y divide-gray-200">
+                            <!-- Data rows will be inserted here by JavaScript -->
+                        </tbody>
+                    </table>
+                </div>
+                
+                <!-- Pagination -->
+                <div class="p-4 border-t border-gray-200">
+                    <div class="flex justify-between items-center">
+                        <div class="flex gap-2">
+                            <select id="pageSize" onchange="changePageSize()" 
+                                    class="px-3 py-1 border border-gray-300 rounded-lg text-sm">
+                                <option value="10">10 per page</option>
+                                <option value="25" selected>25 per page</option>
+                                <option value="50">50 per page</option>
+                                <option value="100">100 per page</option>
+                            </select>
+                        </div>
+                        <div class="flex gap-2" id="pagination">
+                            <!-- Pagination buttons will be inserted here -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Detail Modal -->
+    <div id="detailModal" class="fixed inset-0 z-50 hidden">
+        <div class="modal-backdrop fixed inset-0" onclick="closeModal()"></div>
+        <div class="flex items-center justify-center min-h-screen p-4">
+            <div class="bg-white rounded-lg shadow-2xl max-w-4xl w-full max-h-[90vh] overflow-y-auto relative animate-fade-in">
+                <div class="sticky top-0 bg-white border-b border-gray-200 p-6 flex justify-between items-start">
+                    <h3 class="text-2xl font-bold text-conflixis-green">Disclosure Details</h3>
+                    <button onclick="closeModal()" class="text-gray-500 hover:text-gray-700">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                    </button>
+                </div>
+                <div id="modalContent" class="p-6">
+                    <!-- Modal content will be inserted here -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Sample data structure - in production this would be loaded from JSON file
+        let disclosureData = {
+            metadata: {
+                generated: "2025-01-08",
+                record_count: 0,
+                data_range: "2024-01-01 to 2024-12-31"
+            },
+            disclosures: []
+        };
+
+        // Current state
+        let currentPage = 1;
+        let pageSize = 25;
+        let filteredData = [];
+        let sortColumn = null;
+        let sortDirection = 'asc';
+
+        // Generate sample data for demonstration
+        function generateSampleData() {
+            const names = ['Dr. Jane Smith', 'Dr. Robert Johnson', 'Dr. Emily Davis', 'Dr. Michael Brown', 
+                          'Dr. Sarah Wilson', 'Dr. David Martinez', 'Dr. Lisa Anderson', 'Dr. James Taylor',
+                          'Dr. Patricia Thomas', 'Dr. Christopher Lee', 'Dr. Nancy White', 'Dr. Daniel Harris'];
+            const specialties = ['Cardiology', 'Orthopedics', 'Neurology', 'Oncology', 'Radiology', 'Surgery'];
+            const entities = ['MedDevice Corp', 'Pharma Solutions Inc', 'Regional Health System', 
+                            'BioTech Innovations', 'Medical Supply Co', 'Healthcare Partners LLC'];
+            const relationships = ['Consultant', 'Speaker', 'Advisory Board', 'Research Grant', 'Board Member', 'Equity Interest'];
+            const statuses = ['pending', 'in_review', 'approved', 'requires_management'];
+            
+            const data = [];
+            for (let i = 0; i < 150; i++) {
+                const financialAmount = Math.floor(Math.random() * 150000) + 500;
+                const riskTier = financialAmount < 5000 ? 'low' : 
+                               financialAmount < 25000 ? 'moderate' : 
+                               financialAmount < 100000 ? 'high' : 'critical';
+                
+                data.push({
+                    id: i + 1,
+                    provider_name: names[Math.floor(Math.random() * names.length)],
+                    provider_npi: '1' + Math.floor(Math.random() * 900000000 + 100000000),
+                    job_title: specialties[Math.floor(Math.random() * specialties.length)],
+                    department: 'Department ' + (Math.floor(Math.random() * 5) + 1),
+                    entity_name: entities[Math.floor(Math.random() * entities.length)],
+                    relationship_type: relationships[Math.floor(Math.random() * relationships.length)],
+                    financial_amount: financialAmount,
+                    open_payments_total: Math.floor(financialAmount * 0.8),
+                    open_payments_matched: Math.random() > 0.3,
+                    risk_tier: riskTier,
+                    risk_score: Math.floor(Math.random() * 100),
+                    review_status: statuses[Math.floor(Math.random() * statuses.length)],
+                    management_plan_required: riskTier === 'high' || riskTier === 'critical',
+                    last_review_date: new Date(2024, Math.floor(Math.random() * 12), Math.floor(Math.random() * 28) + 1).toISOString().split('T')[0],
+                    next_review_date: new Date(2025, Math.floor(Math.random() * 6), Math.floor(Math.random() * 28) + 1).toISOString().split('T')[0],
+                    disclosure_date: new Date(2024, Math.floor(Math.random() * 12), Math.floor(Math.random() * 28) + 1).toISOString().split('T')[0],
+                    relationship_start_date: new Date(2023, Math.floor(Math.random() * 12), Math.floor(Math.random() * 28) + 1).toISOString().split('T')[0],
+                    relationship_ongoing: Math.random() > 0.3,
+                    decision_authority_level: ['staff', 'manager', 'director', 'executive'][Math.floor(Math.random() * 4)]
+                });
+            }
+            
+            return {
+                metadata: {
+                    generated: new Date().toISOString().split('T')[0],
+                    record_count: data.length,
+                    data_range: "2024-01-01 to 2024-12-31"
+                },
+                disclosures: data
+            };
+        }
+
+        // Load data (from JSON file or generate sample)
+        async function loadData() {
+            try {
+                // Try to load from staging folder
+                const response = await fetch('data/staging/disclosure_data.json');
+                if (response.ok) {
+                    disclosureData = await response.json();
+                } else {
+                    // Use sample data if file doesn't exist
+                    disclosureData = generateSampleData();
+                }
+            } catch (error) {
+                // Use sample data if fetch fails
+                console.log('Using sample data');
+                disclosureData = generateSampleData();
+            }
+            
+            filteredData = [...disclosureData.disclosures];
+            updateDisplay();
+            updateStats();
+        }
+
+        // Apply filters
+        function applyFilters() {
+            const searchTerm = document.getElementById('searchInput').value.toLowerCase();
+            const riskFilter = document.getElementById('riskFilter').value;
+            const statusFilter = document.getElementById('statusFilter').value;
+            const planFilter = document.getElementById('planFilter').value;
+            
+            filteredData = disclosureData.disclosures.filter(record => {
+                // Search filter
+                if (searchTerm) {
+                    const searchMatch = 
+                        record.provider_name.toLowerCase().includes(searchTerm) ||
+                        record.provider_npi.includes(searchTerm) ||
+                        record.entity_name.toLowerCase().includes(searchTerm) ||
+                        record.job_title.toLowerCase().includes(searchTerm);
+                    if (!searchMatch) return false;
+                }
+                
+                // Risk tier filter
+                if (riskFilter && record.risk_tier !== riskFilter) return false;
+                
+                // Status filter
+                if (statusFilter && record.review_status !== statusFilter) return false;
+                
+                // Management plan filter
+                if (planFilter) {
+                    if (planFilter === 'required' && !record.management_plan_required) return false;
+                    if (planFilter === 'not_required' && record.management_plan_required) return false;
+                }
+                
+                return true;
+            });
+            
+            currentPage = 1;
+            updateDisplay();
+            updateStats();
+            showActiveFilters();
+        }
+
+        // Clear filters
+        function clearFilters() {
+            document.getElementById('searchInput').value = '';
+            document.getElementById('riskFilter').value = '';
+            document.getElementById('statusFilter').value = '';
+            document.getElementById('planFilter').value = '';
+            filteredData = [...disclosureData.disclosures];
+            currentPage = 1;
+            updateDisplay();
+            updateStats();
+            document.getElementById('activeFilters').classList.add('hidden');
+        }
+
+        // Show active filters
+        function showActiveFilters() {
+            const container = document.getElementById('activeFilters');
+            container.innerHTML = '';
+            let hasFilters = false;
+            
+            const searchTerm = document.getElementById('searchInput').value;
+            if (searchTerm) {
+                container.innerHTML += `<span class="px-3 py-1 bg-conflixis-mint text-white rounded-full text-sm">Search: ${searchTerm}</span>`;
+                hasFilters = true;
+            }
+            
+            const riskFilter = document.getElementById('riskFilter').value;
+            if (riskFilter) {
+                container.innerHTML += `<span class="px-3 py-1 bg-conflixis-mint text-white rounded-full text-sm">Risk: ${riskFilter}</span>`;
+                hasFilters = true;
+            }
+            
+            container.classList.toggle('hidden', !hasFilters);
+        }
+
+        // Sort table
+        function sortTable(column) {
+            if (sortColumn === column) {
+                sortDirection = sortDirection === 'asc' ? 'desc' : 'asc';
+            } else {
+                sortColumn = column;
+                sortDirection = 'asc';
+            }
+            
+            filteredData.sort((a, b) => {
+                let aVal = a[column];
+                let bVal = b[column];
+                
+                if (typeof aVal === 'string') {
+                    aVal = aVal.toLowerCase();
+                    bVal = bVal.toLowerCase();
+                }
+                
+                if (sortDirection === 'asc') {
+                    return aVal > bVal ? 1 : -1;
+                } else {
+                    return aVal < bVal ? 1 : -1;
+                }
+            });
+            
+            updateDisplay();
+        }
+
+        // Update display
+        function updateDisplay() {
+            const tbody = document.getElementById('dataTableBody');
+            const start = (currentPage - 1) * pageSize;
+            const end = start + pageSize;
+            const pageData = filteredData.slice(start, end);
+            
+            tbody.innerHTML = '';
+            
+            pageData.forEach(record => {
+                const row = document.createElement('tr');
+                row.className = 'hover:bg-gray-50 cursor-pointer';
+                row.onclick = () => showDetails(record);
+                
+                const riskColor = {
+                    low: 'bg-green-100 text-green-800',
+                    moderate: 'bg-yellow-100 text-yellow-800',
+                    high: 'bg-orange-100 text-orange-800',
+                    critical: 'bg-red-100 text-red-800'
+                }[record.risk_tier];
+                
+                const statusColor = {
+                    pending: 'bg-gray-100 text-gray-800',
+                    in_review: 'bg-blue-100 text-blue-800',
+                    approved: 'bg-green-100 text-green-800',
+                    requires_management: 'bg-orange-100 text-orange-800'
+                }[record.review_status];
+                
+                row.innerHTML = `
+                    <td class="px-4 py-3">
+                        <div class="text-sm font-soehneKraftig">${record.provider_name}</div>
+                        <div class="text-xs text-gray-500">${record.department}</div>
+                    </td>
+                    <td class="px-4 py-3 text-sm">${record.provider_npi}</td>
+                    <td class="px-4 py-3 text-sm">${record.job_title}</td>
+                    <td class="px-4 py-3 text-sm">
+                        <div>${record.entity_name}</div>
+                        ${record.open_payments_matched ? '<span class="text-xs text-conflixis-blue">OP Matched</span>' : ''}
+                    </td>
+                    <td class="px-4 py-3 text-sm">${record.relationship_type}</td>
+                    <td class="px-4 py-3 text-sm font-soehneKraftig">$${record.financial_amount.toLocaleString()}</td>
+                    <td class="px-4 py-3 text-sm">$${record.open_payments_total.toLocaleString()}</td>
+                    <td class="px-4 py-3">
+                        <span class="px-2 py-1 text-xs rounded-full ${riskColor}">
+                            ${record.risk_tier.charAt(0).toUpperCase() + record.risk_tier.slice(1)}
+                        </span>
+                    </td>
+                    <td class="px-4 py-3">
+                        <span class="px-2 py-1 text-xs rounded-full ${statusColor}">
+                            ${record.review_status.replace('_', ' ').charAt(0).toUpperCase() + record.review_status.slice(1).replace('_', ' ')}
+                        </span>
+                    </td>
+                    <td class="px-4 py-3 text-center">
+                        ${record.management_plan_required ? 
+                            '<span class="text-xs text-conflixis-red font-soehneKraftig">Required</span>' : 
+                            '<span class="text-xs text-gray-400">—</span>'}
+                    </td>
+                    <td class="px-4 py-3 text-sm">${record.last_review_date}</td>
+                    <td class="px-4 py-3 text-center">
+                        <button class="text-conflixis-blue hover:text-conflixis-green text-sm font-soehneKraftig">
+                            View →
+                        </button>
+                    </td>
+                `;
+                
+                tbody.appendChild(row);
+            });
+            
+            // Update counts
+            document.getElementById('recordsShowing').textContent = pageData.length;
+            document.getElementById('recordsTotal').textContent = filteredData.length;
+            
+            // Update pagination
+            updatePagination();
+        }
+
+        // Update pagination
+        function updatePagination() {
+            const totalPages = Math.ceil(filteredData.length / pageSize);
+            const pagination = document.getElementById('pagination');
+            pagination.innerHTML = '';
+            
+            // Previous button
+            const prevBtn = document.createElement('button');
+            prevBtn.className = `px-3 py-1 border rounded-lg text-sm ${currentPage === 1 ? 'border-gray-200 text-gray-400' : 'border-gray-300 hover:bg-gray-50'}`;
+            prevBtn.textContent = 'Previous';
+            prevBtn.disabled = currentPage === 1;
+            prevBtn.onclick = () => {
+                if (currentPage > 1) {
+                    currentPage--;
+                    updateDisplay();
+                }
+            };
+            pagination.appendChild(prevBtn);
+            
+            // Page numbers
+            for (let i = Math.max(1, currentPage - 2); i <= Math.min(totalPages, currentPage + 2); i++) {
+                const pageBtn = document.createElement('button');
+                pageBtn.className = `px-3 py-1 border rounded-lg text-sm ${i === currentPage ? 'bg-conflixis-green text-white' : 'border-gray-300 hover:bg-gray-50'}`;
+                pageBtn.textContent = i;
+                pageBtn.onclick = () => {
+                    currentPage = i;
+                    updateDisplay();
+                };
+                pagination.appendChild(pageBtn);
+            }
+            
+            // Next button
+            const nextBtn = document.createElement('button');
+            nextBtn.className = `px-3 py-1 border rounded-lg text-sm ${currentPage === totalPages ? 'border-gray-200 text-gray-400' : 'border-gray-300 hover:bg-gray-50'}`;
+            nextBtn.textContent = 'Next';
+            nextBtn.disabled = currentPage === totalPages;
+            nextBtn.onclick = () => {
+                if (currentPage < totalPages) {
+                    currentPage++;
+                    updateDisplay();
+                }
+            };
+            pagination.appendChild(nextBtn);
+        }
+
+        // Change page size
+        function changePageSize() {
+            pageSize = parseInt(document.getElementById('pageSize').value);
+            currentPage = 1;
+            updateDisplay();
+        }
+
+        // Update statistics
+        function updateStats() {
+            const stats = {
+                total: filteredData.length,
+                low: filteredData.filter(r => r.risk_tier === 'low').length,
+                moderate: filteredData.filter(r => r.risk_tier === 'moderate').length,
+                high: filteredData.filter(r => r.risk_tier === 'high').length,
+                critical: filteredData.filter(r => r.risk_tier === 'critical').length,
+                pending: filteredData.filter(r => r.review_status === 'pending').length
+            };
+            
+            document.getElementById('totalCount').textContent = stats.total;
+            document.getElementById('lowRiskCount').textContent = stats.low;
+            document.getElementById('moderateRiskCount').textContent = stats.moderate;
+            document.getElementById('highRiskCount').textContent = stats.high;
+            document.getElementById('criticalRiskCount').textContent = stats.critical;
+            document.getElementById('pendingReviewCount').textContent = stats.pending;
+        }
+
+        // Show details modal
+        function showDetails(record) {
+            const modal = document.getElementById('detailModal');
+            const content = document.getElementById('modalContent');
+            
+            const riskColor = {
+                low: 'text-green-600',
+                moderate: 'text-yellow-600',
+                high: 'text-orange-600',
+                critical: 'text-red-600'
+            }[record.risk_tier];
+            
+            content.innerHTML = `
+                <div class="grid md:grid-cols-2 gap-6">
+                    <div>
+                        <h4 class="font-soehneKraftig text-lg mb-4 text-conflixis-green">Provider Information</h4>
+                        <dl class="space-y-2">
+                            <div><dt class="text-sm text-gray-600">Name</dt><dd class="font-soehneKraftig">${record.provider_name}</dd></div>
+                            <div><dt class="text-sm text-gray-600">NPI</dt><dd>${record.provider_npi}</dd></div>
+                            <div><dt class="text-sm text-gray-600">Job Title</dt><dd>${record.job_title}</dd></div>
+                            <div><dt class="text-sm text-gray-600">Department</dt><dd>${record.department}</dd></div>
+                            <div><dt class="text-sm text-gray-600">Decision Authority</dt><dd class="capitalize">${record.decision_authority_level}</dd></div>
+                        </dl>
+                    </div>
+                    
+                    <div>
+                        <h4 class="font-soehneKraftig text-lg mb-4 text-conflixis-green">Relationship Details</h4>
+                        <dl class="space-y-2">
+                            <div><dt class="text-sm text-gray-600">Entity</dt><dd class="font-soehneKraftig">${record.entity_name}</dd></div>
+                            <div><dt class="text-sm text-gray-600">Type</dt><dd>${record.relationship_type}</dd></div>
+                            <div><dt class="text-sm text-gray-600">Start Date</dt><dd>${record.relationship_start_date}</dd></div>
+                            <div><dt class="text-sm text-gray-600">Status</dt><dd>${record.relationship_ongoing ? 'Ongoing' : 'Terminated'}</dd></div>
+                        </dl>
+                    </div>
+                    
+                    <div>
+                        <h4 class="font-soehneKraftig text-lg mb-4 text-conflixis-green">Financial Information</h4>
+                        <dl class="space-y-2">
+                            <div><dt class="text-sm text-gray-600">Disclosed Amount</dt><dd class="font-soehneKraftig text-lg">$${record.financial_amount.toLocaleString()}</dd></div>
+                            <div><dt class="text-sm text-gray-600">Open Payments Total</dt><dd>$${record.open_payments_total.toLocaleString()}</dd></div>
+                            <div><dt class="text-sm text-gray-600">OP Match Status</dt><dd>${record.open_payments_matched ? '✓ Matched' : '○ Not Matched'}</dd></div>
+                        </dl>
+                    </div>
+                    
+                    <div>
+                        <h4 class="font-soehneKraftig text-lg mb-4 text-conflixis-green">Risk Assessment</h4>
+                        <dl class="space-y-2">
+                            <div><dt class="text-sm text-gray-600">Risk Tier</dt><dd class="font-soehneKraftig ${riskColor}">${record.risk_tier.toUpperCase()}</dd></div>
+                            <div><dt class="text-sm text-gray-600">Risk Score</dt><dd>${record.risk_score}/100</dd></div>
+                            <div><dt class="text-sm text-gray-600">Management Plan</dt><dd>${record.management_plan_required ? 'Required' : 'Not Required'}</dd></div>
+                        </dl>
+                    </div>
+                </div>
+                
+                <div class="mt-6 pt-6 border-t border-gray-200">
+                    <h4 class="font-soehneKraftig text-lg mb-4 text-conflixis-green">Review Information</h4>
+                    <dl class="grid md:grid-cols-3 gap-4">
+                        <div><dt class="text-sm text-gray-600">Review Status</dt><dd class="font-soehneKraftig capitalize">${record.review_status.replace('_', ' ')}</dd></div>
+                        <div><dt class="text-sm text-gray-600">Last Review</dt><dd>${record.last_review_date}</dd></div>
+                        <div><dt class="text-sm text-gray-600">Next Review</dt><dd>${record.next_review_date}</dd></div>
+                    </dl>
+                </div>
+                
+                <div class="mt-6 pt-6 border-t border-gray-200 flex gap-3">
+                    <button class="px-4 py-2 bg-conflixis-green text-white rounded-lg hover:bg-opacity-90">
+                        Approve Disclosure
+                    </button>
+                    <button class="px-4 py-2 bg-conflixis-gold text-white rounded-lg hover:bg-opacity-90">
+                        Request Management Plan
+                    </button>
+                    <button class="px-4 py-2 border border-conflixis-red text-conflixis-red rounded-lg hover:bg-red-50">
+                        Flag for Review
+                    </button>
+                </div>
+            `;
+            
+            modal.classList.remove('hidden');
+        }
+
+        // Close modal
+        function closeModal() {
+            document.getElementById('detailModal').classList.add('hidden');
+        }
+
+        // Export data
+        function exportData() {
+            const csv = [
+                ['Provider Name', 'NPI', 'Job Title', 'Entity', 'Relationship', 'Amount', 'Risk Tier', 'Status'],
+                ...filteredData.map(r => [
+                    r.provider_name,
+                    r.provider_npi,
+                    r.job_title,
+                    r.entity_name,
+                    r.relationship_type,
+                    r.financial_amount,
+                    r.risk_tier,
+                    r.review_status
+                ])
+            ].map(row => row.join(',')).join('\n');
+            
+            const blob = new Blob([csv], { type: 'text/csv' });
+            const url = window.URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = `disclosure_data_${new Date().toISOString().split('T')[0]}.csv`;
+            a.click();
+        }
+
+        // Initialize on page load
+        document.addEventListener('DOMContentLoaded', loadData);
+        
+        // Enter key on search
+        document.getElementById('searchInput').addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                applyFilters();
+            }
+        });
+    </script>
+</body>
+</html>

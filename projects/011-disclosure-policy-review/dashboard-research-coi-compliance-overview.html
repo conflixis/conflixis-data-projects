@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Healthcare Provider Disclosure Review Dashboard - Texas Health Resources</title>
+    <title>Research COI Disclosure Review Dashboard - Texas Health Resources</title>
     
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -80,23 +80,31 @@
         .animate-fade-in {
             animation: fade-in 0.6s ease-out forwards;
         }
+        
+        @keyframes grow-width {
+            from { width: 0; }
+        }
+        
+        .animate-bar {
+            animation: grow-width 1.5s ease-out forwards;
+        }
     </style>
 </head>
 <body>
     <!-- Navigation -->
-    <nav class="bg-conflixis-green text-white shadow-lg">
+    <nav class="bg-white shadow-lg">
         <div class="container mx-auto px-6 py-4">
             <div class="flex items-center justify-between">
                 <div class="flex items-center space-x-4">
                     <img src="../../docs/design-system/conflixis-design-system/assets/logos/conflixis-logo.png" 
                          alt="Conflixis" class="h-10 w-10">
                     <div>
-                        <span class="text-xl font-soehneKraftig">Texas Health Resources</span>
-                        <span class="text-sm block text-conflixis-light-green">Disclosure Policy Review System</span>
+                        <span class="text-xl font-soehneKraftig text-conflixis-green">Texas Health Resources</span>
+                        <span class="text-sm block text-conflixis-green">Research COI Disclosure Review System</span>
                     </div>
                 </div>
                 <div class="flex items-center space-x-4">
-                    <span class="text-sm">Group: gcO9AHYlNSzFeGTRSFRa</span>
+                    <span class="text-sm text-gray-600">Group: gcO9AHYlNSzFeGTRSFRa</span>
                     <button class="bg-conflixis-gold hover:bg-opacity-90 text-conflixis-green px-4 py-2 rounded-lg font-soehneKraftig transition-all">
                         Export Report
                     </button>
@@ -105,84 +113,84 @@
         </div>
     </nav>
     
-    <!-- Summary Statistics -->
+    <!-- Summary Statistics and Risk Analysis -->
     <section class="py-6 animate-fade-in">
         <div class="container mx-auto px-6">
-            <h1 class="text-3xl font-bold mb-6">Disclosure Compliance Dashboard</h1>
+            <h1 class="text-3xl font-bold mb-6">Research COI Compliance Dashboard</h1>
             
-            <div class="grid md:grid-cols-4 gap-4 mb-8">
-                <!-- Total Disclosures -->
-                <div class="bg-white rounded-lg p-4 shadow">
-                    <div class="text-sm text-gray-600 mb-1">Total Disclosures</div>
-                    <div class="text-2xl font-soehneKraftig text-conflixis-green">2,413</div>
-                    <div class="text-xs text-gray-500">For selected group</div>
-                </div>
-                
-                <!-- High Risk -->
-                <div class="bg-white rounded-lg p-4 shadow border-l-4 border-conflixis-red">
-                    <div class="text-sm text-gray-600 mb-1">Tier 3 (>$50k)</div>
-                    <div class="text-2xl font-soehneKraftig text-conflixis-red">12</div>
-                    <div class="text-xs text-gray-500">Executive Review Required</div>
-                </div>
-                
-                <!-- Medium Risk -->
-                <div class="bg-white rounded-lg p-4 shadow border-l-4 border-conflixis-gold">
-                    <div class="text-sm text-gray-600 mb-1">Tier 2 ($10k-$50k)</div>
-                    <div class="text-2xl font-soehneKraftig text-conflixis-gold">86</div>
-                    <div class="text-xs text-gray-500">Management Plan Required</div>
-                </div>
-                
-                <!-- Low Risk -->
-                <div class="bg-white rounded-lg p-4 shadow border-l-4 border-conflixis-success-green">
-                    <div class="text-sm text-gray-600 mb-1">Tier 1 & Below</div>
-                    <div class="text-2xl font-soehneKraftig text-conflixis-success-green">2,315</div>
-                    <div class="text-xs text-gray-500">Standard Review</div>
-                </div>
-            </div>
-        </div>
-    </section>
-    
-    <!-- Risk Tier Breakdown -->
-    <section class="pb-6">
-        <div class="container mx-auto px-6">
-            <div class="bg-white rounded-lg shadow p-6">
-                <h2 class="text-xl font-bold mb-4">Risk Tier Analysis (Based on Texas Health Policy)</h2>
-                
-                <div class="space-y-3">
-                    <!-- Tier 3 -->
-                    <div class="flex items-center">
-                        <div class="w-32 text-sm font-soehneKraftig">Tier 3 (>$50k)</div>
-                        <div class="flex-1 bg-gray-200 rounded-full h-8 relative">
-                            <div class="bg-conflixis-red h-8 rounded-full" style="width: 0.5%"></div>
-                        </div>
-                        <div class="w-20 text-right text-sm">12 (0.5%)</div>
+            <div class="grid lg:grid-cols-3 gap-6 mb-4">
+                <!-- Left Column: Campaign Selection and Total Disclosures -->
+                <div class="flex flex-col gap-4">
+                    <!-- Campaign Selection Card -->
+                    <div class="bg-white rounded-lg p-4 shadow">
+                        <label class="text-sm font-soehneKraftig text-conflixis-green block mb-2">Campaign Filter</label>
+                        <select class="w-full text-xs border border-gray-300 rounded px-2 py-1.5 focus:outline-none focus:border-conflixis-green">
+                            <option value="all">All Campaigns</option>
+                            <option value="qyH2ggzVV0WLkuRfem7S">2025 Texas Health COI Survey - Leaders/Providers</option>
+                            <option value="dYOO16lsOeGRNUryHEsI">2024 Texas Health COI Self-Identification Follow-Up - Workforce</option>
+                            <option value="2w7YIc3PjAukLENvv2QP">2024 Texas Health COI Self-Identification Follow-Up - Leadership</option>
+                            <option value="kCAlshel9ldtYgPhEfra">New Hires Conflict of Interest Disclosure</option>
+                            <option value="MyyQBQyTfBqr7CGEjGcY">Conflict of Interest Disclosure (COI) - Research</option>
+                        </select>
                     </div>
                     
-                    <!-- Tier 2 -->
-                    <div class="flex items-center">
-                        <div class="w-32 text-sm font-soehneKraftig">Tier 2 ($10-50k)</div>
-                        <div class="flex-1 bg-gray-200 rounded-full h-8 relative">
-                            <div class="bg-conflixis-gold h-8 rounded-full" style="width: 3.6%"></div>
-                        </div>
-                        <div class="w-20 text-right text-sm">86 (3.6%)</div>
+                    <!-- Total Disclosures Card -->
+                    <div class="bg-white rounded-lg p-4 shadow flex-1 flex flex-col justify-center items-center text-center">
+                        <h2 class="text-lg font-bold mb-2">Total Disclosures</h2>
+                        <div class="text-4xl font-soehneKraftig text-conflixis-green bg-conflixis-light-green rounded-lg px-4 py-2 mb-2">2,413</div>
+                        <div class="text-xs text-conflixis-mint font-medium">For selected campaign</div>
                     </div>
+                </div>
+                
+                <!-- Risk Tier Breakdown -->
+                <div class="lg:col-span-2 bg-white rounded-lg shadow p-6 flex flex-col h-full">
+                    <h2 class="text-lg font-bold mb-4">Research COI Risk Tier Analysis</h2>
                     
-                    <!-- Tier 1 -->
-                    <div class="flex items-center">
-                        <div class="w-32 text-sm font-soehneKraftig">Tier 1 ($5-10k)</div>
-                        <div class="flex-1 bg-gray-200 rounded-full h-8 relative">
-                            <div class="bg-conflixis-blue h-8 rounded-full" style="width: 8.2%"></div>
+                    <div class="flex-1 flex flex-col justify-center space-y-3">
+                        <!-- No Compensation -->
+                        <div class="flex items-center gap-2">
+                            <div class="w-28 text-xs font-soehneKraftig">No Compensation</div>
+                            <div class="flex-1 bg-gray-200 rounded-full h-6 relative overflow-hidden">
+                                <div class="bg-gray-400 h-6 rounded-full animate-bar" style="width: 84.6%; animation-delay: 0.1s;"></div>
+                            </div>
+                            <div class="w-20 text-right text-xs">2,042 (84.6%)</div>
                         </div>
-                        <div class="w-20 text-right text-sm">198 (8.2%)</div>
-                    </div>
-                    
-                    <!-- Low Risk -->
-                    <div class="flex items-center">
-                        <div class="w-32 text-sm font-soehneKraftig">Below $5k</div>
-                        <div class="flex-1 bg-gray-200 rounded-full h-8 relative">
-                            <div class="bg-conflixis-success-green h-8 rounded-full" style="width: 87.7%"></div>
+                        
+                        <!-- Low Risk -->
+                        <div class="flex items-center gap-2">
+                            <div class="w-28 text-xs font-soehneKraftig">Below $5k</div>
+                            <div class="flex-1 bg-gray-200 rounded-full h-6 relative overflow-hidden">
+                                <div class="bg-conflixis-success-green h-6 rounded-full animate-bar" style="width: 8.0%; animation-delay: 0.2s;"></div>
+                            </div>
+                            <div class="w-20 text-right text-xs">194 (8.0%)</div>
                         </div>
-                        <div class="w-20 text-right text-sm">2,117 (87.7%)</div>
+                        
+                        <!-- Tier 1 -->
+                        <div class="flex items-center gap-2">
+                            <div class="w-28 text-xs font-soehneKraftig">Tier 1 ($5-10k)</div>
+                            <div class="flex-1 bg-gray-200 rounded-full h-6 relative overflow-hidden">
+                                <div class="bg-conflixis-blue h-6 rounded-full animate-bar" style="width: 1.8%; animation-delay: 0.3s;"></div>
+                            </div>
+                            <div class="w-20 text-right text-xs">44 (1.8%)</div>
+                        </div>
+                        
+                        <!-- Tier 2 -->
+                        <div class="flex items-center gap-2">
+                            <div class="w-28 text-xs font-soehneKraftig">Tier 2 ($10-50k)</div>
+                            <div class="flex-1 bg-gray-200 rounded-full h-6 relative overflow-hidden">
+                                <div class="bg-conflixis-gold h-6 rounded-full animate-bar" style="width: 2.7%; animation-delay: 0.4s;"></div>
+                            </div>
+                            <div class="w-20 text-right text-xs">64 (2.7%)</div>
+                        </div>
+                        
+                        <!-- Tier 3 -->
+                        <div class="flex items-center gap-2">
+                            <div class="w-28 text-xs font-soehneKraftig">Tier 3 (>$50k)</div>
+                            <div class="flex-1 bg-gray-200 rounded-full h-6 relative overflow-hidden">
+                                <div class="bg-conflixis-red h-6 rounded-full animate-bar" style="width: 2.9%; animation-delay: 0.5s;"></div>
+                            </div>
+                            <div class="w-20 text-right text-xs">69 (2.9%)</div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -192,22 +200,64 @@
     <!-- Sample Disclosures for Review -->
     <section class="pb-6">
         <div class="container mx-auto px-6">
-            <div class="bg-white rounded-lg shadow">
-                <div class="p-6 border-b border-gray-200">
-                    <h2 class="text-xl font-bold">Disclosures Requiring Review</h2>
-                    <p class="text-sm text-gray-600 mt-1">High-value disclosures and research-related conflicts requiring management plans</p>
-                </div>
+            <div class="mb-4">
+                <h2 class="text-2xl font-bold text-conflixis-green">Research COI Disclosures Requiring Review</h2>
+                <p class="text-sm text-gray-600 mt-1">High-value research-related conflicts of interest requiring management plans</p>
+            </div>
+            <div class="bg-white rounded-lg shadow overflow-hidden">
                 
                 <div class="overflow-x-auto">
                     <table class="w-full">
-                        <thead class="bg-conflixis-ivory">
+                        <thead class="bg-conflixis-tan">
                             <tr>
-                                <th class="px-4 py-3 text-left text-xs font-soehneKraftig text-gray-700 uppercase">Provider</th>
-                                <th class="px-4 py-3 text-left text-xs font-soehneKraftig text-gray-700 uppercase">Entity</th>
-                                <th class="px-4 py-3 text-left text-xs font-soehneKraftig text-gray-700 uppercase">Value</th>
-                                <th class="px-4 py-3 text-left text-xs font-soehneKraftig text-gray-700 uppercase">Research</th>
-                                <th class="px-4 py-3 text-left text-xs font-soehneKraftig text-gray-700 uppercase">Risk Tier</th>
-                                <th class="px-4 py-3 text-left text-xs font-soehneKraftig text-gray-700 uppercase">Status</th>
+                                <th class="px-4 py-3 text-left text-xs font-soehneKraftig text-gray-700 uppercase cursor-pointer hover:bg-conflixis-tan hover:bg-opacity-80 transition-colors">
+                                    <div class="flex items-center gap-1">
+                                        Provider
+                                        <svg class="w-3 h-3 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16V4m0 0L3 8m4-4l4 4m6 0v12m0 0l4-4m-4 4l-4-4" />
+                                        </svg>
+                                    </div>
+                                </th>
+                                <th class="px-4 py-3 text-left text-xs font-soehneKraftig text-gray-700 uppercase cursor-pointer hover:bg-conflixis-tan hover:bg-opacity-80 transition-colors">
+                                    <div class="flex items-center gap-1">
+                                        Entity
+                                        <svg class="w-3 h-3 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16V4m0 0L3 8m4-4l4 4m6 0v12m0 0l4-4m-4 4l-4-4" />
+                                        </svg>
+                                    </div>
+                                </th>
+                                <th class="px-4 py-3 text-left text-xs font-soehneKraftig text-gray-700 uppercase cursor-pointer hover:bg-conflixis-tan hover:bg-opacity-80 transition-colors">
+                                    <div class="flex items-center gap-1">
+                                        Value
+                                        <svg class="w-3 h-3 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16V4m0 0L3 8m4-4l4 4m6 0v12m0 0l4-4m-4 4l-4-4" />
+                                        </svg>
+                                    </div>
+                                </th>
+                                <th class="px-4 py-3 text-left text-xs font-soehneKraftig text-gray-700 uppercase cursor-pointer hover:bg-conflixis-tan hover:bg-opacity-80 transition-colors">
+                                    <div class="flex items-center gap-1">
+                                        Research
+                                        <svg class="w-3 h-3 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16V4m0 0L3 8m4-4l4 4m6 0v12m0 0l4-4m-4 4l-4-4" />
+                                        </svg>
+                                    </div>
+                                </th>
+                                <th class="px-4 py-3 text-left text-xs font-soehneKraftig text-gray-700 uppercase cursor-pointer hover:bg-conflixis-tan hover:bg-opacity-80 transition-colors">
+                                    <div class="flex items-center gap-1">
+                                        Risk Tier
+                                        <svg class="w-3 h-3 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16V4m0 0L3 8m4-4l4 4m6 0v12m0 0l4-4m-4 4l-4-4" />
+                                        </svg>
+                                    </div>
+                                </th>
+                                <th class="px-4 py-3 text-left text-xs font-soehneKraftig text-gray-700 uppercase cursor-pointer hover:bg-conflixis-tan hover:bg-opacity-80 transition-colors">
+                                    <div class="flex items-center gap-1">
+                                        Status
+                                        <svg class="w-3 h-3 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16V4m0 0L3 8m4-4l4 4m6 0v12m0 0l4-4m-4 4l-4-4" />
+                                        </svg>
+                                    </div>
+                                </th>
                                 <th class="px-4 py-3 text-left text-xs font-soehneKraftig text-gray-700 uppercase">Action</th>
                             </tr>
                         </thead>
@@ -218,10 +268,15 @@
                                     <div class="text-sm font-soehneKraftig">Dr. Sarah Johnson</div>
                                     <div class="text-xs text-gray-500">sarahjohnson@texashealth.org</div>
                                 </td>
-                                <td class="px-4 py-3 text-sm">Pharma Corp International</td>
+                                <td class="px-4 py-3 text-sm">
+                                    <div class="flex items-center gap-2">
+                                        <span>Pharma Corp International</span>
+                                        <span class="px-2 py-0.5 text-xs rounded-full bg-conflixis-gray text-gray-700">Supplier Match</span>
+                                    </div>
+                                </td>
                                 <td class="px-4 py-3 text-sm font-soehneKraftig">$125,000</td>
                                 <td class="px-4 py-3">
-                                    <span class="px-2 py-1 text-xs rounded-full bg-conflixis-blue text-white">Yes</span>
+                                    <span class="px-2 py-1 text-xs rounded-full bg-conflixis-green text-white">Yes</span>
                                 </td>
                                 <td class="px-4 py-3">
                                     <span class="px-2 py-1 text-xs rounded-full bg-conflixis-red text-white">Tier 3</span>
@@ -269,7 +324,7 @@
                                 <td class="px-4 py-3 text-sm">Research Foundation</td>
                                 <td class="px-4 py-3 text-sm font-soehneKraftig">$28,500</td>
                                 <td class="px-4 py-3">
-                                    <span class="px-2 py-1 text-xs rounded-full bg-conflixis-blue text-white">Yes</span>
+                                    <span class="px-2 py-1 text-xs rounded-full bg-conflixis-green text-white">Yes</span>
                                 </td>
                                 <td class="px-4 py-3">
                                     <span class="px-2 py-1 text-xs rounded-full bg-conflixis-gold text-white">Tier 2</span>
@@ -446,7 +501,7 @@
     <!-- Footer -->
     <footer class="bg-conflixis-green text-white py-6">
         <div class="container mx-auto px-6 text-center">
-            <p class="text-sm">Texas Health Resources Disclosure Review System</p>
+            <p class="text-sm">Texas Health Resources Research COI Review System</p>
             <p class="text-xs mt-1 text-conflixis-light-green">Powered by Conflixis Analytics Platform</p>
         </div>
     </footer>

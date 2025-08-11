@@ -1,143 +1,166 @@
-# Healthcare Provider Disclosure Policy Review
-
-**Jira Epic**: [DA-141](https://conflixis.atlassian.net/browse/DA-141)
+# COI Disclosure Policy Review System
 
 ## Overview
-
-This project develops an automated system to review healthcare provider (HCP) disclosures and determine whether they comply with institutional disclosure policies. The system will analyze submitted disclosures, compare them against defined policy rules, and categorize them as within or outside policy guidelines.
-
-## Objectives
-
-- **Automated Compliance Checking**: Analyze HCP disclosures against institutional policies
-- **Risk Identification**: Flag high-risk or non-compliant disclosures for review
-- **Reporting**: Generate comprehensive compliance reports
-- **Pattern Detection**: Identify trends in disclosure compliance
+This project implements a comprehensive Conflict of Interest (COI) disclosure review system for healthcare organizations, based on Texas Health Resources Corporate Policy.
 
 ## Project Structure
 
 ```
 011-disclosure-policy-review/
-├── scripts/           # Processing and analysis scripts
-├── data/              # Sample data and datasets
-├── config/            # Configuration files and policy definitions
-├── notebooks/         # Jupyter notebooks for analysis
-├── docs/              # Documentation and specifications
-├── tests/             # Unit and integration tests
-└── README.md          # This file
+├── config/                          # Configuration files
+│   ├── coi-policies.yaml           # Policy definitions with clause references
+│   ├── coi-operational-thresholds.yaml  # Risk thresholds and scoring
+│   └── research-policies.yaml      # Research-specific COI policies
+├── scripts/                         # Data pipeline scripts
+│   └── bigquery_pipeline.py        # Main ETL pipeline
+├── data/                           # Data storage (GITIGNORED)
+│   ├── raw/                        # Raw data from BigQuery
+│   │   ├── *.csv                  # CSV for audit trail
+│   │   └── *.parquet              # Parquet for fast reprocessing
+│   ├── processed/                  # Processed with risk scores
+│   │   └── *.parquet              # Parquet format only
+│   └── staging/                    # UI-ready data
+│       ├── *.parquet              # Optimized Parquet
+│       └── disclosure_data.json   # JSON for web consumption
+├── output/                         # Reports and exports
+├── docs/                           # Policy documents
+│   └── *.pdf                      # Source policy PDFs
+├── dashboard-coi-compliance-overview.html  # Main dashboard
+└── disclosure-data-viewer.html    # Detailed disclosure viewer
+
 ```
 
-## Key Components
+## Data Pipeline Architecture
 
-### 1. Policy Engine
-- Define and maintain disclosure policies
-- Rule-based compliance checking
-- Policy versioning and updates
+### Storage Strategy
 
-### 2. Disclosure Parser
-- Extract data from various disclosure formats
-- Standardize disclosure information
-- Handle multiple data sources
+The pipeline implements a three-tier storage strategy for optimal performance:
 
-### 3. Compliance Analyzer
-- Compare disclosures against policies
-- Categorize compliance status
-- Generate risk scores
+1. **Raw Data Layer** (`/data/raw/`)
+   - **CSV Format**: Complete audit trail, human-readable
+   - **Parquet Format**: Compressed binary for fast reprocessing
+   - Both formats saved for every BigQuery extraction
 
-### 4. Reporting System
-- Compliance dashboards
-- Detailed violation reports
-- Trend analysis
+2. **Processed Data Layer** (`/data/processed/`)
+   - **Parquet Format Only**: Risk scores calculated, data enriched
+   - Optimized for analytical queries
+   - ~5-10x compression vs CSV
 
-## Data Sources
+3. **UI Layer** (`/data/staging/`)
+   - **Parquet Format**: Optimized column selection for UI
+   - **JSON Format**: Web-compatible for dashboard consumption
+   - Pre-sorted by risk priority
 
-### Primary Data Sources
+### Performance Benefits
 
-#### 1. Disclosure Forms Table
-- **BigQuery Table**: `conflixis-engine.firestore_export.disclosure_forms_raw_latest_v3`
-  - **Group ID**: `gcO9AHYlNSzFeGTRSFRa` (specific group for analysis)
-  - **Total Rows for Group**: 7,609 disclosure forms
-  - Contains raw disclosure form submissions from healthcare providers
-  - Fields include: document_id, timestamp, group_id, campaign_id, status, start_date, end_date, data, old_data
+- **Parquet Advantages**:
+  - Columnar storage: Only load needed columns
+  - Built-in compression: 5-10x smaller than CSV
+  - Type preservation: Maintains data types
+  - Fast queries: Optimized for analytical workloads
+  
+- **Typical Compression Ratios**:
+  - Raw CSV: 100 MB
+  - Raw Parquet: 10-20 MB
+  - UI JSON: 30-40 MB
 
-#### 2. Parsed Disclosures Table  
-- **BigQuery Table**: `conflixis-engine.firestore_export.disclosures_raw_latest_parse`
-  - **Total Rows**: 13,867 total parsed disclosures
-  - **Group ID Rows**: 2,413 rows for group `gcO9AHYlNSzFeGTRSFRa`
-  - Contains structured/parsed disclosure data with 48 columns including:
-    - External entity information (name, compensation value)
-    - Service dates and relationship status
-    - Research indicators and review status
-    - Detailed disclosure fields parsed from form submissions
+## Running the Pipeline
 
-### Policy Documents
-- **Texas Health Resources COI Policy** (Dec 2013): Located in `/docs/dec_2013_conflict_of_interest.pdf`
-- Comprehensive three-tier management system for research-related conflicts of interest
+### Prerequisites
 
-### Additional Sources (Planned)
-- Open Payments database for cross-referencing
-- Historical compliance records for trend analysis
-
-## Technical Stack
-
-- **Languages**: Python 3.12+
-- **Data Processing**: Pandas, NumPy
-- **NLP**: spaCy, NLTK for policy text analysis
-- **Database**: BigQuery for data storage
-- **ML/AI**: Scikit-learn for pattern detection
-- **Visualization**: Matplotlib, Seaborn for reports
-
-## Getting Started
-
-1. **Setup Environment**
 ```bash
-cd projects/011-disclosure-policy-review
-python -m venv venv
-source venv/bin/activate  # On Windows: venv\Scripts\activate
+# Install dependencies
 pip install -r requirements.txt
+
+# Set environment variables
+export GCP_PROJECT_ID="data-analytics-389803"
+export GOOGLE_APPLICATION_CREDENTIALS="/path/to/service-account.json"
 ```
 
-2. **Configure Policies**
-- Edit `config/policies.yaml` to define disclosure policies
-- Set up data source connections in `.env`
+### Basic Usage
 
-3. **Run Analysis**
 ```bash
-python scripts/analyze_disclosures.py
+# Run full pipeline (extract from BigQuery)
+python scripts/bigquery_pipeline.py
+
+# Use cached data (skip BigQuery)
+python scripts/bigquery_pipeline.py --skip-bigquery
+
+# Specify date range
+python scripts/bigquery_pipeline.py \
+  --start-date 2024-01-01 \
+  --end-date 2024-12-31
 ```
 
-## Development Roadmap
+### Pipeline Workflow
 
-### Phase 1: Foundation (Weeks 1-2)
-- [ ] Set up project infrastructure
-- [ ] Define policy schema and rules engine
-- [ ] Create disclosure data models
+1. **Extract**: Pull integrated disclosure data from BigQuery
+2. **Save Raw**: Store as both CSV (audit) and Parquet (performance)
+3. **Process**: Calculate risk scores using operational thresholds
+4. **Optimize**: Prepare UI-specific dataset with needed columns
+5. **Export**: Save as Parquet (performance) and JSON (web)
 
-### Phase 2: Core Development (Weeks 3-4)
-- [ ] Implement disclosure parser
-- [ ] Build policy compliance engine
-- [ ] Develop basic reporting
+## UI Components
 
-### Phase 3: Enhancement (Weeks 5-6)
-- [ ] Add NLP for unstructured disclosure analysis
-- [ ] Implement ML for pattern detection
-- [ ] Create interactive dashboards
+### Main Dashboard
+- **URL**: `dashboard-coi-compliance-overview.html`
+- **Purpose**: High-level compliance overview
+- **Features**: 
+  - Summary statistics
+  - Insurmountable conflicts
+  - Policy requirements
+  - Covered persons by category
 
-### Phase 4: Testing & Deployment (Week 7-8)
-- [ ] Comprehensive testing
-- [ ] Performance optimization
-- [ ] Documentation and training materials
+### Disclosure Data Viewer
+- **URL**: `disclosure-data-viewer.html`
+- **Purpose**: Detailed disclosure records
+- **Features**:
+  - Searchable/filterable table
+  - Risk tier visualization
+  - Export to CSV
+  - Detail modal for each disclosure
+  - Loads from `/data/staging/disclosure_data.json`
 
-## Success Metrics
+## Configuration Files
 
-- **Accuracy**: >95% correct classification of disclosures
-- **Processing Speed**: <5 seconds per disclosure
-- **Coverage**: Support for all major disclosure types
-- **User Satisfaction**: Reduced manual review time by 70%
+### coi-policies.yaml
+- Direct interpretation of Texas Health policy
+- Every section linked to policy clause
+- No thresholds (qualitative only)
 
-## Contributing
+### coi-operational-thresholds.yaml
+- Configurable risk thresholds
+- 4-tier risk model ($1k, $5k, $25k, $100k)
+- Risk scoring matrix
+- Industry-specific adjustments
 
-Please refer to the main repository guidelines in `/CLAUDE.md` for development practices.
+## Data Security
 
-## Contact
+- `/data/` directory is completely gitignored
+- No sensitive data in version control
+- Use sample data generators for testing
+- Follow HIPAA guidelines for PHI
 
-For questions or issues, please create a ticket in the [DA Jira project](https://conflixis.atlassian.net/jira/software/projects/DA/boards/1).
+## Development Workflow
+
+1. **Local Development**:
+   - Use `--skip-bigquery` flag with cached data
+   - Sample data generated automatically if no cache
+
+2. **Production**:
+   - Run pipeline on schedule (daily/weekly)
+   - Monitor `/output/` for compliance reports
+   - Review high-risk disclosures in UI
+
+## Jira Integration
+
+- **Epic**: DA-141 (Healthcare Provider Disclosure Policy Review)
+- **Tickets**:
+  - DA-150: COI policies YAML ✓
+  - DA-151: Policy Decision Engine (pending)
+  - DA-152: BigQuery Data Pipeline ✓
+  - DA-153: Real-time Dashboard Integration (pending)
+
+## Support
+
+For questions or issues, contact the Compliance Technology team.
