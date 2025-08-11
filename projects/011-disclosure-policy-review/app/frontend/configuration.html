@@ -193,6 +193,45 @@
         .risk-moderate { background-color: #eab96d; } /* conflixis-gold */
         .risk-high { background-color: #ff6b35; } /* conflixis-orange */
         .risk-critical { background-color: #dc3545; } /* conflixis-red */
+        
+        /* Step indicators for pipeline workflow */
+        .step-indicator {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #e5e7eb;
+            color: #6b7280;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+        
+        .step-indicator.active {
+            background-color: #0c343a;
+            color: white;
+        }
+        
+        .step-indicator.completed {
+            background-color: #2a9d8f;
+            color: white;
+        }
+        
+        .step-indicator:hover {
+            transform: scale(1.1);
+        }
+        
+        .step-content {
+            animation: fadeIn 0.3s ease;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
     </style>
     
     <script>
@@ -414,6 +453,12 @@
                             </svg>
                             Change History
                         </button>
+                        <button onclick="showTab('pipeline')" class="tab-button" data-tab="pipeline">
+                            <svg class="inline-block w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M5 3a2 2 0 00-2 2v2a2 2 0 002 2h2a2 2 0 002-2V5a2 2 0 00-2-2H5zM5 11a2 2 0 00-2 2v2a2 2 0 002 2h2a2 2 0 002-2v-2a2 2 0 00-2-2H5zM11 5a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V5zM14 11a1 1 0 011 1v1h1a1 1 0 110 2h-1v1a1 1 0 11-2 0v-1h-1a1 1 0 110-2h1v-1a1 1 0 011-1z"/>
+                            </svg>
+                            Policy Pipeline
+                        </button>
                     </nav>
                 </div>
                 
@@ -479,6 +524,376 @@
                                     <!-- Audit history will be loaded here -->
                                 </tbody>
                             </table>
+                        </div>
+                    </div>
+                    
+                    <!-- Policy Pipeline Tab -->
+                    <div id="pipeline-tab" class="tab-content">
+                        <div class="space-y-6">
+                            <!-- Pipeline Header -->
+                            <div>
+                                <h3 class="text-xl font-soehneKraftig text-conflixis-green mb-2">Policy Decision Pipeline - Clause 4.8.1</h3>
+                                <p class="text-sm text-gray-600">Test and configure the 8-step workflow for Major Supplier Relationship policy</p>
+                            </div>
+                            
+                            <!-- Workflow Progress Bar -->
+                            <div class="bg-white rounded-lg shadow-sm p-4">
+                                <div class="flex items-center justify-between mb-4">
+                                    <h4 class="font-soehneKraftig text-conflixis-green">Workflow Progress</h4>
+                                    <span class="text-sm text-gray-500">Step <span id="currentStep">1</span> of 8</span>
+                                </div>
+                                <div class="flex space-x-2">
+                                    <div class="step-indicator active" data-step="1" title="Policy Identification">1</div>
+                                    <div class="step-indicator" data-step="2" title="Interpretation">2</div>
+                                    <div class="step-indicator" data-step="3" title="Evaluation Criteria">3</div>
+                                    <div class="step-indicator" data-step="4" title="Data Requirements">4</div>
+                                    <div class="step-indicator" data-step="5" title="Data Validation">5</div>
+                                    <div class="step-indicator" data-step="6" title="Execute">6</div>
+                                    <div class="step-indicator" data-step="7" title="Apply Decision">7</div>
+                                    <div class="step-indicator" data-step="8" title="Monitor">8</div>
+                                </div>
+                            </div>
+                            
+                            <!-- Step Content Container -->
+                            <div class="bg-white rounded-lg shadow-md p-6">
+                                <!-- Step 1: Policy Identification -->
+                                <div class="step-content" id="step-1">
+                                    <h4 class="text-lg font-soehneKraftig text-conflixis-green mb-4">Step 1: Policy Clause Identification</h4>
+                                    <div class="grid grid-cols-2 gap-4">
+                                        <div>
+                                            <label class="block text-sm font-medium text-gray-700 mb-1">Clause Reference</label>
+                                            <input type="text" value="4.8.1" readonly class="w-full px-3 py-2 border border-gray-300 rounded-md bg-gray-50">
+                                        </div>
+                                        <div>
+                                            <label class="block text-sm font-medium text-gray-700 mb-1">Category</label>
+                                            <input type="text" value="Insurmountable Conflict" readonly class="w-full px-3 py-2 border border-gray-300 rounded-md bg-gray-50">
+                                        </div>
+                                        <div>
+                                            <label class="block text-sm font-medium text-gray-700 mb-1">Policy Name</label>
+                                            <input type="text" value="Major Supplier Relationship" readonly class="w-full px-3 py-2 border border-gray-300 rounded-md bg-gray-50">
+                                        </div>
+                                        <div>
+                                            <label class="block text-sm font-medium text-gray-700 mb-1">Effective Date</label>
+                                            <input type="text" value="2025-06-19" readonly class="w-full px-3 py-2 border border-gray-300 rounded-md bg-gray-50">
+                                        </div>
+                                    </div>
+                                    <div class="mt-4">
+                                        <label class="block text-sm font-medium text-gray-700 mb-1">Related Clauses</label>
+                                        <div class="flex space-x-2">
+                                            <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">4.8</span>
+                                            <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">5.9</span>
+                                            <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">4.7</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <!-- Step 2: Policy Interpretation -->
+                                <div class="step-content hidden" id="step-2">
+                                    <h4 class="text-lg font-soehneKraftig text-conflixis-green mb-4">Step 2: Policy Interpretation</h4>
+                                    <div class="space-y-4">
+                                        <div>
+                                            <label class="block text-sm font-medium text-gray-700 mb-1">Description</label>
+                                            <textarea readonly class="w-full px-3 py-2 border border-gray-300 rounded-md bg-gray-50" rows="3">Prohibits significant relationships with major suppliers of medical equipment, devices, or patient services</textarea>
+                                        </div>
+                                        <div>
+                                            <label class="block text-sm font-medium text-gray-700 mb-1">Key Terms</label>
+                                            <div class="space-y-2">
+                                                <div class="p-3 bg-gray-50 rounded">
+                                                    <span class="font-medium">Significant Relationship:</span> Ownership ≥ 5%, compensation ≥ $50,000/year, or board/officer position
+                                                </div>
+                                                <div class="p-3 bg-gray-50 rounded">
+                                                    <span class="font-medium">Major Supplier:</span> Vendor with annual spend ≥ $1,000,000 or designated as critical
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <label class="block text-sm font-medium text-gray-700 mb-1">Exceptions</label>
+                                            <ul class="list-disc list-inside text-sm text-gray-600">
+                                                <li>Physicians on medical staff providing patient care</li>
+                                                <li>De minimis holdings (&lt;1%) in publicly traded companies</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <!-- Step 3: Evaluation Criteria -->
+                                <div class="step-content hidden" id="step-3">
+                                    <h4 class="text-lg font-soehneKraftig text-conflixis-green mb-4">Step 3: Define Evaluation Criteria</h4>
+                                    <div class="space-y-4">
+                                        <div>
+                                            <label class="block text-sm font-medium text-gray-700 mb-2">Evaluation Components</label>
+                                            <div class="space-y-2">
+                                                <div class="p-3 border border-gray-200 rounded">
+                                                    <div class="flex justify-between items-center">
+                                                        <span class="font-medium">Entity Matching</span>
+                                                        <span class="text-sm text-gray-500">Confidence: 80%</span>
+                                                    </div>
+                                                    <p class="text-sm text-gray-600 mt-1">Match disclosed entities against vendor database</p>
+                                                </div>
+                                                <div class="p-3 border border-gray-200 rounded">
+                                                    <div class="flex justify-between items-center">
+                                                        <span class="font-medium">Significance Check</span>
+                                                        <span class="text-sm text-gray-500">Confidence: 100%</span>
+                                                    </div>
+                                                    <p class="text-sm text-gray-600 mt-1">Check ownership %, compensation amount, board positions</p>
+                                                </div>
+                                                <div class="p-3 border border-gray-200 rounded">
+                                                    <div class="flex justify-between items-center">
+                                                        <span class="font-medium">Supplier Status</span>
+                                                        <span class="text-sm text-gray-500">Confidence: 95%</span>
+                                                    </div>
+                                                    <p class="text-sm text-gray-600 mt-1">Verify annual spend or critical supplier designation</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <label class="block text-sm font-medium text-gray-700 mb-1">Match Logic</label>
+                                            <select class="w-full px-3 py-2 border border-gray-300 rounded-md">
+                                                <option>AND - All conditions must be met</option>
+                                                <option>OR - Any condition triggers</option>
+                                                <option>COMPLEX - Custom logic</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <!-- Step 4: Data Requirements -->
+                                <div class="step-content hidden" id="step-4">
+                                    <h4 class="text-lg font-soehneKraftig text-conflixis-green mb-4">Step 4: Identify Data Requirements</h4>
+                                    <div class="grid grid-cols-2 gap-4">
+                                        <div>
+                                            <h5 class="font-medium mb-2">Disclosure Fields</h5>
+                                            <div class="space-y-1">
+                                                <label class="flex items-center">
+                                                    <input type="checkbox" checked class="mr-2">
+                                                    <span class="text-sm">Entity Name</span>
+                                                </label>
+                                                <label class="flex items-center">
+                                                    <input type="checkbox" checked class="mr-2">
+                                                    <span class="text-sm">Ownership Percentage</span>
+                                                </label>
+                                                <label class="flex items-center">
+                                                    <input type="checkbox" checked class="mr-2">
+                                                    <span class="text-sm">Compensation Amount</span>
+                                                </label>
+                                                <label class="flex items-center">
+                                                    <input type="checkbox" checked class="mr-2">
+                                                    <span class="text-sm">Board Positions</span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <h5 class="font-medium mb-2">External Data Sources</h5>
+                                            <div class="space-y-1">
+                                                <label class="flex items-center">
+                                                    <input type="checkbox" checked class="mr-2">
+                                                    <span class="text-sm">Vendor Database</span>
+                                                </label>
+                                                <label class="flex items-center">
+                                                    <input type="checkbox" class="mr-2">
+                                                    <span class="text-sm">Public Records</span>
+                                                </label>
+                                                <label class="flex items-center">
+                                                    <input type="checkbox" class="mr-2">
+                                                    <span class="text-sm">Financial Systems</span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="mt-4">
+                                        <label class="block text-sm font-medium text-gray-700 mb-1">Data Freshness Requirement</label>
+                                        <input type="number" value="30" class="w-32 px-3 py-2 border border-gray-300 rounded-md">
+                                        <span class="ml-2 text-sm text-gray-600">days</span>
+                                    </div>
+                                </div>
+                                
+                                <!-- Step 5: Data Validation -->
+                                <div class="step-content hidden" id="step-5">
+                                    <h4 class="text-lg font-soehneKraftig text-conflixis-green mb-4">Step 5: Validate Data Readiness</h4>
+                                    <div class="space-y-4">
+                                        <div class="p-4 bg-green-50 border border-green-200 rounded">
+                                            <div class="flex items-center">
+                                                <svg class="w-5 h-5 text-green-600 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"/>
+                                                </svg>
+                                                <span class="font-medium">Data Completeness: 92%</span>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <h5 class="font-medium mb-2">Quality Checks</h5>
+                                            <div class="space-y-2">
+                                                <div class="flex justify-between p-2 bg-gray-50 rounded">
+                                                    <span class="text-sm">Vendor database updated</span>
+                                                    <span class="text-sm text-green-600">✓ Within 30 days</span>
+                                                </div>
+                                                <div class="flex justify-between p-2 bg-gray-50 rounded">
+                                                    <span class="text-sm">Entity names standardized</span>
+                                                    <span class="text-sm text-green-600">✓ 95% validated</span>
+                                                </div>
+                                                <div class="flex justify-between p-2 bg-gray-50 rounded">
+                                                    <span class="text-sm">EIN/DUNS available</span>
+                                                    <span class="text-sm text-yellow-600">⚠ 78% coverage</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <h5 class="font-medium mb-2">Manual Review Triggers</h5>
+                                            <ul class="text-sm text-gray-600 space-y-1">
+                                                <li>• Entity match confidence &lt; 80%</li>
+                                                <li>• Missing ownership % when compensation &gt; $25,000</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <!-- Step 6: Execute Evaluation -->
+                                <div class="step-content hidden" id="step-6">
+                                    <h4 class="text-lg font-soehneKraftig text-conflixis-green mb-4">Step 6: Execute Evaluation</h4>
+                                    <div class="space-y-4">
+                                        <div>
+                                            <label class="block text-sm font-medium text-gray-700 mb-2">Test Disclosure Data</label>
+                                            <textarea id="testDisclosure" class="w-full px-3 py-2 border border-gray-300 rounded-md" rows="6" placeholder='Enter test disclosure JSON...'>
+{
+  "member_id": "TEST001",
+  "financial_interests": [
+    {
+      "entity_name": "MedTech Solutions Inc",
+      "ownership_percentage": 7,
+      "ownership_value": 150000
+    }
+  ],
+  "compensation_relationships": [
+    {
+      "source_entity": "MedTech Solutions Inc",
+      "amount": 75000,
+      "type": "consulting"
+    }
+  ]
+}</textarea>
+                                        </div>
+                                        <button onclick="executePipeline()" class="px-4 py-2 bg-conflixis-green text-white rounded hover:bg-opacity-90">
+                                            Execute Pipeline
+                                        </button>
+                                        <div id="executionResults" class="hidden">
+                                            <h5 class="font-medium mb-2">Execution Log</h5>
+                                            <div class="bg-gray-900 text-green-400 p-4 rounded font-mono text-sm">
+                                                <div>[2025-08-11 10:55:00] Starting pipeline execution...</div>
+                                                <div>[2025-08-11 10:55:01] Step 1: Entity matching - MedTech Solutions Inc</div>
+                                                <div>[2025-08-11 10:55:02] Match found: 92% confidence (Vendor ID: V-2345)</div>
+                                                <div>[2025-08-11 10:55:03] Step 2: Significance check</div>
+                                                <div>[2025-08-11 10:55:03] ✓ Ownership: 7% (threshold: 5%)</div>
+                                                <div>[2025-08-11 10:55:03] ✓ Compensation: $75,000 (threshold: $50,000)</div>
+                                                <div>[2025-08-11 10:55:04] Step 3: Supplier status verification</div>
+                                                <div>[2025-08-11 10:55:05] ✓ Annual spend: $2,500,000 (threshold: $1,000,000)</div>
+                                                <div class="text-red-400">[2025-08-11 10:55:06] VIOLATION DETECTED: Policy 4.8.1</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <!-- Step 7: Apply Decision -->
+                                <div class="step-content hidden" id="step-7">
+                                    <h4 class="text-lg font-soehneKraftig text-conflixis-green mb-4">Step 7: Apply Policy Decision</h4>
+                                    <div class="space-y-4">
+                                        <div class="p-4 bg-red-50 border border-red-200 rounded">
+                                            <div class="flex items-start">
+                                                <svg class="w-5 h-5 text-red-600 mr-2 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z"/>
+                                                </svg>
+                                                <div>
+                                                    <h5 class="font-medium text-red-900">Insurmountable Conflict Detected</h5>
+                                                    <p class="text-sm text-red-700 mt-1">Major Supplier Relationship - Policy 4.8.1 Violation</p>
+                                                    <p class="text-sm text-gray-600 mt-2">Confidence: 95%</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <h5 class="font-medium mb-2">Required Actions</h5>
+                                            <ol class="list-decimal list-inside text-sm space-y-1">
+                                                <li>Immediate disclosure to Chief Compliance Officer</li>
+                                                <li>Recusal from all supplier-related decisions</li>
+                                                <li>Development of exit plan within 30 days</li>
+                                            </ol>
+                                        </div>
+                                        <div>
+                                            <h5 class="font-medium mb-2">Notifications Sent</h5>
+                                            <div class="space-y-1">
+                                                <div class="flex items-center text-sm">
+                                                    <svg class="w-4 h-4 text-green-600 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                                        <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"/>
+                                                        <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"/>
+                                                    </svg>
+                                                    Chief Compliance Officer - Immediate
+                                                </div>
+                                                <div class="flex items-center text-sm">
+                                                    <svg class="w-4 h-4 text-green-600 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                                        <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"/>
+                                                        <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"/>
+                                                    </svg>
+                                                    Submitter Dashboard - Immediate
+                                                </div>
+                                                <div class="flex items-center text-sm">
+                                                    <svg class="w-4 h-4 text-blue-600 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                                        <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"/>
+                                                        <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"/>
+                                                    </svg>
+                                                    Department Head - Batch notification
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <!-- Step 8: Monitor -->
+                                <div class="step-content hidden" id="step-8">
+                                    <h4 class="text-lg font-soehneKraftig text-conflixis-green mb-4">Step 8: Monitor & Improve</h4>
+                                    <div class="space-y-4">
+                                        <div>
+                                            <h5 class="font-medium mb-2">Performance Metrics</h5>
+                                            <div class="grid grid-cols-2 gap-4">
+                                                <div class="p-3 bg-gray-50 rounded">
+                                                    <div class="text-2xl font-soehneKraftig text-conflixis-green">3.2%</div>
+                                                    <div class="text-sm text-gray-600">Detection Rate</div>
+                                                </div>
+                                                <div class="p-3 bg-gray-50 rounded">
+                                                    <div class="text-2xl font-soehneKraftig text-green-600">2.1%</div>
+                                                    <div class="text-sm text-gray-600">False Positive Rate</div>
+                                                </div>
+                                                <div class="p-3 bg-gray-50 rounded">
+                                                    <div class="text-2xl font-soehneKraftig text-blue-600">847</div>
+                                                    <div class="text-sm text-gray-600">Disclosures Evaluated</div>
+                                                </div>
+                                                <div class="p-3 bg-gray-50 rounded">
+                                                    <div class="text-2xl font-soehneKraftig text-purple-600">27</div>
+                                                    <div class="text-sm text-gray-600">Conflicts Identified</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <h5 class="font-medium mb-2">Recent Refinements</h5>
+                                            <ul class="text-sm text-gray-600 space-y-1">
+                                                <li>• Added fuzzy matching for DBA names (2025-07-15)</li>
+                                                <li>• Adjusted compensation threshold from $75k to $50k (2025-06-20)</li>
+                                                <li>• Included indirect family relationships (2025-06-19)</li>
+                                            </ul>
+                                        </div>
+                                        <div>
+                                            <label class="block text-sm font-medium text-gray-700 mb-1">Next Review Date</label>
+                                            <input type="date" value="2025-09-01" class="px-3 py-2 border border-gray-300 rounded-md">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Navigation Buttons -->
+                            <div class="flex justify-between">
+                                <button id="prevBtn" onclick="changeStep(-1)" class="px-4 py-2 border border-gray-300 rounded hover:bg-gray-50" disabled>
+                                    ← Previous
+                                </button>
+                                <button id="nextBtn" onclick="changeStep(1)" class="px-4 py-2 bg-conflixis-gold text-white rounded hover:bg-opacity-90">
+                                    Next →
+                                </button>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -1075,9 +1490,101 @@
             }
         });
         
+        // Pipeline workflow management
+        let currentPipelineStep = 1;
+        const totalPipelineSteps = 8;
+        
+        function changeStep(direction) {
+            const newStep = currentPipelineStep + direction;
+            
+            if (newStep >= 1 && newStep <= totalPipelineSteps) {
+                // Mark current step as completed if moving forward
+                if (direction > 0) {
+                    document.querySelector(`.step-indicator[data-step="${currentPipelineStep}"]`).classList.add('completed');
+                }
+                
+                // Hide current step content
+                document.getElementById(`step-${currentPipelineStep}`).classList.add('hidden');
+                
+                // Update current step
+                currentPipelineStep = newStep;
+                
+                // Show new step content
+                document.getElementById(`step-${currentPipelineStep}`).classList.remove('hidden');
+                
+                // Update step indicators
+                document.querySelectorAll('.step-indicator').forEach(indicator => {
+                    const stepNum = parseInt(indicator.dataset.step);
+                    indicator.classList.remove('active');
+                    if (stepNum === currentPipelineStep) {
+                        indicator.classList.add('active');
+                    }
+                });
+                
+                // Update current step display
+                document.getElementById('currentStep').textContent = currentPipelineStep;
+                
+                // Update navigation buttons
+                document.getElementById('prevBtn').disabled = currentPipelineStep === 1;
+                document.getElementById('nextBtn').textContent = currentPipelineStep === totalPipelineSteps ? 'Complete' : 'Next →';
+                
+                // If on last step and clicking next, complete the workflow
+                if (currentPipelineStep === totalPipelineSteps && direction > 0) {
+                    document.querySelector(`.step-indicator[data-step="${currentPipelineStep}"]`).classList.add('completed');
+                }
+            }
+        }
+        
+        function executePipeline() {
+            const testData = document.getElementById('testDisclosure').value;
+            const resultsDiv = document.getElementById('executionResults');
+            
+            // Show results
+            resultsDiv.classList.remove('hidden');
+            
+            // Simulate pipeline execution
+            // In production, this would call the actual API
+            console.log('Executing pipeline with test data:', testData);
+        }
+        
+        // Allow clicking on step indicators to navigate
+        function initPipelineNavigation() {
+            document.querySelectorAll('.step-indicator').forEach(indicator => {
+                indicator.addEventListener('click', function() {
+                    const targetStep = parseInt(this.dataset.step);
+                    const stepDiff = targetStep - currentPipelineStep;
+                    
+                    if (stepDiff !== 0) {
+                        // Hide current step
+                        document.getElementById(`step-${currentPipelineStep}`).classList.add('hidden');
+                        
+                        // Update current step
+                        currentPipelineStep = targetStep;
+                        
+                        // Show target step
+                        document.getElementById(`step-${currentPipelineStep}`).classList.remove('hidden');
+                        
+                        // Update indicators
+                        document.querySelectorAll('.step-indicator').forEach(ind => {
+                            ind.classList.remove('active');
+                        });
+                        this.classList.add('active');
+                        
+                        // Update step display
+                        document.getElementById('currentStep').textContent = currentPipelineStep;
+                        
+                        // Update navigation buttons
+                        document.getElementById('prevBtn').disabled = currentPipelineStep === 1;
+                        document.getElementById('nextBtn').textContent = currentPipelineStep === totalPipelineSteps ? 'Complete' : 'Next →';
+                    }
+                });
+            });
+        }
+        
         // Load on page ready
         document.addEventListener('DOMContentLoaded', () => {
             loadConfiguration();
+            initPipelineNavigation();
         });
     </script>
 </body>
