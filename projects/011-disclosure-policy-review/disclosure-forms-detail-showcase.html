@@ -13,7 +13,25 @@
             --conflixis-blue: #4c94ed;
             --conflixis-red: #dc2626;
             --conflixis-tan: #f5e6d3;
+            --conflixis-light-green: #e6f4ea;
+            --conflixis-mint: #34d399;
+            --conflixis-success-green: #10b981;
+            --conflixis-gray: #f3f4f6;
         }
+        
+        .bg-conflixis-green { background-color: var(--conflixis-green); }
+        .bg-conflixis-gold { background-color: var(--conflixis-gold); }
+        .bg-conflixis-blue { background-color: var(--conflixis-blue); }
+        .bg-conflixis-red { background-color: var(--conflixis-red); }
+        .bg-conflixis-tan { background-color: var(--conflixis-tan); }
+        .bg-conflixis-light-green { background-color: var(--conflixis-light-green); }
+        .bg-conflixis-gray { background-color: var(--conflixis-gray); }
+        .text-conflixis-green { color: var(--conflixis-green); }
+        .text-conflixis-gold { color: var(--conflixis-gold); }
+        .text-conflixis-blue { color: var(--conflixis-blue); }
+        .text-conflixis-mint { color: var(--conflixis-mint); }
+        .text-conflixis-success-green { color: var(--conflixis-success-green); }
+        .text-conflixis-light-green { color: #d1fae5; }
         
         .conflixis-gradient {
             background: linear-gradient(135deg, var(--conflixis-green) 0%, #1a4a51 100%);
@@ -41,16 +59,170 @@
             font-size: 0.75rem;
             font-weight: 600;
         }
+        
+        /* Sidebar Styles */
+        .sidebar {
+            width: 280px;
+            background: white;
+            box-shadow: 2px 0 4px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+            min-height: 100vh;
+            position: fixed;
+            left: 0;
+            top: 0;
+            z-index: 40;
+        }
+        
+        .sidebar-collapsed {
+            width: 64px;
+        }
+        
+        .sidebar-collapsed .sidebar-text {
+            display: none;
+        }
+        
+        .sidebar-link {
+            transition: all 0.2s ease;
+        }
+        
+        .sidebar-link:hover {
+            background-color: rgba(12, 52, 58, 0.05);
+            color: var(--conflixis-green);
+        }
+        
+        .sidebar-link.active {
+            background-color: var(--conflixis-light-green);
+            color: var(--conflixis-green);
+            font-weight: 600;
+        }
+        
+        .main-content {
+            margin-left: 280px;
+            transition: margin-left 0.3s ease;
+        }
+        
+        .main-content-expanded {
+            margin-left: 64px;
+        }
+        
+        .admin-submenu {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+        }
+        
+        .admin-submenu.expanded {
+            max-height: 300px;
+        }
+        
+        .admin-toggle {
+            transition: transform 0.3s ease;
+        }
+        
+        .admin-toggle.rotated {
+            transform: rotate(180deg);
+        }
     </style>
 </head>
-<body class="bg-gray-50">
-    <!-- Header -->
-    <div class="conflixis-gradient text-white py-8 shadow-lg">
-        <div class="container mx-auto px-4">
-            <h1 class="text-3xl font-bold mb-2">Disclosure Forms Detail Showcase</h1>
-            <p class="text-gray-200">Real examples from 2025 Texas Health COI Survey</p>
+<body class="bg-gray-50 flex">
+    <!-- Sidebar -->
+    <aside id="sidebar" class="sidebar">
+        <div class="p-6 border-b">
+            <img src="../../docs/design-system/conflixis-design-system/assets/logos/conflixis-logo.png" alt="Conflixis" class="h-8 mb-4">
+            <div>
+                <h2 class="text-lg font-bold text-gray-800">Disclosure Review</h2>
+                <p class="text-xs text-gray-500">Conflixis</p>
+            </div>
         </div>
-    </div>
+        
+        <nav class="p-4">
+            <ul class="space-y-2">
+                <li>
+                    <a href="/" class="sidebar-link flex items-center gap-3 px-4 py-3 rounded-lg text-gray-700">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
+                        </svg>
+                        <span class="sidebar-text">Dashboard</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/disclosures" class="sidebar-link flex items-center gap-3 px-4 py-3 rounded-lg text-gray-700">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 17V7m0 10a2 2 0 01-2 2H5a2 2 0 01-2-2V7a2 2 0 012-2h2a2 2 0 012 2m0 10a2 2 0 002 2h2a2 2 0 002-2M9 7a2 2 0 012-2h2a2 2 0 012 2m0 10V7m0 10a2 2 0 002 2h2a2 2 0 002-2V7a2 2 0 00-2-2h-2a2 2 0 00-2 2" />
+                        </svg>
+                        <span class="sidebar-text">Disclosure Viewer</span>
+                    </a>
+                </li>
+                <li>
+                    <div>
+                        <button onclick="toggleAdminMenu()" class="sidebar-link w-full flex items-center justify-between px-4 py-3 rounded-lg text-gray-700 hover:bg-gray-50">
+                            <div class="flex items-center gap-3">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                                </svg>
+                                <span class="sidebar-text">Admin</span>
+                            </div>
+                            <svg id="adminToggle" class="w-4 h-4 admin-toggle sidebar-text" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                            </svg>
+                        </button>
+                        <ul id="adminSubmenu" class="admin-submenu ml-4 mt-2 space-y-1">
+                            <li>
+                                <a href="/api/docs" target="_blank" class="flex items-center gap-3 px-4 py-2 text-sm rounded-lg text-gray-600 hover:bg-gray-50 hover:text-conflixis-green transition-colors">
+                                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+                                    </svg>
+                                    <span class="sidebar-text">API Docs</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/api/redoc" target="_blank" class="flex items-center gap-3 px-4 py-2 text-sm rounded-lg text-gray-600 hover:bg-gray-50 hover:text-conflixis-green transition-colors">
+                                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                                    </svg>
+                                    <span class="sidebar-text">ReDoc</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/forms-showcase" class="sidebar-link active flex items-center gap-3 px-4 py-2 text-sm rounded-lg">
+                                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z" />
+                                    </svg>
+                                    <span class="sidebar-text">Forms Showcase</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/configuration" class="sidebar-link flex items-center gap-3 px-4 py-2 text-sm rounded-lg text-gray-600 hover:bg-gray-50">
+                                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4" />
+                                    </svg>
+                                    <span class="sidebar-text">Configuration</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+        
+        <button id="sidebarToggle" onclick="toggleSidebar()" class="absolute bottom-4 right-4 p-2 rounded-lg bg-gray-100 hover:bg-gray-200 transition-colors">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 19l-7-7 7-7m8 14l-7-7 7-7" />
+            </svg>
+            <span class="sidebar-text sr-only">Collapse Sidebar</span>
+        </button>
+    </aside>
+    
+    <!-- Main Content -->
+    <div id="mainContent" class="main-content flex-1">
+        <!-- Header -->
+        <div class="conflixis-gradient text-white py-8 shadow-lg">
+            <div class="container mx-auto px-4">
+                <h1 class="text-3xl font-bold mb-2">Disclosure Forms Detail Showcase</h1>
+                <p class="text-gray-200">Real examples from 2025 Texas Health COI Survey</p>
+            </div>
+        </div>
 
     <!-- Stats Overview -->
     <div class="container mx-auto px-4 -mt-6 mb-8">
@@ -92,7 +264,7 @@
             
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
                 <!-- Related Parties Example -->
-                <div class="form-card bg-white rounded-lg shadow-lg p-6" onclick="showDetailModal('external', 'related', realExamples.relatedParty)">
+                <div class="form-card bg-white rounded-lg shadow-lg p-6" onclick="showDetailModal('external', 'related', 'relatedParty')">
                     <div class="flex justify-between items-start mb-3">
                         <h3 class="font-semibold text-gray-700">Related Parties</h3>
                         <span class="category-badge bg-blue-100 text-blue-700">421 records</span>
@@ -113,7 +285,7 @@
                 </div>
 
                 <!-- Governance/Director Fees Example -->
-                <div class="form-card bg-white rounded-lg shadow-lg p-6" onclick="showDetailModal('external', 'governance', realExamples.governance)">
+                <div class="form-card bg-white rounded-lg shadow-lg p-6" onclick="showDetailModal('external', 'governance', 'governance')">
                     <div class="flex justify-between items-start mb-3">
                         <h3 class="font-semibold text-gray-700">Governance/Director Fees</h3>
                         <span class="category-badge bg-blue-100 text-blue-700">56 records</span>
@@ -134,7 +306,7 @@
                 </div>
 
                 <!-- Other Activities Example -->
-                <div class="form-card bg-white rounded-lg shadow-lg p-6" onclick="showDetailModal('external', 'other', realExamples.otherActivities)">
+                <div class="form-card bg-white rounded-lg shadow-lg p-6" onclick="showDetailModal('external', 'other', 'otherActivities')">
                     <div class="flex justify-between items-start mb-3">
                         <h3 class="font-semibold text-gray-700">Other Activities</h3>
                         <span class="category-badge bg-blue-100 text-blue-700">33 records</span>
@@ -165,7 +337,7 @@
             
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
                 <!-- Ownership/Investment Example -->
-                <div class="form-card bg-white rounded-lg shadow-lg p-6" onclick="showDetailModal('financial', 'ownership', realExamples.ownership)">
+                <div class="form-card bg-white rounded-lg shadow-lg p-6" onclick="showDetailModal('financial', 'ownership', 'ownership')">
                     <div class="flex justify-between items-start mb-3">
                         <h3 class="font-semibold text-gray-700">Ownership/Investment</h3>
                         <span class="category-badge bg-yellow-100 text-yellow-700">184 records</span>
@@ -186,7 +358,7 @@
                 </div>
 
                 <!-- Receipt of Remuneration Example -->
-                <div class="form-card bg-white rounded-lg shadow-lg p-6" onclick="showDetailModal('financial', 'remuneration', realExamples.remuneration)">
+                <div class="form-card bg-white rounded-lg shadow-lg p-6" onclick="showDetailModal('financial', 'remuneration', 'remuneration')">
                     <div class="flex justify-between items-start mb-3">
                         <h3 class="font-semibold text-gray-700">Receipt of Remuneration</h3>
                         <span class="category-badge bg-yellow-100 text-yellow-700">174 records</span>
@@ -207,7 +379,7 @@
                 </div>
 
                 <!-- Receipt of Compensation Example -->
-                <div class="form-card bg-white rounded-lg shadow-lg p-6" onclick="showDetailModal('financial', 'compensation', realExamples.compensation)">
+                <div class="form-card bg-white rounded-lg shadow-lg p-6" onclick="showDetailModal('financial', 'compensation', 'compensation')">
                     <div class="flex justify-between items-start mb-3">
                         <h3 class="font-semibold text-gray-700">Receipt of Compensation</h3>
                         <span class="category-badge bg-yellow-100 text-yellow-700">72 records</span>
@@ -238,7 +410,7 @@
             
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
                 <!-- Open Payments Import Example -->
-                <div class="form-card bg-white rounded-lg shadow-lg p-6" onclick="showDetailModal('openpayments', 'import', realExamples.openPayments)">
+                <div class="form-card bg-white rounded-lg shadow-lg p-6" onclick="showDetailModal('openpayments', 'import', 'openPayments')">
                     <div class="flex justify-between items-start mb-3">
                         <h3 class="font-semibold text-gray-700">Open Payments Import</h3>
                         <span class="category-badge bg-green-100 text-green-700">138 records</span>
@@ -282,7 +454,13 @@
         </div>
     </div>
 
+    <!-- API Client -->
+    <script src="/api.js"></script>
+    
     <script>
+        // Initialize API client
+        const apiClient = new DisclosureAPIClient();
+        
         // Real examples data
         const realExamples = {
             relatedParty: {
@@ -408,10 +586,32 @@
             }
         };
 
-        function showDetailModal(category, type, data) {
+        async function showDetailModal(category, type, exampleKey) {
             const modal = document.getElementById('detailModal');
             const modalTitle = document.getElementById('modalTitle');
             const modalContent = document.getElementById('modalContent');
+            
+            // Use example data for now, but fetch real data if available
+            let data = realExamples[exampleKey];
+            
+            // Try to fetch real data from API
+            try {
+                const disclosures = await apiClient.getDisclosures();
+                // Find a matching disclosure by category and type
+                const matchingDisclosure = disclosures.find(d => {
+                    const catMatch = (category === 'external' && d.category_label === 'External Roles & Relationships') ||
+                                    (category === 'financial' && d.category_label === 'Financial & Investment Interests') ||
+                                    (category === 'openPayments' && d.category_label === 'Open Payments (CMS Imports)');
+                    return catMatch;
+                });
+                
+                if (matchingDisclosure) {
+                    // Merge real data with example data structure
+                    data = { ...data, ...matchingDisclosure };
+                }
+            } catch (error) {
+                console.log('Using example data:', error);
+            }
             
             modalTitle.textContent = `${data.category_label} - ${data.relationship_type}`;
             
@@ -757,6 +957,56 @@
         function closeModal() {
             document.getElementById('detailModal').classList.add('hidden');
         }
+        
+        // Toggle sidebar
+        function toggleSidebar() {
+            const sidebar = document.getElementById('sidebar');
+            const mainContent = document.getElementById('mainContent');
+            const toggleBtn = document.getElementById('sidebarToggle');
+            
+            sidebar.classList.toggle('sidebar-collapsed');
+            mainContent.classList.toggle('main-content-expanded');
+            
+            // Update button icon
+            if (sidebar.classList.contains('sidebar-collapsed')) {
+                toggleBtn.innerHTML = `
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 5l7 7-7 7M5 5l7 7-7 7" />
+                    </svg>
+                    <span class="sidebar-text sr-only">Expand Sidebar</span>
+                `;
+            } else {
+                toggleBtn.innerHTML = `
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 19l-7-7 7-7m8 14l-7-7 7-7" />
+                    </svg>
+                    <span class="sidebar-text sr-only">Collapse Sidebar</span>
+                `;
+            }
+        }
+        
+        // Toggle admin submenu
+        function toggleAdminMenu() {
+            const submenu = document.getElementById('adminSubmenu');
+            const toggle = document.getElementById('adminToggle');
+            
+            submenu.classList.toggle('expanded');
+            toggle.classList.toggle('rotated');
+        }
+        
+        // Initialize admin menu as expanded for Forms Showcase
+        document.addEventListener('DOMContentLoaded', function() {
+            const submenu = document.getElementById('adminSubmenu');
+            const toggle = document.getElementById('adminToggle');
+            if (submenu && toggle) {
+                submenu.classList.add('expanded');
+                toggle.classList.add('rotated');
+            }
+        });
     </script>
+    </div> <!-- End of Main Content -->
+    
+    <!-- API Client -->
+    <script src="/api.js"></script>
 </body>
 </html>

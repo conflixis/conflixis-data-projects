@@ -1,0 +1,1084 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Policy Configuration - Conflixis Disclosure Review</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="icon" href="/docs/design-system/conflixis-design-system/assets/logos/conflixis-icon.png" type="image/png">
+    
+    <!-- Conflixis Design System Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <style>
+        /* Conflixis Font Definitions */
+        @font-face {
+            font-family: 'SoehneKraftig';
+            src: local('Soehne Kraftig'), local('Soehne-Kraftig'),
+                 url('https://fonts.googleapis.com/css2?family=Inter:wght@700&display=swap');
+            font-weight: 700;
+        }
+        
+        @font-face {
+            font-family: 'SoehneLeicht';
+            src: local('Soehne Leicht'), local('Soehne-Leicht'),
+                 url('https://fonts.googleapis.com/css2?family=Inter:wght@300&display=swap');
+            font-weight: 300;
+        }
+        
+        @font-face {
+            font-family: 'IvarDisplay';
+            src: local('Ivar Display'), local('IvarDisplay'),
+                 url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap');
+        }
+        
+        body {
+            font-family: 'SoehneLeicht', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+        }
+        
+        .font-soehneKraftig {
+            font-family: 'SoehneKraftig', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            font-weight: 700;
+        }
+        
+        .font-ivarDisplay {
+            font-family: 'IvarDisplay', 'Playfair Display', serif;
+        }
+        
+        /* Conflixis Animations */
+        @keyframes fade-in {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        @keyframes bar {
+            from { width: 0; }
+            to { width: var(--bar-width); }
+        }
+        
+        .animate-fade-in {
+            animation: fade-in 0.5s ease-out;
+        }
+        
+        .animate-bar {
+            animation: bar 1s ease-out forwards;
+        }
+        
+        /* Conflixis Gradient */
+        .conflixis-gradient {
+            background: linear-gradient(135deg, #0c343a 0%, #1a5c64 100%);
+        }
+        
+    <style>
+        /* Sidebar styles */
+        .sidebar {
+            width: 250px;
+            transition: transform 0.3s ease;
+        }
+        
+        .sidebar-collapsed {
+            transform: translateX(-250px);
+        }
+        
+        .main-content {
+            margin-left: 250px;
+            transition: margin-left 0.3s ease;
+        }
+        
+        .main-content-expanded {
+            margin-left: 0;
+        }
+        
+        .sidebar-link {
+            transition: all 0.2s ease;
+        }
+        
+        .sidebar-link:hover {
+            background-color: rgba(12, 52, 58, 0.1);
+            padding-left: 1.25rem;
+        }
+        
+        .sidebar-link.active {
+            background-color: #0c343a;
+            color: white;
+        }
+        
+        .admin-toggle {
+            transition: transform 0.3s ease;
+        }
+        
+        .admin-toggle.rotated {
+            transform: rotate(90deg);
+        }
+        
+        /* Tab styles - Professional Conflixis Design */
+        .tab-button {
+            position: relative;
+            padding: 1rem 2rem;
+            font-family: 'SoehneKraftig', -apple-system, BlinkMacSystemFont, sans-serif;
+            font-size: 0.95rem;
+            color: #6b7280;
+            background: transparent;
+            border: none;
+            border-bottom: 3px solid transparent;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+        
+        .tab-button:hover {
+            color: #0c343a;
+            background: rgba(255, 255, 255, 0.5);
+        }
+        
+        .tab-button.active {
+            color: #0c343a;
+            background: white;
+            border-bottom-color: #eab96d;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+        
+        .tab-button.active::after {
+            content: '';
+            position: absolute;
+            bottom: -3px;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, #eab96d 0%, #f4c984 100%);
+            animation: slideIn 0.3s ease;
+        }
+        
+        @keyframes slideIn {
+            from { width: 0; }
+            to { width: 100%; }
+        }
+        
+        .tab-content {
+            display: none;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        
+        .tab-content.active {
+            display: block;
+            opacity: 1;
+            animation: fadeIn 0.4s ease;
+        }
+        
+        @keyframes fadeIn {
+            from { 
+                opacity: 0;
+                transform: translateY(10px);
+            }
+            to { 
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        /* Threshold card styles */
+        .threshold-card {
+            @apply bg-white rounded-lg shadow border-l-4 border-conflixis-green p-6 hover:shadow-lg transition-all;
+        }
+        
+        .policy-mapping {
+            @apply bg-conflixis-tan text-conflixis-green px-3 py-1 rounded-full text-xs font-soehneKraftig inline-block;
+        }
+        
+        /* Risk color indicators - Conflixis colors */
+        .risk-low { background-color: #2a9d8f; } /* conflixis-mint */
+        .risk-moderate { background-color: #eab96d; } /* conflixis-gold */
+        .risk-high { background-color: #ff6b35; } /* conflixis-orange */
+        .risk-critical { background-color: #dc3545; } /* conflixis-red */
+    </style>
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'conflixis-green': '#0c343a',
+                        'conflixis-gold': '#eab96d',
+                        'conflixis-blue': '#4c94ed',
+                        'conflixis-tan': '#f5e6d3',
+                        'conflixis-red': '#dc3545',
+                        'conflixis-orange': '#ff6b35',
+                        'conflixis-mint': '#2a9d8f',
+                        'conflixis-ivory': '#faf9f6',
+                        'conflixis-success-green': '#28a745',
+                        'conflixis-light-green': '#e8f5e9',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="flex bg-gray-50">
+    <!-- Sidebar -->
+    <aside id="sidebar" class="sidebar fixed h-full bg-white shadow-lg z-50">
+        <div class="p-6 border-b">
+            <div class="flex items-center space-x-3">
+                <img src="/docs/design-system/conflixis-design-system/assets/logos/conflixis-logo.png" 
+                     alt="Conflixis" class="h-8">
+                <div>
+                    <h2 class="text-lg font-bold text-conflixis-green">Disclosure Review</h2>
+                    <p class="text-xs text-gray-500">Conflixis</p>
+                </div>
+            </div>
+        </div>
+        
+        <nav class="p-4">
+            <ul class="space-y-2">
+                <li>
+                    <a href="/" class="sidebar-link flex items-center gap-3 px-4 py-3 rounded-lg text-gray-700">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
+                        </svg>
+                        <span>Dashboard</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/disclosures" class="sidebar-link flex items-center gap-3 px-4 py-3 rounded-lg text-gray-700">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 17V7m0 10a2 2 0 01-2 2H5a2 2 0 01-2-2V7a2 2 0 012-2h2a2 2 0 012 2m0 10a2 2 0 002 2h2a2 2 0 002-2M9 7a2 2 0 012-2h2a2 2 0 012 2m0 10V7m0 10a2 2 0 002 2h2a2 2 0 002-2V7a2 2 0 00-2-2h-2a2 2 0 00-2 2" />
+                        </svg>
+                        <span>Disclosure Viewer</span>
+                    </a>
+                </li>
+                <li>
+                    <div>
+                        <button onclick="toggleAdminMenu()" class="sidebar-link w-full flex items-center justify-between px-4 py-3 rounded-lg text-gray-700 hover:bg-gray-50">
+                            <div class="flex items-center gap-3">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                                </svg>
+                                <span>Admin</span>
+                            </div>
+                            <svg id="adminToggle" class="w-4 h-4 admin-toggle" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                            </svg>
+                        </button>
+                        
+                        <ul id="adminSubmenu" class="hidden mt-2 ml-8 space-y-1">
+                            <li>
+                                <a href="/api/docs" class="sidebar-link flex items-center gap-2 px-4 py-2 text-sm text-gray-600 rounded hover:bg-gray-50">
+                                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+                                    </svg>
+                                    <span>API Docs</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/api/redoc" class="sidebar-link flex items-center gap-2 px-4 py-2 text-sm text-gray-600 rounded hover:bg-gray-50">
+                                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                                    </svg>
+                                    <span>ReDoc</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/forms-showcase" class="sidebar-link flex items-center gap-2 px-4 py-2 text-sm text-gray-600 rounded hover:bg-gray-50">
+                                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z" />
+                                    </svg>
+                                    <span>Forms Showcase</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/configuration" class="sidebar-link active flex items-center gap-2 px-4 py-2 text-sm rounded">
+                                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4" />
+                                    </svg>
+                                    <span>Configuration</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+        
+        <!-- Collapse button -->
+        <button onclick="toggleSidebar()" class="absolute bottom-4 right-4 p-2 text-gray-500 hover:text-gray-700">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 19l-7-7 7-7m8 14l-7-7 7-7" />
+            </svg>
+            <span class="sr-only">Collapse Sidebar</span>
+        </button>
+    </aside>
+    
+    <!-- Toggle Button (shown when sidebar is collapsed) -->
+    <button id="sidebarToggle" onclick="toggleSidebar()" class="fixed left-0 top-20 z-40 p-2 bg-conflixis-green text-white rounded-r-lg shadow-lg hidden">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+        </svg>
+    </button>
+    
+    <!-- Main Content -->
+    <main id="mainContent" class="main-content flex-1 min-h-screen bg-conflixis-ivory">
+        <!-- Top Navigation -->
+        <nav class="bg-white shadow-lg sticky top-0 z-30">
+            <div class="px-6 py-4">
+                <div class="flex items-center justify-between">
+                    <div>
+                        <span class="text-xl font-soehneKraftig text-conflixis-green">Policy Configuration Center</span>
+                        <span class="text-sm block text-conflixis-green">Texas Health COI Policy Management</span>
+                    </div>
+                    <div class="flex items-center space-x-4">
+                        <span class="text-sm text-gray-600">Version: 1.0.0</span>
+                        <button onclick="exportConfiguration()" class="bg-conflixis-gold hover:bg-opacity-90 text-conflixis-green px-4 py-2 rounded-lg font-soehneKraftig transition-all">
+                            Export Config
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        
+        <div class="p-6 animate-fade-in">
+            <!-- Header -->
+            <div class="mb-6">
+                <h1 class="text-3xl font-soehneKraftig text-conflixis-green">Policy Configuration</h1>
+                <p class="mt-2 text-gray-600">Manage COI policy thresholds and operational settings</p>
+            </div>
+            
+            <!-- Configuration Status -->
+            <div class="bg-white rounded-lg shadow p-6 mb-6 border-t-4 border-conflixis-green">
+                <div class="flex items-center justify-between">
+                    <div>
+                        <h2 class="text-xl font-soehneKraftig text-conflixis-green">Configuration Status</h2>
+                        <p class="text-sm text-gray-600 mt-1">Last updated: <span id="lastUpdated" class="font-soehneKraftig text-conflixis-blue">Loading...</span></p>
+                    </div>
+                    <div class="flex gap-3">
+                        <button onclick="importConfiguration()" class="px-4 py-2 bg-conflixis-tan text-conflixis-green rounded-lg hover:bg-opacity-90 font-soehneKraftig transition-all">
+                            Import Config
+                        </button>
+                        <button onclick="saveConfiguration()" class="px-4 py-2 bg-conflixis-green text-white rounded-lg hover:bg-opacity-90 font-soehneKraftig transition-all">
+                            Save Changes
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Version info -->
+                <div class="mt-4 grid grid-cols-3 gap-4">
+                    <div class="bg-conflixis-light-green rounded-lg p-3">
+                        <span class="text-xs text-gray-600 block">Policy Version</span>
+                        <span id="policyVersion" class="text-lg font-soehneKraftig text-conflixis-green">1.0.0</span>
+                    </div>
+                    <div class="bg-blue-50 rounded-lg p-3">
+                        <span class="text-xs text-gray-600 block">Threshold Version</span>
+                        <span id="thresholdVersion" class="text-lg font-soehneKraftig text-conflixis-blue">1.0.0</span>
+                    </div>
+                    <div class="bg-conflixis-tan rounded-lg p-3">
+                        <span class="text-xs text-gray-600 block">Active Policies</span>
+                        <span id="activePolicies" class="text-lg font-soehneKraftig text-conflixis-green">0</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Configuration Tabs -->
+            <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                <div style="background: linear-gradient(135deg, #f5f1e8 0%, #ebe7de 100%); border-bottom: 1px solid #e5e7eb;">
+                    <nav class="flex justify-start" style="margin-bottom: -1px;">
+                        <button onclick="showTab('thresholds')" class="tab-button active" data-tab="thresholds">
+                            <svg class="inline-block w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M3 3h14a1 1 0 011 1v12a1 1 0 01-1 1H3a1 1 0 01-1-1V4a1 1 0 011-1zm0 2v10h14V5H3z"/>
+                            </svg>
+                            Risk Thresholds
+                        </button>
+                        <button onclick="showTab('mappings')" class="tab-button" data-tab="mappings">
+                            <svg class="inline-block w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M9 2a1 1 0 000 2h2a1 1 0 100-2H9z"/>
+                                <path fill-rule="evenodd" d="M4 5a2 2 0 012-2 1 1 0 000 2H6a2 2 0 100 4h1a2 2 0 100 4h2a1 1 0 100-2H6a2 2 0 00-2-2z"/>
+                            </svg>
+                            Policy Mappings
+                        </button>
+                        <button onclick="showTab('triggers')" class="tab-button" data-tab="triggers">
+                            <svg class="inline-block w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M11.3 1.046A1 1 0 0112 2v5h4a1 1 0 01.82 1.573l-7 10A1 1 0 018 18v-5H4a1 1 0 01-.82-1.573l7-10a1 1 0 011.12-.38z"/>
+                            </svg>
+                            Disclosure Triggers
+                        </button>
+                        <button onclick="showTab('scoring')" class="tab-button" data-tab="scoring">
+                            <svg class="inline-block w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M2 11a1 1 0 011-1h2a1 1 0 011 1v5a1 1 0 01-1 1H3a1 1 0 01-1-1v-5zM8 7a1 1 0 011-1h2a1 1 0 011 1v9a1 1 0 01-1 1H9a1 1 0 01-1-1V7zM14 4a1 1 0 011-1h2a1 1 0 011 1v12a1 1 0 01-1 1h-2a1 1 0 01-1-1V4z"/>
+                            </svg>
+                            Risk Scoring
+                        </button>
+                        <button onclick="showTab('audit')" class="tab-button" data-tab="audit">
+                            <svg class="inline-block w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z"/>
+                            </svg>
+                            Change History
+                        </button>
+                    </nav>
+                </div>
+                
+                <!-- Tab Content -->
+                <div class="p-8" style="background: linear-gradient(180deg, #ffffff 0%, #fafafa 100%); min-height: 500px;">
+                    <!-- Risk Thresholds Tab -->
+                    <div id="thresholds-tab" class="tab-content active">
+                        <h3 class="text-xl font-soehneKraftig text-conflixis-green mb-4">Risk Tier Thresholds</h3>
+                        <p class="text-sm text-gray-600 mb-6">Configure financial thresholds that determine risk tiers and management requirements</p>
+                        
+                        <div class="space-y-4" id="thresholdsList">
+                            <!-- Thresholds will be loaded here -->
+                        </div>
+                    </div>
+                    
+                    <!-- Policy Mappings Tab -->
+                    <div id="mappings-tab" class="tab-content">
+                        <h3 class="text-lg font-semibold mb-4">Policy Clause Mappings</h3>
+                        <p class="text-sm text-gray-600 mb-6">View how operational thresholds map to Texas Health policy sections</p>
+                        
+                        <div class="grid gap-4" id="mappingsList">
+                            <!-- Mappings will be loaded here -->
+                        </div>
+                    </div>
+                    
+                    <!-- Disclosure Triggers Tab -->
+                    <div id="triggers-tab" class="tab-content">
+                        <h3 class="text-lg font-semibold mb-4">Disclosure Triggers</h3>
+                        <p class="text-sm text-gray-600 mb-6">Configure thresholds that trigger mandatory disclosure requirements</p>
+                        
+                        <div class="grid gap-4" id="triggersList">
+                            <!-- Triggers will be loaded here -->
+                        </div>
+                    </div>
+                    
+                    <!-- Risk Scoring Tab -->
+                    <div id="scoring-tab" class="tab-content">
+                        <h3 class="text-lg font-semibold mb-4">Risk Scoring Configuration</h3>
+                        <p class="text-sm text-gray-600 mb-6">Adjust weights and scales for automated risk assessment</p>
+                        
+                        <div id="scoringConfig">
+                            <!-- Scoring configuration will be loaded here -->
+                        </div>
+                    </div>
+                    
+                    <!-- Audit History Tab -->
+                    <div id="audit-tab" class="tab-content">
+                        <h3 class="text-lg font-semibold mb-4">Configuration Change History</h3>
+                        <p class="text-sm text-gray-600 mb-6">Track all changes made to policy configuration</p>
+                        
+                        <div class="overflow-x-auto">
+                            <table class="min-w-full divide-y divide-gray-200">
+                                <thead class="bg-gray-50">
+                                    <tr>
+                                        <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Date</th>
+                                        <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">User</th>
+                                        <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Change Type</th>
+                                        <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Details</th>
+                                        <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Actions</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="auditHistory" class="bg-white divide-y divide-gray-200">
+                                    <!-- Audit history will be loaded here -->
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    
+    <!-- API Client -->
+    <script src="/api.js"></script>
+    
+    <script>
+        // Initialize API client
+        const apiClient = new DisclosureAPIClient();
+        // Make currentConfig globally accessible
+        window.currentConfig = {};
+        let hasUnsavedChanges = false;
+        
+        // Toggle sidebar
+        function toggleSidebar() {
+            const sidebar = document.getElementById('sidebar');
+            const mainContent = document.getElementById('mainContent');
+            const toggleBtn = document.getElementById('sidebarToggle');
+            
+            sidebar.classList.toggle('sidebar-collapsed');
+            mainContent.classList.toggle('main-content-expanded');
+            toggleBtn.classList.toggle('hidden');
+        }
+        
+        // Toggle admin submenu
+        function toggleAdminMenu() {
+            const submenu = document.getElementById('adminSubmenu');
+            const toggle = document.getElementById('adminToggle');
+            
+            submenu.classList.toggle('hidden');
+            toggle.classList.toggle('rotated');
+        }
+        
+        // Tab switching
+        function showTab(tabName) {
+            // Hide all tabs
+            document.querySelectorAll('.tab-content').forEach(tab => {
+                tab.classList.remove('active');
+            });
+            
+            // Remove active from all buttons
+            document.querySelectorAll('.tab-button').forEach(btn => {
+                btn.classList.remove('active');
+            });
+            
+            // Show selected tab
+            document.getElementById(`${tabName}-tab`).classList.add('active');
+            
+            // Activate button
+            document.querySelector(`[data-tab="${tabName}"]`).classList.add('active');
+        }
+        
+        // Load configuration
+        async function loadConfiguration() {
+            try {
+                // Always start with default configuration to ensure we have data
+                window.currentConfig = getDefaultConfiguration();
+                
+                // Try to get configuration from API
+                try {
+                    const response = await fetch('/api/policies/configuration');
+                    if (response.ok) {
+                        const apiConfig = await response.json();
+                        // Merge API config with defaults - but keep default thresholds if API doesn't have them
+                        if (apiConfig) {
+                            window.currentConfig = {
+                                ...window.currentConfig,
+                                ...apiConfig
+                            };
+                            // If API didn't provide thresholds, keep the defaults
+                            if (!apiConfig.thresholds || apiConfig.thresholds.length === 0) {
+                                window.currentConfig.thresholds = getDefaultConfiguration().thresholds;
+                            }
+                        }
+                    }
+                } catch (apiError) {
+                    console.log('Using default configuration (API not available)');
+                }
+                
+                // Update status
+                document.getElementById('lastUpdated').textContent = window.currentConfig.last_updated || new Date().toISOString().split('T')[0];
+                document.getElementById('policyVersion').textContent = window.currentConfig.version || '1.0.0';
+                document.getElementById('thresholdVersion').textContent = window.currentConfig.threshold_version || '1.0.0';
+                document.getElementById('activePolicies').textContent = window.currentConfig.active_policies || 5;
+                
+                // Load all tabs
+                loadThresholds();
+                loadMappings();
+                loadTriggers();
+                loadScoringConfig();
+                loadAuditHistory();
+                
+            } catch (error) {
+                console.error('Failed to load configuration:', error);
+                // Ensure we have default config even if something fails
+                window.currentConfig = getDefaultConfiguration();
+                
+                // Update UI with defaults
+                document.getElementById('lastUpdated').textContent = new Date().toISOString().split('T')[0];
+                document.getElementById('policyVersion').textContent = '1.0.0';
+                document.getElementById('thresholdVersion').textContent = '1.0.0';
+                document.getElementById('activePolicies').textContent = '5';
+                
+                loadThresholds();
+                loadMappings();
+                loadTriggers();
+                loadScoringConfig();
+                loadAuditHistory();
+            }
+        }
+        
+        // Get default configuration
+        function getDefaultConfiguration() {
+            return {
+                version: "1.0.0",
+                threshold_version: "1.0.0",
+                active_policies: 5,
+                last_updated: new Date().toISOString().split('T')[0],
+                thresholds: [
+                    {
+                        tier: "tier_1_low",
+                        label: "Tier 1: Low Risk",
+                        range_min: 0,
+                        range_max: 4999,
+                        description: "Minimal financial interest requiring disclosure only",
+                        policy_clause: "4.7",
+                        management_requirements: {
+                            review_level: "Department",
+                            approval_authority: "Department Chair",
+                            management_plan: false,
+                            monitoring_frequency: "Annual"
+                        }
+                    },
+                    {
+                        tier: "tier_2_moderate",
+                        label: "Tier 2: Moderate Risk",
+                        range_min: 5000,
+                        range_max: 49999,
+                        description: "Moderate financial interest requiring management plan",
+                        policy_clause: "4.8",
+                        management_requirements: {
+                            review_level: "Executive",
+                            approval_authority: "Chief Compliance Officer",
+                            management_plan: true,
+                            monitoring_frequency: "Quarterly"
+                        }
+                    },
+                    {
+                        tier: "tier_3_high",
+                        label: "Tier 3: High Risk",
+                        range_min: 50000,
+                        range_max: 149999,
+                        description: "Significant financial interest requiring executive review",
+                        policy_clause: "4.9.1",
+                        management_requirements: {
+                            review_level: "Executive Committee",
+                            approval_authority: "CEO/President",
+                            management_plan: true,
+                            monitoring_frequency: "Monthly"
+                        }
+                    },
+                    {
+                        tier: "tier_4_critical",
+                        label: "Tier 4: Critical Risk",
+                        range_min: 150000,
+                        range_max: null,
+                        description: "Major financial interest requiring board oversight",
+                        policy_clause: "4.9.2",
+                        management_requirements: {
+                            review_level: "Board",
+                            approval_authority: "Board of Directors",
+                            management_plan: true,
+                            monitoring_frequency: "Continuous"
+                        }
+                    }
+                ],
+                triggers: [],
+                scoring: {},
+                policies: []
+            };
+        }
+        
+        // Load risk thresholds
+        function loadThresholds() {
+            const container = document.getElementById('thresholdsList');
+            if (!container) return;
+            
+            // Ensure we have config data
+            if (!window.currentConfig || !window.currentConfig.thresholds) {
+                window.currentConfig = getDefaultConfiguration();
+            }
+            
+            const thresholds = window.currentConfig.thresholds || [];
+            
+            if (thresholds.length === 0) {
+                container.innerHTML = '<p class="text-gray-500">No thresholds configured.</p>';
+                return;
+            }
+            
+            let html = '<div class="grid grid-cols-1 md:grid-cols-2 gap-6">';
+            
+            const tierColors = {
+                'tier_1_low': 'bg-green-50 border-green-300',
+                'tier_2_moderate': 'bg-yellow-50 border-yellow-300',
+                'tier_3_high': 'bg-orange-50 border-orange-300',
+                'tier_4_critical': 'bg-red-50 border-red-300'
+            };
+            
+            const tierTextColors = {
+                'tier_1_low': 'text-green-700',
+                'tier_2_moderate': 'text-yellow-700',
+                'tier_3_high': 'text-orange-700',
+                'tier_4_critical': 'text-red-700'
+            };
+            
+            thresholds.forEach(threshold => {
+                const bgClass = tierColors[threshold.tier] || 'bg-gray-50 border-gray-300';
+                const textClass = tierTextColors[threshold.tier] || 'text-gray-700';
+                
+                html += `
+                    <div class="rounded-lg border-2 p-6 shadow-md hover:shadow-xl transition-all ${bgClass}">
+                        <div class="flex items-center justify-between mb-4">
+                            <h4 class="font-bold text-lg ${textClass}">${threshold.label}</h4>
+                            <span class="text-sm text-gray-600 bg-white px-3 py-1 rounded-full shadow-sm">Policy §${threshold.policy_clause || 'N/A'}</span>
+                        </div>
+                        
+                        <div class="space-y-4">
+                            <div class="grid grid-cols-2 gap-4">
+                                <div>
+                                    <label class="block text-sm font-medium text-gray-700 mb-1">Minimum ($)</label>
+                                    <input type="text" 
+                                           value="${threshold.range_min.toLocaleString()}" 
+                                           data-tier="${threshold.tier}"
+                                           data-field="range_min"
+                                           onchange="updateThreshold(this)"
+                                           class="w-full px-3 py-2 bg-white border border-gray-300 rounded-md focus:ring-2 focus:ring-yellow-400 shadow-sm">
+                                </div>
+                                <div>
+                                    <label class="block text-sm font-medium text-gray-700 mb-1">Maximum ($)</label>
+                                    <input type="text" 
+                                           value="${threshold.range_max ? threshold.range_max.toLocaleString() : 'No limit'}" 
+                                           placeholder="No limit"
+                                           data-tier="${threshold.tier}"
+                                           data-field="range_max"
+                                           onchange="updateThreshold(this)"
+                                           class="w-full px-3 py-2 bg-white border border-gray-300 rounded-md focus:ring-2 focus:ring-yellow-400 shadow-sm">
+                                </div>
+                            </div>
+                            
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-1">Description</label>
+                                <textarea data-tier="${threshold.tier}"
+                                          data-field="description"
+                                          onchange="updateThreshold(this)"
+                                          class="w-full px-3 py-2 bg-white border border-gray-300 rounded-md focus:ring-2 focus:ring-yellow-400 shadow-sm"
+                                          rows="2">${threshold.description}</textarea>
+                            </div>
+                            
+                            <div class="bg-white rounded-lg p-3 text-sm shadow-sm">
+                                <div class="font-medium text-gray-700 mb-2">Management Requirements:</div>
+                                <div class="grid grid-cols-2 gap-2 text-xs">
+                                    <div><span class="font-semibold">Review:</span> ${threshold.management_requirements?.review_level || 'N/A'}</div>
+                                    <div><span class="font-semibold">Approval:</span> ${threshold.management_requirements?.approval_authority || 'N/A'}</div>
+                                    <div><span class="font-semibold">Plan Required:</span> ${threshold.management_requirements?.management_plan ? 'Yes' : 'No'}</div>
+                                    <div><span class="font-semibold">Monitoring:</span> ${threshold.management_requirements?.monitoring_frequency || 'N/A'}</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                `;
+            });
+            
+            html += '</div>';
+            container.innerHTML = html;
+        }
+        
+        // Load policy mappings
+        function loadMappings() {
+            const container = document.getElementById('mappingsList');
+            
+            // This would be loaded from the API
+            const mappings = [
+                {
+                    threshold: 'Risk Tiers',
+                    policy_section: '4.7, 4.9',
+                    description: 'Conflict management procedures',
+                    details: 'Implements determination of conflicts and management procedures when conflicts exist'
+                },
+                {
+                    threshold: 'Disclosure Triggers',
+                    policy_section: '4.3-4.4',
+                    description: 'Disclosure timing requirements',
+                    details: 'Implements initial, new situation, and annual disclosure requirements'
+                },
+                {
+                    threshold: 'Insurmountable Conflicts',
+                    policy_section: '4.8',
+                    description: 'Automatic disqualification criteria',
+                    details: 'Major suppliers, elected officials, competing healthcare, mission conflicts'
+                },
+                {
+                    threshold: '1% Ownership Rule',
+                    policy_section: '5.9',
+                    description: 'Financial interest exclusion',
+                    details: 'Excludes ownership of less than 1% in publicly traded companies'
+                }
+            ];
+            
+            let html = '';
+            mappings.forEach(mapping => {
+                html += `
+                    <div class="bg-white rounded-lg border border-gray-200 p-4">
+                        <div class="flex items-start justify-between">
+                            <div class="flex-1">
+                                <h4 class="font-semibold">${mapping.threshold}</h4>
+                                <p class="text-sm text-gray-600 mt-1">${mapping.description}</p>
+                                <p class="text-sm mt-2">${mapping.details}</p>
+                            </div>
+                            <span class="policy-mapping">Section ${mapping.policy_section}</span>
+                        </div>
+                    </div>
+                `;
+            });
+            
+            container.innerHTML = html;
+        }
+        
+        // Load disclosure triggers
+        function loadTriggers() {
+            const container = document.getElementById('triggersList');
+            
+            // Sample triggers - would be loaded from API
+            const triggers = [
+                {
+                    name: 'Individual Payment',
+                    threshold: 100,
+                    description: 'Single payment threshold',
+                    basis: 'CMS Open Payments de minimis exception'
+                },
+                {
+                    name: 'Annual Aggregate',
+                    threshold: 1000,
+                    description: 'Total annual payments triggering full disclosure',
+                    basis: 'Industry best practice'
+                },
+                {
+                    name: 'Travel & Lodging',
+                    threshold: 0,
+                    description: 'Any amount must be disclosed',
+                    basis: 'Immediate disclosure required'
+                },
+                {
+                    name: 'Research PHS',
+                    threshold: 5000,
+                    description: 'Public Health Service threshold',
+                    basis: '42 CFR Part 50'
+                }
+            ];
+            
+            let html = '';
+            triggers.forEach(trigger => {
+                html += `
+                    <div class="bg-white rounded-lg border border-gray-200 p-4">
+                        <div class="flex items-center justify-between mb-2">
+                            <h4 class="font-semibold">${trigger.name}</h4>
+                            <input type="number" 
+                                   value="${trigger.threshold}" 
+                                   class="w-32 px-3 py-1 border rounded-lg text-right">
+                        </div>
+                        <p class="text-sm text-gray-600">${trigger.description}</p>
+                        <p class="text-xs text-gray-500 mt-1">Regulatory basis: ${trigger.basis}</p>
+                    </div>
+                `;
+            });
+            
+            container.innerHTML = html;
+        }
+        
+        // Load risk scoring configuration
+        function loadScoringConfig() {
+            const container = document.getElementById('scoringConfig');
+            
+            const html = `
+                <div class="mb-6">
+                    <h4 class="font-semibold mb-3">Factor Weights</h4>
+                    <p class="text-sm text-gray-600 mb-4">Adjust the relative importance of each risk factor (must total 100%)</p>
+                    
+                    <div class="space-y-3">
+                        <div class="flex items-center justify-between">
+                            <label class="text-sm">Financial Amount</label>
+                            <div class="flex items-center gap-2">
+                                <input type="range" min="0" max="100" value="40" class="w-32">
+                                <span class="w-12 text-right">40%</span>
+                            </div>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <label class="text-sm">Decision Authority</label>
+                            <div class="flex items-center gap-2">
+                                <input type="range" min="0" max="100" value="25" class="w-32">
+                                <span class="w-12 text-right">25%</span>
+                            </div>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <label class="text-sm">Relationship Type</label>
+                            <div class="flex items-center gap-2">
+                                <input type="range" min="0" max="100" value="20" class="w-32">
+                                <span class="w-12 text-right">20%</span>
+                            </div>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <label class="text-sm">Service Overlap</label>
+                            <div class="flex items-center gap-2">
+                                <input type="range" min="0" max="100" value="10" class="w-32">
+                                <span class="w-12 text-right">10%</span>
+                            </div>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <label class="text-sm">Frequency</label>
+                            <div class="flex items-center gap-2">
+                                <input type="range" min="0" max="100" value="5" class="w-32">
+                                <span class="w-12 text-right">5%</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-4 p-3 bg-blue-50 rounded-lg">
+                        <p class="text-sm text-blue-700">
+                            <strong>Total:</strong> <span id="weightTotal">100%</span>
+                        </p>
+                    </div>
+                </div>
+                
+                <div>
+                    <h4 class="font-semibold mb-3">Management Actions by Score</h4>
+                    <div class="space-y-2">
+                        <div class="flex items-center justify-between p-3 bg-green-50 rounded">
+                            <span class="text-sm">0-25: Document Only</span>
+                        </div>
+                        <div class="flex items-center justify-between p-3 bg-yellow-50 rounded">
+                            <span class="text-sm">26-50: Manager Review Required</span>
+                        </div>
+                        <div class="flex items-center justify-between p-3 bg-orange-50 rounded">
+                            <span class="text-sm">51-75: Committee Review Required</span>
+                        </div>
+                        <div class="flex items-center justify-between p-3 bg-red-50 rounded">
+                            <span class="text-sm">76-100: Board Review Required</span>
+                        </div>
+                    </div>
+                </div>
+            `;
+            
+            container.innerHTML = html;
+        }
+        
+        // Load audit history
+        function loadAuditHistory() {
+            const tbody = document.getElementById('auditHistory');
+            
+            // Sample audit history - would be loaded from API
+            const history = [
+                {
+                    date: '2025-08-11 14:30',
+                    user: 'Chief Compliance Officer',
+                    type: 'Threshold Update',
+                    details: 'Updated Tier 3 maximum from $75,000 to $100,000'
+                },
+                {
+                    date: '2025-08-10 09:15',
+                    user: 'System Admin',
+                    type: 'Policy Mapping',
+                    details: 'Added policy clause references to operational thresholds'
+                },
+                {
+                    date: '2025-08-08 16:45',
+                    user: 'Chief Compliance Officer',
+                    type: 'Initial Configuration',
+                    details: 'Created initial operational thresholds configuration'
+                }
+            ];
+            
+            let html = '';
+            history.forEach(entry => {
+                html += `
+                    <tr>
+                        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">${entry.date}</td>
+                        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">${entry.user}</td>
+                        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">${entry.type}</td>
+                        <td class="px-6 py-4 text-sm text-gray-900">${entry.details}</td>
+                        <td class="px-6 py-4 whitespace-nowrap text-sm">
+                            <button class="text-conflixis-blue hover:text-conflixis-green">View</button>
+                        </td>
+                    </tr>
+                `;
+            });
+            
+            tbody.innerHTML = html;
+        }
+        
+        // Update threshold value
+        function updateThreshold(input) {
+            const tier = input.dataset.tier;
+            const field = input.dataset.field;
+            const value = input.value;
+            
+            // Mark as having unsaved changes
+            hasUnsavedChanges = true;
+            
+            // Update in memory
+            const threshold = currentConfig.thresholds.find(t => t.tier === tier);
+            if (threshold) {
+                if (field === 'range_max' && value === '') {
+                    threshold[field] = null;
+                } else {
+                    threshold[field] = field.includes('range') ? parseInt(value) : value;
+                }
+            }
+        }
+        
+        // Save configuration
+        async function saveConfiguration() {
+            if (!hasUnsavedChanges) {
+                alert('No changes to save');
+                return;
+            }
+            
+            try {
+                // Send updated configuration to API
+                const response = await fetch('/api/policies/configuration', {
+                    method: 'PUT',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(currentConfig)
+                });
+                
+                if (response.ok) {
+                    hasUnsavedChanges = false;
+                    alert('Configuration saved successfully');
+                    loadConfiguration(); // Reload to get latest
+                } else {
+                    alert('Failed to save configuration');
+                }
+            } catch (error) {
+                console.error('Save error:', error);
+                alert('Error saving configuration');
+            }
+        }
+        
+        // Export configuration
+        function exportConfiguration() {
+            const dataStr = JSON.stringify(currentConfig, null, 2);
+            const dataUri = 'data:application/json;charset=utf-8,'+ encodeURIComponent(dataStr);
+            
+            const exportFileDefaultName = `coi-config-${new Date().toISOString().slice(0,10)}.json`;
+            
+            const linkElement = document.createElement('a');
+            linkElement.setAttribute('href', dataUri);
+            linkElement.setAttribute('download', exportFileDefaultName);
+            linkElement.click();
+        }
+        
+        // Import configuration
+        function importConfiguration() {
+            const input = document.createElement('input');
+            input.type = 'file';
+            input.accept = '.json';
+            
+            input.onchange = async (e) => {
+                const file = e.target.files[0];
+                const text = await file.text();
+                try {
+                    const config = JSON.parse(text);
+                    currentConfig = config;
+                    hasUnsavedChanges = true;
+                    loadConfiguration();
+                    alert('Configuration imported. Remember to save changes.');
+                } catch (error) {
+                    alert('Invalid configuration file');
+                }
+            };
+            
+            input.click();
+        }
+        
+        // Warn about unsaved changes
+        window.addEventListener('beforeunload', (e) => {
+            if (hasUnsavedChanges) {
+                e.preventDefault();
+                e.returnValue = '';
+            }
+        });
+        
+        // Load on page ready
+        document.addEventListener('DOMContentLoaded', () => {
+            loadConfiguration();
+        });
+    </script>
+</body>
+</html>

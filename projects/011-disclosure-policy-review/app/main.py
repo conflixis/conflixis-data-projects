@@ -67,6 +67,20 @@ def create_app() -> FastAPI:
         """Serve disclosure viewer"""
         return FileResponse(str(frontend_path / "index.html"))
     
+    @app.get("/forms-showcase")
+    async def forms_showcase():
+        """Serve forms showcase"""
+        showcase_path = Path(__file__).parent.parent / "disclosure-forms-detail-showcase.html"
+        if showcase_path.exists():
+            return FileResponse(str(showcase_path))
+        else:
+            return {"error": "Forms showcase not found"}
+    
+    @app.get("/configuration")
+    async def configuration():
+        """Serve policy configuration page"""
+        return FileResponse(str(frontend_path / "configuration.html"))
+    
     return app
 
 
