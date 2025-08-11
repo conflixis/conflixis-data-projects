@@ -1398,12 +1398,40 @@
 
         // Initialize on page load
         document.addEventListener('DOMContentLoaded', function() {
-            loadData();
+            loadData().then(() => {
+                // Check if there's a disclosure ID in the URL hash
+                if (window.location.hash) {
+                    const disclosureId = window.location.hash.substring(1);
+                    // Find the disclosure with this ID
+                    const disclosure = allData.find(d => d.id === disclosureId);
+                    if (disclosure) {
+                        // Show the details modal for this disclosure
+                        showDetails(disclosure);
+                    }
+                }
+            });
             
             // Enter key on search
             document.getElementById('searchInput').addEventListener('keypress', function(e) {
                 if (e.key === 'Enter') {
                     applyFilters();
+                }
+            });
+            
+            // Handle hash changes (if user navigates back)
+            window.addEventListener('hashchange', function() {
+                if (window.location.hash) {
+                    const disclosureId = window.location.hash.substring(1);
+                    const disclosure = allData.find(d => d.id === disclosureId);
+                    if (disclosure) {
+                        showDetails(disclosure);
+                    }
+                } else {
+                    // Close modal if hash is removed
+                    const modal = document.getElementById('detailModal');
+                    if (modal) {
+                        modal.classList.add('hidden');
+                    }
                 }
             });
         });
