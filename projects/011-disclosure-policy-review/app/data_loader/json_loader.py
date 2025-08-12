@@ -60,8 +60,6 @@ class JSONDataLoader:
             'financial_amount': 0.0,
             'risk_tier': 'low',
             'review_status': 'pending',
-            'management_plan_required': False,
-            'recusal_required': False,
             'relationship_ongoing': False,
             'is_research': False,
             'notes': '',
@@ -70,12 +68,7 @@ class JSONDataLoader:
             'next_review_date': '2025-12-31',
             'job_title': 'Not Specified',
             'department': 'Texas Health',
-            'open_payments_total': 0.0,
-            'open_payments_matched': False,
             'risk_score': 0,
-            'decision_authority_level': 'staff',
-            'equity_percentage': 0.0,
-            'board_position': False,
             'person_with_interest': '',
             'relationship_start_date': datetime.now().strftime('%Y-%m-%d'),
             'document_id': ''
@@ -94,8 +87,6 @@ class JSONDataLoader:
         
         # Convert data types
         df['financial_amount'] = pd.to_numeric(df['financial_amount'], errors='coerce').fillna(0)
-        df['management_plan_required'] = df['management_plan_required'].astype(bool)
-        df['recusal_required'] = df['recusal_required'].astype(bool)
         df['relationship_ongoing'] = df['relationship_ongoing'].astype(bool)
         df['is_research'] = df['is_research'].astype(bool)
         
@@ -112,7 +103,6 @@ class JSONDataLoader:
         max_amount: Optional[float] = None,
         start_date: Optional[str] = None,
         end_date: Optional[str] = None,
-        management_plan_required: Optional[bool] = None,
         is_research: Optional[bool] = None,
         **kwargs
     ) -> pd.DataFrame:
@@ -149,9 +139,6 @@ class JSONDataLoader:
         if max_amount is not None:
             filtered = filtered[filtered['financial_amount'] <= max_amount]
         
-        if management_plan_required is not None:
-            filtered = filtered[filtered['management_plan_required'] == management_plan_required]
-        
         if is_research is not None:
             filtered = filtered[filtered['is_research'] == is_research]
         
@@ -184,7 +171,5 @@ class JSONDataLoader:
             'average_amount': float(df['financial_amount'].mean()),
             'median_amount': float(df['financial_amount'].median()),
             'max_amount': float(df['financial_amount'].max()),
-            'management_plans_required': int(df['management_plan_required'].sum()),
-            'open_payments_matched': int(df['open_payments_matched'].sum()),
             'research_disclosures': int(df['is_research'].sum())
         }

@@ -175,9 +175,8 @@ def fetch_disclosure_data():
             provider_email,
             reporter_user_id,
             
-            -- Job title and department will be added from member data
+            -- Job title will be added from member data  
             'Not Specified' as job_title,
-            'Texas Health' as department,
             
             entity_name,
             relationship_type,
@@ -185,13 +184,9 @@ def fetch_disclosure_data():
             
             -- Financial information
             COALESCE(financial_amount, 0) as financial_amount,
-            COALESCE(financial_amount * 0.8, 0) as open_payments_total,  -- Simulated
-            FALSE as open_payments_matched,
             
             -- Status
             review_status,
-            FALSE as management_plan_required,
-            FALSE as recusal_required,
             
             -- Dates
             CAST(timestamp AS STRING) as disclosure_date,
@@ -199,9 +194,6 @@ def fetch_disclosure_data():
             NOT is_relationship_concluded as relationship_ongoing,
             
             -- Additional fields
-            'staff' as decision_authority_level,
-            0.0 as equity_percentage,
-            FALSE as board_position,
             
             -- Person with interest
             CASE
@@ -253,7 +245,7 @@ def fetch_disclosure_data():
             
             # Join with member data
             df = df.merge(
-                member_df[['normalized_name_member', 'npi', 'job_title', 'entity']].drop_duplicates('normalized_name_member'),
+                member_df[['normalized_name_member', 'npi', 'job_title', 'entity', 'manager_name']].drop_duplicates('normalized_name_member'),
                 left_on='normalized_provider_name',
                 right_on='normalized_name_member',
                 how='left',
@@ -263,11 +255,12 @@ def fetch_disclosure_data():
             # Update fields with member data
             df['provider_npi'] = df['npi'].fillna('')
             df['job_title'] = df['job_title_member'].fillna(df['job_title'])
-            df['department'] = df['entity'].fillna(df['department'])
+            df['department'] = df['entity'].fillna('Texas Health')
+            df['manager_name'] = df['manager_name_member'].fillna(df['manager_name'])
             
             # Drop temporary columns
             df = df.drop(columns=['normalized_provider_name', 'normalized_name_member', 'npi', 
-                                 'job_title_member', 'entity'], errors='ignore')
+                                 'job_title_member', 'entity', 'manager_name_member'], errors='ignore')
             
             print(f"Joined with member data: {(df['provider_npi'] != '').sum()} records matched")
         
@@ -307,16 +300,13 @@ def fetch_disclosure_data():
         df = df.fillna({
             'provider_npi': '',
             'financial_amount': 0,
-            'open_payments_total': 0,
-            'equity_percentage': 0,
             'risk_score': 0,
             'entity_name': 'Not Disclosed',
             'notes': ''
         })
         
         # Convert boolean columns
-        bool_columns = ['open_payments_matched', 'management_plan_required', 
-                       'recusal_required', 'relationship_ongoing', 'board_position', 'is_research']
+        bool_columns = ['relationship_ongoing', 'is_research']
         for col in bool_columns:
             if col in df.columns:
                 df[col] = df[col].astype(bool)
@@ -329,7 +319,6 @@ def fetch_disclosure_data():
             'average_amount': float(df['financial_amount'].mean()),
             'median_amount': float(df['financial_amount'].median()),
             'max_amount': float(df['financial_amount'].max()),
-            'management_plans_required': int(df['management_plan_required'].sum()),
             'providers': df['provider_name'].nunique()
         }
         
