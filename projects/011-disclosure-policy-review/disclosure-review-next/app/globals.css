@@ -1,26 +1,26 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;700&display=swap');
-@import "tailwindcss";
-
 /* Conflixis Font Definitions */
 @font-face {
-  font-family: 'SoehneKraftig';
-  src: local('Soehne Kraftig'), local('Soehne-Kraftig'),
-       url('https://fonts.googleapis.com/css2?family=Inter:wght@700&display=swap');
-  font-weight: 700;
+  font-family: 'SoehneLeicht';
+  src: url('/fonts/soehne-leicht.woff2') format('woff2');
+  font-weight: 300;
+  font-style: normal;
 }
 
 @font-face {
-  font-family: 'SoehneLeicht';
-  src: local('Soehne Leicht'), local('Soehne-Leicht'),
-       url('https://fonts.googleapis.com/css2?family=Inter:wght@300&display=swap');
-  font-weight: 300;
+  font-family: 'SoehneKraftig';
+  src: url('/fonts/soehne-kraftig.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
 }
 
 @font-face {
   font-family: 'IvarDisplay';
-  src: local('Ivar Display'), local('IvarDisplay'),
-       url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap');
+  src: url('/fonts/IvarDisplay-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
 }
+
+@import "tailwindcss";
 
 :root {
   /* Conflixis Colors */
@@ -51,18 +51,28 @@
 
 body {
   background: var(--conflixis-ivory);
-  color: #374151;
-  font-family: 'Inter', 'SoehneLeicht', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-  font-weight: 400;
+  color: #0c343a;
+  font-family: 'SoehneLeicht', sans-serif;
+  font-weight: 300;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'IvarDisplay', serif;
+  color: #0c343a;
+}
+
+.font-soehneLeicht {
+  font-family: 'SoehneLeicht', sans-serif !important;
+  font-weight: 300;
 }
 
 .font-soehneKraftig {
-  font-family: 'SoehneKraftig', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-family: 'SoehneKraftig', sans-serif !important;
   font-weight: 700;
 }
 
 .font-ivarDisplay {
-  font-family: 'IvarDisplay', 'Playfair Display', serif;
+  font-family: 'IvarDisplay', serif !important;
 }
 
 /* Conflixis Gradient */

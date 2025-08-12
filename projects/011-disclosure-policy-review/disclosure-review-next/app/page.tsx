@@ -193,8 +193,7 @@ export default function DisclosureViewerPage() {
               onClick={handleApplyFilters}
               className="px-6 py-2 bg-conflixis-blue text-white rounded-lg hover:bg-opacity-90"
             >
-              <Filter className="w-4 h-4 inline mr-2" />
-              Apply
+              Apply Filters
             </button>
             
             <button

@@ -20,16 +20,39 @@ export default function DashboardPage() {
       .catch(err => console.error('Failed to load stats:', err));
   }, []);
 
-  // Fetch disclosures for the table
+  // Use mock data to match HTML version exactly
   useEffect(() => {
-    fetch('http://localhost:8000/api/disclosures?page_size=5')
-      .then(res => res.json())
-      .then(data => {
-        if (data && data.data) {
-          setDisclosures(data.data.slice(0, 5)); // Get first 5 disclosures
-        }
-      })
-      .catch(err => console.error('Failed to load disclosures:', err));
+    // Mock data matching the HTML version
+    const mockDisclosures = [
+      {
+        provider_name: 'Robert Anderson',
+        email: 'randerson@example.com',
+        job_title: 'Board Committee Candidate',
+        entity_name: 'Major Supplier',
+        category_label: 'MedDevice Corp',
+        disclosure_type: 'Supplier Match',
+        review_status: 'Disqualified'
+      },
+      {
+        provider_name: 'Jennifer Martinez',
+        email: 'jmartinez@example.com',
+        job_title: 'Medical Director',
+        entity_name: 'Competing Healthcare',
+        category_label: 'Regional Health System',
+        disclosure_type: '',
+        review_status: 'Under Review'
+      },
+      {
+        provider_name: 'Thomas Wilson',
+        email: 'twilson@example.com',
+        job_title: 'Board Member Candidate',
+        entity_name: 'Elected Official',
+        category_label: 'State Legislature',
+        disclosure_type: '',
+        review_status: 'Disqualified'
+      }
+    ];
+    setDisclosures(mockDisclosures);
   }, []);
 
   // Use stats from API
@@ -230,29 +253,52 @@ export default function DashboardPage() {
                       <th className="px-4 py-3 text-left text-xs font-soehneKraftig text-gray-700 uppercase">THR Entity</th>
                       <th className="px-4 py-3 text-left text-xs font-soehneKraftig text-gray-700 uppercase">Disclosure Category</th>
                       <th className="px-4 py-3 text-left text-xs font-soehneKraftig text-gray-700 uppercase">Status</th>
+                      <th className="px-4 py-3 text-left text-xs font-soehneKraftig text-gray-700 uppercase"></th>
                     </tr>
                   </thead>
                   <tbody className="divide-y divide-gray-200">
                     {disclosures.length > 0 ? (
                       disclosures.map((disclosure, index) => (
-                        <tr key={index} className="hover:bg-gray-50 cursor-pointer">
+                        <tr key={index} className="hover:bg-gray-50">
                           <td className="px-4 py-3">
-                            <div className="text-sm font-soehneKraftig">{disclosure.provider_name || disclosure.covered_person || 'N/A'}</div>
-                            <div className="text-xs text-gray-500">{disclosure.npi || 'No NPI'}</div>
+                            <div className="text-sm font-soehneKraftig">{disclosure.provider_name}</div>
+                            <div className="text-xs text-gray-500">{disclosure.email}</div>
                           </td>
-                          <td className="px-4 py-3 text-sm">{disclosure.job_title || disclosure.position || 'Not Specified'}</td>
-                          <td className="px-4 py-3 text-sm">{disclosure.entity_name || disclosure.thr_entity || 'N/A'}</td>
-                          <td className="px-4 py-3 text-sm">{disclosure.category_label || disclosure.disclosure_type || 'N/A'}</td>
+                          <td className="px-4 py-3 text-sm">{disclosure.job_title}</td>
                           <td className="px-4 py-3">
-                            <span className="px-2 py-1 text-xs rounded-full bg-yellow-100 text-yellow-800">
-                              {disclosure.review_status || 'Pending'}
+                            <div className="text-sm font-medium text-red-600">{disclosure.entity_name}</div>
+                          </td>
+                          <td className="px-4 py-3">
+                            <div className="text-sm">
+                              <div className="font-medium">{disclosure.category_label}</div>
+                              {disclosure.disclosure_type && (
+                                <div className="text-xs text-gray-500">{disclosure.disclosure_type}</div>
+                              )}
+                            </div>
+                          </td>
+                          <td className="px-4 py-3">
+                            <span className={`px-2 py-1 text-xs rounded-full ${
+                              disclosure.review_status === 'Disqualified' 
+                                ? 'bg-red-100 text-red-800' 
+                                : 'bg-yellow-100 text-yellow-800'
+                            }`}>
+                              {disclosure.review_status}
                             </span>
+                          </td>
+                          <td className="px-4 py-3">
+                            <button 
+                              onClick={() => setSelectedDisclosure(disclosure)}
+                              className="text-conflixis-blue hover:text-conflixis-green font-medium text-sm"
+                            >
+                              Review
+                              <span className="ml-1">→</span>
+                            </button>
                           </td>
                         </tr>
                       ))
                     ) : (
                       <tr>
-                        <td colSpan={5} className="px-4 py-8 text-center text-gray-500">
+                        <td colSpan={6} className="px-4 py-8 text-center text-gray-500">
                           Loading disclosures...
                         </td>
                       </tr>
