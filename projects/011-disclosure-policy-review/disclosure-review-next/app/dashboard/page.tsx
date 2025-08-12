@@ -2,430 +2,483 @@
 
 import React, { useState, useEffect } from 'react';
 import MainLayout from '@/components/layout/MainLayout';
-import StatCard from '@/components/ui/StatCard';
-import Modal from '@/components/ui/Modal';
-import RiskBadge from '@/components/ui/RiskBadge';
 import { useDisclosures } from '@/lib/hooks/useDisclosures';
+import Modal from '@/components/ui/Modal';
 import { Disclosure } from '@/lib/api/types';
-import { 
-  BarChart3, 
-  TrendingUp, 
-  Users, 
-  AlertTriangle, 
-  CheckCircle,
-  Clock,
-  DollarSign,
-  FileText,
-  PieChart,
-  Activity
-} from 'lucide-react';
 
 export default function DashboardPage() {
+  const [selectedCampaign, setSelectedCampaign] = useState('2025');
   const [selectedDisclosure, setSelectedDisclosure] = useState<Disclosure | null>(null);
   const [modalOpen, setModalOpen] = useState(false);
-  const [selectedCampaign, setSelectedCampaign] = useState('all');
   
-  // Fetch all disclosures for statistics
-  const { disclosures, isLoading } = useDisclosures({ page_size: 1000 });
+  // Fetch all disclosures
+  const { disclosures = [], isLoading } = useDisclosures({ page_size: 1000 });
+
+  // Filter disclosures by campaign
+  const filteredDisclosures = disclosures.filter(d => {
+    if (selectedCampaign === 'all') return true;
+    // Filter logic based on campaign
+    return d.campaign_name?.includes(selectedCampaign);
+  });
 
   // Calculate statistics
-  const stats = React.useMemo(() => {
-    if (!disclosures || disclosures.length === 0) {
-      return {
-        total: 0,
-        uniqueProviders: 0,
-        approved: 0,
-        pending: 0,
-        inReview: 0,
-        requiresManagement: 0,
-        highRisk: 0,
-        criticalRisk: 0,
-        totalAmount: 0,
-        avgAmount: 0,
-      };
-    }
-
-    const uniqueProviders = new Set(disclosures.map(d => d.provider_name)).size;
-    
-    const statusCounts = {
-      approved: disclosures.filter(d => d.review_status === 'approved').length,
-      pending: disclosures.filter(d => d.review_status === 'pending').length,
-      inReview: disclosures.filter(d => d.review_status === 'in_review').length,
-      requiresManagement: disclosures.filter(d => d.review_status === 'requires_management').length,
-    };
-
-    const riskCounts = {
-      high: disclosures.filter(d => d.risk_tier === 'high').length,
-      critical: disclosures.filter(d => d.risk_tier === 'critical').length,
-    };
-
-    const totalAmount = disclosures.reduce((sum, d) => sum + (d.financial_amount || 0), 0);
-    const avgAmount = totalAmount / disclosures.length;
-
-    return {
-      total: disclosures.length,
-      uniqueProviders,
-      ...statusCounts,
-      ...riskCounts,
-      totalAmount,
-      avgAmount,
-    };
-  }, [disclosures]);
-
-  // Get recent high-risk disclosures
-  const highRiskDisclosures = React.useMemo(() => {
-    return disclosures
-      .filter(d => d.risk_tier === 'high' || d.risk_tier === 'critical')
-      .sort((a, b) => new Date(b.submission_date).getTime() - new Date(a.submission_date).getTime())
-      .slice(0, 5);
-  }, [disclosures]);
-
-  const handleViewDetails = (disclosure: Disclosure) => {
-    setSelectedDisclosure(disclosure);
-    setModalOpen(true);
+  const stats = {
+    uniqueProviders: new Set(filteredDisclosures.map(d => d.provider_name)).size,
+    totalDisclosures: filteredDisclosures.length,
+    compliant: filteredDisclosures.filter(d => d.review_status === 'approved').length,
+    pendingReview: filteredDisclosures.filter(d => d.review_status === 'pending' || d.review_status === 'in_review').length,
+    overdue: 261, // Sample data
+    notRequired: 93, // Sample data
   };
 
-  const complianceRate = stats.total > 0 
-    ? ((stats.approved / stats.total) * 100).toFixed(1)
-    : '0';
-
-  const pendingRate = stats.total > 0
-    ? (((stats.pending + stats.inReview) / stats.total) * 100).toFixed(1)
-    : '0';
+  const totalPersons = 3847; // Sample total
+  const compliancePercentage = totalPersons > 0 ? ((stats.compliant / totalPersons) * 100).toFixed(1) : '0';
+  const pendingPercentage = totalPersons > 0 ? ((stats.pendingReview / totalPersons) * 100).toFixed(1) : '0';
 
   return (
     <MainLayout>
       <div className="min-h-screen bg-conflixis-ivory">
-        {/* Header */}
-        <div className="bg-white shadow-sm border-b border-gray-200">
+        {/* Top Navigation */}
+        <nav className="bg-white shadow-lg sticky top-0 z-30">
           <div className="px-6 py-4">
             <div className="flex items-center justify-between">
-              <div className="flex items-center gap-3">
-                <BarChart3 className="w-6 h-6 text-conflixis-green" />
-                <div>
-                  <h1 className="text-2xl font-bold text-conflixis-green">
-                    COI Compliance Dashboard
-                  </h1>
-                  <p className="text-sm text-gray-600">
-                    Real-time conflict of interest monitoring and compliance metrics
-                  </p>
-                </div>
+              <div>
+                <span className="text-xl font-bold text-conflixis-green">Texas Health Resources</span>
+                <span className="text-sm block text-conflixis-green">COI Policy Compliance System</span>
               </div>
-              <div className="flex items-center gap-4">
-                <select
-                  value={selectedCampaign}
-                  onChange={(e) => setSelectedCampaign(e.target.value)}
-                  className="px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-conflixis-green"
-                >
-                  <option value="all">All Campaigns</option>
-                  <option value="2025-q1">2025 Q1 Survey</option>
-                  <option value="2024-annual">2024 Annual Review</option>
-                </select>
-                <button className="px-4 py-2 bg-conflixis-blue text-white rounded-lg hover:bg-opacity-90">
+              <div className="flex items-center space-x-4">
+                <span className="text-sm text-gray-600">Policy Version: 06/19/2025</span>
+                <button className="bg-conflixis-gold hover:bg-opacity-90 text-conflixis-green px-4 py-2 rounded-lg font-bold transition-all">
                   Export Report
                 </button>
               </div>
             </div>
           </div>
-        </div>
+        </nav>
 
-        {/* Metrics Grid */}
-        <div className="p-6">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-6">
-            <StatCard
-              title="Total Disclosures"
-              value={stats.total.toString()}
-              icon={<FileText className="w-5 h-5" />}
-              trend={{ value: 12, isPositive: true }}
-              color="blue"
-            />
-            <StatCard
-              title="Unique Providers"
-              value={stats.uniqueProviders.toString()}
-              icon={<Users className="w-5 h-5" />}
-              color="green"
-            />
-            <StatCard
-              title="Compliance Rate"
-              value={`${complianceRate}%`}
-              icon={<CheckCircle className="w-5 h-5" />}
-              trend={{ value: 5, isPositive: true }}
-              color="green"
-            />
-            <StatCard
-              title="Pending Review"
-              value={`${pendingRate}%`}
-              icon={<Clock className="w-5 h-5" />}
-              color="yellow"
-            />
+        {/* Summary Statistics and Compliance Overview */}
+        <section className="py-6">
+          <div className="container mx-auto px-6">
+            <h1 className="text-3xl font-bold mb-6 text-conflixis-green">COI Policy Compliance Dashboard</h1>
+            
+            <div className="grid lg:grid-cols-8 gap-6 mb-4">
+              {/* Left Column: Campaign Selection and Metrics */}
+              <div className="lg:col-span-2 flex flex-col gap-4">
+                {/* Campaign Selection Card */}
+                <div className="bg-white rounded-lg p-4 shadow">
+                  <label className="text-sm font-bold text-conflixis-green block mb-2">Campaign Filter</label>
+                  <select 
+                    value={selectedCampaign}
+                    onChange={(e) => setSelectedCampaign(e.target.value)}
+                    className="w-full text-xs border border-gray-300 rounded px-2 py-1.5 focus:outline-none focus:border-conflixis-green"
+                  >
+                    <option value="all">All Campaigns</option>
+                    <option value="2025">2025 Texas Health COI Survey - Leaders/Providers</option>
+                    <option value="2024-workforce">2024 Texas Health COI Self-Identification Follow-Up - Workforce</option>
+                    <option value="2024-leadership">2024 Texas Health COI Self-Identification Follow-Up - Leadership</option>
+                    <option value="new-hires">New Hires Conflict of Interest Disclosure</option>
+                    <option value="research">Conflict of Interest Disclosure (COI) - Research</option>
+                  </select>
+                </div>
+                
+                {/* Metrics Row */}
+                <div className="grid grid-cols-2 gap-4 flex-1">
+                  {/* Total Covered Persons Card */}
+                  <div className="bg-white rounded-lg p-4 shadow flex flex-col justify-center items-center text-center">
+                    <h2 className="text-sm font-bold mb-2">Total Covered Persons</h2>
+                    <div className="text-3xl font-bold text-conflixis-blue bg-blue-100 rounded-lg px-6 py-2 mb-2">
+                      {stats.uniqueProviders}
+                    </div>
+                    <div className="text-xs text-blue-600 font-medium">Unique providers</div>
+                  </div>
+                  
+                  {/* Total Disclosures Card */}
+                  <div className="bg-white rounded-lg p-4 shadow flex flex-col justify-center items-center text-center">
+                    <h2 className="text-sm font-bold mb-2">Total Disclosures</h2>
+                    <div className="text-3xl font-bold text-conflixis-green bg-green-50 rounded-lg px-6 py-2 mb-2">
+                      {stats.totalDisclosures}
+                    </div>
+                    <div className="text-xs text-green-600 font-medium">Submitted for campaign</div>
+                  </div>
+                </div>
+              </div>
+              
+              {/* Compliance Status Breakdown */}
+              <div className="lg:col-span-3 bg-white rounded-lg shadow p-6 flex flex-col h-full">
+                <h2 className="text-lg font-bold mb-4">Annual Disclosure Compliance Status</h2>
+                
+                <div className="flex-1 flex flex-col justify-center space-y-3">
+                  {/* Compliant */}
+                  <div className="flex items-center gap-3">
+                    <div className="w-24 text-xs font-bold">Compliant</div>
+                    <div className="flex-1 bg-gray-200 rounded-full h-6 relative overflow-hidden">
+                      <div className="bg-green-500 h-6 rounded-full transition-all duration-1000" 
+                           style={{ width: '72.3%' }}></div>
+                    </div>
+                    <div className="w-24 text-right text-xs">2,781 (72.3%)</div>
+                  </div>
+                  
+                  {/* Pending Review */}
+                  <div className="flex items-center gap-3">
+                    <div className="w-24 text-xs font-bold">Pending Review</div>
+                    <div className="flex-1 bg-gray-200 rounded-full h-6 relative overflow-hidden">
+                      <div className="bg-conflixis-gold h-6 rounded-full transition-all duration-1000" 
+                           style={{ width: '18.5%' }}></div>
+                    </div>
+                    <div className="w-24 text-right text-xs">712 (18.5%)</div>
+                  </div>
+                  
+                  {/* Overdue */}
+                  <div className="flex items-center gap-3">
+                    <div className="w-24 text-xs font-bold">Overdue</div>
+                    <div className="flex-1 bg-gray-200 rounded-full h-6 relative overflow-hidden">
+                      <div className="bg-red-500 h-6 rounded-full transition-all duration-1000" 
+                           style={{ width: '6.8%' }}></div>
+                    </div>
+                    <div className="w-24 text-right text-xs">261 (6.8%)</div>
+                  </div>
+                  
+                  {/* Not Required */}
+                  <div className="flex items-center gap-3">
+                    <div className="w-24 text-xs font-bold">Not Required</div>
+                    <div className="flex-1 bg-gray-200 rounded-full h-6 relative overflow-hidden">
+                      <div className="bg-gray-400 h-6 rounded-full transition-all duration-1000" 
+                           style={{ width: '2.4%' }}></div>
+                    </div>
+                    <div className="w-24 text-right text-xs">93 (2.4%)</div>
+                  </div>
+                </div>
+              </div>
+              
+              {/* Covered Persons by Category */}
+              <div className="lg:col-span-3 bg-white rounded-lg shadow p-6 flex flex-col h-full">
+                <h2 className="text-lg font-bold mb-4">Covered Persons by Category</h2>
+                
+                <div className="flex-1 flex flex-col justify-center">
+                  <div className="space-y-3">
+                    <div className="flex items-center justify-between">
+                      <span className="text-sm">Physicians</span>
+                      <span className="text-sm font-bold">1,847</span>
+                    </div>
+                    <div className="flex items-center justify-between">
+                      <span className="text-sm">Leadership</span>
+                      <span className="text-sm font-bold">423</span>
+                    </div>
+                    <div className="flex items-center justify-between">
+                      <span className="text-sm">Board Members</span>
+                      <span className="text-sm font-bold">87</span>
+                    </div>
+                    <div className="flex items-center justify-between">
+                      <span className="text-sm">Researchers</span>
+                      <span className="text-sm font-bold">215</span>
+                    </div>
+                    <div className="flex items-center justify-between">
+                      <span className="text-sm">Other</span>
+                      <span className="text-sm font-bold">1,275</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
+        </section>
 
-          {/* Risk Overview */}
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-6">
-            {/* Risk Distribution */}
-            <div className="bg-white rounded-lg shadow p-6">
-              <h3 className="text-lg font-semibold text-gray-900 mb-4 flex items-center gap-2">
-                <PieChart className="w-5 h-5 text-conflixis-green" />
-                Risk Distribution
-              </h3>
-              <div className="space-y-3">
-                <div className="flex justify-between items-center">
-                  <span className="text-sm text-gray-600">Low Risk</span>
-                  <span className="text-sm font-medium">
-                    {disclosures.filter(d => d.risk_tier === 'low').length}
-                  </span>
-                </div>
-                <div className="flex justify-between items-center">
-                  <span className="text-sm text-gray-600">Moderate Risk</span>
-                  <span className="text-sm font-medium">
-                    {disclosures.filter(d => d.risk_tier === 'moderate').length}
-                  </span>
-                </div>
-                <div className="flex justify-between items-center">
-                  <span className="text-sm text-gray-600">High Risk</span>
-                  <span className="text-sm font-medium text-orange-600">
-                    {stats.highRisk}
-                  </span>
-                </div>
-                <div className="flex justify-between items-center">
-                  <span className="text-sm text-gray-600">Critical Risk</span>
-                  <span className="text-sm font-medium text-red-600">
-                    {stats.criticalRisk}
-                  </span>
-                </div>
+        {/* Insurmountable Conflicts Section */}
+        <section className="pb-6">
+          <div className="container mx-auto px-6">
+            <div className="mb-4 flex justify-between items-start">
+              <div>
+                <h2 className="text-2xl font-bold text-conflixis-green">Insurmountable Conflicts Identified</h2>
+                <p className="text-sm text-gray-600 mt-1">
+                  Conflicts requiring immediate resolution or disqualification from board/committee positions
+                </p>
               </div>
+              <a href="/disclosures" 
+                 className="bg-conflixis-blue hover:bg-opacity-90 text-white px-4 py-2 rounded-lg font-bold transition-all text-sm">
+                View All Disclosures →
+              </a>
             </div>
-
-            {/* Financial Summary */}
-            <div className="bg-white rounded-lg shadow p-6">
-              <h3 className="text-lg font-semibold text-gray-900 mb-4 flex items-center gap-2">
-                <DollarSign className="w-5 h-5 text-conflixis-green" />
-                Financial Summary
-              </h3>
-              <div className="space-y-3">
-                <div>
-                  <p className="text-sm text-gray-600">Total Disclosed Amount</p>
-                  <p className="text-2xl font-bold text-conflixis-green">
-                    ${stats.totalAmount.toLocaleString()}
-                  </p>
-                </div>
-                <div>
-                  <p className="text-sm text-gray-600">Average per Disclosure</p>
-                  <p className="text-lg font-semibold text-gray-900">
-                    ${stats.avgAmount.toLocaleString('en-US', { maximumFractionDigits: 0 })}
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            {/* Review Status */}
-            <div className="bg-white rounded-lg shadow p-6">
-              <h3 className="text-lg font-semibold text-gray-900 mb-4 flex items-center gap-2">
-                <Activity className="w-5 h-5 text-conflixis-green" />
-                Review Status
-              </h3>
-              <div className="space-y-3">
-                <div className="flex justify-between items-center">
-                  <span className="text-sm text-gray-600">Approved</span>
-                  <span className="text-sm font-medium text-green-600">{stats.approved}</span>
-                </div>
-                <div className="flex justify-between items-center">
-                  <span className="text-sm text-gray-600">In Review</span>
-                  <span className="text-sm font-medium text-blue-600">{stats.inReview}</span>
-                </div>
-                <div className="flex justify-between items-center">
-                  <span className="text-sm text-gray-600">Pending</span>
-                  <span className="text-sm font-medium text-yellow-600">{stats.pending}</span>
-                </div>
-                <div className="flex justify-between items-center">
-                  <span className="text-sm text-gray-600">Requires Management</span>
-                  <span className="text-sm font-medium text-red-600">{stats.requiresManagement}</span>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          {/* High Risk Disclosures Table */}
-          <div className="bg-white rounded-lg shadow">
-            <div className="px-6 py-4 border-b border-gray-200">
-              <h3 className="text-lg font-semibold text-gray-900 flex items-center gap-2">
-                <AlertTriangle className="w-5 h-5 text-orange-600" />
-                Recent High-Risk Disclosures
-              </h3>
-            </div>
-            <div className="overflow-x-auto">
-              <table className="w-full">
-                <thead className="bg-gray-50">
-                  <tr>
-                    <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                      Provider
-                    </th>
-                    <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                      Entity
-                    </th>
-                    <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                      Amount
-                    </th>
-                    <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                      Risk Tier
-                    </th>
-                    <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                      Status
-                    </th>
-                    <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                      Action
-                    </th>
-                  </tr>
-                </thead>
-                <tbody className="divide-y divide-gray-200">
-                  {highRiskDisclosures.map((disclosure) => (
-                    <tr key={disclosure.disclosure_id} className="hover:bg-gray-50">
-                      <td className="px-6 py-4">
-                        <div>
-                          <p className="text-sm font-medium text-gray-900">
-                            {disclosure.provider_name}
-                          </p>
-                          <p className="text-xs text-gray-500">{disclosure.job_title}</p>
+            
+            <div className="bg-white rounded-lg shadow overflow-hidden">
+              <div className="overflow-x-auto">
+                <table className="w-full">
+                  <thead className="bg-conflixis-tan">
+                    <tr>
+                      <th className="px-4 py-3 text-left text-xs font-bold text-gray-700 uppercase">Person</th>
+                      <th className="px-4 py-3 text-left text-xs font-bold text-gray-700 uppercase">Position</th>
+                      <th className="px-4 py-3 text-left text-xs font-bold text-gray-700 uppercase">THR Entity</th>
+                      <th className="px-4 py-3 text-left text-xs font-bold text-gray-700 uppercase">Disclosure Category</th>
+                      <th className="px-4 py-3 text-left text-xs font-bold text-gray-700 uppercase">Status</th>
+                      <th className="px-4 py-3 text-left text-xs font-bold text-gray-700 uppercase">Action</th>
+                    </tr>
+                  </thead>
+                  <tbody className="divide-y divide-gray-200">
+                    <tr className="hover:bg-gray-50">
+                      <td className="px-4 py-3">
+                        <div className="text-sm font-bold">Robert Anderson</div>
+                        <div className="text-xs text-gray-500">randerson@example.com</div>
+                      </td>
+                      <td className="px-4 py-3 text-sm">Board Committee Candidate</td>
+                      <td className="px-4 py-3">
+                        <span className="px-2 py-1 text-xs rounded-full bg-red-500 text-white">Major Supplier</span>
+                      </td>
+                      <td className="px-4 py-3 text-sm">
+                        <div className="flex items-center gap-2">
+                          <span>MedDevice Corp</span>
+                          <span className="px-2 py-0.5 text-xs rounded-full bg-gray-200 text-gray-700">Supplier Match</span>
                         </div>
                       </td>
-                      <td className="px-6 py-4 text-sm text-gray-900">
-                        {disclosure.entity_name}
+                      <td className="px-4 py-3">
+                        <span className="px-2 py-1 text-xs rounded-full bg-red-100 text-red-800">Disqualified</span>
                       </td>
-                      <td className="px-6 py-4 text-sm font-mono text-gray-900">
-                        ${disclosure.financial_amount?.toLocaleString() || 'N/A'}
-                      </td>
-                      <td className="px-6 py-4">
-                        <RiskBadge tier={disclosure.risk_tier} size="sm" />
-                      </td>
-                      <td className="px-6 py-4">
-                        <span className={`text-xs px-2 py-1 rounded-full ${
-                          disclosure.review_status === 'approved' 
-                            ? 'bg-green-100 text-green-700'
-                            : disclosure.review_status === 'requires_management'
-                            ? 'bg-red-100 text-red-700'
-                            : 'bg-yellow-100 text-yellow-700'
-                        }`}>
-                          {disclosure.review_status.replace('_', ' ')}
-                        </span>
-                      </td>
-                      <td className="px-6 py-4">
-                        <button
-                          onClick={() => handleViewDetails(disclosure)}
-                          className="text-conflixis-blue hover:text-conflixis-green text-sm font-medium"
-                        >
-                          View Details
+                      <td className="px-4 py-3">
+                        <button className="text-conflixis-blue hover:text-conflixis-green text-sm font-bold">
+                          Review →
                         </button>
                       </td>
                     </tr>
-                  ))}
-                  {highRiskDisclosures.length === 0 && (
-                    <tr>
-                      <td colSpan={6} className="px-6 py-4 text-center text-sm text-gray-500">
-                        No high-risk disclosures found
+                    
+                    <tr className="hover:bg-gray-50">
+                      <td className="px-4 py-3">
+                        <div className="text-sm font-bold">Jennifer Martinez</div>
+                        <div className="text-xs text-gray-500">jmartinez@example.com</div>
+                      </td>
+                      <td className="px-4 py-3 text-sm">Medical Director</td>
+                      <td className="px-4 py-3">
+                        <span className="px-2 py-1 text-xs rounded-full bg-red-500 text-white">Competing Healthcare</span>
+                      </td>
+                      <td className="px-4 py-3 text-sm">Regional Health System</td>
+                      <td className="px-4 py-3">
+                        <span className="px-2 py-1 text-xs rounded-full bg-yellow-100 text-yellow-800">Under Review</span>
+                      </td>
+                      <td className="px-4 py-3">
+                        <button className="text-conflixis-blue hover:text-conflixis-green text-sm font-bold">
+                          Review →
+                        </button>
                       </td>
                     </tr>
-                  )}
-                </tbody>
-              </table>
+                    
+                    <tr className="hover:bg-gray-50">
+                      <td className="px-4 py-3">
+                        <div className="text-sm font-bold">Thomas Wilson</div>
+                        <div className="text-xs text-gray-500">twilson@example.com</div>
+                      </td>
+                      <td className="px-4 py-3 text-sm">Board Member Candidate</td>
+                      <td className="px-4 py-3">
+                        <span className="px-2 py-1 text-xs rounded-full bg-red-500 text-white">Elected Official</span>
+                      </td>
+                      <td className="px-4 py-3 text-sm">State Legislature</td>
+                      <td className="px-4 py-3">
+                        <span className="px-2 py-1 text-xs rounded-full bg-red-100 text-red-800">Disqualified</span>
+                      </td>
+                      <td className="px-4 py-3">
+                        <button className="text-conflixis-blue hover:text-conflixis-green text-sm font-bold">
+                          Review →
+                        </button>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
             </div>
           </div>
-        </div>
+        </section>
 
-        {/* Detail Modal */}
-        <Modal
-          isOpen={modalOpen}
-          onClose={() => setModalOpen(false)}
-          title={selectedDisclosure ? `${selectedDisclosure.category_label} - ${selectedDisclosure.relationship_type}` : ''}
-          size="xl"
-        >
-          {selectedDisclosure && (
-            <div className="space-y-4">
-              {/* Section 1: Person Information */}
-              <div className="bg-white border border-gray-200 rounded-lg p-4">
-                <h5 className="font-semibold text-sm mb-3 text-gray-700 uppercase tracking-wide">
-                  Person Information
-                </h5>
-                <div className="grid grid-cols-2 gap-x-4 gap-y-2">
-                  <div>
-                    <label className="text-xs text-gray-500">Name</label>
-                    <p className="text-sm font-medium">{selectedDisclosure.provider_name}</p>
-                  </div>
-                  <div>
-                    <label className="text-xs text-gray-500">Manager</label>
-                    <p className="text-sm">{selectedDisclosure.manager_name || 'Not specified'}</p>
-                  </div>
-                  <div>
-                    <label className="text-xs text-gray-500">Job Title</label>
-                    <p className="text-sm">{selectedDisclosure.job_title || 'Not specified'}</p>
-                  </div>
-                  <div>
-                    <label className="text-xs text-gray-500">NPI</label>
-                    <p className="text-sm font-mono">{selectedDisclosure.provider_npi || 'N/A'}</p>
-                  </div>
-                </div>
-              </div>
-
-              {/* Section 2: Disclosure Information */}
-              <div className="bg-white border border-gray-200 rounded-lg p-4">
-                <h5 className="font-semibold text-sm mb-3 text-gray-700 uppercase tracking-wide">
-                  Disclosure Information
-                </h5>
-                <div className="grid grid-cols-2 gap-x-4 gap-y-2">
-                  <div>
-                    <label className="text-xs text-gray-500">Entity</label>
-                    <p className="text-sm">{selectedDisclosure.entity_name}</p>
-                  </div>
-                  <div>
-                    <label className="text-xs text-gray-500">Type</label>
-                    <p className="text-sm">{selectedDisclosure.disclosure_type || selectedDisclosure.relationship_type}</p>
-                  </div>
-                  <div>
-                    <label className="text-xs text-gray-500">Amount</label>
-                    <p className="text-sm font-semibold">
-                      {selectedDisclosure.financial_amount ? 
-                        `$${selectedDisclosure.financial_amount.toLocaleString()}` : 'N/A'}
-                    </p>
-                  </div>
-                  <div>
-                    <label className="text-xs text-gray-500">Date</label>
-                    <p className="text-sm">{selectedDisclosure.submission_date}</p>
-                  </div>
-                </div>
-              </div>
-
-              {/* Section 3: Management & Review Status */}
-              <div className="bg-white border border-gray-200 rounded-lg p-4">
-                <h5 className="font-semibold text-sm mb-3 text-gray-700 uppercase tracking-wide">
-                  Management & Review Status
-                </h5>
-                <div className="grid grid-cols-2 gap-x-4 gap-y-2">
-                  <div>
-                    <label className="text-xs text-gray-500">Risk Tier</label>
-                    <div className="mt-1">
-                      <RiskBadge tier={selectedDisclosure.risk_tier} size="sm" />
+        {/* Policy Requirements Overview */}
+        <section className="pb-8">
+          <div className="container mx-auto px-6">
+            <div className="bg-white rounded-lg shadow p-6">
+              <h2 className="text-xl font-bold mb-4">Policy Requirements & Timelines</h2>
+              
+              <div className="grid md:grid-cols-2 gap-6">
+                <div>
+                  <h3 className="font-bold text-sm text-gray-700 mb-3">Disclosure Timelines</h3>
+                  <div className="space-y-2">
+                    <div className="flex items-start">
+                      <div className="w-4 h-4 bg-conflixis-green rounded-full mt-0.5 flex-shrink-0"></div>
+                      <div className="ml-3">
+                        <p className="text-sm font-bold">Initial Disclosure</p>
+                        <p className="text-xs text-gray-600">Promptly upon becoming subject to policy</p>
+                      </div>
+                    </div>
+                    <div className="flex items-start">
+                      <div className="w-4 h-4 bg-conflixis-gold rounded-full mt-0.5 flex-shrink-0"></div>
+                      <div className="ml-3">
+                        <p className="text-sm font-bold">New Situation</p>
+                        <p className="text-xs text-gray-600">Immediately upon awareness</p>
+                      </div>
+                    </div>
+                    <div className="flex items-start">
+                      <div className="w-4 h-4 bg-conflixis-blue rounded-full mt-0.5 flex-shrink-0"></div>
+                      <div className="ml-3">
+                        <p className="text-sm font-bold">Annual Review</p>
+                        <p className="text-xs text-gray-600">At least annually</p>
+                      </div>
                     </div>
                   </div>
-                  <div>
-                    <label className="text-xs text-gray-500">Review Status</label>
-                    <p className="text-sm capitalize">{selectedDisclosure.review_status.replace('_', ' ')}</p>
+                </div>
+                
+                <div>
+                  <h3 className="font-bold text-sm text-gray-700 mb-3">Management Actions Required</h3>
+                  <div className="space-y-2">
+                    <div className="flex items-center justify-between p-2 bg-conflixis-ivory rounded">
+                      <span className="text-sm">Pending Initial Reviews</span>
+                      <span className="text-sm font-bold text-red-600">47</span>
+                    </div>
+                    <div className="flex items-center justify-between p-2 bg-conflixis-ivory rounded">
+                      <span className="text-sm">Management Plans Due</span>
+                      <span className="text-sm font-bold text-conflixis-gold">23</span>
+                    </div>
+                    <div className="flex items-center justify-between p-2 bg-conflixis-ivory rounded">
+                      <span className="text-sm">Committee Reviews Scheduled</span>
+                      <span className="text-sm font-bold text-conflixis-blue">8</span>
+                    </div>
+                    <div className="flex items-center justify-between p-2 bg-conflixis-ivory rounded">
+                      <span className="text-sm">Resolutions Completed</span>
+                      <span className="text-sm font-bold text-green-600">156</span>
+                    </div>
                   </div>
-                  <div>
-                    <label className="text-xs text-gray-500">Management Plan</label>
-                    <p className={`text-sm font-semibold ${
-                      selectedDisclosure.management_plan_required ? 'text-red-600' : 'text-green-600'
-                    }`}>
-                      {selectedDisclosure.management_plan_required ? 'Required' : 'Not Required'}
-                    </p>
-                  </div>
-                  <div>
-                    <label className="text-xs text-gray-500">Next Review</label>
-                    <p className="text-sm">{selectedDisclosure.next_review_date}</p>
+                </div>
+              </div>
+              
+              <div className="mt-6 pt-6 border-t border-gray-200">
+                <h4 className="font-bold text-sm text-gray-700 mb-3">Key Policy Thresholds</h4>
+                <div className="bg-conflixis-ivory rounded-lg p-4">
+                  <div className="grid md:grid-cols-3 gap-4">
+                    <div>
+                      <p className="text-xs text-gray-600">Financial Interest Threshold</p>
+                      <p className="text-sm font-bold text-conflixis-green">{"< 1% Public Securities"}</p>
+                    </div>
+                    <div>
+                      <p className="text-xs text-gray-600">Review Authority</p>
+                      <p className="text-sm font-bold text-conflixis-green">Chief Compliance Officer</p>
+                    </div>
+                    <div>
+                      <p className="text-xs text-gray-600">Approval Required</p>
+                      <p className="text-sm font-bold text-conflixis-green">Audit & Compliance Committee</p>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
-          )}
-        </Modal>
+          </div>
+        </section>
+
+        {/* Sample COI Disclosure Detail Review */}
+        <section className="pb-8">
+          <div className="container mx-auto px-6">
+            <div className="bg-white rounded-lg shadow p-6">
+              <h2 className="text-xl font-bold mb-4">Sample COI Disclosure Detail Review</h2>
+              
+              <div className="border border-gray-200 rounded-lg p-6">
+                <div className="flex justify-between items-start mb-4">
+                  <div>
+                    <h3 className="text-lg font-bold">Dr. Michael Thompson</h3>
+                    <p className="text-sm text-gray-600">Document ID: COI-2025-MT-0847</p>
+                    <p className="text-sm text-gray-600">Campaign: 2025 Texas Health COI Survey - Leaders/Providers</p>
+                    <p className="text-sm text-gray-600">Position: Medical Director, Cardiovascular Services</p>
+                  </div>
+                  <div className="text-right">
+                    <span className="px-3 py-1 bg-conflixis-gold text-white rounded-full text-sm font-bold">
+                      Management Plan Required
+                    </span>
+                  </div>
+                </div>
+                
+                <div className="grid md:grid-cols-2 gap-6">
+                  <div>
+                    <h4 className="font-bold text-sm text-gray-700 mb-2">Disclosed Interests</h4>
+                    <dl className="space-y-2">
+                      <div className="flex">
+                        <dt className="text-sm text-gray-600 w-32">Financial Interest:</dt>
+                        <dd className="text-sm font-bold">2.5% Ownership - CardioTech Solutions</dd>
+                      </div>
+                      <div className="flex">
+                        <dt className="text-sm text-gray-600 w-32">Governance Role:</dt>
+                        <dd className="text-sm font-bold">Board Member - Regional Heart Foundation</dd>
+                      </div>
+                      <div className="flex">
+                        <dt className="text-sm text-gray-600 w-32">Compensation:</dt>
+                        <dd className="text-sm font-bold">$45,000 annually</dd>
+                      </div>
+                      <div className="flex">
+                        <dt className="text-sm text-gray-600 w-32">Service Period:</dt>
+                        <dd className="text-sm font-bold">01/2024 - Present</dd>
+                      </div>
+                      <div className="flex">
+                        <dt className="text-sm text-gray-600 w-32">Family Member:</dt>
+                        <dd className="text-sm">
+                          <span className="bg-yellow-100 text-yellow-800 px-2 py-1 rounded text-xs">
+                            Spouse - Vendor Relationship
+                          </span>
+                        </dd>
+                      </div>
+                    </dl>
+                  </div>
+                  
+                  <div>
+                    <h4 className="font-bold text-sm text-gray-700 mb-2">Policy Compliance Assessment</h4>
+                    <ul className="space-y-2">
+                      <li className="flex items-center">
+                        <span className="text-green-500 mr-2">✓</span>
+                        <span className="text-sm">Annual disclosure submitted on time</span>
+                      </li>
+                      <li className="flex items-center">
+                        <span className="text-red-500 mr-2">⚠</span>
+                        <span className="text-sm">Financial interest exceeds 1% threshold</span>
+                      </li>
+                      <li className="flex items-center">
+                        <span className="text-green-500 mr-2">✓</span>
+                        <span className="text-sm">Governance relationship disclosed</span>
+                      </li>
+                      <li className="flex items-center">
+                        <span className="text-yellow-500 mr-2">⚠</span>
+                        <span className="text-sm">Family member vendor relationship</span>
+                      </li>
+                      <li className="flex items-center">
+                        <span className="text-green-500 mr-2">✓</span>
+                        <span className="text-sm">Not an insurmountable conflict</span>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                
+                <div className="mt-6 pt-6 border-t">
+                  <h4 className="font-bold text-sm text-gray-700 mb-2">Management Plan Requirements</h4>
+                  <ol className="list-decimal list-inside space-y-1 text-sm text-gray-600">
+                    <li>Recusal from all purchasing decisions related to cardiovascular equipment and supplies</li>
+                    <li>Cannot participate in vendor selection committees for cardiology services</li>
+                    <li>Disclosure required in all research publications and presentations</li>
+                    <li>Quarterly reporting of any changes in ownership percentage or compensation</li>
+                    <li>Annual review by Audit and Compliance Committee</li>
+                  </ol>
+                </div>
+                
+                <div className="mt-6 flex gap-2">
+                  <button className="px-4 py-2 bg-conflixis-green text-white rounded-lg hover:bg-opacity-90">
+                    Download Documentation
+                  </button>
+                  <button className="px-4 py-2 bg-conflixis-blue text-white rounded-lg hover:bg-opacity-90">
+                    Send for Committee Review
+                  </button>
+                  <button className="px-4 py-2 bg-conflixis-gold text-white rounded-lg hover:bg-opacity-90">
+                    Approve Management Plan
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Footer */}
+        <footer className="bg-white border-t border-gray-200">
+          <div className="container mx-auto px-6 py-4">
+            <div className="text-center text-sm text-gray-600">
+              <p>Texas Health Resources COI Policy Compliance System</p>
+              <p>Powered by Conflixis Analytics Platform</p>
+            </div>
+          </div>
+        </footer>
       </div>
     </MainLayout>
   );
