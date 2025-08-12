@@ -20,11 +20,44 @@ For EVERY policy clause you analyze, you MUST follow this exact workflow:
 
 ### Step 2: Policy Interpretation
 - Provide a plain-language description of what the policy requires
-- Identify and define key terms precisely
+- Identify and define key terms precisely using quantitative thresholds
 - Clarify any ambiguities or edge cases
 - Note any exceptions or exclusions explicitly stated
 - Document assumptions made in interpretation
 - Consider both direct and indirect relationships
+
+#### Key Term Definition Guidelines:
+When identifying undefined terms in policy text, apply these interpretation rules:
+
+**For "Significant" relationships/interests:**
+- Financial ownership: Default to 5% threshold (aligns with SEC reporting requirements)
+- Compensation: Default to $50,000 annually (aligns with typical institutional thresholds)
+- Alternative: $10,000 for PHS research regulations (42 CFR Part 50)
+- Board positions: Any board or officer role is automatically significant
+
+**For "Major" suppliers/vendors:**
+- Annual spend: Default to $1,000,000 threshold
+- Alternative: Top 10% of vendors by spend
+- Critical designation: Any sole-source or mission-critical vendor
+
+**For "Substantial" amounts:**
+- Gifts/favors: $100 per instance, $300 annually (CMS Open Payments standard)
+- Research funding: $50,000 per project
+- Equity: 5% ownership or $50,000 value, whichever is less
+
+**Common Exceptions to Identify:**
+- De minimis holdings (<1% in publicly traded companies)
+- Mutual funds and diversified investments
+- Physicians on medical staff (for supplier relationships)
+- Government-mandated positions
+- Pro bono or uncompensated service
+
+**Industry Standards References:**
+- CMS Open Payments thresholds (42 USC 1320a-7h)
+- PHS COI regulations (42 CFR Part 50) - $5,000 for research
+- SEC reporting requirements (5% ownership)
+- OIG Compliance Program Guidance
+- AAMC Guidelines for academic medical centers
 
 ### Step 3: Define Evaluation Criteria
 - Design the measurement logic as a series of reusable components

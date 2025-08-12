@@ -429,7 +429,7 @@
             <div class="bg-white rounded-lg shadow-lg overflow-hidden">
                 <div style="background: linear-gradient(135deg, #f5f1e8 0%, #ebe7de 100%); border-bottom: 1px solid #e5e7eb;">
                     <nav class="flex justify-start" style="margin-bottom: -1px;">
-                        <button onclick="showTab('thresholds')" class="tab-button active" data-tab="thresholds">
+                        <button onclick="showTab('thresholds')" class="tab-button" data-tab="thresholds">
                             <svg class="inline-block w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20">
                                 <path d="M3 3h14a1 1 0 011 1v12a1 1 0 01-1 1H3a1 1 0 01-1-1V4a1 1 0 011-1zm0 2v10h14V5H3z"/>
                             </svg>
@@ -460,7 +460,7 @@
                             </svg>
                             Change History
                         </button>
-                        <button onclick="showTab('pipeline')" class="tab-button" data-tab="pipeline">
+                        <button onclick="showTab('pipeline')" class="tab-button active" data-tab="pipeline">
                             <svg class="inline-block w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20">
                                 <path d="M5 3a2 2 0 00-2 2v2a2 2 0 002 2h2a2 2 0 002-2V5a2 2 0 00-2-2H5zM5 11a2 2 0 00-2 2v2a2 2 0 002 2h2a2 2 0 002-2v-2a2 2 0 00-2-2H5zM11 5a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V5zM14 11a1 1 0 011 1v1h1a1 1 0 110 2h-1v1a1 1 0 11-2 0v-1h-1a1 1 0 110-2h1v-1a1 1 0 011-1z"/>
                             </svg>
@@ -472,7 +472,7 @@
                 <!-- Tab Content -->
                 <div class="p-8" style="background: linear-gradient(180deg, #ffffff 0%, #fafafa 100%); min-height: 500px;">
                     <!-- Risk Thresholds Tab -->
-                    <div id="thresholds-tab" class="tab-content active">
+                    <div id="thresholds-tab" class="tab-content">
                         <h3 class="text-xl font-soehneKraftig text-conflixis-green mb-4">Risk Tier Thresholds</h3>
                         <p class="text-sm text-gray-600 mb-6">Configure financial thresholds that determine risk tiers and management requirements</p>
                         
@@ -535,7 +535,7 @@
                     </div>
                     
                     <!-- Policy Pipeline Tab -->
-                    <div id="pipeline-tab" class="tab-content">
+                    <div id="pipeline-tab" class="tab-content active">
                         <div class="space-y-6">
                             <!-- Pipeline Header -->
                             <div>
@@ -555,15 +555,13 @@
                                             <div class="vertical-line"></div>
                                             <div class="step-indicator-vertical completed">3</div>
                                             <div class="vertical-line"></div>
-                                            <div class="step-indicator-vertical completed">4</div>
+                                            <div class="step-indicator-vertical active">4</div>
                                             <div class="vertical-line"></div>
-                                            <div class="step-indicator-vertical active">5</div>
+                                            <div class="step-indicator-vertical">5</div>
                                             <div class="vertical-line"></div>
                                             <div class="step-indicator-vertical">6</div>
                                             <div class="vertical-line"></div>
                                             <div class="step-indicator-vertical">7</div>
-                                            <div class="vertical-line"></div>
-                                            <div class="step-indicator-vertical">8</div>
                                         </div>
                                     </div>
                                 </div>
@@ -592,6 +590,19 @@
                                         </div>
                                     </div>
                                     <div class="mt-4">
+                                        <div class="flex justify-between items-center mb-1">
+                                            <label class="block text-sm font-medium text-gray-700">Full Policy Clause Text</label>
+                                            <button onclick="findClauseText()" class="px-3 py-1 text-xs bg-conflixis-gold text-conflixis-green font-medium rounded hover:bg-opacity-90 inline-flex items-center justify-center">
+                                                <svg class="w-3 h-3 mr-1.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                                    <path fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z" clip-rule="evenodd"/>
+                                                </svg>
+                                                <span>Find Clause Text</span>
+                                            </button>
+                                        </div>
+                                        <textarea id="policyClauseText" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-conflixis-green focus:border-transparent" rows="4" placeholder="Enter or paste the full policy clause text here...">Section 4.8.1 - Insurmountable Conflicts:
+A significant relationship to a major supplier of medical equipment, devices, or patient services (other than physicians on the medical staff)</textarea>
+                                    </div>
+                                    <div class="mt-4">
                                         <label class="block text-sm font-medium text-gray-700 mb-1">Related Clauses</label>
                                         <div class="flex space-x-2">
                                             <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">4.8</span>
@@ -603,46 +614,103 @@
                                     
                                     <!-- Step 2: Policy Interpretation -->
                                     <div class="bg-white rounded-lg shadow-md p-6 border-l-4 border-conflixis-green" id="step-2">
-                                    <h4 class="text-lg font-soehneKraftig text-conflixis-green mb-4">Step 2: Policy Interpretation</h4>
+                                    <div class="flex justify-between items-center mb-4">
+                                        <h4 class="text-lg font-soehneKraftig text-conflixis-green">Step 2: Policy Interpretation</h4>
+                                        <button onclick="interpretPolicy()" class="px-3 py-1 text-xs bg-conflixis-gold text-conflixis-green font-medium rounded hover:bg-opacity-90 inline-flex items-center justify-center">
+                                            <svg class="w-3 h-3 mr-1.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                                <path d="M10 12a2 2 0 100-4 2 2 0 000 4z"/>
+                                                <path fill-rule="evenodd" d="M.458 10C1.732 5.943 5.522 3 10 3s8.268 2.943 9.542 7c-1.274 4.057-5.064 7-9.542 7S1.732 14.057.458 10zM14 10a4 4 0 11-8 0 4 4 0 018 0z" clip-rule="evenodd"/>
+                                            </svg>
+                                            <span>Interpret</span>
+                                        </button>
+                                    </div>
                                     <div class="space-y-4">
                                         <div>
                                             <label class="block text-sm font-medium text-gray-700 mb-1">Description</label>
-                                            <textarea readonly class="w-full px-3 py-2 border border-gray-300 rounded-md bg-gray-50" rows="3">Prohibits significant relationships with major suppliers of medical equipment, devices, or patient services</textarea>
+                                            <textarea id="policyDescription" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-conflixis-green focus:border-transparent" rows="3" placeholder="Enter policy interpretation...">Prohibits significant relationships with major suppliers of medical equipment, devices, or patient services</textarea>
                                         </div>
                                         <div>
-                                            <label class="block text-sm font-medium text-gray-700 mb-1">Key Terms</label>
-                                            <div class="space-y-2">
-                                                <div class="p-3 bg-gray-50 rounded">
-                                                    <span class="font-medium">Significant Relationship:</span> Ownership ≥ 5%, compensation ≥ $50,000/year, or board/officer position
+                                            <div class="flex justify-between items-center mb-2">
+                                                <label class="block text-sm font-medium text-gray-700">Key Terms</label>
+                                                <button onclick="addKeyTerm()" class="px-2 py-1 text-xs bg-green-600 text-white rounded hover:bg-green-700">
+                                                    + Add Term
+                                                </button>
+                                            </div>
+                                            <div id="keyTermsList" class="space-y-2">
+                                                <div class="key-term-item p-3 bg-gray-50 rounded border border-gray-200">
+                                                    <div class="flex justify-between items-start mb-2">
+                                                        <input type="text" value="Significant Relationship" class="font-medium bg-transparent border-b border-gray-300 focus:border-conflixis-green outline-none" placeholder="Term name...">
+                                                        <button onclick="removeKeyTerm(this)" class="text-red-500 hover:text-red-700 text-sm">×</button>
+                                                    </div>
+                                                    <textarea class="w-full mt-2 px-2 py-1 text-sm bg-white border border-gray-200 rounded" rows="2" placeholder="Definition...">Ownership ≥ 5%, compensation ≥ $50,000/year, or board/officer position</textarea>
                                                 </div>
-                                                <div class="p-3 bg-gray-50 rounded">
-                                                    <span class="font-medium">Major Supplier:</span> Vendor with annual spend ≥ $1,000,000 or designated as critical
+                                                <div class="key-term-item p-3 bg-gray-50 rounded border border-gray-200">
+                                                    <div class="flex justify-between items-start mb-2">
+                                                        <input type="text" value="Major Supplier" class="font-medium bg-transparent border-b border-gray-300 focus:border-conflixis-green outline-none" placeholder="Term name...">
+                                                        <button onclick="removeKeyTerm(this)" class="text-red-500 hover:text-red-700 text-sm">×</button>
+                                                    </div>
+                                                    <textarea class="w-full mt-2 px-2 py-1 text-sm bg-white border border-gray-200 rounded" rows="2" placeholder="Definition...">Vendor with annual spend ≥ $1,000,000 or designated as critical</textarea>
                                                 </div>
                                             </div>
                                         </div>
                                         <div>
-                                            <label class="block text-sm font-medium text-gray-700 mb-1">Exceptions</label>
-                                            <ul class="list-disc list-inside text-sm text-gray-600">
-                                                <li>Physicians on medical staff providing patient care</li>
-                                                <li>De minimis holdings (&lt;1%) in publicly traded companies</li>
+                                            <div class="flex justify-between items-center mb-2">
+                                                <label class="block text-sm font-medium text-gray-700">Exceptions</label>
+                                                <button onclick="addException()" class="px-2 py-1 text-xs bg-green-600 text-white rounded hover:bg-green-700">
+                                                    + Add Exception
+                                                </button>
+                                            </div>
+                                            <ul id="exceptionsList" class="space-y-1">
+                                                <li class="exception-item flex items-center">
+                                                    <span class="text-gray-400 mr-2">•</span>
+                                                    <input type="text" value="Physicians on medical staff providing patient care" class="flex-1 text-sm text-gray-600 bg-transparent border-b border-gray-200 focus:border-conflixis-green outline-none">
+                                                    <button onclick="removeException(this)" class="ml-2 text-red-500 hover:text-red-700 text-sm">×</button>
+                                                </li>
+                                                <li class="exception-item flex items-center">
+                                                    <span class="text-gray-400 mr-2">•</span>
+                                                    <input type="text" value="De minimis holdings (<1%) in publicly traded companies" class="flex-1 text-sm text-gray-600 bg-transparent border-b border-gray-200 focus:border-conflixis-green outline-none">
+                                                    <button onclick="removeException(this)" class="ml-2 text-red-500 hover:text-red-700 text-sm">×</button>
+                                                </li>
                                             </ul>
                                         </div>
                                     </div>
                                 </div>
                                     
-                                    <!-- Step 3: Evaluation Criteria -->
+                                    <!-- Step 3: Evaluation Criteria & Data Requirements -->
                                     <div class="bg-white rounded-lg shadow-md p-6 border-l-4 border-conflixis-green" id="step-3">
-                                    <h4 class="text-lg font-soehneKraftig text-conflixis-green mb-4">Step 3: Define Evaluation Criteria</h4>
+                                    <div class="flex justify-between items-center mb-4">
+                                        <h4 class="text-lg font-soehneKraftig text-conflixis-green">Step 3: Evaluation Criteria & Data Requirements</h4>
+                                        <button onclick="generateCriteria()" class="px-3 py-1 text-xs bg-conflixis-gold text-conflixis-green font-medium rounded hover:bg-opacity-90 inline-flex items-center justify-center">
+                                            <svg class="w-3 h-3 mr-1.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                                <path fill-rule="evenodd" d="M11.3 1.046A1 1 0 0112 2v5h4a1 1 0 01.82 1.573l-7 10A1 1 0 018 18v-5H4a1 1 0 01-.82-1.573l7-10a1 1 0 011.12-.38z" clip-rule="evenodd"/>
+                                            </svg>
+                                            <span>Generate Criteria</span>
+                                        </button>
+                                    </div>
                                     <div class="space-y-4">
                                         <div>
                                             <label class="block text-sm font-medium text-gray-700 mb-2">Evaluation Components</label>
-                                            <div class="space-y-2">
+                                            <div class="space-y-2" id="evaluationComponents">
                                                 <div class="p-3 border border-gray-200 rounded">
-                                                    <div class="flex justify-between items-center">
+                                                    <div class="flex justify-between items-center mb-2">
                                                         <span class="font-medium">Entity Matching</span>
                                                         <span class="text-sm text-gray-500">Confidence: 80%</span>
                                                     </div>
-                                                    <p class="text-sm text-gray-600 mt-1">Match disclosed entities against vendor database</p>
+                                                    <p class="text-sm text-gray-600">Match disclosed entities against vendor database</p>
+                                                    <div class="mt-2 pt-2 border-t border-gray-100">
+                                                        <div class="grid grid-cols-2 gap-2 text-xs">
+                                                            <div>
+                                                                <span class="text-gray-500">Disclosure Data:</span>
+                                                                <div class="text-gray-700">• entity_name</div>
+                                                                <div class="text-gray-700">• ein</div>
+                                                            </div>
+                                                            <div>
+                                                                <span class="text-gray-500">External Data:</span>
+                                                                <div class="text-gray-700">• vendor_database</div>
+                                                                <div class="text-gray-700">• entity_registry</div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
                                                 </div>
                                                 <div class="p-3 border border-gray-200 rounded">
                                                     <div class="flex justify-between items-center">
@@ -662,68 +730,25 @@
                                         </div>
                                         <div>
                                             <label class="block text-sm font-medium text-gray-700 mb-1">Match Logic</label>
-                                            <select class="w-full px-3 py-2 border border-gray-300 rounded-md">
-                                                <option>AND - All conditions must be met</option>
-                                                <option>OR - Any condition triggers</option>
-                                                <option>COMPLEX - Custom logic</option>
+                                            <select id="matchLogic" class="w-full px-3 py-2 border border-gray-300 rounded-md">
+                                                <option value="AND">AND - All conditions must be met</option>
+                                                <option value="OR">OR - Any condition triggers</option>
+                                                <option value="COMPLEX">COMPLEX - Custom logic</option>
                                             </select>
                                         </div>
+                                        <div>
+                                            <label class="block text-sm font-medium text-gray-700 mb-1">Manual Review Triggers</label>
+                                            <div id="manualReviewTriggers" class="text-sm text-gray-600 space-y-1 p-2 bg-gray-50 rounded">
+                                                <div>• Entity match confidence &lt; 80%</div>
+                                                <div>• Missing critical data fields</div>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                                     
-                                    <!-- Step 4: Data Requirements -->
+                                    <!-- Step 4: Data Validation (was Step 5) -->
                                     <div class="bg-white rounded-lg shadow-md p-6 border-l-4 border-conflixis-gold" id="step-4">
-                                    <h4 class="text-lg font-soehneKraftig text-conflixis-green mb-4">Step 4: Identify Data Requirements</h4>
-                                    <div class="grid grid-cols-2 gap-4">
-                                        <div>
-                                            <h5 class="font-medium mb-2">Disclosure Fields</h5>
-                                            <div class="space-y-1">
-                                                <label class="flex items-center">
-                                                    <input type="checkbox" checked class="mr-2">
-                                                    <span class="text-sm">Entity Name</span>
-                                                </label>
-                                                <label class="flex items-center">
-                                                    <input type="checkbox" checked class="mr-2">
-                                                    <span class="text-sm">Ownership Percentage</span>
-                                                </label>
-                                                <label class="flex items-center">
-                                                    <input type="checkbox" checked class="mr-2">
-                                                    <span class="text-sm">Compensation Amount</span>
-                                                </label>
-                                                <label class="flex items-center">
-                                                    <input type="checkbox" checked class="mr-2">
-                                                    <span class="text-sm">Board Positions</span>
-                                                </label>
-                                            </div>
-                                        </div>
-                                        <div>
-                                            <h5 class="font-medium mb-2">External Data Sources</h5>
-                                            <div class="space-y-1">
-                                                <label class="flex items-center">
-                                                    <input type="checkbox" checked class="mr-2">
-                                                    <span class="text-sm">Vendor Database</span>
-                                                </label>
-                                                <label class="flex items-center">
-                                                    <input type="checkbox" class="mr-2">
-                                                    <span class="text-sm">Public Records</span>
-                                                </label>
-                                                <label class="flex items-center">
-                                                    <input type="checkbox" class="mr-2">
-                                                    <span class="text-sm">Financial Systems</span>
-                                                </label>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="mt-4">
-                                        <label class="block text-sm font-medium text-gray-700 mb-1">Data Freshness Requirement</label>
-                                        <input type="number" value="30" class="w-32 px-3 py-2 border border-gray-300 rounded-md">
-                                        <span class="ml-2 text-sm text-gray-600">days</span>
-                                    </div>
-                                </div>
-                                    
-                                    <!-- Step 5: Data Validation -->
-                                    <div class="bg-white rounded-lg shadow-md p-6 border-l-4 border-conflixis-gold" id="step-5">
-                                    <h4 class="text-lg font-soehneKraftig text-conflixis-green mb-4">Step 5: Validate Data Readiness</h4>
+                                    <h4 class="text-lg font-soehneKraftig text-conflixis-green mb-4">Step 4: Validate Data Readiness</h4>
                                     <div class="space-y-4">
                                         <div class="p-4 bg-green-50 border border-green-200 rounded">
                                             <div class="flex items-center">
@@ -760,9 +785,9 @@
                                     </div>
                                 </div>
                                     
-                                    <!-- Step 6: Execute Evaluation -->
-                                    <div class="bg-white rounded-lg shadow-md p-6 border-l-4 border-blue-500" id="step-6">
-                                    <h4 class="text-lg font-soehneKraftig text-conflixis-green mb-4">Step 6: Execute Evaluation</h4>
+                                    <!-- Step 5: Execute Evaluation -->
+                                    <div class="bg-white rounded-lg shadow-md p-6 border-l-4 border-blue-500" id="step-5">
+                                    <h4 class="text-lg font-soehneKraftig text-conflixis-green mb-4">Step 5: Execute Evaluation</h4>
                                     <div class="space-y-4">
                                         <div>
                                             <label class="block text-sm font-medium text-gray-700 mb-2">Test Disclosure Data</label>
@@ -805,9 +830,9 @@
                                     </div>
                                 </div>
                                     
-                                    <!-- Step 7: Apply Decision -->
-                                    <div class="bg-white rounded-lg shadow-md p-6 border-l-4 border-red-500" id="step-7">
-                                    <h4 class="text-lg font-soehneKraftig text-conflixis-green mb-4">Step 7: Apply Policy Decision</h4>
+                                    <!-- Step 6: Apply Decision -->
+                                    <div class="bg-white rounded-lg shadow-md p-6 border-l-4 border-red-500" id="step-6">
+                                    <h4 class="text-lg font-soehneKraftig text-conflixis-green mb-4">Step 6: Apply Policy Decision</h4>
                                     <div class="space-y-4">
                                         <div class="p-4 bg-red-50 border border-red-200 rounded">
                                             <div class="flex items-start">
@@ -858,9 +883,9 @@
                                     </div>
                                 </div>
                                     
-                                    <!-- Step 8: Monitor & Improve -->
-                                    <div class="bg-white rounded-lg shadow-md p-6 border-l-4 border-purple-500" id="step-8">
-                                    <h4 class="text-lg font-soehneKraftig text-conflixis-green mb-4">Step 8: Monitor & Improve</h4>
+                                    <!-- Step 7: Monitor & Improve -->
+                                    <div class="bg-white rounded-lg shadow-md p-6 border-l-4 border-purple-500" id="step-7">
+                                    <h4 class="text-lg font-soehneKraftig text-conflixis-green mb-4">Step 7: Monitor & Improve</h4>
                                     <div class="space-y-4">
                                         <div>
                                             <h5 class="font-medium mb-2">Performance Metrics</h5>
@@ -904,6 +929,350 @@
                 </div>
             </div>
         </div>
+        
+        <!-- Data Dictionary Section -->
+        <div class="container mx-auto px-4 mb-8">
+            <div class="bg-white rounded-lg shadow-md p-6">
+                                        <div class="flex justify-between items-center mb-4">
+                                            <h3 class="text-xl font-soehneKraftig text-conflixis-green">Disclosure Data Dictionary</h3>
+                                            <button onclick="toggleDataDictionary()" class="text-sm text-gray-600 hover:text-gray-800">
+                                                <svg id="dataDictToggle" class="w-5 h-5 transform transition-transform" fill="currentColor" viewBox="0 0 20 20">
+                                                    <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"/>
+                                                </svg>
+                                            </button>
+                                        </div>
+                                        
+                                        <div id="dataDictionaryContent" class="space-y-6">
+                                            <p class="text-sm text-gray-600 mb-4">
+                                                Reference guide for all disclosure data fields available in the system. Each disclosure record represents a single relationship or interest.
+                                            </p>
+                                            
+                                            <!-- Provider Information -->
+                                            <div class="border border-gray-200 rounded-lg overflow-hidden">
+                                                <div class="bg-gray-50 px-4 py-2 border-b border-gray-200">
+                                                    <h4 class="font-medium text-gray-900">Provider Information</h4>
+                                                </div>
+                                                <div class="overflow-x-auto">
+                                                    <table class="min-w-full divide-y divide-gray-200">
+                                                        <thead class="bg-gray-50">
+                                                            <tr>
+                                                                <th class="px-4 py-2 text-left text-xs font-medium text-gray-500 uppercase">Field Name</th>
+                                                                <th class="px-4 py-2 text-left text-xs font-medium text-gray-500 uppercase">Type</th>
+                                                                <th class="px-4 py-2 text-left text-xs font-medium text-gray-500 uppercase">Description</th>
+                                                                <th class="px-4 py-2 text-left text-xs font-medium text-gray-500 uppercase">Example</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody class="bg-white divide-y divide-gray-200">
+                                                            <tr>
+                                                                <td class="px-4 py-2 text-sm font-mono text-gray-900">provider_npi</td>
+                                                                <td class="px-4 py-2 text-sm text-gray-500">string</td>
+                                                                <td class="px-4 py-2 text-sm text-gray-600">National Provider Identifier</td>
+                                                                <td class="px-4 py-2 text-sm text-gray-400">"1619051778"</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td class="px-4 py-2 text-sm font-mono text-gray-900">provider_name</td>
+                                                                <td class="px-4 py-2 text-sm text-gray-500">string</td>
+                                                                <td class="px-4 py-2 text-sm text-gray-600">Full name of the provider</td>
+                                                                <td class="px-4 py-2 text-sm text-gray-400">"John Hollingsworth"</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td class="px-4 py-2 text-sm font-mono text-gray-900">provider_email</td>
+                                                                <td class="px-4 py-2 text-sm text-gray-500">string</td>
+                                                                <td class="px-4 py-2 text-sm text-gray-600">Email address</td>
+                                                                <td class="px-4 py-2 text-sm text-gray-400">"john@texashealth.org"</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td class="px-4 py-2 text-sm font-mono text-gray-900">department</td>
+                                                                <td class="px-4 py-2 text-sm text-gray-500">string</td>
+                                                                <td class="px-4 py-2 text-sm text-gray-600">Department or facility</td>
+                                                                <td class="px-4 py-2 text-sm text-gray-400">"THPG", "Texas Health - Dallas"</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td class="px-4 py-2 text-sm font-mono text-gray-900">job_title</td>
+                                                                <td class="px-4 py-2 text-sm text-gray-500">string</td>
+                                                                <td class="px-4 py-2 text-sm text-gray-600">Current position/title</td>
+                                                                <td class="px-4 py-2 text-sm text-gray-400">"Physician", "Medical Directorship"</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td class="px-4 py-2 text-sm font-mono text-gray-900">person_with_interest</td>
+                                                                <td class="px-4 py-2 text-sm text-gray-500">string</td>
+                                                                <td class="px-4 py-2 text-sm text-gray-600">Person who has the interest</td>
+                                                                <td class="px-4 py-2 text-sm text-gray-400">"John Hollingsworth"</td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                            
+                                            <!-- Entity & Relationship -->
+                                            <div class="border border-gray-200 rounded-lg overflow-hidden">
+                                                <div class="bg-gray-50 px-4 py-2 border-b border-gray-200">
+                                                    <h4 class="font-medium text-gray-900">Entity & Relationship</h4>
+                                                </div>
+                                                <div class="overflow-x-auto">
+                                                    <table class="min-w-full divide-y divide-gray-200">
+                                                        <thead class="bg-gray-50">
+                                                            <tr>
+                                                                <th class="px-4 py-2 text-left text-xs font-medium text-gray-500 uppercase">Field Name</th>
+                                                                <th class="px-4 py-2 text-left text-xs font-medium text-gray-500 uppercase">Type</th>
+                                                                <th class="px-4 py-2 text-left text-xs font-medium text-gray-500 uppercase">Description</th>
+                                                                <th class="px-4 py-2 text-left text-xs font-medium text-gray-500 uppercase">Values/Example</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody class="bg-white divide-y divide-gray-200">
+                                                            <tr>
+                                                                <td class="px-4 py-2 text-sm font-mono text-gray-900">entity_name</td>
+                                                                <td class="px-4 py-2 text-sm text-gray-500">string</td>
+                                                                <td class="px-4 py-2 text-sm text-gray-600">Organization, company, or person</td>
+                                                                <td class="px-4 py-2 text-sm text-gray-400">"Intuitive Surgical, Inc."</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td class="px-4 py-2 text-sm font-mono text-gray-900">category_label</td>
+                                                                <td class="px-4 py-2 text-sm text-gray-500">enum</td>
+                                                                <td class="px-4 py-2 text-sm text-gray-600">High-level category</td>
+                                                                <td class="px-4 py-2 text-sm text-gray-400">
+                                                                    <div class="space-y-1">
+                                                                        <div>"Financial & Investment Interests"</div>
+                                                                        <div>"External Roles & Relationships"</div>
+                                                                        <div>"Open Payments (CMS Imports)"</div>
+                                                                    </div>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td class="px-4 py-2 text-sm font-mono text-gray-900">relationship_type</td>
+                                                                <td class="px-4 py-2 text-sm text-gray-500">enum</td>
+                                                                <td class="px-4 py-2 text-sm text-gray-600">Type of relationship</td>
+                                                                <td class="px-4 py-2 text-sm text-gray-400">
+                                                                    <div class="space-y-1">
+                                                                        <div>"Ownership, prospective ownership..."</div>
+                                                                        <div>"Receipt of any remuneration or gift"</div>
+                                                                        <div>"Receipt of Compensation"</div>
+                                                                        <div>"Governance Relationship / Director Fees"</div>
+                                                                        <div>"Related Parties"</div>
+                                                                    </div>
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                            
+                                            <!-- Financial Data -->
+                                            <div class="border border-gray-200 rounded-lg overflow-hidden">
+                                                <div class="bg-gray-50 px-4 py-2 border-b border-gray-200">
+                                                    <h4 class="font-medium text-gray-900">Financial Data</h4>
+                                                </div>
+                                                <div class="overflow-x-auto">
+                                                    <table class="min-w-full divide-y divide-gray-200">
+                                                        <thead class="bg-gray-50">
+                                                            <tr>
+                                                                <th class="px-4 py-2 text-left text-xs font-medium text-gray-500 uppercase">Field Name</th>
+                                                                <th class="px-4 py-2 text-left text-xs font-medium text-gray-500 uppercase">Type</th>
+                                                                <th class="px-4 py-2 text-left text-xs font-medium text-gray-500 uppercase">Description</th>
+                                                                <th class="px-4 py-2 text-left text-xs font-medium text-gray-500 uppercase">Example</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody class="bg-white divide-y divide-gray-200">
+                                                            <tr>
+                                                                <td class="px-4 py-2 text-sm font-mono text-gray-900">financial_amount</td>
+                                                                <td class="px-4 py-2 text-sm text-gray-500">float</td>
+                                                                <td class="px-4 py-2 text-sm text-gray-600">Dollar amount of interest</td>
+                                                                <td class="px-4 py-2 text-sm text-gray-400">100000.0</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td class="px-4 py-2 text-sm font-mono text-gray-900">equity_percentage</td>
+                                                                <td class="px-4 py-2 text-sm text-gray-500">float</td>
+                                                                <td class="px-4 py-2 text-sm text-gray-600">Ownership percentage</td>
+                                                                <td class="px-4 py-2 text-sm text-gray-400">5.5</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td class="px-4 py-2 text-sm font-mono text-gray-900">board_position</td>
+                                                                <td class="px-4 py-2 text-sm text-gray-500">boolean</td>
+                                                                <td class="px-4 py-2 text-sm text-gray-600">Has board membership</td>
+                                                                <td class="px-4 py-2 text-sm text-gray-400">true/false</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td class="px-4 py-2 text-sm font-mono text-gray-900">open_payments_total</td>
+                                                                <td class="px-4 py-2 text-sm text-gray-500">float</td>
+                                                                <td class="px-4 py-2 text-sm text-gray-600">CMS Open Payments amount</td>
+                                                                <td class="px-4 py-2 text-sm text-gray-400">25000.0</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td class="px-4 py-2 text-sm font-mono text-gray-900">open_payments_matched</td>
+                                                                <td class="px-4 py-2 text-sm text-gray-500">boolean</td>
+                                                                <td class="px-4 py-2 text-sm text-gray-600">Matched to CMS data</td>
+                                                                <td class="px-4 py-2 text-sm text-gray-400">true/false</td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                            
+                                            <!-- Risk Assessment -->
+                                            <div class="border border-gray-200 rounded-lg overflow-hidden">
+                                                <div class="bg-gray-50 px-4 py-2 border-b border-gray-200">
+                                                    <h4 class="font-medium text-gray-900">Risk Assessment</h4>
+                                                </div>
+                                                <div class="overflow-x-auto">
+                                                    <table class="min-w-full divide-y divide-gray-200">
+                                                        <thead class="bg-gray-50">
+                                                            <tr>
+                                                                <th class="px-4 py-2 text-left text-xs font-medium text-gray-500 uppercase">Field Name</th>
+                                                                <th class="px-4 py-2 text-left text-xs font-medium text-gray-500 uppercase">Type</th>
+                                                                <th class="px-4 py-2 text-left text-xs font-medium text-gray-500 uppercase">Description</th>
+                                                                <th class="px-4 py-2 text-left text-xs font-medium text-gray-500 uppercase">Values</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody class="bg-white divide-y divide-gray-200">
+                                                            <tr>
+                                                                <td class="px-4 py-2 text-sm font-mono text-gray-900">risk_tier</td>
+                                                                <td class="px-4 py-2 text-sm text-gray-500">enum</td>
+                                                                <td class="px-4 py-2 text-sm text-gray-600">Risk classification</td>
+                                                                <td class="px-4 py-2 text-sm text-gray-400">"low", "moderate", "high", "critical"</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td class="px-4 py-2 text-sm font-mono text-gray-900">risk_score</td>
+                                                                <td class="px-4 py-2 text-sm text-gray-500">integer</td>
+                                                                <td class="px-4 py-2 text-sm text-gray-600">Numeric risk score</td>
+                                                                <td class="px-4 py-2 text-sm text-gray-400">0-100+</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td class="px-4 py-2 text-sm font-mono text-gray-900">management_plan_required</td>
+                                                                <td class="px-4 py-2 text-sm text-gray-500">boolean</td>
+                                                                <td class="px-4 py-2 text-sm text-gray-600">Requires management plan</td>
+                                                                <td class="px-4 py-2 text-sm text-gray-400">true/false</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td class="px-4 py-2 text-sm font-mono text-gray-900">recusal_required</td>
+                                                                <td class="px-4 py-2 text-sm text-gray-500">boolean</td>
+                                                                <td class="px-4 py-2 text-sm text-gray-600">Requires recusal</td>
+                                                                <td class="px-4 py-2 text-sm text-gray-400">true/false</td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                            
+                                            <!-- Review & Dates -->
+                                            <div class="border border-gray-200 rounded-lg overflow-hidden">
+                                                <div class="bg-gray-50 px-4 py-2 border-b border-gray-200">
+                                                    <h4 class="font-medium text-gray-900">Review & Dates</h4>
+                                                </div>
+                                                <div class="overflow-x-auto">
+                                                    <table class="min-w-full divide-y divide-gray-200">
+                                                        <thead class="bg-gray-50">
+                                                            <tr>
+                                                                <th class="px-4 py-2 text-left text-xs font-medium text-gray-500 uppercase">Field Name</th>
+                                                                <th class="px-4 py-2 text-left text-xs font-medium text-gray-500 uppercase">Type</th>
+                                                                <th class="px-4 py-2 text-left text-xs font-medium text-gray-500 uppercase">Description</th>
+                                                                <th class="px-4 py-2 text-left text-xs font-medium text-gray-500 uppercase">Example</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody class="bg-white divide-y divide-gray-200">
+                                                            <tr>
+                                                                <td class="px-4 py-2 text-sm font-mono text-gray-900">review_status</td>
+                                                                <td class="px-4 py-2 text-sm text-gray-500">enum</td>
+                                                                <td class="px-4 py-2 text-sm text-gray-600">Current review status</td>
+                                                                <td class="px-4 py-2 text-sm text-gray-400">"pending", "approved", "rejected"</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td class="px-4 py-2 text-sm font-mono text-gray-900">disclosure_date</td>
+                                                                <td class="px-4 py-2 text-sm text-gray-500">date</td>
+                                                                <td class="px-4 py-2 text-sm text-gray-600">Date disclosed</td>
+                                                                <td class="px-4 py-2 text-sm text-gray-400">"2025-08-08"</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td class="px-4 py-2 text-sm font-mono text-gray-900">relationship_start_date</td>
+                                                                <td class="px-4 py-2 text-sm text-gray-500">date</td>
+                                                                <td class="px-4 py-2 text-sm text-gray-600">When relationship began</td>
+                                                                <td class="px-4 py-2 text-sm text-gray-400">"2025-08-09"</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td class="px-4 py-2 text-sm font-mono text-gray-900">relationship_ongoing</td>
+                                                                <td class="px-4 py-2 text-sm text-gray-500">boolean</td>
+                                                                <td class="px-4 py-2 text-sm text-gray-600">Is relationship active</td>
+                                                                <td class="px-4 py-2 text-sm text-gray-400">true/false</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td class="px-4 py-2 text-sm font-mono text-gray-900">last_review_date</td>
+                                                                <td class="px-4 py-2 text-sm text-gray-500">date</td>
+                                                                <td class="px-4 py-2 text-sm text-gray-600">Last review date</td>
+                                                                <td class="px-4 py-2 text-sm text-gray-400">"2025-08-09"</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td class="px-4 py-2 text-sm font-mono text-gray-900">next_review_date</td>
+                                                                <td class="px-4 py-2 text-sm text-gray-500">date</td>
+                                                                <td class="px-4 py-2 text-sm text-gray-600">Next scheduled review</td>
+                                                                <td class="px-4 py-2 text-sm text-gray-400">"2025-12-31"</td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                            
+                                            <!-- Additional Fields -->
+                                            <div class="border border-gray-200 rounded-lg overflow-hidden">
+                                                <div class="bg-gray-50 px-4 py-2 border-b border-gray-200">
+                                                    <h4 class="font-medium text-gray-900">Additional Fields</h4>
+                                                </div>
+                                                <div class="overflow-x-auto">
+                                                    <table class="min-w-full divide-y divide-gray-200">
+                                                        <thead class="bg-gray-50">
+                                                            <tr>
+                                                                <th class="px-4 py-2 text-left text-xs font-medium text-gray-500 uppercase">Field Name</th>
+                                                                <th class="px-4 py-2 text-left text-xs font-medium text-gray-500 uppercase">Type</th>
+                                                                <th class="px-4 py-2 text-left text-xs font-medium text-gray-500 uppercase">Description</th>
+                                                                <th class="px-4 py-2 text-left text-xs font-medium text-gray-500 uppercase">Example</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody class="bg-white divide-y divide-gray-200">
+                                                            <tr>
+                                                                <td class="px-4 py-2 text-sm font-mono text-gray-900">id / document_id</td>
+                                                                <td class="px-4 py-2 text-sm text-gray-500">string</td>
+                                                                <td class="px-4 py-2 text-sm text-gray-600">Unique record identifier</td>
+                                                                <td class="px-4 py-2 text-sm text-gray-400">"Ul4BESt79Qvy6RIgcDhc"</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td class="px-4 py-2 text-sm font-mono text-gray-900">notes</td>
+                                                                <td class="px-4 py-2 text-sm text-gray-500">string</td>
+                                                                <td class="px-4 py-2 text-sm text-gray-600">Free text notes</td>
+                                                                <td class="px-4 py-2 text-sm text-gray-400">"Site-PI for clinical trial"</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td class="px-4 py-2 text-sm font-mono text-gray-900">is_research</td>
+                                                                <td class="px-4 py-2 text-sm text-gray-500">boolean</td>
+                                                                <td class="px-4 py-2 text-sm text-gray-600">Research-related disclosure</td>
+                                                                <td class="px-4 py-2 text-sm text-gray-400">true/false</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td class="px-4 py-2 text-sm font-mono text-gray-900">decision_authority_level</td>
+                                                                <td class="px-4 py-2 text-sm text-gray-500">string</td>
+                                                                <td class="px-4 py-2 text-sm text-gray-600">Decision authority</td>
+                                                                <td class="px-4 py-2 text-sm text-gray-400">"staff"</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td class="px-4 py-2 text-sm font-mono text-gray-900">reporter_user_id</td>
+                                                                <td class="px-4 py-2 text-sm text-gray-500">string</td>
+                                                                <td class="px-4 py-2 text-sm text-gray-600">User who submitted</td>
+                                                                <td class="px-4 py-2 text-sm text-gray-400">"fmixRlIZTWb0GUbRq2gY..."</td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                            
+                                            <div class="mt-6 p-4 bg-blue-50 border border-blue-200 rounded-lg">
+                                                <h5 class="font-medium text-blue-900 mb-2">Data Structure Note</h5>
+                                                <p class="text-sm text-blue-800">
+                                                    The disclosure data uses a <strong>flat structure</strong> where each record represents a single disclosure/relationship. 
+                                                    Unlike nested structures, all fields are at the root level of each record. When referencing fields in rules, 
+                                                    use the format: <code class="px-1 py-0.5 bg-blue-100 rounded">disclosure.field_name</code>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+        </div>
     </main>
     
     <!-- API Client -->
@@ -934,6 +1303,14 @@
             
             submenu.classList.toggle('hidden');
             toggle.classList.toggle('rotated');
+        }
+        
+        function toggleDataDictionary() {
+            const content = document.getElementById('dataDictionaryContent');
+            const toggle = document.getElementById('dataDictToggle');
+            
+            content.classList.toggle('hidden');
+            toggle.classList.toggle('rotate-180');
         }
         
         // Tab switching
@@ -1496,6 +1873,307 @@
         });
         
         // Pipeline workflow functions
+        function addKeyTerm() {
+            const keyTermsList = document.getElementById('keyTermsList');
+            const newTerm = document.createElement('div');
+            newTerm.className = 'key-term-item p-3 bg-gray-50 rounded border border-gray-200';
+            newTerm.innerHTML = `
+                <div class="flex justify-between items-start mb-2">
+                    <input type="text" class="font-medium bg-transparent border-b border-gray-300 focus:border-conflixis-green outline-none" placeholder="Term name...">
+                    <button onclick="removeKeyTerm(this)" class="text-red-500 hover:text-red-700 text-sm">×</button>
+                </div>
+                <textarea class="w-full mt-2 px-2 py-1 text-sm bg-white border border-gray-200 rounded" rows="2" placeholder="Definition..."></textarea>
+            `;
+            keyTermsList.appendChild(newTerm);
+        }
+        
+        function removeKeyTerm(button) {
+            button.closest('.key-term-item').remove();
+        }
+        
+        function addException() {
+            const exceptionsList = document.getElementById('exceptionsList');
+            const newException = document.createElement('li');
+            newException.className = 'exception-item flex items-center';
+            newException.innerHTML = `
+                <span class="text-gray-400 mr-2">•</span>
+                <input type="text" class="flex-1 text-sm text-gray-600 bg-transparent border-b border-gray-200 focus:border-conflixis-green outline-none" placeholder="Enter exception...">
+                <button onclick="removeException(this)" class="ml-2 text-red-500 hover:text-red-700 text-sm">×</button>
+            `;
+            exceptionsList.appendChild(newException);
+        }
+        
+        function removeException(button) {
+            button.closest('.exception-item').remove();
+        }
+        
+        async function generateCriteria() {
+            // Get the interpretation data from Step 2
+            const description = document.getElementById('policyDescription').value;
+            const keyTermItems = document.querySelectorAll('#keyTermsList .key-term-item');
+            const exceptionItems = document.querySelectorAll('#exceptionsList .exception-item');
+            
+            if (!description || keyTermItems.length === 0) {
+                alert('Please complete Step 2 interpretation first');
+                return;
+            }
+            
+            // Collect key terms
+            const keyTerms = [];
+            keyTermItems.forEach(item => {
+                const termInput = item.querySelector('input[type="text"]');
+                const defTextarea = item.querySelector('textarea');
+                if (termInput && defTextarea && termInput.value && defTextarea.value) {
+                    keyTerms.push({
+                        term: termInput.value,
+                        definition: defTextarea.value
+                    });
+                }
+            });
+            
+            // Collect exceptions
+            const exceptions = [];
+            exceptionItems.forEach(item => {
+                const input = item.querySelector('input[type="text"]');
+                if (input && input.value) {
+                    exceptions.push(input.value);
+                }
+            });
+            
+            // Show loading state
+            const generateBtn = event.target.closest('button');
+            const originalContent = generateBtn.innerHTML;
+            generateBtn.innerHTML = `
+                <svg class="animate-spin h-3 w-3 mr-1.5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                    <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+                    <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                </svg>
+                <span>Generating...</span>
+            `;
+            generateBtn.disabled = true;
+            
+            try {
+                // Call the new configurable rule generation API
+                const response = await fetch('/api/evaluation/generate-rules', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({
+                        description: description,
+                        key_terms: keyTerms,
+                        exceptions: exceptions,
+                        policy_reference: document.querySelector('input[value="4.8.1"]').value || '4.8.1'
+                    })
+                });
+                
+                if (!response.ok) {
+                    throw new Error('Failed to generate rules');
+                }
+                
+                const data = await response.json();
+                
+                // Update the evaluation components section with configurable rules
+                const componentsDiv = document.getElementById('evaluationComponents');
+                componentsDiv.innerHTML = '';
+                
+                data.rule_set.rules.forEach(rule => {
+                    // Format conditions for display
+                    let conditionsHtml = '';
+                    if (rule.expression.conditions && rule.expression.conditions.length > 0) {
+                        conditionsHtml = rule.expression.conditions.map(cond => {
+                            const value = typeof cond.value === 'boolean' ? cond.value : 
+                                         typeof cond.value === 'string' ? `"${cond.value}"` : cond.value;
+                            return `<div class="text-xs text-indigo-600 ml-2">• ${cond.field} ${cond.operator} ${value}</div>`;
+                        }).join('');
+                    }
+                    
+                    const componentHtml = `
+                        <div class="p-3 border border-gray-200 rounded mb-2">
+                            <div class="flex justify-between items-center mb-2">
+                                <span class="font-medium">${rule.name}</span>
+                                <div class="flex items-center space-x-2">
+                                    <span class="text-xs px-2 py-1 bg-blue-100 text-blue-800 rounded">${rule.rule_type}</span>
+                                    <span class="text-sm text-gray-500">Conf: ${Math.round(rule.confidence_threshold * 100)}%</span>
+                                </div>
+                            </div>
+                            <p class="text-sm text-gray-600">${rule.description}</p>
+                            
+                            <!-- Rule Expression -->
+                            <div class="mt-2 p-2 bg-gray-50 rounded">
+                                <div class="text-xs font-medium text-gray-700 mb-1">
+                                    Rule Logic (${rule.expression.logic}):
+                                </div>
+                                ${conditionsHtml}
+                                <div class="text-xs text-gray-500 mt-1">
+                                    → Output: <span class="font-mono text-green-600">${rule.expression.output_variable}</span>
+                                </div>
+                            </div>
+                            
+                            <!-- Data Requirements -->
+                            <div class="mt-2 pt-2 border-t border-gray-100">
+                                <div class="grid grid-cols-2 gap-2 text-xs">
+                                    <div>
+                                        <span class="text-gray-500">Disclosure Fields:</span>
+                                        ${rule.required_disclosure_fields.length > 0 
+                                            ? rule.required_disclosure_fields.map(field => 
+                                                `<div class="text-gray-700">• ${field}</div>`
+                                              ).join('')
+                                            : '<div class="text-gray-400">• None</div>'
+                                        }
+                                    </div>
+                                    <div>
+                                        <span class="text-gray-500">External Sources:</span>
+                                        ${rule.required_external_sources.length > 0 
+                                            ? rule.required_external_sources.map(source => 
+                                                `<div class="text-gray-700">• ${source}</div>`
+                                              ).join('')
+                                            : '<div class="text-gray-400">• None</div>'
+                                        }
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    `;
+                    componentsDiv.innerHTML += componentHtml;
+                });
+                
+                // Update match logic
+                document.getElementById('matchLogic').value = data.rule_set.combination_logic;
+                
+                // Update data summary
+                const triggersDiv = document.getElementById('manualReviewTriggers');
+                triggersDiv.innerHTML = `
+                    <div class="font-medium mb-1">Data Summary:</div>
+                    <div>• ${data.data_summary.disclosure_fields.length} disclosure fields required</div>
+                    <div>• ${data.data_summary.external_sources.length} external data sources</div>
+                    <div>• ${data.data_summary.derived_fields.length} derived fields</div>
+                `;
+                
+                // Update Step 3 indicator to completed
+                document.querySelectorAll('.step-indicator-vertical')[2].classList.add('completed');
+                
+            } catch (error) {
+                console.error('Error generating criteria:', error);
+                alert('Failed to generate evaluation criteria. Please try again.');
+            } finally {
+                generateBtn.innerHTML = originalContent;
+                generateBtn.disabled = false;
+            }
+        }
+        
+        async function interpretPolicy() {
+            // Get the clause text from Step 1
+            const clauseText = document.getElementById('policyClauseText').value;
+            
+            if (!clauseText) {
+                alert('Please enter policy clause text in Step 1 first');
+                return;
+            }
+            
+            // Show loading state
+            const interpretBtn = event.target.closest('button');
+            const originalContent = interpretBtn.innerHTML;
+            interpretBtn.innerHTML = `
+                <svg class="animate-spin h-3 w-3 mr-1.5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                    <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+                    <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                </svg>
+                <span>Interpreting...</span>
+            `;
+            interpretBtn.disabled = true;
+            
+            try {
+                // Call the interpretation API
+                const response = await fetch('/api/interpretation/interpret', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({
+                        clause_text: clauseText,
+                        clause_reference: document.querySelector('input[value="4.8.1"]').value || '4.8.1'
+                    })
+                });
+                
+                if (!response.ok) {
+                    throw new Error('Failed to interpret policy');
+                }
+                
+                const interpretation = await response.json();
+                
+                // Update the description
+                document.getElementById('policyDescription').value = interpretation.description;
+                
+                // Clear and update key terms
+                const keyTermsList = document.getElementById('keyTermsList');
+                keyTermsList.innerHTML = '';
+                interpretation.key_terms.forEach(term => {
+                    const termDiv = document.createElement('div');
+                    termDiv.className = 'key-term-item p-3 bg-gray-50 rounded border border-gray-200';
+                    termDiv.innerHTML = `
+                        <div class="flex justify-between items-start mb-2">
+                            <input type="text" value="${term.term}" class="font-medium bg-transparent border-b border-gray-300 focus:border-conflixis-green outline-none" placeholder="Term name...">
+                            <button onclick="removeKeyTerm(this)" class="text-red-500 hover:text-red-700 text-sm">×</button>
+                        </div>
+                        <textarea class="w-full mt-2 px-2 py-1 text-sm bg-white border border-gray-200 rounded" rows="2" placeholder="Definition...">${term.definition}</textarea>
+                    `;
+                    keyTermsList.appendChild(termDiv);
+                });
+                
+                // Clear and update exceptions
+                const exceptionsList = document.getElementById('exceptionsList');
+                exceptionsList.innerHTML = '';
+                interpretation.exceptions.forEach(exception => {
+                    const exceptionLi = document.createElement('li');
+                    exceptionLi.className = 'exception-item flex items-center';
+                    exceptionLi.innerHTML = `
+                        <span class="text-gray-400 mr-2">•</span>
+                        <input type="text" value="${exception}" class="flex-1 text-sm text-gray-600 bg-transparent border-b border-gray-200 focus:border-conflixis-green outline-none">
+                        <button onclick="removeException(this)" class="ml-2 text-red-500 hover:text-red-700 text-sm">×</button>
+                    `;
+                    exceptionsList.appendChild(exceptionLi);
+                });
+                
+                // Flash green to show success
+                const step2 = document.getElementById('step-2');
+                step2.classList.add('ring-2', 'ring-green-500');
+                setTimeout(() => {
+                    step2.classList.remove('ring-2', 'ring-green-500');
+                }, 2000);
+                
+            } catch (error) {
+                console.error('Error interpreting policy:', error);
+                alert('Failed to interpret policy. Using default interpretation.');
+            } finally {
+                // Restore button state
+                interpretBtn.innerHTML = originalContent;
+                interpretBtn.disabled = false;
+            }
+        }
+        
+        function findClauseText() {
+            // Placeholder function for finding clause text
+            // In production, this would call an API to search policy documents
+            const clauseRef = document.querySelector('input[value="4.8.1"]').value;
+            
+            // Show loading state
+            const textarea = document.getElementById('policyClauseText');
+            textarea.value = 'Searching for clause ' + clauseRef + '...';
+            
+            // Simulate API call
+            setTimeout(() => {
+                // In production, this would be the actual clause text from the API
+                textarea.value = 'Section 4.8.1 - Insurmountable Conflicts:\nA significant relationship to a major supplier of medical equipment, devices, or patient services (other than physicians on the medical staff)';
+                
+                // Flash green to show success
+                textarea.classList.add('ring-2', 'ring-green-500');
+                setTimeout(() => {
+                    textarea.classList.remove('ring-2', 'ring-green-500');
+                }, 1000);
+            }, 1000);
+        }
+        
         function executePipeline() {
             const testData = document.getElementById('testDisclosure').value;
             const resultsDiv = document.getElementById('executionResults');

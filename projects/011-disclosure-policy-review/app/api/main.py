@@ -5,6 +5,8 @@ from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from api.routes import disclosures_router, policies_router, stats_router
 from api.routes.interpretation import router as interpretation_router
+from api.routes.criteria import router as criteria_router
+from api.routes.evaluation_rules import router as evaluation_router
 
 
 def create_api_app() -> FastAPI:
@@ -36,6 +38,8 @@ def create_api_app() -> FastAPI:
     app.include_router(policies_router)
     app.include_router(stats_router)
     app.include_router(interpretation_router)
+    app.include_router(criteria_router)
+    app.include_router(evaluation_router)
     
     # Root endpoint
     @app.get("/")
