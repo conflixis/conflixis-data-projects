@@ -539,7 +539,7 @@
                         <div class="space-y-6">
                             <!-- Pipeline Header -->
                             <div>
-                                <h3 class="text-xl font-soehneKraftig text-conflixis-green mb-2">Policy Decision Pipeline - Clause 4.8.1</h3>
+                                <h3 class="text-xl font-soehneKraftig text-conflixis-green mb-2">Policy Engine Builder - Clause 4.8.1</h3>
                                 <p class="text-sm text-gray-600">Complete 8-step workflow for Major Supplier Relationship policy evaluation</p>
                             </div>
                             
@@ -968,42 +968,42 @@ A significant relationship to a major supplier of medical equipment, devices, or
                                                                 <td class="px-4 py-2 text-sm font-mono text-gray-900">provider_npi</td>
                                                                 <td class="px-4 py-2 text-sm text-gray-500">string</td>
                                                                 <td class="px-4 py-2 text-sm text-gray-600">National Provider Identifier</td>
-                                                                <td class="px-4 py-2 text-sm text-gray-500">Disclosure Form</td>
+                                                                <td class="px-4 py-2 text-sm text-gray-500 font-mono text-xs">conflixis-engine.firestore_export.member_shards_raw_latest_parsed</td>
                                                                 <td class="px-4 py-2 text-sm text-gray-400">"1619051778"</td>
                                                             </tr>
                                                             <tr>
                                                                 <td class="px-4 py-2 text-sm font-mono text-gray-900">provider_name</td>
                                                                 <td class="px-4 py-2 text-sm text-gray-500">string</td>
                                                                 <td class="px-4 py-2 text-sm text-gray-600">Full name of the provider</td>
-                                                                <td class="px-4 py-2 text-sm text-gray-500">Disclosure Form</td>
+                                                                <td class="px-4 py-2 text-sm text-gray-500 font-mono text-xs">conflixis-engine.firestore_export.disclosures_raw_latest.$.reporter.name</td>
                                                                 <td class="px-4 py-2 text-sm text-gray-400">"John Hollingsworth"</td>
                                                             </tr>
                                                             <tr>
                                                                 <td class="px-4 py-2 text-sm font-mono text-gray-900">provider_email</td>
                                                                 <td class="px-4 py-2 text-sm text-gray-500">string</td>
                                                                 <td class="px-4 py-2 text-sm text-gray-600">Email address</td>
-                                                                <td class="px-4 py-2 text-sm text-gray-500">Disclosure Form</td>
+                                                                <td class="px-4 py-2 text-sm text-gray-500 font-mono text-xs">conflixis-engine.firestore_export.disclosures_raw_latest.$.reporter.email</td>
                                                                 <td class="px-4 py-2 text-sm text-gray-400">"john@texashealth.org"</td>
                                                             </tr>
                                                             <tr>
                                                                 <td class="px-4 py-2 text-sm font-mono text-gray-900">department</td>
                                                                 <td class="px-4 py-2 text-sm text-gray-500">string</td>
                                                                 <td class="px-4 py-2 text-sm text-gray-600">Department or facility</td>
-                                                                <td class="px-4 py-2 text-sm text-gray-500">Disclosure Form</td>
+                                                                <td class="px-4 py-2 text-sm text-gray-500 font-mono text-xs">conflixis-engine.firestore_export.member_shards_raw_latest_parsed</td>
                                                                 <td class="px-4 py-2 text-sm text-gray-400">"THPG", "Texas Health - Dallas"</td>
                                                             </tr>
                                                             <tr>
                                                                 <td class="px-4 py-2 text-sm font-mono text-gray-900">job_title</td>
                                                                 <td class="px-4 py-2 text-sm text-gray-500">string</td>
                                                                 <td class="px-4 py-2 text-sm text-gray-600">Current position/title</td>
-                                                                <td class="px-4 py-2 text-sm text-gray-500">Disclosure Form</td>
+                                                                <td class="px-4 py-2 text-sm text-gray-500 font-mono text-xs">conflixis-engine.firestore_export.disclosures_raw_latest.$.question.title</td>
                                                                 <td class="px-4 py-2 text-sm text-gray-400">"Physician", "Medical Directorship"</td>
                                                             </tr>
                                                             <tr>
                                                                 <td class="px-4 py-2 text-sm font-mono text-gray-900">person_with_interest</td>
                                                                 <td class="px-4 py-2 text-sm text-gray-500">string</td>
                                                                 <td class="px-4 py-2 text-sm text-gray-600">Person who has the interest</td>
-                                                                <td class="px-4 py-2 text-sm text-gray-500">Disclosure Form</td>
+                                                                <td class="px-4 py-2 text-sm text-gray-500 font-mono text-xs">conflixis-engine.firestore_export.disclosures_raw_latest.$.person_with_interest</td>
                                                                 <td class="px-4 py-2 text-sm text-gray-400">"John Hollingsworth"</td>
                                                             </tr>
                                                         </tbody>
@@ -1032,14 +1032,14 @@ A significant relationship to a major supplier of medical equipment, devices, or
                                                                 <td class="px-4 py-2 text-sm font-mono text-gray-900">entity_name</td>
                                                                 <td class="px-4 py-2 text-sm text-gray-500">string</td>
                                                                 <td class="px-4 py-2 text-sm text-gray-600">Organization, company, or person</td>
-                                                                <td class="px-4 py-2 text-sm text-gray-500">Disclosure Form</td>
+                                                                <td class="px-4 py-2 text-sm text-gray-500 font-mono text-xs">conflixis-engine.firestore_export.disclosures_raw_latest.$.company_name</td>
                                                                 <td class="px-4 py-2 text-sm text-gray-400">"Intuitive Surgical, Inc."</td>
                                                             </tr>
                                                             <tr>
                                                                 <td class="px-4 py-2 text-sm font-mono text-gray-900">category_label</td>
                                                                 <td class="px-4 py-2 text-sm text-gray-500">enum</td>
                                                                 <td class="px-4 py-2 text-sm text-gray-600">High-level category</td>
-                                                                <td class="px-4 py-2 text-sm text-gray-500">Disclosure Form</td>
+                                                                <td class="px-4 py-2 text-sm text-gray-500 font-mono text-xs">conflixis-engine.firestore_export.disclosures_raw_latest.$.question.category_label</td>
                                                                 <td class="px-4 py-2 text-sm text-gray-400">
                                                                     <div class="space-y-1">
                                                                         <div>"Financial & Investment Interests"</div>
@@ -1052,7 +1052,7 @@ A significant relationship to a major supplier of medical equipment, devices, or
                                                                 <td class="px-4 py-2 text-sm font-mono text-gray-900">relationship_type</td>
                                                                 <td class="px-4 py-2 text-sm text-gray-500">enum</td>
                                                                 <td class="px-4 py-2 text-sm text-gray-600">Type of relationship</td>
-                                                                <td class="px-4 py-2 text-sm text-gray-500">Disclosure Form</td>
+                                                                <td class="px-4 py-2 text-sm text-gray-500 font-mono text-xs">conflixis-engine.firestore_export.disclosures_raw_latest.$.question.title</td>
                                                                 <td class="px-4 py-2 text-sm text-gray-400">
                                                                     <div class="space-y-1">
                                                                         <div>"Ownership, prospective ownership..."</div>
@@ -1089,35 +1089,35 @@ A significant relationship to a major supplier of medical equipment, devices, or
                                                                 <td class="px-4 py-2 text-sm font-mono text-gray-900">financial_amount</td>
                                                                 <td class="px-4 py-2 text-sm text-gray-500">float</td>
                                                                 <td class="px-4 py-2 text-sm text-gray-600">Dollar amount of interest</td>
-                                                                <td class="px-4 py-2 text-sm text-gray-500">Disclosure Form</td>
+                                                                <td class="px-4 py-2 text-sm text-gray-500 font-mono text-xs">conflixis-engine.firestore_export.disclosures_raw_latest.$.compensation_value</td>
                                                                 <td class="px-4 py-2 text-sm text-gray-400">100000.0</td>
                                                             </tr>
                                                             <tr>
                                                                 <td class="px-4 py-2 text-sm font-mono text-gray-900">equity_percentage</td>
                                                                 <td class="px-4 py-2 text-sm text-gray-500">float</td>
                                                                 <td class="px-4 py-2 text-sm text-gray-600">Ownership percentage</td>
-                                                                <td class="px-4 py-2 text-sm text-gray-500">Disclosure Form</td>
+                                                                <td class="px-4 py-2 text-sm text-gray-500 font-mono text-xs">conflixis-engine.firestore_export.disclosures_raw_latest.$.equity_percentage</td>
                                                                 <td class="px-4 py-2 text-sm text-gray-400">5.5</td>
                                                             </tr>
                                                             <tr>
                                                                 <td class="px-4 py-2 text-sm font-mono text-gray-900">board_position</td>
                                                                 <td class="px-4 py-2 text-sm text-gray-500">boolean</td>
                                                                 <td class="px-4 py-2 text-sm text-gray-600">Has board membership</td>
-                                                                <td class="px-4 py-2 text-sm text-gray-500">Disclosure Form</td>
+                                                                <td class="px-4 py-2 text-sm text-gray-500 font-mono text-xs">conflixis-engine.firestore_export.disclosures_raw_latest.$.board_position</td>
                                                                 <td class="px-4 py-2 text-sm text-gray-400">true/false</td>
                                                             </tr>
                                                             <tr>
                                                                 <td class="px-4 py-2 text-sm font-mono text-gray-900">open_payments_total</td>
                                                                 <td class="px-4 py-2 text-sm text-gray-500">float</td>
                                                                 <td class="px-4 py-2 text-sm text-gray-600">CMS Open Payments amount</td>
-                                                                <td class="px-4 py-2 text-sm text-gray-500">CMS Import</td>
+                                                                <td class="px-4 py-2 text-sm text-gray-500 font-mono text-xs">conflixis-engine.cms_data.open_payments_summary</td>
                                                                 <td class="px-4 py-2 text-sm text-gray-400">25000.0</td>
                                                             </tr>
                                                             <tr>
                                                                 <td class="px-4 py-2 text-sm font-mono text-gray-900">open_payments_matched</td>
                                                                 <td class="px-4 py-2 text-sm text-gray-500">boolean</td>
                                                                 <td class="px-4 py-2 text-sm text-gray-600">Matched to CMS data</td>
-                                                                <td class="px-4 py-2 text-sm text-gray-500">System Generated</td>
+                                                                <td class="px-4 py-2 text-sm text-gray-500 font-mono text-xs">conflixis-engine.firestore_export.disclosures_raw_latest.$.open_payments_matched</td>
                                                                 <td class="px-4 py-2 text-sm text-gray-400">true/false</td>
                                                             </tr>
                                                         </tbody>
@@ -1146,28 +1146,28 @@ A significant relationship to a major supplier of medical equipment, devices, or
                                                                 <td class="px-4 py-2 text-sm font-mono text-gray-900">risk_tier</td>
                                                                 <td class="px-4 py-2 text-sm text-gray-500">enum</td>
                                                                 <td class="px-4 py-2 text-sm text-gray-600">Risk classification</td>
-                                                                <td class="px-4 py-2 text-sm text-gray-500">System Calculated</td>
+                                                                <td class="px-4 py-2 text-sm text-gray-500 font-mono text-xs">Application Layer (Calculated)</td>
                                                                 <td class="px-4 py-2 text-sm text-gray-400">"low", "moderate", "high", "critical"</td>
                                                             </tr>
                                                             <tr>
                                                                 <td class="px-4 py-2 text-sm font-mono text-gray-900">risk_score</td>
                                                                 <td class="px-4 py-2 text-sm text-gray-500">integer</td>
                                                                 <td class="px-4 py-2 text-sm text-gray-600">Numeric risk score</td>
-                                                                <td class="px-4 py-2 text-sm text-gray-500">System Calculated</td>
+                                                                <td class="px-4 py-2 text-sm text-gray-500 font-mono text-xs">Application Layer (Calculated)</td>
                                                                 <td class="px-4 py-2 text-sm text-gray-400">0-100+</td>
                                                             </tr>
                                                             <tr>
                                                                 <td class="px-4 py-2 text-sm font-mono text-gray-900">management_plan_required</td>
                                                                 <td class="px-4 py-2 text-sm text-gray-500">boolean</td>
                                                                 <td class="px-4 py-2 text-sm text-gray-600">Requires management plan</td>
-                                                                <td class="px-4 py-2 text-sm text-gray-500">Policy Engine</td>
+                                                                <td class="px-4 py-2 text-sm text-gray-500 font-mono text-xs">conflixis-engine.firestore_export.disclosures_raw_latest.$.management_plan_required</td>
                                                                 <td class="px-4 py-2 text-sm text-gray-400">true/false</td>
                                                             </tr>
                                                             <tr>
                                                                 <td class="px-4 py-2 text-sm font-mono text-gray-900">recusal_required</td>
                                                                 <td class="px-4 py-2 text-sm text-gray-500">boolean</td>
                                                                 <td class="px-4 py-2 text-sm text-gray-600">Requires recusal</td>
-                                                                <td class="px-4 py-2 text-sm text-gray-500">Policy Engine</td>
+                                                                <td class="px-4 py-2 text-sm text-gray-500 font-mono text-xs">conflixis-engine.firestore_export.disclosures_raw_latest.$.recusal_required</td>
                                                                 <td class="px-4 py-2 text-sm text-gray-400">true/false</td>
                                                             </tr>
                                                         </tbody>
@@ -1196,42 +1196,42 @@ A significant relationship to a major supplier of medical equipment, devices, or
                                                                 <td class="px-4 py-2 text-sm font-mono text-gray-900">review_status</td>
                                                                 <td class="px-4 py-2 text-sm text-gray-500">enum</td>
                                                                 <td class="px-4 py-2 text-sm text-gray-600">Current review status</td>
-                                                                <td class="px-4 py-2 text-sm text-gray-500">Reviewer</td>
+                                                                <td class="px-4 py-2 text-sm text-gray-500 font-mono text-xs">conflixis-engine.firestore_export.disclosures_raw_latest.$.review_status</td>
                                                                 <td class="px-4 py-2 text-sm text-gray-400">"pending", "approved", "rejected"</td>
                                                             </tr>
                                                             <tr>
                                                                 <td class="px-4 py-2 text-sm font-mono text-gray-900">disclosure_date</td>
                                                                 <td class="px-4 py-2 text-sm text-gray-500">date</td>
                                                                 <td class="px-4 py-2 text-sm text-gray-600">Date disclosed</td>
-                                                                <td class="px-4 py-2 text-sm text-gray-500">Disclosure Form</td>
+                                                                <td class="px-4 py-2 text-sm text-gray-500 font-mono text-xs">conflixis-engine.firestore_export.disclosures_raw_latest.$.created_at</td>
                                                                 <td class="px-4 py-2 text-sm text-gray-400">"2025-08-08"</td>
                                                             </tr>
                                                             <tr>
                                                                 <td class="px-4 py-2 text-sm font-mono text-gray-900">relationship_start_date</td>
                                                                 <td class="px-4 py-2 text-sm text-gray-500">date</td>
                                                                 <td class="px-4 py-2 text-sm text-gray-600">When relationship began</td>
-                                                                <td class="px-4 py-2 text-sm text-gray-500">Disclosure Form</td>
+                                                                <td class="px-4 py-2 text-sm text-gray-500 font-mono text-xs">conflixis-engine.firestore_export.disclosures_raw_latest.$.relationship_start_date</td>
                                                                 <td class="px-4 py-2 text-sm text-gray-400">"2025-08-09"</td>
                                                             </tr>
                                                             <tr>
                                                                 <td class="px-4 py-2 text-sm font-mono text-gray-900">relationship_ongoing</td>
                                                                 <td class="px-4 py-2 text-sm text-gray-500">boolean</td>
                                                                 <td class="px-4 py-2 text-sm text-gray-600">Is relationship active</td>
-                                                                <td class="px-4 py-2 text-sm text-gray-500">Disclosure Form</td>
+                                                                <td class="px-4 py-2 text-sm text-gray-500 font-mono text-xs">conflixis-engine.firestore_export.disclosures_raw_latest.$.relationship_ongoing</td>
                                                                 <td class="px-4 py-2 text-sm text-gray-400">true/false</td>
                                                             </tr>
                                                             <tr>
                                                                 <td class="px-4 py-2 text-sm font-mono text-gray-900">last_review_date</td>
                                                                 <td class="px-4 py-2 text-sm text-gray-500">date</td>
                                                                 <td class="px-4 py-2 text-sm text-gray-600">Last review date</td>
-                                                                <td class="px-4 py-2 text-sm text-gray-500">System Updated</td>
+                                                                <td class="px-4 py-2 text-sm text-gray-500 font-mono text-xs">conflixis-engine.firestore_export.disclosures_raw_latest.$.last_reviewed_at</td>
                                                                 <td class="px-4 py-2 text-sm text-gray-400">"2025-08-09"</td>
                                                             </tr>
                                                             <tr>
                                                                 <td class="px-4 py-2 text-sm font-mono text-gray-900">next_review_date</td>
                                                                 <td class="px-4 py-2 text-sm text-gray-500">date</td>
                                                                 <td class="px-4 py-2 text-sm text-gray-600">Next scheduled review</td>
-                                                                <td class="px-4 py-2 text-sm text-gray-500">System Calculated</td>
+                                                                <td class="px-4 py-2 text-sm text-gray-500 font-mono text-xs">Application Layer (Calculated)</td>
                                                                 <td class="px-4 py-2 text-sm text-gray-400">"2025-12-31"</td>
                                                             </tr>
                                                         </tbody>
@@ -1260,35 +1260,35 @@ A significant relationship to a major supplier of medical equipment, devices, or
                                                                 <td class="px-4 py-2 text-sm font-mono text-gray-900">id / document_id</td>
                                                                 <td class="px-4 py-2 text-sm text-gray-500">string</td>
                                                                 <td class="px-4 py-2 text-sm text-gray-600">Unique record identifier</td>
-                                                                <td class="px-4 py-2 text-sm text-gray-500">System Generated</td>
+                                                                <td class="px-4 py-2 text-sm text-gray-500 font-mono text-xs">conflixis-engine.firestore_export.disclosures_raw_latest.document_id</td>
                                                                 <td class="px-4 py-2 text-sm text-gray-400">"Ul4BESt79Qvy6RIgcDhc"</td>
                                                             </tr>
                                                             <tr>
                                                                 <td class="px-4 py-2 text-sm font-mono text-gray-900">notes</td>
                                                                 <td class="px-4 py-2 text-sm text-gray-500">string</td>
                                                                 <td class="px-4 py-2 text-sm text-gray-600">Free text notes</td>
-                                                                <td class="px-4 py-2 text-sm text-gray-500">Disclosure Form</td>
+                                                                <td class="px-4 py-2 text-sm text-gray-500 font-mono text-xs">conflixis-engine.firestore_export.disclosures_raw_latest.$.notes</td>
                                                                 <td class="px-4 py-2 text-sm text-gray-400">"Site-PI for clinical trial"</td>
                                                             </tr>
                                                             <tr>
                                                                 <td class="px-4 py-2 text-sm font-mono text-gray-900">is_research</td>
                                                                 <td class="px-4 py-2 text-sm text-gray-500">boolean</td>
                                                                 <td class="px-4 py-2 text-sm text-gray-600">Research-related disclosure</td>
-                                                                <td class="px-4 py-2 text-sm text-gray-500">Disclosure Form</td>
+                                                                <td class="px-4 py-2 text-sm text-gray-500 font-mono text-xs">conflixis-engine.firestore_export.disclosures_raw_latest.$.is_research</td>
                                                                 <td class="px-4 py-2 text-sm text-gray-400">true/false</td>
                                                             </tr>
                                                             <tr>
                                                                 <td class="px-4 py-2 text-sm font-mono text-gray-900">decision_authority_level</td>
                                                                 <td class="px-4 py-2 text-sm text-gray-500">string</td>
                                                                 <td class="px-4 py-2 text-sm text-gray-600">Decision authority</td>
-                                                                <td class="px-4 py-2 text-sm text-gray-500">HR System</td>
+                                                                <td class="px-4 py-2 text-sm text-gray-500 font-mono text-xs">conflixis-engine.firestore_export.member_shards_raw_latest_parsed</td>
                                                                 <td class="px-4 py-2 text-sm text-gray-400">"staff"</td>
                                                             </tr>
                                                             <tr>
                                                                 <td class="px-4 py-2 text-sm font-mono text-gray-900">reporter_user_id</td>
                                                                 <td class="px-4 py-2 text-sm text-gray-500">string</td>
                                                                 <td class="px-4 py-2 text-sm text-gray-600">User who submitted</td>
-                                                                <td class="px-4 py-2 text-sm text-gray-500">System Auth</td>
+                                                                <td class="px-4 py-2 text-sm text-gray-500 font-mono text-xs">conflixis-engine.firestore_export.disclosures_raw_latest.$.user_id</td>
                                                                 <td class="px-4 py-2 text-sm text-gray-400">"fmixRlIZTWb0GUbRq2gY..."</td>
                                                             </tr>
                                                         </tbody>
