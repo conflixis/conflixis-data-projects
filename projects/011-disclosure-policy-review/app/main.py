@@ -81,6 +81,11 @@ def create_app() -> FastAPI:
         """Serve policy configuration page"""
         return FileResponse(str(frontend_path / "configuration.html"))
     
+    @app.get("/data-dictionary")
+    async def data_dictionary():
+        """Serve data dictionary page"""
+        return FileResponse(str(frontend_path / "data-dictionary.html"))
+    
     return app
 
 
