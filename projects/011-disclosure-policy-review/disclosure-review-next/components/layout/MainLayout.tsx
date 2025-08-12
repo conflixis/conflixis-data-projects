@@ -46,7 +46,7 @@ export default function MainLayout({ children }: MainLayoutProps) {
 
   const navigation = [
     { name: 'Dashboard', href: '/dashboard', icon: Home },
-    { name: 'Disclosure Viewer', href: '/', icon: Database },
+    { name: 'Disclosure Viewer', href: '/disclosures', icon: Database },
   ];
 
   const adminLinks = [
