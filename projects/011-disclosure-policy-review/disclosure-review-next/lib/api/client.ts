@@ -68,9 +68,18 @@ export class DisclosureAPIClient {
       }
     });
     
-    return this.request<PaginatedResponse<Disclosure>>(
+    const response = await this.request<any>(
       `/disclosures?${queryParams.toString()}`
     );
+    
+    // Map the API response structure to our expected structure
+    return {
+      items: response.data || [],
+      total: response.total || 0,
+      page: response.page || 1,
+      page_size: response.page_size || 50,
+      pages: response.pages || 0
+    };
   }
 
   async getDisclosure(id: string): Promise<Disclosure> {

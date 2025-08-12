@@ -2,7 +2,6 @@
 
 import React, { useState, useEffect } from 'react';
 import MainLayout from '@/components/layout/MainLayout';
-import { useDisclosures } from '@/lib/hooks/useDisclosures';
 import Modal from '@/components/ui/Modal';
 import { Disclosure } from '@/lib/api/types';
 
@@ -10,23 +9,35 @@ export default function DashboardPage() {
   const [selectedCampaign, setSelectedCampaign] = useState('2025');
   const [selectedDisclosure, setSelectedDisclosure] = useState<Disclosure | null>(null);
   const [modalOpen, setModalOpen] = useState(false);
+  const [statsData, setStatsData] = useState<any>(null);
+  const [disclosures, setDisclosures] = useState<any[]>([]);
   
-  // Fetch all disclosures
-  const { disclosures = [], isLoading } = useDisclosures({ page_size: 1000 });
+  // Fetch stats from API
+  useEffect(() => {
+    fetch('http://localhost:8000/api/stats/overview')
+      .then(res => res.json())
+      .then(data => setStatsData(data))
+      .catch(err => console.error('Failed to load stats:', err));
+  }, []);
 
-  // Filter disclosures by campaign
-  const filteredDisclosures = disclosures.filter(d => {
-    if (selectedCampaign === 'all') return true;
-    // Filter logic based on campaign
-    return d.campaign_name?.includes(selectedCampaign);
-  });
+  // Fetch disclosures for the table
+  useEffect(() => {
+    fetch('http://localhost:8000/api/disclosures?page_size=5')
+      .then(res => res.json())
+      .then(data => {
+        if (data && data.data) {
+          setDisclosures(data.data.slice(0, 5)); // Get first 5 disclosures
+        }
+      })
+      .catch(err => console.error('Failed to load disclosures:', err));
+  }, []);
 
-  // Calculate statistics
+  // Use stats from API
   const stats = {
-    uniqueProviders: new Set(filteredDisclosures.map(d => d.provider_name)).size,
-    totalDisclosures: filteredDisclosures.length,
-    compliant: filteredDisclosures.filter(d => d.review_status === 'approved').length,
-    pendingReview: filteredDisclosures.filter(d => d.review_status === 'pending' || d.review_status === 'in_review').length,
+    uniqueProviders: statsData?.unique_providers || 0,
+    totalDisclosures: statsData?.total_records || 0,
+    compliant: 0, // API doesn't have approved count
+    pendingReview: statsData?.review_status_distribution?.pending || 0,
     overdue: 261, // Sample data
     notRequired: 93, // Sample data
   };
@@ -38,35 +49,18 @@ export default function DashboardPage() {
   return (
     <MainLayout>
       <div className="min-h-screen bg-conflixis-ivory">
-        {/* Top Navigation */}
-        <nav className="bg-white shadow-lg sticky top-0 z-30">
-          <div className="px-6 py-4">
-            <div className="flex items-center justify-between">
-              <div>
-                <span className="text-xl font-bold text-conflixis-green">Texas Health Resources</span>
-                <span className="text-sm block text-conflixis-green">COI Policy Compliance System</span>
-              </div>
-              <div className="flex items-center space-x-4">
-                <span className="text-sm text-gray-600">Policy Version: 06/19/2025</span>
-                <button className="bg-conflixis-gold hover:bg-opacity-90 text-conflixis-green px-4 py-2 rounded-lg font-bold transition-all">
-                  Export Report
-                </button>
-              </div>
-            </div>
-          </div>
-        </nav>
 
         {/* Summary Statistics and Compliance Overview */}
         <section className="py-6">
           <div className="container mx-auto px-6">
-            <h1 className="text-3xl font-bold mb-6 text-conflixis-green">COI Policy Compliance Dashboard</h1>
+            <h1 className="text-3xl font-bold mb-6">COI Policy Compliance Dashboard</h1>
             
             <div className="grid lg:grid-cols-8 gap-6 mb-4">
               {/* Left Column: Campaign Selection and Metrics */}
               <div className="lg:col-span-2 flex flex-col gap-4">
                 {/* Campaign Selection Card */}
                 <div className="bg-white rounded-lg p-4 shadow">
-                  <label className="text-sm font-bold text-conflixis-green block mb-2">Campaign Filter</label>
+                  <label className="text-sm font-soehneKraftig text-conflixis-green block mb-2">Campaign Filter</label>
                   <select 
                     value={selectedCampaign}
                     onChange={(e) => setSelectedCampaign(e.target.value)}
@@ -86,7 +80,7 @@ export default function DashboardPage() {
                   {/* Total Covered Persons Card */}
                   <div className="bg-white rounded-lg p-4 shadow flex flex-col justify-center items-center text-center">
                     <h2 className="text-sm font-bold mb-2">Total Covered Persons</h2>
-                    <div className="text-3xl font-bold text-conflixis-blue bg-blue-100 rounded-lg px-6 py-2 mb-2">
+                    <div className="text-3xl font-soehneKraftig text-conflixis-blue bg-blue-100 rounded-lg px-6 py-2 mb-2">
                       {stats.uniqueProviders}
                     </div>
                     <div className="text-xs text-blue-600 font-medium">Unique providers</div>
@@ -95,10 +89,10 @@ export default function DashboardPage() {
                   {/* Total Disclosures Card */}
                   <div className="bg-white rounded-lg p-4 shadow flex flex-col justify-center items-center text-center">
                     <h2 className="text-sm font-bold mb-2">Total Disclosures</h2>
-                    <div className="text-3xl font-bold text-conflixis-green bg-green-50 rounded-lg px-6 py-2 mb-2">
+                    <div className="text-3xl font-soehneKraftig text-conflixis-green rounded-lg px-6 py-2 mb-2" style={{ backgroundColor: '#93baab' }}>
                       {stats.totalDisclosures}
                     </div>
-                    <div className="text-xs text-green-600 font-medium">Submitted for campaign</div>
+                    <div className="text-xs text-conflixis-mint font-medium">Submitted for campaign</div>
                   </div>
                 </div>
               </div>
@@ -110,17 +104,17 @@ export default function DashboardPage() {
                 <div className="flex-1 flex flex-col justify-center space-y-3">
                   {/* Compliant */}
                   <div className="flex items-center gap-3">
-                    <div className="w-24 text-xs font-bold">Compliant</div>
+                    <div className="w-24 text-xs font-soehneKraftig">Compliant</div>
                     <div className="flex-1 bg-gray-200 rounded-full h-6 relative overflow-hidden">
-                      <div className="bg-green-500 h-6 rounded-full transition-all duration-1000" 
-                           style={{ width: '72.3%' }}></div>
+                      <div className="h-6 rounded-full transition-all duration-1000" 
+                           style={{ width: '72.3%', backgroundColor: '#008000' }}></div>
                     </div>
                     <div className="w-24 text-right text-xs">2,781 (72.3%)</div>
                   </div>
                   
                   {/* Pending Review */}
                   <div className="flex items-center gap-3">
-                    <div className="w-24 text-xs font-bold">Pending Review</div>
+                    <div className="w-24 text-xs font-soehneKraftig">Pending Review</div>
                     <div className="flex-1 bg-gray-200 rounded-full h-6 relative overflow-hidden">
                       <div className="bg-conflixis-gold h-6 rounded-full transition-all duration-1000" 
                            style={{ width: '18.5%' }}></div>
@@ -130,9 +124,9 @@ export default function DashboardPage() {
                   
                   {/* Overdue */}
                   <div className="flex items-center gap-3">
-                    <div className="w-24 text-xs font-bold">Overdue</div>
+                    <div className="w-24 text-xs font-soehneKraftig">Overdue</div>
                     <div className="flex-1 bg-gray-200 rounded-full h-6 relative overflow-hidden">
-                      <div className="bg-red-500 h-6 rounded-full transition-all duration-1000" 
+                      <div className="bg-conflixis-red h-6 rounded-full transition-all duration-1000" 
                            style={{ width: '6.8%' }}></div>
                     </div>
                     <div className="w-24 text-right text-xs">261 (6.8%)</div>
@@ -140,7 +134,7 @@ export default function DashboardPage() {
                   
                   {/* Not Required */}
                   <div className="flex items-center gap-3">
-                    <div className="w-24 text-xs font-bold">Not Required</div>
+                    <div className="w-24 text-xs font-soehneKraftig">Not Required</div>
                     <div className="flex-1 bg-gray-200 rounded-full h-6 relative overflow-hidden">
                       <div className="bg-gray-400 h-6 rounded-full transition-all duration-1000" 
                            style={{ width: '2.4%' }}></div>
@@ -154,28 +148,55 @@ export default function DashboardPage() {
               <div className="lg:col-span-3 bg-white rounded-lg shadow p-6 flex flex-col h-full">
                 <h2 className="text-lg font-bold mb-4">Covered Persons by Category</h2>
                 
-                <div className="flex-1 flex flex-col justify-center">
-                  <div className="space-y-3">
-                    <div className="flex items-center justify-between">
-                      <span className="text-sm">Physicians</span>
-                      <span className="text-sm font-bold">1,847</span>
+                <div className="flex-1 flex flex-col justify-center space-y-3">
+                  {/* Physicians */}
+                  <div className="flex items-center gap-3">
+                    <div className="w-24 text-xs font-soehneKraftig">Physicians</div>
+                    <div className="flex-1 bg-gray-200 rounded-full h-6 relative overflow-hidden">
+                      <div className="bg-conflixis-blue h-6 rounded-full transition-all duration-1000" 
+                           style={{ width: '48%' }}></div>
                     </div>
-                    <div className="flex items-center justify-between">
-                      <span className="text-sm">Leadership</span>
-                      <span className="text-sm font-bold">423</span>
+                    <div className="w-24 text-right text-xs">1,847 (48.0%)</div>
+                  </div>
+                  
+                  {/* Leadership */}
+                  <div className="flex items-center gap-3">
+                    <div className="w-24 text-xs font-soehneKraftig">Leadership</div>
+                    <div className="flex-1 bg-gray-200 rounded-full h-6 relative overflow-hidden">
+                      <div className="bg-conflixis-green h-6 rounded-full transition-all duration-1000" 
+                           style={{ width: '11%' }}></div>
                     </div>
-                    <div className="flex items-center justify-between">
-                      <span className="text-sm">Board Members</span>
-                      <span className="text-sm font-bold">87</span>
+                    <div className="w-24 text-right text-xs">423 (11.0%)</div>
+                  </div>
+                  
+                  {/* Board Members */}
+                  <div className="flex items-center gap-3">
+                    <div className="w-24 text-xs font-soehneKraftig">Board Members</div>
+                    <div className="flex-1 bg-gray-200 rounded-full h-6 relative overflow-hidden">
+                      <div className="bg-conflixis-gold h-6 rounded-full transition-all duration-1000" 
+                           style={{ width: '2.3%' }}></div>
                     </div>
-                    <div className="flex items-center justify-between">
-                      <span className="text-sm">Researchers</span>
-                      <span className="text-sm font-bold">215</span>
+                    <div className="w-24 text-right text-xs">87 (2.3%)</div>
+                  </div>
+                  
+                  {/* Researchers */}
+                  <div className="flex items-center gap-3">
+                    <div className="w-24 text-xs font-soehneKraftig">Researchers</div>
+                    <div className="flex-1 bg-gray-200 rounded-full h-6 relative overflow-hidden">
+                      <div className="bg-purple-500 h-6 rounded-full transition-all duration-1000" 
+                           style={{ width: '5.6%' }}></div>
                     </div>
-                    <div className="flex items-center justify-between">
-                      <span className="text-sm">Other</span>
-                      <span className="text-sm font-bold">1,275</span>
+                    <div className="w-24 text-right text-xs">215 (5.6%)</div>
+                  </div>
+                  
+                  {/* Other */}
+                  <div className="flex items-center gap-3">
+                    <div className="w-24 text-xs font-soehneKraftig">Other</div>
+                    <div className="flex-1 bg-gray-200 rounded-full h-6 relative overflow-hidden">
+                      <div className="bg-gray-500 h-6 rounded-full transition-all duration-1000" 
+                           style={{ width: '33.1%' }}></div>
                     </div>
+                    <div className="w-24 text-right text-xs">1,275 (33.1%)</div>
                   </div>
                 </div>
               </div>
@@ -194,7 +215,7 @@ export default function DashboardPage() {
                 </p>
               </div>
               <a href="/disclosures" 
-                 className="bg-conflixis-blue hover:bg-opacity-90 text-white px-4 py-2 rounded-lg font-bold transition-all text-sm">
+                 className="bg-conflixis-blue hover:bg-opacity-90 text-white px-4 py-2 rounded-lg font-soehneKraftig transition-all text-sm">
                 View All Disclosures →
               </a>
             </div>
@@ -204,79 +225,38 @@ export default function DashboardPage() {
                 <table className="w-full">
                   <thead className="bg-conflixis-tan">
                     <tr>
-                      <th className="px-4 py-3 text-left text-xs font-bold text-gray-700 uppercase">Person</th>
-                      <th className="px-4 py-3 text-left text-xs font-bold text-gray-700 uppercase">Position</th>
-                      <th className="px-4 py-3 text-left text-xs font-bold text-gray-700 uppercase">THR Entity</th>
-                      <th className="px-4 py-3 text-left text-xs font-bold text-gray-700 uppercase">Disclosure Category</th>
-                      <th className="px-4 py-3 text-left text-xs font-bold text-gray-700 uppercase">Status</th>
-                      <th className="px-4 py-3 text-left text-xs font-bold text-gray-700 uppercase">Action</th>
+                      <th className="px-4 py-3 text-left text-xs font-soehneKraftig text-gray-700 uppercase">Person</th>
+                      <th className="px-4 py-3 text-left text-xs font-soehneKraftig text-gray-700 uppercase">Position</th>
+                      <th className="px-4 py-3 text-left text-xs font-soehneKraftig text-gray-700 uppercase">THR Entity</th>
+                      <th className="px-4 py-3 text-left text-xs font-soehneKraftig text-gray-700 uppercase">Disclosure Category</th>
+                      <th className="px-4 py-3 text-left text-xs font-soehneKraftig text-gray-700 uppercase">Status</th>
                     </tr>
                   </thead>
                   <tbody className="divide-y divide-gray-200">
-                    <tr className="hover:bg-gray-50">
-                      <td className="px-4 py-3">
-                        <div className="text-sm font-bold">Robert Anderson</div>
-                        <div className="text-xs text-gray-500">randerson@example.com</div>
-                      </td>
-                      <td className="px-4 py-3 text-sm">Board Committee Candidate</td>
-                      <td className="px-4 py-3">
-                        <span className="px-2 py-1 text-xs rounded-full bg-red-500 text-white">Major Supplier</span>
-                      </td>
-                      <td className="px-4 py-3 text-sm">
-                        <div className="flex items-center gap-2">
-                          <span>MedDevice Corp</span>
-                          <span className="px-2 py-0.5 text-xs rounded-full bg-gray-200 text-gray-700">Supplier Match</span>
-                        </div>
-                      </td>
-                      <td className="px-4 py-3">
-                        <span className="px-2 py-1 text-xs rounded-full bg-red-100 text-red-800">Disqualified</span>
-                      </td>
-                      <td className="px-4 py-3">
-                        <button className="text-conflixis-blue hover:text-conflixis-green text-sm font-bold">
-                          Review →
-                        </button>
-                      </td>
-                    </tr>
-                    
-                    <tr className="hover:bg-gray-50">
-                      <td className="px-4 py-3">
-                        <div className="text-sm font-bold">Jennifer Martinez</div>
-                        <div className="text-xs text-gray-500">jmartinez@example.com</div>
-                      </td>
-                      <td className="px-4 py-3 text-sm">Medical Director</td>
-                      <td className="px-4 py-3">
-                        <span className="px-2 py-1 text-xs rounded-full bg-red-500 text-white">Competing Healthcare</span>
-                      </td>
-                      <td className="px-4 py-3 text-sm">Regional Health System</td>
-                      <td className="px-4 py-3">
-                        <span className="px-2 py-1 text-xs rounded-full bg-yellow-100 text-yellow-800">Under Review</span>
-                      </td>
-                      <td className="px-4 py-3">
-                        <button className="text-conflixis-blue hover:text-conflixis-green text-sm font-bold">
-                          Review →
-                        </button>
-                      </td>
-                    </tr>
-                    
-                    <tr className="hover:bg-gray-50">
-                      <td className="px-4 py-3">
-                        <div className="text-sm font-bold">Thomas Wilson</div>
-                        <div className="text-xs text-gray-500">twilson@example.com</div>
-                      </td>
-                      <td className="px-4 py-3 text-sm">Board Member Candidate</td>
-                      <td className="px-4 py-3">
-                        <span className="px-2 py-1 text-xs rounded-full bg-red-500 text-white">Elected Official</span>
-                      </td>
-                      <td className="px-4 py-3 text-sm">State Legislature</td>
-                      <td className="px-4 py-3">
-                        <span className="px-2 py-1 text-xs rounded-full bg-red-100 text-red-800">Disqualified</span>
-                      </td>
-                      <td className="px-4 py-3">
-                        <button className="text-conflixis-blue hover:text-conflixis-green text-sm font-bold">
-                          Review →
-                        </button>
-                      </td>
-                    </tr>
+                    {disclosures.length > 0 ? (
+                      disclosures.map((disclosure, index) => (
+                        <tr key={index} className="hover:bg-gray-50 cursor-pointer">
+                          <td className="px-4 py-3">
+                            <div className="text-sm font-soehneKraftig">{disclosure.provider_name || disclosure.covered_person || 'N/A'}</div>
+                            <div className="text-xs text-gray-500">{disclosure.npi || 'No NPI'}</div>
+                          </td>
+                          <td className="px-4 py-3 text-sm">{disclosure.job_title || disclosure.position || 'Not Specified'}</td>
+                          <td className="px-4 py-3 text-sm">{disclosure.entity_name || disclosure.thr_entity || 'N/A'}</td>
+                          <td className="px-4 py-3 text-sm">{disclosure.category_label || disclosure.disclosure_type || 'N/A'}</td>
+                          <td className="px-4 py-3">
+                            <span className="px-2 py-1 text-xs rounded-full bg-yellow-100 text-yellow-800">
+                              {disclosure.review_status || 'Pending'}
+                            </span>
+                          </td>
+                        </tr>
+                      ))
+                    ) : (
+                      <tr>
+                        <td colSpan={5} className="px-4 py-8 text-center text-gray-500">
+                          Loading disclosures...
+                        </td>
+                      </tr>
+                    )}
                   </tbody>
                 </table>
               </div>
@@ -292,26 +272,26 @@ export default function DashboardPage() {
               
               <div className="grid md:grid-cols-2 gap-6">
                 <div>
-                  <h3 className="font-bold text-sm text-gray-700 mb-3">Disclosure Timelines</h3>
+                  <h3 className="font-soehneKraftig text-sm text-gray-700 mb-3">Disclosure Timelines</h3>
                   <div className="space-y-2">
                     <div className="flex items-start">
                       <div className="w-4 h-4 bg-conflixis-green rounded-full mt-0.5 flex-shrink-0"></div>
                       <div className="ml-3">
-                        <p className="text-sm font-bold">Initial Disclosure</p>
+                        <p className="text-sm font-soehneKraftig">Initial Disclosure</p>
                         <p className="text-xs text-gray-600">Promptly upon becoming subject to policy</p>
                       </div>
                     </div>
                     <div className="flex items-start">
                       <div className="w-4 h-4 bg-conflixis-gold rounded-full mt-0.5 flex-shrink-0"></div>
                       <div className="ml-3">
-                        <p className="text-sm font-bold">New Situation</p>
+                        <p className="text-sm font-soehneKraftig">New Situation</p>
                         <p className="text-xs text-gray-600">Immediately upon awareness</p>
                       </div>
                     </div>
                     <div className="flex items-start">
                       <div className="w-4 h-4 bg-conflixis-blue rounded-full mt-0.5 flex-shrink-0"></div>
                       <div className="ml-3">
-                        <p className="text-sm font-bold">Annual Review</p>
+                        <p className="text-sm font-soehneKraftig">Annual Review</p>
                         <p className="text-xs text-gray-600">At least annually</p>
                       </div>
                     </div>
@@ -319,43 +299,43 @@ export default function DashboardPage() {
                 </div>
                 
                 <div>
-                  <h3 className="font-bold text-sm text-gray-700 mb-3">Management Actions Required</h3>
+                  <h3 className="font-soehneKraftig text-sm text-gray-700 mb-3">Management Actions Required</h3>
                   <div className="space-y-2">
                     <div className="flex items-center justify-between p-2 bg-conflixis-ivory rounded">
                       <span className="text-sm">Pending Initial Reviews</span>
-                      <span className="text-sm font-bold text-red-600">47</span>
+                      <span className="text-sm font-soehneKraftig text-red-600">47</span>
                     </div>
                     <div className="flex items-center justify-between p-2 bg-conflixis-ivory rounded">
                       <span className="text-sm">Management Plans Due</span>
-                      <span className="text-sm font-bold text-conflixis-gold">23</span>
+                      <span className="text-sm font-soehneKraftig text-conflixis-gold">23</span>
                     </div>
                     <div className="flex items-center justify-between p-2 bg-conflixis-ivory rounded">
                       <span className="text-sm">Committee Reviews Scheduled</span>
-                      <span className="text-sm font-bold text-conflixis-blue">8</span>
+                      <span className="text-sm font-soehneKraftig text-conflixis-blue">8</span>
                     </div>
                     <div className="flex items-center justify-between p-2 bg-conflixis-ivory rounded">
                       <span className="text-sm">Resolutions Completed</span>
-                      <span className="text-sm font-bold text-green-600">156</span>
+                      <span className="text-sm font-soehneKraftig text-green-600">156</span>
                     </div>
                   </div>
                 </div>
               </div>
               
               <div className="mt-6 pt-6 border-t border-gray-200">
-                <h4 className="font-bold text-sm text-gray-700 mb-3">Key Policy Thresholds</h4>
+                <h4 className="font-soehneKraftig text-sm text-gray-700 mb-3">Key Policy Thresholds</h4>
                 <div className="bg-conflixis-ivory rounded-lg p-4">
                   <div className="grid md:grid-cols-3 gap-4">
                     <div>
                       <p className="text-xs text-gray-600">Financial Interest Threshold</p>
-                      <p className="text-sm font-bold text-conflixis-green">{"< 1% Public Securities"}</p>
+                      <p className="text-sm font-soehneKraftig text-conflixis-green">{"< 1% Public Securities"}</p>
                     </div>
                     <div>
                       <p className="text-xs text-gray-600">Review Authority</p>
-                      <p className="text-sm font-bold text-conflixis-green">Chief Compliance Officer</p>
+                      <p className="text-sm font-soehneKraftig text-conflixis-green">Chief Compliance Officer</p>
                     </div>
                     <div>
                       <p className="text-xs text-gray-600">Approval Required</p>
-                      <p className="text-sm font-bold text-conflixis-green">Audit & Compliance Committee</p>
+                      <p className="text-sm font-soehneKraftig text-conflixis-green">Audit & Compliance Committee</p>
                     </div>
                   </div>
                 </div>
@@ -373,13 +353,13 @@ export default function DashboardPage() {
               <div className="border border-gray-200 rounded-lg p-6">
                 <div className="flex justify-between items-start mb-4">
                   <div>
-                    <h3 className="text-lg font-bold">Dr. Michael Thompson</h3>
+                    <h3 className="text-lg font-soehneKraftig">Dr. Michael Thompson</h3>
                     <p className="text-sm text-gray-600">Document ID: COI-2025-MT-0847</p>
                     <p className="text-sm text-gray-600">Campaign: 2025 Texas Health COI Survey - Leaders/Providers</p>
                     <p className="text-sm text-gray-600">Position: Medical Director, Cardiovascular Services</p>
                   </div>
                   <div className="text-right">
-                    <span className="px-3 py-1 bg-conflixis-gold text-white rounded-full text-sm font-bold">
+                    <span className="px-3 py-1 bg-conflixis-gold text-white rounded-full text-sm font-soehneKraftig">
                       Management Plan Required
                     </span>
                   </div>
@@ -387,23 +367,23 @@ export default function DashboardPage() {
                 
                 <div className="grid md:grid-cols-2 gap-6">
                   <div>
-                    <h4 className="font-bold text-sm text-gray-700 mb-2">Disclosed Interests</h4>
+                    <h4 className="font-soehneKraftig text-sm text-gray-700 mb-2">Disclosed Interests</h4>
                     <dl className="space-y-2">
                       <div className="flex">
                         <dt className="text-sm text-gray-600 w-32">Financial Interest:</dt>
-                        <dd className="text-sm font-bold">2.5% Ownership - CardioTech Solutions</dd>
+                        <dd className="text-sm font-soehneKraftig">2.5% Ownership - CardioTech Solutions</dd>
                       </div>
                       <div className="flex">
                         <dt className="text-sm text-gray-600 w-32">Governance Role:</dt>
-                        <dd className="text-sm font-bold">Board Member - Regional Heart Foundation</dd>
+                        <dd className="text-sm font-soehneKraftig">Board Member - Regional Heart Foundation</dd>
                       </div>
                       <div className="flex">
                         <dt className="text-sm text-gray-600 w-32">Compensation:</dt>
-                        <dd className="text-sm font-bold">$45,000 annually</dd>
+                        <dd className="text-sm font-soehneKraftig">$45,000 annually</dd>
                       </div>
                       <div className="flex">
                         <dt className="text-sm text-gray-600 w-32">Service Period:</dt>
-                        <dd className="text-sm font-bold">01/2024 - Present</dd>
+                        <dd className="text-sm font-soehneKraftig">01/2024 - Present</dd>
                       </div>
                       <div className="flex">
                         <dt className="text-sm text-gray-600 w-32">Family Member:</dt>
@@ -417,7 +397,7 @@ export default function DashboardPage() {
                   </div>
                   
                   <div>
-                    <h4 className="font-bold text-sm text-gray-700 mb-2">Policy Compliance Assessment</h4>
+                    <h4 className="font-soehneKraftig text-sm text-gray-700 mb-2">Policy Compliance Assessment</h4>
                     <ul className="space-y-2">
                       <li className="flex items-center">
                         <span className="text-green-500 mr-2">✓</span>
@@ -444,7 +424,7 @@ export default function DashboardPage() {
                 </div>
                 
                 <div className="mt-6 pt-6 border-t">
-                  <h4 className="font-bold text-sm text-gray-700 mb-2">Management Plan Requirements</h4>
+                  <h4 className="font-soehneKraftig text-sm text-gray-700 mb-2">Management Plan Requirements</h4>
                   <ol className="list-decimal list-inside space-y-1 text-sm text-gray-600">
                     <li>Recusal from all purchasing decisions related to cardiovascular equipment and supplies</li>
                     <li>Cannot participate in vendor selection committees for cardiology services</li>

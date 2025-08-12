@@ -9,28 +9,28 @@ export default {
   theme: {
     extend: {
       colors: {
-        // Conflixis Brand Colors
+        // Conflixis Brand Colors - matching original HTML exactly
         'conflixis-green': '#0c343a',
         'conflixis-light-green': '#93baab',
         'conflixis-white': '#ffffff',
         'conflixis-gray': '#d1d5db',
-        'conflixis-tan': '#f5e6d3',
-        'conflixis-ivory': '#f9f7f4',
+        'conflixis-gray-hover': '#b9bec4',
+        'conflixis-ivory': '#f8f5ef',
+        'conflixis-tan': '#c5bdae',
+        'conflixis-mint': '#93baab',
         'conflixis-gold': '#eab96d',
         'conflixis-blue': '#4c94ed',
-        'conflixis-navy': '#1e3a5f',
-        'conflixis-mint': '#34d399',
-        'conflixis-red': '#dc2626',
-        'conflixis-success-green': '#10b981',
+        'conflixis-red': '#fd7649',
+        'conflixis-success-green': '#008000',
         
         // Background colors
         background: "var(--background)",
         foreground: "var(--foreground)",
       },
       fontFamily: {
-        'soehneKraftig': ['Soehne Kraftig', 'sans-serif'],
-        'soehneLeicht': ['Soehne Leicht', 'sans-serif'],
-        'ivarDisplay': ['Ivar Display', 'serif'],
+        'soehneKraftig': ['SoehneKraftig', 'sans-serif'],
+        'soehneLeicht': ['SoehneLeicht', 'sans-serif'],
+        'ivarDisplay': ['IvarDisplay', 'serif'],
       },
       animation: {
         'fade-in': 'fadeIn 0.3s ease-out',
