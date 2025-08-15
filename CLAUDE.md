@@ -112,3 +112,5 @@ When creating ANY user interface, webpage, or visual content, you MUST use the C
 - Firestore downloads use collection group queries for sharded collections
 - Snowflake transfers require proper GCS bucket and storage integration setup
 - **ALWAYS use the Conflixis Design System for ANY UI development**
+
+- Never run multiple development servers, always restart the current one

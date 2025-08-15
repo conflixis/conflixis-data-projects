@@ -1,0 +1,279 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Name Matching Test Report - FUZZY</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; background: #f5f5f5; }
+        .header { background: #2c3e50; color: white; padding: 20px; border-radius: 5px; }
+        .container { max-width: 1200px; margin: 0 auto; }
+        .metric-card { background: white; padding: 20px; margin: 10px 0; border-radius: 5px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+        .metric-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; }
+        .metric-box { background: #ecf0f1; padding: 15px; border-radius: 5px; text-align: center; }
+        .metric-value { font-size: 2em; font-weight: bold; color: #2c3e50; }
+        .metric-label { color: #7f8c8d; margin-top: 5px; }
+        table { width: 100%; border-collapse: collapse; margin: 20px 0; }
+        th, td { padding: 10px; text-align: left; border-bottom: 1px solid #ddd; }
+        th { background: #34495e; color: white; }
+        tr:hover { background: #f5f5f5; }
+        .good { color: #27ae60; font-weight: bold; }
+        .bad { color: #e74c3c; font-weight: bold; }
+        .warning { color: #f39c12; font-weight: bold; }
+        .confusion-matrix { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; max-width: 400px; }
+        .cm-cell { padding: 10px; text-align: center; background: #ecf0f1; border-radius: 3px; }
+        .cm-header { font-weight: bold; background: #34495e; color: white; }
+        .edge-case { background: #fff3cd; padding: 10px; margin: 5px 0; border-radius: 3px; border-left: 4px solid #f39c12; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Name Matching Test Report Card</h1>
+            <p>Algorithm: FUZZY | Generated: 2025-08-15 10:17:41</p>
+            <p>Test File: test_results_fuzzy_latest.csv</p>
+        </div>
+        
+        <div class="metric-card">
+            <h2>Overall Performance</h2>
+            <div class="metric-grid">
+                <div class="metric-box">
+                    <div class="metric-value warning">84.7%</div>
+                    <div class="metric-label">Accuracy</div>
+                </div>
+                <div class="metric-box">
+                    <div class="metric-value">100.0%</div>
+                    <div class="metric-label">Precision</div>
+                </div>
+                <div class="metric-box">
+                    <div class="metric-value">61.8%</div>
+                    <div class="metric-label">Recall</div>
+                </div>
+                <div class="metric-box">
+                    <div class="metric-value">76.4</div>
+                    <div class="metric-label">F1 Score</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="metric-card">
+            <h2>Confusion Matrix</h2>
+            <div style="display: flex; align-items: center; gap: 30px;">
+                <div class="confusion-matrix">
+                    <div class="cm-cell cm-header"></div>
+                    <div class="cm-cell cm-header">Pred: TRUE</div>
+                    <div class="cm-cell cm-header">Pred: FALSE</div>
+                    <div class="cm-cell cm-header">Act: TRUE</div>
+                    <div class="cm-cell" style="background: #d4edda;">247</div>
+                    <div class="cm-cell" style="background: #f8d7da;">153</div>
+                    <div class="cm-cell cm-header">Act: FALSE</div>
+                    <div class="cm-cell" style="background: #f8d7da;">0</div>
+                    <div class="cm-cell" style="background: #d4edda;">600</div>
+                </div>
+                <div>
+                    <p><strong>False Positive Rate:</strong> 0.0%</p>
+                    <p><strong>False Negative Rate:</strong> 38.2%</p>
+                    <p><strong>Matthews Correlation:</strong> 0.701</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="metric-card">
+            <h2>Performance by Variant Type</h2>
+            <table>
+                <tr>
+                    <th>Variant Type</th>
+                    <th>Count</th>
+                    <th>Accuracy</th>
+                    <th>Avg Confidence</th>
+                    <th>TP</th>
+                    <th>FP</th>
+                    <th>TN</th>
+                    <th>FN</th>
+                </tr>
+
+                <tr>
+                    <td>similar_different</td>
+                    <td>300</td>
+                    <td class="good">100.0%</td>
+                    <td>40.2</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>300</td>
+                    <td>0</td>
+                </tr>
+
+                <tr>
+                    <td>completely_different</td>
+                    <td>300</td>
+                    <td class="good">100.0%</td>
+                    <td>27.8</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>300</td>
+                    <td>0</td>
+                </tr>
+
+                <tr>
+                    <td>case</td>
+                    <td>67</td>
+                    <td class="good">100.0%</td>
+                    <td>100.0</td>
+                    <td>67</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                </tr>
+
+                <tr>
+                    <td>word_order</td>
+                    <td>62</td>
+                    <td class="good">96.8%</td>
+                    <td>98.2</td>
+                    <td>60</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>2</td>
+                </tr>
+
+                <tr>
+                    <td>abbreviation</td>
+                    <td>47</td>
+                    <td class="warning">89.4%</td>
+                    <td>96.5</td>
+                    <td>42</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>5</td>
+                </tr>
+
+                <tr>
+                    <td>combined</td>
+                    <td>59</td>
+                    <td class="bad">54.2%</td>
+                    <td>83.6</td>
+                    <td>32</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>27</td>
+                </tr>
+
+                <tr>
+                    <td>punctuation</td>
+                    <td>53</td>
+                    <td class="bad">45.3%</td>
+                    <td>81.4</td>
+                    <td>24</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>29</td>
+                </tr>
+
+                <tr>
+                    <td>extra_words</td>
+                    <td>62</td>
+                    <td class="bad">33.9%</td>
+                    <td>72.8</td>
+                    <td>21</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>41</td>
+                </tr>
+
+                <tr>
+                    <td>typo</td>
+                    <td>50</td>
+                    <td class="bad">2.0%</td>
+                    <td>68.3</td>
+                    <td>1</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>49</td>
+                </tr>
+
+            </table>
+        </div>
+        
+        <div class="metric-card">
+            <h2>Confidence Score Analysis</h2>
+            <div class="metric-grid">
+                <div class="metric-box">
+                    <div class="metric-value">40.1</div>
+                    <div class="metric-label">Mean (Correct)</div>
+                </div>
+                <div class="metric-box">
+                    <div class="metric-value">100.0</div>
+                    <div class="metric-label">Mean (Incorrect)</div>
+                </div>
+                <div class="metric-box">
+                    <div class="metric-value">61.8%</div>
+                    <div class="metric-label">True Matches Caught</div>
+                </div>
+                <div class="metric-box">
+                    <div class="metric-value">100.0%</div>
+                    <div class="metric-label">False Matches Rejected</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="metric-card">
+            <h2>Edge Cases for Review</h2>
+            <h3>High Confidence Errors (Should Review Algorithm)</h3>
+
+            <div class="edge-case">
+                <strong>MicroAire Surgical Instruments LLC</strong> vs <strong>MicroAire Surgical Instruments LLC</strong><br>
+                Confidence: 100.0 | Expected: TRUE | Predicted: TRUE
+            </div>
+
+            <div class="edge-case">
+                <strong>Leadiant Biosciences, Inc.</strong> vs <strong>Leadiant Biosciences, Inc.</strong><br>
+                Confidence: 100.0 | Expected: TRUE | Predicted: TRUE
+            </div>
+
+            <div class="edge-case">
+                <strong>Collagen Matrix, Inc</strong> vs <strong>Collagen Matrix, Inc</strong><br>
+                Confidence: 100.0 | Expected: TRUE | Predicted: TRUE
+            </div>
+
+            <div class="edge-case">
+                <strong>Spinal Simplicity, Llc</strong> vs <strong>Spinal Simplicity, LLC</strong><br>
+                Confidence: 100.0 | Expected: TRUE | Predicted: TRUE
+            </div>
+
+            <div class="edge-case">
+                <strong>Saluda Medical Americas, Inc.</strong> vs <strong>Saluda Medical Americas, Inc.</strong><br>
+                Confidence: 100.0 | Expected: TRUE | Predicted: TRUE
+            </div>
+
+            <h3>Low Confidence but Correct (Potential for Improvement)</h3>
+
+            <div class="edge-case">
+                <strong>Dental Health Products, Inc.</strong> vs <strong>CG&B, LLC</strong><br>
+                Confidence: 5.4 | Expected: FALSE | Predicted: FALSE
+            </div>
+
+            <div class="edge-case">
+                <strong>Veryan Medical Incorporated</strong> vs <strong>Qfix</strong><br>
+                Confidence: 6.9 | Expected: FALSE | Predicted: FALSE
+            </div>
+
+            <div class="edge-case">
+                <strong>Chitogel Limited</strong> vs <strong>Sparca Ltd</strong><br>
+                Confidence: 8.6 | Expected: FALSE | Predicted: FALSE
+            </div>
+
+            <div class="edge-case">
+                <strong>Janssen Pharmaceuticals, Inc</strong> vs <strong>Myomo, Inc</strong><br>
+                Confidence: 11.1 | Expected: FALSE | Predicted: FALSE
+            </div>
+
+            <div class="edge-case">
+                <strong>Lundbeck LLC</strong> vs <strong>FORTE BIO-PHARMA LLC</strong><br>
+                Confidence: 11.3 | Expected: FALSE | Predicted: FALSE
+            </div>
+
+        </div>
+    </div>
+</body>
+</html>
