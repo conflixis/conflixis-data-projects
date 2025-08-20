@@ -175,32 +175,21 @@ The complete dataset reveals the following aggregate patterns across all manufac
 **Key insight:** The sweet spot appears to be $501-5,000 payments, where attribution rates jump dramatically. Payments below $500 show minimal impact, while payments above $5,000 show diminishing returns despite high attribution rates.
 
 ### Example 3: Geographic Concentration and Organic Prescribers
-**Finding:** California generates the highest total attributable revenue ($1.69M) despite having the lowest average payment per provider ($2.75), while 14,574 providers prescribe >10,000 AbbVie products annually without receiving any payments.
+**Finding:** California generates the highest total attributable revenue ($128.4M), while 187,005 providers prescribe >$10,000 annually without receiving any payments.
 
 **Top 5 states by total impact:**
-1. California: $1.69M total impact, $2.75 avg payment
-2. New York: $1.25M total impact, $5.63 avg payment  
-3. Illinois: $935K total impact, $4.43 avg payment
-4. Texas: $764K total impact, $2.86 avg payment
-5. Kentucky: $611K total impact, $4.23 avg payment
+1. California: $128.4M total impact, $136.59 avg payment
+2. Texas: $105.0M total impact, $94.50 avg payment  
+3. Michigan: $85.7M total impact, $88.68 avg payment
+4. New York: $85.3M total impact, $124.43 avg payment
+5. Florida: $73.3M total impact, $93.46 avg payment
 
-**Organic high prescribers:** 14,574 provider observations show >10,000 prescriptions (avg: 32,536) with zero payments, suggesting strong brand loyalty or clinical preference independent of marketing efforts.
+**Organic high prescribers:** 187,005 providers prescribe >$10,000 annually (avg: $23,669) with zero payments, suggesting strong brand loyalty or clinical preference independent of marketing efforts.
 
 **Key insight:** California and Texas achieve high total impact through volume (many providers, small payments), while states like Kentucky achieve impact through higher per-provider investments. The existence of high-volume organic prescribers suggests that factors beyond payments (formulary placement, clinical guidelines, patient demographics) play a significant role in prescribing patterns.
 
 ### Example 4: Counterfactual Analysis - The True Intervention Effect
-**Finding:** Payment interventions increase prescriptions by 14.1% on average, but high-value interventions can boost prescriptions by nearly 600%.
-
-**Overall intervention effect (128,360 payment observations):**
-- **Predicted prescriptions WITH payment:** 329 prescriptions
-- **Predicted prescriptions WITHOUT payment (counterfactual):** 288 prescriptions  
-- **Average lift:** 41 prescriptions (14.1% increase)
-
-**High-impact interventions (259 cases with >1,000 prescription lift):**
-- **Average payment:** $4,630
-- **Predicted WITH intervention:** 21,417 prescriptions
-- **Predicted WITHOUT intervention:** 3,133 prescriptions
-- **Average lift:** 18,285 prescriptions (583.6% increase)
+**Note:** The counterfactual prediction columns (pred_rx, pred_rx_cf, delta_rx) in the BigQuery table show data quality issues with unrealistic values that require recalculation. The attribution metrics (attributable_dollars, attributable_pct) and overall ROI calculations remain valid.
 
 **ROI Distribution:**
 - Median ROI: 0.1x (most payments don't fully pay for themselves)
