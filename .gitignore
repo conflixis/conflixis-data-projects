@@ -60,12 +60,14 @@ build/
 /projects/011-disclosure-policy-review/*.csv
 /projects/011-disclosure-policy-review/**/*.csv
 
+# Name matching test data and results
+/projects/005-core-name-matching-test/test_data/*.csv
+
 # Temporary data files
 *.tmp
 *.cache
 *.pkl
 *.parquet
-
 # RX-OP Enhanced project data files
 /projects/012-rx-op-enhanced/mfg-spec-data/
 /projects/012-rx-op-enhanced/mfg-spec-data/*.rds

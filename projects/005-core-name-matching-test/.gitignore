@@ -1,0 +1,95 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+venv/
+env/
+ENV/
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Environment
+.env
+.env.local
+.env.*.local
+*.env
+
+# Test Data - Selectively ignore
+# Keep test input datasets for reproducibility
+!test-data/test-data-inputs/*.csv
+!test-data/test-data-inputs/*.xlsx
+
+# Ignore test results (can be regenerated)
+test-data/test-results/*.csv
+test-data/test-results/*.json
+test-data/test-results/*.xlsx
+
+# Ignore logs
+test-data/**/*.log
+
+# Keep structure and documentation
+!test-data/README.md
+!test-data/reports/*.html
+
+# Data files
+data/*.csv
+data/*.xlsx
+data/*.json
+!data/.gitkeep
+
+# Results - Keep structure but not data
+results/
+output/
+*.log
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Jupyter
+.ipynb_checkpoints/
+*.ipynb
+
+# Config with sensitive data
+config.yaml.local
+config.local.yaml
+*_credentials.yaml
+
+# Archive - optional, can be committed for reference
+# archive/
+
+# Reports - Keep HTML reports for documentation
+# test-data/reports/*.html
+
+# Node modules (for PR1362 TypeScript reference)
+node_modules/
+npm-debug.log
+yarn-error.log
+
+# Coverage
+coverage/
+*.lcov
+.nyc_output/
+
+# OS
+Thumbs.db
+Desktop.ini

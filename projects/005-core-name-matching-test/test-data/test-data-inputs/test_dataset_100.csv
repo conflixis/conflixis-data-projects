@@ -1,0 +1,101 @@
+reference_id,reference_name,variant_name,expected_match,variant_type
+100001161890,"TRUVIC MEDICAL, INC.",TRUABUTMENT INC.,FALSE,similar_different
+100000081402,Sonendo Inc,Sonedno Inc,TRUE,typo
+100000005550,ViiV Healthcare Company,SUN PHARMACEUTICAL INDUSTRIES INC.,FALSE,completely_different
+100000005662,MicroAire Surgical Instruments LLC,MicroAire Surgical Instruments LLC,TRUE,word_order
+100000316817,Venclose Inc.,Venclose nc.,TRUE,typo
+100000316826,"EyePoint Pharmaceuticals US, Inc.",Health Beacons Inc.,FALSE,completely_different
+100000191755,Carl Zeiss Meditec Digital Innovations LLC,"Osseus Fusion Systems, LLC",FALSE,completely_different
+100000136371,"AUGMENIX, INC.",Olympus Corporation,FALSE,similar_different
+100000191763,KINEX MEDICAL COMPANY LLC,"Cosmedent, Inc.",FALSE,similar_different
+100000011182,"Leadiant Biosciences, Inc.","Leadiant Biosciences, Inc.",TRUE,word_order
+100000506823,"QT Imaging, Inc.","Saxum Surgical, Inc.",FALSE,similar_different
+100000011087,"Veran Medical Technologies, Inc.",Veran Medical Technologies Inc,TRUE,punctuation
+100000011182,"Leadiant Biosciences, Inc.",Organon LLC,FALSE,completely_different
+100000476817,"Paratek Pharmaceuticals, Inc.","Paratek Pharmas, Inc.",TRUE,abbreviation
+100000591811,International Life Sciences,"Entellus Medical, Inc.",FALSE,completely_different
+100001161889,ZIMVIE INC.,"Agiliti Health, Inc.",FALSE,similar_different
+100000011145,"Collagen Matrix, Inc","Collagen Matrix, Inc",TRUE,abbreviation
+100000486817,"CathWorks, Inc.","Vertiflex, Inc.",FALSE,completely_different
+100000136573,"Spinal Simplicity, LLC","Spinal Simplicity, Llc",TRUE,case
+100000521820,Curetis USA Inc.,"CurvaFix, Inc.",FALSE,similar_different
+100000151582,"Saluda Medical Americas, Inc.","Saluda Medical Americas, Inc.",TRUE,word_order
+100000221803,"BioSig Technologies, Inc.",BioHorizons Implant Systems Inc.,FALSE,similar_different
+100000971857,Novocure GmbH,Global Novocure GmbH,TRUE,extra_words
+100000826854,"Micromedics, Inc.",MicroPort NaviBot International LLC,FALSE,similar_different
+100000010895,"Endocare, Inc.","ITI, Inc.",FALSE,completely_different
+100000000071,Benco Dental Supply Co.,BENCO DENTAL SUPPLY co.,TRUE,combined
+100000971875,"Paragonix Technologies, Inc.","Parsolex GMP Center, Inc.",FALSE,similar_different
+100000596811,"Foundation Consumer Healthcare, LLC","Foundation Medical, LLC",FALSE,similar_different
+100000081391,Myotronics Noromed Inc,"Epizyme, Inc.,",FALSE,completely_different
+100000011063,Elekta Limited,Elevate Oral Care,FALSE,similar_different
+100000000191,"Koven Technology, Inc.","Koven Technologiesnology, Inc.",FALSE,similar_different
+100000806850,"Axonics Modulation Technologies, Inc.",Axonics Modulation Technologies Inc,TRUE,punctuation
+100000651811,"LKC Technologies, Inc.","Trumpf Medical Systems, Inc.",FALSE,completely_different
+100000291810,PROCEPT BioRobotics Corporation,"PROSIDYAN, INC",FALSE,similar_different
+100000966846,Field Orthopaedics Pty Ltd,Kaneka Medical America LLC,FALSE,similar_different
+100000061378,"Ziehm Imaging, Inc.",Ziemer USA,FALSE,similar_different
+100000221801,"Ingeniumspine, LLC","Ingeniumspine, Llc",TRUE,case
+100000636813,RRR Sports LLC,RRR Sports LC,TRUE,typo
+100000826825,Pharmaceutical Business Consultants Limited,"Additive Implants, Inc.",FALSE,completely_different
+100000000260,"Agiliti Health, Inc.",Agiliti Health Inc,TRUE,punctuation
+100000506814,"MIS Technologies, LLC","Intuitive Surgical, Inc.",FALSE,completely_different
+100000000058,Novartis Pharma AG,SANOFI US SERVICES INC.,FALSE,completely_different
+100000061369,IBSA Institut Biochimique SA,VERTEX PHARMACEUTICALS INCORPORATED,FALSE,completely_different
+100000786825,CLOZEX MEDICAL INC,CLOZEX MEDICAL INC,TRUE,word_order
+100000151619,SPINEART SA,Spineology Inc.,FALSE,completely_different
+100000005405,Alcon Laboratories Inc,Nucletron B.V.,FALSE,completely_different
+100000005685,Septodont Inc.,"GM Pharmaceuticals, Inc.",FALSE,similar_different
+100000010854,Draegerwerk AG & Co. KGaA,North American Draegerwerk AG & Co. KGaA,TRUE,extra_words
+100000196863,"Acella Pharmaceuticals, LLC","acella pharmaceuticals, llc",TRUE,case
+100000000135,Pacira Pharmaceuticals Incorporated,"Aurobindo Pharma USA, Inc.",FALSE,completely_different
+100000381810,"Amicus Therapeutics, Inc.","Amicus Therpaeutics, Inc.",TRUE,typo
+100000011062,"SONOCINE, INC.","SONOCINE, INC.",TRUE,extra_words
+100000000234,"Boehringer Ingelheim Pharmaceuticals, Inc.",Boehringer Ingelheim Pharms Inc,TRUE,combined
+100000231809,"Ivantis, Inc","ivantis, inc",TRUE,case
+100000246815,"LIFESCAN, INC.",ApiFix Ltd.,FALSE,completely_different
+100000231817,"Hologic, LLC","Hologic, LC",TRUE,typo
+100000151722,Nuvectra Corporation,"Sprout Pharmaceuticals, Inc.",FALSE,similar_different
+100000061385,B. Braun Melsungen AG,B. Braun Miethke GmbH & Co. KG,FALSE,similar_different
+100000151579,"Agilent Technologies, Inc.","Agilent Technology, Inc.",TRUE,abbreviation
+100000046291,"Microsurgical Technology, Inc.","MicroVention, Inc.",FALSE,similar_different
+100000005588,"Hu-Friedy Mfg. Co., LLC","Hu-Friedy Mfg. Co., LLC",TRUE,abbreviation
+100000321813,"PracticeWell Pro Inc, dba The PBG","Prasco, LLC",FALSE,similar_different
+100000005430,"KARL STORZ Lithotripsy-America, Inc.","KARL STORZ Lithotripsy-America, .",TRUE,extra_words
+100000061293,"Trumpf Medical Systems, Inc.",True North Surgical Inc,FALSE,similar_different
+100000010573,Avinger Inc.,avinger inc.,TRUE,case
+100000010639,Maillefer Instruments Holding Sarl,Maillefer Instruments Holding Sarl,TRUE,extra_words
+100000826838,DeVoro Medical Inc.,DeVoro Medicine Inc.,FALSE,similar_different
+100000136461,PT Boehringer Ingelheim Indonesia,PT Boehringer Ingelheim Indonesia,TRUE,abbreviation
+100000806845,"Adagio Medical, Inc.","Adagio Medical, IInc.",TRUE,typo
+100000191770,"Aziyo Biologics, Inc.",Field Orthopaedics Pty Ltd,FALSE,similar_different
+100000000260,"Agiliti Health, Inc.","Agiliti Healh, Inc.",TRUE,typo
+100001146887,Thea Pharma Inc.,The Progressive Orthopaedics Company,FALSE,similar_different
+100000136579,"Amnio Technology, LLC","America Amnio Technology, LLC",TRUE,extra_words
+100000291839,"CapsoVision, Inc.",Boehringer Ingelheim Taiwan Ltd.,FALSE,completely_different
+100000136464,Laborie Medical Technologies Corp.,"Illumina, Inc.",FALSE,completely_different
+100000971887,Kedplasma LLC,kedplasma llc,TRUE,combined
+100000010470,"SportsTek Medical, Inc","SportsTek Med, Inc",TRUE,abbreviation
+100000971878,MorphoSys AG,McKesson Plasma and Biologics LLC,FALSE,completely_different
+100000005637,JAZZ PHARMACEUTICALS INC.,JAZZ PHARMACEUTICALS INC.,TRUE,punctuation
+100001176932,"Synergy Biomedical, LLC","US Synergy Biomedical, LLC",TRUE,extra_words
+100000196836,BUXTON BIOMEDICAL,Global BUXTON BIOMEDICAL,TRUE,extra_words
+100000010671,Olympus Winter & Ibe GmbH,Olympus Winter & Ibe GmbH,TRUE,combined
+100000196813,"Alafair Biosciences, Inc.","alafair biosciences, inc.",TRUE,case
+100000011193,"Pierre Fabre Pharmaceuticals, Inc.",Piedmont Plus Innovation,FALSE,similar_different
+100000005427,Roche Health Solutions Inc.,ROCHE HEALTH SOLUTIONS INC.,TRUE,combined
+100000000166,"Roche TCRC, Inc.",Roche Diabetes Care GmbH,FALSE,similar_different
+100000010374,Perrigo Company plc,Persion Pharmaceuticals LLC,FALSE,similar_different
+100000136557,"Neos Therapeutics, LP",Neos Therapeutics LP,TRUE,punctuation
+100000806858,"Manual Surgical Sciences, LLC","MANUAL SURGICAL SCIENCES, LLC",TRUE,case
+100000786821,"Calyxo, Inc.","Calvary Spine Products, LLC",FALSE,similar_different
+100000321809,"Evolution Spine, LLC","Evolution Spine, LLC",TRUE,word_order
+100000010724,"Getinge USA Sales, LLC","Antares Pharma, Inc.",FALSE,completely_different
+100000226825,"restor3d, inc.",restor3d inc.,TRUE,punctuation
+100000011074,Emergent BioSolutions Inc.,EMERGENT BIOSOLUTIONS INC.,TRUE,combined
+100000010777,UCB GmBH,UCB GmBH,TRUE,word_order
+100001176907,FlexDex Inc.,"Accutron, Inc.",FALSE,completely_different
+100000136530,Quandary Medical LLC,"Otsuka Pharmaceutical Co., Ltd.",FALSE,completely_different
+100000791821,Intrinsic Therapeutics,Intrinsic Therapeutics,TRUE,word_order
+100000151701,Dutch Ophthalmic Research Center (International) B.V.,dutch OPHTHALMIC research CENTER (INTERNATIONAL) b.v.,TRUE,case
+100000000317,GENETICS INSTITUTE LLC,GENETICS INSTITUTE L.L.C,TRUE,punctuation

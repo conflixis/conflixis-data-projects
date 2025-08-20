@@ -1,0 +1,912 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conflixis Name Matching Test Comparison</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Configure Tailwind with Conflixis colors and fonts -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'conflixis-green': '#0c343a',
+                        'conflixis-light-green': '#93baab',
+                        'conflixis-white': '#ffffff',
+                        'conflixis-gray': '#d1d5db',
+                        'conflixis-gray-hover': '#b9bec4',
+                        'conflixis-ivory': '#f8f5ef',
+                        'conflixis-tan': '#c5bdae',
+                        'conflixis-mint': '#93baab',
+                        'conflixis-gold': '#eab96d',
+                        'conflixis-blue': '#4c94ed',
+                        'conflixis-red': '#fd7649',
+                        'conflixis-success-green': '#008000FF',
+                    },
+                    fontFamily: {
+                        'soehneLeicht': ['SoehneLeicht', 'Inter', 'system-ui', 'sans-serif'],
+                        'soehneKraftig': ['SoehneKraftig', 'Inter', 'system-ui', 'sans-serif'],
+                        'ivarDisplay': ['IvarDisplay', 'Playfair Display', 'Georgia', 'serif']
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <style>
+        /* Font Face Declarations */
+        /* Note: If fonts don't load when opening file directly, fonts will fallback to system fonts */
+        @font-face {
+            font-family: 'SoehneLeicht';
+            src: url('../../docs/design-system/conflixis-design-system/assets/fonts/soehne-leicht.woff2') format('woff2');
+            font-weight: 300;
+            font-style: normal;
+            font-display: swap;
+        }
+        
+        @font-face {
+            font-family: 'SoehneKraftig';
+            src: url('../../docs/design-system/conflixis-design-system/assets/fonts/soehne-kraftig.woff2') format('woff2');
+            font-weight: 700;
+            font-style: normal;
+            font-display: swap;
+        }
+        
+        @font-face {
+            font-family: 'IvarDisplay';
+            src: url('../../docs/design-system/conflixis-design-system/assets/fonts/IvarDisplay-Regular.woff2') format('woff2');
+            font-weight: 400;
+            font-style: normal;
+            font-display: swap;
+        }
+        
+        @font-face {
+            font-family: 'IvarDisplay';
+            src: url('../../docs/design-system/conflixis-design-system/assets/fonts/IvarDisplay-Italic.woff2') format('woff2');
+            font-weight: 400;
+            font-style: italic;
+            font-display: swap;
+        }
+        
+        /* Import Google Fonts as fallback for better typography */
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;700&family=Playfair+Display&display=swap');
+        
+        /* Base styles */
+        body {
+            font-family: 'SoehneLeicht', system-ui, -apple-system, sans-serif;
+            background-color: #f8f5ef;
+            color: #0c343a;
+            line-height: 1.6;
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'IvarDisplay', Georgia, serif;
+            font-weight: 400;
+            color: #0c343a;
+        }
+        
+        /* Conflixis Component Styles */
+        .btn-conflixis-primary {
+            background: #0c343a;
+            color: white;
+            font-family: 'SoehneKraftig', system-ui, sans-serif;
+            font-weight: 700;
+            padding: 12px 24px;
+            border-radius: 8px;
+            transition: all 0.2s;
+            box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+        }
+        
+        .btn-conflixis-primary:hover {
+            background: rgba(12, 52, 58, 0.9);
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        
+        .btn-conflixis-gold {
+            background: #eab96d;
+            color: #0c343a;
+            font-family: 'SoehneKraftig', system-ui, sans-serif;
+            font-weight: 700;
+            padding: 12px 24px;
+            border-radius: 8px;
+            transition: all 0.2s;
+            box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+        }
+        
+        .btn-conflixis-gold:hover {
+            background: rgba(234, 185, 109, 0.9);
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        
+        .card-conflixis {
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+            padding: 24px;
+            transition: box-shadow 0.2s;
+        }
+        
+        .card-conflixis:hover {
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        
+        .badge-conflixis {
+            display: inline-flex;
+            align-items: center;
+            padding: 4px 12px;
+            border-radius: 9999px;
+            font-size: 0.75rem;
+            font-family: 'SoehneKraftig', system-ui, sans-serif;
+            font-weight: 700;
+        }
+        
+        /* Conflixis Animations */
+        @keyframes wave-1 {
+            0%, 100% { transform: scaleY(1); }
+            50% { transform: scaleY(0.5); }
+        }
+        @keyframes wave-2 {
+            0%, 100% { transform: scaleY(1); }
+            50% { transform: scaleY(0.5); }
+        }
+        @keyframes wave-3 {
+            0%, 100% { transform: scaleY(1); }
+            50% { transform: scaleY(0.5); }
+        }
+        @keyframes wave-4 {
+            0%, 100% { transform: scaleY(1); }
+            50% { transform: scaleY(0.5); }
+        }
+        @keyframes wave-5 {
+            0%, 100% { transform: scaleY(1); }
+            50% { transform: scaleY(0.5); }
+        }
+        @keyframes fade-in {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes pulse-slow {
+            0%, 100% { opacity: 1; transform: scale(1); }
+            50% { opacity: 0.8; transform: scale(0.98); }
+        }
+        
+        .animate-wave-1 { animation: wave-1 1s ease-in-out infinite; }
+        .animate-wave-2 { animation: wave-2 1s ease-in-out 0.1s infinite; }
+        .animate-wave-3 { animation: wave-3 1s ease-in-out 0.2s infinite; }
+        .animate-wave-4 { animation: wave-4 1s ease-in-out 0.3s infinite; }
+        .animate-wave-5 { animation: wave-5 1s ease-in-out 0.4s infinite; }
+        .animate-fade-in { animation: fade-in 0.5s ease-out; }
+        .animate-pulse-slow { animation: pulse-slow 3s ease-in-out infinite; }
+        
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #93baab;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #0c343a;
+        }
+        
+        /* File input styling */
+        input[type="file"]::file-selector-button {
+            background: #93baab;
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: all 0.3s;
+            margin-right: 12px;
+        }
+        
+        input[type="file"]::file-selector-button:hover {
+            background: #0c343a;
+        }
+        
+        .file-input-group.loaded input[type="file"] {
+            border-color: #008000FF;
+            background: #f0fdf4;
+        }
+        
+        /* Chart colors */
+        .test-1 { background: #0c343a !important; }
+        .test-2 { background: #4c94ed !important; }
+        .test-3 { background: #eab96d !important; }
+        .test-4 { background: #93baab !important; }
+        .test-5 { background: #fd7649 !important; }
+    </style>
+</head>
+<body class="bg-conflixis-ivory font-soehneLeicht">
+    <!-- Header Section -->
+    <div class="bg-conflixis-green text-white">
+        <div class="container mx-auto px-6 py-8">
+            <div class="flex items-center justify-between">
+                <div>
+                    <h1 class="text-4xl font-ivarDisplay mb-2">Name Matching Test Comparison</h1>
+                    <p class="text-conflixis-mint text-lg font-soehneLeicht">Compare algorithm performance across multiple test runs</p>
+                </div>
+                <div class="flex items-center space-x-2">
+                    <div class="h-12 w-12 bg-white rounded-lg flex items-center justify-center">
+                        <span class="text-conflixis-green font-soehneKraftig text-2xl">C</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Wave Animation -->
+    <div class="bg-conflixis-green pb-8">
+        <div class="flex justify-center space-x-2">
+            <div class="w-2 h-16 bg-conflixis-gold rounded animate-wave-1"></div>
+            <div class="w-2 h-16 bg-conflixis-gold rounded animate-wave-2"></div>
+            <div class="w-2 h-16 bg-conflixis-gold rounded animate-wave-3"></div>
+            <div class="w-2 h-16 bg-conflixis-gold rounded animate-wave-4"></div>
+            <div class="w-2 h-16 bg-conflixis-gold rounded animate-wave-5"></div>
+        </div>
+    </div>
+    
+    <!-- File Loader Section -->
+    <div class="bg-white border-b border-conflixis-gray">
+        <div class="container mx-auto px-6 py-8">
+            <div class="mb-6">
+                <h2 class="text-2xl font-ivarDisplay text-conflixis-green mb-2">Load Test Results</h2>
+                <p class="text-gray-600 font-soehneLeicht">Select up to 5 test result CSV files to compare</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-4 mb-6">
+                <div class="file-input-group" id="test-1-group">
+                    <label class="block text-sm font-soehneKraftig text-conflixis-green mb-2">
+                        Test 1 <span class="text-conflixis-red">*</span>
+                    </label>
+                    <input type="file" 
+                           id="test-1" 
+                           accept=".csv" 
+                           onchange="loadFile(1)"
+                           class="w-full p-3 border-2 border-dashed border-conflixis-mint rounded-lg hover:border-conflixis-green transition-colors">
+                </div>
+                
+                <div class="file-input-group" id="test-2-group">
+                    <label class="block text-sm font-soehneKraftig text-conflixis-blue mb-2">Test 2</label>
+                    <input type="file" 
+                           id="test-2" 
+                           accept=".csv" 
+                           onchange="loadFile(2)"
+                           class="w-full p-3 border-2 border-dashed border-conflixis-mint rounded-lg hover:border-conflixis-green transition-colors">
+                </div>
+                
+                <div class="file-input-group" id="test-3-group">
+                    <label class="block text-sm font-soehneKraftig text-conflixis-gold mb-2">Test 3</label>
+                    <input type="file" 
+                           id="test-3" 
+                           accept=".csv" 
+                           onchange="loadFile(3)"
+                           class="w-full p-3 border-2 border-dashed border-conflixis-mint rounded-lg hover:border-conflixis-green transition-colors">
+                </div>
+                
+                <div class="file-input-group" id="test-4-group">
+                    <label class="block text-sm font-soehneKraftig text-conflixis-mint mb-2">Test 4</label>
+                    <input type="file" 
+                           id="test-4" 
+                           accept=".csv" 
+                           onchange="loadFile(4)"
+                           class="w-full p-3 border-2 border-dashed border-conflixis-mint rounded-lg hover:border-conflixis-green transition-colors">
+                </div>
+                
+                <div class="file-input-group" id="test-5-group">
+                    <label class="block text-sm font-soehneKraftig text-conflixis-red mb-2">Test 5</label>
+                    <input type="file" 
+                           id="test-5" 
+                           accept=".csv" 
+                           onchange="loadFile(5)"
+                           class="w-full p-3 border-2 border-dashed border-conflixis-mint rounded-lg hover:border-conflixis-green transition-colors">
+                </div>
+            </div>
+            
+            <div class="text-center">
+                <button id="analyze-btn" 
+                        onclick="analyzeTests()" 
+                        disabled
+                        class="btn-conflixis-gold disabled:opacity-50 disabled:cursor-not-allowed transition-all transform hover:scale-105">
+                    Load at least one test result to begin
+                </button>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Results Content -->
+    <div class="hidden animate-fade-in" id="content">
+        <div class="container mx-auto px-6 py-8">
+            
+            <!-- Overall Performance Section -->
+            <div class="mb-12">
+                <div class="card-conflixis">
+                    <h2 class="text-2xl font-ivarDisplay text-conflixis-green mb-6 border-b-2 border-conflixis-gold pb-2">
+                        📊 Overall Performance Comparison
+                    </h2>
+                    <div class="overflow-x-auto">
+                        <table class="w-full">
+                            <thead class="bg-conflixis-green text-white">
+                                <tr id="metrics-table-header">
+                                    <th class="px-4 py-3 text-left">Algorithm</th>
+                                    <th class="px-4 py-3 text-center">Accuracy</th>
+                                    <th class="px-4 py-3 text-center">Precision</th>
+                                    <th class="px-4 py-3 text-center">Recall</th>
+                                    <th class="px-4 py-3 text-center">F1 Score</th>
+                                    <th class="px-4 py-3 text-center">False Positives</th>
+                                    <th class="px-4 py-3 text-center">False Negatives</th>
+                                </tr>
+                            </thead>
+                            <tbody id="metrics-table-body" class="divide-y divide-conflixis-gray"></tbody>
+                        </table>
+                    </div>
+                    
+                    <!-- Metrics Explanations -->
+                    <div class="mt-6 p-4 bg-conflixis-ivory rounded-lg border border-conflixis-tan">
+                        <h3 class="text-lg font-soehneKraftig text-conflixis-green mb-3">Understanding the Metrics</h3>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
+                            <div>
+                                <p class="font-soehneKraftig text-conflixis-green mb-1">📊 Accuracy</p>
+                                <p class="text-gray-600 font-soehneLeicht">Percentage of all predictions that were correct. Higher is better (100% = perfect).</p>
+                            </div>
+                            <div>
+                                <p class="font-soehneKraftig text-conflixis-green mb-1">🎯 Precision</p>
+                                <p class="text-gray-600 font-soehneLeicht">When the algorithm says "match", how often is it right? 100% = no false alarms.</p>
+                            </div>
+                            <div>
+                                <p class="font-soehneKraftig text-conflixis-green mb-1">🔍 Recall</p>
+                                <p class="text-gray-600 font-soehneLeicht">Of all true matches, how many did we find? 100% = found all real matches.</p>
+                            </div>
+                            <div>
+                                <p class="font-soehneKraftig text-conflixis-green mb-1">⚖️ F1 Score</p>
+                                <p class="text-gray-600 font-soehneLeicht">Harmonic mean of Precision and Recall. Balances both metrics (0-1, higher is better).</p>
+                            </div>
+                            <div>
+                                <p class="font-soehneKraftig text-conflixis-red mb-1">⚠️ False Positives</p>
+                                <p class="text-gray-600 font-soehneLeicht">Incorrectly said "match" when names are different. Want this at 0.</p>
+                            </div>
+                            <div>
+                                <p class="font-soehneKraftig text-conflixis-gold mb-1">❌ False Negatives</p>
+                                <p class="text-gray-600 font-soehneLeicht">Missed real matches (said "no match" when names are same). Lower is better.</p>
+                            </div>
+                        </div>
+                        <div class="mt-3 p-3 bg-white rounded border-l-4 border-conflixis-green">
+                            <p class="text-xs text-gray-600 font-soehneLeicht">
+                                <strong class="font-soehneKraftig">Example:</strong> If testing 100 name pairs with 40 true matches:
+                                <span class="text-conflixis-green">95% accuracy</span> = 95 correct predictions,
+                                <span class="text-conflixis-blue">100% precision</span> = no false alarms,
+                                <span class="text-conflixis-gold">75% recall</span> = found 30 of 40 matches
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Performance by Variant Type -->
+            <div class="mb-12">
+                <div class="card-conflixis">
+                    <h2 class="text-2xl font-ivarDisplay text-conflixis-green mb-6 border-b-2 border-conflixis-gold pb-2">
+                        📈 Performance by Variant Type
+                    </h2>
+                    
+                    <!-- Tabs -->
+                    <div class="flex space-x-1 mb-6 border-b border-conflixis-gray">
+                        <button class="px-4 py-2 font-soehneKraftig text-conflixis-green border-b-2 border-conflixis-gold" 
+                                onclick="switchTab('chart', this)">
+                            Chart View
+                        </button>
+                        <button class="px-4 py-2 font-soehneKraftig text-gray-600 hover:text-conflixis-green border-b-2 border-transparent hover:border-conflixis-mint" 
+                                onclick="switchTab('table', this)">
+                            Table View
+                        </button>
+                    </div>
+                    
+                    <!-- Tab Content -->
+                    <div id="chart-tab" class="tab-content">
+                        <div id="variant-chart" class="flex items-end h-64 gap-4 p-4"></div>
+                        <div id="chart-legend" class="flex justify-center gap-4 mt-6 flex-wrap"></div>
+                    </div>
+                    
+                    <div id="table-tab" class="tab-content hidden">
+                        <div class="overflow-x-auto">
+                            <table class="w-full">
+                                <thead class="bg-conflixis-green text-white">
+                                    <tr id="variant-table-header"></tr>
+                                </thead>
+                                <tbody id="variant-table-body" class="divide-y divide-conflixis-gray"></tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Confusion Matrix -->
+            <div class="mb-12">
+                <div class="card-conflixis">
+                    <h2 class="text-2xl font-ivarDisplay text-conflixis-green mb-6 border-b-2 border-conflixis-gold pb-2">
+                        🎯 Confusion Matrix Comparison
+                    </h2>
+                    <div class="overflow-x-auto">
+                        <table class="w-full">
+                            <thead class="bg-conflixis-green text-white">
+                                <tr id="confusion-header"></tr>
+                            </thead>
+                            <tbody id="confusion-body" class="divide-y divide-conflixis-gray"></tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Test Cases Browser -->
+            <div class="mb-12">
+                <div class="card-conflixis">
+                    <h2 class="text-2xl font-ivarDisplay text-conflixis-green mb-6 border-b-2 border-conflixis-gold pb-2">
+                        🔍 Sample Test Cases Comparison
+                    </h2>
+                    <div id="test-cases" class="max-h-96 overflow-y-auto space-y-4"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        let testData = {};
+        let testNames = {};
+        
+        function loadFile(testNum) {
+            const input = document.getElementById(`test-${testNum}`);
+            const file = input.files[0];
+            
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = function(e) {
+                    const csv = e.target.result;
+                    const data = parseCSV(csv);
+                    testData[testNum] = data;
+                    testNames[testNum] = file.name.replace('.csv', '');
+                    
+                    // Mark as loaded
+                    document.getElementById(`test-${testNum}-group`).classList.add('loaded');
+                    
+                    // Enable analyze button if at least one file is loaded
+                    if (Object.keys(testData).length > 0) {
+                        const btn = document.getElementById('analyze-btn');
+                        btn.disabled = false;
+                        btn.textContent = `Analyze ${Object.keys(testData).length} Test(s)`;
+                    }
+                };
+                reader.readAsText(file);
+            }
+        }
+        
+        function parseCSV(csv) {
+            const lines = csv.split('\n').filter(line => line.trim());
+            const headers = lines[0].split(',').map(h => h.trim());
+            const data = [];
+            
+            for (let i = 1; i < lines.length; i++) {
+                const values = [];
+                let current = '';
+                let inQuotes = false;
+                
+                for (let char of lines[i]) {
+                    if (char === '"') {
+                        inQuotes = !inQuotes;
+                    } else if (char === ',' && !inQuotes) {
+                        values.push(current.trim());
+                        current = '';
+                    } else {
+                        current += char;
+                    }
+                }
+                values.push(current.trim());
+                
+                const row = {};
+                headers.forEach((header, index) => {
+                    let value = values[index] || '';
+                    if (value === 'True' || value === 'TRUE') value = true;
+                    else if (value === 'False' || value === 'FALSE') value = false;
+                    else if (!isNaN(value) && value !== '') value = parseFloat(value);
+                    row[header] = value;
+                });
+                data.push(row);
+            }
+            
+            return data;
+        }
+        
+        function analyzeTests() {
+            if (Object.keys(testData).length === 0) return;
+            
+            document.getElementById('content').classList.remove('hidden');
+            
+            const metrics = {};
+            for (let testNum in testData) {
+                metrics[testNum] = calculateMetrics(testData[testNum]);
+            }
+            
+            displayOverallMetrics(metrics);
+            displayVariantPerformance(metrics);
+            displayConfusionMatrices(metrics);
+            displayTestCases();
+            
+            document.getElementById('content').scrollIntoView({ behavior: 'smooth' });
+        }
+        
+        function calculateMetrics(data) {
+            const total = data.length;
+            let tp = 0, fp = 0, tn = 0, fn = 0;
+            
+            data.forEach(row => {
+                const expected = row.expected_match === true || row.expected_match === 'TRUE';
+                const predicted = row.predicted_match === true || row.predicted_match === 'TRUE';
+                
+                if (expected && predicted) tp++;
+                else if (!expected && predicted) fp++;
+                else if (!expected && !predicted) tn++;
+                else if (expected && !predicted) fn++;
+            });
+            
+            const accuracy = ((tp + tn) / total) * 100;
+            const precision = tp > 0 ? (tp / (tp + fp)) * 100 : 0;
+            const recall = tp > 0 ? (tp / (tp + fn)) * 100 : 0;
+            const f1 = (precision + recall) > 0 ? (2 * precision * recall) / (precision + recall) : 0;
+            
+            const variantTypes = {};
+            data.forEach(row => {
+                const vtype = row.variant_type;
+                if (!variantTypes[vtype]) {
+                    variantTypes[vtype] = { total: 0, correct: 0, scores: [] };
+                }
+                variantTypes[vtype].total++;
+                if (row.correct === true || row.correct === 'True') {
+                    variantTypes[vtype].correct++;
+                }
+                variantTypes[vtype].scores.push(row.confidence_score);
+            });
+            
+            for (let vtype in variantTypes) {
+                const vdata = variantTypes[vtype];
+                vdata.accuracy = (vdata.correct / vdata.total) * 100;
+                vdata.avgScore = vdata.scores.reduce((a, b) => a + b, 0) / vdata.scores.length;
+            }
+            
+            return {
+                total, tp, fp, tn, fn,
+                accuracy, precision, recall, f1,
+                variantTypes
+            };
+        }
+        
+        function displayOverallMetrics(metrics) {
+            const tableBody = document.getElementById('metrics-table-body');
+            tableBody.innerHTML = '';
+            
+            // Sort test numbers for consistent display
+            const sortedTests = Object.keys(metrics).sort((a, b) => parseInt(a) - parseInt(b));
+            
+            sortedTests.forEach((testNum, index) => {
+                const testMetrics = metrics[testNum];
+                const row = document.createElement('tr');
+                row.className = 'hover:bg-gray-50 transition-colors';
+                
+                // Determine row styling based on performance
+                const isBaseline = index === 0;
+                const isBestPerformer = testMetrics.accuracy === Math.max(...sortedTests.map(t => metrics[t].accuracy));
+                
+                // Calculate false positives and false negatives from confusion matrix
+                const confusionData = testData[testNum];
+                let fp = 0, fn = 0;
+                
+                if (confusionData) {
+                    // Count false positives and false negatives
+                    confusionData.forEach(row => {
+                        if (row.expected_match === 'TRUE' && row.predicted_match === 'FALSE') fn++;
+                        if (row.expected_match === 'FALSE' && row.predicted_match === 'TRUE') fp++;
+                    });
+                }
+                
+                // Create value formatter with color coding
+                const formatValue = (value, metric) => {
+                    const color = value >= 90 ? 'text-green-600 font-bold' : 
+                                 value >= 80 ? 'text-blue-600' : 
+                                 value >= 70 ? 'text-yellow-600' : 'text-red-600';
+                    
+                    if (metric === 'f1') {
+                        return `<span class="${color}">${value.toFixed(3)}</span>`;
+                    } else {
+                        return `<span class="${color}">${value.toFixed(1)}%</span>`;
+                    }
+                };
+                
+                // Add improvement indicator for non-baseline rows
+                const getImprovement = (current, baseline, metric) => {
+                    if (isBaseline) return '';
+                    const diff = current - baseline;
+                    if (Math.abs(diff) < 0.01) return '';
+                    
+                    const arrow = diff > 0 ? '↑' : '↓';
+                    const color = diff > 0 ? 'text-green-500' : 'text-red-500';
+                    const value = metric === 'f1' ? diff.toFixed(3) : diff.toFixed(1);
+                    
+                    return `<span class="${color} text-xs ml-1">${arrow}${Math.abs(value)}</span>`;
+                };
+                
+                const baselineMetrics = metrics[sortedTests[0]];
+                
+                row.innerHTML = `
+                    <td class="px-4 py-3 font-soehneKraftig ${isBestPerformer ? 'text-conflixis-green' : ''}">
+                        ${testNames[testNum]}
+                        ${isBaseline ? '<span class="ml-2 badge-conflixis bg-conflixis-tan text-conflixis-green">Baseline</span>' : ''}
+                        ${isBestPerformer && !isBaseline ? '<span class="ml-2 badge-conflixis bg-conflixis-mint text-white">Best</span>' : ''}
+                    </td>
+                    <td class="px-4 py-3 text-center">
+                        ${formatValue(testMetrics.accuracy, 'accuracy')}
+                        ${getImprovement(testMetrics.accuracy, baselineMetrics.accuracy, 'accuracy')}
+                    </td>
+                    <td class="px-4 py-3 text-center">
+                        ${formatValue(testMetrics.precision, 'precision')}
+                        ${getImprovement(testMetrics.precision, baselineMetrics.precision, 'precision')}
+                    </td>
+                    <td class="px-4 py-3 text-center">
+                        ${formatValue(testMetrics.recall, 'recall')}
+                        ${getImprovement(testMetrics.recall, baselineMetrics.recall, 'recall')}
+                    </td>
+                    <td class="px-4 py-3 text-center">
+                        ${formatValue(testMetrics.f1, 'f1')}
+                        ${getImprovement(testMetrics.f1, baselineMetrics.f1, 'f1')}
+                    </td>
+                    <td class="px-4 py-3 text-center">
+                        <span class="${fp === 0 ? 'text-green-600 font-bold' : 'text-gray-700'}">${fp}</span>
+                    </td>
+                    <td class="px-4 py-3 text-center">
+                        <span class="${fn < 20 ? 'text-green-600' : 'text-gray-700'}">${fn}</span>
+                    </td>
+                `;
+                
+                tableBody.appendChild(row);
+            });
+            
+            // Add summary row if more than one test
+            if (sortedTests.length > 1) {
+                const summaryRow = document.createElement('tr');
+                summaryRow.className = 'bg-conflixis-tan font-soehneKraftig';
+                
+                const bestAccuracy = Math.max(...sortedTests.map(t => metrics[t].accuracy));
+                const improvement = bestAccuracy - metrics[sortedTests[0]].accuracy;
+                
+                summaryRow.innerHTML = `
+                    <td class="px-4 py-3" colspan="7">
+                        <div class="flex justify-between items-center">
+                            <span class="font-soehneLeicht">Overall Improvement: <span class="text-conflixis-success-green font-soehneKraftig">+${improvement.toFixed(1)}%</span> accuracy from baseline</span>
+                            <span class="text-sm text-gray-600 font-soehneLeicht">Best performer: ${testNames[sortedTests.find(t => metrics[t].accuracy === bestAccuracy)]}</span>
+                        </div>
+                    </td>
+                `;
+                
+                tableBody.appendChild(summaryRow);
+            }
+        }
+        
+        function displayVariantPerformance(metrics) {
+            const allVariants = new Set();
+            for (let testNum in metrics) {
+                Object.keys(metrics[testNum].variantTypes).forEach(v => allVariants.add(v));
+            }
+            
+            const chartContainer = document.getElementById('variant-chart');
+            chartContainer.innerHTML = '';
+            
+            const sortedVariants = Array.from(allVariants).sort();
+            
+            sortedVariants.forEach(variant => {
+                const barGroup = document.createElement('div');
+                barGroup.className = 'flex-1 flex flex-col items-center justify-end';
+                
+                const bars = document.createElement('div');
+                bars.className = 'flex gap-1 items-end';
+                
+                for (let testNum in metrics) {
+                    const vdata = metrics[testNum].variantTypes[variant];
+                    if (vdata) {
+                        const bar = document.createElement('div');
+                        bar.className = 'w-8 test-' + testNum + ' rounded-t relative group';
+                        bar.style.height = `${vdata.accuracy * 2}px`;
+                        bar.innerHTML = `
+                            <span class="absolute -top-6 left-1/2 transform -translate-x-1/2 text-xs font-bold opacity-0 group-hover:opacity-100 transition-opacity">
+                                ${vdata.accuracy.toFixed(0)}%
+                            </span>
+                        `;
+                        bars.appendChild(bar);
+                    }
+                }
+                
+                const label = document.createElement('div');
+                label.className = 'text-xs text-gray-600 mt-2 text-center';
+                label.textContent = variant.replace(/_/g, ' ');
+                
+                barGroup.appendChild(bars);
+                barGroup.appendChild(label);
+                chartContainer.appendChild(barGroup);
+            });
+            
+            const legend = document.getElementById('chart-legend');
+            legend.innerHTML = '';
+            const colors = ['#0c343a', '#4c94ed', '#eab96d', '#93baab', '#fd7649'];
+            for (let testNum in testNames) {
+                const item = document.createElement('div');
+                item.className = 'flex items-center gap-2';
+                item.innerHTML = `
+                    <div class="w-4 h-4 rounded" style="background: ${colors[testNum-1]}"></div>
+                    <span class="text-sm">${testNames[testNum]}</span>
+                `;
+                legend.appendChild(item);
+            }
+            
+            const tableHeader = document.getElementById('variant-table-header');
+            tableHeader.innerHTML = '<th class="px-4 py-2 text-left">Variant Type</th>';
+            for (let testNum in testNames) {
+                tableHeader.innerHTML += `<th class="px-4 py-2 text-left" colspan="2">${testNames[testNum]}</th>`;
+            }
+            
+            const tableBody = document.getElementById('variant-table-body');
+            tableBody.innerHTML = '';
+            
+            sortedVariants.forEach(variant => {
+                const row = document.createElement('tr');
+                row.className = 'hover:bg-gray-50';
+                row.innerHTML = `<td class="px-4 py-2 font-semibold">${variant.replace(/_/g, ' ')}</td>`;
+                
+                for (let testNum in metrics) {
+                    const vdata = metrics[testNum].variantTypes[variant];
+                    if (vdata) {
+                        const accuracyColor = vdata.accuracy >= 90 ? 'text-conflixis-success-green' : 
+                                            vdata.accuracy >= 70 ? 'text-conflixis-gold' : 'text-conflixis-red';
+                        row.innerHTML += `
+                            <td class="px-4 py-2 ${accuracyColor} font-bold">${vdata.accuracy.toFixed(1)}%</td>
+                            <td class="px-4 py-2 text-gray-600">${vdata.total} samples</td>
+                        `;
+                    } else {
+                        row.innerHTML += '<td class="px-4 py-2">-</td><td class="px-4 py-2">-</td>';
+                    }
+                }
+                tableBody.appendChild(row);
+            });
+        }
+        
+        function displayConfusionMatrices(metrics) {
+            const header = document.getElementById('confusion-header');
+            header.innerHTML = '<th class="px-4 py-2 text-left">Metric</th>';
+            for (let testNum in testNames) {
+                header.innerHTML += `<th class="px-4 py-2 text-left">${testNames[testNum]}</th>`;
+            }
+            
+            const body = document.getElementById('confusion-body');
+            body.innerHTML = '';
+            
+            const confusionMetrics = [
+                { key: 'tp', label: 'True Positives' },
+                { key: 'fp', label: 'False Positives' },
+                { key: 'tn', label: 'True Negatives' },
+                { key: 'fn', label: 'False Negatives' }
+            ];
+            
+            confusionMetrics.forEach(cm => {
+                const row = document.createElement('tr');
+                row.className = 'hover:bg-gray-50';
+                row.innerHTML = `<td class="px-4 py-2 font-semibold">${cm.label}</td>`;
+                
+                for (let testNum in metrics) {
+                    const value = metrics[testNum][cm.key];
+                    const cellColor = cm.key === 'tp' || cm.key === 'tn' ? 'text-conflixis-success-green' : 'text-conflixis-red';
+                    row.innerHTML += `<td class="px-4 py-2 ${cellColor} font-bold">${value}</td>`;
+                }
+                body.appendChild(row);
+            });
+        }
+        
+        function displayTestCases() {
+            const container = document.getElementById('test-cases');
+            container.innerHTML = '';
+            
+            const test1Data = testData[Object.keys(testData)[0]];
+            if (!test1Data) {
+                container.innerHTML = '<div class="text-center text-gray-500 py-8">No test data loaded</div>';
+                return;
+            }
+            
+            const interestingCases = [];
+            for (let i = 0; i < Math.min(test1Data.length, 100); i++) {
+                const predictions = {};
+                let hasDisagreement = false;
+                
+                for (let testNum in testData) {
+                    const row = testData[testNum][i];
+                    if (row) {
+                        predictions[testNum] = {
+                            predicted: row.predicted_match,
+                            score: row.confidence_score
+                        };
+                    }
+                }
+                
+                const predValues = Object.values(predictions).map(p => p.predicted);
+                if (predValues.length > 1 && new Set(predValues).size > 1) {
+                    hasDisagreement = true;
+                }
+                
+                if (hasDisagreement || i < 10) {
+                    interestingCases.push({
+                        index: i,
+                        reference: test1Data[i].reference_name,
+                        variant: test1Data[i].variant_name,
+                        expected: test1Data[i].expected_match,
+                        variantType: test1Data[i].variant_type,
+                        predictions
+                    });
+                }
+                
+                if (interestingCases.length >= 20) break;
+            }
+            
+            interestingCases.forEach(testCase => {
+                const caseDiv = document.createElement('div');
+                caseDiv.className = 'bg-gray-50 rounded-lg p-4 hover:bg-conflixis-ivory transition-colors';
+                
+                const expectedStr = testCase.expected === true || testCase.expected === 'TRUE' ? 'TRUE' : 'FALSE';
+                
+                caseDiv.innerHTML = `
+                    <div class="flex justify-between items-start mb-3">
+                        <div class="font-semibold text-conflixis-green">
+                            ${testCase.reference} ↔ ${testCase.variant}
+                        </div>
+                        <span class="px-2 py-1 bg-conflixis-mint text-white text-xs rounded-full">
+                            ${testCase.variantType}
+                        </span>
+                    </div>
+                    <div class="text-sm text-gray-600 mb-2">Expected: <span class="font-bold">${expectedStr}</span></div>
+                    <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-2">
+                        ${Object.entries(testCase.predictions).map(([testNum, pred]) => {
+                            const predStr = pred.predicted === true || pred.predicted === 'TRUE' ? 'TRUE' : 'FALSE';
+                            const correct = predStr === expectedStr;
+                            const bgColor = correct ? 'bg-green-50 border-green-200' : 'bg-red-50 border-red-200';
+                            const textColor = correct ? 'text-conflixis-success-green' : 'text-conflixis-red';
+                            return `
+                                <div class="${bgColor} border rounded p-2">
+                                    <div class="text-xs font-semibold text-gray-600">${testNames[testNum]}</div>
+                                    <div class="${textColor} font-bold">${predStr}</div>
+                                    <div class="text-xs text-gray-500">${pred.score.toFixed(1)}%</div>
+                                </div>
+                            `;
+                        }).join('')}
+                    </div>
+                `;
+                container.appendChild(caseDiv);
+            });
+        }
+        
+        function switchTab(tabName, button) {
+            // Update buttons
+            const buttons = button.parentElement.querySelectorAll('button');
+            buttons.forEach(btn => {
+                btn.className = 'px-4 py-2 font-semibold text-gray-600 hover:text-conflixis-green border-b-2 border-transparent hover:border-conflixis-mint';
+            });
+            button.className = 'px-4 py-2 font-semibold text-conflixis-green border-b-2 border-conflixis-gold';
+            
+            // Update content
+            document.getElementById('chart-tab').classList.toggle('hidden', tabName !== 'chart');
+            document.getElementById('table-tab').classList.toggle('hidden', tabName !== 'table');
+        }
+    </script>
+</body>
+</html>
