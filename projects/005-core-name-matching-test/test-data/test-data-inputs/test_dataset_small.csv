@@ -1,0 +1,11 @@
+reference_id,reference_name,variant_name,expected_match,variant_type
+100001161890,"TRUVIC MEDICAL, INC.",TRUABUTMENT INC.,FALSE,similar_different
+100000081402,Sonendo Inc,Sonedno Inc,TRUE,typo
+100000005550,ViiV Healthcare Company,SUN PHARMACEUTICAL INDUSTRIES INC.,FALSE,completely_different
+100000005662,MicroAire Surgical Instruments LLC,MicroAire Surgical Instruments LLC,TRUE,word_order
+100000316817,Venclose Inc.,Venclose nc.,TRUE,typo
+100000316826,"EyePoint Pharmaceuticals US, Inc.",Health Beacons Inc.,FALSE,completely_different
+100000191755,Carl Zeiss Meditec Digital Innovations LLC,"Osseus Fusion Systems, LLC",FALSE,completely_different
+100000136371,"AUGMENIX, INC.",Olympus Corporation,FALSE,similar_different
+100000191763,KINEX MEDICAL COMPANY LLC,"Cosmedent, Inc.",FALSE,similar_different
+100000011182,"Leadiant Biosciences, Inc.","Leadiant Biosciences, Inc.",TRUE,word_order

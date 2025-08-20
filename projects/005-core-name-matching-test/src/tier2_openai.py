@@ -38,6 +38,61 @@ def openai_match(name_a: str, name_b: str, context: Optional[str] = None) -> Tup
         # Determine model from environment or use default
         model = os.getenv('TIER2_MODEL', 'gpt-4o-mini')
         
+        # Check if this is a gpt-5 model (uses different API)
+        if 'gpt-5' in model:
+            # gpt-5 models use the new responses.create API
+            prompt = f"""You are an expert at identifying whether two healthcare organization names refer to the same entity.
+
+Analyze if these two names refer to the same entity:
+Name A: {name_a}
+Name B: {name_b}
+
+Consider typos, abbreviations, DBA variations, parent/subsidiary relationships, and common healthcare naming patterns.
+
+Return a JSON object with:
+- "confidence": 0-100 integer (confidence they are the same entity)
+- "same_entity": true/false
+- "reasoning": brief explanation
+- "entity_type": type of organization if identified
+- "canonical_name": most likely official name if they match"""
+            
+            try:
+                response = client.responses.create(
+                    model=model,
+                    input=[{"role": "user", "content": prompt}],
+                    text={
+                        "format": {"type": "json_object"},
+                        "verbosity": "low"
+                    },
+                    reasoning={"effort": "high"}
+                )
+                
+                # Parse the response - gpt-5 returns text in output_text attribute
+                if hasattr(response, 'output_text') and response.output_text:
+                    result = json.loads(response.output_text)
+                elif hasattr(response, 'text') and isinstance(response.text, str):
+                    result = json.loads(response.text)
+                else:
+                    # Try to extract text from the response object
+                    print(f"Unexpected response structure: {type(response)}")
+                    print(f"Response attributes: {dir(response)}")
+                    if hasattr(response, 'output_text'):
+                        print(f"output_text: {response.output_text}")
+                    raise ValueError("Cannot parse gpt-5 response")
+                
+                confidence = float(result.get('confidence', 0))
+                result['model_used'] = model
+                result['tokens_used'] = response.usage.total_tokens if hasattr(response, 'usage') else 0
+                
+                return confidence, result
+                
+            except Exception as e:
+                print(f"gpt-5 API error: {e}")
+                # Fall back to gpt-4o-mini
+                print("Falling back to gpt-4o-mini...")
+                model = 'gpt-4o-mini'
+        
+        # Standard chat completions API for gpt-4 models
         # Construct the system prompt
         system_prompt = """You are an expert at identifying whether two healthcare organization names refer to the same entity. 
 
@@ -50,7 +105,10 @@ Consider the following factors:
 6. Geographic qualifiers that may be added/removed
 7. Department or specialty designations
 
-Be conservative - only return high confidence if you're very certain they're the same entity."""
+For obvious typos (single character differences), return high confidence (85-95).
+For exact matches or case differences, return very high confidence (95-100).
+For clearly different entities, return low confidence (0-20).
+Be moderately conservative - but recognize obvious variations."""
 
         # Construct the user prompt
         user_prompt = f"""Analyze if these two healthcare organization names refer to the same entity:
@@ -73,16 +131,18 @@ Return ONLY a JSON object with the following structure:
 }"""
 
         # Make the API call
-        response = client.chat.completions.create(
-            model=model,
-            messages=[
+        completion_params = {
+            'model': model,
+            'messages': [
                 {"role": "system", "content": system_prompt},
                 {"role": "user", "content": user_prompt}
             ],
-            temperature=0.1,  # Low temperature for consistency
-            max_tokens=300,
-            response_format={"type": "json_object"}
-        )
+            'response_format': {"type": "json_object"},
+            'max_tokens': 300,
+            'temperature': 0.1
+        }
+        
+        response = client.chat.completions.create(**completion_params)
         
         # Parse the response
         result = json.loads(response.choices[0].message.content)

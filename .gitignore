@@ -60,6 +60,9 @@ build/
 /projects/011-disclosure-policy-review/*.csv
 /projects/011-disclosure-policy-review/**/*.csv
 
+# Name matching test data and results
+/projects/005-core-name-matching-test/test_data/*.csv
+
 # Temporary data files
 *.tmp
 *.cache
