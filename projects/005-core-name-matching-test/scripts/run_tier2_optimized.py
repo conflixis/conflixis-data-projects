@@ -198,7 +198,7 @@ def run_tier2_on_failures(test_file: str, model: str = 'gpt-4o-mini',
     results_df = pd.DataFrame(final_results)
     timestamp = datetime.now().strftime('%Y%m%d_%H%M%S')
     model_suffix = model.replace('-', '_').replace('.', '_')
-    output_file = f"test_data/test_results_tier2_optimized_{model_suffix}_{timestamp}.csv"
+    output_file = f"test-data/test-results/test_results_tier2_optimized_{model_suffix}_{timestamp}.csv"
     results_df.to_csv(output_file, index=False)
     
     # Calculate metrics
@@ -223,7 +223,7 @@ def run_tier2_on_failures(test_file: str, model: str = 'gpt-4o-mini',
 if __name__ == "__main__":
     import argparse
     parser = argparse.ArgumentParser()
-    parser.add_argument('--test-file', default='test_data/test_dataset_100.csv')
+    parser.add_argument('--test-file', default='test-data/test-data-inputs/test_dataset_100.csv')
     parser.add_argument('--model', default='gpt-4o-mini')
     parser.add_argument('--fuzzy-threshold', type=float, default=85.0,
                        help='Fuzzy score threshold for Tier 1 (default: 85.0)')

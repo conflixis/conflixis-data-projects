@@ -290,7 +290,7 @@ def main():
     test_df = generator.generate_test_pairs(1000)
     
     # Save to CSV
-    output_file = 'test_data/test_dataset.csv'
+    output_file = 'test-data/test-data-inputs/test_dataset.csv'
     test_df.to_csv(output_file, index=False)
     print(f"\nTest dataset saved to {output_file}")
     

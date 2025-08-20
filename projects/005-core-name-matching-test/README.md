@@ -1,400 +1,250 @@
-# Multi-Tier Name Matching POC
+# Healthcare Entity Name Matching: Multi-Tier Approach Analysis
 
-A sophisticated name matching system that combines traditional fuzzy matching algorithms with OpenAI's language models to achieve high-accuracy entity resolution for healthcare organizations.
+## Executive Summary
 
-## Overview
+This project evaluates three different approaches for matching healthcare entity names, comparing accuracy, performance, and complexity. After testing on 1,000 healthcare organization name pairs, we found that a simple two-tier approach (fuzzy matching + AI enhancement) achieves 96.9% accuracy, outperforming more complex implementations.
 
-This proof-of-concept implements a progressive multi-tier matching system with comprehensive testing framework:
+## 📊 Performance Comparison
 
-### Matching Tiers
-1. **Tier 1**: Python-based fuzzy matching (RapidFuzz, Jellyfish) - Always runs first
-2. **Tier 2**: Fuzzy + OpenAI GPT-4 analysis (40%/60% weighted) - Runs if Tier 1 < 90%
-3. **Tier 3**: Fuzzy + OpenAI + Web search (30%/40%/30% weighted) - Runs if Tier 2 < 90%  
-4. **Tier 4**: Human review queue for low-confidence matches
+| Approach | Accuracy | Precision | Recall | F1 Score | API Calls | Implementation Complexity |
+|----------|----------|-----------|--------|----------|-----------|---------------------------|
+| **Tier 1** | 84.7% | 1.000 | 0.618 | 0.764 | 0 | Simple |
+| **Tier 2** ⭐ | **96.9%** | 0.940 | **0.985** | **0.962** | 753 | Simple |
+| **Tier-prod** | 96.5% | 0.929 | 0.988 | 0.958 | 698 | Complex |
 
-### Test Framework
-- **Test Dataset**: 1000 labeled pairs from 2,501 healthcare suppliers
-- **Variant Types**: Abbreviations, typos, case changes, word order, punctuation
-- **Comparison Dashboard**: Visual tool to compare up to 5 algorithm results
-- **Metrics**: Accuracy, precision, recall, F1 score, confusion matrix
+## Approach Descriptions
 
-## Features
+### Tier 1: Fuzzy Matching Only
+- **Method**: Multiple fuzzy matching algorithms (Levenshtein, Jaro-Winkler, token-based)
+- **Threshold**: 85% confidence required for match
+- **Strengths**: Perfect precision (no false positives), no API costs
+- **Weaknesses**: Misses 38% of true matches
+- **Use Case**: High-stakes scenarios where false positives are unacceptable
 
-- **Multi-algorithm fuzzy matching** with healthcare-specific preprocessing
-- **OpenAI integration** for intelligent entity analysis
-- **Web search validation** for real-time verification
-- **Confidence scoring** with configurable thresholds
-- **CSV-based storage** for easy integration
-- **Interactive dashboard** for reviewing results
-- **Audit trail** of all matching decisions
+### Tier 2: Fuzzy + AI Enhancement (Recommended) ⭐
+- **Method**: Fuzzy matching, then OpenAI for cases below 85% confidence
+- **Model**: gpt-4o-mini
+- **Thresholds**: 
+  - ≥85%: Accept fuzzy result
+  - <85%: Send to OpenAI
+  - ≥50%: Accept as match after AI review
+- **Strengths**: Best overall accuracy, simple implementation, excellent balance
+- **Use Case**: Production systems requiring high accuracy with minimal manual review
 
-## Installation
+### Tier-prod: Production Approach (PR#1362)
+- **Method**: Elasticsearch-style multi-strategy matching + AI enhancement
+- **Model**: gpt-4o-mini
+- **Thresholds**:
+  - >95%: Fast path (skip AI)
+  - 30-95%: AI enhancement
+  - <30%: No match
+- **Note**: Based on conflixis-engine PR#1362 production implementation
+- **Finding**: Added complexity doesn't improve results over Tier 2
 
-### Prerequisites
+### Tier 3: Web Search (Not Implemented)
+- **Status**: Intentionally skipped
+- **Reason**: Tier 2 already achieved 96.9% accuracy, making web search unnecessary
+- **Note**: Implementation exists in `archive/legacy-scripts/tier3_websearch.py` for future reference
+- **Consideration**: Web search would add significant latency and cost without meaningful accuracy improvement
 
-- Python 3.8 or higher
-- OpenAI API key
+## Key Findings
 
-### Setup
+### 1. AI Enhancement is Crucial
+- Adding AI to fuzzy matching improves accuracy by 12.2% (84.7% → 96.9%)
+- Both Tier 2 and Tier-prod achieve ~96.5% accuracy with AI enhancement
+- The specific AI model (gpt-4o-mini) provides excellent cost/performance balance
 
-1. Install dependencies:
-```bash
-pip install -r requirements.txt
-```
+### 2. Simplicity Wins
+- Tier 2's simple approach outperforms the complex Elasticsearch-style matching
+- Multi-strategy search with boost scores (Tier-prod) doesn't improve accuracy
+- Simpler code is easier to maintain and debug
 
-2. Configure OpenAI API key:
-```bash
-cp .env.example .env
-# Edit .env and add your OpenAI API key
-```
+### 3. Threshold Strategy Matters Less Than Expected
+- Tier 2: AI for <85% confidence cases (753 API calls)
+- Tier-prod: AI for 30-95% confidence cases (698 API calls)
+- Similar API usage and accuracy despite different thresholds
 
-## Usage
+### 4. Perfect Precision Has a Cost
+- Tier 1 never makes false positives but misses 38% of matches
+- Accepting some false positives (Tier 2: 25/1000) dramatically improves recall
+- The trade-off is worth it for most business applications
 
-### Basic Usage
+## Test Dataset Characteristics
 
-1. Prepare your input data in CSV format with columns `name_a` and `name_b`:
-```csv
-name_a,name_b
-"St. Mary's Hospital","Saint Marys Medical Center"
-"ABC Healthcare LLC","ABC Health System"
-```
+The 1,000-sample test dataset includes various name variation types:
+- **300** completely different names
+- **300** similar but different organizations
+- **67** case variations
+- **62** word order changes
+- **62** extra words added/removed
+- **59** combined variations
+- **53** punctuation differences
+- **50** typos
+- **47** abbreviations
 
-2. Run the matching pipeline:
-```bash
-python run_matching.py --input data/input.csv
-```
+## Performance by Variation Type
 
-3. View results in the dashboard:
-```bash
-open ui/dashboard.html
-```
+### Tier 2 Accuracy by Type:
+- **100%**: Case changes, word order, punctuation
+- **98%**: Typos, abbreviations
+- **96.8%**: Extra words
+- **100%**: Combined variations
+- **90%**: Similar but different organizations (hardest category)
 
-### Command Line Options
-
-```bash
-python run_matching.py [options]
-
-Options:
-  --input FILE      Input CSV file (default: data/input.csv)
-  --threshold N     Confidence threshold 0-100 (default: 90)
-  --quiet          Suppress verbose output
-```
-
-### Testing Individual Tiers
-
-Test Tier 1 (Fuzzy Matching):
-```bash
-python src/tier1_fuzzy.py
-```
-
-Test Tier 2 (OpenAI Analysis):
-```bash
-python src/tier2_openai.py
-```
-
-Test Tier 3 (Web Search):
-```bash
-python src/tier3_websearch.py
-```
-
-## How It Works
-
-### Processing Flow
-
-1. **Input**: Name pairs are loaded from CSV
-2. **Tier 1**: Each pair is first processed through fuzzy matching algorithms
-   - If confidence ≥ 90%, mark as MATCHED
-   - Otherwise, proceed to Tier 2
-3. **Tier 2**: OpenAI analyzes the names for entity matching
-   - Aggregated confidence = 40% Tier 1 + 60% Tier 2
-   - If confidence ≥ 90%, mark as MATCHED
-   - Otherwise, proceed to Tier 3
-4. **Tier 3**: OpenAI searches the web for validation
-   - Final confidence = 30% Tier 1 + 40% Tier 2 + 30% Tier 3
-   - If confidence ≥ 90%, mark as MATCHED
-   - Otherwise, add to REVIEW queue
-5. **Output**: Results saved to timestamped CSV files
-
-### Tier 1: Fuzzy Matching
-
-Uses multiple algorithms:
-- **RapidFuzz**: Token-based similarity
-- **Jellyfish**: Jaro-Winkler similarity
-- **Custom preprocessing**: Healthcare-specific abbreviations
-
-### Tier 2: OpenAI Analysis
-
-- Model: GPT-4o-mini (cost-efficient)
-- Analyzes: Abbreviations, subsidiaries, name variations
-- Returns: Confidence score and reasoning
-
-### Tier 3: Web Search Validation
-
-- Model: GPT-4o (with web search)
-- Researches: Official websites, mergers, addresses
-- Returns: Confidence score with evidence
-
-## Output Files
-
-- `data/results_YYYYMMDD_HHMMSS.csv`: Timestamped results
-- `data/results_latest.csv`: Most recent results (for dashboard)
-- `data/review_queue.csv`: Items needing human review
-- `data/websearch_evidence.jsonl`: Web search audit trail
-
-## Dashboard Features
-
-The interactive dashboard (`ui/dashboard.html`) provides:
-
-- **Summary statistics**: Match rates by tier
-- **Results table**: All processed pairs with scores
-- **Review queue**: Items needing human verification
-- **Analytics**: Score distributions and averages
-- **Export**: Download filtered results as CSV
-
-## Configuration
-
-Edit `run_matching.py` or pass command-line arguments:
-
-```python
-config = {
-    'confidence_threshold': 90.0,  # Minimum score for auto-match
-    'tier1_weight': 1.0,           # Weight when only Tier 1 used
-    'tier2_weights': {              # Weights for Tier 2 aggregation
-        'tier1': 0.4,
-        'tier2': 0.6
-    },
-    'tier3_weights': {              # Weights for Tier 3 aggregation
-        'tier1': 0.3,
-        'tier2': 0.4,
-        'tier3': 0.3
-    }
-}
-```
-
-## Cost Estimation
-
-- **Tier 1**: Free (local processing)
-- **Tier 2**: ~$0.001 per name pair (GPT-4o-mini)
-- **Tier 3**: ~$0.02 per name pair (GPT-4o with web search)
-
-Typical distribution (based on test data):
-- 30-40% matched at Tier 1 (no cost)
-- 20-30% matched at Tier 2 (~$0.001 each)
-- 10-20% processed at Tier 3 (~$0.02 each)
-- 10-20% sent to human review
-
-**Average cost**: ~$0.005-0.01 per name pair
-
-## Performance
-
-- **Tier 1**: <0.1 seconds per pair
-- **Tier 2**: 1-2 seconds per pair
-- **Tier 3**: 3-5 seconds per pair
-- **Total throughput**: ~10-20 pairs per minute
-
-## Troubleshooting
-
-### OpenAI API Key Not Working
-- Ensure the key is set in `.env` file
-- Check API key permissions at https://platform.openai.com
-- Verify you have credits/billing set up
-
-### No Results Appearing
-- Check that input CSV has correct column names (`name_a`, `name_b`)
-- Ensure no extra spaces in column headers
-- Verify CSV is properly formatted
-
-### Dashboard Not Loading
-- Ensure you've run the pipeline at least once
-- Check that `data/results_latest.csv` exists
-- Open dashboard from the correct path
-
-## Development
+## Implementation Details
 
 ### Project Structure
 ```
 005-core-name-matching-test/
-├── src/                    # Core matching logic
-│   ├── tier1_fuzzy.py     # Fuzzy matching algorithms
-│   ├── tier2_openai.py    # OpenAI entity analysis
-│   └── tier3_websearch.py # Web search validation
-├── data/                   # Input/output data
-│   ├── input.csv          # Input name pairs
-│   └── results_*.csv      # Output results
-├── ui/                     # Web dashboard
-│   └── dashboard.html     # Results viewer
-├── run_matching.py        # Main orchestrator
-├── requirements.txt       # Python dependencies
-├── .env.example          # Environment template
-└── README.md             # This file
+├── src/
+│   ├── tier1_fuzzy.py              # Fuzzy matching implementation
+│   ├── tier2_openai.py             # OpenAI enhancement layer
+│   └── tier_prod_matching.py       # PR1362 production approach
+├── scripts/
+│   ├── run_test_matching.py        # Tier 1 test runner
+│   ├── run_tier2_optimized.py      # Tier 2 test runner
+│   ├── run_tier_prod_test.py       # Tier-prod test runner
+│   └── compare_all_tiers.py        # Comparison analysis
+├── test-data/
+│   ├── test-data-inputs/           # Test datasets
+│   └── test-results/               # Test results
+└── PR1362-conflixis-engine-test/   # Reference implementation
+
 ```
 
-### Adding New Matching Algorithms
-
-To add new algorithms to Tier 1, edit `src/tier1_fuzzy.py`:
-
+### Requirements
 ```python
-def fuzzy_match(name_a, name_b):
-    scores = {
-        'existing_algo': ...,
-        'your_new_algo': your_algorithm(name_a, name_b)
-    }
-    
-    weights = {
-        'existing_algo': 0.X,
-        'your_new_algo': 0.Y  # Ensure weights sum to 1.0
-    }
+openai>=1.0.0
+rapidfuzz>=3.0.0
+jellyfish>=0.9.0
+pandas>=1.5.0
+numpy>=1.20.0
+python-dotenv>=0.19.0
 ```
 
-## Test Framework
-
-### Quick Start Testing
-
-1. **Generate test dataset** (1000 pairs with known labels):
+### Environment Variables
 ```bash
-python scripts/test_dataset_generator.py
+OPENAI_API_KEY=your-api-key-here
 ```
 
-2. **Run tests on different algorithms**:
+## Running the Tests
+
+### Test Individual Tiers
 ```bash
-# Test fuzzy matching only
-python scripts/run_test_matching.py --algorithm fuzzy
+# Tier 1 (Fuzzy only)
+python scripts/run_test_matching.py --test-file test-data/test-data-inputs/test_dataset.csv --algorithm fuzzy
 
-# Test Tier 2 (fuzzy + OpenAI) - Coming soon
-python scripts/run_test_matching.py --algorithm tier2
+# Tier 2 (Fuzzy + OpenAI)
+python scripts/run_tier2_optimized.py --test-file test-data/test-data-inputs/test_dataset.csv --model gpt-4o-mini
 
-# Test full multi-tier pipeline - Coming soon
-python scripts/run_test_matching.py --algorithm multi_tier
+# Tier-prod (ES-style + OpenAI)
+python scripts/run_tier_prod_test.py --test-file test-data/test-data-inputs/test_dataset.csv --model gpt-4o-mini
 ```
 
-3. **Generate report card**:
+### Compare All Approaches
 ```bash
-python scripts/generate_report_card.py --results-file test_data/test_results_fuzzy_latest.csv
+python scripts/compare_all_tiers.py
 ```
 
-4. **Compare multiple test results**:
-```bash
-# Open the comparison dashboard
-open test_data/test_comparison_dashboard.html
-# Load up to 5 test result CSV files to compare
-```
+## Cost Analysis
 
-### Current Test Results
+Based on gpt-4o-mini pricing (~$0.15 per 1M input tokens):
+- **Tier 1**: $0.00 (no API calls)
+- **Tier 2**: ~$0.15 per 1,000 comparisons
+- **Tier-prod**: ~$0.14 per 1,000 comparisons
 
-| Algorithm | Accuracy | Precision | Recall | F1 Score | False Positives | False Negatives |
-|-----------|----------|-----------|--------|----------|-----------------|-----------------|
-| Fuzzy (85% threshold) | 75.3% | 100% | 61.8% | 0.764 | 0 | 153 |
-| Tier 2 (Fuzzy+OpenAI) | **88.0%** | **100%** | **75.5%** | **0.860** | **0** | **12** |
-| Tier 3 (Full Pipeline) | *Pending* | - | - | - | - | - |
+## Recommendations
 
-### 🔍 Sample Test Cases Comparison
+### For Production Use: Tier 2
+✅ **Use Tier 2** for production systems because it offers:
+- Highest accuracy (96.9%)
+- Simple, maintainable code
+- Excellent precision/recall balance
+- Proven approach validated by similar results from PR1362
 
-#### Improvements (Tier 2 fixed Tier 1 mistakes)
+### Optimization Opportunities
+1. **Add caching**: Cache exact matches to reduce API calls
+2. **Batch processing**: Process multiple pairs in parallel
+3. **Threshold tuning**: Adjust 85% threshold based on precision/recall needs
+4. **Model selection**: Consider gpt-3.5-turbo for cost savings if accuracy permits
 
-| Test Case | Variant Type | Tier 1 Result | Tier 2 Result | Improvement |
-|-----------|--------------|---------------|---------------|-------------|
-| **Veran Medical Technologies Inc** vs<br>Veran Medical Technologies, Inc. | Punctuation | ❌ No Match<br>(68.0%) | ✅ Match<br>Fuzzy: 68%, OpenAI: 100%<br>Final: 87.2% | OpenAI recognized same entity despite punctuation |
-| **Axonics Modulation Technologies Inc** vs<br>Axonics Modulation Technologies, Inc. | Punctuation | ❌ No Match<br>(68.9%) | ✅ Match<br>Fuzzy: 69%, OpenAI: 100%<br>Final: 87.6% | OpenAI correctly identified as same company |
-| **Agiliti Health Inc** vs<br>Agiliti Health, Inc. | Punctuation | ❌ No Match<br>(64.0%) | ✅ Match<br>Fuzzy: 64%, OpenAI: 100%<br>Final: 85.6% | OpenAI understood Inc vs Inc. are same |
-| **Amicus Therpaeutics, Inc.** vs<br>Amicus Therapeutics, Inc. | Typo | ❌ No Match<br>(73.3%) | ✅ Match<br>Fuzzy: 73%, OpenAI: 95%<br>Final: 86.3% | OpenAI caught the typo "Therpaeutics" |
-| **Hologic, LC** vs<br>Hologic, LLC | Typo | ❌ No Match<br>(68.8%) | ✅ Match<br>Fuzzy: 69%, OpenAI: 100%<br>Final: 87.5% | OpenAI recognized LC/LLC equivalence |
+### When to Use Each Tier
+- **Tier 1**: When false positives are absolutely unacceptable
+- **Tier 2**: General production use with high accuracy requirements
+- **Tier-prod**: Not recommended (unnecessary complexity)
 
-**Key Insight**: All 8 improvements came from OpenAI correctly identifying entities that fuzzy matching scored between 64-73% (below the 85% threshold). OpenAI excelled at understanding punctuation differences and common abbreviations.
+## Metrics Explained
 
-### Performance by Variant Type Comparison
+- **Accuracy**: Overall percentage of correct predictions (higher is better)
+- **Precision**: When system says "match", how often is it correct? (reduces false alarms)
+- **Recall**: Of all true matches, how many did we find? (reduces missed matches)
+- **F1 Score**: Harmonic mean balancing precision and recall (overall quality metric)
 
-| Variant Type | Tier 1 (Fuzzy) | Tier 2 (Fuzzy+OpenAI) | Change | Analysis |
-|--------------|----------------|------------------------|--------|----------|
-| **Typos** | 0% | 57.1% | **+57.1%** ✅ | Major improvement - OpenAI understands misspellings |
-| **Punctuation** | 42.9% | 100% | **+57.1%** ✅ | Perfect score - OpenAI ignores punctuation differences |
-| Word Order | 100% | 100% | - | Already perfect |
-| Case Variations | 100% | 100% | - | Already perfect |
-| Completely Different | 100% | 100% | - | Already perfect |
-| Similar but Different | 100% | 100% | - | Already perfect |
-| Abbreviations | 66.7% | 66.7% | - | No improvement (needs investigation) |
-| Extra Words | 25.0% | 25.0% | - | No improvement (needs investigation) |
-| Combined | 83.3% | 83.3% | - | Maintained performance |
+## Confusion Matrix Components
 
-### OpenAI Impact Analysis
+- **TP (True Positives)**: Correctly identified matches
+- **FP (False Positives)**: Incorrectly said "match" when different
+- **FN (False Negatives)**: Missed matches
+- **TN (True Negatives)**: Correctly identified non-matches
 
-**Test Results on 100 pairs:**
-- **71 pairs** (71%) required OpenAI analysis (scored <90% in fuzzy)
-- **29 pairs** (29%) matched at Tier 1 without needing OpenAI
-- **8 improvements** from OpenAI (no regressions!)
-- **Estimated cost**: $0.014 for 71 API calls
+## Conclusion
 
-**Where OpenAI Excels:**
-1. **Entity Recognition**: Understands "Inc" vs "Inc." are the same
-2. **Typo Detection**: Catches misspellings like "Therpaeutics" → "Therapeutics"
-3. **Abbreviation Understanding**: Knows "LC" and "LLC" are equivalent
-4. **Context Awareness**: Recognizes when companies are the same despite format differences
+Our analysis demonstrates that a simple two-tier approach combining fuzzy matching with AI enhancement achieves optimal results for healthcare entity name matching. The Tier 2 approach's 96.9% accuracy, combined with its straightforward implementation, makes it the clear choice for production deployment.
 
-**Cost-Benefit Analysis:**
-- Cost per 100 pairs: ~$0.014
-- Accuracy improvement: +8% (80% → 88%)
-- False negatives reduced: -12 (from 20 to 8)
-- ROI: Each $0.01 spent improves ~6 matches
+The validation against PR1362's production implementation confirms that our simpler approach achieves comparable results without unnecessary complexity, proving that sometimes the simplest solution is the best solution.
 
-## License
+## 📁 Project Structure
 
-Copyright 2025 Conflixis. All rights reserved.
+### Active Directories
 
-## Support
+#### `/src/` - Core Implementations
+- `tier1_fuzzy.py` - Fuzzy matching (84.7% accuracy)
+- `tier2_openai.py` - AI-enhanced matching (96.9% accuracy) ⭐
+- `tier_prod_matching.py` - PR1362-style approach (96.5% accuracy)
 
-For issues or questions, contact the Data Analytics team or create a ticket in the DA Jira project.
+#### `/scripts/` - Production Scripts
+**Testing**:
+- `run_test_matching.py` - Run Tier 1 tests
+- `run_tier2_optimized.py` - Run Tier 2 tests ⭐
+- `run_tier_prod_test.py` - Run Tier-prod tests
+- `test_tier2_strategies.py` - Compare combination strategies
 
----
+**Analysis**:
+- `compare_all_tiers.py` - Generate comparison reports
+- `test_dataset_generator.py` - Create test datasets
 
-## 📊 Project Progress Tracker
+#### `/test-data/` - Test Data & Results
+- `test-data-inputs/` - Test datasets (committed to repo)
+  - `test_dataset.csv` - 1000 samples
+  - `test_dataset_100.csv` - 100 samples
+  - `test_dataset_small.csv` - 10 samples
+- `test-results/` - Generated results (gitignored)
+- `reports/` - HTML reports (kept for documentation)
 
-### Phase 1: Foundation ✅
-- [x] Set up multi-tier matching architecture
-- [x] Implement Tier 1 fuzzy matching algorithms
-- [x] Create healthcare-specific preprocessing
-- [x] Basic command-line interface
+#### Other Files
+- `.gitignore` - Git ignore rules
+- `requirements.txt` - Python dependencies
+- `config.yaml` - Configuration file
+- `run_name_matching.py` - Main runner script
 
-### Phase 2: Test Framework ✅ 
-- [x] Generate test dataset from 2,501 suppliers
-- [x] Create 1000 labeled test pairs with variants
-- [x] Build test runner for algorithm evaluation
-- [x] Implement metrics calculation (accuracy, precision, recall)
-- [x] Create HTML report card generator
-- [x] Build comparison dashboard (up to 5 tests)
-- [x] Apply Conflixis design system to dashboard
+### Archived Files (`/archive/`)
 
-### Phase 3: Algorithm Testing 🔄 *Current Phase*
-- [x] Test Tier 1 (Fuzzy only) - 75.3% accuracy
-- [x] Implement Tier 2 testing (Fuzzy + OpenAI)
-- [x] Run Tier 2 evaluation - 88.0% accuracy (13% improvement!)
-- [x] Compare Tier 1 vs Tier 2 results
-- [ ] Optimize thresholds and weights
+The archive directory contains files no longer actively used but preserved for reference:
 
-### Phase 4: Advanced Testing ⏳
-- [ ] Implement Tier 3 testing (Full pipeline with web search)
-- [ ] Test different OpenAI models (gpt-4.1-mini, gpt-5-mini)
-- [ ] Cost-benefit analysis per tier
-- [ ] Performance optimization
+#### `reference-implementations/`
+- PR1362 TypeScript implementation and Python port attempts
 
-### Phase 5: Production Ready ⏳
-- [ ] API endpoint implementation
-- [ ] Batch processing capabilities
-- [ ] Monitoring and logging
-- [ ] Documentation and deployment guide
+#### `test-scripts/`
+- Development and debugging scripts used during POC
 
-### Test Coverage Status
-- **Total Test Pairs**: 1,000 (100 tested so far)
-- **Algorithms Tested**: 2 of 3 (Fuzzy ✅, Tier 2 ✅, Tier 3 pending)
-- **Models Tested**: 1 of 5 available (gpt-4o-mini ✅)
-- **Thresholds Tested**: 2 (85% for Tier 1, 90% for tier progression)
-- **Best accuracy so far**: 88% (Tier 2)
+#### `legacy-scripts/`
+- Superseded implementations and utilities
 
-### Next Steps
-1. ✅ ~~Set up OpenAI API key in .env file~~
-2. ✅ ~~Implement Tier 2 test runner~~
-3. ✅ ~~Run Tier 2 tests and compare with baseline~~
-4. ⚡ Run full 1000-pair test for comprehensive results
-5. ⚡ Optimize aggregation weights (currently 40/60)
-6. ⚡ Test different OpenAI models (gpt-4.1-mini, gpt-5-mini)
-7. ⚡ Implement Tier 3 with web search
+See `archive/README.md` for details about archived files.
 
-*Last Updated: 2025-08-15*
+## Contact
+
+For questions or improvements, please reference:
+- **Project**: DA-156 Name Matching POC
+- **Repository**: conflixis-data-projects
+- **Related PR**: conflixis-engine#1362

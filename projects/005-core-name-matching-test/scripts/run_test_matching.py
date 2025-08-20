@@ -195,7 +195,7 @@ class TestRunner:
         
         print(f"Completed processing {len(self.test_df)} pairs")
         
-    def save_results(self, output_dir: str = 'test_data'):
+    def save_results(self, output_dir: str = 'test-data/test-results'):
         """Save test results to CSV."""
         timestamp = datetime.now().strftime('%Y%m%d_%H%M%S')
         
@@ -218,10 +218,6 @@ class TestRunner:
         results_df.to_csv(output_file, index=False)
         
         print(f"Results saved to {output_file}")
-        
-        # Also save as latest for easy access
-        latest_file = os.path.join(output_dir, f'test_results_{algo_name}_latest.csv')
-        results_df.to_csv(latest_file, index=False)
         
         return output_file
     
@@ -319,12 +315,12 @@ class TestRunner:
 def main():
     """Main execution function."""
     parser = argparse.ArgumentParser(description='Run name matching tests')
-    parser.add_argument('--test-file', default='test_data/test_dataset.csv',
+    parser.add_argument('--test-file', default='test-data/test-data-inputs/test_dataset.csv',
                        help='Path to test dataset CSV')
     parser.add_argument('--algorithm', default='fuzzy',
                        choices=['fuzzy', 'simple', 'tier2', 'multi_tier'],
                        help='Matching algorithm to use')
-    parser.add_argument('--output-dir', default='test_data',
+    parser.add_argument('--output-dir', default='test-data/test-results',
                        help='Directory to save results')
     parser.add_argument('--model', default=None,
                        help='OpenAI model to use for Tier 2/3 (e.g., gpt-4o-mini, gpt-4o, gpt-5-nano)')
