@@ -38,25 +38,15 @@ class DisclosureRecord(BaseModel):
     relationship_type: str
     financial_amount: float = Field(ge=0)
     
-    open_payments_total: Optional[float] = Field(default=0, ge=0)
-    open_payments_matched: bool = False
-    
     review_status: ReviewStatus = ReviewStatus.PENDING
     risk_tier: RiskTier
     risk_score: int = Field(ge=0, le=100)
-    
-    management_plan_required: bool = False
-    recusal_required: bool = False
     
     disclosure_date: str
     relationship_start_date: Optional[str] = None
     relationship_ongoing: bool = True
     last_review_date: Optional[str] = None
     next_review_date: Optional[str] = None
-    
-    decision_authority_level: str = "staff"
-    equity_percentage: float = Field(default=0, ge=0, le=100)
-    board_position: bool = False
     
     person_with_interest: Optional[str] = None
     notes: Optional[str] = None
@@ -67,6 +57,9 @@ class DisclosureRecord(BaseModel):
     document_id: Optional[str] = None
     provider_email: Optional[str] = None
     reporter_user_id: Optional[str] = None
+    created_at: Optional[str] = None
+    updated_at: Optional[str] = None
+    manager_name: Optional[str] = None
 
 
 class DisclosureFilter(BaseModel):
@@ -79,7 +72,6 @@ class DisclosureFilter(BaseModel):
     max_amount: Optional[float] = Field(default=None, ge=0)
     start_date: Optional[str] = None
     end_date: Optional[str] = None
-    management_plan_required: Optional[bool] = None
     is_research: Optional[bool] = None
 
 
@@ -100,10 +92,8 @@ class DisclosureStats(BaseModel):
     average_amount: float
     median_amount: float
     max_amount: float
-    management_plans_required: int
     unique_providers: int
     unique_entities: int
-    open_payments_matched: int
     research_disclosures: int
 
 

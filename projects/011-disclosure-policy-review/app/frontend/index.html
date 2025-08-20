@@ -8,6 +8,65 @@
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     
+    <!-- Modal Animation Styles -->
+    <style>
+        @keyframes modalFadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+        
+        @keyframes modalSlideIn {
+            from {
+                opacity: 0;
+                transform: translateY(-20px) scale(0.95);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0) scale(1);
+            }
+        }
+        
+        @keyframes modalFadeOut {
+            from {
+                opacity: 1;
+            }
+            to {
+                opacity: 0;
+            }
+        }
+        
+        @keyframes modalSlideOut {
+            from {
+                opacity: 1;
+                transform: translateY(0) scale(1);
+            }
+            to {
+                opacity: 0;
+                transform: translateY(-20px) scale(0.95);
+            }
+        }
+        
+        .modal-backdrop {
+            animation: modalFadeIn 0.3s ease-out;
+        }
+        
+        .modal-backdrop.closing {
+            animation: modalFadeOut 0.2s ease-out;
+        }
+        
+        .modal-content {
+            animation: modalSlideIn 0.3s ease-out;
+        }
+        
+        .modal-content.closing {
+            animation: modalSlideOut 0.2s ease-out;
+        }
+    </style>
+    
     <!-- Configure Tailwind with Conflixis colors -->
     <script>
         tailwind.config = {
@@ -220,6 +279,30 @@
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
                                     </svg>
                                     <span>ReDoc</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/forms-showcase" target="_blank" class="flex items-center gap-3 px-4 py-2 text-sm rounded-lg text-gray-600 hover:bg-gray-50 hover:text-conflixis-green transition-colors">
+                                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z" />
+                                    </svg>
+                                    <span>Forms Showcase</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/configuration" class="flex items-center gap-3 px-4 py-2 text-sm rounded-lg text-gray-600 hover:bg-gray-50 hover:text-conflixis-green transition-colors">
+                                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4" />
+                                    </svg>
+                                    <span>Configuration</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/data-dictionary" class="flex items-center gap-3 px-4 py-2 text-sm rounded-lg text-gray-600 hover:bg-gray-50 hover:text-conflixis-green transition-colors">
+                                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+                                    </svg>
+                                    <span>Data Dictionary</span>
                                 </a>
                             </li>
                         </ul>
@@ -526,9 +609,9 @@
 
     <!-- Detail Modal -->
     <div id="detailModal" class="fixed inset-0 z-50 hidden">
-        <div class="modal-backdrop fixed inset-0" onclick="closeModal()"></div>
+        <div class="modal-backdrop fixed inset-0 bg-black bg-opacity-50" onclick="closeModal()"></div>
         <div class="flex items-center justify-center min-h-screen p-4">
-            <div class="bg-white rounded-lg shadow-2xl max-w-4xl w-full max-h-[90vh] overflow-y-auto relative animate-fade-in">
+            <div class="modal-content bg-white rounded-lg shadow-2xl max-w-4xl w-full max-h-[90vh] overflow-y-auto relative">
                 <div class="sticky top-0 bg-white border-b border-gray-200 p-6 flex justify-between items-start">
                     <h3 class="text-2xl font-bold text-conflixis-green">Disclosure Details</h3>
                     <button onclick="closeModal()" class="text-gray-500 hover:text-gray-700">
@@ -950,6 +1033,12 @@
             const modal = document.getElementById('detailModal');
             const content = document.getElementById('modalContent');
             const modalTitle = document.querySelector('#detailModal h3');
+            const backdrop = modal.querySelector('.modal-backdrop');
+            const modalBox = modal.querySelector('.modal-content');
+            
+            // Remove any closing classes
+            backdrop.classList.remove('closing');
+            modalBox.classList.remove('closing');
             
             // Update modal title to show category and type  
             modalTitle.innerHTML = `${record.category_label || 'Disclosure'} - ${record.relationship_type || 'Details'}`;
@@ -961,54 +1050,80 @@
                 critical: 'text-red-600 bg-red-50'
             }[record.risk_tier] || 'text-gray-600 bg-gray-50';
             
-            // Get the appropriate form content
-            let formContent = getFormContent(record);
-            
             content.innerHTML = `
-                <div class="space-y-6">
-                    <!-- Category Badge and Overview -->
-                    <div class="flex items-center justify-between border-b pb-4">
-                        <div>
-                            <span class="inline-block px-3 py-1 rounded-full text-xs font-semibold mr-2
-                                ${getCategoryColor(record.category_label)}">
+                <div class="space-y-4">
+                    <!-- Section 1: Person Information -->
+                    <div class="bg-white border border-gray-200 rounded-lg p-4">
+                        <h5 class="font-semibold text-sm mb-3 text-gray-700 uppercase tracking-wide">Person Information</h5>
+                        <div class="grid grid-cols-2 gap-x-4 gap-y-2">
+                            <div>
+                                <label class="text-xs text-gray-500">Name</label>
+                                <p class="text-sm font-medium">${record.provider_name}</p>
+                            </div>
+                            <div>
+                                <label class="text-xs text-gray-500">Manager</label>
+                                <p class="text-sm">${record.manager_name || 'Not specified'}</p>
+                            </div>
+                            <div>
+                                <label class="text-xs text-gray-500">Job Title</label>
+                                <p class="text-sm">${record.job_title || 'Not specified'}</p>
+                            </div>
+                            <div>
+                                <label class="text-xs text-gray-500">Department</label>
+                                <p class="text-sm">${record.department || 'Healthcare'}</p>
+                            </div>
+                            <div>
+                                <label class="text-xs text-gray-500">Entity</label>
+                                <p class="text-sm">${record.entity || 'Not specified'}</p>
+                            </div>
+                            <div>
+                                <label class="text-xs text-gray-500">NPI</label>
+                                <p class="text-sm font-mono">${record.provider_npi || 'N/A'}</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Section 2: Disclosure Information -->
+                    <div class="bg-white border border-gray-200 rounded-lg p-4">
+                        <h5 class="font-semibold text-sm mb-3 text-gray-700 uppercase tracking-wide">Disclosure Information</h5>
+                        <div class="mb-2 flex items-center gap-2">
+                            <span class="inline-block px-2 py-1 rounded text-xs font-semibold ${getCategoryColor(record.category_label)}">
                                 ${record.category_label}
                             </span>
-                            <span class="text-sm text-gray-600">${record.relationship_type}</span>
+                            <span class="text-xs text-gray-600">${record.relationship_type}</span>
                         </div>
-                        <div class="text-right">
-                            <span class="inline-block px-3 py-1 rounded-lg text-xs font-semibold ${riskColor}">
-                                ${record.risk_tier.toUpperCase()} RISK
-                            </span>
-                        </div>
+                        ${getCompactFormContent(record)}
                     </div>
                     
-                    <!-- Provider Information Card -->
-                    <div class="bg-gradient-to-r from-conflixis-green to-teal-700 text-white rounded-lg p-4">
-                        <div class="flex items-start justify-between">
+                    <!-- Section 3: Management & Review Status -->
+                    <div class="bg-white border border-gray-200 rounded-lg p-4">
+                        <h5 class="font-semibold text-sm mb-3 text-gray-700 uppercase tracking-wide">Management & Review Status</h5>
+                        <div class="grid grid-cols-2 gap-x-4 gap-y-2">
                             <div>
-                                <h4 class="text-lg font-bold">${record.provider_name}</h4>
-                                <p class="text-sm opacity-90">${record.job_title || 'Not Specified'}</p>
-                                <p class="text-sm opacity-90">${record.department || 'Healthcare'}</p>
+                                <label class="text-xs text-gray-500">Risk Tier</label>
+                                <span class="inline-block px-2 py-1 rounded text-xs font-semibold ${riskColor}">
+                                    ${record.risk_tier.toUpperCase()}
+                                </span>
                             </div>
-                            <div class="text-right">
-                                <p class="text-xs opacity-75">NPI</p>
-                                <p class="font-mono text-sm">${record.provider_npi || 'N/A'}</p>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!-- Dynamic Form Content -->
-                    <div>
-                        <h4 class="text-sm font-semibold text-gray-500 mb-3">Disclosure Form</h4>
-                        ${formContent}
-                    </div>
-                    
-                    <!-- Financial Summary -->
-                    <div class="bg-gradient-to-r from-conflixis-gold to-yellow-400 text-white rounded-lg p-4">
-                        <div class="flex items-center justify-between">
                             <div>
-                                <p class="text-xs opacity-90 uppercase">Total Disclosed Amount</p>
-                                <p class="text-3xl font-bold">
+                                <label class="text-xs text-gray-500">Review Status</label>
+                                <p class="text-sm capitalize">${record.review_status.replace('_', ' ')}</p>
+                            </div>
+                            <div>
+                                <label class="text-xs text-gray-500">Management Plan</label>
+                                <p class="text-sm ${record.management_plan_required ? 'text-red-600 font-semibold' : 'text-green-600'}">${record.management_plan_required ? 'Required' : 'Not Required'}</p>
+                            </div>
+                            <div>
+                                <label class="text-xs text-gray-500">Last Review</label>
+                                <p class="text-sm">${record.last_review_date}</p>
+                            </div>
+                            <div>
+                                <label class="text-xs text-gray-500">Next Review</label>
+                                <p class="text-sm">${record.next_review_date}</p>
+                            </div>
+                            <div>
+                                <label class="text-xs text-gray-500">Total Amount</label>
+                                <p class="text-sm font-semibold">
                                     ${record.financial_amount === null || record.financial_amount === undefined ? 
                                         'N/A' : 
                                         record.financial_amount === 0 ? 
@@ -1017,36 +1132,13 @@
                                 </p>
                             </div>
                             ${record.open_payments_total > 0 ? `
-                            <div class="text-right">
-                                <p class="text-xs opacity-90">Open Payments Match</p>
-                                <p class="text-lg font-semibold">$${record.open_payments_total.toLocaleString()}</p>
+                            <div>
+                                <label class="text-xs text-gray-500">Open Payments</label>
+                                <p class="text-sm font-semibold text-conflixis-blue">$${record.open_payments_total.toLocaleString()}</p>
                             </div>
                             ` : ''}
                         </div>
                     </div>
-                    
-                    <!-- Management Actions -->
-                    <div>
-                        <h4 class="text-sm font-semibold text-gray-500 mb-3">Management & Review</h4>
-                        <div class="bg-gray-50 rounded-lg p-4">
-                            <div class="grid grid-cols-2 gap-4">
-                                <div class="border-l-4 border-conflixis-blue pl-3">
-                                    <span class="text-xs text-gray-500">Review Status</span>
-                                    <p class="font-semibold capitalize">${record.review_status.replace('_', ' ')}</p>
-                                </div>
-                                <div class="border-l-4 ${record.management_plan_required ? 'border-red-500' : 'border-green-500'} pl-3">
-                                    <span class="text-xs text-gray-500">Management Plan</span>
-                                    <p class="font-semibold">${record.management_plan_required ? 'Required' : 'Not Required'}</p>
-                                </div>
-                                <div class="border-l-4 border-gray-400 pl-3">
-                                    <span class="text-xs text-gray-500">Last Review</span>
-                                    <p class="font-semibold">${record.last_review_date}</p>
-                                </div>
-                                <div class="border-l-4 border-purple-500 pl-3">
-                                    <span class="text-xs text-gray-500">Next Review</span>
-                                    <p class="font-semibold">${record.next_review_date}</p>
-                                </div>
-                            </div>
                         </div>
                     </div>
                     
@@ -1088,6 +1180,204 @@
         }
         
         // Get form content based on category and type
+        // Get compact form content for disclosure-specific fields
+        function getCompactFormContent(record) {
+            const category = record.category_label;
+            const type = record.relationship_type;
+            
+            // External Roles & Relationships Forms
+            if (category === 'External Roles & Relationships') {
+                if (type === 'Related Parties') {
+                    return `
+                        <div class="grid grid-cols-2 gap-x-4 gap-y-2">
+                            <div>
+                                <label class="text-xs text-gray-500">Related Person</label>
+                                <p class="text-sm">${record.entity_name || 'Not specified'}</p>
+                            </div>
+                            <div>
+                                <label class="text-xs text-gray-500">Relationship</label>
+                                <p class="text-sm">Family Member</p>
+                            </div>
+                            <div>
+                                <label class="text-xs text-gray-500">Their Entity</label>
+                                <p class="text-sm">${record.department || 'Texas Health'}</p>
+                            </div>
+                            <div>
+                                <label class="text-xs text-gray-500">Their Title</label>
+                                <p class="text-sm">${record.job_title || 'Not specified'}</p>
+                            </div>
+                            ${record.notes ? `
+                            <div class="col-span-2">
+                                <label class="text-xs text-gray-500">Notes</label>
+                                <p class="text-sm italic">${record.notes}</p>
+                            </div>
+                            ` : ''}
+                        </div>
+                    `;
+                } else if (type === 'Governance/Director Fees') {
+                    return `
+                        <div class="grid grid-cols-2 gap-x-4 gap-y-2">
+                            <div>
+                                <label class="text-xs text-gray-500">Organization</label>
+                                <p class="text-sm">${record.entity_name}</p>
+                            </div>
+                            <div>
+                                <label class="text-xs text-gray-500">Position</label>
+                                <p class="text-sm">Board Member</p>
+                            </div>
+                            <div>
+                                <label class="text-xs text-gray-500">Annual Fees</label>
+                                <p class="text-sm font-semibold">$${(record.financial_amount || 0).toLocaleString()}</p>
+                            </div>
+                            <div>
+                                <label class="text-xs text-gray-500">Start Date</label>
+                                <p class="text-sm">${record.submission_date}</p>
+                            </div>
+                        </div>
+                    `;
+                } else if (type === 'Industry Relationships') {
+                    return `
+                        <div class="grid grid-cols-2 gap-x-4 gap-y-2">
+                            <div>
+                                <label class="text-xs text-gray-500">Company</label>
+                                <p class="text-sm">${record.entity_name}</p>
+                            </div>
+                            <div>
+                                <label class="text-xs text-gray-500">Relationship Type</label>
+                                <p class="text-sm">${record.disclosure_type || 'Consulting'}</p>
+                            </div>
+                            <div>
+                                <label class="text-xs text-gray-500">Annual Value</label>
+                                <p class="text-sm font-semibold">$${(record.financial_amount || 0).toLocaleString()}</p>
+                            </div>
+                            <div>
+                                <label class="text-xs text-gray-500">Status</label>
+                                <p class="text-sm">Active</p>
+                            </div>
+                        </div>
+                    `;
+                }
+            }
+            
+            // Healthcare Industry Relationships
+            if (category === 'Healthcare Industry Relationships') {
+                if (type === 'Speaker Bureaus') {
+                    return `
+                        <div class="grid grid-cols-2 gap-x-4 gap-y-2">
+                            <div>
+                                <label class="text-xs text-gray-500">Company</label>
+                                <p class="text-sm">${record.entity_name}</p>
+                            </div>
+                            <div>
+                                <label class="text-xs text-gray-500">Product/Topic</label>
+                                <p class="text-sm">${record.disclosure_type || 'Medical Device'}</p>
+                            </div>
+                            <div>
+                                <label class="text-xs text-gray-500">Annual Honoraria</label>
+                                <p class="text-sm font-semibold">$${(record.financial_amount || 0).toLocaleString()}</p>
+                            </div>
+                            <div>
+                                <label class="text-xs text-gray-500">Events/Year</label>
+                                <p class="text-sm">12</p>
+                            </div>
+                        </div>
+                    `;
+                } else if (type === 'Consulting Agreements') {
+                    return `
+                        <div class="grid grid-cols-2 gap-x-4 gap-y-2">
+                            <div>
+                                <label class="text-xs text-gray-500">Company</label>
+                                <p class="text-sm">${record.entity_name}</p>
+                            </div>
+                            <div>
+                                <label class="text-xs text-gray-500">Service Type</label>
+                                <p class="text-sm">Advisory Board</p>
+                            </div>
+                            <div>
+                                <label class="text-xs text-gray-500">Annual Fees</label>
+                                <p class="text-sm font-semibold">$${(record.financial_amount || 0).toLocaleString()}</p>
+                            </div>
+                            <div>
+                                <label class="text-xs text-gray-500">Contract Period</label>
+                                <p class="text-sm">12 months</p>
+                            </div>
+                        </div>
+                    `;
+                }
+            }
+            
+            // Research Interests
+            if (category === 'Research Interests') {
+                if (type === 'Clinical Research') {
+                    return `
+                        <div class="grid grid-cols-2 gap-x-4 gap-y-2">
+                            <div>
+                                <label class="text-xs text-gray-500">Study Sponsor</label>
+                                <p class="text-sm">${record.entity_name}</p>
+                            </div>
+                            <div>
+                                <label class="text-xs text-gray-500">Your Role</label>
+                                <p class="text-sm">Principal Investigator</p>
+                            </div>
+                            <div>
+                                <label class="text-xs text-gray-500">Study Budget</label>
+                                <p class="text-sm font-semibold">$${(record.financial_amount || 0).toLocaleString()}</p>
+                            </div>
+                            <div>
+                                <label class="text-xs text-gray-500">Study Phase</label>
+                                <p class="text-sm">Phase III</p>
+                            </div>
+                        </div>
+                    `;
+                } else if (type === 'Patents/IP') {
+                    return `
+                        <div class="grid grid-cols-2 gap-x-4 gap-y-2">
+                            <div>
+                                <label class="text-xs text-gray-500">Patent Title</label>
+                                <p class="text-sm">${record.entity_name || 'Medical Device Innovation'}</p>
+                            </div>
+                            <div>
+                                <label class="text-xs text-gray-500">Status</label>
+                                <p class="text-sm">Pending</p>
+                            </div>
+                            <div>
+                                <label class="text-xs text-gray-500">Potential Value</label>
+                                <p class="text-sm font-semibold">$${(record.financial_amount || 0).toLocaleString()}</p>
+                            </div>
+                            <div>
+                                <label class="text-xs text-gray-500">Filing Date</label>
+                                <p class="text-sm">${record.submission_date}</p>
+                            </div>
+                        </div>
+                    `;
+                }
+            }
+            
+            // Default/Generic Form
+            return `
+                <div class="grid grid-cols-2 gap-x-4 gap-y-2">
+                    <div>
+                        <label class="text-xs text-gray-500">Entity</label>
+                        <p class="text-sm">${record.entity_name || 'Not specified'}</p>
+                    </div>
+                    <div>
+                        <label class="text-xs text-gray-500">Type</label>
+                        <p class="text-sm">${record.disclosure_type || record.relationship_type}</p>
+                    </div>
+                    ${record.financial_amount !== null && record.financial_amount !== undefined ? `
+                    <div>
+                        <label class="text-xs text-gray-500">Amount</label>
+                        <p class="text-sm font-semibold">$${record.financial_amount.toLocaleString()}</p>
+                    </div>
+                    ` : ''}
+                    <div>
+                        <label class="text-xs text-gray-500">Date</label>
+                        <p class="text-sm">${record.submission_date}</p>
+                    </div>
+                </div>
+            `;
+        }
+        
         function getFormContent(record) {
             const category = record.category_label;
             const type = record.relationship_type;
@@ -1370,7 +1660,20 @@
 
         // Close modal
         function closeModal() {
-            document.getElementById('detailModal').classList.add('hidden');
+            const modal = document.getElementById('detailModal');
+            const backdrop = modal.querySelector('.modal-backdrop');
+            const modalBox = modal.querySelector('.modal-content');
+            
+            // Add closing animation classes
+            backdrop.classList.add('closing');
+            modalBox.classList.add('closing');
+            
+            // Wait for animation to complete before hiding
+            setTimeout(() => {
+                modal.classList.add('hidden');
+                backdrop.classList.remove('closing');
+                modalBox.classList.remove('closing');
+            }, 200);
         }
 
         // Export data

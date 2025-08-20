@@ -1,5 +1,11 @@
 # COI Disclosure Policy Review Project Dependencies
 
+# Web Framework
+fastapi>=0.104.0
+uvicorn>=0.24.0
+mangum>=0.17.0  # For Vercel/AWS Lambda adapter
+pydantic>=2.0.0
+
 # Core data processing
 pandas>=2.0.0
 numpy>=1.24.0
@@ -9,10 +15,14 @@ pyarrow>=14.0.0  # For Parquet support
 google-cloud-bigquery>=3.10.0
 google-cloud-storage>=2.10.0
 google-auth>=2.20.0
+google-genai>=0.1.0  # For Gemini API
 
 # Configuration
 python-dotenv>=1.0.0
 pyyaml>=6.0
+
+# Authentication (for future Clerk integration)
+# clerk-python>=0.7.0  # Uncomment when ready to integrate Clerk
 
 # Utilities
 pathlib

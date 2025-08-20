@@ -67,7 +67,6 @@ class DataService:
                 max_amount=filters.max_amount,
                 start_date=filters.start_date,
                 end_date=filters.end_date,
-                management_plan_required=filters.management_plan_required,
                 is_research=filters.is_research
             )
         else:
@@ -193,7 +192,6 @@ class DataService:
                 max_amount=filters.max_amount,
                 start_date=filters.start_date,
                 end_date=filters.end_date,
-                management_plan_required=filters.management_plan_required,
                 is_research=filters.is_research
             )
         else:
