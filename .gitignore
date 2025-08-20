@@ -65,3 +65,11 @@ build/
 *.cache
 *.pkl
 *.parquet
+
+# RX-OP Enhanced project data files
+/projects/012-rx-op-enhanced/mfg-spec-data/
+/projects/012-rx-op-enhanced/mfg-spec-data/*.rds
+/projects/012-rx-op-enhanced/*.rds
+
+# R data files
+*.rds
