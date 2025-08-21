@@ -1,6 +1,7 @@
 # Data directories (contain sensitive information)
 data/
 test_output/
+test-data/
 
 # Environment files
 .env

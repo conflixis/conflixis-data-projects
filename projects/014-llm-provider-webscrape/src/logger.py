@@ -9,7 +9,7 @@ import json
 from datetime import datetime
 from pathlib import Path
 from logging.handlers import RotatingFileHandler, TimedRotatingFileHandler
-from typing import Dict, Any, Optional
+from typing import Dict, Any, Optional, List
 
 def setup_logger(
     name: str, 

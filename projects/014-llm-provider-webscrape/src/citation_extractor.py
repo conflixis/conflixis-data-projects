@@ -111,7 +111,13 @@ class CitationExtractor:
         if sentence_end != -1:
             after = after[:sentence_end + 1]
         
-        return (before + text[start:end] + after).strip()
+        context = (before + text[start:end] + after).strip()
+        
+        # Clean up the context - remove broken citations and markdown artifacts
+        context = re.sub(r'\*\*', '', context)  # Remove bold markdown
+        context = re.sub(r'\s+', ' ', context)  # Normalize whitespace
+        
+        return context
     
     def _create_citation(self, url: str, context: str, citation_type: str) -> Optional[Dict]:
         """

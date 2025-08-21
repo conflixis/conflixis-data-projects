@@ -271,6 +271,9 @@ class ProfileParser:
         """
         profile = self._get_empty_profile()
         
+        # Clean up text - remove incomplete citations and truncated content
+        text = self._clean_text_response(text)
+        
         # Extract name
         name_match = re.search(r'(?:Dr\.|Doctor|Prof\.|Professor)?\s*([A-Z][a-z]+(?:\s+[A-Z][a-z]+)+)', text)
         if name_match:
@@ -281,20 +284,36 @@ class ProfileParser:
         if npi_match:
             profile['basic_info']['npi'] = npi_match.group(1)
         
-        # Extract specialty
-        specialty_match = re.search(r'(?:specialty|specializes in)[:\s]+([^\n,.]+)', text, re.IGNORECASE)
-        if specialty_match:
-            profile['basic_info']['specialty'] = specialty_match.group(1).strip()
+        # Extract specialty - improved to handle truncated text
+        specialty_patterns = [
+            r'(?:specialty|specializes in)[:\s]+([^\n,.(\[]+)',
+            r'"specialty"[:\s]*"([^"]+)"',
+            r'Board Certified in ([^\n,.(\[]+)'
+        ]
+        for pattern in specialty_patterns:
+            specialty_match = re.search(pattern, text, re.IGNORECASE)
+            if specialty_match:
+                specialty = specialty_match.group(1).strip()
+                # Clean up any trailing artifacts
+                specialty = re.sub(r'\s*\*+\s*$', '', specialty)
+                specialty = re.sub(r'\s*\([^\)]*$', '', specialty)  # Remove incomplete citations
+                profile['basic_info']['specialty'] = specialty
+                break
         
-        # Extract positions (look for titles)
+        # Extract positions (look for titles) - with deduplication
         titles = ['Chief', 'Director', 'Chair', 'Head', 'Professor', 'Physician', 'Doctor']
+        seen_positions = set()
         for title in titles:
             pattern = rf'{title}[^,\n]*(?:at|of|,)[^,\n]+'
             matches = re.findall(pattern, text)
             for match in matches:
                 position = self._parse_position_from_text(match)
                 if position:
-                    profile['professional']['current_positions'].append(position)
+                    # Create a normalized key for deduplication
+                    pos_key = f"{position.get('title', '')}_{position.get('organization', '')}".lower()
+                    if pos_key not in seen_positions:
+                        profile['professional']['current_positions'].append(position)
+                        seen_positions.add(pos_key)
         
         # Extract education
         edu_patterns = [
@@ -305,45 +324,94 @@ class ProfileParser:
             matches = re.findall(pattern, text, re.IGNORECASE)
             for match in matches:
                 if 'medical' in match.lower() or 'md' in match.lower():
-                    profile['education']['medical_school'] = {'institution': match.strip()}
+                    institution = match.strip()
+                    # Clean up institution name
+                    institution = re.sub(r'\s*\([^\)]*$', '', institution)
+                    institution = re.sub(r'\s*\*+\s*$', '', institution)
+                    profile['education']['medical_school'] = {'institution': institution}
                     break
         
         return profile
     
+    def _clean_text_response(self, text: str) -> str:
+        """Clean up text response to remove artifacts and incomplete content."""
+        # Remove inline citations that may be truncated
+        text = re.sub(r'\([^\)]*\[(?:Source|http)[^\]]*\](?:[^\)]*\))?', '', text)
+        # Remove standalone URLs in markdown format
+        text = re.sub(r'\[(?:Source|http)[^\]]*\]', '', text)
+        # Remove incomplete markdown links
+        text = re.sub(r'\([^\)]*(?:utm_source|http)[^\)]*$', '', text)
+        # Remove double asterisks
+        text = re.sub(r'\*\*', '', text)
+        # Clean up extra whitespace
+        text = re.sub(r'\s+', ' ', text)
+        return text
+    
     def _parse_position_from_text(self, text: str) -> Optional[Dict]:
         """Parse a position from text."""
+        # Clean up the text first
+        text = self._clean_text_response(text)
+        
         # Try to split into title and organization
-        parts = re.split(r'\s+(?:at|of)\s+', text, maxsplit=1)
+        parts = re.split(r'\s+(?:at|of|with)\s+', text, maxsplit=1)
         if len(parts) == 2:
-            return {
-                'title': parts[0].strip(),
-                'organization': parts[1].strip()
-            }
+            title = parts[0].strip()
+            org = parts[1].strip()
+            
+            # Clean up organization name - remove citations and artifacts
+            org = re.sub(r'\s*\([^\)]*$', '', org)  # Remove incomplete parentheses
+            org = re.sub(r'\s*\[[^\]]*$', '', org)  # Remove incomplete brackets
+            org = re.sub(r'"$', '', org)  # Remove trailing quotes
+            
+            # Only return if we have meaningful content
+            if title and org and len(title) > 2 and len(org) > 2:
+                return {
+                    'title': title,
+                    'organization': org
+                }
         return None
     
     def _parse_positions(self, positions: Any) -> List[Dict]:
-        """Parse position data into standard format."""
+        """Parse position data into standard format with deduplication."""
         if not positions:
             return []
         
         positions = self._ensure_list(positions)
         parsed = []
+        seen = set()
         
         for pos in positions:
             if isinstance(pos, dict):
-                parsed.append({
-                    'title': pos.get('title', ''),
-                    'organization': pos.get('organization', ''),
-                    'department': pos.get('department', ''),
-                    'start_date': pos.get('start_date', ''),
-                    'end_date': pos.get('end_date', ''),
-                    'location': pos.get('location', '')
-                })
+                title = pos.get('title', '').strip()
+                org = pos.get('organization', '').strip()
+                
+                # Clean up organization for comparison
+                org_clean = re.sub(r'\([^)]*\)', '', org)  # Remove content in parentheses
+                org_clean = re.sub(r'\[[^\]]*\]', '', org_clean)  # Remove content in brackets
+                org_clean = re.sub(r'\s+', ' ', org_clean).strip()
+                
+                # Create deduplication key
+                key = f"{title.lower()}_{org_clean.lower()}"
+                
+                if key not in seen and title and org:
+                    parsed.append({
+                        'title': title,
+                        'organization': org_clean,
+                        'department': pos.get('department', ''),
+                        'start_date': pos.get('start_date', ''),
+                        'end_date': pos.get('end_date', ''),
+                        'location': pos.get('location', '')
+                    })
+                    seen.add(key)
+                    
             elif isinstance(pos, str):
                 # Try to parse string position
                 position = self._parse_position_from_text(pos)
                 if position:
-                    parsed.append(position)
+                    key = f"{position['title'].lower()}_{position['organization'].lower()}"
+                    if key not in seen:
+                        parsed.append(position)
+                        seen.add(key)
         
         return parsed
     

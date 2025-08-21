@@ -218,9 +218,6 @@ class ProviderProfileScraper:
                         "format": {"type": "text"},
                         "verbosity": "medium"
                     },
-                    reasoning={
-                        "effort": "medium"
-                    },
                     tools=[
                         {
                             "type": "web_search_preview",
