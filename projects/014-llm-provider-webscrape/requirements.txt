@@ -1,0 +1,14 @@
+# Provider Profile Web Enrichment Requirements
+# DA-173: Provider Profile Web Enrichment POC
+
+# Core dependencies
+openai>=1.0.0
+python-dotenv>=1.0.0
+pyyaml>=6.0
+requests>=2.31.0
+
+# Data processing
+pandas>=2.0.0
+
+# Utilities
+pathlib2>=2.3.7
