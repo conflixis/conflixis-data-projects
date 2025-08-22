@@ -10,6 +10,20 @@ This document describes all fields extracted from the THR disclosure data, organ
 - **Group ID**: gcO9AHYlNSzFeGTRSFRa
 - **Campaign ID**: qyH2ggzVV0WLkuRfem7S
 
+## Output Formats
+
+The extraction script generates data in multiple formats:
+
+1. **CSV** - Standard comma-separated values with all 52 fields
+2. **Excel Workbook** - Multi-sheet workbook with:
+   - Executive Summary with key metrics and risk distribution
+   - All Disclosures (complete dataset with filters)
+   - Category-specific sheets (External Roles, Financial, Open Payments, Political, Legal)
+   - Open Payments Transactions (detailed transaction-level records)
+   - Data Dictionary (field definitions and descriptions)
+3. **Parquet** - Compressed columnar format for analytical workloads
+4. **JSON** - Structured format with metadata for web applications
+
 ## Disclosure Categories Summary
 1. **External Roles & Relationships** (458 disclosures)
 2. **Financial & Investment Interests** (295 disclosures)

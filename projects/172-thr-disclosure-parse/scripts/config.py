@@ -51,7 +51,7 @@ def get_risk_tier(amount):
         return 'critical'
 
 # Export Configuration
-EXPORT_FORMATS = ['csv', 'parquet', 'json']  # Formats to export
+EXPORT_FORMATS = ['csv', 'parquet', 'json', 'excel']  # Formats to export
 DATE_FORMAT = '%Y-%m-%d'
 TIMESTAMP_FORMAT = '%Y-%m-%d %H:%M:%S'
 

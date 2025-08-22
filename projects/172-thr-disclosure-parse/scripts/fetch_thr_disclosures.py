@@ -549,6 +549,40 @@ def export_data(df):
     df.to_csv(csv_path, index=False)
     logger.info(f"✓ CSV exported to: {csv_path}")
     
+    # Export to Excel workbook with multiple sheets
+    if 'excel' in config.EXPORT_FORMATS:
+        try:
+            from excel_exporter import export_to_excel
+            
+            # Try to load transactions data if available
+            transactions_df = None
+            try:
+                # Look for most recent transactions file
+                import glob
+                trans_files = glob.glob(str(config.OUTPUT_DIR / "thr_op_transactions_*.csv"))
+                if trans_files:
+                    latest_trans = max(trans_files)
+                    transactions_df = pd.read_csv(latest_trans)
+                    logger.info(f"Loading transactions from: {latest_trans}")
+            except Exception as e:
+                logger.warning(f"Could not load transactions data: {e}")
+            
+            # Create a copy and remove timezone info from all datetime columns
+            excel_df = df.copy()
+            for col in excel_df.columns:
+                if pd.api.types.is_datetime64_any_dtype(excel_df[col]):
+                    # Remove timezone info if present
+                    if hasattr(excel_df[col], 'dt') and hasattr(excel_df[col].dt, 'tz'):
+                        excel_df[col] = excel_df[col].dt.tz_localize(None)
+            
+            excel_path = config.OUTPUT_DIR / f"thr_disclosures_analysis_{timestamp}.xlsx"
+            export_to_excel(excel_df, transactions_df, excel_path)
+            logger.info(f"✓ Excel workbook exported to: {excel_path}")
+        except ImportError:
+            logger.warning("Excel export requires xlsxwriter. Install with: pip install xlsxwriter")
+        except Exception as e:
+            logger.error(f"Error creating Excel workbook: {e}")
+    
     # Export to Parquet for performance
     if 'parquet' in config.EXPORT_FORMATS:
         parquet_path = config.OUTPUT_DIR / f"thr_disclosures_{timestamp}.parquet"
