@@ -1,180 +1,250 @@
 # THR Disclosure Data Dictionary
 
 ## Overview
-This document describes all fields extracted from the THR disclosure data, including their sources, data types, and business rules.
+This document describes all fields extracted from the THR disclosure data, organized by disclosure category and type.
 
 ## Data Sources
 - **Primary**: `conflixis-engine.firestore_export.disclosures_raw_latest`
 - **Member Data**: `conflixis-engine.firestore_export.member_shards_raw_latest_parsed`
+- **Form Structure**: `conflixis-engine.firestore_export.disclosure_forms_raw_latest`
 - **Group ID**: gcO9AHYlNSzFeGTRSFRa
 - **Campaign ID**: qyH2ggzVV0WLkuRfem7S
 
-## Main Disclosure Fields (thr_disclosures_*.csv)
+## Disclosure Categories Summary
+1. **External Roles & Relationships** (458 disclosures)
+2. **Financial & Investment Interests** (295 disclosures)
+3. **Political, Community, and Advocacy Activities** (304 disclosures)
+4. **Legal, Regulatory, Ethical, and Compliance Matters** (101 disclosures)
+5. **Open Payments (CMS Imports)** (142 disclosures)
 
-### Identity & Document Fields
+---
 
-| Field Name | Data Type | Source Path | Description | Example |
-|------------|-----------|-------------|-------------|---------|
-| `document_id` | string | `document_id` | Unique identifier for each disclosure | "FtI8SQcb7KXSQgEc6CQa" |
-| `id` | string | `document_id` | Duplicate of document_id for backwards compatibility | "FtI8SQcb7KXSQgEc6CQa" |
-| `provider_name` | string | `$.reporter.name` | Name of the person making the disclosure | "Dr. Jane Smith" |
-| `provider_npi` | string | Member join | National Provider Identifier from member data | "1234567890" |
-| `provider_email` | string | `$.reporter.email` | Email address of the reporter | "jane.smith@texashealth.org" |
-| `person_with_interest` | string | Dynamic field extraction | Person the disclosure is about (may differ from reporter) | "John Doe" |
+## COMMON FIELDS (All Disclosures)
 
-### Organizational Fields
+### Core Identity Fields
+| Field Name | Data Type | Description | Example |
+|------------|-----------|-------------|---------|
+| `document_id` | string | Unique identifier for each disclosure | "FtI8SQcb7KXSQgEc6CQa" |
+| `provider_name` | string | Name of the person making the disclosure | "Dr. Jane Smith" |
+| `provider_email` | string | Email address of the reporter | "jane.smith@texashealth.org" |
+| `provider_npi` | string | National Provider Identifier from member data | "1234567890" |
+| `job_title` | string | Job title from member data | "Physician" |
+| `department` | string | Department/entity from member data | "THPG" |
+| `manager_name` | string | Manager name | "Sarah Johnson" |
 
-| Field Name | Data Type | Source Path | Description | Example |
-|------------|-----------|-------------|-------------|---------|
-| `job_title` | string | Member join | Job title from member data | "Physician" |
-| `department` | string | Member join | Department/entity from member data | "THPG" |
-| `manager_name` | string | `$.manager` or Member join | Manager name | "Sarah Johnson" |
-| `entity_name` | string | Computed | Company or entity involved in the disclosure | "Abbott Laboratories" |
+### Disclosure Metadata
+| Field Name | Data Type | Description | Example |
+|------------|-----------|-------------|---------|
+| `category_label` | string | Disclosure category | "Financial & Investment Interests" |
+| `relationship_type` | string | Type of disclosure/question | "Receipt of Compensation" |
+| `question_id` | string | Unique question identifier | "d9d4e964-3527-42dd-80b0" |
+| `category_id` | string | Numeric category identifier | "2" |
+| `status` | string | Disclosure status | "complete" |
+| `source` | string | How disclosure was created | "form" |
+| `campaign_title` | string | Campaign name | "2025 Texas Health COI Survey" |
 
-### Disclosure Classification
+### Date Fields
+| Field Name | Data Type | Description | Example |
+|------------|-----------|-------------|---------|
+| `disclosure_date` | date | When disclosure was created | "2025-01-15" |
+| `disclosure_timeframe_start` | date | Reporting period start | "2024-01-01" |
+| `disclosure_timeframe_end` | date | Reporting period end | "2024-12-31" |
+| `signature_date` | datetime | When disclosure was signed | "2025-01-15 10:30:00" |
+| `created_at` | datetime | Record creation timestamp | "2025-01-15 10:30:00" |
+| `updated_at` | datetime | Last update timestamp | "2025-01-16 14:20:00" |
 
-| Field Name | Data Type | Source Path | Description | Example |
-|------------|-----------|-------------|-------------|---------|
-| `relationship_type` | string | `$.question.title` | Type of disclosure/question | "Receipt of Compensation" |
-| `category_label` | string | `$.question.category_label` | Disclosure category | "Financial & Investment Interests" |
-| `interest_type` | string | Dynamic field extraction | Specific type of interest | "Consulting Fees" |
-| `question_id` | string | `$.question.question_id` | Unique question identifier | "d9d4e964-3527-42dd-80b0" |
-| `category_id` | string | `$.question.category_id` | Numeric category identifier | "2" |
+### Signature & Attestation
+| Field Name | Data Type | Description | Example |
+|------------|-----------|-------------|---------|
+| `signature_name` | string | Full name on signature | "Jane Smith" |
+| `signature_initials` | string | Initials on signature | "JS" |
+| `disputed` | boolean | Whether disclosure is disputed | false |
+| `notes` | string | Additional notes | "Serves as medical director" |
 
-### Financial Information
+---
 
-| Field Name | Data Type | Source Path | Description | Example |
-|------------|-----------|-------------|-------------|---------|
-| `financial_amount` | float | `$.compensation_value` | Dollar amount of the disclosure | 25000.00 |
-| `compensation_type` | string | `$.compensation_type` | Type of compensation | "Cash" |
-| `compensation_received_by` | string | `$.compensation_received_by` | Who received the compensation | "Self" |
-| `compensation_received_by_self` | boolean | `$.compensation_received_by_self` | Whether reporter received compensation | true |
+## 1. EXTERNAL ROLES & RELATIONSHIPS
+*458 disclosures covering board memberships, advisory roles, and family relationships*
 
-### Risk Assessment
-
-| Field Name | Data Type | Source Path | Description | Example |
-|------------|-----------|-------------|-------------|---------|
-| `risk_tier` | string | Calculated | Risk level based on amount | "moderate" |
-| `risk_score` | integer | Calculated | Risk score (0-100) | 45 |
-
-### Dates
-
-| Field Name | Data Type | Source Path | Description | Example |
-|------------|-----------|-------------|-------------|---------|
-| `disclosure_date` | date | `timestamp` | When disclosure was created | "2025-01-15" |
-| `relationship_start_date` | date | `$.service_start_date` | Start date of relationship | "2024-01-01" |
-| `relationship_end_date` | date | `$.service_end_date` | End date of relationship | "2024-12-31" |
-| `relationship_ongoing` | boolean | Computed | Whether relationship is ongoing | true |
-| `disclosure_timeframe_start` | date | `$.disclosure_timeframe_start_date` | Reporting period start | "2024-01-01" |
-| `disclosure_timeframe_end` | date | `$.disclosure_timeframe_end_date` | Reporting period end | "2024-12-31" |
-| `signature_date` | datetime | `$.signature_date._seconds` | When disclosure was signed | "2025-01-15 10:30:00" |
-| `created_at` | datetime | `timestamp` | Record creation timestamp | "2025-01-15 10:30:00" |
-| `updated_at` | datetime | `$.updated_at` | Last update timestamp | "2025-01-16 14:20:00" |
-
-### Status & Review
-
-| Field Name | Data Type | Source Path | Description | Example |
-|------------|-----------|-------------|-------------|---------|
-| `status` | string | `$.status` | Disclosure status | "complete" |
-| `review_status` | string | `$.review_status` | Review status | "pending" |
-| `reviewer` | string | `$.reviewer` | Name of reviewer | "Admin User" |
-| `last_review_date` | date | Computed | Date of last review | "2025-01-15" |
-| `next_review_date` | date | Computed | Scheduled next review | "2025-12-31" |
-
-### Additional Metadata
-
-| Field Name | Data Type | Source Path | Description | Example |
-|------------|-----------|-------------|-------------|---------|
-| `is_research` | boolean | `$.is_research` | Research-related disclosure | false |
-| `disputed` | boolean | `$.disputed` | Whether disclosure is disputed | false |
-| `notes` | string | `$.notes` | Additional notes | "Serves as medical director" |
-| `signature_name` | string | `$.signature.full_name` | Full name on signature | "Jane Smith" |
-| `signature_initials` | string | `$.signature.initials` | Initials on signature | "JS" |
-| `source` | string | `$.source` | How disclosure was created | "form" |
-| `campaign_title` | string | `$.campaign_title` | Campaign name | "2025 Texas Health COI Survey" |
-| `service_provided` | string | `$.service_provided` | Description of services | "Consulting services" |
-| `interests` | string | `$.interests` | Array of interests | "[]" |
-| `person_id` | string | `$.person_id` | Person identifier | "6QqiZgevQGi24j4UOufO" |
-
-### Related Party Fields (for "Related Parties" disclosures)
-
-| Field Name | Data Type | Source Path | Description | Example |
-|------------|-----------|-------------|-------------|---------|
-| `related_party_first_name` | string | Field values [0] | First name of related party | "John" |
-| `related_party_last_name` | string | Field values [1] | Last name of related party | "Doe" |
-| `related_party_entity_location` | string | Field values [2] | Entity where related party works | "THFW (Texas Health Fort Worth)" |
-| `related_party_job_title` | string | Field values [3] | Job title of related party | "Nurse" |
+### Question Types in this Category:
+- Board Membership (52 disclosures)
+- Related Parties (303 disclosures)
+- Advisory Position with Entity (103 disclosures)
 
 ### Category-Specific Fields
 
-| Field Name | Data Type | Source Path | Description | Example |
-|------------|-----------|-------------|-------------|---------|
-| `jurisdiction_location` | string | Dynamic extraction | For political disclosures - office location | "City of Frisco" |
-| `resolution_date` | date | Dynamic extraction | For legal disclosures - resolution date | "2025-12-30" |
-| `entity_where_occurred` | string | Dynamic extraction | For legal/compliance - where issue occurred | "THSL" |
+#### For All External Roles:
+| Field Name | Data Type | Description | Example |
+|------------|-----------|-------------|---------|
+| `person_with_interest` | string | Person the disclosure is about | "John Doe" |
+| `entity_name` | string | Company or entity involved | "Abbott Laboratories" |
+| `interest_type` | string | Specific type of interest | "Board Member" |
+| `relationship_start_date` | date | Start date of relationship | "2024-01-01" |
+| `relationship_end_date` | date | End date of relationship | "2024-12-31" |
+| `relationship_ongoing` | boolean | Whether relationship is ongoing | true |
+| `service_provided` | string | Description of services | "Advisory services" |
 
-## Open Payments Transaction Fields (thr_op_transactions_*.csv)
+#### For Related Parties Only:
+| Field Name | Data Type | Description | Example |
+|------------|-----------|-------------|---------|
+| `related_party_first_name` | string | First name of related party | "John" |
+| `related_party_last_name` | string | Last name of related party | "Doe" |
+| `related_party_entity_location` | string | Entity where related party works | "THFW (Texas Health Fort Worth)" |
+| `related_party_job_title` | string | Job title of related party | "Nurse" |
 
-| Field Name | Data Type | Source Path | Description | Example |
-|------------|-----------|-------------|-------------|---------|
-| `document_id` | string | `document_id` | Links to main disclosure | "j5HuSNP2XjRpPCGFy8bv" |
-| `reporter_name` | string | `$.reporter.name` | Provider name | "Dr. Jane Smith" |
-| `reporter_email` | string | `$.reporter.email` | Provider email | "jane.smith@texashealth.org" |
-| `provider_npi` | string | `$.recipient_npi` or Member join | Provider NPI | "1234567890" |
-| `provider_job_title` | string | Member join | Job title | "Physician" |
-| `provider_entity` | string | Member join | Entity/department | "THPG" |
-| `company_name` | string | `$.company_name` | Paying company | "Abbott Laboratories" |
-| `submitting_entity_id` | string | `$.company_id` | CMS entity ID | "100000010774" |
-| `record_id` | string | Transaction `.record_id` | CMS Open Payments record ID | "1140257425" |
-| `payment_date` | date | Transaction `.payment_date` | Date of payment | "2024-05-01" |
-| `payment_amount` | float | Transaction `.payment_total_usd` | Payment amount | 400.00 |
-| `payment_nature` | string | Transaction `.payment_nature` | Type of payment | "Consulting Fee" |
-| `payment_form` | string | Transaction `.payment_form` | Form of payment | "Cash or cash equivalent" |
-| `payment_count` | integer | Transaction `.payment_count` | Number of payments | 1 |
-| `program_year` | string | Transaction `.program_year` | CMS program year | "2024" |
-| `payment_publication_date` | date | Transaction `.payment_publication_date` | CMS publication date | "2025-06-30" |
-| `name_of_study` | string | Transaction `.name_of_study` | For research payments | null |
-| `transaction_source` | string | Transaction `.source` | Source system | "op-general" |
-| `disclosure_start` | date | `$.disclosure_timeframe_start_date` | Reporting period start | "2024-01-01" |
-| `disclosure_end` | date | `$.disclosure_timeframe_end_date` | Reporting period end | "2024-12-31" |
-| `signature_name` | string | `$.signature.full_name` | Signature name | "Jane Smith" |
-| `signature_date` | datetime | `$.signature_date._seconds` | Signature timestamp | "2025-01-15 10:30:00" |
-| `created_at` | datetime | `$.created_at._seconds` | Creation timestamp | "2025-01-15 10:30:00" |
+---
 
-## Business Rules
+## 2. FINANCIAL & INVESTMENT INTERESTS
+*295 disclosures covering compensation, investments, and financial relationships*
 
-### Risk Tier Calculation
-- **None**: $0
-- **Low**: $1 - $999
-- **Moderate**: $1,000 - $9,999
-- **High**: $10,000 - $99,999
-- **Critical**: $100,000+
+### Question Types in this Category:
+- Receipt of Compensation (112 disclosures)
+- Investment Interest (72 disclosures) 
+- Employment Income (66 disclosures)
+- Ownership Interest (45 disclosures)
+
+### Category-Specific Fields
+| Field Name | Data Type | Description | Example |
+|------------|-----------|-------------|---------|
+| `person_with_interest` | string | Person receiving compensation | "Dr. Jane Smith" |
+| `entity_name` | string | Company paying compensation | "Pfizer Inc." |
+| `interest_type` | string | Type of financial interest | "Consulting Fees" |
+| `financial_amount` | float | Dollar amount of the disclosure | 25000.00 |
+| `compensation_type` | string | Type of compensation | "Cash" |
+| `compensation_received_by` | string | Who received the compensation | "Self" |
+| `compensation_received_by_self` | boolean | Whether reporter received compensation | true |
+| `service_provided` | string | Services provided for compensation | "Medical consulting" |
+| `is_research` | boolean | Research-related payment | false |
+
+### Risk Assessment Fields
+| Field Name | Data Type | Description | Example |
+|------------|-----------|-------------|---------|
+| `risk_tier` | string | Risk level based on amount | "moderate" |
+| `risk_score` | integer | Risk score (0-100) | 45 |
+
+**Risk Tier Thresholds:**
+- None: $0
+- Low: $1 - $999
+- Moderate: $1,000 - $9,999
+- High: $10,000 - $99,999
+- Critical: $100,000+
+
+---
+
+## 3. POLITICAL, COMMUNITY, AND ADVOCACY ACTIVITIES
+*304 disclosures covering political positions, community service, and advocacy*
+
+### Question Types in this Category:
+- Political Office or Candidacy (97 disclosures)
+- Community Service (124 disclosures)
+- Advocacy Activities (83 disclosures)
+
+### Category-Specific Fields
+| Field Name | Data Type | Description | Example |
+|------------|-----------|-------------|---------|
+| `person_with_interest` | string | Person holding position | "Jane Smith" |
+| `entity_name` | string | Organization or office | "City Council" |
+| `interest_type` | string | Type of activity | "Elected Official" |
+| `jurisdiction_location` | string | Office location/jurisdiction | "City of Frisco" |
+| `service_provided` | string | Description of role | "Board member" |
+| `relationship_start_date` | date | Start date of position | "2024-01-01" |
+| `relationship_end_date` | date | End date of position | "2024-12-31" |
+| `relationship_ongoing` | boolean | Whether position is current | true |
+
+---
+
+## 4. LEGAL, REGULATORY, ETHICAL, AND COMPLIANCE MATTERS
+*101 disclosures covering legal issues, sanctions, and compliance matters*
+
+### Question Types in this Category:
+- Government Sanctions/Exclusions (41 disclosures)
+- Legal Proceedings (32 disclosures)
+- Professional License Issues (28 disclosures)
+
+### Category-Specific Fields
+| Field Name | Data Type | Description | Example |
+|------------|-----------|-------------|---------|
+| `person_with_interest` | string | Person involved in matter | "John Doe" |
+| `entity_name` | string | Entity involved | "State Medical Board" |
+| `interest_type` | string | Type of matter | "License Suspension" |
+| `entity_where_occurred` | string | Where issue occurred | "THSL" |
+| `resolution_date` | date | Date matter was resolved | "2025-12-30" |
+| `disputed` | boolean | Whether matter is disputed | false |
+| `notes` | string | Additional details | "Matter resolved satisfactorily" |
+
+---
+
+## 5. OPEN PAYMENTS (CMS IMPORTS)
+*142 disclosures with 2,536 individual transactions from CMS Open Payments database*
+
+### Aggregated Fields (Main Disclosure File)
+| Field Name | Data Type | Description | Example |
+|------------|-----------|-------------|---------|
+| `entity_name` | string | Company making payments | "Abbott Laboratories" |
+| `financial_amount` | float | Total aggregated amount | 5000.00 |
+| `compensation_type` | string | Type of payments | "Multiple" |
+| `interests` | json | Array of payment types | ["Consulting", "Speaking"] |
+
+### Transaction-Level Fields (thr_op_transactions_*.csv)
+| Field Name | Data Type | Description | Example |
+|------------|-----------|-------------|---------|
+| `document_id` | string | Links to main disclosure | "j5HuSNP2XjRpPCGFy8bv" |
+| `reporter_name` | string | Provider name | "Dr. Jane Smith" |
+| `provider_npi` | string | Provider NPI | "1234567890" |
+| `company_name` | string | Paying company | "Abbott Laboratories" |
+| `submitting_entity_id` | string | CMS entity ID | "100000010774" |
+| `record_id` | string | CMS Open Payments record ID | "1140257425" |
+| `payment_date` | date | Date of payment | "2024-05-01" |
+| `payment_amount` | float | Individual payment amount | 400.00 |
+| `payment_nature` | string | Type of payment | "Consulting Fee" |
+| `payment_form` | string | Form of payment | "Cash or cash equivalent" |
+| `payment_count` | integer | Number of payments | 1 |
+| `program_year` | string | CMS program year | "2024" |
+| `payment_publication_date` | date | CMS publication date | "2025-06-30" |
+| `name_of_study` | string | For research payments | null |
+| `transaction_source` | string | Source system | "op-general" |
+
+---
+
+## DATA QUALITY NOTES
+
+### Field Population Rates
+- **Person With Interest**: 572 records (44% of disclosures)
+- **Interest Type**: 259 records (20% of disclosures) 
+- **Financial Amount**: 267 records (primarily Financial & Open Payments categories)
+- **NPIs**: ~58% match rate from member data
+- **Related Party Fields**: 303 records (Related Parties disclosures only)
+
+### Key Business Rules
+1. **Person With Interest** may differ from reporter - critical for tracking actual conflict holders
+2. **Open Payments** are aggregated by reporter + company pair in main file
+3. **Dynamic fields** vary by question type and are extracted from nested JSON structures
+4. **Category normalization** applied for consistency (e.g., "External Roles and Relationships" → "External Roles & Relationships")
 
 ### Data Aggregation
-- Main disclosure file: One row per disclosure (1,300 records)
-- Transaction file: One row per Open Payments transaction (~2,536 records)
-- Open Payments are aggregated by reporter + company in main file
+- **Main disclosure file**: One row per disclosure (1,300 records total)
+- **Transaction file**: One row per Open Payments transaction (2,536 records)
+- **Deduplication**: Only 1 duplicate reporter-company pair found (Courtney Cartier - INTUITIVE SURGICAL)
 
-### Category Mapping
-- Null category_label → "Open Payments (CMS Imports)"
-- "External Roles and Relationships" → "External Roles & Relationships"
-- "Financial and Investment Interests" → "Financial & Investment Interests"
+---
 
-### Dynamic Field Extraction
-Fields are extracted from `question.field_values` based on `question.fields` structure:
-1. Map field IDs to field definitions
-2. Extract values based on field titles
-3. Handle different field types (person, company, currency, etc.)
+## EXPORT FORMATS
 
-## Data Quality Notes
+### File Naming Convention
+- Main file: `thr_disclosures_YYYYMMDD_HHMMSS.csv`
+- Transactions: `thr_op_transactions_YYYYMMDD_HHMMSS.csv`
 
-- **Person With Interest**: May differ from reporter; critical for accurate disclosure tracking
-- **NPIs**: Matched from member data; ~58% match rate
-- **Duplicate Check**: Only 1 duplicate reporter-company pair found (Courtney Cartier - INTUITIVE SURGICAL)
-- **Missing Values**: Filled with appropriate defaults (empty strings, zeros, "Not Specified")
-
-## Export Formats
-
-- **CSV**: Primary format for analysis
-- **Parquet**: Compressed format for performance
+### Available Formats
+- **CSV**: Primary format for analysis (UTF-8 encoded)
+- **Parquet**: Compressed format for performance (Snappy compression)
 - **JSON**: Includes metadata and summary statistics
+
+### Column Ordering in CSV
+Columns are organized for readability:
+1. Identity fields (document_id, provider info)
+2. Category/classification fields
+3. Specific disclosure fields (varies by category)
+4. Financial/risk fields (where applicable)
+5. Date fields
+6. Status/metadata fields
+7. Signature/attestation fields

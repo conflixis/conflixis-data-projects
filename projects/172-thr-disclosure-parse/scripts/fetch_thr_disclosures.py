@@ -452,23 +452,82 @@ def clean_and_format_data(df):
         if col in df.columns:
             df[col] = df[col].astype(bool)
     
-    # Order columns for readability
+    # Order columns for optimal readability
+    # Group columns by logical sections for better analysis
     column_order = [
-        'document_id', 'id', 'provider_name', 'provider_npi', 'provider_email', 
-        'job_title', 'department', 'manager_name', 'person_with_interest',
-        'entity_name', 'relationship_type', 'category_label', 'interest_type',
-        'question_id', 'category_id', 'financial_amount', 'compensation_type', 
-        'compensation_received_by', 'compensation_received_by_self', 
-        'risk_tier', 'risk_score', 'disclosure_date', 'relationship_start_date', 
-        'relationship_end_date', 'relationship_ongoing', 'status', 'review_status', 
-        'reviewer', 'last_review_date', 'next_review_date', 'is_research', 
-        'disputed', 'notes', 'signature_name', 'signature_initials', 'signature_date',
-        'source', 'campaign_title', 'service_provided', 'interests',
-        'disclosure_timeframe_start', 'disclosure_timeframe_end',
-        'related_party_first_name', 'related_party_last_name', 
-        'related_party_entity_location', 'related_party_job_title',
-        'jurisdiction_location', 'resolution_date', 'entity_where_occurred',
-        'person_id', 'created_at', 'updated_at'
+        # 1. Core Identity Fields (Most Important)
+        'document_id',
+        'provider_name', 
+        'provider_email',
+        'provider_npi',
+        'person_with_interest',  # Critical field - who the disclosure is about
+        
+        # 2. Organizational Context
+        'job_title', 
+        'department', 
+        'manager_name',
+        
+        # 3. Disclosure Classification
+        'category_label',
+        'relationship_type',
+        'entity_name',
+        'interest_type',
+        
+        # 4. Financial Information (if applicable)
+        'financial_amount',
+        'risk_tier',
+        'risk_score',
+        'compensation_type',
+        'compensation_received_by',
+        'compensation_received_by_self',
+        
+        # 5. Relationship Details
+        'service_provided',
+        'relationship_start_date',
+        'relationship_end_date',
+        'relationship_ongoing',
+        
+        # 6. Related Party Fields (for External Roles category)
+        'related_party_first_name',
+        'related_party_last_name',
+        'related_party_entity_location',
+        'related_party_job_title',
+        
+        # 7. Category-Specific Fields
+        'jurisdiction_location',  # Political disclosures
+        'resolution_date',        # Legal disclosures
+        'entity_where_occurred',  # Legal/compliance
+        
+        # 8. Date Fields
+        'disclosure_date',
+        'disclosure_timeframe_start',
+        'disclosure_timeframe_end',
+        'signature_date',
+        
+        # 9. Status & Review
+        'status',
+        'review_status',
+        'reviewer',
+        'last_review_date',
+        'next_review_date',
+        'disputed',
+        
+        # 10. Additional Metadata
+        'notes',
+        'signature_name',
+        'signature_initials',
+        'campaign_title',
+        'source',
+        'is_research',
+        'interests',
+        'question_id',
+        'category_id',
+        'person_id',
+        'created_at',
+        'updated_at',
+        
+        # Legacy field (kept for backwards compatibility)
+        'id'
     ]
     
     # Reorder columns (only include columns that exist)

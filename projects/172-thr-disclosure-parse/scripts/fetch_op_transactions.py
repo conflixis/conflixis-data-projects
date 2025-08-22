@@ -218,15 +218,44 @@ def clean_and_format_transactions(df):
         'transaction_source': 'op-general'
     })
     
-    # Order columns
+    # Order columns for optimal readability
     column_order = [
-        'document_id', 'reporter_name', 'reporter_email', 'provider_npi',
-        'provider_job_title', 'provider_entity', 'company_name', 
-        'submitting_entity_id', 'record_id', 'payment_date', 'payment_amount',
-        'payment_nature', 'payment_form', 'payment_count', 'program_year',
-        'payment_publication_date', 'name_of_study', 'transaction_source',
-        'disclosure_start', 'disclosure_end', 'signature_name', 
-        'signature_date', 'created_at'
+        # Link to main disclosure
+        'document_id',
+        
+        # Provider information
+        'reporter_name',
+        'reporter_email',
+        'provider_npi',
+        'provider_job_title',
+        'provider_entity',
+        
+        # Company information
+        'company_name',
+        'submitting_entity_id',
+        
+        # Payment details
+        'payment_date',
+        'payment_amount',
+        'payment_nature',
+        'payment_form',
+        'payment_count',
+        
+        # CMS metadata
+        'record_id',
+        'program_year',
+        'payment_publication_date',
+        'name_of_study',
+        'transaction_source',
+        
+        # Disclosure period
+        'disclosure_start',
+        'disclosure_end',
+        
+        # Attestation
+        'signature_name',
+        'signature_date',
+        'created_at'
     ]
     
     # Reorder columns (only include columns that exist)
