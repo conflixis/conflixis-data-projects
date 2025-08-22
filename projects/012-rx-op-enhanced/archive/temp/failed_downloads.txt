@@ -1,0 +1,17 @@
+df_spec_allergan_Internal.Medicine.rds
+df_spec_allergan_Nephrology.rds
+df_spec_allergan_Neurology.rds
+df_spec_allergan_NP.rds
+df_spec_allergan_Oncology.rds
+df_spec_allergan_PA.rds
+df_spec_allergan_Primary.Care.rds
+df_spec_allergan_Psychiatry.rds
+df_spec_astrazeneca_Psychiatry.rds
+df_spec_astrazeneca_Pulmonary.rds
+df_spec_astrazeneca_Surgery.rds
+df_spec_astrazeneca_Urology.rds
+df_spec_boehringer_Cardiology.rds
+df_spec_boehringer_Dermatology.rds
+df_spec_boehringer_Endocrinology.rds
+df_spec_boehringer_Gastroenterology.rds
+df_spec_boehringer_Internal.Medicine.rds
