@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Disclosure JSON Viewer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .json-key { color: #0c343a; font-weight: 600; }
+        .json-value { color: #333; }
+        .json-string { color: #4c94ed; }
+        .json-number { color: #eab96d; }
+        .json-boolean { color: #f56565; }
+        .json-null { color: #9ca3af; }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <div class="container mx-auto px-4 py-8">
+        <h1 class="text-3xl font-bold text-gray-800 mb-8">Disclosure Data Viewer</h1>
+        
+        <!-- Zachary Sypert Card -->
+        <div class="bg-white rounded-lg shadow-lg p-6 mb-6">
+            <div class="mb-4">
+                <h2 class="text-xl font-semibold text-gray-700 mb-2">Zachary Sypert - Related Parties Disclosure</h2>
+                <div class="text-sm text-gray-500">
+                    Document ID: rUd94Q186GytIU21lgtb | 
+                    Reporter User ID: xyX7V5Wtv6fI62q2zvWiZZdzGb92 |
+                    Date: 2025-08-06 20:25:23 UTC
+                </div>
+            </div>
+            
+            <!-- Formatted Display -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+                <div class="bg-gray-50 p-4 rounded">
+                    <h3 class="font-semibold text-gray-700 mb-2">Reporter Information</h3>
+                    <div class="space-y-1 text-sm">
+                        <div><span class="font-medium">Name:</span> Zachary Sypert</div>
+                        <div><span class="font-medium">Email:</span> zacharysypert@texashealth.org</div>
+                        <div><span class="font-medium">User ID:</span> xyX7V5Wtv6fI62q2zvWiZZdzGb92</div>
+                        <div><span class="font-medium">Campaign:</span> 2025 Texas Health COI Survey - Leaders/Providers</div>
+                        <div><span class="font-medium">Status:</span> <span class="bg-green-100 px-2 py-1 rounded text-green-800">Complete</span></div>
+                        <div><span class="font-medium">Review Status:</span> <span class="bg-yellow-100 px-2 py-1 rounded text-yellow-800">Pending Review</span></div>
+                    </div>
+                </div>
+                
+                <div class="bg-gray-50 p-4 rounded">
+                    <h3 class="font-semibold text-gray-700 mb-2">Disclosure Details</h3>
+                    <div class="space-y-1 text-sm">
+                        <div><span class="font-medium">Category:</span> <span class="text-blue-600">External Roles and Relationships</span></div>
+                        <div><span class="font-medium">Disclosure Type:</span> <span class="font-semibold">Related Parties</span></div>
+                        <div class="mt-2 pt-2 border-t">
+                            <div><span class="font-medium">Related Party Name:</span> Morgan Peninger</div>
+                            <div><span class="font-medium">Entity Location:</span> THFW (Texas Health Fort Worth)</div>
+                            <div><span class="font-medium">Job Title:</span> CST</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- JSON Tree View -->
+            <div class="border-t pt-4">
+                <div class="flex justify-between items-center mb-2">
+                    <h3 class="font-semibold text-gray-700">Raw JSON Data</h3>
+                    <button onclick="toggleJson('json1')" class="text-sm bg-blue-500 text-white px-3 py-1 rounded hover:bg-blue-600">
+                        Toggle JSON
+                    </button>
+                </div>
+                <div id="json1" class="hidden">
+                    <pre class="bg-gray-100 p-4 rounded overflow-x-auto text-xs"><code id="jsonContent1"></code></pre>
+                </div>
+            </div>
+        </div>
+
+        <!-- Audrey Puentes Single Disclosure - ALL Fields -->
+        <div class="bg-white rounded-lg shadow-lg p-6 mb-6">
+            <div class="mb-4">
+                <h2 class="text-xl font-semibold text-gray-700 mb-2">Audrey Puentes - Single Disclosure (ALL Fields)</h2>
+                <div class="text-sm text-gray-500">
+                    Document ID: FLapeYUy2uoz4pOjPr10 | 
+                    Date: 2025-08-08
+                </div>
+            </div>
+            
+            <!-- Core Fields from JSON root -->
+            <div class="mb-6">
+                <h3 class="font-semibold text-gray-700 mb-3 text-lg">Core Document Fields</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div class="bg-gray-50 p-4 rounded">
+                        <h4 class="font-medium text-gray-700 mb-2">Document Metadata</h4>
+                        <div class="space-y-1 text-sm">
+                            <div><span class="font-medium">document_id:</span> FLapeYUy2uoz4pOjPr10</div>
+                            <div><span class="font-medium">campaign_id:</span> qyH2ggzVV0WLkuRfem7S</div>
+                            <div><span class="font-medium">campaign_title:</span> 2025 Texas Health COI Survey - Leaders/Providers</div>
+                            <div><span class="font-medium">group_id:</span> gcO9AHYlNSzFeGTRSFRa</div>
+                            <div><span class="font-medium">created_at:</span> {"_seconds": 1754698800, "_nanoseconds": 0}</div>
+                            <div><span class="font-medium">updated_at:</span> null</div>
+                            <div><span class="font-medium">source:</span> form</div>
+                            <div><span class="font-medium">status:</span> complete</div>
+                            <div><span class="font-medium">review_status:</span> pending</div>
+                            <div><span class="font-medium">review_date:</span> null</div>
+                            <div><span class="font-medium">reviewer:</span> null</div>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-gray-50 p-4 rounded">
+                        <h4 class="font-medium text-gray-700 mb-2">Reporter Information</h4>
+                        <div class="space-y-1 text-sm">
+                            <div><span class="font-medium">reporter.name:</span> Audrey Puentes</div>
+                            <div><span class="font-medium">reporter.email:</span> audreypuentes@texashealth.org</div>
+                            <div><span class="font-medium">reporter.id:</span> 8xxiU0YJouhc4X18R8JQkgnGH0k1</div>
+                            <div><span class="font-medium">reporter.authed_user_id:</span> 8xxiU0YJouhc4X18R8JQkgnGH0k1</div>
+                            <div><span class="font-medium">reporter.search_name:</span> audrey puentes</div>
+                            <div><span class="font-medium">person_id:</span> 2y7s4OdmfsvtpWfvVsy4</div>
+                            <div><span class="font-medium">manager:</span> null</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Financial and Company Fields -->
+            <div class="mb-6">
+                <h3 class="font-semibold text-gray-700 mb-3 text-lg">Financial & Company Fields</h3>
+                <div class="bg-gray-50 p-4 rounded">
+                    <div class="space-y-1 text-sm">
+                        <div><span class="font-medium">company_id:</span> natera_id_example</div>
+                        <div><span class="font-medium">company_name:</span> Natera</div>
+                        <div><span class="font-medium">search_company_name:</span> natera</div>
+                        <div><span class="font-medium">compensation_value:</span> null (or 0)</div>
+                        <div><span class="font-medium">compensation_type:</span> ""</div>
+                        <div><span class="font-medium">compensation_received_by:</span> ""</div>
+                        <div><span class="font-medium">compensation_received_by_self:</span> true</div>
+                        <div><span class="font-medium">service_provided:</span> ""</div>
+                        <div><span class="font-medium">service_start_date:</span> ""</div>
+                        <div><span class="font-medium">service_end_date:</span> ""</div>
+                        <div><span class="font-medium">is_relationship_concluded:</span> false</div>
+                        <div><span class="font-medium">is_research:</span> false</div>
+                        <div><span class="font-medium">disputed:</span> false</div>
+                        <div><span class="font-medium">interests:</span> []</div>
+                        <div><span class="font-medium">notes:</span> "Please refer inquiries to Janece McClinton, office manager..."</div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Question/Disclosure Type Fields -->
+            <div class="mb-6">
+                <h3 class="font-semibold text-gray-700 mb-3 text-lg">Question/Disclosure Type Structure</h3>
+                <div class="bg-blue-50 p-4 rounded">
+                    <div class="space-y-2 text-sm">
+                        <div><span class="font-medium">question.title:</span> Receipt of any remuneration or gift of value</div>
+                        <div><span class="font-medium">question.category_id:</span> 1</div>
+                        <div><span class="font-medium">question.category_label:</span> Financial and Investment Interests</div>
+                        <div><span class="font-medium">question.question_id:</span> unique-question-id</div>
+                        <div><span class="font-medium">question.type:</span> question</div>
+                        <div><span class="font-medium">question.description:</span> "Have you, any member of your family, related party(ies)..."</div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Dynamic Fields and Values -->
+            <div class="mb-6">
+                <h3 class="font-semibold text-gray-700 mb-3 text-lg">Dynamic Fields (question.fields & question.field_values)</h3>
+                <div class="bg-green-50 p-4 rounded">
+                    <table class="w-full text-sm">
+                        <thead>
+                            <tr class="border-b">
+                                <th class="text-left py-2">Field ID</th>
+                                <th class="text-left py-2">Field Title</th>
+                                <th class="text-left py-2">Field Type</th>
+                                <th class="text-left py-2">Value</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="border-b">
+                                <td class="py-2">0</td>
+                                <td class="py-2">Type of Interest</td>
+                                <td class="py-2">select</td>
+                                <td class="py-2">Food and Beverage</td>
+                            </tr>
+                            <tr class="border-b">
+                                <td class="py-2">1</td>
+                                <td class="py-2">Company Name</td>
+                                <td class="py-2">company</td>
+                                <td class="py-2">{"id": "natera_id", "name": "Natera"}</td>
+                            </tr>
+                            <tr class="border-b">
+                                <td class="py-2">2</td>
+                                <td class="py-2">Reported Value of Relationship</td>
+                                <td class="py-2">currency</td>
+                                <td class="py-2">"" (empty)</td>
+                            </tr>
+                            <tr class="border-b">
+                                <td class="py-2">3</td>
+                                <td class="py-2">Person With Interest</td>
+                                <td class="py-2">person</td>
+                                <td class="py-2">{"id": "audrey_id", "name": "Audrey Puentes"}</td>
+                            </tr>
+                            <tr class="border-b">
+                                <td class="py-2">4</td>
+                                <td class="py-2">Notes</td>
+                                <td class="py-2">string</td>
+                                <td class="py-2">Please refer inquiries to Janece McClinton...</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            
+            <!-- Signature Fields -->
+            <div class="mb-6">
+                <h3 class="font-semibold text-gray-700 mb-3 text-lg">Signature Fields</h3>
+                <div class="bg-gray-50 p-4 rounded">
+                    <div class="space-y-1 text-sm">
+                        <div><span class="font-medium">signature.full_name:</span> Audrey Puentes</div>
+                        <div><span class="font-medium">signature.initials:</span> AP</div>
+                        <div><span class="font-medium">signature_date:</span> {"_seconds": 1754698800, "_nanoseconds": 0}</div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- JSON Tree View -->
+            <div class="border-t pt-4">
+                <div class="flex justify-between items-center mb-2">
+                    <h3 class="font-semibold text-gray-700">Complete Raw JSON Data</h3>
+                    <button onclick="toggleJson('json2')" class="text-sm bg-blue-500 text-white px-3 py-1 rounded hover:bg-blue-600">
+                        Toggle JSON
+                    </button>
+                </div>
+                <div id="json2" class="hidden">
+                    <pre class="bg-gray-100 p-4 rounded overflow-x-auto text-xs"><code id="jsonContent2"></code></pre>
+                </div>
+            </div>
+        </div>
+
+        <!-- Audrey's Related Party Disclosure -->
+        <div class="bg-white rounded-lg shadow-lg p-6 mb-6">
+            <div class="mb-4">
+                <h2 class="text-xl font-semibold text-gray-700 mb-2">Audrey Puentes - Related Parties Disclosure</h2>
+                <div class="text-sm text-gray-500">
+                    Document ID: zyJBPR5wXEQpZgNVptSa | 
+                    Reporter User ID: 8xxiU0YJouhc4X18R8JQkgnGH0k1 |
+                    Person ID: 2y7s4OdmfsvtpWfvVsy4
+                </div>
+            </div>
+            
+            <!-- Formatted Display -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+                <div class="bg-blue-50 p-4 rounded">
+                    <h3 class="font-semibold text-gray-700 mb-2">Disclosure Classification</h3>
+                    <div class="space-y-2 text-sm">
+                        <div class="pb-2 border-b">
+                            <div class="text-xs text-gray-500">Category:</div>
+                            <div class="font-semibold text-blue-700">External Roles and Relationships</div>
+                        </div>
+                        <div>
+                            <div class="text-xs text-gray-500">Disclosure Type:</div>
+                            <div class="font-semibold">Related Parties</div>
+                        </div>
+                        <div class="mt-2">
+                            <div class="text-xs text-gray-500">Question:</div>
+                            <div class="text-xs italic">Do you have any related party(ies) who are employed by or who are on the medical staff of any Texas Health entity?</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-green-50 p-4 rounded">
+                    <h3 class="font-semibold text-gray-700 mb-2">Related Party Details</h3>
+                    <div class="space-y-1 text-sm">
+                        <div><span class="font-medium">Name:</span> Paul Courtney</div>
+                        <div><span class="font-medium">Entity Location:</span> THDN (Texas Health Denton)</div>
+                        <div><span class="font-medium">Job Title:</span> Anesthesiologist; Vice Chair of the Dept of Anesthesiology</div>
+                        <div class="mt-2 pt-2 border-t">
+                            <div><span class="font-medium">Reporter:</span> Audrey Puentes</div>
+                            <div><span class="font-medium">Compensation:</span> $0</div>
+                            <div><span class="font-medium">Status:</span> <span class="bg-yellow-100 px-2 py-1 rounded text-yellow-700 text-xs">Pending Review</span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Multiple Disclosures Example -->
+        <div class="bg-white rounded-lg shadow-lg p-6 mb-6">
+            <h2 class="text-xl font-semibold text-gray-700 mb-4">Sample Disclosures Table</h2>
+            
+            <div class="overflow-x-auto">
+                <table class="min-w-full divide-y divide-gray-200">
+                    <thead class="bg-gray-50">
+                        <tr>
+                            <th class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase">Reporter</th>
+                            <th class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase">Disclosure Type</th>
+                            <th class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase">Company/Entity</th>
+                            <th class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase">Value</th>
+                            <th class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase">Status</th>
+                            <th class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase">Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody id="disclosuresTable" class="bg-white divide-y divide-gray-200">
+                        <!-- Rows will be inserted here -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Zachary Sypert JSON data (from actual BigQuery)
+        const zacharyData = {
+            "campaign_id": "qyH2ggzVV0WLkuRfem7S",
+            "campaign_title": "2025 Texas Health COI Survey - Leaders/Providers",
+            "company_id": null,
+            "company_name": null,
+            "compensation_received_by": "",
+            "compensation_received_by_self": true,
+            "compensation_type": "",
+            "compensation_value": 0,
+            "created_at": {"_seconds": 1754511923, "_nanoseconds": 442000000},
+            "disputed": false,
+            "group_id": "gcO9AHYlNSzFeGTRSFRa",
+            "interests": [],
+            "is_relationship_concluded": false,
+            "is_research": false,
+            "manager": null,
+            "notes": "",
+            "person_id": "person_zachary_123",
+            "question": {
+                "category_id": 2,
+                "category_label": "External Roles and Relationships",
+                "title": "Related Parties",
+                "description": "Do you have any related party(ies) who are employed by or who are on the medical staff of any Texas Health entity?",
+                "field_values": [
+                    {"id": 0, "value": "Morgan"},
+                    {"id": 1, "value": "Peninger"},
+                    {"id": 2, "value": "THFW (Texas Health Fort Worth)"},
+                    {"id": 3, "value": "CST"}
+                ],
+                "fields": [
+                    {"id": 0, "title": "First Name of Related Party", "type": "string", "isRequiredValidation": true},
+                    {"id": 1, "title": "Last Name of Related Party", "type": "string", "isRequiredValidation": true},
+                    {"id": 2, "title": "Related Party Entity Location (e.g. THAL)", "type": "select", "isRequiredValidation": true},
+                    {"id": 3, "title": "Job Title", "type": "string", "isRequiredValidation": false}
+                ],
+                "question_id": "related-parties-question-id",
+                "type": "question"
+            },
+            "reporter": {
+                "authed_user_id": "xyX7V5Wtv6fI62q2zvWiZZdzGb92",
+                "email": "zacharysypert@texashealth.org",
+                "id": "xyX7V5Wtv6fI62q2zvWiZZdzGb92",
+                "name": "Zachary Sypert",
+                "search_name": "zachary sypert"
+            },
+            "review_date": null,
+            "review_status": "pending",
+            "reviewer": null,
+            "search_company_name": null,
+            "service_end_date": "",
+            "service_provided": "",
+            "service_start_date": "",
+            "signature": {
+                "full_name": "Zachary Sypert",
+                "initials": "ZS"
+            },
+            "signature_date": {"_seconds": 1754511923, "_nanoseconds": 442000000},
+            "source": "form",
+            "status": "complete",
+            "updated_at": null
+        };
+
+        // Audrey Puentes JSON data
+        const audreyData = {
+            "campaign_id": "qyH2ggzVV0WLkuRfem7S",
+            "campaign_title": "2025 Texas Health COI Survey - Leaders/Providers",
+            "company_id": "natera_id_example",
+            "company_name": "Natera",
+            "compensation_value": null,
+            "created_at": {"_seconds": 1754698800, "_nanoseconds": 0},
+            "group_id": "gcO9AHYlNSzFeGTRSFRa",
+            "question": {
+                "category_label": "Financial and Investment Interests",
+                "title": "Receipt of any remuneration or gift of value",
+                "description": "Have you, any member of your family, related party(ies) or any entity(ies) in which you hold an interest received any remuneration or gift...",
+                "field_values": [
+                    {"id": 0, "value": "Food and Beverage"},
+                    {"id": 1, "value": {"id": "natera_id", "name": "Natera"}},
+                    {"id": 2, "value": ""},
+                    {"id": 3, "value": {"id": "audrey_id", "name": "Audrey Puentes"}},
+                    {"id": 4, "value": "Please refer inquiries to Janece McClinton, office manager for list of representatives who provide meals."}
+                ],
+                "fields": [
+                    {"id": 0, "title": "Type of Interest", "type": "select"},
+                    {"id": 1, "title": "Company Name", "type": "company"},
+                    {"id": 2, "title": "Reported Value of Relationship", "type": "currency"},
+                    {"id": 3, "title": "Person With Interest", "type": "person"},
+                    {"id": 4, "title": "Notes", "type": "string"}
+                ]
+            },
+            "reporter": {
+                "authed_user_id": "8xxiU0YJouhc4X18R8JQkgnGH0k1",
+                "email": "audreypuentes@texashealth.org",
+                "id": "8xxiU0YJouhc4X18R8JQkgnGH0k1",
+                "name": "Audrey Puentes",
+                "search_name": "audrey puentes"
+            },
+            "review_status": "pending",
+            "notes": "Please refer inquiries to Janece McClinton, office manager for list of representatives who provide meals.",
+            "signature": {"full_name": "Audrey Puentes", "initials": "AP"},
+            "status": "complete"
+        };
+
+        // Multiple sample disclosures
+        const disclosures = [
+            {
+                document_id: "rUd94Q186GytIU21lgtb",
+                data: zacharyData
+            },
+            {
+                document_id: "FLapeYUy2uoz4pOjPr10",
+                data: audreyData
+            },
+            {
+                document_id: "WKLiR5MNAwBENt5ByPWM",
+                data: {
+                    ...zacharyData,
+                    reporter: {name: "Shawn Parsley", email: "shawnparsley@texashealth.org"},
+                    company_name: "Occupational Health Solutions",
+                    compensation_value: 100000,
+                    question: {
+                        title: "Ownership/Investment Interest",
+                        category_label: "Financial and Investment Interests",
+                        field_values: [
+                            {"value": "Occupational Health Solutions"},
+                            {"value": "100000"},
+                            {"value": "Shawn Parsley"},
+                            {"value": "Occupational Health Provider in Tarrant County"}
+                        ]
+                    }
+                }
+            },
+            {
+                document_id: "FLapeYUy2uoz4pOjPr10",
+                data: {
+                    ...zacharyData,
+                    reporter: {name: "Audrey Puentes", email: "audreypuentes@texashealth.org"},
+                    company_name: "Natera",
+                    compensation_value: 0,
+                    question: {
+                        title: "Receipt of any remuneration or gift of value",
+                        category_label: "Financial and Investment Interests",
+                        field_values: [
+                            {"value": "Food and Beverage"},
+                            {"value": "Natera"},
+                            {"value": "0"},
+                            {"value": "Audrey Puentes"}
+                        ]
+                    }
+                }
+            }
+        ];
+
+        // Parse and display disclosures
+        function parseDisclosure(data) {
+            const parsed = {
+                reporter_name: data.reporter?.name || 'Unknown',
+                reporter_email: data.reporter?.email || '',
+                disclosure_type: data.question?.title || 'Unknown',
+                category: data.question?.category_label || '',
+                company_name: data.company_name || extractCompanyFromQuestion(data.question),
+                compensation_value: data.compensation_value || 0,
+                status: data.review_status || 'pending',
+                notes: data.notes || '',
+                field_values: extractFieldValues(data.question)
+            };
+            return parsed;
+        }
+
+        function extractCompanyFromQuestion(question) {
+            if (!question || !question.field_values) return 'N/A';
+            
+            // For Related Parties, combine first and last name
+            if (question.title === 'Related Parties') {
+                const firstName = question.field_values[0]?.value || '';
+                const lastName = question.field_values[1]?.value || '';
+                return `${firstName} ${lastName}`.trim();
+            }
+            
+            // For other types, look for company name in field values
+            for (let fv of question.field_values) {
+                if (fv.value && typeof fv.value === 'string' && fv.value.length > 2) {
+                    // Skip if it's a number or person name
+                    if (!isNaN(fv.value) || fv.value === question.reporter?.name) continue;
+                    return fv.value;
+                }
+            }
+            
+            return 'N/A';
+        }
+
+        function extractFieldValues(question) {
+            if (!question || !question.field_values || !question.fields) return {};
+            
+            const values = {};
+            question.fields.forEach((field, index) => {
+                if (question.field_values[index]) {
+                    values[field.title] = question.field_values[index].value;
+                }
+            });
+            return values;
+        }
+
+        // Populate table
+        function populateTable() {
+            const tbody = document.getElementById('disclosuresTable');
+            tbody.innerHTML = '';
+            
+            disclosures.forEach((disc, index) => {
+                const parsed = parseDisclosure(disc.data);
+                const row = document.createElement('tr');
+                row.className = index % 2 === 0 ? 'bg-white' : 'bg-gray-50';
+                
+                row.innerHTML = `
+                    <td class="px-4 py-3 text-sm">
+                        <div class="font-medium text-gray-900">${parsed.reporter_name}</div>
+                        <div class="text-gray-500">${parsed.reporter_email}</div>
+                    </td>
+                    <td class="px-4 py-3 text-sm">
+                        <div>${parsed.disclosure_type}</div>
+                        <div class="text-xs text-gray-500">${parsed.category}</div>
+                    </td>
+                    <td class="px-4 py-3 text-sm">${parsed.company_name}</td>
+                    <td class="px-4 py-3 text-sm font-medium">$${parsed.compensation_value.toLocaleString()}</td>
+                    <td class="px-4 py-3">
+                        <span class="px-2 py-1 text-xs rounded-full ${
+                            parsed.status === 'pending' ? 'bg-yellow-100 text-yellow-800' :
+                            parsed.status === 'approved' ? 'bg-green-100 text-green-800' :
+                            'bg-gray-100 text-gray-800'
+                        }">
+                            ${parsed.status}
+                        </span>
+                    </td>
+                    <td class="px-4 py-3 text-sm">
+                        <button onclick="viewDetails('${disc.document_id}')" class="text-blue-600 hover:text-blue-900">
+                            View Details
+                        </button>
+                    </td>
+                `;
+                tbody.appendChild(row);
+            });
+        }
+
+        function toggleJson(id) {
+            const element = document.getElementById(id);
+            element.classList.toggle('hidden');
+        }
+
+        function viewDetails(docId) {
+            alert(`View details for document: ${docId}`);
+        }
+
+        // Initialize
+        document.addEventListener('DOMContentLoaded', () => {
+            // Display formatted JSON
+            document.getElementById('jsonContent1').textContent = JSON.stringify(zacharyData, null, 2);
+            document.getElementById('jsonContent2').textContent = JSON.stringify(audreyData, null, 2);
+            
+            // Populate table
+            populateTable();
+        });
+    </script>
+</body>
+</html>

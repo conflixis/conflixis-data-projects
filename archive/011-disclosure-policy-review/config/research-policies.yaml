@@ -1,0 +1,403 @@
+# Research Conflict of Interest Policy Configuration
+# Based on Texas Health Resources Corporate Policy on COI Involving Human Subject Research
+# Compliant with: 42 CFR Part 50 (PHS), 21 CFR Part 54 (FDA), 45 CFR 46.107 (Common Rule)
+
+version: "1.0.0"
+last_updated: "2025-08-07"
+policy_source: "Texas Health Resources Corporate Policy - December 2013"
+
+# Core Definitions and Thresholds
+core_thresholds:
+  disclosure_threshold: 5000  # USD - Must disclose all interests >= this amount
+  currency: "USD"
+  reporting_timeline:
+    new_conflicts: 30  # days - must report within 30 days of becoming aware
+    committee_review: 60  # days - committee must review within 60 days
+    retrospective_review: 120  # days - for non-compliance cases
+    annual_review: "required"  # annual disclosure required
+
+# Financial Interest Categories
+financial_interests:
+  
+  # Compensation and Payments
+  compensation:
+    consulting_fees:
+      description: "Fees for consulting, advisory boards, speaking"
+      disclosure_threshold: 5000
+      include_family: true  # spouse and dependent children
+      
+    honoraria:
+      description: "Payments for lectures, speaking engagements"
+      disclosure_threshold: 5000
+      include_family: true
+      
+    speaker_bureau:
+      description: "Payments from speaker bureau participation"
+      disclosure_threshold: 5000
+      include_family: true
+      
+    travel_reimbursement:
+      description: "Reimbursed or sponsored travel"
+      disclosure_threshold: 0  # Any amount must be disclosed
+      exceptions:
+        - "Federal, state, or local government agencies"
+        - "Institutions of higher education (20 U.S.C. 1001(a))"
+        - "Academic teaching hospitals"
+        - "Medical centers"
+        - "Research institutes affiliated with higher education"
+  
+  # Equity Interests
+  equity:
+    publicly_traded:
+      description: "Stock or stock options in publicly-traded companies"
+      disclosure_threshold: 5000
+      valuation: "current public prices"
+      include_family: true
+      
+    non_publicly_traded:
+      description: "Equity in non-publicly-traded companies"
+      disclosure_threshold: 0  # Any amount must be disclosed
+      include_family: true
+      
+    ownership_interest:
+      description: "Any ownership interest in sponsor"
+      disclosure_threshold: 0
+      include_family: true
+  
+  # Intellectual Property
+  intellectual_property:
+    royalties:
+      description: "Royalty income or rights to future royalties"
+      disclosure_threshold: 0  # Any amount must be disclosed
+      include_family: true
+      
+    patents:
+      description: "Patents, trademarks, copyrights related to research"
+      disclosure_threshold: 0
+      include_family: true
+      
+    licensing_agreements:
+      description: "Licensing agreements related to research"
+      disclosure_threshold: 0
+      include_family: true
+  
+  # Governance Roles
+  governance:
+    board_membership:
+      description: "Officer, director, or fiduciary role"
+      disclosure_threshold: 0  # Position itself must be disclosed
+      include_family: true
+      
+    executive_role:
+      description: "Executive or management position"
+      disclosure_threshold: 0
+      include_family: true
+
+# Management Requirements by Financial Level
+management_tiers:
+  
+  tier_1:
+    range: "5000-10000"
+    description: "Low-level financial interest"
+    
+    industry_multi_site:
+      allow_pi: true
+      allow_investigator: true
+      allow_treat_subjects: true
+      allow_recruit: true
+      allow_consent: true
+      allow_eligibility: true
+      consent_disclosure: "required"
+      
+    investigator_initiated:
+      allow_pi: true
+      allow_investigator: true
+      allow_procedures: true
+      allow_recruit: true
+      allow_consent: true
+      allow_eligibility: true
+      consent_disclosure: "required"
+  
+  tier_2:
+    range: "10001-50000"
+    description: "Moderate financial interest"
+    
+    industry_multi_site:
+      allow_pi: true
+      allow_investigator: true
+      allow_treat_subjects: true
+      allow_recruit: "compelling_reasons_only"
+      allow_consent: "compelling_reasons_only"
+      allow_eligibility: "compelling_reasons_only"
+      consent_disclosure: "required"
+      
+    investigator_initiated:
+      allow_pi: true
+      allow_investigator: true
+      allow_procedures: true
+      allow_recruit: false
+      allow_consent: false
+      allow_eligibility: false
+      consent_disclosure: "required"
+  
+  tier_3:
+    range: ">50000"
+    description: "High-level financial interest"
+    
+    industry_multi_site:
+      allow_pi: "compelling_reasons_only"
+      allow_investigator: "compelling_reasons_only"
+      allow_treat_subjects: "compelling_reasons_only"
+      allow_recruit: false
+      allow_consent: false
+      allow_eligibility: false
+      consent_disclosure: "required"
+      
+    investigator_initiated:
+      allow_pi: "compelling_reasons_only"
+      allow_investigator: "compelling_reasons_only"
+      allow_procedures: "compelling_reasons_only"
+      allow_recruit: false
+      allow_consent: false
+      allow_eligibility: false
+      consent_disclosure: "required"
+
+# Management Plan Components
+management_strategies:
+  available_options:
+    - id: "public_disclosure"
+      description: "Public disclosure of financial interests"
+      
+    - id: "monitoring"
+      description: "Independent monitoring of research"
+      
+    - id: "modification"
+      description: "Modification of research plan"
+      
+    - id: "divestiture"
+      description: "Complete divestiture of interests"
+      
+    - id: "reassignment"
+      description: "Selection of another investigator"
+      
+    - id: "consent_disclosure"
+      description: "Disclosure in informed consent"
+      
+    - id: "publication_disclosure"
+      description: "Disclosure in manuscripts and presentations"
+      
+    - id: "severance"
+      description: "Severance of conflicting relationships"
+
+# Risk Assessment Factors
+risk_assessment:
+  evaluation_factors:
+    - factor: "risk_benefit_ratio"
+      weight: "high"
+      description: "Risk/benefit ratio of the study"
+      
+    - factor: "study_design"
+      weight: "high"
+      description: "Double-blind, randomization, open-label, phase"
+      
+    - factor: "participant_selection"
+      weight: "medium"
+      description: "Method of selecting research participants"
+      
+    - factor: "study_originator"
+      weight: "medium"
+      description: "PI-initiated vs sponsor-initiated"
+      
+    - factor: "coercion_potential"
+      weight: "high"
+      description: "Possibility of coercion during consent"
+      
+    - factor: "privacy_protection"
+      weight: "medium"
+      description: "Measures to protect participant privacy"
+      
+    - factor: "data_monitoring"
+      weight: "medium"
+      description: "Data and safety monitoring plan"
+      
+    - factor: "multi_site"
+      weight: "low"
+      description: "Number of sites involved"
+      
+    - factor: "institutional_conflict"
+      weight: "high"
+      description: "Financial conflict of institution"
+      
+    - factor: "family_relationships"
+      weight: "medium"
+      description: "Family members with sponsor relationships"
+      
+    - factor: "inventor_status"
+      weight: "high"
+      description: "PI is inventor of study product"
+      
+    - factor: "outcome_compensation"
+      weight: "high"
+      description: "Compensation tied to study outcomes"
+      
+    - factor: "management_role"
+      weight: "high"
+      description: "Board or executive role with sponsor"
+      
+    - factor: "proprietary_interest"
+      weight: "high"
+      description: "Patents, trademarks, copyrights"
+      
+    - factor: "equity_interest"
+      weight: "high"
+      description: "Stock ownership in sponsor"
+      
+    - factor: "travel_sponsorship"
+      weight: "low"
+      description: "Sponsored travel related to study"
+      
+    - factor: "other_relationships"
+      weight: "medium"
+      description: "Other sponsor relationships"
+      
+    - factor: "aggregate_conflicts"
+      weight: "high"
+      description: "Total conflicts of all investigators"
+
+# Prohibited Activities
+prohibitions:
+  payments_for_results:
+    description: "Payments conditioned on particular research results"
+    status: "strictly_prohibited"
+    
+  milestone_payments:
+    description: "Payments tied to successful outcomes"
+    status: "strictly_prohibited"
+    exceptions:
+      - "Reasonable costs as specified in research agreement"
+      - "Fair market value for services performed"
+      - "Commensurate with effort"
+
+# IRB Member Conflicts
+irb_member_policies:
+  disclosure_required: true
+  recusal_requirements:
+    financial_interest: "must_recuse"
+    research_participation: "must_recuse"
+    supervisory_relationship: "must_recuse"
+    competitive_interest: "must_recuse"
+  
+  participation_limits:
+    during_review: "may_answer_questions_only"
+    during_deliberation: "must_leave_room"
+    during_vote: "prohibited"
+
+# Regulatory Compliance
+regulatory_requirements:
+  
+  phs_requirements:
+    regulation: "42 CFR Part 50, Subpart F"
+    applies_to: ["NIH", "CDC", "Indian Health Service"]
+    reporting:
+      initial: "before_expenditure"
+      new_conflicts: 60  # days
+      annual: "required"
+    training: "required"
+    public_disclosure: "required_upon_request"
+    
+  nsf_requirements:
+    description: "Identical to PHS requirements"
+    
+  fda_requirements:
+    regulation: "21 CFR Part 54"
+    disclosure_to: "sponsor"
+    sponsor_reports_to: "FDA"
+    
+  common_rule:
+    regulation: "45 CFR 46.107(e)"
+    applies_to: "IRB members"
+
+# Institutional Policies
+institutional_policies:
+  
+  committee_structure:
+    name: "Research Conflicts of Interest Committee"
+    appointed_by: "Institutional Official"
+    composition:
+      minimum_members: 5
+      non_research_members: 2  # minimum
+      non_voting:
+        - "Chief Compliance Officer"
+        - "Staff Attorney"
+    
+  quorum:
+    requirement: "simple_majority"
+    voting: "majority_of_attending"
+    
+  records_retention:
+    phs_funded: 3  # years after final expenditure report
+    all_others: 7  # years (standard THR policy)
+
+# Disclosure Exemptions
+exemptions:
+  - description: "THR salary for employees"
+    applies_to: "current_employees"
+    
+  - description: "Investment vehicles (mutual funds, retirement)"
+    condition: "no_direct_control"
+    
+  - description: "Government agency payments"
+    includes: ["federal", "state", "local"]
+    
+  - description: "Academic institution payments"
+    includes: ["teaching_hospitals", "medical_centers", "research_institutes"]
+    
+  - description: "Reasonable research costs"
+    condition: "specified_in_agreement"
+
+# Enforcement and Remedies
+enforcement:
+  
+  non_compliance_actions:
+    - "Investigator disqualification"
+    - "Required training"
+    - "Research suspension"
+    - "Research termination"
+    - "Retrospective review"
+    - "Mitigation report to agency"
+    
+  serious_non_compliance:
+    immediate_suspension: true
+    irb_notification: true
+    institutional_official_notification: true
+    
+  appeal_process:
+    available: true
+    review_by: "IRB"
+    final_authority: "Institutional Official"
+
+# Open Payments Monitoring
+transparency:
+  cms_open_payments:
+    review_frequency: "initial_and_continuing"
+    cross_reference: true
+    discrepancy_resolution: "required"
+    
+# Training Requirements
+training:
+  initial:
+    required_before: "research_activities"
+    topics:
+      - "Disclosure requirements"
+      - "Financial interest definitions"
+      - "Management strategies"
+      - "Regulatory requirements"
+    
+  refresher:
+    frequency: "every_4_years"
+    
+  remedial:
+    triggers:
+      - "Non-compliance"
+      - "Policy changes"
+    timeline: "immediate"

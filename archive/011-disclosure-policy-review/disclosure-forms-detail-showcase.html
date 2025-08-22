@@ -1,0 +1,995 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Disclosure Forms Detail Showcase - Real Examples</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="../../docs/design-system/conflixis-design-system/config/globals.css">
+    <style>
+        @keyframes modalFadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+        
+        @keyframes modalSlideIn {
+            from {
+                opacity: 0;
+                transform: translateY(-20px) scale(0.95);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0) scale(1);
+            }
+        }
+        
+        @keyframes modalFadeOut {
+            from {
+                opacity: 1;
+            }
+            to {
+                opacity: 0;
+            }
+        }
+        
+        @keyframes modalSlideOut {
+            from {
+                opacity: 1;
+                transform: translateY(0) scale(1);
+            }
+            to {
+                opacity: 0;
+                transform: translateY(-20px) scale(0.95);
+            }
+        }
+        
+        .modal-backdrop {
+            animation: modalFadeIn 0.3s ease-out;
+        }
+        
+        .modal-backdrop.closing {
+            animation: modalFadeOut 0.2s ease-out;
+        }
+        
+        .modal-content {
+            animation: modalSlideIn 0.3s ease-out;
+        }
+        
+        .modal-content.closing {
+            animation: modalSlideOut 0.2s ease-out;
+        }
+        
+        :root {
+            --conflixis-green: #0c343a;
+            --conflixis-gold: #eab96d;
+            --conflixis-blue: #4c94ed;
+            --conflixis-red: #dc2626;
+            --conflixis-tan: #f5e6d3;
+            --conflixis-light-green: #e6f4ea;
+            --conflixis-mint: #34d399;
+            --conflixis-success-green: #10b981;
+            --conflixis-gray: #f3f4f6;
+        }
+        
+        .bg-conflixis-green { background-color: var(--conflixis-green); }
+        .bg-conflixis-gold { background-color: var(--conflixis-gold); }
+        .bg-conflixis-blue { background-color: var(--conflixis-blue); }
+        .bg-conflixis-red { background-color: var(--conflixis-red); }
+        .bg-conflixis-tan { background-color: var(--conflixis-tan); }
+        .bg-conflixis-light-green { background-color: var(--conflixis-light-green); }
+        .bg-conflixis-gray { background-color: var(--conflixis-gray); }
+        .text-conflixis-green { color: var(--conflixis-green); }
+        .text-conflixis-gold { color: var(--conflixis-gold); }
+        .text-conflixis-blue { color: var(--conflixis-blue); }
+        .text-conflixis-mint { color: var(--conflixis-mint); }
+        .text-conflixis-success-green { color: var(--conflixis-success-green); }
+        .text-conflixis-light-green { color: #d1fae5; }
+        
+        .conflixis-gradient {
+            background: linear-gradient(135deg, var(--conflixis-green) 0%, #1a4a51 100%);
+        }
+        
+        .form-card {
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+        
+        .form-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+        }
+        
+        .modal-backdrop {
+            background-color: rgba(0, 0, 0, 0.5);
+            backdrop-filter: blur(4px);
+        }
+        
+        .category-badge {
+            display: inline-block;
+            padding: 0.25rem 0.75rem;
+            border-radius: 9999px;
+            font-size: 0.75rem;
+            font-weight: 600;
+        }
+        
+        /* Sidebar Styles */
+        .sidebar {
+            width: 280px;
+            background: white;
+            box-shadow: 2px 0 4px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+            min-height: 100vh;
+            position: fixed;
+            left: 0;
+            top: 0;
+            z-index: 40;
+        }
+        
+        .sidebar-collapsed {
+            width: 64px;
+        }
+        
+        .sidebar-collapsed .sidebar-text {
+            display: none;
+        }
+        
+        .sidebar-link {
+            transition: all 0.2s ease;
+        }
+        
+        .sidebar-link:hover {
+            background-color: rgba(12, 52, 58, 0.05);
+            color: var(--conflixis-green);
+        }
+        
+        .sidebar-link.active {
+            background-color: var(--conflixis-light-green);
+            color: var(--conflixis-green);
+            font-weight: 600;
+        }
+        
+        .main-content {
+            margin-left: 280px;
+            transition: margin-left 0.3s ease;
+        }
+        
+        .main-content-expanded {
+            margin-left: 64px;
+        }
+        
+        .admin-submenu {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+        }
+        
+        .admin-submenu.expanded {
+            max-height: 300px;
+        }
+        
+        .admin-toggle {
+            transition: transform 0.3s ease;
+        }
+        
+        .admin-toggle.rotated {
+            transform: rotate(180deg);
+        }
+    </style>
+</head>
+<body class="bg-gray-50 flex">
+    <!-- Sidebar -->
+    <aside id="sidebar" class="sidebar">
+        <div class="p-6 border-b">
+            <img src="../../docs/design-system/conflixis-design-system/assets/logos/conflixis-logo.png" alt="Conflixis" class="h-8 mb-4">
+            <div>
+                <h2 class="text-lg font-bold text-gray-800">Disclosure Review</h2>
+                <p class="text-xs text-gray-500">Conflixis</p>
+            </div>
+        </div>
+        
+        <nav class="p-4">
+            <ul class="space-y-2">
+                <li>
+                    <a href="/" class="sidebar-link flex items-center gap-3 px-4 py-3 rounded-lg text-gray-700">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
+                        </svg>
+                        <span class="sidebar-text">Dashboard</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/disclosures" class="sidebar-link flex items-center gap-3 px-4 py-3 rounded-lg text-gray-700">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 17V7m0 10a2 2 0 01-2 2H5a2 2 0 01-2-2V7a2 2 0 012-2h2a2 2 0 012 2m0 10a2 2 0 002 2h2a2 2 0 002-2M9 7a2 2 0 012-2h2a2 2 0 012 2m0 10V7m0 10a2 2 0 002 2h2a2 2 0 002-2V7a2 2 0 00-2-2h-2a2 2 0 00-2 2" />
+                        </svg>
+                        <span class="sidebar-text">Disclosure Viewer</span>
+                    </a>
+                </li>
+                <li>
+                    <div>
+                        <button onclick="toggleAdminMenu()" class="sidebar-link w-full flex items-center justify-between px-4 py-3 rounded-lg text-gray-700 hover:bg-gray-50">
+                            <div class="flex items-center gap-3">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                                </svg>
+                                <span class="sidebar-text">Admin</span>
+                            </div>
+                            <svg id="adminToggle" class="w-4 h-4 admin-toggle sidebar-text" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                            </svg>
+                        </button>
+                        <ul id="adminSubmenu" class="admin-submenu ml-4 mt-2 space-y-1">
+                            <li>
+                                <a href="/api/docs" target="_blank" class="flex items-center gap-3 px-4 py-2 text-sm rounded-lg text-gray-600 hover:bg-gray-50 hover:text-conflixis-green transition-colors">
+                                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+                                    </svg>
+                                    <span class="sidebar-text">API Docs</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/api/redoc" target="_blank" class="flex items-center gap-3 px-4 py-2 text-sm rounded-lg text-gray-600 hover:bg-gray-50 hover:text-conflixis-green transition-colors">
+                                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                                    </svg>
+                                    <span class="sidebar-text">ReDoc</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/forms-showcase" class="sidebar-link active flex items-center gap-3 px-4 py-2 text-sm rounded-lg">
+                                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z" />
+                                    </svg>
+                                    <span class="sidebar-text">Forms Showcase</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/configuration" class="sidebar-link flex items-center gap-3 px-4 py-2 text-sm rounded-lg text-gray-600 hover:bg-gray-50">
+                                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4" />
+                                    </svg>
+                                    <span class="sidebar-text">Configuration</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+        
+        <button id="sidebarToggle" onclick="toggleSidebar()" class="absolute bottom-4 right-4 p-2 rounded-lg bg-gray-100 hover:bg-gray-200 transition-colors">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 19l-7-7 7-7m8 14l-7-7 7-7" />
+            </svg>
+            <span class="sidebar-text sr-only">Collapse Sidebar</span>
+        </button>
+    </aside>
+    
+    <!-- Main Content -->
+    <div id="mainContent" class="main-content flex-1">
+        <!-- Header -->
+        <div class="conflixis-gradient text-white py-8 shadow-lg">
+            <div class="container mx-auto px-4">
+                <h1 class="text-3xl font-bold mb-2">Disclosure Forms Detail Showcase</h1>
+                <p class="text-gray-200">Real examples from 2025 Texas Health COI Survey</p>
+            </div>
+        </div>
+
+    <!-- Stats Overview -->
+    <div class="container mx-auto px-4 -mt-6 mb-8">
+        <div class="bg-white rounded-lg shadow-lg p-6">
+            <div class="grid grid-cols-2 md:grid-cols-5 gap-4 text-center">
+                <div>
+                    <div class="text-2xl font-bold text-gray-800">1,274</div>
+                    <div class="text-xs text-gray-600">Total Disclosures</div>
+                </div>
+                <div>
+                    <div class="text-2xl font-bold text-blue-600">563</div>
+                    <div class="text-xs text-gray-600">External Roles</div>
+                </div>
+                <div>
+                    <div class="text-2xl font-bold text-yellow-600">435</div>
+                    <div class="text-xs text-gray-600">Financial Interests</div>
+                </div>
+                <div>
+                    <div class="text-2xl font-bold text-green-600">138</div>
+                    <div class="text-xs text-gray-600">Open Payments</div>
+                </div>
+                <div>
+                    <div class="text-2xl font-bold text-purple-600">138</div>
+                    <div class="text-xs text-gray-600">Other Categories</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="container mx-auto px-4 pb-8">
+        
+        <!-- External Roles & Relationships Section -->
+        <div class="mb-8">
+            <h2 class="text-2xl font-bold mb-4 flex items-center">
+                <span class="w-4 h-4 bg-blue-500 rounded-full mr-3"></span>
+                External Roles & Relationships
+            </h2>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+                <!-- Related Parties Example -->
+                <div class="form-card bg-white rounded-lg shadow-lg p-6" onclick="showDetailModal('external', 'related')">
+                    <div class="flex justify-between items-start mb-3">
+                        <h3 class="font-semibold text-gray-700">Related Parties</h3>
+                        <span class="category-badge bg-blue-100 text-blue-700">421 records</span>
+                    </div>
+                    <div class="text-sm text-gray-600 mb-4">
+                        Family members working in healthcare
+                    </div>
+                    <div class="border-t pt-3">
+                        <div class="text-xs font-semibold text-gray-500 mb-2">Real Example:</div>
+                        <div class="bg-blue-50 p-3 rounded text-xs">
+                            <div><strong>Reporter:</strong> Zachary Sypert</div>
+                            <div><strong>Related Person:</strong> Morgan Peninger</div>
+                            <div><strong>Location:</strong> THFW (Texas Health Fort Worth)</div>
+                            <div><strong>Job Title:</strong> CST</div>
+                            <div class="mt-2 text-blue-600">Click to view full form →</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Governance/Director Fees Example -->
+                <div class="form-card bg-white rounded-lg shadow-lg p-6" onclick="showDetailModal('external', 'governance')">
+                    <div class="flex justify-between items-start mb-3">
+                        <h3 class="font-semibold text-gray-700">Governance/Director Fees</h3>
+                        <span class="category-badge bg-blue-100 text-blue-700">56 records</span>
+                    </div>
+                    <div class="text-sm text-gray-600 mb-4">
+                        Board positions and director compensation
+                    </div>
+                    <div class="border-t pt-3">
+                        <div class="text-xs font-semibold text-gray-500 mb-2">Real Example:</div>
+                        <div class="bg-blue-50 p-3 rounded text-xs">
+                            <div><strong>Reporter:</strong> Leslie Diers</div>
+                            <div><strong>Organization:</strong> Compassus Hospice</div>
+                            <div><strong>Position:</strong> Board Member</div>
+                            <div><strong>Compensation:</strong> $45,000/year</div>
+                            <div class="mt-2 text-blue-600">Click to view full form →</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Other Activities Example -->
+                <div class="form-card bg-white rounded-lg shadow-lg p-6" onclick="showDetailModal('external', 'other')">
+                    <div class="flex justify-between items-start mb-3">
+                        <h3 class="font-semibold text-gray-700">Other Activities</h3>
+                        <span class="category-badge bg-blue-100 text-blue-700">33 records</span>
+                    </div>
+                    <div class="text-sm text-gray-600 mb-4">
+                        External professional activities
+                    </div>
+                    <div class="border-t pt-3">
+                        <div class="text-xs font-semibold text-gray-500 mb-2">Real Example:</div>
+                        <div class="bg-blue-50 p-3 rounded text-xs">
+                            <div><strong>Reporter:</strong> Daniel Newman</div>
+                            <div><strong>Organization:</strong> Curative</div>
+                            <div><strong>Activity:</strong> Medical Consulting</div>
+                            <div><strong>Time:</strong> 10 hours/month</div>
+                            <div class="mt-2 text-blue-600">Click to view full form →</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Financial & Investment Interests Section -->
+        <div class="mb-8">
+            <h2 class="text-2xl font-bold mb-4 flex items-center">
+                <span class="w-4 h-4 bg-yellow-500 rounded-full mr-3"></span>
+                Financial & Investment Interests
+            </h2>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+                <!-- Ownership/Investment Example -->
+                <div class="form-card bg-white rounded-lg shadow-lg p-6" onclick="showDetailModal('financial', 'ownership')">
+                    <div class="flex justify-between items-start mb-3">
+                        <h3 class="font-semibold text-gray-700">Ownership/Investment</h3>
+                        <span class="category-badge bg-yellow-100 text-yellow-700">184 records</span>
+                    </div>
+                    <div class="text-sm text-gray-600 mb-4">
+                        Equity ownership in healthcare entities
+                    </div>
+                    <div class="border-t pt-3">
+                        <div class="text-xs font-semibold text-gray-500 mb-2">Real Example:</div>
+                        <div class="bg-yellow-50 p-3 rounded text-xs">
+                            <div><strong>Reporter:</strong> Sarah Thompson</div>
+                            <div><strong>Company:</strong> Occupational Health Solutions</div>
+                            <div><strong>Investment:</strong> $1,617,280</div>
+                            <div><strong>Ownership:</strong> 15% equity</div>
+                            <div class="mt-2 text-yellow-600">Click to view full form →</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Receipt of Remuneration Example -->
+                <div class="form-card bg-white rounded-lg shadow-lg p-6" onclick="showDetailModal('financial', 'remuneration')">
+                    <div class="flex justify-between items-start mb-3">
+                        <h3 class="font-semibold text-gray-700">Receipt of Remuneration</h3>
+                        <span class="category-badge bg-yellow-100 text-yellow-700">174 records</span>
+                    </div>
+                    <div class="text-sm text-gray-600 mb-4">
+                        Gifts and meals from vendors
+                    </div>
+                    <div class="border-t pt-3">
+                        <div class="text-xs font-semibold text-gray-500 mb-2">Real Example:</div>
+                        <div class="bg-yellow-50 p-3 rounded text-xs">
+                            <div><strong>Reporter:</strong> Audrey Puentes</div>
+                            <div><strong>Company:</strong> Natera</div>
+                            <div><strong>Type:</strong> Food and Beverage</div>
+                            <div><strong>Value:</strong> $250</div>
+                            <div class="mt-2 text-yellow-600">Click to view full form →</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Receipt of Compensation Example -->
+                <div class="form-card bg-white rounded-lg shadow-lg p-6" onclick="showDetailModal('financial', 'compensation')">
+                    <div class="flex justify-between items-start mb-3">
+                        <h3 class="font-semibold text-gray-700">Receipt of Compensation</h3>
+                        <span class="category-badge bg-yellow-100 text-yellow-700">72 records</span>
+                    </div>
+                    <div class="text-sm text-gray-600 mb-4">
+                        Direct payments for services
+                    </div>
+                    <div class="border-t pt-3">
+                        <div class="text-xs font-semibold text-gray-500 mb-2">Real Example:</div>
+                        <div class="bg-yellow-50 p-3 rounded text-xs">
+                            <div><strong>Reporter:</strong> Michael Chen</div>
+                            <div><strong>Payer:</strong> Quest Diagnostics</div>
+                            <div><strong>Service:</strong> Lab Director Services</div>
+                            <div><strong>Amount:</strong> $600,000/year</div>
+                            <div class="mt-2 text-yellow-600">Click to view full form →</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Open Payments Section -->
+        <div class="mb-8">
+            <h2 class="text-2xl font-bold mb-4 flex items-center">
+                <span class="w-4 h-4 bg-green-500 rounded-full mr-3"></span>
+                Open Payments (CMS Imports)
+            </h2>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+                <!-- Open Payments Import Example -->
+                <div class="form-card bg-white rounded-lg shadow-lg p-6" onclick="showDetailModal('openpayments', 'import')">
+                    <div class="flex justify-between items-start mb-3">
+                        <h3 class="font-semibold text-gray-700">Open Payments Import</h3>
+                        <span class="category-badge bg-green-100 text-green-700">138 records</span>
+                    </div>
+                    <div class="text-sm text-gray-600 mb-4">
+                        Automated CMS database imports
+                    </div>
+                    <div class="border-t pt-3">
+                        <div class="text-xs font-semibold text-gray-500 mb-2">Real Example:</div>
+                        <div class="bg-green-50 p-3 rounded text-xs">
+                            <div><strong>Reporter:</strong> Jennifer Rodriguez</div>
+                            <div><strong>Paying Entity:</strong> Medtronic USA, Inc.</div>
+                            <div><strong>Payment Type:</strong> General Payment</div>
+                            <div><strong>Amount:</strong> $5,432</div>
+                            <div><strong>NPI:</strong> 1234567890</div>
+                            <div class="mt-2 text-green-600">Click to view full form →</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Detail Modal -->
+    <div id="detailModal" class="fixed inset-0 z-50 hidden">
+        <div class="modal-backdrop fixed inset-0 bg-black bg-opacity-50" onclick="closeModal()"></div>
+        <div class="flex items-center justify-center min-h-screen p-4">
+            <div class="modal-content bg-white rounded-lg shadow-2xl max-w-5xl w-full max-h-[90vh] overflow-y-auto relative">
+                <div class="sticky top-0 bg-white border-b border-gray-200 p-6 flex justify-between items-start">
+                    <h3 id="modalTitle" class="text-2xl font-bold text-conflixis-green">Disclosure Form</h3>
+                    <button onclick="closeModal()" class="text-gray-500 hover:text-gray-700">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                    </button>
+                </div>
+                <div id="modalContent" class="p-6">
+                    <!-- Modal content will be inserted here -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- API Client -->
+    <script src="/api.js"></script>
+    
+    <script>
+        // Initialize API client
+        const apiClient = new DisclosureAPIClient();
+        
+        // Map disclosure types to API filters
+        const disclosureTypeMap = {
+            'related': 'Related Parties',
+            'governance': 'Governance/Director Fees',
+            'other': 'Other Activities',
+            'ownership': 'Ownership/Investment',
+            'remuneration': 'Receipt of any remuneration or gift of value',
+            'compensation': 'Receipt of Compensation',
+            'openPayments': 'Open Payments Import'
+        };
+
+        async function showDetailModal(category, type) {
+            const modal = document.getElementById('detailModal');
+            const modalTitle = document.getElementById('modalTitle');
+            const modalContent = document.getElementById('modalContent');
+            const backdrop = modal.querySelector('.modal-backdrop');
+            const modalBox = modal.querySelector('.modal-content');
+            
+            // Remove any closing classes
+            backdrop.classList.remove('closing');
+            modalBox.classList.remove('closing');
+            
+            // Fetch real data from API
+            let data = null;
+            
+            try {
+                const response = await apiClient.getDisclosures();
+                const disclosures = response.data || response; // Handle both array and object response
+                
+                // Find a matching disclosure by relationship type
+                const relationshipType = disclosureTypeMap[type] || disclosureTypeMap['openPayments'];
+                data = disclosures.find(d => {
+                    if (relationshipType && d.relationship_type) {
+                        return d.relationship_type.toLowerCase().includes(relationshipType.toLowerCase()) ||
+                               relationshipType.toLowerCase().includes(d.relationship_type.toLowerCase());
+                    }
+                    return false;
+                });
+                
+                if (!data) {
+                    // If no exact match, get any disclosure from the category
+                    data = disclosures.find(d => {
+                        const catMatch = (category === 'external' && d.category_label === 'External Roles & Relationships') ||
+                                        (category === 'financial' && d.category_label === 'Financial & Investment Interests') ||
+                                        (category === 'openpayments' && d.category_label === 'Open Payments (CMS Imports)');
+                        return catMatch;
+                    });
+                }
+                
+                if (!data) {
+                    // Fallback to first disclosure
+                    data = disclosures[0];
+                }
+                
+            } catch (error) {
+                console.error('Error fetching disclosures:', error);
+                // Show error message
+                modalContent.innerHTML = '<div class="text-center p-8 text-red-600">Error loading disclosure data. Please check the API connection.</div>';
+                modal.classList.remove('hidden');
+                return;
+            }
+            
+            if (!data) {
+                modalContent.innerHTML = '<div class="text-center p-8 text-gray-600">No disclosure data available.</div>';
+                modal.classList.remove('hidden');
+                return;
+            }
+            
+            modalTitle.textContent = `${data.category_label || 'Disclosure'} - ${data.relationship_type || type}`;
+            
+            let formHTML = generateFormHTML(category, type, data);
+            
+            modalContent.innerHTML = formHTML;
+            modal.classList.remove('hidden');
+        }
+
+        function generateFormHTML(category, type, data) {
+            const riskColors = {
+                low: 'bg-green-50 text-green-700',
+                moderate: 'bg-yellow-50 text-yellow-700',
+                high: 'bg-orange-50 text-orange-700',
+                critical: 'bg-red-50 text-red-700'
+            };
+            
+            let html = `
+                <div class="space-y-4">
+                    <!-- Risk Badge at Top -->
+                    <div class="flex justify-end">
+                        <span class="inline-block px-3 py-1 rounded-lg text-xs font-semibold ${riskColors[data.risk_tier]}">
+                            ${data.risk_tier.toUpperCase()} RISK
+                        </span>
+                    </div>
+                    
+                    <!-- Section 1: Person Information -->
+                    <div class="bg-white border border-gray-200 rounded-lg p-4">
+                        <h5 class="font-semibold text-sm mb-3 text-gray-700 uppercase tracking-wide">Person Information</h5>
+                        <div class="grid grid-cols-2 gap-x-4 gap-y-2">
+                            <div>
+                                <label class="text-xs text-gray-500">Name</label>
+                                <p class="text-sm font-medium">${data.provider_name}</p>
+                            </div>
+                            <div>
+                                <label class="text-xs text-gray-500">Title</label>
+                                <p class="text-sm">${data.job_title}</p>
+                            </div>
+                            <div>
+                                <label class="text-xs text-gray-500">Entity/Facility</label>
+                                <p class="text-sm">${data.department}</p>
+                            </div>
+                            <div>
+                                <label class="text-xs text-gray-500">Manager</label>
+                                <p class="text-sm">${data.manager_name || 'Not specified'}</p>
+                            </div>
+                            ${data.provider_npi ? `
+                            <div>
+                                <label class="text-xs text-gray-500">NPI</label>
+                                <p class="text-sm">${data.provider_npi}</p>
+                            </div>
+                            ` : ''}
+                            ${data.employee_id ? `
+                            <div>
+                                <label class="text-xs text-gray-500">Employee ID</label>
+                                <p class="text-sm">${data.employee_id}</p>
+                            </div>
+                            ` : ''}
+                        </div>
+                    </div>
+            `;
+            
+            // Section 2: Disclosure Information
+            html += `
+                <div class="bg-white border border-gray-200 rounded-lg p-4">
+                    <h5 class="font-semibold text-sm mb-3 text-gray-700 uppercase tracking-wide">Disclosure Information</h5>
+            `;
+            
+            // Category-specific form fields
+            if (category === 'external') {
+                if (type === 'related') {
+                    html += `
+                        <div class="grid grid-cols-2 gap-x-4 gap-y-2">
+                            <div>
+                                <label class="text-xs text-gray-500">Related Person</label>
+                                <p class="text-sm font-medium">${data.entity_name}</p>
+                            </div>
+                            <div>
+                                <label class="text-xs text-gray-500">Relationship</label>
+                                <p class="text-sm">${data.relationship_description || 'Family Member'}</p>
+                            </div>
+                            <div>
+                                <label class="text-xs text-gray-500">Their Location</label>
+                                <p class="text-sm">${data.related_location}</p>
+                            </div>
+                            <div>
+                                <label class="text-xs text-gray-500">Their Title</label>
+                                <p class="text-sm">${data.related_job_title}</p>
+                            </div>
+                            ${data.notes ? `
+                            <div class="col-span-2">
+                                <label class="text-xs text-gray-500">Notes</label>
+                                <p class="text-sm italic">${data.notes}</p>
+                            </div>
+                            ` : ''}
+                        </div>
+                    `;
+                } else if (type === 'governance') {
+                    html += `
+                        <div class="grid grid-cols-2 gap-x-4 gap-y-2">
+                            <div>
+                                <label class="text-xs text-gray-500">Organization</label>
+                                <p class="text-sm font-medium">${data.entity_name}</p>
+                            </div>
+                            <div>
+                                <label class="text-xs text-gray-500">Position</label>
+                                <p class="text-sm">${data.board_position || 'Board Member'}</p>
+                            </div>
+                            <div>
+                                <label class="text-xs text-gray-500">Compensation</label>
+                                <p class="text-sm font-medium text-yellow-700">
+                                    ${data.financial_amount ? '$' + data.financial_amount.toLocaleString() : 'Uncompensated'}
+                                </p>
+                            </div>
+                            <div>
+                                <label class="text-xs text-gray-500">Time Commitment</label>
+                                <p class="text-sm">${data.time_commitment || 'As needed'}</p>
+                            </div>
+                            ${data.notes ? `
+                            <div class="col-span-2">
+                                <label class="text-xs text-gray-500">Notes</label>
+                                <p class="text-sm italic">${data.notes}</p>
+                            </div>
+                            ` : ''}
+                        </div>
+                    `;
+                } else if (type === 'other') {
+                    html += `
+                        <div class="grid grid-cols-2 gap-x-4 gap-y-2">
+                            <div class="col-span-2">
+                                <label class="text-xs text-gray-500">Activity</label>
+                                <p class="text-sm">${data.activity_description || data.entity_name}</p>
+                            </div>
+                            <div>
+                                <label class="text-xs text-gray-500">Organization</label>
+                                <p class="text-sm font-medium">${data.entity_name}</p>
+                            </div>
+                            <div>
+                                <label class="text-xs text-gray-500">Time Commitment</label>
+                                <p class="text-sm">${data.time_commitment || 'Variable'}</p>
+                            </div>
+                        </div>
+                    `;
+                }
+            } else if (category === 'financial') {
+                if (type === 'ownership') {
+                    html += `
+                        <div class="grid grid-cols-2 gap-x-4 gap-y-2">
+                            <div>
+                                <label class="text-xs text-gray-500">Company</label>
+                                <p class="text-sm font-medium">${data.entity_name}</p>
+                            </div>
+                            <div>
+                                <label class="text-xs text-gray-500">Investment Type</label>
+                                <p class="text-sm">${data.investment_type || 'Equity'}</p>
+                            </div>
+                            <div>
+                                <label class="text-xs text-gray-500">Value</label>
+                                <p class="text-sm font-medium text-yellow-700">
+                                    $${data.financial_amount.toLocaleString()}
+                                </p>
+                            </div>
+                            <div>
+                                <label class="text-xs text-gray-500">Ownership</label>
+                                <p class="text-sm">${data.ownership_percentage || '< 5%'}</p>
+                            </div>
+                            ${data.financial_amount > 100000 ? `
+                            <div class="col-span-2">
+                                <p class="text-xs text-red-600">
+                                    ⚠️ Exceeds $100,000 - Management plan required
+                                </p>
+                            </div>
+                            ` : ''}
+                        </div>
+                    `;
+                } else if (type === 'remuneration') {
+                    html += `
+                        <div class="grid grid-cols-2 gap-x-4 gap-y-2">
+                            <div>
+                                <label class="text-xs text-gray-500">From Company</label>
+                                <p class="text-sm font-medium">${data.entity_name}</p>
+                            </div>
+                            <div>
+                                <label class="text-xs text-gray-500">Type</label>
+                                <p class="text-sm">${data.remuneration_type || 'Gift'}</p>
+                            </div>
+                            <div>
+                                <label class="text-xs text-gray-500">Value</label>
+                                <p class="text-sm font-medium text-yellow-700">
+                                    $${data.financial_amount.toLocaleString()}
+                                </p>
+                            </div>
+                            <div>
+                                <label class="text-xs text-gray-500">Purpose</label>
+                                <p class="text-sm">${data.event_description || 'Educational'}</p>
+                            </div>
+                        </div>
+                    `;
+                } else if (type === 'compensation') {
+                    html += `
+                        <div class="grid grid-cols-2 gap-x-4 gap-y-2">
+                            <div>
+                                <label class="text-xs text-gray-500">Payer</label>
+                                <p class="text-sm font-medium">${data.entity_name}</p>
+                            </div>
+                            <div>
+                                <label class="text-xs text-gray-500">Service</label>
+                                <p class="text-sm">${data.service_provided || 'Consulting'}</p>
+                            </div>
+                            <div>
+                                <label class="text-xs text-gray-500">Amount</label>
+                                <p class="text-sm font-medium text-yellow-700">
+                                    $${data.financial_amount.toLocaleString()}
+                                </p>
+                            </div>
+                            <div>
+                                <label class="text-xs text-gray-500">Frequency</label>
+                                <p class="text-sm">${data.payment_frequency || 'Annual'}</p>
+                            </div>
+                            ${data.financial_amount > 50000 ? `
+                            <div class="col-span-2">
+                                <p class="text-xs text-orange-600">
+                                    ⚠️ Exceeds $50,000 - Compliance review required
+                                </p>
+                            </div>
+                            ` : ''}
+                        </div>
+                    `;
+                }
+            } else if (category === 'openpayments') {
+                html += `
+                    <div class="mb-2 p-2 bg-green-50 rounded text-xs text-green-700">
+                        🏛️ CMS Open Payments automated import
+                    </div>
+                    <div class="grid grid-cols-2 gap-x-4 gap-y-2">
+                        <div>
+                            <label class="text-xs text-gray-500">Paying Entity</label>
+                            <p class="text-sm font-medium">${data.entity_name}</p>
+                        </div>
+                        <div>
+                            <label class="text-xs text-gray-500">Payment Type</label>
+                            <p class="text-sm">${data.payment_type || 'General Payment'}</p>
+                        </div>
+                        <div>
+                            <label class="text-xs text-gray-500">Amount</label>
+                            <p class="text-sm font-medium text-green-700">
+                                $${data.financial_amount.toLocaleString()}
+                            </p>
+                        </div>
+                        <div>
+                            <label class="text-xs text-gray-500">Nature</label>
+                            <p class="text-sm">${data.payment_nature || 'Not Specified'}</p>
+                        </div>
+                        ${data.notes ? `
+                        <div class="col-span-2">
+                            <label class="text-xs text-gray-500">Notes</label>
+                            <p class="text-sm italic">${data.notes}</p>
+                        </div>
+                        ` : ''}
+                        <div class="col-span-2 text-xs text-gray-400">
+                            CMS ID: ${data.cms_record_id || 'N/A'} | NPI: ${data.provider_npi}
+                        </div>
+                    </div>
+                `;
+            }
+            
+            // Close Disclosure Information section
+            html += `</div>`;
+            
+            // Section 3: Management & Review Status
+            html += `
+                <div class="bg-white border border-gray-200 rounded-lg p-4">
+                    <h5 class="font-semibold text-sm mb-3 text-gray-700 uppercase tracking-wide">Management & Review Status</h5>
+                    <div class="grid grid-cols-2 gap-x-4 gap-y-2">
+                        <div>
+                            <label class="text-xs text-gray-500">Review Status</label>
+                            <p class="text-sm font-medium">${data.review_status.replace(/_/g, ' ')}</p>
+                        </div>
+                        <div>
+                            <label class="text-xs text-gray-500">Management Plan</label>
+                            <p class="text-sm ${data.management_plan_required ? 'text-red-600 font-medium' : 'text-green-600'}">
+                                ${data.management_plan_required ? '⚠️ Required' : '✓ Not Required'}
+                            </p>
+                        </div>
+                        <div>
+                            <label class="text-xs text-gray-500">Disclosed Date</label>
+                            <p class="text-sm">${data.disclosure_date}</p>
+                        </div>
+                        <div>
+                            <label class="text-xs text-gray-500">Risk Level</label>
+                            <p class="text-sm font-medium">${data.risk_tier} Risk</p>
+                        </div>
+                    </div>
+                </div>
+            `;
+            
+            // Action Buttons - more compact
+            html += `
+                <div class="flex gap-2 pt-3">
+                    <button class="px-3 py-1.5 text-sm bg-conflixis-green text-white rounded hover:bg-opacity-90">
+                        Approve
+                    </button>
+                    <button class="px-3 py-1.5 text-sm bg-conflixis-gold text-white rounded hover:bg-opacity-90">
+                        Review
+                    </button>
+                    <button class="px-3 py-1.5 text-sm border border-gray-300 text-gray-700 rounded hover:bg-gray-50">
+                        Export
+                    </button>
+                </div>
+            `;
+            
+            html += '</div>';
+            
+            return html;
+        }
+
+        function getPolicyNote(category, type, data) {
+            // Return policy guidance based on category and type
+            if (category === 'external') {
+                if (type === 'related') {
+                    return 'Family relationships within the organization must be disclosed to ensure appropriate management of potential conflicts.';
+                } else if (type === 'governance') {
+                    return 'Board positions and governance roles must be disclosed and evaluated for conflicts with organizational interests.';
+                } else if (type === 'other') {
+                    return 'External activities must be reviewed to ensure they do not interfere with job responsibilities or create conflicts.';
+                }
+            } else if (category === 'financial') {
+                if (type === 'ownership') {
+                    return 'Ownership interests in vendors, competitors, or related entities require disclosure and may need management plans.';
+                } else if (type === 'remuneration') {
+                    return 'Gifts and meals from vendors must be disclosed per the Sunshine Act and organizational gift policies.';
+                } else if (type === 'compensation') {
+                    return 'External compensation arrangements require review to ensure compliance with Stark Law and Anti-Kickback regulations.';
+                }
+            } else if (category === 'openpayments') {
+                return 'CMS Open Payments data is automatically imported to ensure transparency and compliance with federal reporting requirements.';
+            }
+            return null;
+        }
+
+        function closeModal() {
+            const modal = document.getElementById('detailModal');
+            const backdrop = modal.querySelector('.modal-backdrop');
+            const modalBox = modal.querySelector('.modal-content');
+            
+            // Add closing animation classes
+            backdrop.classList.add('closing');
+            modalBox.classList.add('closing');
+            
+            // Wait for animation to complete before hiding
+            setTimeout(() => {
+                modal.classList.add('hidden');
+                backdrop.classList.remove('closing');
+                modalBox.classList.remove('closing');
+            }, 200);
+        }
+        
+        // Toggle sidebar
+        function toggleSidebar() {
+            const sidebar = document.getElementById('sidebar');
+            const mainContent = document.getElementById('mainContent');
+            const toggleBtn = document.getElementById('sidebarToggle');
+            
+            sidebar.classList.toggle('sidebar-collapsed');
+            mainContent.classList.toggle('main-content-expanded');
+            
+            // Update button icon
+            if (sidebar.classList.contains('sidebar-collapsed')) {
+                toggleBtn.innerHTML = `
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 5l7 7-7 7M5 5l7 7-7 7" />
+                    </svg>
+                    <span class="sidebar-text sr-only">Expand Sidebar</span>
+                `;
+            } else {
+                toggleBtn.innerHTML = `
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 19l-7-7 7-7m8 14l-7-7 7-7" />
+                    </svg>
+                    <span class="sidebar-text sr-only">Collapse Sidebar</span>
+                `;
+            }
+        }
+        
+        // Toggle admin submenu
+        function toggleAdminMenu() {
+            const submenu = document.getElementById('adminSubmenu');
+            const toggle = document.getElementById('adminToggle');
+            
+            submenu.classList.toggle('expanded');
+            toggle.classList.toggle('rotated');
+        }
+        
+        // Initialize admin menu as expanded for Forms Showcase
+        document.addEventListener('DOMContentLoaded', function() {
+            const submenu = document.getElementById('adminSubmenu');
+            const toggle = document.getElementById('adminToggle');
+            if (submenu && toggle) {
+                submenu.classList.add('expanded');
+                toggle.classList.add('rotated');
+            }
+        });
+    </script>
+    </div> <!-- End of Main Content -->
+    
+    <!-- API Client -->
+    <script src="/api.js"></script>
+</body>
+</html>
