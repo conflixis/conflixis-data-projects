@@ -1,0 +1,285 @@
+**Dr. Keith A. Heier – Professional Profile (Orthopaedic Surgery, Foot & Ankle Specialist)**
+
+**Overview**
+
+Dr. Keith A. Heier is a board-certified orthopedic surgeon specializing in the diagnosis and treatment of foot and ankle conditions. With over 30 years of experience, he has extensive expertise in both non-operative and operative management of sports injuries, fractures, arthritis, congenital deformities, trauma, and joint replacements. Dr. Heier is recognized for his proficiency in complex reconstructions, including fusions, total ankle replacements, and arthroscopy. He is among the select orthopedic surgeons nationwide who are fellowship-trained in foot and ankle surgery and hold subspecialty certification in sports medicine. ([orthotexas.com](https://www.orthotexas.com/dr-heier/?utm_source=openai))
+
+**Education and Training**
+
+- **Undergraduate Education:** University of Pennsylvania
+- **Medical School:** University of Florida College of Medicine, M.D., 1993 (Ranked third in his class)
+- **Internship:** General Surgery, Baylor College of Medicine, Houston, TX, 1993-1994
+- **Residency:** Orthopedic Surgery, Baylor College of Medicine, Houston, TX, 1994-1998
+- **Fellowship:** Foot and Ankle Surgery, Florida Orthopaedic Institute, Tampa, FL, 1998-1999
+
+**Board Certifications and Licenses**
+
+- **Board Certifications:**
+  - Orthopaedic Surgery, American Board of Orthopaedic Surgery
+  - Orthopaedic Sports Medicine, American Board of Orthopaedic Surgery
+- **Medical Licenses:**
+  - Texas State Medical License (Active through 2026)
+  - Florida State Medical License (Active through 2000)
+  - Pennsylvania State Medical License (Active through 1998)
+
+**Clinical Practice**
+
+- **Specialties:** Orthopaedic Surgery
+- **Subspecialties:** Foot & Ankle Surgery, Orthopaedic Sports Medicine
+- **Hospital Affiliations:**
+  - Texas Health Center for Diagnostics & Surgery Plano
+  - Carrollton Regional Medical Center
+  - Texas Health Presbyterian Hospital Plano
+  - Texas Health Presbyterian Hospital Flower Mound
+- **Practice Locations:**
+  - OrthoTexas Physicians and Surgeons PLLC
+    - 4780 N Josey Ln, Carrollton, TX 75010
+    - 4031 W Plano Pkwy, Suite 100, Plano, TX 75093
+    - 4951 Long Prairie Rd, Suite 100, Flower Mound, TX 75028
+- **Telemedicine Availability:** Please contact the office directly to inquire about telemedicine services.
+
+**Professional and Administrative Roles**
+
+- **Current Positions:**
+  - Foot and Ankle Orthopedic Specialist for FC Dallas Major League Soccer team
+  - Foot and Ankle Orthopedic Specialist for the University of North Texas Athletic Department
+  - Board of Managers member at Texas Health Center for Diagnostics & Surgery Plano
+- **Previous Roles:**
+  - Team Physician for Hebron High School (1999-2019)
+  - Foot and Ankle Consultant for the Texas Rangers (MLB)
+  - President of Texas Health Resources’ Plano Department of Orthopedics
+
+**Industry and Corporate Affiliations**
+
+- **Medical Device Companies:**
+  - Consultant for The Agility™ Ankle Replacement System (1995–2005)
+  - Consultant for the STAR™ Total Ankle Replacement (2012–2016)
+  - Experience with the Salto Talaris® Ankle and the Infinity Prophecy System™
+
+**Academic and Teaching Affiliations**
+
+- Long-standing reviewer for the Journal of Orthopaedic Trauma
+- Reviewer for the Journal of the American Academy of Orthopaedic Surgeons
+
+**Research Activities and Publications**
+
+- **Recent or Prominent Studies:**
+  - "Open fractures of the calcaneus: soft-tissue injury determines outcome." The Journal of Bone and Joint Surgery. American Volume. 2003.
+  - "An Analysis of Anterior Cruciate Ligament Reconstruction in Middle-Aged Patients." The American Journal of Sports Medicine. 1997.
+- **Areas of Research Interest:**
+  - Ankle fractures and dislocations
+  - Ankle arthrodesis
+- **Notable Publications:**
+  - Authored chapters on ankle fractures, ankle dislocations, and ankle arthrodesis for multiple medical publications, including those published by the American Academy of Orthopaedic Surgery.
+
+**Professional Memberships and Societies**
+
+- American Academy of Orthopaedic Surgeons
+- American Orthopaedic Foot & Ankle Society
+
+**Speaking Engagements and Conferences**
+
+- Regular speaker at orthopedic conferences and seminars, particularly on topics related to foot and ankle surgery and sports medicine.
+
+**Charitable Affiliations and Volunteer Work**
+
+- Volunteer medical services for local high school athletic programs.
+
+**Community Involvement or Service**
+
+- Active participant in community health initiatives and educational programs focusing on sports injury prevention and treatment.
+
+**Awards, Honors, and Recognitions**
+
+- Named Texas Monthly Super Doctor (2014–2024)
+- Named D Magazine’s Best Doctors in Collin County (2020–2024)
+- Named D Magazine’s Best Doctors in Dallas (2021–2023)
+- Inducted into Texas Monthly Super Doctors Texas Hall of Fame
+
+**Board Memberships**
+
+- Board of Managers, Texas Health Center for Diagnostics & Surgery Plano
+
+**Advisory Roles**
+
+- Consultant and advisor for various medical device companies specializing in ankle replacement systems.
+
+{
+  "name": "Dr. Keith A. Heier",
+  "npi": "1821013020",
+  "specialty": "Orthopaedic Surgery",
+  "subspecialties": ["Foot & Ankle Surgery", "Orthopaedic Sports Medicine"],
+  "education": [
+    {
+      "degree": "B.A.",
+      "field": "Pre-Medicine",
+      "institution": "University of Pennsylvania"
+    },
+    {
+      "degree": "M.D.",
+      "field": "Medicine",
+      "institution": "University of Florida College of Medicine",
+      "year": 1993
+    },
+    {
+      "degree": "Internship",
+      "field": "General Surgery",
+      "institution": "Baylor College of Medicine",
+      "years": "1993-1994"
+    },
+    {
+      "degree": "Residency",
+      "field": "Orthopedic Surgery",
+      "institution": "Baylor College of Medicine",
+      "years": "1994-1998"
+    },
+    {
+      "degree": "Fellowship",
+      "field": "Foot and Ankle Surgery",
+      "institution": "Florida Orthopaedic Institute",
+      "years": "1998-1999"
+    }
+  ],
+  "boardCertifications": [
+    "Orthopaedic Surgery, American Board of Orthopaedic Surgery",
+    "Orthopaedic Sports Medicine, American Board of Orthopaedic Surgery"
+  ],
+  "licenses": [
+    {
+      "state": "Texas",
+      "licenseNumber": "J9088",
+      "status": "Active through 2026"
+    },
+    {
+      "state": "Florida",
+      "licenseNumber": "Not specified",
+      "status": "Active through 2000"
+    },
+    {
+      "state": "Pennsylvania",
+      "licenseNumber": "Not specified",
+      "status": "Active through 1998"
+    }
+  ],
+  "hospitalAffiliations": [
+    "Texas Health Center for Diagnostics & Surgery Plano",
+    "Carrollton Regional Medical Center",
+    "Texas Health Presbyterian Hospital Plano",
+    "Texas Health Presbyterian Hospital Flower Mound"
+  ],
+  "practiceLocations": [
+    {
+      "name": "OrthoTexas Physicians and Surgeons PLLC",
+      "address": "4780 N Josey Ln, Carrollton, TX 75010"
+    },
+    {
+      "name": "OrthoTexas Physicians and Surgeons PLLC",
+      "address": "4031 W Plano Pkwy, Suite 100, Plano, TX 75093"
+    },
+    {
+      "name": "OrthoTexas Physicians and Surgeons PLLC",
+      "address": "4951 Long Prairie Rd, Suite 100, Flower Mound, TX 75028"
+    }
+  ],
+  "telemedicineAvailability": false,
+  "professionalRoles": {
+    "current": [
+      "Foot and Ankle Orthopedic Specialist for FC Dallas Major League Soccer team",
+      "Foot and Ankle Orthopedic Specialist for the University of North Texas Athletic Department",
+      "Board of Managers member at Texas Health Center for Diagnostics & Surgery Plano"
+    ],
+    "previous": [
+      "Team Physician for Hebron High School (1999-2019)",
+      "Foot and Ankle Consultant for the Texas Rangers (MLB)",
+      "President of Texas Health Resources’ Plano Department of Orthopedics"
+    ]
+  },
+  "industryCorporateAffiliations": [
+    {
+      "company": "The Agility™ Ankle Replacement System",
+      "role": "Consultant",
+      "years": "1995–2005"
+    },
+    {
+      "company": "STAR™ Total Ankle Replacement",
+      "role": "Consultant",
+      "years": "2012–2016"
+    },
+    {
+      "company": "Salto Talaris® Ankle and Infinity Prophecy System™",
+      "role": "Experience with products",
+      "years": "Not specified"
+    }
+  ],
+  "academicAffiliations": [
+    {
+      "journal": "Journal of Orthopaedic Trauma",
+      "role": "Reviewer"
+    },
+    {
+      "journal": "Journal of the American Academy of Orthopaedic Surgeons",
+      "role": "Reviewer"
+    }
+  ],
+  "researchActivities": {
+    "recentStudies": [
+      {
+        "title": "Open fractures of the calcaneus: soft-tissue injury determines outcome.",
+        "journal": "The Journal of Bone and Joint Surgery. American Volume",
+        "year": 2003
+      },
+      {
+        "title": "An Analysis of Anterior Cruciate Ligament Reconstruction in Middle-Aged Patients.",
+        "journal": "The American Journal of Sports Medicine",
+        "year": 1997
+      }
+    ],
+    "researchInterests": [
+      "Ankle fractures and dislocations",
+      "Ankle arthrodesis"
+    ],
+    "notablePublications": [
+      {
+        "title": "Chapters on ankle fractures, ankle dislocations, and ankle arthrodesis",
+        "publication": "Multiple medical publications, including those by the American Academy of Orthopaedic Surgery"
+      }
+    ]
+  },
+  "professionalMemberships": [
+    "American Academy of Orthopaedic Surgeons",
+    "American Orthopaedic Foot & Ankle Society"
+  ],
+  "speakingEngagements": [
+    "Regular speaker at orthopedic conferences and seminars on foot and ankle surgery and sports medicine"
+  ],
+  "charitableAffiliations": [
+    "Volunteer medical services for local high school athletic programs"
+  ],
+  "communityInvolvement": [
+    "Active participant in community health initiatives and educational programs on sports injury prevention and treatment"
+  ],
+  "awardsHonorsRecognitions": [
+    {
+      "award": "Texas Monthly Super Doctor",
+      "years": "2014–2024"
+    },
+    {
+      "award": "D Magazine’s Best Doctors in Collin County",
+      "years": "2020–2024"
+    },
+    {
+      "award": "D Magazine’s Best Doctors in Dallas",
+      "years": "2021–2023"
+    },
+    {
+      "award": "Inducted into Texas Monthly Super Doctors Texas Hall of Fame",
+      "years": "Not specified"
+    }
+  ],
+  "boardMemberships": [
+    "Board of Managers, Texas Health Center for Diagnostics & Surgery Plano"
+  ],
+  "advisoryRoles": [
+    "Consultant and advisor for various medical device companies specializing in ankle replacement systems"
+  ]
+}

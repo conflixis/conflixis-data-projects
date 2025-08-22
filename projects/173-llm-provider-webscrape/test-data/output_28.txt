@@ -1,0 +1,268 @@
+**Dr. Mazin Issa Foteh – Professional Profile (Vascular Surgery, Director of Aortic Therapy and Innovation)**
+
+**Overview**
+Dr. Mazin Issa Foteh is a board-certified vascular surgeon with extensive experience in the diagnosis and management of vascular diseases. A native of Houston, Texas, he has been instrumental in pioneering advanced vascular procedures and has a strong background in clinical research. As of August 2022, Dr. Foteh serves as the Director of Aortic Therapy and Innovation at Baylor Scott & White/The Heart Hospital of Plano and is the Co-director of the Aortic Clinic. ([cd-prod.bswhealth.com](https://cd-prod.bswhealth.com/physician/mazin-foteh?utm_source=openai))
+
+**Education and Training**
+- **Medical School:** University of Texas Medical School at Houston, MD, 2005
+- **Internship:** General Surgery, University of Texas Southwestern Medical School, 2005–2006
+- **Residency:** General Surgery, University of Texas Southwestern Medical Center, 2006–2010
+- **Fellowship:** Vascular Surgery, University of Texas Southwestern Medical Center, 2010–2012
+
+**Board Certifications and Licenses**
+- **Board Certification:** Vascular Surgery, American Board of Surgery
+- **Medical License:** Texas Medical Board, License Number N2501, active since 2009
+
+**Clinical Practice**
+- **Specialties:** Vascular Surgery
+- **Subspecialties:** Endovascular Surgery
+- **Hospital Affiliations:**
+  - Baylor Scott & White Heart and Vascular Hospital – Dallas
+  - Baylor Scott & White Medical Center – Plano
+  - Baylor Scott & White Medical Center – Grapevine
+  - Baylor Scott & White The Heart Hospital – Denton
+  - Baylor Scott & White Medical Center – McKinney
+  - Baylor Scott & White Medical Center – Lake Pointe
+  - Baylor Scott & White The Heart Hospital – Plano
+  - Baylor Scott & White Medical Center – Centennial
+  - Baylor University Medical Center
+  - Baylor Scott & White All Saints Medical Center – Fort Worth
+  - Baylor Scott & White The Heart Hospital – McKinney
+- **Practice Locations:**
+  - 4716 Alliance Blvd., Suite 200, Plano, TX 75093
+- **Telemedicine Availability:** Not specified
+
+**Professional and Administrative Roles**
+- **Current Positions:**
+  - Director of Aortic Therapy and Innovation, Baylor Scott & White/The Heart Hospital of Plano
+  - Co-director of the Aortic Clinic, Baylor Scott & White/The Heart Hospital of Plano
+- **Previous Roles:**
+  - Assistant Professor of Surgery and Perioperative Care, University of Texas Dell Medical School at Austin (August 2016 – Present)
+  - Clinical Instructor, Vascular Surgery, University of Texas Southwestern Medical School (July 2010 – June 2012)
+  - Vascular Surgeon, Cardiothoracic and Vascular Surgeons, Austin, TX (July 2012 – Present)
+
+**Industry and Corporate Affiliations**
+- **Medical Device Companies:** None available
+- **Pharmaceutical Companies:** None available
+- **Healthcare Startups:** None available
+- **Other Relevant Companies:** None available
+
+**Academic and Teaching Affiliations**
+- Assistant Professor of Surgery and Perioperative Care, University of Texas Dell Medical School at Austin
+- Clinical Instructor, Vascular Surgery, University of Texas Southwestern Medical School
+
+**Research Activities and Publications**
+- **Recent or Prominent Studies:**
+  - "Treatment of Carotid Restenosis Using Transcarotid Revascularization," Vascular and Endovascular Surgery, 2020
+  - "Results of the ROADSTER Multicenter Trial of Transcarotid Stenting with Dynamic Flow Reversal," Journal of Vascular Surgery, 2015
+- **Areas of Research Interest:**
+  - Transcarotid artery revascularization
+  - Endovascular repair of aortic aneurysms
+  - Peripheral artery disease interventions
+- **Notable Publications:**
+  - "The 'Woundosome' Concept and Its Impact on Procedural Outcomes in Patients With Chronic Limb-Threatening Ischemia," Journal of Endovascular Therapy, 2024
+  - "A Multi-Institutional Analysis of Transcarotid Artery Revascularization Compared to Carotid Endarterectomy," Journal of Vascular Surgery, 2019
+
+**Professional Memberships and Societies**
+- American College of Surgeons (Fellow)
+- Society of Vascular Surgeons
+- Southern Association of Vascular Surgeons
+- American Venous Forum
+- Outpatient Endovascular and Interventional Society
+- Parkland Surgical Society
+- Travis County Medical Society
+
+**Speaking Engagements and Conferences**
+- LINC Symposium, Leipzig, Germany, January 2013
+- Austin Trauma and Critical Care Conference, Austin, TX, May 2013
+- Society of Vascular Surgeons Annual Meeting, Chicago, IL, June 2012
+
+**Charitable Affiliations and Volunteer Work**
+None available
+
+**Community Involvement or Service**
+None available
+
+**Awards, Honors, and Recognitions**
+- Texas Monthly Magazine's Rising Stars in Vascular Surgery (2013–2015)
+- Texas Monthly Magazine's Superstars in Vascular Surgery (2016–2022)
+- Fellow, American College of Surgeons
+
+**Board Memberships**
+None available
+
+**Advisory Roles**
+None available
+
+{
+  "name": "Dr. Mazin Issa Foteh",
+  "npi": "1811191794",
+  "specialty": "Vascular Surgery",
+  "subspecialties": ["Endovascular Surgery"],
+  "education": [
+    {
+      "degree": "MD",
+      "institution": "University of Texas Medical School at Houston",
+      "year": 2005
+    },
+    {
+      "program": "General Surgery Internship",
+      "institution": "University of Texas Southwestern Medical School",
+      "years": "2005–2006"
+    },
+    {
+      "program": "General Surgery Residency",
+      "institution": "University of Texas Southwestern Medical Center",
+      "years": "2006–2010"
+    },
+    {
+      "program": "Vascular Surgery Fellowship",
+      "institution": "University of Texas Southwestern Medical Center",
+      "years": "2010–2012"
+    }
+  ],
+  "boardCertifications": [
+    {
+      "specialty": "Vascular Surgery",
+      "board": "American Board of Surgery"
+    }
+  ],
+  "licenses": [
+    {
+      "state": "Texas",
+      "licenseNumber": "N2501",
+      "status": "Active",
+      "since": 2009
+    }
+  ],
+  "hospitalAffiliations": [
+    "Baylor Scott & White Heart and Vascular Hospital – Dallas",
+    "Baylor Scott & White Medical Center – Plano",
+    "Baylor Scott & White Medical Center – Grapevine",
+    "Baylor Scott & White The Heart Hospital – Denton",
+    "Baylor Scott & White Medical Center – McKinney",
+    "Baylor Scott & White Medical Center – Lake Pointe",
+    "Baylor Scott & White The Heart Hospital – Plano",
+    "Baylor Scott & White Medical Center – Centennial",
+    "Baylor University Medical Center",
+    "Baylor Scott & White All Saints Medical Center – Fort Worth",
+    "Baylor Scott & White The Heart Hospital – McKinney"
+  ],
+  "practiceLocations": [
+    {
+      "address": "4716 Alliance Blvd., Suite 200, Plano, TX 75093"
+    }
+  ],
+  "telemedicineAvailability": false,
+  "professionalRoles": {
+    "current": [
+      {
+        "title": "Director of Aortic Therapy and Innovation",
+        "organization": "Baylor Scott & White/The Heart Hospital of Plano"
+      },
+      {
+        "title": "Co-director of the Aortic Clinic",
+        "organization": "Baylor Scott & White/The Heart Hospital of Plano"
+      }
+    ],
+    "previous": [
+      {
+        "title": "Assistant Professor of Surgery and Perioperative Care",
+        "organization": "University of Texas Dell Medical School at Austin",
+        "years": "August 2016 – Present"
+      },
+      {
+        "title": "Clinical Instructor, Vascular Surgery",
+        "organization": "University of Texas Southwestern Medical School",
+        "years": "July 2010 – June 2012"
+      },
+      {
+        "title": "Vascular Surgeon",
+        "organization": "Cardiothoracic and Vascular Surgeons, Austin, TX",
+        "years": "July 2012 – Present"
+      }
+    ]
+  },
+  "industryCorporateAffiliations": [],
+  "academicAffiliations": [
+    {
+      "title": "Assistant Professor of Surgery and Perioperative Care",
+      "institution": "University of Texas Dell Medical School at Austin"
+    },
+    {
+      "title": "Clinical Instructor, Vascular Surgery",
+      "institution": "University of Texas Southwestern Medical School"
+    }
+  ],
+  "researchActivities": {
+    "recentStudies": [
+      {
+        "title": "Treatment of Carotid Restenosis Using Transcarotid Revascularization",
+        "journal": "Vascular and Endovascular Surgery",
+        "year": 2020
+      },
+      {
+        "title": "Results of the ROADSTER Multicenter Trial of Transcarotid Stenting with Dynamic Flow Reversal",
+        "journal": "Journal of Vascular Surgery",
+        "year": 2015
+      }
+    ],
+    "researchInterests": [
+      "Transcarotid artery revascularization",
+      "Endovascular repair of aortic aneurysms",
+      "Peripheral artery disease interventions"
+    ],
+    "notablePublications": [
+      {
+        "title": "The 'Woundosome' Concept and Its Impact on Procedural Outcomes in Patients With Chronic Limb-Threatening Ischemia",
+        "journal": "Journal of Endovascular Therapy",
+        "year": 2024
+      },
+      {
+        "title": "A Multi-Institutional Analysis of Transcarotid Artery Revascularization Compared to Carotid Endarterectomy",
+        "journal": "Journal of Vascular Surgery",
+        "year": 2019
+      }
+    ]
+  },
+  "professionalMemberships": [
+    "American College of Surgeons (Fellow)",
+    "Society of Vascular Surgeons",
+    "Southern Association of Vascular Surgeons",
+    "American Venous Forum",
+    "Outpatient Endovascular and Interventional Society",
+    "Parkland Surgical Society",
+    "Travis County Medical Society"
+  ],
+  "speakingEngagements": [
+    {
+      "event": "LINC Symposium",
+      "location": "Leipzig, Germany",
+      "date": "January 2013"
+    },
+    {
+      "event": "Austin Trauma and Critical Care Conference",
+      "location": "Austin, TX",
+      "date": "May 2013"
+    },
+    {
+      "event": "Society of Vascular Surgeons Annual Meeting",
+      "location": "Chicago, IL",
+      "date": "June 2012"
+    }
+  ],
+  "charitableAffiliations": [],
+  "communityInvolvement": [],
+  "awardsHonorsRecognitions": [
+    {
+      "title": "Texas Monthly Magazine's Rising Stars in Vascular Surgery",
+      "years": "2013–2015"
+    },
+    {
+      "title": "Texas Monthly Magazine's Superstars in Vascular Surgery",
+      "years": "2016–2022"
+    },
+    {
+      "title": "Fellow, American College of Surgeons"
+    }
+  

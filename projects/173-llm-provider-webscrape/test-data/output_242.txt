@@ -1,0 +1,326 @@
+Dr. Jerome P. Lisk is a board-certified neurologist specializing in movement disorders, currently serving as the Director of Movement Disorders at MD Neurology in Denton and Flower Mound, Texas. ([mdneurology.net](https://www.mdneurology.net/jerome_lisk.html?utm_source=openai))
+
+**Overview**
+
+With over 26 years of experience in neurology, Dr. Lisk has dedicated his career to the diagnosis and treatment of movement disorders, including Parkinson's disease and dystonia. He has been a principal investigator in several national clinical research trials and has held various academic and advisory positions throughout his career. ([mdneurology.net](https://www.mdneurology.net/jerome_lisk.html?utm_source=openai))
+
+**Education and Training**
+
+- **Medical School:** Virginia Commonwealth University School of Medicine (Medical College of Virginia), 1998
+- **Internship:** Internal Medicine, Charles R. Drew University of Medicine and Science, 1998-1999
+- **Residency:** Neurology, University of Texas Southwestern Medical Center, 1999-2000; University of Texas Health Science Center at Houston, 2000-2002
+- **Fellowship:** Surgical and Medical Management of Movement Disorders, University of Texas Health Science Center at Houston, 2002-2003
+- **Executive MBA:** Naveen Jindal School of Management at University of Texas at Dallas, 2022-2024
+
+**Board Certifications and Licenses**
+
+- **Board Certifications:**
+  - American Board of Psychiatry and Neurology – Neurology
+  - National Board of Physicians and Surgeons – Neurology
+- **Medical Licenses:**
+  - California (Active through 2025)
+  - Missouri (Active through 2026)
+  - Texas (License No. R1074)
+
+**Clinical Practice**
+
+- **Specialties:** Neurology
+- **Subspecialties:** Movement Disorders
+- **Hospital Affiliations:**
+  - Texas Health Presbyterian Hospital Denton
+- **Practice Locations:**
+  - 3120 Medpark Dr, Ste 100, Denton, TX 76208
+- **Telemedicine Availability:** Not specified
+
+**Professional and Administrative Roles**
+
+- **Current Positions:**
+  - Director of Movement Disorders, MD Neurology, Denton and Flower Mound, TX
+  - Clinical Assistant Professor, University of North Texas Health Science Center at Fort Worth
+  - Board Member, Texas Health Services Authority
+  - Member, California State Athletic Commission Advisory Committee on Medical and Safety Standards
+- **Previous Roles:**
+  - Board Member, American Heart Association – African-American Task Force for the Western States
+  - Board Member, Alzheimer's Association – Southwest Missouri Chapter
+  - Expert Reviewer, California Medical Board
+  - Member, California Neurology Society Bylaws Committee
+
+**Industry and Corporate Affiliations**
+
+- **Medical Advisor:**
+  - LevelEx
+  - Beneufit
+  - LikeMinds Global
+  - OneStop Wellness
+  - Steadiwear
+  - NeuroRPM
+
+**Academic and Teaching Affiliations**
+
+- Clinical Assistant Professor, University of North Texas Health Science Center at Fort Worth
+
+**Research Activities and Publications**
+
+- **Recent or Prominent Studies:**
+  - Principal Investigator in national clinical research trials on Parkinson's disease
+- **Areas of Research Interest:**
+  - Movement disorders
+  - Parkinson's disease
+  - Dystonia
+- **Notable Publications:**
+  - "Droxidopa for the Short‐Term Treatment of Symptomatic Neurogenic Orthostatic Hypotension in Parkinson's Disease (nOH306B)"
+  - "Engaging Older Adults With Parkinson’s Disease in Physical Activity Using Technology: A Feasibility Study"
+  - "The Whole Physician: Ten Action Items to Combat Peer-to-Peer and Institutional Racial Bias in Medicine"
+
+**Professional Memberships and Societies**
+
+- American Academy of Neurology
+- International Parkinson and Movement Disorder Society
+- Association of Ring Side Physicians
+- The International Restless Legs Syndrome Study Group (IRLSSG)
+- Association of American Physicians and Surgeons
+
+**Speaking Engagements and Conferences**
+
+- Moderator and speaker at American Academy of Neurology Annual Meetings
+- Keynote Speaker, 2010 Conference on Successful Aging – "The Symptoms and Prevention of Stroke"
+
+**Charitable Affiliations and Volunteer Work**
+
+- Board Member, Alzheimer's Association – Southwest Missouri Chapter
+- Board Member, American Heart Association – African-American Task Force for the Western States
+
+**Community Involvement or Service**
+
+- Radio host for ReachMD since 2010
+
+**Awards, Honors, and Recognitions**
+
+- NAACP 2010 Man of Valor Youth Council Award
+- Pasadena Top Doctor Award in Neurology
+- Graduate, American Academy of Neurology Palatucci Advocacy Leadership Forum, 2013
+- Graduate, American Academy of Neurology Diversity Leadership Program, 2016
+- Graduate, Trinity Leadership Curriculum, 2018
+
+**Board Memberships**
+
+- Texas Health Services Authority
+- Alzheimer’s Association Medical & Scientific Committee – Northeast Texas and Dallas
+
+**Advisory Roles**
+
+- Medical Advisory Committee, California State Athletic Commission
+- Medical Advisor for several biotech companies, including LevelEx, Beneufit, LikeMinds Global, OneStop Wellness, Steadiwear, and NeuroRPM
+
+{
+  "name": "Jerome P. Lisk",
+  "npi": "1821036500",
+  "specialty": "Neurology",
+  "subspecialties": ["Movement Disorders"],
+  "education": [
+    {
+      "degree": "MD",
+      "institution": "Virginia Commonwealth University School of Medicine",
+      "year": 1998
+    },
+    {
+      "degree": "Executive MBA",
+      "institution": "Naveen Jindal School of Management at University of Texas at Dallas",
+      "year": 2024
+    }
+  ],
+  "boardCertifications": [
+    "American Board of Psychiatry and Neurology – Neurology",
+    "National Board of Physicians and Surgeons – Neurology"
+  ],
+  "licenses": [
+    {
+      "state": "California",
+      "status": "Active through 2025"
+    },
+    {
+      "state": "Missouri",
+      "status": "Active through 2026"
+    },
+    {
+      "state": "Texas",
+      "licenseNumber": "R1074"
+    }
+  ],
+  "hospitalAffiliations": ["Texas Health Presbyterian Hospital Denton"],
+  "practiceLocations": [
+    {
+      "address": "3120 Medpark Dr, Ste 100, Denton, TX 76208",
+      "phone": "(940) 383-1770"
+    }
+  ],
+  "telemedicineAvailability": false,
+  "professionalRoles": {
+    "current": [
+      {
+        "title": "Director of Movement Disorders",
+        "organization": "MD Neurology, Denton and Flower Mound, TX"
+      },
+      {
+        "title": "Clinical Assistant Professor",
+        "organization": "University of North Texas Health Science Center at Fort Worth"
+      },
+      {
+        "title": "Board Member",
+        "organization": "Texas Health Services Authority"
+      },
+      {
+        "title": "Member",
+        "organization": "California State Athletic Commission Advisory Committee on Medical and Safety Standards"
+      }
+    ],
+    "previous": [
+      {
+        "title": "Board Member",
+        "organization": "American Heart Association – African-American Task Force for the Western States"
+      },
+      {
+        "title": "Board Member",
+        "organization": "Alzheimer's Association – Southwest Missouri Chapter"
+      },
+      {
+        "title": "Expert Reviewer",
+        "organization": "California Medical Board"
+      },
+      {
+        "title": "Member",
+        "organization": "California Neurology Society Bylaws Committee"
+      }
+    ]
+  },
+  "industryCorporateAffiliations": [
+    {
+      "role": "Medical Advisor",
+      "company": "LevelEx"
+    },
+    {
+      "role": "Medical Advisor",
+      "company": "Beneufit"
+    },
+    {
+      "role": "Medical Advisor",
+      "company": "LikeMinds Global"
+    },
+    {
+      "role": "Medical Advisor",
+      "company": "OneStop Wellness"
+    },
+    {
+      "role": "Medical Advisor",
+      "company": "Steadiwear"
+    },
+    {
+      "role": "Medical Advisor",
+      "company": "NeuroRPM"
+    }
+  ],
+  "academicAffiliations": [
+    {
+      "title": "Clinical Assistant Professor",
+      "institution": "University of North Texas Health Science Center at Fort Worth"
+    }
+  ],
+  "researchActivities": {
+    "recentStudies": [
+      {
+        "title": "Principal Investigator in national clinical research trials on Parkinson's disease"
+      }
+    ],
+    "researchInterests": [
+      "Movement disorders",
+      "Parkinson's disease",
+      "Dystonia"
+    ],
+    "notablePublications": [
+      {
+        "title": "Droxidopa for the Short‐Term Treatment of Symptomatic Neurogenic Orthostatic Hypotension in Parkinson's Disease (nOH306B)"
+      },
+      {
+        "title": "Engaging Older Adults With Parkinson’s Disease in Physical Activity Using Technology: A Feasibility Study"
+      },
+      {
+        "title": "The Whole Physician: Ten Action Items to Combat Peer-to-Peer and Institutional Racial Bias in Medicine"
+      }
+    ]
+  },
+  "professionalMemberships": [
+    "American Academy of Neurology",
+    "International Parkinson and Movement Disorder Society",
+    "Association of Ring Side Physicians",
+    "The International Restless Legs Syndrome Study Group (IRLSSG)",
+    "Association of American Physicians and Surgeons"
+  ],
+  "speakingEngagements": [
+    {
+      "event": "American Academy of Neurology Annual Meetings",
+      "role": "Moderator and speaker"
+    },
+    {
+      "event": "2010 Conference on Successful Aging",
+      "role": "Keynote Speaker",
+      "topic": "The Symptoms and Prevention of Stroke"
+    }
+  ],
+  "charitableAffiliations": [
+    {
+      "role": "Board Member",
+      "organization": "Alzheimer's Association – Southwest Missouri Chapter"
+    },
+    {
+      "role": "Board Member",
+      "organization": "American Heart Association – African-American Task Force for the Western States"
+    }
+  ],
+  "communityInvolvement": [
+    {
+      "role": "Radio host",
+      "organization": "ReachMD",
+      "since": 2010
+    }
+  ],
+  "awardsHonorsRecognitions": [
+    {
+      "award": "NAACP 2010 Man of Valor Youth Council Award"
+    },
+    {
+      "award": "Pasadena Top Doctor Award in Neurology"
+    },
+    {
+      "award": "Graduate, American Academy of Neurology Palatucci Advocacy Leadership Forum, 2013"
+    },
+    {
+      "award": "Graduate, American Academy of Neurology Diversity Leadership Program, 2016"
+    },
+    {
+      "award": "Graduate, Trinity Leadership Curriculum, 2018"
+    }
+  ],
+  "boardMemberships": [
+    {
+      "organization": "Texas Health Services Authority"
+    },
+    {
+      "organization": "Alzheimer’s Association Medical & Scientific Committee – Northeast Texas and Dallas"
+    }
+  ],
+  "advisoryRoles": [
+    {
+      "role": "Medical Advisory Committee",
+      "organization": "California State Athletic Commission"
+    },
+    {
+      "role": "Medical Advisor",
+      "organization": "LevelEx"
+    },
+    {
+      "role": "Medical Advisor",
+      "organization": "Beneufit"
+    },
+    {
+      "role": "Medical Advisor",
+      " 

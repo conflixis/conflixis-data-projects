@@ -1,0 +1,245 @@
+Dr. Sachin Suresh Kukreja is a board-certified general and bariatric surgeon based in Dallas, Texas, with over 20 years of experience. He specializes in minimally invasive surgical techniques, including laparoscopic and robotic procedures, focusing on bariatric surgery and general surgery. ([dfwbariatricsurgery.com](https://www.dfwbariatricsurgery.com/about-us/dr-sachin-kukreja/?utm_source=openai))
+
+**Overview**
+
+Dr. Kukreja is the founder and director of DFW Bariatrics and General Surgery, where he offers comprehensive obesity care, including medications, diet counseling, non-surgical solutions, and a full range of surgical options. He is recognized for his expertise in minimally invasive and bariatric surgery and has been honored as a D Magazine Best Doctor for seven consecutive years as of 2024. ([dfwbariatricsurgery.com](https://www.dfwbariatricsurgery.com/about-us/dr-sachin-kukreja/?utm_source=openai))
+
+**Education and Training**
+
+- **Medical School:** University of Texas Health Science Center at San Antonio, Doctor of Medicine, 2004. ([dfwbariatricsurgery.com](https://www.dfwbariatricsurgery.com/about-us/dr-sachin-kukreja/?utm_source=openai))
+- **Residency:** General Surgery at Rush University Medical Center and John H. Stroger Hospital of Cook County, 2004–2009. ([dfwbariatricsurgery.com](https://www.dfwbariatricsurgery.com/about-us/dr-sachin-kukreja/?utm_source=openai))
+- **Fellowship:** Minimally Invasive and Bariatric Surgery at the Medical College of Wisconsin, 2009–2010. ([dfwbariatricsurgery.com](https://www.dfwbariatricsurgery.com/about-us/dr-sachin-kukreja/?utm_source=openai))
+
+**Board Certifications and Licenses**
+
+- **Board Certifications:**
+  - General Surgery by the American Board of Surgery.
+  - Obesity Medicine by the American Board of Obesity Medicine. ([dfwbariatricsurgery.com](https://www.dfwbariatricsurgery.com/about-us/dr-sachin-kukreja/?utm_source=openai))
+- **Medical Licenses:**
+  - Texas Medical License (P5098). ([npiprofile.com](https://npiprofile.com/npi/1528214590?utm_source=openai))
+
+**Clinical Practice**
+
+- **Specialties:** General Surgery, Bariatric Surgery.
+- **Subspecialties:** Minimally Invasive Surgery, Robotic Surgery.
+- **Hospital Affiliations:**
+  - Medical City Dallas Hospital.
+  - Methodist Dallas Medical Center.
+  - Texas Health Presbyterian Hospital Dallas. ([methodisthealthsystem.org](https://www.methodisthealthsystem.org/doctors/sachin-s-kukreja-md/?utm_source=openai))
+- **Practice Locations:**
+  - 1411 N Beckley Ave, Suite 454, Dallas, TX 75203.
+  - 1900 Matlock Rd, Suite 304, Mansfield, TX 76063.
+  - 4709 W Parker Rd, Suite 430, Plano, TX 75093. ([healthcare4ppl.com](https://www.healthcare4ppl.com/physician/texas/dallas/sachin-kukreja-1528214590.html?utm_source=openai))
+- **Telemedicine Availability:** Yes.
+
+**Professional and Administrative Roles**
+
+- **Current Positions:**
+  - Medical Director of Bariatric Surgery at Medical City Dallas Hospital.
+  - Medical Director of Metabolism and Nutrition at Methodist Dallas Medical Center. ([dfwbariatricsurgery.com](https://www.dfwbariatricsurgery.com/about-us/dr-sachin-kukreja/?utm_source=openai))
+- **Previous Roles:**
+  - Director of Bariatric Surgery at the Dallas VA.
+  - Assistant Professor of Surgery at UT Southwestern Medical Center. ([dfwbariatricsurgery.com](https://www.dfwbariatricsurgery.com/about-us/dr-sachin-kukreja/?utm_source=openai))
+
+**Industry and Corporate Affiliations**
+
+- **Medical Device Companies:**
+  - Key Opinion Leader, Proctor, and Speaker for Intuitive Surgical.
+  - Consultant for Aesculap Inc.
+  - Consultant for Apollo Endosurgery.
+  - Consultant for Boehringer Laboratories. ([dfwbariatricsurgery.com](https://www.dfwbariatricsurgery.com/about-us/dr-sachin-kukreja/?utm_source=openai))
+
+**Academic and Teaching Affiliations**
+
+- Former Assistant Professor of Surgery at UT Southwestern Medical Center. ([dfwbariatricsurgery.com](https://www.dfwbariatricsurgery.com/about-us/dr-sachin-kukreja/?utm_source=openai))
+
+**Research Activities and Publications**
+
+- **Recent or Prominent Studies:**
+  - "Telehealth utilization among multi-ethnic patients with obesity during the COVID-19 pandemic."
+  - "Substance Use, Mental Health, and Weight-Related Behaviors During the COVID-19 Pandemic Among Metabolic and Bariatric Surgery Patients." ([doximity.com](https://www.doximity.com/pub/sachin-kukreja-md?utm_source=openai))
+- **Areas of Research Interest:** Bariatric Surgery, Minimally Invasive Surgery, Obesity Medicine.
+- **Notable Publications:** Multiple peer-reviewed journal articles and book chapters in the fields of bariatric and minimally invasive surgery. ([dfwbariatricsurgery.com](https://www.dfwbariatricsurgery.com/about-us/dr-sachin-kukreja/?utm_source=openai))
+
+**Professional Memberships and Societies**
+
+- Fellow of the American College of Surgeons (FACS).
+- Fellow of the American Society for Metabolic and Bariatric Surgery (FASMBS).
+- Member of the Society of American Gastrointestinal and Endoscopic Surgeons (SAGES). ([doximity.com](https://www.doximity.com/pub/sachin-kukreja-md?utm_source=openai))
+
+**Speaking Engagements and Conferences**
+
+- Faculty for SAGES Robotic Surgery Training Courses.
+- Moderator for North Texas American College of Surgeons Annual Meetings. ([dfwbariatricsurgery.com](https://www.dfwbariatricsurgery.com/about-us/dr-sachin-kukreja/?utm_source=openai))
+
+**Charitable Affiliations and Volunteer Work**
+
+None available.
+
+**Community Involvement or Service**
+
+None available.
+
+**Awards, Honors, and Recognitions**
+
+- D Magazine Best Doctor, seven consecutive years as of 2024. ([dfwbariatricsurgery.com](https://www.dfwbariatricsurgery.com/about-us/dr-sachin-kukreja/?utm_source=openai))
+
+**Board Memberships**
+
+None available.
+
+**Advisory Roles**
+
+None available.
+
+{
+  "name": "Dr. Sachin Suresh Kukreja",
+  "npi": "1528214590",
+  "specialty": "General Surgery",
+  "subspecialties": ["Bariatric Surgery", "Minimally Invasive Surgery", "Robotic Surgery"],
+  "education": [
+    {
+      "degree": "Doctor of Medicine",
+      "institution": "University of Texas Health Science Center at San Antonio",
+      "year": 2004
+    },
+    {
+      "training": "General Surgery Residency",
+      "institution": "Rush University Medical Center and John H. Stroger Hospital of Cook County",
+      "years": "2004–2009"
+    },
+    {
+      "training": "Minimally Invasive and Bariatric Surgery Fellowship",
+      "institution": "Medical College of Wisconsin",
+      "years": "2009–2010"
+    }
+  ],
+  "boardCertifications": [
+    "General Surgery by the American Board of Surgery",
+    "Obesity Medicine by the American Board of Obesity Medicine"
+  ],
+  "licenses": [
+    {
+      "state": "Texas",
+      "licenseNumber": "P5098"
+    }
+  ],
+  "hospitalAffiliations": [
+    "Medical City Dallas Hospital",
+    "Methodist Dallas Medical Center",
+    "Texas Health Presbyterian Hospital Dallas"
+  ],
+  "practiceLocations": [
+    {
+      "address": "1411 N Beckley Ave, Suite 454, Dallas, TX 75203",
+      "phone": "(469) 620-0222"
+    },
+    {
+      "address": "1900 Matlock Rd, Suite 304, Mansfield, TX 76063",
+      "phone": "(817) 952-8221"
+    },
+    {
+      "address": "4709 W Parker Rd, Suite 430, Plano, TX 75093",
+      "phone": "(972) 767-9299"
+    }
+  ],
+  "telemedicineAvailability": true,
+  "professionalRoles": {
+    "current": [
+      {
+        "title": "Medical Director of Bariatric Surgery",
+        "institution": "Medical City Dallas Hospital"
+      },
+      {
+        "title": "Medical Director of Metabolism and Nutrition",
+        "institution": "Methodist Dallas Medical Center"
+      }
+    ],
+    "previous": [
+      {
+        "title": "Director of Bariatric Surgery",
+        "institution": "Dallas VA"
+      },
+      {
+        "title": "Assistant Professor of Surgery",
+        "institution": "UT Southwestern Medical Center"
+      }
+    ]
+  },
+  "industryCorporateAffiliations": [
+    {
+      "role": "Key Opinion Leader, Proctor, and Speaker",
+      "company": "Intuitive Surgical"
+    },
+    {
+      "role": "Consultant",
+      "company": "Aesculap Inc"
+    },
+    {
+      "role": "Consultant",
+      "company": "Apollo Endosurgery"
+    },
+    {
+      "role": "Consultant",
+      "company": "Boehringer Laboratories"
+    }
+  ],
+  "academicAffiliations": [
+    {
+      "title": "Assistant Professor of Surgery",
+      "institution": "UT Southwestern Medical Center"
+    }
+  ],
+  "researchActivities": {
+    "recentStudies": [
+      {
+        "title": "Telehealth utilization among multi-ethnic patients with obesity during the COVID-19 pandemic",
+        "publication": "Journal of Telemedicine and Telecare",
+        "year": 2021
+      },
+      {
+        "title": "Substance Use, Mental Health, and Weight-Related Behaviors During the COVID-19 Pandemic Among Metabolic and Bariatric Surgery Patients",
+        "publication": "Obesity Surgery",
+        "year": 2021
+      }
+    ],
+    "researchInterests": ["Bariatric Surgery", "Minimally Invasive Surgery", "Obesity Medicine"],
+    "notablePublications": [
+      {
+        "title": "Telehealth utilization among multi-ethnic patients with obesity during the COVID-19 pandemic",
+        "publication": "Journal of Telemedicine and Telecare",
+        "year": 2021
+      },
+      {
+        "title": "Substance Use, Mental Health, and Weight-Related Behaviors During the COVID-19 Pandemic Among Metabolic and Bariatric Surgery Patients",
+        "publication": "Obesity Surgery",
+        "year": 2021
+      }
+    ]
+  },
+  "professionalMemberships": [
+    "Fellow of the American College of Surgeons (FACS)",
+    "Fellow of the American Society for Metabolic and Bariatric Surgery (FASMBS)",
+    "Member of the Society of American Gastrointestinal and Endoscopic Surgeons (SAGES)"
+  ],
+  "speakingEngagements": [
+    {
+      "event": "SAGES Robotic Surgery Training Courses",
+      "role": "Faculty"
+    },
+    {
+      "event": "North Texas American College of Surgeons Annual Meetings",
+      "role": "Moderator"
+    }
+  ],
+  "charitableAffiliations": [],
+  "communityInvolvement": [],
+  "awardsHonorsRecognitions": [
+    {
+      "award": "D Magazine Best Doctor",
+      "years": ["2018", "2019", "2020", "2021", "2022", "2023", "2024"]
+    }
+  ],
+  "boardMemberships": [],
+  "advisoryRoles": []
+}

@@ -1,0 +1,307 @@
+Dr. Peter A. McCullough is an internist and cardiologist based in Dallas, Texas, with over three decades of experience in the medical field. He currently serves as the Chief Scientific Officer for The Wellness Company, focusing on innovative healthcare solutions and telemedicine services. ([twc.health](https://www.twc.health/pages/dr-peter-mccullough/?utm_source=openai))
+
+**Overview**
+
+Dr. McCullough has an extensive background in internal medicine and cardiology, with a particular emphasis on preventive cardiology and lipidology. He has held significant academic and clinical positions, including Vice Chief of Internal Medicine at Baylor University Medical Center and Chief Academic and Scientific Officer at St. John Providence Health System. Throughout his career, Dr. McCullough has been actively involved in research, publishing over 1,000 articles and contributing to top-tier medical journals. ([isom.ca](https://isom.ca/profile/peter-mccullough/?utm_source=openai))
+
+**Education and Training**
+
+- **Bachelor of Science in Biology and Psychology**: Baylor University, Waco, TX (1984)
+- **Doctor of Medicine (MD)**: University of Texas Southwestern Medical School, Dallas, TX (1988)
+- **Residency in Internal Medicine**: University of Washington School of Medicine, Seattle, WA (1991)
+- **Master of Public Health (MPH) in General Epidemiology**: University of Michigan School of Public Health (1994)
+- **Fellowship in Cardiovascular Disease**: William Beaumont Hospital (now Oakland University William Beaumont School of Medicine), Royal Oak, MI (1997)
+- **Certificate of Graduate Liberal Arts Studies**: Southern Methodist University (2016)
+
+**Board Certifications and Licenses**
+
+- **Board Certifications**:
+  - Internal Medicine
+  - Cardiovascular Disease
+  - Clinical Lipidology
+- **Medical Licenses**:
+  - Texas State Medical License (Active through 2026)
+  - Michigan State Medical License (Active through 2025)
+  - Washington State Medical License (Active through 1997)
+  - New York State Medical License (Active through 1992)
+
+**Clinical Practice**
+
+- **Specialties**:
+  - Internal Medicine
+  - Cardiovascular Disease
+  - Clinical Lipidology
+- **Hospital Affiliations**:
+  - Baylor Scott & White Heart and Vascular Hospital – Dallas
+  - Houston Methodist Hospital
+  - Baylor Scott & White Medical Center – Plano
+- **Practice Locations**:
+  - HeartPlace Baylor Heart & Vascular Hospital
+    - 3409 Worth Street, Suite 500, Dallas, TX 75246
+  - Dr. Peter A. McCullough
+    - 7692 Eldorado Pkwy, McKinney, TX 75070
+- **Telemedicine Availability**: Yes, through The Wellness Company
+
+**Professional and Administrative Roles**
+
+- **Current Positions**:
+  - Chief Scientific Officer, The Wellness Company
+  - President, Cardiorenal Society of America
+  - Editor-in-Chief, Reviews in Cardiovascular Medicine
+  - Senior Associate Editor, American Journal of Cardiology
+- **Previous Roles**:
+  - Vice Chief of Internal Medicine, Baylor University Medical Center
+  - Chief Academic and Scientific Officer, St. John Providence Health System
+  - Division Chief, Nutrition and Preventive Medicine, Oakland University William Beaumont School of Medicine
+  - Associate Professor of Medicine/Cardiology Section Chief, University of Missouri-Kansas City School of Medicine
+  - Assistant Professor of Medicine, Program Director in Cardiology, Henry Ford Hospital
+
+**Industry and Corporate Affiliations**
+
+- **Medical Device Companies**: None available.
+- **Pharmaceutical Companies**: None available.
+- **Healthcare Startups**: The Wellness Company
+- **Other Relevant Companies**: None available.
+
+**Academic and Teaching Affiliations**
+
+- Professor of Medicine, Texas A&M College of Medicine
+
+**Research Activities and Publications**
+
+- **Recent or Prominent Studies**:
+  - "Pathophysiological Basis and Rationale for Early Outpatient Treatment of SARS-CoV-2 (COVID-19) Infection"
+- **Areas of Research Interest**:
+  - Cardiorenal syndromes
+  - Preventive cardiology
+  - Lipidology
+- **Notable Publications**:
+  - Over 1,000 publications with more than 600 citations in the National Library of Medicine
+
+**Professional Memberships and Societies**
+
+- Alpha Omega Alpha, National Honor Medical Society
+- American Heart Association, Council on Epidemiology and Prevention
+- American College of Cardiology
+- Association of American Physicians and Surgeons
+- Cardiorenal Society of America
+
+**Speaking Engagements and Conferences**
+
+- Testified before the U.S. Senate Committee on Homeland Security and Governmental Affairs
+- Presented at the Texas Senate Committee on Health and Human Services
+- Lectured at the New York Academy of Sciences, National Institutes of Health, U.S. Food and Drug Administration, and the European Medicines Agency
+
+**Charitable Affiliations and Volunteer Work**
+
+None available.
+
+**Community Involvement or Service**
+
+None available.
+
+**Awards, Honors, and Recognitions**
+
+- Simon Dack Award for Scholarly Excellence by the Journal of the American College of Cardiology (2009)
+- International Vicenza Award in Critical Care Nephrology (2013)
+- Top Internist and Cardiologist of the Year, International Association of Top Professionals (2023)
+- Best Medical Provider, American Liberty Awards (2023)
+- Carlton Lee Award, American Academy of Environmental Medicine (2023)
+
+**Board Memberships**
+
+- President, Cardiorenal Society of America
+
+**Advisory Roles**
+
+- Chief Medical Advisor, Truth for Health Foundation
+
+{
+  "name": "Dr. Peter A. McCullough",
+  "npi": "1386604700",
+  "specialty": "Internal Medicine",
+  "subspecialties": ["Cardiovascular Disease", "Clinical Lipidology"],
+  "education": [
+    {
+      "degree": "Bachelor of Science in Biology and Psychology",
+      "institution": "Baylor University",
+      "year": 1984
+    },
+    {
+      "degree": "Doctor of Medicine (MD)",
+      "institution": "University of Texas Southwestern Medical School",
+      "year": 1988
+    },
+    {
+      "degree": "Residency in Internal Medicine",
+      "institution": "University of Washington School of Medicine",
+      "year": 1991
+    },
+    {
+      "degree": "Master of Public Health (MPH) in General Epidemiology",
+      "institution": "University of Michigan School of Public Health",
+      "year": 1994
+    },
+    {
+      "degree": "Fellowship in Cardiovascular Disease",
+      "institution": "William Beaumont Hospital",
+      "year": 1997
+    },
+    {
+      "degree": "Certificate of Graduate Liberal Arts Studies",
+      "institution": "Southern Methodist University",
+      "year": 2016
+    }
+  ],
+  "boardCertifications": [
+    "Internal Medicine",
+    "Cardiovascular Disease",
+    "Clinical Lipidology"
+  ],
+  "licenses": [
+    {
+      "state": "Texas",
+      "status": "Active",
+      "expiration": 2026
+    },
+    {
+      "state": "Michigan",
+      "status": "Active",
+      "expiration": 2025
+    },
+    {
+      "state": "Washington",
+      "status": "Inactive",
+      "expiration": 1997
+    },
+    {
+      "state": "New York",
+      "status": "Inactive",
+      "expiration": 1992
+    }
+  ],
+  "hospitalAffiliations": [
+    "Baylor Scott & White Heart and Vascular Hospital – Dallas",
+    "Houston Methodist Hospital",
+    "Baylor Scott & White Medical Center – Plano"
+  ],
+  "practiceLocations": [
+    {
+      "name": "HeartPlace Baylor Heart & Vascular Hospital",
+      "address": "3409 Worth Street, Suite 500, Dallas, TX 75246"
+    },
+    {
+      "name": "Dr. Peter A. McCullough",
+      "address": "7692 Eldorado Pkwy, McKinney, TX 75070"
+    }
+  ],
+  "telemedicineAvailability": true,
+  "professionalRoles": {
+    "current": [
+      {
+        "title": "Chief Scientific Officer",
+        "organization": "The Wellness Company"
+      },
+      {
+        "title": "President",
+        "organization": "Cardiorenal Society of America"
+      },
+      {
+        "title": "Editor-in-Chief",
+        "organization": "Reviews in Cardiovascular Medicine"
+      },
+      {
+        "title": "Senior Associate Editor",
+        "organization": "American Journal of Cardiology"
+      }
+    ],
+    "previous": [
+      {
+        "title": "Vice Chief of Internal Medicine",
+        "organization": "Baylor University Medical Center"
+      },
+      {
+        "title": "Chief Academic and Scientific Officer",
+        "organization": "St. John Providence Health System"
+      },
+      {
+        "title": "Division Chief, Nutrition and Preventive Medicine",
+        "organization": "Oakland University William Beaumont School of Medicine"
+      },
+      {
+        "title": "Associate Professor of Medicine/Cardiology Section Chief",
+        "organization": "University of Missouri-Kansas City School of Medicine"
+      },
+      {
+        "title": "Assistant Professor of Medicine, Program Director in Cardiology",
+        "organization": "Henry Ford Hospital"
+      }
+    ]
+  },
+  "industryCorporateAffiliations": [
+    {
+      "type": "Healthcare Startup",
+      "name": "The Wellness Company"
+    }
+  ],
+  "academicAffiliations": [
+    {
+      "title": "Professor of Medicine",
+      "institution": "Texas A&M College of Medicine"
+    }
+  ],
+  "researchActivities": {
+    "recentStudies": [
+      {
+        "title": "Pathophysiological Basis and Rationale for Early Outpatient Treatment of SARS-CoV-2 (COVID-19) Infection"
+      }
+    ],
+    "researchInterests": [
+      "Cardiorenal syndromes",
+      "Preventive cardiology",
+      "Lipidology"
+    ],
+    "notablePublications": [
+      {
+        "count": 1000,
+        "citations": 600
+      }
+    ]
+  },
+  "professionalMemberships": [
+    "Alpha Omega Alpha, National Honor Medical Society",
+    "American Heart Association, Council on Epidemiology and Prevention",
+    "American College of Cardiology",
+    "Association of American Physicians and Surgeons",
+    "Cardiorenal Society of America"
+  ],
+  "speakingEngagements": [
+    {
+      "event": "U.S. Senate Committee on Homeland Security and Governmental Affairs"
+    },
+    {
+      "event": "Texas Senate Committee on Health and Human Services"
+    },
+    {
+      "event": "New York Academy of Sciences"
+    },
+    {
+      "event": "National Institutes of Health"
+    },
+    {
+      "event": "U.S. Food and Drug Administration"
+    },
+    {
+      "event": "European Medicines Agency"
+    }
+  ],
+  "charitableAffiliations": [],
+  "communityInvolvement": [],
+  "awardsHonorsRecognitions": [
+    {
+      "award": "Simon Dack Award for Scholarly Excellence",
+      "organization": "Journal of the American College of Cardiology",
+      "year": 2009
+    },
+    {
+      "award": "International Vicenza Award in Critical Care Neph 

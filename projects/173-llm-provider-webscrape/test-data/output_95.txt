@@ -1,0 +1,311 @@
+Dr. Seemal R. Desai is a board-certified dermatologist specializing in the diagnosis and treatment of skin, hair, and nail conditions. He currently serves as the President of the American Academy of Dermatology (AAD) for the 2024-2025 term. ([aad.org](https://www.aad.org/news/seemal-desai-new-president-aad?utm_source=openai))
+
+**Overview**
+
+Dr. Desai is a distinguished dermatologist with extensive experience in clinical practice, research, and leadership within the dermatology community. He is the Founder and Medical Director of Innovative Dermatology, a private practice in Plano, Texas, and holds the position of Clinical Assistant Professor of Dermatology at the University of Texas Southwestern Medical Center. ([innovative-dermatology.com](https://innovative-dermatology.com/about-us/providers/seemal-r-desai/?utm_source=openai), [utswmed.org](https://utswmed.org/doctors/seemal-desai/?utm_source=openai))
+
+**Education and Training**
+
+- **Undergraduate:** Emory University, Chemistry
+- **Medical School:** Morehouse School of Medicine, Doctor of Medicine, Magna Cum Laude
+- **Internship:** Internal Medicine, Morehouse School of Medicine
+- **Residency:** Dermatology, University of Alabama at Birmingham, Chief Resident
+
+**Board Certifications and Licenses**
+
+- **Board Certification:** American Board of Dermatology
+- **Medical Licenses:**
+  - Texas State Medical License (2009 - 2026)
+  - Alabama State Medical License (2006 - 2025)
+
+**Clinical Practice**
+
+- **Specialties:** Dermatology
+- **Subspecialties:** Treatment of vitiligo, pigmentary disorders, psoriasis, acne, and skin diseases in skin of color
+- **Hospital Affiliations:** None specified
+- **Practice Locations:**
+  - Innovative Dermatology, 5655 W Spring Creek Pkwy, Suite 105, Plano, TX 75024
+  - Innovative Dermatology, 8080 Independence Pkwy, Suite 150, Plano, TX 75025
+- **Telemedicine Availability:** Not specified
+
+**Professional and Administrative Roles**
+
+- **Current Positions:**
+  - President, American Academy of Dermatology (2024-2025)
+  - Clinical Assistant Professor of Dermatology, University of Texas Southwestern Medical Center
+  - Founder and Medical Director, Innovative Dermatology
+- **Previous Roles:**
+  - President-Elect, American Academy of Dermatology (2023-2024)
+  - Board of Directors, American Academy of Dermatology (2018-2022)
+  - Chair, AAD Leadership Development Steering Committee
+  - President, Skin of Color Society
+  - President, Texas Dermatological Society
+  - President, Dallas/Ft. Worth Dermatological Society
+
+**Industry and Corporate Affiliations**
+
+- **Medical Device Companies:** None specified
+- **Pharmaceutical Companies:** None specified
+- **Healthcare Startups:** None specified
+- **Other Relevant Companies:** None specified
+
+**Academic and Teaching Affiliations**
+
+- Clinical Assistant Professor of Dermatology, University of Texas Southwestern Medical Center
+
+**Research Activities and Publications**
+
+- **Recent or Prominent Studies:**
+  - "A call to action: The need to update population descriptors in dermatology research studies with the use of an inclusive skin classification system" (January 2025)
+  - "Bridging cultural practices and skin cancer screening: the role of henna artists in acral melanoma detection" (January 2025)
+- **Areas of Research Interest:** Vitiligo, pigmentary disorders, psoriasis, acne, skin diseases in skin of color
+- **Notable Publications:** Over 90 publications with more than 2,500 citations
+
+**Professional Memberships and Societies**
+
+- Fellow, American Academy of Dermatology
+- Fellow, American Society for Dermatologic Surgery
+- Member, Skin of Color Society
+- Member, Texas Dermatological Society
+- Member, Dallas/Ft. Worth Dermatological Society
+
+**Speaking Engagements and Conferences**
+
+- Invited speaker at numerous national and international dermatology conferences
+
+**Charitable Affiliations and Volunteer Work**
+
+- None specified
+
+**Community Involvement or Service**
+
+- None specified
+
+**Awards, Honors, and Recognitions**
+
+- Named one of 2024's Best Doctors by D Magazine
+- French Society of Dermatology Annual Meeting Scholarship Award (2007)
+- American Medical Association Foundation National Leadership Award (2006)
+- Datatel Scholar, Datatel Corporation (2005)
+- George W. and Pearl D. Strickland Scholar, Community Foundation of Atlanta (2005)
+- Pfizer Minority Medical Scholar, Pfizer Pharmaceuticals (2004)
+
+**Board Memberships**
+
+- Board of Directors, American Academy of Dermatology (2018-2022)
+- Board of Directors, International Society of Dermatology
+- Board of Directors, Women's Dermatologic Society
+- Board of Directors, Global Vitiligo Foundation
+
+**Advisory Roles**
+
+- Member, United States Food and Drug Administration Pharmacy Compounding Advisory Committee
+
+{
+  "name": "Seemal R. Desai, MD, FAAD",
+  "npi": "1669686804",
+  "specialty": "Dermatology",
+  "subspecialties": [
+    "Vitiligo",
+    "Pigmentary disorders",
+    "Psoriasis",
+    "Acne",
+    "Skin diseases in skin of color"
+  ],
+  "education": [
+    {
+      "degree": "Bachelor of Science",
+      "field": "Chemistry",
+      "institution": "Emory University"
+    },
+    {
+      "degree": "Doctor of Medicine",
+      "institution": "Morehouse School of Medicine",
+      "honors": "Magna Cum Laude"
+    },
+    {
+      "training": "Internship",
+      "field": "Internal Medicine",
+      "institution": "Morehouse School of Medicine"
+    },
+    {
+      "training": "Residency",
+      "field": "Dermatology",
+      "institution": "University of Alabama at Birmingham",
+      "role": "Chief Resident"
+    }
+  ],
+  "boardCertifications": [
+    "American Board of Dermatology"
+  ],
+  "licenses": [
+    {
+      "state": "Texas",
+      "validity": "2009 - 2026"
+    },
+    {
+      "state": "Alabama",
+      "validity": "2006 - 2025"
+    }
+  ],
+  "hospitalAffiliations": [],
+  "practiceLocations": [
+    {
+      "name": "Innovative Dermatology",
+      "address": "5655 W Spring Creek Pkwy, Suite 105, Plano, TX 75024"
+    },
+    {
+      "name": "Innovative Dermatology",
+      "address": "8080 Independence Pkwy, Suite 150, Plano, TX 75025"
+    }
+  ],
+  "telemedicineAvailability": false,
+  "professionalRoles": {
+    "current": [
+      {
+        "title": "President",
+        "organization": "American Academy of Dermatology",
+        "term": "2024-2025"
+      },
+      {
+        "title": "Clinical Assistant Professor of Dermatology",
+        "organization": "University of Texas Southwestern Medical Center"
+      },
+      {
+        "title": "Founder and Medical Director",
+        "organization": "Innovative Dermatology"
+      }
+    ],
+    "previous": [
+      {
+        "title": "President-Elect",
+        "organization": "American Academy of Dermatology",
+        "term": "2023-2024"
+      },
+      {
+        "title": "Board of Directors",
+        "organization": "American Academy of Dermatology",
+        "term": "2018-2022"
+      },
+      {
+        "title": "Chair",
+        "organization": "AAD Leadership Development Steering Committee"
+      },
+      {
+        "title": "President",
+        "organization": "Skin of Color Society"
+      },
+      {
+        "title": "President",
+        "organization": "Texas Dermatological Society"
+      },
+      {
+        "title": "President",
+        "organization": "Dallas/Ft. Worth Dermatological Society"
+      }
+    ]
+  },
+  "industryCorporateAffiliations": [],
+  "academicAffiliations": [
+    {
+      "title": "Clinical Assistant Professor of Dermatology",
+      "institution": "University of Texas Southwestern Medical Center"
+    }
+  ],
+  "researchActivities": {
+    "recentStudies": [
+      {
+        "title": "A call to action: The need to update population descriptors in dermatology research studies with the use of an inclusive skin classification system",
+        "date": "January 2025"
+      },
+      {
+        "title": "Bridging cultural practices and skin cancer screening: the role of henna artists in acral melanoma detection",
+        "date": "January 2025"
+      }
+    ],
+    "researchInterests": [
+      "Vitiligo",
+      "Pigmentary disorders",
+      "Psoriasis",
+      "Acne",
+      "Skin diseases in skin of color"
+    ],
+    "notablePublications": [
+      {
+        "count": 90,
+        "citations": 2500
+      }
+    ]
+  },
+  "professionalMemberships": [
+    "American Academy of Dermatology",
+    "American Society for Dermatologic Surgery",
+    "Skin of Color Society",
+    "Texas Dermatological Society",
+    "Dallas/Ft. Worth Dermatological Society"
+  ],
+  "speakingEngagements": [
+    {
+      "description": "Invited speaker at numerous national and international dermatology conferences"
+    }
+  ],
+  "charitableAffiliations": [],
+  "communityInvolvement": [],
+  "awardsHonorsRecognitions": [
+    {
+      "title": "Best Doctors",
+      "organization": "D Magazine",
+      "year": 2024
+    },
+    {
+      "title": "Annual Meeting Scholarship Award",
+      "organization": "French Society of Dermatology",
+      "year": 2007
+    },
+    {
+      "title": "Foundation National Leadership Award",
+      "organization": "American Medical Association",
+      "year": 2006
+    },
+    {
+      "title": "Datatel Scholar",
+      "organization": "Datatel Corporation",
+      "year": 2005
+    },
+    {
+      "title": "George W. and Pearl D. Strickland Scholar",
+      "organization": "Community Foundation of Atlanta",
+      "year": 2005
+    },
+    {
+      "title": "Pfizer Minority Medical Scholar",
+      "organization": "Pfizer Pharmaceuticals",
+      "year": 2004
+    }
+  ],
+  "boardMemberships": [
+    {
+      "organization": "American Academy of Dermatology",
+      "role": "Board of Directors",
+      "term": "2018-2022"
+    },
+    {
+      "organization": "International Society of Dermatology",
+      "role": "Board of Directors"
+    },
+    {
+      "organization": "Women's Dermatologic Society",
+      "role": "Board of Directors"
+    },
+    {
+      "organization": "Global Vitiligo Foundation",
+      "role": "Board of Directors"
+    }
+  ],
+  "advisoryRoles": [
+    {
+      "organization": "United States Food and Drug Administration",
+      "role": "Member, Pharmacy Compounding Advisory Committee"
+    }
+  ]
+}

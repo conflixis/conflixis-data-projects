@@ -1,0 +1,258 @@
+**Dr. Natalie Ann Wright – Professional Profile (Dermatology, Board-Certified Dermatologist)**
+
+**Overview**
+
+Dr. Natalie Ann Wright is a board-certified dermatologist based in Plano, Texas, specializing in the diagnosis and management of autoimmune skin conditions, as well as general dermatologic issues such as rashes, acne, and skin cancer. She is the founder and lead dermatologist at Natalie Wright Dermatology. ([wrightderm.com](https://www.wrightderm.com/?utm_source=openai))
+
+**Education and Training**
+
+- **Undergraduate Education:** Graduated with honors from Texas Christian University, Fort Worth, Texas. ([wrightderm.com](https://www.wrightderm.com/about-us?utm_source=openai))
+- **Medical School:** University of Texas Medical School at Houston, 2010. ([bswhealth.com](https://www.bswhealth.com/physician/natalie-wright?utm_source=openai))
+- **Internship:** Internal Medicine, University of Texas Southwestern Medical Center, Dallas, 2011. ([bswhealth.com](https://www.bswhealth.com/physician/natalie-wright?utm_source=openai))
+- **Residency:** Dermatology, State University of New York Downstate Medical Center, Brooklyn, 2014. ([bswhealth.com](https://www.bswhealth.com/physician/natalie-wright?utm_source=openai))
+- **Fellowship:** Dermatology-Rheumatology/Autoimmune Disease of the Skin, Brigham and Women's Hospital and Harvard Medical School, Boston, 2015. ([doximity.com](https://www.doximity.com/pub/natalie-wright-md?utm_source=openai))
+
+**Board Certifications and Licenses**
+
+- **Board Certification:** American Board of Dermatology. ([bswhealth.com](https://www.bswhealth.com/physician/natalie-wright?utm_source=openai))
+- **Medical Licenses:**
+  - Texas (License No. Q4346). ([npino.com](https://npino.com/npi/1699092866-dr.-natalie-ann-wright/?utm_source=openai))
+  - Massachusetts (License No. 269220, expired 2017). ([doximity.com](https://www.doximity.com/pub/natalie-wright-md?utm_source=openai))
+  - New York (License No. 269220, expired 2015). ([doximity.com](https://www.doximity.com/pub/natalie-wright-md?utm_source=openai))
+
+**Clinical Practice**
+
+- **Specialties:** Dermatology.
+- **Subspecialties:** Autoimmune skin conditions, including cutaneous lupus, dermatomyositis, systemic sclerosis, eosinophilic fasciitis, morphea, cutaneous sarcoidosis, and neutrophilic dermatoses. ([wrightderm.com](https://www.wrightderm.com/about-us?utm_source=openai))
+- **Hospital Affiliations:** Texas Health Presbyterian Hospital Plano. ([medicalnewstoday.com](https://www.medicalnewstoday.com/provider/dr-natalie-wright-1699092866?utm_source=openai))
+- **Practice Locations:**
+  - 6100 Windhaven Pkwy, Plano, TX 75093. ([wrightderm.com](https://www.wrightderm.com/?utm_source=openai))
+- **Telemedicine Availability:** Yes. ([wrightderm.com](https://www.wrightderm.com/?utm_source=openai))
+
+**Professional and Administrative Roles**
+
+- **Current Positions:**
+  - Founder and Lead Dermatologist, Natalie Wright Dermatology. ([wrightderm.com](https://www.wrightderm.com/?utm_source=openai))
+- **Previous Roles:**
+  - Chief Resident, Dermatology, SUNY Downstate Medical Center, 2013-2014. ([wrightderm.com](https://www.wrightderm.com/about-us?utm_source=openai))
+
+**Industry and Corporate Affiliations**
+
+None available.
+
+**Academic and Teaching Affiliations**
+
+- Taught anatomy of the head and neck to first-year medical students at the University of Texas Medical School at Houston. ([wrightderm.com](https://www.wrightderm.com/about-us?utm_source=openai))
+
+**Research Activities and Publications**
+
+- **Recent or Prominent Studies:**
+  - "Tofacitinib Citrate for Refractory Cutaneous Dermatomyositis: An Alternative Treatment," JAMA Dermatology, 2016. ([doximity.com](https://www.doximity.com/pub/natalie-wright-md?utm_source=openai))
+  - "Epidemiology and Treatment of Eosinophilic Fasciitis: An Analysis of 63 Patients From 3 Tertiary Care Centers," JAMA Dermatology, 2016. ([doximity.com](https://www.doximity.com/pub/natalie-wright-md?utm_source=openai))
+- **Areas of Research Interest:** Autoimmune skin diseases, including cutaneous lupus, dermatomyositis, systemic sclerosis, eosinophilic fasciitis, and morphea. ([wrightderm.com](https://www.wrightderm.com/about-us?utm_source=openai))
+- **Notable Publications:**
+  - "Biopsy of the Pigmented Lesion—When and How," Journal of the American Academy of Dermatology, 2008. ([doximity.com](https://www.doximity.com/pub/natalie-wright-md?utm_source=openai))
+
+**Professional Memberships and Societies**
+
+- American Academy of Dermatology.
+- Texas Dermatologic Society.
+- Women’s Dermatologic Society.
+- Medical Dermatology Society.
+- Rheumatologic Dermatology Society. ([wrightderm.com](https://www.wrightderm.com/our-team?utm_source=openai))
+
+**Speaking Engagements and Conferences**
+
+- Presented "Challenging Adult and Pediatric Autoimmune Connective Tissue Disease Cases: Pearls for Diagnosis and Management" at the American Academy of Dermatology Annual Meeting, 2019. ([doximity.com](https://www.doximity.com/pub/natalie-wright-md?utm_source=openai))
+
+**Charitable Affiliations and Volunteer Work**
+
+None available.
+
+**Community Involvement or Service**
+
+None available.
+
+**Awards, Honors, and Recognitions**
+
+- D Magazine Best Doctors Recipient, 2018-2023.
+- Texas Monthly Super Doctors Rising Stars, 2019-2023. ([wrightderm.com](https://www.wrightderm.com/our-team?utm_source=openai))
+- Brigham and Women’s Society of Investigative Dermatology Travel Award, 2015.
+- Mount Sinai Dermoscopy Course Challenge Winner, 2014.
+- AAD Dermatopathology Bowl Team Champions, 2014.
+- Resident of Distinction Award, Winter Clinical Dermatology Conference, 2014. ([wrightderm.com](https://www.wrightderm.com/our-team?utm_source=openai))
+
+**Board Memberships**
+
+None available.
+
+**Advisory Roles**
+
+None available.
+
+{
+  "name": "Dr. Natalie Ann Wright",
+  "npi": "1699092866",
+  "specialty": "Dermatology",
+  "subspecialties": [
+    "Autoimmune skin conditions",
+    "Cutaneous lupus",
+    "Dermatomyositis",
+    "Systemic sclerosis",
+    "Eosinophilic fasciitis",
+    "Morphea",
+    "Cutaneous sarcoidosis",
+    "Neutrophilic dermatoses"
+  ],
+  "education": [
+    {
+      "degree": "Undergraduate",
+      "institution": "Texas Christian University",
+      "honors": "Graduated with honors"
+    },
+    {
+      "degree": "Medical School",
+      "institution": "University of Texas Medical School at Houston",
+      "year": 2010
+    },
+    {
+      "degree": "Internship",
+      "institution": "University of Texas Southwestern Medical Center",
+      "year": 2011
+    },
+    {
+      "degree": "Residency",
+      "institution": "State University of New York Downstate Medical Center",
+      "year": 2014
+    },
+    {
+      "degree": "Fellowship",
+      "institution": "Brigham and Women's Hospital and Harvard Medical School",
+      "year": 2015
+    }
+  ],
+  "boardCertifications": [
+    "American Board of Dermatology"
+  ],
+  "licenses": [
+    {
+      "state": "Texas",
+      "licenseNumber": "Q4346"
+    },
+    {
+      "state": "Massachusetts",
+      "licenseNumber": "269220",
+      "status": "Expired 2017"
+    },
+    {
+      "state": "New York",
+      "licenseNumber": "269220",
+      "status": "Expired 2015"
+    }
+  ],
+  "hospitalAffiliations": [
+    "Texas Health Presbyterian Hospital Plano"
+  ],
+  "practiceLocations": [
+    {
+      "address": "6100 Windhaven Pkwy, Plano, TX 75093",
+      "phone": "214-615-1888"
+    }
+  ],
+  "telemedicineAvailability": true,
+  "professionalRoles": {
+    "current": [
+      {
+        "title": "Founder and Lead Dermatologist",
+        "organization": "Natalie Wright Dermatology"
+      }
+    ],
+    "previous": [
+      {
+        "title": "Chief Resident, Dermatology",
+        "organization": "SUNY Downstate Medical Center",
+        "years": "2013-2014"
+      }
+    ]
+  },
+  "industryCorporateAffiliations": [],
+  "academicAffiliations": [
+    {
+      "role": "Anatomy Instructor",
+      "institution": "University of Texas Medical School at Houston"
+    }
+  ],
+  "researchActivities": {
+    "recentStudies": [
+      {
+        "title": "Tofacitinib Citrate for Refractory Cutaneous Dermatomyositis: An Alternative Treatment",
+        "journal": "JAMA Dermatology",
+        "year": 2016
+      },
+      {
+        "title": "Epidemiology and Treatment of Eosinophilic Fasciitis: An Analysis of 63 Patients From 3 Tertiary Care Centers",
+        "journal": "JAMA Dermatology",
+        "year": 2016
+      }
+    ],
+    "researchInterests": [
+      "Autoimmune skin diseases",
+      "Cutaneous lupus",
+      "Dermatomyositis",
+      "Systemic sclerosis",
+      "Eosinophilic fasciitis",
+      "Morphea"
+    ],
+    "notablePublications": [
+      {
+        "title": "Biopsy of the Pigmented Lesion—When and How",
+        "journal": "Journal of the American Academy of Dermatology",
+        "year": 2008
+      }
+    ]
+  },
+  "professionalMemberships": [
+    "American Academy of Dermatology",
+    "Texas Dermatologic Society",
+    "Women’s Dermatologic Society",
+    "Medical Dermatology Society",
+    "Rheumatologic Dermatology Society"
+  ],
+  "speakingEngagements": [
+    {
+      "title": "Challenging Adult and Pediatric Autoimmune Connective Tissue Disease Cases: Pearls for Diagnosis and Management",
+      "event": "American Academy of Dermatology Annual Meeting",
+      "year": 2019
+    }
+  ],
+  "charitableAffiliations": [],
+  "communityInvolvement": [],
+  "awardsHonorsRecognitions": [
+    {
+      "title": "D Magazine Best Doctors Recipient",
+      "years": "2018-2023"
+    },
+    {
+      "title": "Texas Monthly Super Doctors Rising Stars",
+      "years": "2019-2023"
+    },
+    {
+      "title": "Brigham and Women’s Society of Investigative Dermatology Travel Award",
+      "year": 2015
+    },
+    {
+      "title": "Mount Sinai Dermoscopy Course Challenge Winner",
+      "year": 2014
+    },
+    {
+      "title": "AAD Dermatopathology Bowl Team Champions",
+      "year": 2014
+    },
+    {
+      "title": "Resident of Distinction Award, Winter Clinical Dermatology Conference",
+      "year": 2014
+    }
+  ],
+  "boardMemberships": [],
+  "advisoryRoles": []
+}

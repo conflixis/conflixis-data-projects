@@ -1,0 +1,289 @@
+Dr. Oluwatosin Urowoli Smith, MD, is a board-certified ophthalmologist specializing in glaucoma. She currently serves as a partner physician at Glaucoma Associates of Texas in Dallas and holds the position of Clinical Associate Professor of Ophthalmology at UT Southwestern Medical Center. ([youngmdconnect.com](https://youngmdconnect.com/articles/2022-may-june/outstanding-female-leader-in-ophthalmology-oluwatosin-smith-md?utm_source=openai))
+
+**Overview**
+
+Dr. Smith has over 29 years of experience in ophthalmology, with a focus on the medical, laser, and surgical treatment of glaucoma and cataracts. She is actively involved in clinical research, industry collaborations, and global outreach initiatives. ([youngmdconnect.com](https://youngmdconnect.com/articles/2022-may-june/outstanding-female-leader-in-ophthalmology-oluwatosin-smith-md?utm_source=openai))
+
+**Education and Training**
+
+- **Medical Degree:** University of Ibadan, Nigeria, 1995
+- **Internship:** Washington Hospital Center, Washington, DC, 1998-1999
+- **Residency:** Howard University Hospital, Washington, DC, 1999-2002 (Chief Resident)
+- **Fellowship:** Glaucoma, Wills Eye Hospital, Philadelphia, PA, 2002-2003
+
+**Board Certifications and Licenses**
+
+- **Board Certification:** American Board of Ophthalmology
+- **Medical Licenses:**
+  - Texas State Medical License (2009-2026)
+  - Mississippi State Medical License (2003-2014)
+  - Pennsylvania State Medical License (2002-2004)
+  - General Medical Council, United Kingdom
+  - Nigerian Medical and Dental Council
+
+**Clinical Practice**
+
+- **Specialties:** Ophthalmology
+- **Subspecialties:** Glaucoma
+- **Hospital Affiliations:** Texas Health Presbyterian Hospital Dallas
+- **Practice Locations:**
+  - 10740 N Central Expy, Suite 300, Dallas, TX 75231
+  - 417 W Magnolia Ave, Fort Worth, TX 76104
+  - 305 Morrison Park Dr, Southlake, TX 76092
+  - 6000 W Spring Creek Pkwy, Suite 110, Plano, TX 75024
+- **Telemedicine Availability:** Not specified
+
+**Professional and Administrative Roles**
+
+- **Current Positions:**
+  - Partner Physician, Glaucoma Associates of Texas
+  - Clinical Associate Professor of Ophthalmology, UT Southwestern Medical Center
+- **Previous Roles:**
+  - Assistant Professor of Ophthalmology and Chief of the Division of Glaucoma, University of Mississippi Medical Center
+
+**Industry and Corporate Affiliations**
+
+- **Medical Device Companies:** Medical Monitor for Glaukos Inc. (2017-Present)
+
+**Academic and Teaching Affiliations**
+
+- Clinical Associate Professor of Ophthalmology, UT Southwestern Medical Center
+
+**Research Activities and Publications**
+
+- **Recent or Prominent Studies:**
+  - "Demographic and Clinical Characteristics Associated with Minimally Invasive Glaucoma Surgery Use: An Intelligent Research in Sight (IRIS®) Registry Retrospective Cohort Study"
+  - "Gonioscopy-Assisted Transluminal Trabeculotomy, Ab Interno Trabeculotomy: Technique Report and Preliminary Results"
+- **Areas of Research Interest:** Efficacy of minimally invasive glaucoma surgeries (MIGS) in different patient age groups and glaucoma subtypes, surgical management of childhood glaucoma
+- **Notable Publications:**
+  - Smith OU, Butler MR, Grover DS, et al. "Twenty-four-month outcome of gonioscopy-assisted transluminal trabeculotomy (GATT) in eyes with prior corneal transplant surgery." J Glaucoma. 2022;31(1):54-59.
+  - Olivier MMG, Smith OU, Croteau-Chonka CC, et al. "Demographic and clinical characteristics associated with minimally invasive glaucoma surgery use: an Intelligent Research in Sight (IRIS) registry analysis." Ophthalmology. 2021;128(9):1292-1299.
+
+**Professional Memberships and Societies**
+
+- American Academy of Ophthalmology (AAO)
+- American Glaucoma Society (AGS)
+- American Society of Cataract and Refractive Surgery (ASCRS)
+- International Society of Spaeth Fellows
+- Dallas Association of Ophthalmology
+- Dallas County Medical Society
+
+**Speaking Engagements and Conferences**
+
+- Speaker at various academic meetings and conferences, including presentations on MIGS utilization and surgical outcomes in glaucoma
+
+**Charitable Affiliations and Volunteer Work**
+
+- Oversees the Cure Glaucoma Foundation
+- Active in medical missions and global outreach initiatives
+
+**Community Involvement or Service**
+
+- Member of the Glaucoma Research Foundation Board of Directors
+
+**Awards, Honors, and Recognitions**
+
+- Humanitarian Award, American Glaucoma Society (2022)
+- Outstanding Female Leader in Ophthalmology Award, MillennialEYE (2022)
+- Achievement Award, American Academy of Ophthalmology (2019)
+- Humanitarian of the Year, Practitioner Award, Grace for Impact (2019)
+- Chief Resident, Department of Ophthalmology, Howard University Hospital (2002)
+- Most Outstanding Resident of the Year, Howard University Hospital (2002)
+- Andrew Blair Aitkens Prize in Surgery, University of Ibadan (1995)
+
+**Board Memberships**
+
+- Glaucoma Research Foundation Board of Directors
+
+**Advisory Roles**
+
+- Serves on numerous advisory boards related to ophthalmology and glaucoma research
+
+{
+  "name": "Dr. Oluwatosin Urowoli Smith, MD",
+  "npi": "1134150675",
+  "specialty": "Ophthalmology",
+  "subspecialties": ["Glaucoma"],
+  "education": [
+    {
+      "degree": "MBBS",
+      "institution": "University of Ibadan, Nigeria",
+      "year": 1995
+    },
+    {
+      "program": "Internship",
+      "institution": "Washington Hospital Center, Washington, DC",
+      "years": "1998-1999"
+    },
+    {
+      "program": "Residency",
+      "institution": "Howard University Hospital, Washington, DC",
+      "years": "1999-2002",
+      "position": "Chief Resident"
+    },
+    {
+      "program": "Fellowship",
+      "specialty": "Glaucoma",
+      "institution": "Wills Eye Hospital, Philadelphia, PA",
+      "years": "2002-2003"
+    }
+  ],
+  "boardCertifications": ["American Board of Ophthalmology"],
+  "licenses": [
+    {
+      "state": "Texas",
+      "licenseNumber": "N2814",
+      "validity": "2009-2026"
+    },
+    {
+      "state": "Mississippi",
+      "licenseNumber": "18355",
+      "validity": "2003-2014"
+    },
+    {
+      "state": "Pennsylvania",
+      "licenseNumber": "Unspecified",
+      "validity": "2002-2004"
+    },
+    {
+      "country": "United Kingdom",
+      "licenseNumber": "Unspecified",
+      "validity": "Unspecified"
+    },
+    {
+      "country": "Nigeria",
+      "licenseNumber": "Unspecified",
+      "validity": "Unspecified"
+    }
+  ],
+  "hospitalAffiliations": ["Texas Health Presbyterian Hospital Dallas"],
+  "practiceLocations": [
+    {
+      "address": "10740 N Central Expy, Suite 300, Dallas, TX 75231",
+      "phone": "(214) 360-0000"
+    },
+    {
+      "address": "417 W Magnolia Ave, Fort Worth, TX 76104",
+      "phone": "(214) 360-0000"
+    },
+    {
+      "address": "305 Morrison Park Dr, Southlake, TX 76092",
+      "phone": "(214) 360-0000"
+    },
+    {
+      "address": "6000 W Spring Creek Pkwy, Suite 110, Plano, TX 75024",
+      "phone": "(214) 360-0000"
+    }
+  ],
+  "telemedicineAvailability": false,
+  "professionalRoles": {
+    "current": [
+      {
+        "title": "Partner Physician",
+        "organization": "Glaucoma Associates of Texas"
+      },
+      {
+        "title": "Clinical Associate Professor of Ophthalmology",
+        "organization": "UT Southwestern Medical Center"
+      }
+    ],
+    "previous": [
+      {
+        "title": "Assistant Professor of Ophthalmology and Chief of the Division of Glaucoma",
+        "organization": "University of Mississippi Medical Center"
+      }
+    ]
+  },
+  "industryCorporateAffiliations": [
+    {
+      "role": "Medical Monitor",
+      "company": "Glaukos Inc.",
+      "years": "2017-Present"
+    }
+  ],
+  "academicAffiliations": [
+    {
+      "title": "Clinical Associate Professor of Ophthalmology",
+      "institution": "UT Southwestern Medical Center"
+    }
+  ],
+  "researchActivities": {
+    "recentStudies": [
+      {
+        "title": "Demographic and Clinical Characteristics Associated with Minimally Invasive Glaucoma Surgery Use: An Intelligent Research in Sight (IRIS®) Registry Retrospective Cohort Study",
+        "publication": "Ophthalmology",
+        "year": 2021
+      },
+      {
+        "title": "Gonioscopy-Assisted Transluminal Trabeculotomy, Ab Interno Trabeculotomy: Technique Report and Preliminary Results",
+        "publication": "Ophthalmology",
+        "year": 2014
+      }
+    ],
+    "researchInterests": [
+      "Efficacy of minimally invasive glaucoma surgeries (MIGS) in different patient age groups and glaucoma subtypes",
+      "Surgical management of childhood glaucoma"
+    ],
+    "notablePublications": [
+      {
+        "title": "Twenty-four-month outcome of gonioscopy-assisted transluminal trabeculotomy (GATT) in eyes with prior corneal transplant surgery",
+        "journal": "J Glaucoma",
+        "year": 2022,
+        "volume": 31,
+        "issue": 1,
+        "pages": "54-59"
+      },
+      {
+        "title": "Demographic and clinical characteristics associated with minimally invasive glaucoma surgery use: an Intelligent Research in Sight (IRIS) registry analysis",
+        "journal": "Ophthalmology",
+        "year": 2021,
+        "volume": 128,
+        "issue": 9,
+        "pages": "1292-1299"
+      }
+    ]
+  },
+  "professionalMemberships": [
+    "American Academy of Ophthalmology (AAO)",
+    "American Glaucoma Society (AGS)",
+    "American Society of Cataract and Refractive Surgery (ASCRS)",
+    "International Society of Spaeth Fellows",
+    "Dallas Association of Ophthalmology",
+    "Dallas County Medical Society"
+  ],
+  "speakingEngagements": [
+    {
+      "event": "Various academic meetings and conferences",
+      "topics": ["MIGS utilization", "Surgical outcomes in glaucoma"]
+    }
+  ],
+  "charitableAffiliations": [
+    {
+      "organization": "Cure Glaucoma Foundation",
+      "role": "Overseer"
+    }
+  ],
+  "communityInvolvement": [
+    {
+      "organization": "Glaucoma Research Foundation",
+      "role": "Board of Directors Member"
+    }
+  ],
+  "awardsHonorsRecognitions": [
+    {
+      "award": "Humanitarian Award",
+      "organization": "American Glaucoma Society",
+      "year": 2022
+    },
+    {
+      "award": "Outstanding Female Leader in Ophthalmology Award",
+      "organization": "MillennialEYE",
+      "year": 2022
+    },
+    {
+      "award": "Achievement Award",
+      "organization": "American Academy of Ophthalmology",
+      "year": 2019
+    },
+    {
+      "award": "Humanitarian 

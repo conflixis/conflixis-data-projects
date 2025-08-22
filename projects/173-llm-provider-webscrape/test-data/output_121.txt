@@ -1,0 +1,291 @@
+**Stephen E. Hohmann, MD – Professional Profile (Vascular Surgery Specialist and Current Title/Role)**
+
+Dr. Stephen E. Hohmann is a board-certified vascular surgeon affiliated with Baylor Scott & White Health in Dallas, Texas. He serves as the Program Director of the Vascular Surgery Fellowship at Baylor University Medical Center and holds the position of Clinical Assistant Professor at Texas A&M Health Science Center. ([texasvascularassociates.com](https://texasvascularassociates.com/physicians-staff/stephen-e-hohmann-md-facs/?utm_source=openai))
+
+**Overview**
+
+Dr. Hohmann has over 20 years of experience in vascular surgery, specializing in the diagnosis and management of arterial, venous, and lymphatic system disorders. He is recognized for his expertise in treating conditions such as arteriovenous malformations, peripheral vascular disease, and aortic aneurysms. ([bswhealth.com](https://www.bswhealth.com/physician/stephen-hohmann?utm_source=openai))
+
+**Education and Training**
+
+- **Medical School:** University of California, San Diego School of Medicine (2001)
+- **Internship:** General Surgery, Baylor University Medical Center (2001-2002)
+- **Residency:** General Surgery, Baylor University Medical Center (2002-2006)
+- **Fellowship:** Vascular Surgery, Baylor University Medical Center (2006-2007)
+
+**Board Certifications and Licenses**
+
+- **Board Certifications:**
+  - General Surgery, American Board of Surgery
+  - Vascular Surgery, American Board of Surgery
+- **Medical License:**
+  - Texas Medical License (Active through 2026) ([doximity.com](https://www.doximity.com/pub/stephen-hohmann-md?utm_source=openai))
+
+**Clinical Practice**
+
+- **Specialties:** Vascular Surgery
+- **Subspecialties:** General Vascular Surgery
+- **Hospital Affiliations:**
+  - Baylor Scott & White Heart and Vascular Hospital - Dallas
+  - Baylor University Medical Center
+  - Baylor Scott & White Medical Center - Plano
+  - Baylor Scott & White The Heart Hospital - Plano
+  - Baylor Scott & White Medical Center - Lake Pointe
+- **Practice Locations:**
+  - Texas Vascular Associates
+    - 621 N. Hall Street, Suite 100, Dallas, TX 75226
+- **Telemedicine Availability:** Not specified
+
+**Professional and Administrative Roles**
+
+- **Current Positions:**
+  - Program Director, Vascular Surgery Fellowship, Baylor University Medical Center
+  - Clinical Assistant Professor, Texas A&M Health Science Center
+  - Medical Director of Patient Safety, Baylor Heart and Vascular Hospital
+- **Previous Roles:** None specified
+
+**Industry and Corporate Affiliations**
+
+- **Medical Device Companies:** Proctor for HeRO device training in Brazil and Panama
+- **Pharmaceutical Companies:** None specified
+- **Healthcare Startups:** None specified
+- **Other Relevant Companies:** None specified
+
+**Academic and Teaching Affiliations**
+
+- Clinical Assistant Professor, Texas A&M Health Science Center
+- Program Director, Vascular Surgery Fellowship, Baylor University Medical Center
+
+**Research Activities and Publications**
+
+- **Recent or Prominent Studies:**
+  - Principal Investigator, Humacyte HUMANITY Trial
+  - Principal Investigator, Innavasc Trial
+- **Areas of Research Interest:**
+  - Dialysis access
+  - Endovascular procedures
+  - Vascular grafts
+- **Notable Publications:**
+  - "Randomized comparison of percutaneous Viabahn stent grafts vs prosthetic femoral-popliteal bypass in the treatment of superficial femoral arterial occlusive disease"
+  - "Obstruction of the celiac axis resulting in a pancreaticoduodenal artery aneurysm"
+  - "Thermoregulatory catheter-associated inferior vena cava thrombus"
+
+**Professional Memberships and Societies**
+
+- Society for Vascular Surgery
+- Southern Association of Vascular Surgery
+- Vascular Access Society of America
+- American College of Surgeons (Fellow)
+- Dallas County Medical Society
+
+**Speaking Engagements and Conferences**
+
+- Faculty, Controversies in Dialysis Access Meeting (2017-2019)
+- Faculty, Vascular Access Society of America (2015)
+- Faculty, Association of Physician Assistants in Cardiovascular Surgery Conference (2015-2016)
+
+**Charitable Affiliations and Volunteer Work**
+
+None specified.
+
+**Community Involvement or Service**
+
+None specified.
+
+**Awards, Honors, and Recognitions**
+
+- Outstanding Faculty Award for Surgical Subspecialty, Texas A&M Health Sciences (2020)
+- Best Doctors: Vascular Surgery, DMagazine (2014, 2017-2024)
+- America’s Best Vascular Surgeons, Newsweek (2024)
+- Award for Excellence in Trauma Care, Baylor University Medical Center (2006)
+- Award for Excellence in Research, Baylor University Medical Center (2005)
+- Award for Excellence in Patient Care, Baylor University Medical Center (2005)
+- Outstanding Intern of the Year, Baylor University Medical Center (2001-2002)
+
+**Board Memberships**
+
+- Board of Managers, Baylor Heart and Vascular Dallas (2024-Present)
+
+**Advisory Roles**
+
+- Member, CMS Kidney Care First Option of the Kidney Care Choices Technical Expert Panel
+- Member, Society of Vascular Surgery Vascular Quality Initiative and Dialysis Access Committee
+
+{
+  "name": "Stephen E. Hohmann, MD",
+  "npi": "1114020922",
+  "specialty": "Vascular Surgery",
+  "subspecialties": ["General Vascular Surgery"],
+  "education": [
+    {
+      "degree": "MD",
+      "institution": "University of California, San Diego School of Medicine",
+      "year": 2001
+    },
+    {
+      "degree": "BS",
+      "institution": "University of Southern California",
+      "year": 1997
+    }
+  ],
+  "boardCertifications": [
+    "General Surgery, American Board of Surgery",
+    "Vascular Surgery, American Board of Surgery"
+  ],
+  "licenses": [
+    {
+      "state": "Texas",
+      "licenseNumber": "M0112",
+      "expiration": "2026"
+    }
+  ],
+  "hospitalAffiliations": [
+    "Baylor Scott & White Heart and Vascular Hospital - Dallas",
+    "Baylor University Medical Center",
+    "Baylor Scott & White Medical Center - Plano",
+    "Baylor Scott & White The Heart Hospital - Plano",
+    "Baylor Scott & White Medical Center - Lake Pointe"
+  ],
+  "practiceLocations": [
+    {
+      "name": "Texas Vascular Associates",
+      "address": "621 N. Hall Street, Suite 100, Dallas, TX 75226"
+    }
+  ],
+  "telemedicineAvailability": false,
+  "professionalRoles": {
+    "current": [
+      "Program Director, Vascular Surgery Fellowship, Baylor University Medical Center",
+      "Clinical Assistant Professor, Texas A&M Health Science Center",
+      "Medical Director of Patient Safety, Baylor Heart and Vascular Hospital"
+    ],
+    "previous": []
+  },
+  "industryCorporateAffiliations": [
+    {
+      "company": "HeRO device",
+      "role": "Proctor for training in Brazil and Panama"
+    }
+  ],
+  "academicAffiliations": [
+    {
+      "institution": "Texas A&M Health Science Center",
+      "role": "Clinical Assistant Professor"
+    },
+    {
+      "institution": "Baylor University Medical Center",
+      "role": "Program Director, Vascular Surgery Fellowship"
+    }
+  ],
+  "researchActivities": {
+    "recentStudies": [
+      {
+        "title": "Humacyte HUMANITY Trial",
+        "role": "Principal Investigator"
+      },
+      {
+        "title": "Innavasc Trial",
+        "role": "Principal Investigator"
+      }
+    ],
+    "researchInterests": [
+      "Dialysis access",
+      "Endovascular procedures",
+      "Vascular grafts"
+    ],
+    "notablePublications": [
+      {
+        "title": "Randomized comparison of percutaneous Viabahn stent grafts vs prosthetic femoral-popliteal bypass in the treatment of superficial femoral arterial occlusive disease",
+        "authors": ["John Kedora", "Stephen Hohmann", "Wilson V. Garrett", "Cary Munschaur", "Brian Theune", "Dennis Gable"]
+      },
+      {
+        "title": "Obstruction of the celiac axis resulting in a pancreaticoduodenal artery aneurysm",
+        "authors": ["Stephen Hohmann", "Scott R Golarz"]
+      },
+      {
+        "title": "Thermoregulatory catheter-associated inferior vena cava thrombus",
+        "authors": ["Joshua L. Gierman", "William P. Shutze", "Gregory J. Pearl", "Michael L. Foreman", "Stephen Hohmann"]
+      }
+    ]
+  },
+  "professionalMemberships": [
+    "Society for Vascular Surgery",
+    "Southern Association of Vascular Surgery",
+    "Vascular Access Society of America",
+    "American College of Surgeons (Fellow)",
+    "Dallas County Medical Society"
+  ],
+  "speakingEngagements": [
+    {
+      "event": "Controversies in Dialysis Access Meeting",
+      "years": [2017, 2018, 2019],
+      "role": "Faculty"
+    },
+    {
+      "event": "Vascular Access Society of America",
+      "year": 2015,
+      "role": "Faculty"
+    },
+    {
+      "event": "Association of Physician Assistants in Cardiovascular Surgery Conference",
+      "years": [2015, 2016],
+      "role": "Faculty"
+    }
+  ],
+  "charitableAffiliations": [],
+  "communityInvolvement": [],
+  "awardsHonorsRecognitions": [
+    {
+      "title": "Outstanding Faculty Award for Surgical Subspecialty",
+      "organization": "Texas A&M Health Sciences",
+      "year": 2020
+    },
+    {
+      "title": "Best Doctors: Vascular Surgery",
+      "organization": "DMagazine",
+      "years": [2014, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024]
+    },
+    {
+      "title": "America’s Best Vascular Surgeons",
+      "organization": "Newsweek",
+      "year": 2024
+    },
+    {
+      "title": "Award for Excellence in Trauma Care",
+      "organization": "Baylor University Medical Center",
+      "year": 2006
+    },
+    {
+      "title": "Award for Excellence in Research",
+      "organization": "Baylor University Medical Center",
+      "year": 2005
+    },
+    {
+      "title": "Award for Excellence in Patient Care",
+      "organization": "Baylor University Medical Center",
+      "year": 2005
+    },
+    {
+      "title": "Outstanding Intern of the Year",
+      "organization": "Baylor University Medical Center",
+      "years": [2001, 2002]
+    }
+  ],
+  "boardMemberships": [
+    {
+      "organization": "Baylor Heart and Vascular Dallas",
+      "role": "Board of Managers",
+      "years": [2024]
+    }
+  ],
+  "advisoryRoles": [
+    {
+      "organization": "CMS Kidney Care First Option of the Kidney Care Choices Technical Expert Panel",
+      "role": "Member"
+    },
+    {
+      "organization": "Society of Vascular Surgery Vascular Quality Initiative and Dialysis Access Committee",
+      "role": "Member"
+    }
+  ]
+}

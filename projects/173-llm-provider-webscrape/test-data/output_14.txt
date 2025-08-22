@@ -1,0 +1,300 @@
+**Eric S. Wieser, MD – Professional Profile (Orthopaedic Surgery of the Spine and Current Title/Role)**
+
+Dr. Eric S. Wieser is a fellowship-trained orthopedic spine surgeon specializing in minimally invasive spinal surgery and complex cervical and lumbar spinal reconstruction. He serves as the founder and medical director of the Texas Comprehensive Spine Center at Arlington Orthopedic Associates. ([arlingtonortho.com](https://www.arlingtonortho.com/texas-comprehensive-spine-center/?utm_source=openai))
+
+**Overview**
+
+A lifelong Texan, Dr. Wieser has been practicing in North Texas since 2004. He co-founded the Baylor Orthopedic and Spine Hospital in Arlington and has been consistently recognized by his peers as a "Top Doc" in various Texas publications. ([arlingtonortho.com](https://www.arlingtonortho.com/physician/dr-eric-wieser/?utm_source=openai))
+
+**Education and Training**
+
+- **High School:** Valedictorian, China Spring High School, China Spring, TX, 1990
+- **Undergraduate:** Bachelor of Science in Biology with honors, Trinity University, San Antonio, TX, 1994
+- **Medical School:** Doctor of Medicine with honors, Baylor College of Medicine, Houston, TX, 1998
+- **Internship:** General Surgery, Vanderbilt University Medical Center, Nashville, TN, 1998-1999
+- **Residency:** Orthopaedic Surgery, Vanderbilt University Medical Center, Nashville, TN, 1999-2003
+- **Fellowship:** Spine Surgery, UCLA School of Medicine, Los Angeles, CA, 2003-2004
+
+**Board Certifications and Licenses**
+
+- **Board Certification:** Orthopaedic Surgery, American Board of Orthopaedic Surgery, certified since 2006
+- **Medical Licenses:**
+  - Texas (License No. L8558)
+  - California
+  - Tennessee (expired)
+
+**Clinical Practice**
+
+- **Specialties:** Orthopaedic Surgery of the Spine
+- **Subspecialties:** Minimally Invasive Spinal Surgery, Complex Cervical and Lumbar Spinal Reconstruction
+- **Hospital Affiliations:**
+  - Baylor Scott & White Orthopedic and Spine Hospital at Arlington
+  - USMD Hospital Arlington
+  - Methodist Mansfield Medical Center
+- **Practice Locations:**
+  - Arlington Orthopedic Associates, PA
+    - 800 Orthopedic Way, Arlington, TX 76015
+    - 2801 E. Broad Street, Mansfield, TX 76063
+- **Telemedicine Availability:** Yes
+
+**Professional and Administrative Roles**
+
+- **Current Positions:**
+  - Founder and Medical Director, Texas Comprehensive Spine Center
+  - Co-founder, Baylor Orthopedic and Spine Hospital at Arlington
+- **Previous Roles:** None available.
+
+**Industry and Corporate Affiliations**
+
+- **Medical Device Companies:** None available.
+- **Pharmaceutical Companies:** None available.
+- **Healthcare Startups:** None available.
+- **Other Relevant Companies:** None available.
+
+**Academic and Teaching Affiliations**
+
+None available.
+
+**Research Activities and Publications**
+
+- **Recent or Prominent Studies:**
+  - "Perioperative participation of orthopedic patients and surgical staff in a nasal decolonization intervention to reduce Staphylococcus spp surgical site infections" (2017)
+  - "Surgery for neck pain" (2007)
+- **Areas of Research Interest:** Spinal infections, neck pain surgery, vertebral body replacement techniques
+- **Notable Publications:**
+  - "Pediatric Cervical Spine Injuries: Diagnosis and Treatment" in Seminars in Spine Surgery, Vol 13, No 2, June 2001
+  - "Spinal Infections" in Orthopaedic Knowledge Update 8, 2004
+  - "Surgery for neck pain: A review" in Neurosurgery, 2004
+  - "Vertespan™ Vertebral Body Replacement" in Surgical Techniques in Spinal Instrumentation, 2004
+  - "CD Horizon Sextant Percutaneous Pedicle Screw System" in Surgical Techniques in Spinal Instrumentation, 2004
+
+**Professional Memberships and Societies**
+
+- American Academy of Orthopaedic Surgeons
+- Alpha Omega Alpha Honor Medical Society
+- North American Spine Society
+- Texas Orthopaedic Association
+
+**Speaking Engagements and Conferences**
+
+- "Elective Bilateral Discectomy for Central Herniated Discs—An Outcomes Study" at the International Society for the Study of the Lumbar Spine (ISSLS) Meeting, Edinburgh, Scotland, June 2001
+- "Myelomeningocele Kyphectomy: Review of the Effects of Cordotomy on Urodynamics" at the Scoliosis Research Society Meeting, Seattle, Washington, September 2002
+- "Surgery for Neck Pain" at Challenges in Spine Surgery Symposium, New York, New York, December 2003
+- "Cervical Lateral Mass and Pedicle Fixation" at the 9th Advanced Techniques in Cervical Spine Decompression and Stabilization, St. Louis, Missouri, January 2004
+
+**Charitable Affiliations and Volunteer Work**
+
+None available.
+
+**Community Involvement or Service**
+
+None available.
+
+**Awards, Honors, and Recognitions**
+
+- Consistently recognized as a "Top Doc" in Fort Worth Magazine, D Magazine, Living Magazine, and Texas Monthly
+
+**Board Memberships**
+
+None available.
+
+**Advisory Roles**
+
+None available.
+
+{
+  "name": "Eric S. Wieser, MD",
+  "npi": "1497740518",
+  "specialty": "Orthopaedic Surgery of the Spine",
+  "subspecialties": [
+    "Minimally Invasive Spinal Surgery",
+    "Complex Cervical and Lumbar Spinal Reconstruction"
+  ],
+  "education": [
+    {
+      "degree": "High School Diploma",
+      "institution": "China Spring High School",
+      "location": "China Spring, TX",
+      "year": 1990,
+      "honors": "Valedictorian"
+    },
+    {
+      "degree": "Bachelor of Science in Biology",
+      "institution": "Trinity University",
+      "location": "San Antonio, TX",
+      "year": 1994,
+      "honors": "With honors"
+    },
+    {
+      "degree": "Doctor of Medicine",
+      "institution": "Baylor College of Medicine",
+      "location": "Houston, TX",
+      "year": 1998,
+      "honors": "With honors"
+    },
+    {
+      "degree": "Internship in General Surgery",
+      "institution": "Vanderbilt University Medical Center",
+      "location": "Nashville, TN",
+      "year": 1999
+    },
+    {
+      "degree": "Residency in Orthopaedic Surgery",
+      "institution": "Vanderbilt University Medical Center",
+      "location": "Nashville, TN",
+      "year": 2003
+    },
+    {
+      "degree": "Fellowship in Spine Surgery",
+      "institution": "UCLA School of Medicine",
+      "location": "Los Angeles, CA",
+      "year": 2004
+    }
+  ],
+  "boardCertifications": [
+    {
+      "board": "American Board of Orthopaedic Surgery",
+      "specialty": "Orthopaedic Surgery",
+      "yearCertified": 2006
+    }
+  ],
+  "licenses": [
+    {
+      "state": "Texas",
+      "licenseNumber": "L8558"
+    },
+    {
+      "state": "California",
+      "licenseNumber": "Not specified"
+    },
+    {
+      "state": "Tennessee",
+      "licenseNumber": "Not specified",
+      "status": "Expired"
+    }
+  ],
+  "hospitalAffiliations": [
+    "Baylor Scott & White Orthopedic and Spine Hospital at Arlington",
+    "USMD Hospital Arlington",
+    "Methodist Mansfield Medical Center"
+  ],
+  "practiceLocations": [
+    {
+      "name": "Arlington Orthopedic Associates, PA",
+      "address": "800 Orthopedic Way, Arlington, TX 76015"
+    },
+    {
+      "name": "Arlington Orthopedic Associates, PA",
+      "address": "2801 E. Broad Street, Mansfield, TX 76063"
+    }
+  ],
+  "telemedicineAvailability": true,
+  "professionalRoles": {
+    "current": [
+      {
+        "title": "Founder and Medical Director",
+        "organization": "Texas Comprehensive Spine Center"
+      },
+      {
+        "title": "Co-founder",
+        "organization": "Baylor Orthopedic and Spine Hospital at Arlington"
+      }
+    ],
+    "previous": []
+  },
+  "industryCorporateAffiliations": [],
+  "academicAffiliations": [],
+  "researchActivities": {
+    "recentStudies": [
+      {
+        "title": "Perioperative participation of orthopedic patients and surgical staff in a nasal decolonization intervention to reduce Staphylococcus spp surgical site infections",
+        "year": 2017
+      },
+      {
+        "title": "Surgery for neck pain",
+        "year": 2007
+      }
+    ],
+    "researchInterests": [
+      "Spinal infections",
+      "Neck pain surgery",
+      "Vertebral body replacement techniques"
+    ],
+    "notablePublications": [
+      {
+        "title": "Pediatric Cervical Spine Injuries: Diagnosis and Treatment",
+        "publication": "Seminars in Spine Surgery",
+        "volume": "13",
+        "issue": "2",
+        "year": 2001
+      },
+      {
+        "title": "Spinal Infections",
+        "publication": "Orthopaedic Knowledge Update 8",
+        "year": 2004
+      },
+      {
+        "title": "Surgery for neck pain: A review",
+        "publication": "Neurosurgery",
+        "year": 2004
+      },
+      {
+        "title": "Vertespan™ Vertebral Body Replacement",
+        "publication": "Surgical Techniques in Spinal Instrumentation",
+        "year": 2004
+      },
+      {
+        "title": "CD Horizon Sextant Percutaneous Pedicle Screw System",
+        "publication": "Surgical Techniques in Spinal Instrumentation",
+        "year": 2004
+      }
+    ]
+  },
+  "professionalMemberships": [
+    "American Academy of Orthopaedic Surgeons",
+    "Alpha Omega Alpha Honor Medical Society",
+    "North American Spine Society",
+    "Texas Orthopaedic Association"
+  ],
+  "speakingEngagements": [
+    {
+      "title": "Elective Bilateral Discectomy for Central Herniated Discs—An Outcomes Study",
+      "event": "International Society for the Study of the Lumbar Spine (ISSLS) Meeting",
+      "location": "Edinburgh, Scotland",
+      "date": "June 2001"
+    },
+    {
+      "title": "Myelomeningocele Kyphectomy: Review of the Effects of Cordotomy on Urodynamics",
+      "event": "Scoliosis Research Society Meeting",
+      "location": "Seattle, Washington",
+      "date": "September 2002"
+    },
+    {
+      "title": "Surgery for Neck Pain",
+      "event": "Challenges in Spine Surgery Symposium",
+      "location": "New York, New York",
+      "date": "December 2003"
+    },
+    {
+      "title": "Cervical Lateral Mass and Pedicle Fixation",
+      "event": "9th Advanced Techniques in Cervical Spine Decompression and Stabilization",
+      "location": "St. Louis, Missouri",
+      "date": "January 2004"
+    }
+  ],
+  "charitableAffiliations": [],
+  "communityInvolvement": [],
+  "awardsHonorsRecognitions": [
+    {
+      "title": "Top Doc",
+      "publications": [
+        "Fort Worth Magazine",
+        "D Magazine",
+        "Living Magazine",
+        "Texas Monthly"
+      ]
+    }
+  ],
+  "boardMemberships": [],
+  "advisoryRoles": []
+}

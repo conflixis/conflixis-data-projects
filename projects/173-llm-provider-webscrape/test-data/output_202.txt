@@ -1,0 +1,282 @@
+Dr. Sachin Suresh Kukreja is a board-certified general and bariatric surgeon based in Dallas, Texas, with over 20 years of experience in minimally invasive surgical techniques. ([npiprofile.com](https://npiprofile.com/npi/1528214590?utm_source=openai))
+
+**Education and Training**
+
+- **Medical School:** University of Texas Health Science Center at San Antonio, Doctor of Medicine, 2004.
+- **Residency:** General Surgery at Rush University Medical Center and John H. Stroger Hospital of Cook County, 2004–2009.
+- **Fellowship:** Minimally Invasive and Bariatric Surgery at the Medical College of Wisconsin, 2009–2010. ([dfwbariatricsurgery.com](https://www.dfwbariatricsurgery.com/about-us/dr-sachin-kukreja/?utm_source=openai))
+
+**Board Certifications and Licenses**
+
+- **Board Certifications:**
+  - American Board of Surgery – General Surgery.
+  - American Board of Obesity Medicine – Obesity Medicine.
+- **Medical Licenses:**
+  - Texas State Medical License (P5098).
+
+**Clinical Practice**
+
+- **Specialties:** General Surgery, Bariatric Surgery.
+- **Subspecialties:** Minimally Invasive Surgery, Robotic Surgery.
+- **Hospital Affiliations:**
+  - Medical City Dallas Hospital.
+  - Methodist Dallas Medical Center.
+  - Texas Health Presbyterian Hospital Dallas. ([npiprofile.com](https://npiprofile.com/npi/1528214590?utm_source=openai))
+- **Practice Locations:**
+  - 1411 N Beckley Ave, Suite 454, Dallas, TX 75203.
+  - 1900 Matlock Rd, Suite 304, Mansfield, TX 76063.
+  - 4709 W Parker Rd, Suite 430, Plano, TX 75093. ([healthcare4ppl.com](https://www.healthcare4ppl.com/physician/texas/dallas/sachin-kukreja-1528214590.html?utm_source=openai))
+- **Telemedicine Availability:** Yes.
+
+**Professional and Administrative Roles**
+
+- **Current Positions:**
+  - Medical Director of Bariatric Surgery, Medical City Dallas Hospital.
+  - Medical Director of Metabolism and Nutrition, Methodist Dallas Medical Center.
+  - Director, DFW Bariatrics and General Surgery.
+- **Previous Roles:**
+  - Director of Bariatric Surgery, Dallas VA Medical Center.
+  - Assistant Professor of Surgery, UT Southwestern Medical Center.
+  - Director of Minimally Invasive and Bariatric Surgery, Mount Sinai Hospital, Chicago. ([dfwbariatricsurgery.com](https://www.dfwbariatricsurgery.com/about-us/dr-sachin-kukreja/?utm_source=openai))
+
+**Industry and Corporate Affiliations**
+
+- **Medical Device Companies:**
+  - Key Opinion Leader, Proctor, and Consultant for Intuitive Surgical.
+  - Consultant for Aesculap, Inc.
+- **Pharmaceutical Companies:**
+  - Consultant for Boehringer Laboratories.
+- **Healthcare Startups:**
+  - Consultant for Apollo Endosurgery. ([dfwbariatricsurgery.com](https://www.dfwbariatricsurgery.com/about-us/dr-sachin-kukreja/?utm_source=openai))
+
+**Academic and Teaching Affiliations**
+
+- Former Assistant Professor of Surgery at UT Southwestern Medical Center.
+- Clinical Assistant Professor of Surgery at Rosalind Franklin University/Chicago Medical School. ([dfwbariatricsurgery.com](https://www.dfwbariatricsurgery.com/about-us/dr-sachin-kukreja/?utm_source=openai))
+
+**Research Activities and Publications**
+
+- **Recent or Prominent Studies:**
+  - "Telehealth utilization among multi-ethnic patients with obesity during the COVID-19 pandemic."
+  - "Substance Use, Mental Health, and Weight-Related Behaviors During the COVID-19 Pandemic Among Metabolic and Bariatric Surgery Patients."
+- **Areas of Research Interest:** Bariatric Surgery Outcomes, Minimally Invasive Surgical Techniques, Telehealth in Obesity Management.
+- **Notable Publications:**
+  - "Substance use, mental health and weight-related behaviours during the COVID-19 pandemic in people with obesity." ([doximity.com](https://www.doximity.com/pub/sachin-kukreja-md?utm_source=openai))
+
+**Professional Memberships and Societies**
+
+- Fellow, American College of Surgeons (FACS).
+- Fellow, American Society for Metabolic and Bariatric Surgery (FASMBS).
+- Member, Society of American Gastrointestinal and Endoscopic Surgeons (SAGES).
+- Member, Texas Association of Bariatric Surgeons (TABS). ([dfwbariatricsurgery.com](https://www.dfwbariatricsurgery.com/about-us/dr-sachin-kukreja/?utm_source=openai))
+
+**Speaking Engagements and Conferences**
+
+- Faculty for SAGES Robotic Surgery Training Course for Minimally Invasive Surgery Fellows.
+- Presenter at ASMBS Annual Meetings.
+- Moderator for North Texas American College of Surgeons Annual Meeting sessions. ([dfwbariatricsurgery.com](https://www.dfwbariatricsurgery.com/about-us/dr-sachin-kukreja/?utm_source=openai))
+
+**Charitable Affiliations and Volunteer Work**
+
+- None available.
+
+**Community Involvement or Service**
+
+- None available.
+
+**Awards, Honors, and Recognitions**
+
+- Recognized as a D Magazine Best Doctor for seven consecutive years, most recently in 2024. ([dfwbariatricsurgery.com](https://www.dfwbariatricsurgery.com/about-us/dr-sachin-kukreja/?utm_source=openai))
+
+**Board Memberships**
+
+- None available.
+
+**Advisory Roles**
+
+- North Texas Representative at Large, Texas Association for Bariatric Surgery (TABS). ([dfwbariatricsurgery.com](https://www.dfwbariatricsurgery.com/about-us/dr-sachin-kukreja/?utm_source=openai))
+
+{
+  "name": "Dr. Sachin Suresh Kukreja",
+  "npi": "1528214590",
+  "specialty": "General Surgery",
+  "subspecialties": ["Bariatric Surgery", "Minimally Invasive Surgery", "Robotic Surgery"],
+  "education": [
+    {
+      "degree": "Doctor of Medicine",
+      "institution": "University of Texas Health Science Center at San Antonio",
+      "year": 2004
+    },
+    {
+      "training": "General Surgery Residency",
+      "institution": "Rush University Medical Center and John H. Stroger Hospital of Cook County",
+      "years": "2004–2009"
+    },
+    {
+      "training": "Minimally Invasive and Bariatric Surgery Fellowship",
+      "institution": "Medical College of Wisconsin",
+      "years": "2009–2010"
+    }
+  ],
+  "boardCertifications": [
+    "American Board of Surgery – General Surgery",
+    "American Board of Obesity Medicine – Obesity Medicine"
+  ],
+  "licenses": [
+    {
+      "state": "Texas",
+      "licenseNumber": "P5098"
+    }
+  ],
+  "hospitalAffiliations": [
+    "Medical City Dallas Hospital",
+    "Methodist Dallas Medical Center",
+    "Texas Health Presbyterian Hospital Dallas"
+  ],
+  "practiceLocations": [
+    {
+      "address": "1411 N Beckley Ave, Suite 454, Dallas, TX 75203",
+      "phone": "(469) 620-0222"
+    },
+    {
+      "address": "1900 Matlock Rd, Suite 304, Mansfield, TX 76063",
+      "phone": "(817) 952-8221"
+    },
+    {
+      "address": "4709 W Parker Rd, Suite 430, Plano, TX 75093",
+      "phone": "(972) 767-9299"
+    }
+  ],
+  "telemedicineAvailability": true,
+  "professionalRoles": {
+    "current": [
+      {
+        "title": "Medical Director of Bariatric Surgery",
+        "organization": "Medical City Dallas Hospital"
+      },
+      {
+        "title": "Medical Director of Metabolism and Nutrition",
+        "organization": "Methodist Dallas Medical Center"
+      },
+      {
+        "title": "Director",
+        "organization": "DFW Bariatrics and General Surgery"
+      }
+    ],
+    "previous": [
+      {
+        "title": "Director of Bariatric Surgery",
+        "organization": "Dallas VA Medical Center"
+      },
+      {
+        "title": "Assistant Professor of Surgery",
+        "organization": "UT Southwestern Medical Center"
+      },
+      {
+        "title": "Director of Minimally Invasive and Bariatric Surgery",
+        "organization": "Mount Sinai Hospital, Chicago"
+      }
+    ]
+  },
+  "industryCorporateAffiliations": [
+    {
+      "role": "Key Opinion Leader, Proctor, and Consultant",
+      "company": "Intuitive Surgical"
+    },
+    {
+      "role": "Consultant",
+      "company": "Aesculap, Inc."
+    },
+    {
+      "role": "Consultant",
+      "company": "Boehringer Laboratories"
+    },
+    {
+      "role": "Consultant",
+      "company": "Apollo Endosurgery"
+    }
+  ],
+  "academicAffiliations": [
+    {
+      "title": "Former Assistant Professor of Surgery",
+      "institution": "UT Southwestern Medical Center"
+    },
+    {
+      "title": "Clinical Assistant Professor of Surgery",
+      "institution": "Rosalind Franklin University/Chicago Medical School"
+    }
+  ],
+  "researchActivities": {
+    "recentStudies": [
+      {
+        "title": "Telehealth utilization among multi-ethnic patients with obesity during the COVID-19 pandemic",
+        "publication": "Journal of Telemedicine and Telecare",
+        "year": 2021
+      },
+      {
+        "title": "Substance Use, Mental Health, and Weight-Related Behaviors During the COVID-19 Pandemic Among Metabolic and Bariatric Surgery Patients",
+        "publication": "Obesity Surgery",
+        "year": 2021
+      }
+    ],
+    "researchInterests": [
+      "Bariatric Surgery Outcomes",
+      "Minimally Invasive Surgical Techniques",
+      "Telehealth in Obesity Management"
+    ],
+    "notablePublications": [
+      {
+        "title": "Substance use, mental health and weight-related behaviours during the COVID-19 pandemic in people with obesity",
+        "publication": "Clinical Obesity",
+        "year": 2021
+      }
+    ]
+  },
+  "professionalMemberships": [
+    {
+      "organization": "American College of Surgeons",
+      "status": "Fellow"
+    },
+    {
+      "organization": "American Society for Metabolic and Bariatric Surgery",
+      "status": "Fellow"
+    },
+    {
+      "organization": "Society of American Gastrointestinal and Endoscopic Surgeons",
+      "status": "Member"
+    },
+    {
+      "organization": "Texas Association of Bariatric Surgeons",
+      "status": "Member"
+    }
+  ],
+  "speakingEngagements": [
+    {
+      "event": "SAGES Robotic Surgery Training Course for Minimally Invasive Surgery Fellows",
+      "role": "Faculty"
+    },
+    {
+      "event": "ASMBS Annual Meetings",
+      "role": "Presenter"
+    },
+    {
+      "event": "North Texas American College of Surgeons Annual Meeting",
+      "role": "Moderator"
+    }
+  ],
+  "charitableAffiliations": [],
+  "communityInvolvement": [],
+  "awardsHonorsRecognitions": [
+    {
+      "award": "D Magazine Best Doctor",
+      "year": 2024
+    }
+  ],
+  "boardMemberships": [],
+  "advisoryRoles": [
+    {
+      "role": "North Texas Representative at Large",
+      "organization": "Texas Association for Bariatric Surgery"
+    }
+  ]
+}

@@ -1,0 +1,289 @@
+Dr. Allen F. Morey is a board-certified urologist specializing in reconstructive urology, currently practicing at Urology Clinics of North Texas in McKinney, Texas. ([drallenmorey.com](https://drallenmorey.com/?utm_source=openai))
+
+**Overview**
+
+Dr. Morey has over three decades of experience in urologic trauma and reconstructive surgery. He served 20 years in the U.S. Army Medical Corps, including roles as Chief of Urology at Brooke Army Medical Center and Urology Consultant to the Army Surgeon General. Following his military service, he was a Professor and Distinguished Chair in Reconstructive Urology at the University of Texas Southwestern Medical Center from 2007 to 2023. ([drallenmorey.com](https://drallenmorey.com/about/?utm_source=openai))
+
+**Education and Training**
+
+- **Medical School:** Uniformed Services University of the Health Sciences, F. Edward Hebert School of Medicine (1987)
+- **Internship:** Transitional Year, Tripler Army Medical Center (1987-1988)
+- **Residency:** General Surgery, Tripler Army Medical Center (1989-1990); Urology, Tripler Army Medical Center (1990-1993)
+- **Fellowship:** Urologic Trauma and Reconstruction, University of California, San Francisco (1995-1997) ([drallenmorey.com](https://drallenmorey.com/about/?utm_source=openai))
+
+**Board Certifications and Licenses**
+
+- **Board Certification:** American Board of Urology
+- **Medical Licenses:** Texas (K9361), California, Oregon, Florida, Louisiana ([doximity.com](https://www.doximity.com/pub/allen-morey-md?utm_source=openai))
+
+**Clinical Practice**
+
+- **Specialties:** Urology
+- **Subspecialties:** Reconstructive Urology, Urologic Trauma
+- **Hospital Affiliations:**
+  - Baylor Scott & White Medical Center - Centennial
+  - Baylor Scott & White Medical Center - McKinney ([bswhealth.com](https://www.bswhealth.com/physician/allen-morey?utm_source=openai))
+- **Practice Locations:**
+  - 5220 W University Dr, Suite 210, McKinney, TX 75071
+- **Telemedicine Availability:** Yes ([medifind.com](https://www.medifind.com/doctors/allen-f-morey/7823101?utm_source=openai))
+
+**Professional and Administrative Roles**
+
+- **Current Positions:**
+  - Reconstructive Urologist, Urology Clinics of North Texas
+  - Program Director, Fellowship in Prosthetic and Reconstructive Urology at Baylor Scott & White in McKinney, Texas ([smsna.org](https://www.smsna.org/fellowship/smsna-select/urology-clinics-of-north-texas-at-baylor-scott-and-white-in-mckinney?utm_source=openai))
+- **Previous Roles:**
+  - Professor and Distinguished Chair in Reconstructive Urology, University of Texas Southwestern Medical Center (2007-2023)
+  - Chief of Urology, Brooke Army Medical Center
+  - Urology Consultant to the Army Surgeon General ([drallenmorey.com](https://drallenmorey.com/about/?utm_source=openai))
+
+**Industry and Corporate Affiliations**
+
+None available.
+
+**Academic and Teaching Affiliations**
+
+- Professor, Department of Urology, University of Texas Southwestern Medical Center (2007-2023)
+- Program Director, Urologic Trauma, Reconstruction, and Prosthetics Fellowship at UTSW ([drallenmorey.com](https://drallenmorey.com/about/?utm_source=openai))
+
+**Research Activities and Publications**
+
+- **Recent or Prominent Studies:**
+  - "Lessons learned from the Sexual Medicine Society of North America fellowship bootcamp." The Journal of Sexual Medicine, May 13, 2024. ([medifind.com](https://www.medifind.com/doctors/allen-f-morey/7823101?utm_source=openai))
+- **Areas of Research Interest:**
+  - Urologic trauma
+  - Urologic prosthetics
+  - Urethral reconstruction
+  - Tissue glues
+  - Hemostatic agents ([drallenmorey.com](https://drallenmorey.com/about/?utm_source=openai))
+- **Notable Publications:**
+  - "Reconstruction of posterior urethral disruption injuries: outcome analysis in 82 patients." Journal of Urology, 1997.
+  - "Cost and time benefits of dual implantation of artificial urinary and inflatable penile prosthesis through one incision." Urology, 2005.
+  - "Proximal bulbar urethroplasty via extended anastomotic approach: What are the limits?" Journal of Urology, 2006. ([drallenmorey.com](https://drallenmorey.com/about/?utm_source=openai))
+
+**Professional Memberships and Societies**
+
+- South Central Section of the American Urological Association (Past President, 2012)
+- Society of Urologic Prosthetic Surgeons
+- Society of Genitourinary Reconstructive Surgeons (Past President, 2013)
+- Sexual Medicine Society of North America (Board of Directors, 2023)
+- American College of Surgeons ([drallenmorey.com](https://drallenmorey.com/about/?utm_source=openai))
+
+**Speaking Engagements and Conferences**
+
+Dr. Morey has been a featured speaker at various conferences, including those organized by the Society of Genitourinary Reconstructive Surgeons. ([societygurs.org](https://societygurs.org/gurs-at-aua/speakers/allen-morey/?utm_source=openai))
+
+**Charitable Affiliations and Volunteer Work**
+
+None available.
+
+**Community Involvement or Service**
+
+None available.
+
+**Awards, Honors, and Recognitions**
+
+- Texas Super Doctors (2010-2023)
+- Top Doctors in Texas, Texas Monthly Magazine (2010-2023)
+- Best Doctors in America (2009-2018)
+- American Urological Association Distinguished Contribution Award (2016)
+- F. Brantley Scott Award for Excellence in Prosthetic Urology (2022) ([drallenmorey.com](https://drallenmorey.com/about/?utm_source=openai))
+
+**Board Memberships**
+
+None available.
+
+**Advisory Roles**
+
+None available.
+
+{
+  "name": "Allen F. Morey, MD",
+  "npi": "1972578755",
+  "specialty": "Urology",
+  "subspecialties": ["Reconstructive Urology", "Urologic Trauma"],
+  "education": [
+    {
+      "degree": "MD",
+      "institution": "Uniformed Services University of the Health Sciences, F. Edward Hebert School of Medicine",
+      "year": 1987
+    },
+    {
+      "program": "Transitional Year Internship",
+      "institution": "Tripler Army Medical Center",
+      "years": "1987-1988"
+    },
+    {
+      "program": "General Surgery Residency",
+      "institution": "Tripler Army Medical Center",
+      "years": "1989-1990"
+    },
+    {
+      "program": "Urology Residency",
+      "institution": "Tripler Army Medical Center",
+      "years": "1990-1993"
+    },
+    {
+      "program": "Urologic Trauma and Reconstruction Fellowship",
+      "institution": "University of California, San Francisco",
+      "years": "1995-1997"
+    }
+  ],
+  "boardCertifications": ["American Board of Urology"],
+  "licenses": [
+    {
+      "state": "Texas",
+      "licenseNumber": "K9361"
+    },
+    {
+      "state": "California"
+    },
+    {
+      "state": "Oregon"
+    },
+    {
+      "state": "Florida"
+    },
+    {
+      "state": "Louisiana"
+    }
+  ],
+  "hospitalAffiliations": [
+    "Baylor Scott & White Medical Center - Centennial",
+    "Baylor Scott & White Medical Center - McKinney"
+  ],
+  "practiceLocations": [
+    {
+      "address": "5220 W University Dr, Suite 210, McKinney, TX 75071"
+    }
+  ],
+  "telemedicineAvailability": true,
+  "professionalRoles": {
+    "current": [
+      {
+        "title": "Reconstructive Urologist",
+        "organization": "Urology Clinics of North Texas"
+      },
+      {
+        "title": "Program Director",
+        "organization": "Fellowship in Prosthetic and Reconstructive Urology at Baylor Scott & White in McKinney, Texas"
+      }
+    ],
+    "previous": [
+      {
+        "title": "Professor and Distinguished Chair in Reconstructive Urology",
+        "organization": "University of Texas Southwestern Medical Center",
+        "years": "2007-2023"
+      },
+      {
+        "title": "Chief of Urology",
+        "organization": "Brooke Army Medical Center"
+      },
+      {
+        "title": "Urology Consultant to the Army Surgeon General"
+      }
+    ]
+  },
+  "industryCorporateAffiliations": [],
+  "academicAffiliations": [
+    {
+      "title": "Professor",
+      "department": "Department of Urology",
+      "institution": "University of Texas Southwestern Medical Center",
+      "years": "2007-2023"
+    },
+    {
+      "title": "Program Director",
+      "program": "Urologic Trauma, Reconstruction, and Prosthetics Fellowship",
+      "institution": "University of Texas Southwestern Medical Center"
+    }
+  ],
+  "researchActivities": {
+    "recentStudies": [
+      {
+        "title": "Lessons learned from the Sexual Medicine Society of North America fellowship bootcamp.",
+        "journal": "The Journal of Sexual Medicine",
+        "date": "May 13, 2024"
+      }
+    ],
+    "researchInterests": [
+      "Urologic trauma",
+      "Urologic prosthetics",
+      "Urethral reconstruction",
+      "Tissue glues",
+      "Hemostatic agents"
+    ],
+    "notablePublications": [
+      {
+        "title": "Reconstruction of posterior urethral disruption injuries: outcome analysis in 82 patients.",
+        "journal": "Journal of Urology",
+        "year": 1997
+      },
+      {
+        "title": "Cost and time benefits of dual implantation of artificial urinary and inflatable penile prosthesis through one incision.",
+        "journal": "Urology",
+        "year": 2005
+      },
+      {
+        "title": "Proximal bulbar urethroplasty via extended anastomotic approach: What are the limits?",
+        "journal": "Journal of Urology",
+        "year": 2006
+      }
+    ]
+  },
+  "professionalMemberships": [
+    {
+      "organization": "South Central Section of the American Urological Association",
+      "role": "Past President",
+      "year": 2012
+    },
+    {
+      "organization": "Society of Urologic Prosthetic Surgeons"
+    },
+    {
+      "organization": "Society of Genitourinary Reconstructive Surgeons",
+      "role": "Past President",
+      "year": 2013
+    },
+    {
+      "organization": "Sexual Medicine Society of North America",
+      "role": "Board of Directors",
+      "year": 2023
+    },
+    {
+      "organization": "American College of Surgeons"
+    }
+  ],
+  "speakingEngagements": [
+    {
+      "event": "Society of Genitourinary Reconstructive Surgeons Conference"
+    }
+  ],
+  "charitableAffiliations": [],
+  "communityInvolvement": [],
+  "awardsHonorsRecognitions": [
+    {
+      "title": "Texas Super Doctors",
+      "years": "2010-2023"
+    },
+    {
+      "title": "Top Doctors in Texas",
+      "organization": "Texas Monthly Magazine",
+      "years": "2010-2023"
+    },
+    {
+      "title": "Best Doctors in America",
+      "years": "2009-2018"
+    },
+    {
+      "title": "American Urological Association Distinguished Contribution Award",
+      "year": 2016
+    },
+    {
+      "title": "F. Brantley Scott Award for Excellence in Prosthetic Urology",
+      "year": 2022
+    }
+  ],
+  "boardMemberships": [],
+  "advisoryRoles": []
+}
