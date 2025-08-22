@@ -1,0 +1,254 @@
+**Aaron K. Calodney, MD – Professional Profile (Pain Medicine Specialist and Current Title/Role)**
+
+Dr. Aaron K. Calodney is a board-certified anesthesiologist and pain medicine specialist currently serving as the Director of Clinical Research at Precision Spine Care in Tyler, Texas. ([napapainconference.com](https://napapainconference.com/member/aaron-k-calodney/?utm_source=openai))
+
+**Overview**
+
+Dr. Calodney has an extensive background in anesthesiology and pain management, with a particular focus on interventional spine procedures and chronic pain management. He has held leadership positions in several professional organizations, including serving as Past President of both the American Society of Interventional Pain Physicians (ASIPP) and the Texas Pain Society. Additionally, he has been actively involved in clinical research and education, contributing to numerous publications and delivering over 250 invited lectures nationally and internationally. ([napapainconference.com](https://napapainconference.com/member/aaron-k-calodney/?utm_source=openai))
+
+**Education and Training**
+
+- **Undergraduate Education**: Bachelor of Science in Biology and Music from Indiana University and Washington University in St. Louis, Missouri.
+- **Medical School**: University of Missouri School of Medicine, Columbia, MO.
+- **Internship**: Family Medicine Internship at St. Joseph’s Hospital, State University of New York, Upstate Medical Center, Syracuse, NY.
+- **Residency**: Anesthesiology Residency at the University of Texas at Houston Hermann Hospital, Texas Heart Institute, Texas Children’s Hospital, M.D. Anderson Tumor Institute, Houston, TX.
+- **Fellowships**:
+  - Interventional Pain Fellowship at the University of Texas Health Science Center.
+  - Pediatric Anesthesia Fellowship at Denver Children’s Hospital, Aurora, CO.
+
+**Board Certifications and Licenses**
+
+- **Board Certifications**:
+  - American Board of Anesthesiology (ABA)
+  - Subspecialty Certification in Pain Management through the American Board of Anesthesiology
+  - American Board of Pain Medicine
+  - Fellow of Interventional Pain Practice (FIPP)
+  - American Board of Interventional Pain Physicians (ABIPP)
+- **Medical Licenses**:
+  - Texas Medical License #H4082
+  - Colorado Medical License #28670
+  - Georgia Medical License
+  - Louisiana Medical License
+
+**Clinical Practice**
+
+- **Specialties**: Anesthesiology and Pain Medicine
+- **Subspecialties**: Interventional Spine Procedures, Neuromodulation, Intrathecal Drug Delivery, Biological Treatment of Degenerative Disc Disease, Peripheral Nerve Injury, Radiofrequency Ablation
+- **Hospital Affiliations**:
+  - Baylor Scott & White Texas Spine & Joint Hospital, Tyler, TX
+  - Longview Regional Medical Center, Longview, TX
+  - CHRISTUS Mother Frances Hospital - Tyler, Tyler, TX
+  - University of Texas Health Tyler, Tyler, TX
+  - Titus Regional Medical Center, Mount Pleasant, TX
+- **Practice Locations**:
+  - Precision Spine Care, 2737 S. Broadway, Tyler, TX 75701
+- **Telemedicine Availability**: Not specified
+
+**Professional and Administrative Roles**
+
+- **Current Positions**:
+  - Director of Clinical Research, Precision Spine Care
+  - Clinical Associate Professor, Department of Anesthesiology, Louisiana State University, Shreveport, LA
+- **Previous Roles**:
+  - President, American Society of Interventional Pain Physicians (ASIPP)
+  - President, Texas Pain Society
+  - Board of Directors and Chairman of Education, International Spine Intervention Society (ISIS)
+  - Clinical Instructor and Assistant Professor, Department of Anesthesiology, University of Texas Medical School, Houston, TX
+
+**Industry and Corporate Affiliations**
+
+- **Medical Device Companies**: Involved in clinical research and trials with companies such as Medtronic, Boston Scientific, and Nevro.
+- **Pharmaceutical Companies**: Principal Investigator in studies sponsored by Mallinckrodt Pharmaceuticals.
+- **Healthcare Startups**: Not specified
+- **Other Relevant Companies**: Collaborations with Vertiflex, Relievant Medsystems, and EmCyte Corporation.
+
+**Academic and Teaching Affiliations**
+
+- Clinical Associate Professor, Department of Anesthesiology, Louisiana State University, Shreveport, LA
+- Master Instructor, International Spine Intervention Society (ISIS)
+- Lecturer and Examiner for the American Board of Interventional Pain Physicians (ABIPP) and Fellow of Interventional Pain Practice (FIPP) certifying examinations
+
+**Research Activities and Publications**
+
+- **Recent or Prominent Studies**:
+  - Investigator in the Implantable Systems Performance Registry (PSR) with Medtronic
+  - Principal Investigator in studies evaluating Hydromorphone Hydrochloride delivered by intrathecal administration
+  - Research on Platelet Rich Plasma and Bone Marrow Aspirate for Lumbar Intradiscal Injections
+- **Areas of Research Interest**:
+  - Neuromodulation and Intrathecal Drug Delivery
+  - Biological Treatment of Degenerative Disc Disease
+  - Peripheral Nerve Injury
+  - Radiofrequency Ablation
+- **Notable Publications**:
+  - "Evidence-Based Practice Guidelines for Interventional Techniques in the Management of Chronic Spinal Pain" published in Pain Physician
+  - "Opioid Guidelines in the Management of Chronic Non-Cancer Pain" published in Pain Physician
+  - "An Update of Comprehensive Evidence-Based Guidelines for Interventional Techniques in Chronic Spinal Pain" published in Pain Physician
+
+**Professional Memberships and Societies**
+
+- American Society of Anesthesiologists
+- American Society of Regional Anesthesia and Pain Medicine
+- International Association for the Study of Pain
+- American Medical Association
+- Spine Intervention Society
+- International Neuromodulation Society
+- American Society of Interventional Pain Physicians
+- North American Neuromodulation Society
+- Texas Medical Association
+- Texas Society of Anesthesiology
+- Texas Pain Society
+- Smith County Medical Society
+- World Institute of Pain
+
+**Speaking Engagements and Conferences**
+
+- Delivered over 250 invited lectures in the US and abroad on topics related to pain management and interventional spine procedures.
+
+**Charitable Affiliations and Volunteer Work**
+
+- Not specified
+
+**Community Involvement or Service**
+
+- Not specified
+
+**Awards, Honors, and Recognitions**
+
+- International Spine Intervention Society, Instructor of the Year Award (2015)
+- Recognized as a Super Doctor in Texas (2015-2019)
+- West Virginia Society of Interventional Pain Physicians, Clinical Excellence Award (2018)
+- Texas Pain Society, Visionary Award (2018)
+- New York & New Jersey Societies of Interventional Pain Physicians, Outstanding Pain Physician (2018)
+
+**Board Memberships**
+
+- Board of Directors, American Society of Interventional Pain Physicians (ASIPP)
+- Board of Directors, Spine Intervention Society (SIS)
+
+**Advisory Roles**
+
+- Advisory Board Member, World Institute of Pain (WIP)
+
+{
+  "name": "Aaron K. Calodney, MD",
+  "npi": "1396707121",
+  "specialty": "Pain Medicine",
+  "subspecialties": [
+    "Interventional Spine Procedures",
+    "Neuromodulation",
+    "Intrathecal Drug Delivery",
+    "Biological Treatment of Degenerative Disc Disease",
+    "Peripheral Nerve Injury",
+    "Radiofrequency Ablation"
+  ],
+  "education": [
+    {
+      "degree": "Bachelor of Science in Biology and Music",
+      "institution": "Indiana University and Washington University in St. Louis, Missouri"
+    },
+    {
+      "degree": "Medical Doctorate",
+      "institution": "University of Missouri School of Medicine, Columbia, MO"
+    },
+    {
+      "degree": "Family Medicine Internship",
+      "institution": "St. Joseph’s Hospital, State University of New York, Upstate Medical Center, Syracuse, NY"
+    },
+    {
+      "degree": "Anesthesiology Residency",
+      "institution": "University of Texas at Houston Hermann Hospital, Texas Heart Institute, Texas Children’s Hospital, M.D. Anderson Tumor Institute, Houston, TX"
+    },
+    {
+      "degree": "Interventional Pain Fellowship",
+      "institution": "University of Texas Health Science Center"
+    },
+    {
+      "degree": "Pediatric Anesthesia Fellowship",
+      "institution": "Denver Children’s Hospital, Aurora, CO"
+    }
+  ],
+  "boardCertifications": [
+    "American Board of Anesthesiology (ABA)",
+    "Subspecialty Certification in Pain Management through the American Board of Anesthesiology",
+    "American Board of Pain Medicine",
+    "Fellow of Interventional Pain Practice (FIPP)",
+    "American Board of Interventional Pain Physicians (ABIPP)"
+  ],
+  "licenses": [
+    {
+      "state": "Texas",
+      "licenseNumber": "H4082"
+    },
+    {
+      "state": "Colorado",
+      "licenseNumber": "28670"
+    },
+    {
+      "state": "Georgia",
+      "licenseNumber": "Not specified"
+    },
+    {
+      "state": "Louisiana",
+      "licenseNumber": "Not specified"
+    }
+  ],
+  "hospitalAffiliations": [
+    "Baylor Scott & White Texas Spine & Joint Hospital, Tyler, TX",
+    "Longview Regional Medical Center, Longview, TX",
+    "CHRISTUS Mother Frances Hospital - Tyler, Tyler, TX",
+    "University of Texas Health Tyler, Tyler, TX",
+    "Titus Regional Medical Center, Mount Pleasant, TX"
+  ],
+  "practiceLocations": [
+    {
+      "name": "Precision Spine Care",
+      "address": "2737 S. Broadway, Tyler, TX 75701"
+    }
+  ],
+  "telemedicineAvailability": false,
+  "professionalRoles": {
+    "current": [
+      {
+        "title": "Director of Clinical Research",
+        "organization": "Precision Spine Care"
+      },
+      {
+        "title": "Clinical Associate Professor, Department of Anesthesiology",
+        "organization": "Louisiana State University, Shreveport, LA"
+      }
+    ],
+    "previous": [
+      {
+        "title": "President",
+        "organization": "American Society of Interventional Pain Physicians (ASIPP)"
+      },
+      {
+        "title": "President",
+        "organization": "Texas Pain Society"
+      },
+      {
+        "title": "Board of Directors and Chairman of Education",
+        "organization": "International Spine Intervention Society (ISIS)"
+      },
+      {
+        "title": "Clinical Instructor and Assistant Professor, Department of Anesthesiology",
+        "organization": "University of Texas Medical School, Houston, TX"
+      }
+    ]
+  },
+  "industryCorporateAffiliations": [
+    {
+      "company": "Medtronic",
+      "role": "Clinical Research Investigator"
+    },
+    {
+      "company": "Boston Scientific",
+      "role": "Clinical Research Investigator"
+    },
+    {
+      "company": "Nevro",
+      "role": "Clinical Research Investigator"
+    },
+    {
+      "company": "Mallinckrodt Pharmaceuticals",
+ 

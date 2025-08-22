@@ -1,0 +1,311 @@
+## [Texas Back Institute - Plano](https://www.google.com/maps/search/Texas+Back+Institute+Plano)
+
+
+**Richard D. Guyer, MD – Professional Profile (Orthopaedic Surgery of the Spine and Current Title/Role)**
+
+Dr. Richard D. Guyer is a board-certified orthopedic spine surgeon specializing in spinal surgery. He is the Co-founder of the Texas Back Institute and serves as the Director of their Spine Fellowship Program. Additionally, Dr. Guyer is the Co-director of the Center for Disc Replacement at the Texas Back Institute. ([texasback.com](https://texasback.com/physician/richard-d-guyer/?utm_source=openai))
+
+**Overview**
+
+Dr. Guyer has been instrumental in advancing artificial disc replacement surgery in the United States, leading clinical trials and performing pioneering procedures. He has held leadership roles in various professional organizations and has contributed extensively to spine health research and education. ([centerfordiscreplacement.com](https://centerfordiscreplacement.com/about-us/richard-d-guyer/?utm_source=openai))
+
+**Education and Training**
+
+- **Medical Degree:** University of Pennsylvania School of Medicine, Philadelphia, PA (1975)
+- **Internship:** Parkland Memorial Hospital, Dallas, TX (1975-1976)
+- **Residency:** Orthopedic Surgery, Hospital of the University of Pennsylvania, Philadelphia, PA (1976-1980)
+- **Fellowships:**
+  - Spine Surgery, Case Western Reserve University with Henry Bohlman, MD, Cleveland, OH (1981)
+  - Spine Surgery with Leon Wiltse, MD, Long Beach, CA (1982)
+
+**Board Certifications and Licenses**
+
+- **Board Certification:** American Board of Orthopaedic Surgery
+- **Medical Licenses:**
+  - Texas (Active through 2025)
+  - California (Active through 2026)
+  - Arizona (Active)
+  - Florida (Active)
+  - North Carolina (Active through 2022)
+  - Louisiana (Active through 2022)
+  - Pennsylvania (Active through 2016)
+  - Ohio (Active through 1984)
+
+**Clinical Practice**
+
+- **Specialties:** Orthopaedic Surgery of the Spine
+- **Subspecialties:** Artificial Disc Replacement
+- **Hospital Affiliations:**
+  - Baylor Scott and White Medical Center-Plano
+  - Medical City Plano
+  - Texas Health Center for Diagnostic and Surgery
+  - Texas Health Presbyterian Hospital Plano
+  - Baylor Scott and White Medical Center-Frisco
+- **Practice Locations:**
+  - **Plano Office:** 6020 W Parker Rd., Suite 200, Plano, TX 75093
+  - **Mansfield Office:** 1650 W. Rosedale Street, Suite 301, Fort Worth, TX 76104
+- **Telemedicine Availability:** Not specified
+
+**Professional and Administrative Roles**
+
+- **Current Positions:**
+  - Co-founder, Texas Back Institute
+  - Director, Spine Fellowship Program, Texas Back Institute
+  - Co-director, Center for Disc Replacement, Texas Back Institute
+  - Founder and Chairman of the Board, Texas Back Institute Research Foundation
+  - Associate Clinical Professor, Department of Orthopedics, University of Texas Southwestern Medical School, Dallas, TX
+- **Previous Roles:**
+  - President, North American Spine Society
+
+**Industry and Corporate Affiliations**
+
+- **Medical Device Companies:**
+  - Aesculap (Speaking/Teaching)
+  - Orthofix (Speaking/Teaching)
+  - Atec (Royalties)
+  - K2M (Royalties)
+  - Nanovis (Royalties)
+  - Stryker (Royalties)
+- **Pharmaceutical Companies:** None available
+- **Healthcare Startups:** None available
+- **Other Relevant Companies:** None available
+
+**Academic and Teaching Affiliations**
+
+- Associate Clinical Professor, Department of Orthopedics, University of Texas Southwestern Medical School, Dallas, TX
+
+**Research Activities and Publications**
+
+- **Recent or Prominent Studies:**
+  - Prospective randomized study of the Charite artificial disc
+  - Development of a novel radiographic measure of lumbar instability
+- **Areas of Research Interest:**
+  - Artificial Disc Replacement
+  - Spinal Fusion
+  - Minimally Invasive Spine Surgery
+- **Notable Publications:**
+  - "Prospective randomized study of the Charite artificial disc: data from two investigational centers." The Spine Journal, 2004.
+  - "Development of a novel radiographic measure of lumbar instability and validation using the facet fluid sign." International Journal of Spine Surgery, 2015.
+
+**Professional Memberships and Societies**
+
+- American Academy of Orthopaedic Surgeons
+- Cervical Spine Research Society
+- Institute for Spine & Biomedical Research
+- International Society for the Study of Lumbar Spine
+- Lumbar Spine Research Society
+- North American Spine Society
+
+**Speaking Engagements and Conferences**
+
+- Extensive national and international lectures on spinal surgery techniques and research findings.
+
+**Charitable Affiliations and Volunteer Work**
+
+None available.
+
+**Community Involvement or Service**
+
+None available.
+
+**Awards, Honors, and Recognitions**
+
+- D Magazine Best Doctors (2009-2024)
+- Texas Monthly Super Doctor (2011-2024)
+- David Selby Award, North American Spine Society
+- Volvo Award for Low Back Pain Research
+- Ursinus College Alumni Award
+
+**Board Memberships**
+
+- Chairman of the Board, Texas Back Institute Research Foundation
+
+**Advisory Roles**
+
+None available.
+
+{
+  "name": "Richard D. Guyer, MD",
+  "npi": "1174567721",
+  "specialty": "Orthopaedic Surgery of the Spine",
+  "subspecialties": ["Artificial Disc Replacement"],
+  "education": [
+    {
+      "degree": "MD",
+      "institution": "University of Pennsylvania School of Medicine",
+      "year": 1975
+    },
+    {
+      "degree": "Internship",
+      "institution": "Parkland Memorial Hospital",
+      "year": 1976
+    },
+    {
+      "degree": "Residency",
+      "institution": "Hospital of the University of Pennsylvania",
+      "year": 1980
+    },
+    {
+      "degree": "Fellowship",
+      "institution": "Case Western Reserve University",
+      "year": 1981
+    },
+    {
+      "degree": "Fellowship",
+      "institution": "Leon Wiltse, MD, Long Beach, CA",
+      "year": 1982
+    }
+  ],
+  "boardCertifications": ["American Board of Orthopaedic Surgery"],
+  "licenses": [
+    {
+      "state": "TX",
+      "status": "Active",
+      "expiration": "2025"
+    },
+    {
+      "state": "CA",
+      "status": "Active",
+      "expiration": "2026"
+    },
+    {
+      "state": "AZ",
+      "status": "Active"
+    },
+    {
+      "state": "FL",
+      "status": "Active"
+    },
+    {
+      "state": "NC",
+      "status": "Active",
+      "expiration": "2022"
+    },
+    {
+      "state": "LA",
+      "status": "Active",
+      "expiration": "2022"
+    },
+    {
+      "state": "PA",
+      "status": "Inactive",
+      "expiration": "2016"
+    },
+    {
+      "state": "OH",
+      "status": "Inactive",
+      "expiration": "1984"
+    }
+  ],
+  "hospitalAffiliations": [
+    "Baylor Scott and White Medical Center-Plano",
+    "Medical City Plano",
+    "Texas Health Center for Diagnostic and Surgery",
+    "Texas Health Presbyterian Hospital Plano",
+    "Baylor Scott and White Medical Center-Frisco"
+  ],
+  "practiceLocations": [
+    {
+      "address": "6020 W Parker Rd., Suite 200, Plano, TX 75093"
+    },
+    {
+      "address": "1650 W. Rosedale Street, Suite 301, Fort Worth, TX 76104"
+    }
+  ],
+  "telemedicineAvailability": false,
+  "professionalRoles": {
+    "current": [
+      "Co-founder, Texas Back Institute",
+      "Director, Spine Fellowship Program, Texas Back Institute",
+      "Co-director, Center for Disc Replacement, Texas Back Institute",
+      "Founder and Chairman of the Board, Texas Back Institute Research Foundation",
+      "Associate Clinical Professor, Department of Orthopedics, University of Texas Southwestern Medical School, Dallas, TX"
+    ],
+    "previous": [
+      "President, North American Spine Society"
+    ]
+  },
+  "industryCorporateAffiliations": [
+    {
+      "company": "Aesculap",
+      "role": "Speaking/Teaching"
+    },
+    {
+      "company": "Orthofix",
+      "role": "Speaking/Teaching"
+    },
+    {
+      "company": "Atec",
+      "role": "Royalties"
+    },
+    {
+      "company": "K2M",
+      "role": "Royalties"
+    },
+    {
+      "company": "Nanovis",
+      "role": "Royalties"
+    },
+    {
+      "company": "Stryker",
+      "role": "Royalties"
+    }
+  ],
+  "academicAffiliations": [
+    "Associate Clinical Professor, Department of Orthopedics, University of Texas Southwestern Medical School, Dallas, TX"
+  ],
+  "researchActivities": {
+    "recentStudies": [
+      "Prospective randomized study of the Charite artificial disc",
+      "Development of a novel radiographic measure of lumbar instability"
+    ],
+    "researchInterests": [
+      "Artificial Disc Replacement",
+      "Spinal Fusion",
+      "Minimally Invasive Spine Surgery"
+    ],
+    "notablePublications": [
+      {
+        "title": "Prospective randomized study of the Charite artificial disc: data from two investigational centers.",
+        "journal": "The Spine Journal",
+        "year": 2004
+      },
+      {
+        "title": "Development of a novel radiographic measure of lumbar instability and validation using the facet fluid sign.",
+        "journal": "International Journal of Spine Surgery",
+        "year": 2015
+      }
+    ]
+  },
+  "professionalMemberships": [
+    "American Academy of Orthopaedic Surgeons",
+    "Cervical Spine Research Society",
+    "Institute for Spine & Biomedical Research",
+    "International Society for the Study of Lumbar Spine",
+    "Lumbar Spine Research Society",
+    "North American Spine Society"
+  ],
+  "speakingEngagements": [
+    "Extensive national and international lectures on spinal surgery techniques and research findings."
+  ],
+  "charitableAffiliations": [],
+  "communityInvolvement": [],
+  "awardsHonorsRecognitions": [
+    {
+      "award": "D Magazine Best Doctors",
+      "years": "2009-2024"
+    },
+    {
+      "award": "Texas Monthly Super Doctor",
+      "years": "2011-2024"
+    },
+    "David Selby Award, North American Spine Society",
+    "Volvo Award for Low Back Pain Research",
+    "Ursinus College Alumni Award"
+  ],
+  "boardMemberships": [
+    "Chairman of the Board, Texas Back Institute Research Foundation"
+  ],
+  "advisoryRoles": []
+}
+ 

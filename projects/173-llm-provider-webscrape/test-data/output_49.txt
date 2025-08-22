@@ -1,0 +1,295 @@
+**Jack E. Zigler, MD – Professional Profile**
+
+Dr. Jack E. Zigler is a board-certified orthopedic spine surgeon specializing in spine surgery at the Texas Back Institute in Plano, Texas. He serves as Co-Director of the Center for Disc Replacement and Co-Director of the Spine Fellowship Program at the institute. ([texasback.com](https://texasback.com/physician/jack-e-zigler/?utm_source=openai))
+
+**Overview**
+
+Dr. Zigler has over 30 years of experience in spine surgery, with a particular focus on motion-preserving spinal technologies, including lumbar and cervical disc replacements. He performed the first ProDisc-L lumbar artificial disc replacement in the United States in October 2001 and has been instrumental in advancing disc arthroplasty techniques globally. ([texasback.com](https://texasback.com/physician/jack-e-zigler/?utm_source=openai))
+
+**Education and Training**
+
+- **Bachelor of Science (B.S.)**: Cornell University, Ithaca, NY, 1973
+- **Doctor of Medicine (M.D.)**: SUNY Upstate Medical Center, Syracuse, NY, 1977
+- **Surgical Residency**: Long Island Jewish-Hillside Medical Center, New Hyde Park, NY, 1977-1978
+- **Orthopedic Surgery Residency**: Mount Sinai School of Medicine, New York, NY, 1978-1981
+- **Spine Surgery Fellowship**: Case Western Reserve University with Dr. Henry Bohlman, Cleveland, OH, 1981-1982 ([texasback.com](https://texasback.com/physician/jack-e-zigler/?utm_source=openai))
+
+**Board Certifications and Licenses**
+
+- **Board Certification**: American Board of Orthopaedic Surgery
+- **Medical Licenses**:
+  - Texas (Active through 2025)
+  - California (Active through 2025)
+  - Arizona (Active)
+  - Florida (Active)
+  - Nevada (Inactive)
+  - Ohio (Inactive) ([doximity.com](https://www.doximity.com/pub/jack-zigler-md?utm_source=openai))
+
+**Clinical Practice**
+
+- **Specialties**: Orthopedic Spine Surgery
+- **Subspecialties**: Spinal Arthroplasty, Motion-Preserving Technologies
+- **Hospital Affiliations**:
+  - Medical City Plano
+  - Texas Health Center for Diagnostic and Surgery
+  - Texas Health Presbyterian Hospital Plano
+  - Baylor Scott & White Medical Center-Frisco ([health.usnews.com](https://health.usnews.com/doctors/jack-zigler-25334?utm_source=openai))
+- **Practice Locations**:
+  - Texas Back Institute
+    - 6020 W Parker Rd., Suite 200, Plano, TX 75093 ([texasback.com](https://texasback.com/physician/jack-e-zigler/?utm_source=openai))
+- **Telemedicine Availability**: Not specified
+
+**Professional and Administrative Roles**
+
+- **Current Positions**:
+  - Co-Director, Center for Disc Replacement, Texas Back Institute
+  - Co-Director, Spine Fellowship Program, Texas Back Institute
+- **Previous Roles**:
+  - President, International Society for the Advancement of Spine Surgery (ISASS), 2019-2020 ([texasback.com](https://texasback.com/dr-jack-zigler-named-2019-isass-president/?utm_source=openai))
+  - President, American Spinal Injury Association (ASIA)
+  - Clinical Professor of Orthopaedic Surgery, University of Southern California School of Medicine ([texasback.com](https://texasback.com/physician/jack-e-zigler/?utm_source=openai))
+
+**Industry and Corporate Affiliations**
+
+- **Medical Device Companies**: Principal Investigator for the ProDisc artificial disc replacement system's U.S. FDA clinical studies ([en.wikipedia.org](https://en.wikipedia.org/wiki/Jack_Zigler?utm_source=openai))
+- **Pharmaceutical Companies**: None available
+- **Healthcare Startups**: None available
+- **Other Relevant Companies**: None available
+
+**Academic and Teaching Affiliations**
+
+- Co-Director, Spine Fellowship Program, Texas Back Institute
+- Former Clinical Professor of Orthopaedic Surgery, University of Southern California School of Medicine ([texasback.com](https://texasback.com/physician/jack-e-zigler/?utm_source=openai))
+
+**Research Activities and Publications**
+
+- **Recent or Prominent Studies**:
+  - "Seven-Year Follow-up of the FDA IDE Study of the ProDisc-C Total Disc Replacement versus Anterior Cervical Discectomy and Fusion for Single Level Symptomatic Cervical Disc Disease" ([texasback.com](https://texasback.com/physician/jack-e-zigler/?utm_source=openai))
+- **Areas of Research Interest**:
+  - Spinal Arthroplasty
+  - Motion Preservation Technologies
+  - Degenerative Disc Disease
+- **Notable Publications**:
+  - Authored over 75 peer-reviewed articles on spinal surgery and disc replacement
+  - Authored three major textbooks on spine surgery ([texasback.com](https://texasback.com/physician/jack-e-zigler/?utm_source=openai))
+
+**Professional Memberships and Societies**
+
+- Fellow, American College of Surgeons
+- Fellow, American Academy of Orthopaedic Surgeons
+- Member, Cervical Spine Research Society
+- Member, North American Spine Society
+- Member, International Society for the Advancement of Spine Surgery ([spine-health.com](https://www.spine-health.com/author/jack-zigler-md?utm_source=openai))
+
+**Speaking Engagements and Conferences**
+
+- Frequent lecturer on disc arthroplasty techniques globally
+- Presented at numerous national and international spine meetings ([texasback.com](https://texasback.com/physician/jack-e-zigler/?utm_source=openai))
+
+**Charitable Affiliations and Volunteer Work**
+
+None available
+
+**Community Involvement or Service**
+
+None available
+
+**Awards, Honors, and Recognitions**
+
+- D Magazine Best Doctor: 2009-2015, 2017, 2018, 2020-2024
+- Texas Monthly Super Doctor: 2015-2023
+- Alpha Omega Alpha Honor Medical Society
+- Academic Achievement Award, Alumni Association, Upstate Medical Center College of Medicine ([texasback.com](https://texasback.com/physician/jack-e-zigler/?utm_source=openai))
+
+**Board Memberships**
+
+- Board of Directors, Cervical Spine Research Society
+- Board of Directors, International Society for the Advancement of Spine Surgery ([isass.org](https://isass.org/about/board-of-directors/jack-zigler-md/?utm_source=openai))
+
+**Advisory Roles**
+
+None available
+
+{
+  "name": "Jack E. Zigler, MD",
+  "npi": "1104853795",
+  "specialty": "Orthopedic Spine Surgery",
+  "subspecialties": ["Spinal Arthroplasty", "Motion-Preserving Technologies"],
+  "education": [
+    {
+      "degree": "B.S.",
+      "institution": "Cornell University",
+      "year": 1973
+    },
+    {
+      "degree": "M.D.",
+      "institution": "SUNY Upstate Medical Center",
+      "year": 1977
+    },
+    {
+      "program": "Surgical Residency",
+      "institution": "Long Island Jewish-Hillside Medical Center",
+      "years": "1977-1978"
+    },
+    {
+      "program": "Orthopedic Surgery Residency",
+      "institution": "Mount Sinai School of Medicine",
+      "years": "1978-1981"
+    },
+    {
+      "program": "Spine Surgery Fellowship",
+      "institution": "Case Western Reserve University",
+      "years": "1981-1982"
+    }
+  ],
+  "boardCertifications": ["American Board of Orthopaedic Surgery"],
+  "licenses": [
+    {
+      "state": "Texas",
+      "status": "Active",
+      "expiration": "2025"
+    },
+    {
+      "state": "California",
+      "status": "Active",
+      "expiration": "2025"
+    },
+    {
+      "state": "Arizona",
+      "status": "Active"
+    },
+    {
+      "state": "Florida",
+      "status": "Active"
+    },
+    {
+      "state": "Nevada",
+      "status": "Inactive"
+    },
+    {
+      "state": "Ohio",
+      "status": "Inactive"
+    }
+  ],
+  "hospitalAffiliations": [
+    "Medical City Plano",
+    "Texas Health Center for Diagnostic and Surgery",
+    "Texas Health Presbyterian Hospital Plano",
+    "Baylor Scott & White Medical Center-Frisco"
+  ],
+  "practiceLocations": [
+    {
+      "name": "Texas Back Institute",
+      "address": "6020 W Parker Rd., Suite 200, Plano, TX 75093"
+    }
+  ],
+  "telemedicineAvailability": false,
+  "professionalRoles": {
+    "current": [
+      {
+        "title": "Co-Director",
+        "organization": "Center for Disc Replacement, Texas Back Institute"
+      },
+      {
+        "title": "Co-Director",
+        "organization": "Spine Fellowship Program, Texas Back Institute"
+      }
+    ],
+    "previous": [
+      {
+        "title": "President",
+        "organization": "International Society for the Advancement of Spine Surgery",
+        "years": "2019-2020"
+      },
+      {
+        "title": "President",
+        "organization": "American Spinal Injury Association"
+      },
+      {
+        "title": "Clinical Professor of Orthopaedic Surgery",
+        "organization": "University of Southern California School of Medicine"
+      }
+    ]
+  },
+  "industryCorporateAffiliations": [
+    {
+      "role": "Principal Investigator",
+      "company": "ProDisc artificial disc replacement system's U.S. FDA clinical studies"
+    }
+  ],
+  "academicAffiliations": [
+    {
+      "role": "Co-Director",
+      "program": "Spine Fellowship Program, Texas Back Institute"
+    },
+    {
+      "role": "Former Clinical Professor of Orthopaedic Surgery",
+      "institution": "University of Southern California School of Medicine"
+    }
+  ],
+  "researchActivities": {
+    "recentStudies": [
+      {
+        "title": "Seven-Year Follow-up of the FDA IDE Study of the ProDisc-C Total Disc Replacement versus Anterior Cervical Discectomy and Fusion for Single Level Symptomatic Cervical Disc Disease"
+      }
+    ],
+    "researchInterests": [
+      "Spinal Arthroplasty",
+      "Motion Preservation Technologies",
+      "Degenerative Disc Disease"
+    ],
+    "notablePublications": [
+      {
+        "description": "Authored over 75 peer-reviewed articles on spinal surgery and disc replacement"
+      },
+      {
+        "description": "Authored three major textbooks on spine surgery"
+      }
+    ]
+  },
+  "professionalMemberships": [
+    "Fellow, American College of Surgeons",
+    "Fellow, American Academy of Orthopaedic Surgeons",
+    "Member, Cervical Spine Research Society",
+    "Member, North American Spine Society",
+    "Member, International Society for the Advancement of Spine Surgery"
+  ],
+  "speakingEngagements": [
+    {
+      "description": "Frequent lecturer on disc arthroplasty techniques globally"
+    },
+    {
+      "description": "Presented at numerous national and international spine meetings"
+    }
+  ],
+  "charitableAffiliations": [],
+  "communityInvolvement": [],
+  "awardsHonorsRecognitions": [
+    {
+      "title": "D Magazine Best Doctor",
+      "years": ["2009-2015", "2017", "2018", "2020-2024"]
+    },
+    {
+      "title": "Texas Monthly Super Doctor",
+      "years": ["2015-2023"]
+    },
+    {
+      "title": "Alpha Omega Alpha Honor Medical Society"
+    },
+    {
+      "title": "Academic Achievement Award",
+      "organization": "Alumni Association, Upstate Medical Center College of Medicine"
+    }
+  ],
+  "boardMemberships": [
+    {
+      "organization": "Cervical Spine Research Society",
+      "role": "Board of Directors"
+    },
+    {
+      "organization": "International Society for the Advancement of Spine Surgery",
+      "role": "Board of Directors"
+    }
+  ],
+  "advisoryRoles": []
+}

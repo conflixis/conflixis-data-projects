@@ -1,0 +1,314 @@
+Dr. Joseph Jankovic is a distinguished neurologist specializing in movement disorders. Below is a comprehensive profile detailing his professional background, education, clinical practice, and contributions to the field.
+
+**Joseph Jankovic, M.D. – Professional Profile (Neurology, Professor of Neurology, Distinguished Chair in Movement Disorders, Director of the Parkinson's Disease Center and Movement Disorders Clinic)**
+
+**Overview**
+
+Dr. Joseph Jankovic is a renowned neurologist with extensive expertise in movement disorders. He serves as a Professor of Neurology and holds the Distinguished Chair in Movement Disorders at Baylor College of Medicine. As the founder and director of the Parkinson's Disease Center and Movement Disorders Clinic (PDCMDC), Dr. Jankovic has significantly advanced the understanding and treatment of various movement disorders. ([bcm.edu](https://www.bcm.edu/people-search/joseph-jankovic-23852?utm_source=openai))
+
+**Education and Training**
+
+- **Medical Degree:** University of Arizona College of Medicine, 1973
+- **Internship:** Internal Medicine, Baylor College of Medicine, 1973-1974
+- **Residency:** Neurology, The Neurological Institute, Columbia University, 1974-1977
+
+**Board Certifications and Licenses**
+
+- **Board Certification:** American Board of Psychiatry and Neurology, Neurology
+- **Medical Licenses:**
+  - Texas (License No. E8000)
+  - California
+  - Arizona (inactive)
+
+**Clinical Practice**
+
+- **Specialties:** Neurology
+- **Subspecialties:** Movement Disorders, including Parkinson's disease, tremors, dystonia, tics, Tourette syndrome, chorea, Huntington's disease, restless legs syndrome, tardive dyskinesia, paroxysmal dyskinesias, and ataxia
+- **Hospital Affiliations:** Baylor St. Luke's Medical Center
+- **Practice Locations:**
+  - Baylor College of Medicine Medical Center
+    - 7200 Cambridge Street, Suite 9A, Houston, TX 77030
+    - Phone: (713) 798-2273
+- **Telemedicine Availability:** Not specified
+
+**Professional and Administrative Roles**
+
+- **Current Positions:**
+  - Professor of Neurology, Baylor College of Medicine
+  - Distinguished Chair in Movement Disorders, Baylor College of Medicine
+  - Director, Parkinson's Disease Center and Movement Disorders Clinic
+  - Program Director, Movement Disorders Fellowship, Baylor College of Medicine
+- **Previous Roles:**
+  - Past President, International Parkinson and Movement Disorder Society (1994-1996)
+  - Past President, International Neurotoxin Association (2015-2017)
+
+**Industry and Corporate Affiliations**
+
+- **Medical Device Companies:** None available
+- **Pharmaceutical Companies:** None available
+- **Healthcare Startups:** None available
+- **Other Relevant Companies:** None available
+
+**Academic and Teaching Affiliations**
+
+- Professor of Neurology, Baylor College of Medicine
+- Program Director, Movement Disorders Fellowship, Baylor College of Medicine
+
+**Research Activities and Publications**
+
+- **Recent or Prominent Studies:**
+  - "Corticobasal Syndrome: Are There Central or Peripheral Triggers?" (October 2024)
+  - "Apraxia of Eyelid Opening in Patients with Movement Disorders" (October 2024)
+- **Areas of Research Interest:**
+  - Etiology, pathophysiology, and experimental therapeutics of Parkinson's disease and related neurodegenerative and movement disorders
+- **Notable Publications:**
+  - Over 1,200 original articles and over 55 books, including "Neurology in Clinical Practice" and "Principles and Practice of Movement Disorders"
+
+**Professional Memberships and Societies**
+
+- American Academy of Neurology
+- International Parkinson and Movement Disorder Society
+- American Neurological Association
+- Australian Association of Neurologists
+- French Neurological Society
+
+**Speaking Engagements and Conferences**
+
+- "New Uses of Botulinum Toxin in Movement Disorders," Madrid, Spain, January 2017
+- "Dyskinesia: What to Do About Moving Too Much?" January 2016
+- "Cannabis in Parkinson’s Disease," Charlotte, NC, January 2016
+
+**Charitable Affiliations and Volunteer Work**
+
+None available
+
+**Community Involvement or Service**
+
+None available
+
+**Awards, Honors, and Recognitions**
+
+- Movement Disorders Research Award, American Academy of Neurology, 2007
+- Distinguished Service Award, National Parkinson Foundation
+- Guthrie Family Humanitarian Award, Huntington’s Disease Society of America
+- Lifetime Achievement Award, Tourette Syndrome Association
+- Distinguished Service Award, Dystonia Medical Research Foundation
+- Distinguished Faculty Award, Baylor College of Medicine Alumni Association
+- Fulbright & Jaworski Faculty Excellence Award, Baylor College of Medicine
+- Master Clinician Lifetime Award, Baylor College of Medicine
+
+**Board Memberships**
+
+None available
+
+**Advisory Roles**
+
+- Executive Scientific Advisory Board Member, Michael J. Fox Foundation for Parkinson’s Research
+
+Dr. Jankovic's extensive contributions to neurology, particularly in movement disorders, have established him as a leading expert in the field.
+
+{
+  "name": "Joseph Jankovic, M.D.",
+  "npi": "1538249115",
+  "specialty": "Neurology",
+  "subspecialties": [
+    "Movement Disorders",
+    "Parkinson's Disease",
+    "Tremors",
+    "Dystonia",
+    "Tics",
+    "Tourette Syndrome",
+    "Chorea",
+    "Huntington's Disease",
+    "Restless Legs Syndrome",
+    "Tardive Dyskinesia",
+    "Paroxysmal Dyskinesias",
+    "Ataxia"
+  ],
+  "education": [
+    {
+      "degree": "MD",
+      "institution": "University of Arizona College of Medicine",
+      "year": 1973
+    },
+    {
+      "training": "Internship",
+      "institution": "Baylor College of Medicine",
+      "year": "1973-1974",
+      "specialty": "Internal Medicine"
+    },
+    {
+      "training": "Residency",
+      "institution": "The Neurological Institute, Columbia University",
+      "year": "1974-1977",
+      "specialty": "Neurology"
+    }
+  ],
+  "boardCertifications": [
+    {
+      "board": "American Board of Psychiatry and Neurology",
+      "specialty": "Neurology"
+    }
+  ],
+  "licenses": [
+    {
+      "state": "Texas",
+      "licenseNumber": "E8000"
+    },
+    {
+      "state": "California",
+      "licenseNumber": "Not specified"
+    },
+    {
+      "state": "Arizona",
+      "licenseNumber": "Not specified",
+      "status": "Inactive"
+    }
+  ],
+  "hospitalAffiliations": [
+    "Baylor St. Luke's Medical Center"
+  ],
+  "practiceLocations": [
+    {
+      "name": "Baylor College of Medicine Medical Center",
+      "address": "7200 Cambridge Street, Suite 9A, Houston, TX 77030",
+      "phone": "(713) 798-2273"
+    }
+  ],
+  "telemedicineAvailability": false,
+  "professionalRoles": {
+    "current": [
+      {
+        "title": "Professor of Neurology",
+        "institution": "Baylor College of Medicine"
+      },
+      {
+        "title": "Distinguished Chair in Movement Disorders",
+        "institution": "Baylor College of Medicine"
+      },
+      {
+        "title": "Director, Parkinson's Disease Center and Movement Disorders Clinic",
+        "institution": "Baylor College of Medicine"
+      },
+      {
+        "title": "Program Director, Movement Disorders Fellowship",
+        "institution": "Baylor College of Medicine"
+      }
+    ],
+    "previous": [
+      {
+        "title": "Past President",
+        "organization": "International Parkinson and Movement Disorder Society",
+        "years": "1994-1996"
+      },
+      {
+        "title": "Past President",
+        "organization": "International Neurotoxin Association",
+        "years": "2015-2017"
+      }
+    ]
+  },
+  "industryCorporateAffiliations": [],
+  "academicAffiliations": [
+    {
+      "title": "Professor of Neurology",
+      "institution": "Baylor College of Medicine"
+    },
+    {
+      "title": "Program Director, Movement Disorders Fellowship",
+      "institution": "Baylor College of Medicine"
+    }
+  ],
+  "researchActivities": {
+    "recentStudies": [
+      {
+        "title": "Corticobasal Syndrome: Are There Central or Peripheral Triggers?",
+        "date": "October 2024"
+      },
+      {
+        "title": "Apraxia of Eyelid Opening in Patients with Movement Disorders",
+        "date": "October 2024"
+      }
+    ],
+    "researchInterests": [
+      "Etiology, pathophysiology, and experimental therapeutics of Parkinson's disease and related neurodegenerative and movement disorders"
+    ],
+    "notablePublications": [
+      {
+        "title": "Neurology in Clinical Practice",
+        "type": "Book"
+      },
+      {
+        "title": "Principles and Practice of Movement Disorders",
+        "type": "Book"
+      }
+    ]
+  },
+  "professionalMemberships": [
+    "American Academy of Neurology",
+    "International Parkinson and Movement Disorder Society",
+    "American Neurological Association",
+    "Australian Association of Neurologists",
+    "French Neurological Society"
+  ],
+  "speakingEngagements": [
+    {
+      "title": "New Uses of Botulinum Toxin in Movement Disorders",
+      "location": "Madrid, Spain",
+      "date": "January 2017"
+    },
+    {
+      "title": "Dyskinesia: What to Do About Moving Too Much?",
+      "date": "January 2016"
+    },
+    {
+      "title": "Cannabis in Parkinson’s Disease",
+      "location": "Charlotte, NC",
+      "date": "January 2016"
+    }
+  ],
+  "charitableAffiliations": [],
+  "communityInvolvement": [],
+  "awardsHonorsRecognitions": [
+    {
+      "title": "Movement Disorders Research Award",
+      "organization": "American Academy of Neurology",
+      "year": 2007
+    },
+    {
+      "title": "Distinguished Service Award",
+      "organization": "National Parkinson Foundation"
+    },
+    {
+      "title": "Guthrie Family Humanitarian Award",
+      "organization": "Huntington’s Disease Society of America"
+    },
+    {
+      "title": "Lifetime Achievement Award",
+      "organization": "Tourette Syndrome Association"
+    },
+    {
+      "title": "Distinguished Service Award",
+      "organization": "Dystonia Medical Research Foundation"
+    },
+    {
+      "title": "Distinguished Faculty Award",
+      "organization": "Baylor College of Medicine Alumni Association"
+    },
+    {
+      "title": "Fulbright & Jaworski Faculty Excellence Award",
+      "organization": "Baylor College of Medicine"
+    },
+    {
+      "title": "Master Clinician Lifetime Award",
+      "organization": "Baylor College of Medicine"
+    }
+  ],
+  "boardMemberships": [],
+  "advisoryRoles": [
+    {
+      "title": "Executive Scientific Advisory Board Member",
+      "organization": "Michael J. Fox Foundation for Parkinson’s Research"
+    }
+  ]
+}

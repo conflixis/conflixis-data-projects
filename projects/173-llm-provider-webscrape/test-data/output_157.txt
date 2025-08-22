@@ -1,0 +1,277 @@
+**Cedric W. Spak, MD, MPH – Professional Profile (Infectious Disease Specialist and Current Title/Role)**
+
+Dr. Cedric W. Spak is an infectious disease specialist affiliated with Baylor Scott & White Health and a partner at Texas Centers for Infectious Disease Associates (TCIDA) in Dallas and Fort Worth, Texas. ([bswhealth.com](https://www.bswhealth.com/physician/cedric-spak?utm_source=openai))
+
+**Overview**
+
+With nearly 20 years of experience, Dr. Spak specializes in managing complex infectious diseases, including transplant-related infections, bone and joint infections, and HIV. ([texascentersid.com](https://www.texascentersid.com/cedric-spak-md-mph-infectious-disease-forth-worth-dallas-tx.html?utm_source=openai))
+
+**Education and Training**
+
+- **Undergraduate:** B.A. in History and German Language, Rice University, 1994 (Cum Laude, Senior Honors Thesis)
+- **Medical School:** M.D., University of Texas Southwestern Medical School, 1999
+- **Internship:** Internal Medicine, University of Texas Southwestern Medical Center, 2000
+- **Residency:** Internal Medicine, University of Texas Southwestern Medical Center, 2002
+- **Fellowship:** Infectious Diseases, University of Washington, 2006
+- **Additional Degree:** M.P.H. in Epidemiology, University of Washington, 2007 (K30 Clinical Research Training Program) ([texascentersid.com](https://www.texascentersid.com/cedric-spak-md-mph-infectious-disease-forth-worth-dallas-tx.html?utm_source=openai))
+
+**Board Certifications and Licenses**
+
+- Board Certified in Internal Medicine and Infectious Disease by the American Board of Internal Medicine
+- Texas Medical License ([texascentersid.com](https://www.texascentersid.com/cedric-spak-md-mph-infectious-disease-forth-worth-dallas-tx.html?utm_source=openai))
+
+**Clinical Practice**
+
+- **Specialties:** Infectious Disease
+- **Subspecialties:** Transplant Infectious Diseases, HIV/AIDS Medicine, Bone and Joint Infections
+- **Hospital Affiliations:**
+  - Baylor University Medical Center
+  - Baylor Scott & White All Saints Medical Center – Fort Worth
+  - Baylor Scott & White Heart and Vascular Hospital – Dallas and Fort Worth
+  - Texas Health Presbyterian Hospital Dallas
+  - Kindred Hospital Dallas Central ([bswhealth.com](https://www.bswhealth.com/physician/cedric-spak?utm_source=openai), [cedricspakmd.com](https://www.cedricspakmd.com/?utm_source=openai))
+- **Practice Locations:**
+  - **Dallas Office:** 3410 Worth Street, Suite 780, Dallas, TX 75246
+  - **Fort Worth Office:** 1025 College Avenue, Fort Worth, TX 76104 ([cedricspakmd.com](https://www.cedricspakmd.com/?utm_source=openai))
+- **Telemedicine Availability:** Not specified
+
+**Professional and Administrative Roles**
+
+- **Current Positions:**
+  - Partner, Texas Centers for Infectious Disease Associates
+  - Consulting Physician, Baylor University Medical Center
+  - Consulting Physician, Baylor All Saints Health Center
+  - Consulting Physician, Texas Health Resources ([signalhire.com](https://www.signalhire.com/profiles/cedric-spak%27s-email/4014360?utm_source=openai))
+- **Previous Roles:**
+  - Physician, North Texas Infectious Diseases Consultants
+  - Senior Research Fellow, University of Washington School of Medicine
+  - Senior Fellow, Fred Hutchinson Cancer Research Center
+  - Physician, Texas Primary Care Associates
+  - Resident Physician, UT Southwestern Medical Center and Parkland Health ([signalhire.com](https://www.signalhire.com/profiles/cedric-spak%27s-email/4014360?utm_source=openai))
+
+**Industry and Corporate Affiliations**
+
+None available.
+
+**Academic and Teaching Affiliations**
+
+None available.
+
+**Research Activities and Publications**
+
+- **Recent or Prominent Studies:**
+  - "The IL-6 hypothesis in COVID-19: A phase 2, randomised, double-blind, placebo-controlled study to evaluate the efficacy and safety of free IL-6 sequestration by the monoclonal antibody sirukumab in severe and critical COVID-19."
+  - "Early outcomes of kidney transplant recipients from donors with severe SARS-CoV-2 pneumonia: A report of 5 cases."
+- **Areas of Research Interest:** HIV, Transplant Infections, COVID-19
+- **Notable Publications:**
+  - "Antibiotic failure in a renal transplant patient with Rhodococcus equi infection: an indication for surgical lobectomy."
+  - "Disseminated adenovirus infection in renal transplant recipients: the role of cidofovir and intravenous immunoglobulin." ([health.usnews.com](https://health.usnews.com/doctors/cedric-spak-50648?utm_source=openai))
+
+**Professional Memberships and Societies**
+
+- American Society of Transplantation
+- Texas Transplantation Society
+- Infectious Diseases Society of America
+- HIV Medical Association
+- American Medical Association
+- Texas Medical Association
+- Tarrant County Medical Society
+- American College of Physicians
+- South African Medical Association ([texascentersid.com](https://www.texascentersid.com/cedric-spak-md-mph-infectious-disease-forth-worth-dallas-tx.html?utm_source=openai))
+
+**Speaking Engagements and Conferences**
+
+- Presented at the 9th International Living Donor Abdominal Conference in Matera, Italy, 2018 ([cedricspakmd.com](https://www.cedricspakmd.com/?utm_source=openai))
+
+**Charitable Affiliations and Volunteer Work**
+
+None available.
+
+**Community Involvement or Service**
+
+None available.
+
+**Awards, Honors, and Recognitions**
+
+- Voted as one of D Magazine's "Top Doctors" multiple years since 2009 ([cedricspakmd.com](https://www.cedricspakmd.com/?utm_source=openai))
+- Physician of the Month, 2017
+- Best Doctors of Dallas, 2007-2016
+- Specialist Teaching Attending of the Year for Medical Students, Division of Infectious Diseases, Department of Internal Medicine, 2015 ([health.usnews.com](https://health.usnews.com/doctors/cedric-spak-50648?utm_source=openai))
+
+**Board Memberships**
+
+None available.
+
+**Advisory Roles**
+
+None available.
+
+{
+  "name": "Cedric W. Spak, MD, MPH",
+  "npi": "1063575199",
+  "specialty": "Infectious Disease",
+  "subspecialties": ["Transplant Infectious Diseases", "HIV/AIDS Medicine", "Bone and Joint Infections"],
+  "education": [
+    {
+      "degree": "B.A.",
+      "field": "History and German Language",
+      "institution": "Rice University",
+      "year": 1994,
+      "honors": ["Cum Laude", "Senior Honors Thesis"]
+    },
+    {
+      "degree": "M.D.",
+      "institution": "University of Texas Southwestern Medical School",
+      "year": 1999
+    },
+    {
+      "degree": "M.P.H.",
+      "field": "Epidemiology",
+      "institution": "University of Washington",
+      "year": 2007,
+      "honors": ["K30 Clinical Research Training Program"]
+    }
+  ],
+  "boardCertifications": [
+    {
+      "board": "American Board of Internal Medicine",
+      "specialty": "Internal Medicine"
+    },
+    {
+      "board": "American Board of Internal Medicine",
+      "specialty": "Infectious Disease"
+    }
+  ],
+  "licenses": [
+    {
+      "state": "Texas",
+      "licenseNumber": "L1206"
+    }
+  ],
+  "hospitalAffiliations": [
+    "Baylor University Medical Center",
+    "Baylor Scott & White All Saints Medical Center – Fort Worth",
+    "Baylor Scott & White Heart and Vascular Hospital – Dallas",
+    "Baylor Scott & White Heart and Vascular Hospital – Fort Worth",
+    "Texas Health Presbyterian Hospital Dallas",
+    "Kindred Hospital Dallas Central"
+  ],
+  "practiceLocations": [
+    {
+      "address": "3410 Worth Street, Suite 780, Dallas, TX 75246",
+      "phone": "214-716-0662"
+    },
+    {
+      "address": "1025 College Avenue, Fort Worth, TX 76104",
+      "phone": "817-810-9810"
+    }
+  ],
+  "telemedicineAvailability": false,
+  "professionalRoles": {
+    "current": [
+      {
+        "title": "Partner",
+        "organization": "Texas Centers for Infectious Disease Associates"
+      },
+      {
+        "title": "Consulting Physician",
+        "organization": "Baylor University Medical Center"
+      },
+      {
+        "title": "Consulting Physician",
+        "organization": "Baylor All Saints Health Center"
+      },
+      {
+        "title": "Consulting Physician",
+        "organization": "Texas Health Resources"
+      }
+    ],
+    "previous": [
+      {
+        "title": "Physician",
+        "organization": "North Texas Infectious Diseases Consultants"
+      },
+      {
+        "title": "Senior Research Fellow",
+        "organization": "University of Washington School of Medicine"
+      },
+      {
+        "title": "Senior Fellow",
+        "organization": "Fred Hutchinson Cancer Research Center"
+      },
+      {
+        "title": "Physician",
+        "organization": "Texas Primary Care Associates"
+      },
+      {
+        "title": "Resident Physician",
+        "organization": "UT Southwestern Medical Center"
+      },
+      {
+        "title": "Resident Physician",
+        "organization": "Parkland Health"
+      }
+    ]
+  },
+  "industryCorporateAffiliations": [],
+  "academicAffiliations": [],
+  "researchActivities": {
+    "recentStudies": [
+      {
+        "title": "The IL-6 hypothesis in COVID-19: A phase 2, randomised, double-blind, placebo-controlled study to evaluate the efficacy and safety of free IL-6 sequestration by the monoclonal antibody sirukumab in severe and critical COVID-19."
+      },
+      {
+        "title": "Early outcomes of kidney transplant recipients from donors with severe SARS-CoV-2 pneumonia: A report of 5 cases."
+      }
+    ],
+    "researchInterests": ["HIV", "Transplant Infections", "COVID-19"],
+    "notablePublications": [
+      {
+        "title": "Antibiotic failure in a renal transplant patient with Rhodococcus equi infection: an indication for surgical lobectomy."
+      },
+      {
+        "title": "Disseminated adenovirus infection in renal transplant recipients: the role of cidofovir and intravenous immunoglobulin."
+      }
+    ]
+  },
+  "professionalMemberships": [
+    "American Society of Transplantation",
+    "Texas Transplantation Society",
+    "Infectious Diseases Society of America",
+    "HIV Medical Association",
+    "American Medical Association",
+    "Texas Medical Association",
+    "Tarrant County Medical Society",
+    "American College of Physicians",
+    "South African Medical Association"
+  ],
+  "speakingEngagements": [
+    {
+      "event": "9th International Living Donor Abdominal Conference",
+      "location": "Matera, Italy",
+      "year": 2018
+    }
+  ],
+  "charitableAffiliations": [],
+  "communityInvolvement": [],
+  "awardsHonorsRecognitions": [
+    {
+      "award": "D Magazine's 'Top Doctors'",
+      "years": ["2009", "2010", "2011", "2012", "2013", "2014", "2015", "2016", "2017", "2018", "2019", "2020", "2021", "2022", "2023"]
+    },
+    {
+      "award": "Physician of the Month",
+      "year": 2017
+    },
+    {
+      "award": "Best Doctors of Dallas",
+      "years": ["2007", "2008", "2009", "2010", "2011", "2012", "2013", "2014", "2015", "2016"]
+    },
+    {
+      "award": "Specialist Teaching Attending of the Year for Medical Students, Division of Infectious Diseases, Department of Internal Medicine",
+      "year": 2015
+    }
+  ],
+  "boardMemberships": [],
+  "advisoryRoles": []
+}

@@ -1,0 +1,284 @@
+Dr. Jeffrey Whitman is a distinguished ophthalmologist specializing in cataract and refractive surgery. He serves as the President and Chief Surgeon at Key-Whitman Eye Center in Dallas, Texas. ([keywhitman.com](https://keywhitman.com/doctors/jeffrey-whitman-m-d-/?utm_source=openai))
+
+**Overview**
+
+With over 40 years of experience, Dr. Whitman has performed more than 100,000 lens implant and laser refractive surgeries. He was involved in the original FDA trials for Toric LASIK treatment and continues to participate in clinical trials for corneal inlays and premium lenses combined with femtosecond laser treatments. ([bswhealth.com](https://www.bswhealth.com/physician/jeffrey-whitman?utm_source=openai))
+
+**Education and Training**
+
+- **Medical School:** University of Texas Southwestern Medical School, 1980
+- **Internship:** Medicine/Anesthesia, Parkland Memorial Hospital, 1981
+- **Residency:** Ophthalmology, Scott & White Clinic, 1985
+
+**Board Certifications and Licenses**
+
+- **Board Certification:** American Board of Ophthalmology
+- **Medical License:** Texas State Medical License, active through 2025 ([doximity.com](https://www.doximity.com/pub/jeffrey-whitman-md?utm_source=openai))
+
+**Clinical Practice**
+
+- **Specialties:** Ophthalmology
+- **Subspecialties:** Cataract and Refractive Surgery
+- **Hospital Affiliations:** Texas Health Presbyterian Hospital Dallas ([doximity.com](https://www.doximity.com/pub/jeffrey-whitman-md?utm_source=openai))
+- **Practice Locations:**
+  - Key-Whitman Eye Center, 11442 N. Central Expressway, Dallas, TX 75243
+  - Additional locations in Mesquite, Arlington, Frisco, Plano, and Rockwall ([southwesternhealth.org](https://www.southwesternhealth.org/find-a-provider/medical-staff/jeffrey-whitman?utm_source=openai))
+- **Telemedicine Availability:** Not specified
+
+**Professional and Administrative Roles**
+
+- **Current Positions:**
+  - President and Chief Surgeon, Key-Whitman Eye Center
+  - Clinical Correspondent, American Academy of Ophthalmology
+- **Previous Roles:**
+  - Past President, American College of Eye Surgeons
+  - Past President, Dallas Academy of Ophthalmology
+  - Past President, Outpatient Ophthalmic Surgery Society ([bswhealth.com](https://www.bswhealth.com/physician/jeffrey-whitman?utm_source=openai))
+
+**Industry and Corporate Affiliations**
+
+- **Medical Device Companies:** Consultant for Bausch & Lomb, Alcon, Staar Surgical, Oasis Medical, ReVision Optics, and Refocus ([refractivealliance.com](https://www.refractivealliance.com/members/whitman/?utm_source=openai))
+
+**Academic and Teaching Affiliations**
+
+Dr. Whitman is actively involved in teaching and advising other surgeons, particularly in the field of cataract and refractive surgery. ([refractivealliance.com](https://www.refractivealliance.com/members/whitman/?utm_source=openai))
+
+**Research Activities and Publications**
+
+- **Recent or Prominent Studies:**
+  - Evaluation of Ophthalmic Surgical Instrument Sterility Using Short-Cycle Sterilization for Sequential Same-Day Use
+  - Treatment of Presbyopia in Emmetropes Using a Shape-Changing Corneal Inlay: One-Year Clinical Outcomes ([doximity.com](https://www.doximity.com/pub/jeffrey-whitman-md?utm_source=openai))
+- **Areas of Research Interest:** Cataract surgery, refractive surgery, presbyopia treatments
+- **Notable Publications:** Dr. Whitman has contributed to numerous ophthalmic publications and presented clinical research findings at national and international medical meetings. ([bswhealth.com](https://www.bswhealth.com/physician/jeffrey-whitman?utm_source=openai))
+
+**Professional Memberships and Societies**
+
+- American Academy of Ophthalmology
+- American College of Eye Surgeons
+- Dallas Academy of Ophthalmology
+- Texas Ophthalmological Association
+- American Society of Refractive Surgery
+- International Society of Cataract & Refractive Surgery
+- Society for Excellence in Eyecare ([keywhitman.com](https://keywhitman.com/doctors/jeffrey-whitman-m-d-/?utm_source=openai))
+
+**Speaking Engagements and Conferences**
+
+Dr. Whitman has presented his clinical research findings at numerous national and international medical meetings. ([bswhealth.com](https://www.bswhealth.com/physician/jeffrey-whitman?utm_source=openai))
+
+**Charitable Affiliations and Volunteer Work**
+
+Dr. Whitman is personally involved in medical mission work overseas and supports numerous charitable causes. ([bswhealth.com](https://www.bswhealth.com/physician/jeffrey-whitman?utm_source=openai))
+
+**Community Involvement or Service**
+
+Dr. Whitman has been recognized by D Magazine’s “Best Doctors” peer review as one of Dallas’s best for more than 20 years. ([keywhitman.com](https://keywhitman.com/about/awards-recognition/?utm_source=openai))
+
+**Awards, Honors, and Recognitions**
+
+- Newsweek America‘s Best Ophthalmologists 2023
+- D Magazine’s Best Doctors (2002–2022)
+- Texas Super Doctors (2010, 2015, 2020, 2021)
+- American Medical Association Physician’s Recognition Award ([keywhitman.com](https://keywhitman.com/about/awards-recognition/?utm_source=openai))
+
+**Board Memberships**
+
+- Board Member, American College of Eye Surgeons
+- Board Member, Society for Excellence in Eyecare ([bswhealth.com](https://www.bswhealth.com/physician/jeffrey-whitman?utm_source=openai))
+
+**Advisory Roles**
+
+Dr. Whitman serves as a consultant for several medical device companies, including Bausch & Lomb, Alcon, Staar Surgical, Oasis Medical, ReVision Optics, and Refocus. ([refractivealliance.com](https://www.refractivealliance.com/members/whitman/?utm_source=openai))
+
+{
+  "name": "Jeffrey Whitman, MD",
+  "npi": "1669401162",
+  "specialty": "Ophthalmology",
+  "subspecialties": ["Cataract and Refractive Surgery"],
+  "education": [
+    {
+      "degree": "MD",
+      "institution": "University of Texas Southwestern Medical School",
+      "year": 1980
+    },
+    {
+      "degree": "Internship",
+      "institution": "Parkland Memorial Hospital",
+      "year": 1981
+    },
+    {
+      "degree": "Residency",
+      "institution": "Scott & White Clinic",
+      "year": 1985
+    }
+  ],
+  "boardCertifications": ["American Board of Ophthalmology"],
+  "licenses": [
+    {
+      "state": "TX",
+      "licenseNumber": "Active through 2025"
+    }
+  ],
+  "hospitalAffiliations": ["Texas Health Presbyterian Hospital Dallas"],
+  "practiceLocations": [
+    {
+      "name": "Key-Whitman Eye Center",
+      "address": "11442 N. Central Expressway, Dallas, TX 75243"
+    },
+    {
+      "name": "Key-Whitman Eye Center",
+      "address": "18661 LBJ Fwy, Ste 400, Mesquite, TX 75150"
+    },
+    {
+      "name": "Key-Whitman Eye Center",
+      "address": "910 N Davis Dr, Ste 400, Arlington, TX 76012"
+    },
+    {
+      "name": "Key-Whitman Eye Center",
+      "address": "11445 Dallas Pkwy, Ste 290, Frisco, TX 75033"
+    },
+    {
+      "name": "Key-Whitman Eye Center",
+      "address": "3060 Communications Pkwy, Ste 205, Plano, TX 75093"
+    },
+    {
+      "name": "Key-Whitman Eye Center",
+      "address": "2380 S Goliad St, Ste 100, Rockwall, TX 75032"
+    }
+  ],
+  "telemedicineAvailability": false,
+  "professionalRoles": {
+    "current": [
+      {
+        "title": "President and Chief Surgeon",
+        "organization": "Key-Whitman Eye Center"
+      },
+      {
+        "title": "Clinical Correspondent",
+        "organization": "American Academy of Ophthalmology"
+      }
+    ],
+    "previous": [
+      {
+        "title": "Past President",
+        "organization": "American College of Eye Surgeons"
+      },
+      {
+        "title": "Past President",
+        "organization": "Dallas Academy of Ophthalmology"
+      },
+      {
+        "title": "Past President",
+        "organization": "Outpatient Ophthalmic Surgery Society"
+      }
+    ]
+  },
+  "industryCorporateAffiliations": [
+    {
+      "company": "Bausch & Lomb",
+      "role": "Consultant"
+    },
+    {
+      "company": "Alcon",
+      "role": "Consultant"
+    },
+    {
+      "company": "Staar Surgical",
+      "role": "Consultant"
+    },
+    {
+      "company": "Oasis Medical",
+      "role": "Consultant"
+    },
+    {
+      "company": "ReVision Optics",
+      "role": "Consultant"
+    },
+    {
+      "company": "Refocus",
+      "role": "Consultant"
+    }
+  ],
+  "academicAffiliations": [],
+  "researchActivities": {
+    "recentStudies": [
+      {
+        "title": "Evaluation of Ophthalmic Surgical Instrument Sterility Using Short-Cycle Sterilization for Sequential Same-Day Use",
+        "publication": "Ophthalmology",
+        "year": 2018
+      },
+      {
+        "title": "Treatment of Presbyopia in Emmetropes Using a Shape-Changing Corneal Inlay: One-Year Clinical Outcomes",
+        "publication": "Ophthalmology",
+        "year": 2016
+      }
+    ],
+    "researchInterests": ["Cataract surgery", "Refractive surgery", "Presbyopia treatments"],
+    "notablePublications": []
+  },
+  "professionalMemberships": [
+    "American Academy of Ophthalmology",
+    "American College of Eye Surgeons",
+    "Dallas Academy of Ophthalmology",
+    "Texas Ophthalmological Association",
+    "American Society of Refractive Surgery",
+    "International Society of Cataract & Refractive Surgery",
+    "Society for Excellence in Eyecare"
+  ],
+  "speakingEngagements": [],
+  "charitableAffiliations": ["Medical mission work overseas"],
+  "communityInvolvement": ["Recognized by D Magazine’s 'Best Doctors' peer review as one of Dallas’s best for more than 20 years"],
+  "awardsHonorsRecognitions": [
+    {
+      "award": "Newsweek America‘s Best Ophthalmologists",
+      "year": 2023
+    },
+    {
+      "award": "D Magazine’s Best Doctors",
+      "years": ["2002–2022"]
+    },
+    {
+      "award": "Texas Super Doctors",
+      "years": ["2010", "2015", "2020", "2021"]
+    },
+    {
+      "award": "American Medical Association Physician’s Recognition Award",
+      "year": null
+    }
+  ],
+  "boardMemberships": [
+    {
+      "organization": "American College of Eye Surgeons",
+      "role": "Board Member"
+    },
+    {
+      "organization": "Society for Excellence in Eyecare",
+      "role": "Board Member"
+    }
+  ],
+  "advisoryRoles": [
+    {
+      "company": "Bausch & Lomb",
+      "role": "Consultant"
+    },
+    {
+      "company": "Alcon",
+      "role": "Consultant"
+    },
+    {
+      "company": "Staar Surgical",
+      "role": "Consultant"
+    },
+    {
+      "company": "Oasis Medical",
+      "role": "Consultant"
+    },
+    {
+      "company": "ReVision Optics",
+      "role": "Consultant"
+    },
+    {
+      "company": "Refocus",
+      "role": "Consultant"
+    }
+  ]
+}

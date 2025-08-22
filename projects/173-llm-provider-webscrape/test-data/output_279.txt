@@ -1,0 +1,244 @@
+Dr. Sandeep Sahay is a board-certified pulmonologist specializing in pulmonary hypertension. He serves as an Associate Professor of Medicine at the Houston Methodist Academic Institute and as an Associate Clinical Member of the Houston Methodist Research Institute. ([houstonmethodist.org](https://www.houstonmethodist.org/faculty/sandeep-sahay/?utm_source=openai))
+
+**Overview**
+
+Dr. Sahay has over 21 years of experience in pulmonary medicine, with a focus on pulmonary vascular diseases, particularly pulmonary hypertension. He is actively involved in clinical research and has published extensively in this field. ([health.usnews.com](https://health.usnews.com/doctors/sandeep-sahay-918377?utm_source=openai))
+
+**Education and Training**
+
+- **Medical Degree**: Maulana Azad Medical College, University of Delhi, India, Class of 2003.
+- **Residency**: Internal Medicine at Akron General Medical Center/NEOMED, 2009-2012.
+- **Fellowship**: Pulmonary Disease and Critical Care Medicine at the University of Texas Health Science Center at Houston, 2012-2015. ([doximity.com](https://www.doximity.com/cv/sandeep-sahay-md-5?utm_source=openai))
+
+**Board Certifications and Licenses**
+
+- **Board Certifications**:
+  - Internal Medicine
+  - Pulmonary Disease
+  - Critical Care Medicine
+- **Medical Licenses**:
+  - Texas State Medical License (Active through 2025)
+  - Ohio State Medical License (Active through 2012) ([doximity.com](https://www.doximity.com/cv/sandeep-sahay-md-5?utm_source=openai))
+
+**Clinical Practice**
+
+- **Specialties**: Pulmonology
+- **Subspecialties**: Critical Care Medicine, Pulmonary Vascular Medicine
+- **Hospital Affiliations**:
+  - Houston Methodist Hospital
+  - Baylor St. Luke's Medical Center
+  - Texas Children's Hospital ([health.usnews.com](https://health.usnews.com/doctors/sandeep-sahay-918377?utm_source=openai))
+- **Practice Locations**:
+  - 6550 Fannin St, Suite 1101, Houston, TX 77030
+  - 6445 Main St, Outpatient Center, Floor 22, Houston, TX 77030 ([md.com](https://www.md.com/doctor/sandeep-sahay-md?utm_source=openai))
+- **Telemedicine Availability**: Not specified
+
+**Professional and Administrative Roles**
+
+- **Current Positions**:
+  - Associate Professor of Medicine, Houston Methodist Academic Institute
+  - Associate Clinical Member, Houston Methodist Research Institute
+  - Co-Director, Pulmonary Hypertension and Chronic Thromboembolic Pulmonary Hypertension Programs at Houston Methodist Hospital ([houstonmethodist.org](https://www.houstonmethodist.org/faculty/sandeep-sahay/?utm_source=openai), [journal.houstonmethodist.org](https://journal.houstonmethodist.org/articles/10.14797/MULQ7820?utm_source=openai))
+- **Previous Roles**: Not specified
+
+**Industry and Corporate Affiliations**
+
+None available.
+
+**Academic and Teaching Affiliations**
+
+- Assistant Professor of Clinical Medicine at Weill Cornell Medical College ([journal.houstonmethodist.org](https://journal.houstonmethodist.org/articles/10.14797/MULQ7820?utm_source=openai))
+
+**Research Activities and Publications**
+
+- **Recent or Prominent Studies**:
+  - "Safety and efficacy of rodatristat ethyl for the treatment of pulmonary arterial hypertension (ELEVATE-2): a dose-ranging, randomised, multicentre, phase 2b trial."
+  - "A new day has come: Sotatercept for the treatment of pulmonary arterial hypertension." ([health.usnews.com](https://health.usnews.com/doctors/sandeep-sahay-918377?utm_source=openai))
+- **Areas of Research Interest**:
+  - Pulmonary vascular diseases
+  - Treatment management and risk stratification in pulmonary hypertension ([chestnet.org](https://www.chestnet.org/membership-and-community/communities/networks/pulmonary-vascular-and-cardiovascular-network/get-to-know-sandeep-sahay?utm_source=openai))
+- **Notable Publications**:
+  - "Practical management of oral treprostinil in patients with pulmonary arterial hypertension: Lessons from ADAPT, EXPEDITE, and expert consensus."
+  - "Comparison Between REVEAL Lite 2 and COMPERA 2.0 for Risk Stratification in Pulmonary Arterial Hypertension." ([houstonmethodist.org](https://www.houstonmethodist.org/faculty/sandeep-sahay/?utm_source=openai))
+
+**Professional Memberships and Societies**
+
+- American College of Physicians (ACP)
+- American College of Chest Physicians (ACCP)
+- American Thoracic Society (ATS)
+- European Respiratory Society
+- Pulmonary Hypertension Association ([doximity.com](https://www.doximity.com/cv/sandeep-sahay-md-5?utm_source=openai))
+
+**Speaking Engagements and Conferences**
+
+- Faculty and chair for CHEST meetings ([chestnet.org](https://www.chestnet.org/membership-and-community/communities/networks/pulmonary-vascular-and-cardiovascular-network/get-to-know-sandeep-sahay?utm_source=openai))
+
+**Charitable Affiliations and Volunteer Work**
+
+None available.
+
+**Community Involvement or Service**
+
+None available.
+
+**Awards, Honors, and Recognitions**
+
+- CHEST Foundation Research Grant in Pulmonary Arterial Hypertension, 2017
+- CHEST Interstitial Lung Disease Research Award, 2020
+- Research grant from United Therapeutics to study proteomics and genomics in portopulmonary hypertension, 2021 ([journal.houstonmethodist.org](https://journal.houstonmethodist.org/articles/10.14797/MULQ7820?utm_source=openai))
+
+**Board Memberships**
+
+- Member, Pulmonary Vascular Diseases Steering Committee, American College of Chest Physicians ([doximity.com](https://www.doximity.com/cv/sandeep-sahay-md-5?utm_source=openai))
+
+**Advisory Roles**
+
+- Vice-Chair, Pulmonary Vascular Disease Section, American College of Chest Physicians
+- Member, CHEST Foundation Awards Committee ([chestnet.org](https://www.chestnet.org/membership-and-community/communities/networks/pulmonary-vascular-and-cardiovascular-network/get-to-know-sandeep-sahay?utm_source=openai))
+
+{
+  "name": "Sandeep Sahay",
+  "npi": "1669602710",
+  "specialty": "Pulmonology",
+  "subspecialties": ["Critical Care Medicine", "Pulmonary Vascular Medicine"],
+  "education": [
+    {
+      "degree": "MD",
+      "institution": "Maulana Azad Medical College, University of Delhi, India",
+      "year": 2003
+    },
+    {
+      "training": "Residency",
+      "specialty": "Internal Medicine",
+      "institution": "Akron General Medical Center/NEOMED",
+      "years": "2009-2012"
+    },
+    {
+      "training": "Fellowship",
+      "specialty": "Pulmonary Disease and Critical Care Medicine",
+      "institution": "University of Texas Health Science Center at Houston",
+      "years": "2012-2015"
+    }
+  ],
+  "boardCertifications": [
+    "Internal Medicine",
+    "Pulmonary Disease",
+    "Critical Care Medicine"
+  ],
+  "licenses": [
+    {
+      "state": "Texas",
+      "status": "Active through 2025"
+    },
+    {
+      "state": "Ohio",
+      "status": "Active through 2012"
+    }
+  ],
+  "hospitalAffiliations": [
+    "Houston Methodist Hospital",
+    "Baylor St. Luke's Medical Center",
+    "Texas Children's Hospital"
+  ],
+  "practiceLocations": [
+    {
+      "address": "6550 Fannin St, Suite 1101, Houston, TX 77030"
+    },
+    {
+      "address": "6445 Main St, Outpatient Center, Floor 22, Houston, TX 77030"
+    }
+  ],
+  "telemedicineAvailability": false,
+  "professionalRoles": {
+    "current": [
+      {
+        "title": "Associate Professor of Medicine",
+        "institution": "Houston Methodist Academic Institute"
+      },
+      {
+        "title": "Associate Clinical Member",
+        "institution": "Houston Methodist Research Institute"
+      },
+      {
+        "title": "Co-Director",
+        "program": "Pulmonary Hypertension and Chronic Thromboembolic Pulmonary Hypertension Programs",
+        "institution": "Houston Methodist Hospital"
+      }
+    ],
+    "previous": []
+  },
+  "industryCorporateAffiliations": [],
+  "academicAffiliations": [
+    {
+      "title": "Assistant Professor of Clinical Medicine",
+      "institution": "Weill Cornell Medical College"
+    }
+  ],
+  "researchActivities": {
+    "recentStudies": [
+      {
+        "title": "Safety and efficacy of rodatristat ethyl for the treatment of pulmonary arterial hypertension (ELEVATE-2): a dose-ranging, randomised, multicentre, phase 2b trial."
+      },
+      {
+        "title": "A new day has come: Sotatercept for the treatment of pulmonary arterial hypertension."
+      }
+    ],
+    "researchInterests": [
+      "Pulmonary vascular diseases",
+      "Treatment management and risk stratification in pulmonary hypertension"
+    ],
+    "notablePublications": [
+      {
+        "title": "Practical management of oral treprostinil in patients with pulmonary arterial hypertension: Lessons from ADAPT, EXPEDITE, and expert consensus."
+      },
+      {
+        "title": "Comparison Between REVEAL Lite 2 and COMPERA 2.0 for Risk Stratification in Pulmonary Arterial Hypertension."
+      }
+    ]
+  },
+  "professionalMemberships": [
+    "American College of Physicians (ACP)",
+    "American College of Chest Physicians (ACCP)",
+    "American Thoracic Society (ATS)",
+    "European Respiratory Society",
+    "Pulmonary Hypertension Association"
+  ],
+  "speakingEngagements": [
+    {
+      "event": "CHEST meetings",
+      "role": "Faculty and chair"
+    }
+  ],
+  "charitableAffiliations": [],
+  "communityInvolvement": [],
+  "awardsHonorsRecognitions": [
+    {
+      "award": "CHEST Foundation Research Grant in Pulmonary Arterial Hypertension",
+      "year": 2017
+    },
+    {
+      "award": "CHEST Interstitial Lung Disease Research Award",
+      "year": 2020
+    },
+    {
+      "award": "Research grant from United Therapeutics to study proteomics and genomics in portopulmonary hypertension",
+      "year": 2021
+    }
+  ],
+  "boardMemberships": [
+    {
+      "organization": "Pulmonary Vascular Diseases Steering Committee, American College of Chest Physicians",
+      "role": "Member"
+    }
+  ],
+  "advisoryRoles": [
+    {
+      "organization": "Pulmonary Vascular Disease Section, American College of Chest Physicians",
+      "role": "Vice-Chair"
+    },
+    {
+      "organization": "CHEST Foundation Awards Committee",
+      "role": "Member"
+    }
+  ]
+}

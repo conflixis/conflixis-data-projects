@@ -1,0 +1,253 @@
+Dr. Nicola A. Hanania is a distinguished pulmonologist specializing in pulmonary disease, currently serving as a Professor of Medicine in the Section of Pulmonary and Critical Care Medicine at Baylor College of Medicine in Houston, Texas. He is also the Director of the Airways Clinical Research Center and Chief of the Section of Pulmonary, Critical Care, and Sleep Medicine at Ben Taub Hospital. ([bcm.edu](https://www.bcm.edu/people-search/nicola-hanania-22632?utm_source=openai))
+
+**Overview**
+
+With over 40 years of experience in pulmonary and critical care medicine, Dr. Hanania has dedicated his career to the management and research of airway diseases, particularly asthma and chronic obstructive pulmonary disease (COPD). He oversees the Airways Clinical Research Center at Baylor College of Medicine, leading a team involved in both single-center and multi-center collaborative clinical trials. His research focuses on airway pharmacology, aiming to translate laboratory findings into clinical applications to develop new treatments. ([bcm.edu](https://www.bcm.edu/people-search/nicola-hanania-22632?utm_source=openai))
+
+**Education and Training**
+
+- **Medical Degree:** University of Jordan Faculty of Medicine, Amman, Jordan (1984)
+- **Internship:** University of Jordan, Amman, Jordan (1985-1986)
+- **Residency:** Internal Medicine, University of Jordan, Amman, Jordan (1986-1988)
+- **Residency:** Internal Medicine, University of Toronto, Toronto, Canada (1991)
+- **Residency:** Pulmonary Medicine, University of Toronto, Toronto, Canada (1994)
+- **Fellowship:** Critical Care Medicine, Baylor College of Medicine, Houston, Texas (1995)
+- **Master's Degree:** Clinical Investigations, Baylor College of Medicine, Houston, Texas (2010)
+
+**Board Certifications and Licenses**
+
+- **Board Certifications:**
+  - Internal Medicine
+  - Pulmonary Disease
+  - Critical Care Medicine
+- **Medical Licenses:**
+  - Texas State Medical License (Active through 2026)
+  - Indiana State Medical License (Active through 2025)
+  - Illinois State Medical License (Active through 1996)
+  - Pennsylvania State Medical License (Active through 2002)
+
+**Clinical Practice**
+
+- **Specialties:** Pulmonary Disease, Critical Care Medicine
+- **Subspecialties:** Asthma, COPD
+- **Hospital Affiliations:**
+  - Ben Taub Hospital, Houston, TX
+  - Baylor St. Luke's Medical Center, Houston, TX
+  - Texas Children's Hospital, Houston, TX
+- **Practice Locations:**
+  - Ben Taub Hospital, 1504 Taub Loop, Houston, TX 77030
+  - Baylor College of Medicine Medical Center, McNair Campus, 7200 Cambridge St., Suite 8A.321, Houston, TX 77030
+- **Telemedicine Availability:** Information not specified
+
+**Professional and Administrative Roles**
+
+- **Current Positions:**
+  - Professor of Medicine, Section of Pulmonary and Critical Care Medicine, Baylor College of Medicine
+  - Director, Airways Clinical Research Center, Baylor College of Medicine
+  - Chief, Section of Pulmonary, Critical Care, and Sleep Medicine, Ben Taub Hospital
+  - Member, Faculty Senate, Baylor College of Medicine
+- **Previous Roles:** Information not specified
+
+**Industry and Corporate Affiliations**
+
+- **Medical Device Companies:** Information not specified
+- **Pharmaceutical Companies:** Information not specified
+- **Healthcare Startups:** Information not specified
+- **Other Relevant Companies:** Information not specified
+
+**Academic and Teaching Affiliations**
+
+- Professor of Medicine, Section of Pulmonary and Critical Care Medicine, Baylor College of Medicine
+
+**Research Activities and Publications**
+
+- **Recent or Prominent Studies:**
+  - Principal Investigator for the American Lung Association Airways Clinical Research Center at Baylor College of Medicine
+  - Principal Investigator or Co-Investigator in several clinical trials in asthma and COPD
+- **Areas of Research Interest:**
+  - Airway pharmacology
+  - Management of asthma and COPD
+  - Clinical trials investigating novel treatments
+- **Notable Publications:**
+  - Over 320 peer-reviewed papers, book chapters, editorials, and reviews on asthma and COPD
+
+**Professional Memberships and Societies**
+
+- Fellow, American College of Chest Physicians (ACCP)
+- Fellow, American College of Physicians (ACP)
+- Fellow, Royal College of Physicians and Surgeons of Canada (FRCP(C))
+- Fellow, European Respiratory Society (FERS)
+- Member, Health Policy Committee, American Thoracic Society (ATS)
+- Member, European Respiratory Society (ERS)
+- Member, Society of Critical Care Medicine
+
+**Speaking Engagements and Conferences**
+
+- Invited speaker at local, regional, national, and international meetings on topics related to asthma and COPD
+
+**Charitable Affiliations and Volunteer Work**
+
+Information not specified
+
+**Community Involvement or Service**
+
+Information not specified
+
+**Awards, Honors, and Recognitions**
+
+- Fellow of European Respiratory Society (FERS), 2016
+- Thomas Petty, MD, Master ACCP Memorial Lectureship in COPD, 2016
+- Distinguished Scholar in Respiratory Health, American College of Chest Physicians, 2013
+- Best Doctors in America, 2011
+- Donald Robert McCaffree Humanitarian Award, American College of Chest Physicians, 2009
+- Career Investigator Award (K23), National Institutes of Health, 2005
+- Fulbright and Jaworski L.L.P. Faculty Excellence Award for Teaching and Evaluation, Baylor College of Medicine, 2003
+- Attending of the Year Award, Pulmonary Section, Baylor College of Medicine, 2003
+- Award for Excellence in Teaching, Department of Medicine, Baylor College of Medicine, 2003
+- Member, Academy of Distinguished Educators, Baylor College of Medicine, 2003-2010
+- Listed in Marquis Who's Who in America, 1995
+- Dupont Pharmaceuticals / American College of Chest Physicians - Junior Investigator Award, 1994
+- The Toronto Hospital, Department of Medicine, Resident's Research Award, 1993, 1994
+- University of Toronto, Department of Medicine, Research Award, 1992
+
+**Board Memberships**
+
+- Editor-in-Chief, Respiratory Medicine
+- Associate Editor, Current Opinion in Pulmonary Medicine (Asthma Section)
+- Associate Editor, Lung
+- Editorial Board Member, Therapeutic Advances in Respiratory Disease
+- Editorial Board Member, Pulmonary Pharmacology and Therapeutics
+- Editorial Board Member, COPD (Journal of COPD Foundation)
+
+**Advisory Roles**
+
+Information not specified
+
+{
+  "name": "Nicola A. Hanania, MD, MS",
+  "npi": "1851471114",
+  "specialty": "Pulmonary Disease",
+  "subspecialties": ["Asthma", "COPD"],
+  "education": [
+    {
+      "degree": "MBBS",
+      "institution": "University of Jordan Faculty of Medicine",
+      "year": 1984
+    },
+    {
+      "degree": "MSc in Clinical Investigations",
+      "institution": "Baylor College of Medicine",
+      "year": 2010
+    }
+  ],
+  "boardCertifications": [
+    "Internal Medicine",
+    "Pulmonary Disease",
+    "Critical Care Medicine"
+  ],
+  "licenses": [
+    {
+      "state": "Texas",
+      "licenseNumber": "J7982",
+      "expirationYear": 2026
+    },
+    {
+      "state": "Indiana",
+      "licenseNumber": "Unknown",
+      "expirationYear": 2025
+    },
+    {
+      "state": "Illinois",
+      "licenseNumber": "Unknown",
+      "expirationYear": 1996
+    },
+    {
+      "state": "Pennsylvania",
+      "licenseNumber": "Unknown",
+      "expirationYear": 2002
+    }
+  ],
+  "hospitalAffiliations": [
+    "Ben Taub Hospital, Houston, TX",
+    "Baylor St. Luke's Medical Center, Houston, TX",
+    "Texas Children's Hospital, Houston, TX"
+  ],
+  "practiceLocations": [
+    {
+      "name": "Ben Taub Hospital",
+      "address": "1504 Taub Loop, Houston, TX 77030"
+    },
+    {
+      "name": "Baylor College of Medicine Medical Center, McNair Campus",
+      "address": "7200 Cambridge St., Suite 8A.321, Houston, TX 77030"
+    }
+  ],
+  "telemedicineAvailability": false,
+  "professionalRoles": {
+    "current": [
+      {
+        "title": "Professor of Medicine, Section of Pulmonary and Critical Care Medicine",
+        "institution": "Baylor College of Medicine"
+      },
+      {
+        "title": "Director, Airways Clinical Research Center",
+        "institution": "Baylor College of Medicine"
+      },
+      {
+        "title": "Chief, Section of Pulmonary, Critical Care, and Sleep Medicine",
+        "institution": "Ben Taub Hospital"
+      },
+      {
+        "title": "Member, Faculty Senate",
+        "institution": "Baylor College of Medicine"
+      }
+    ],
+    "previous": []
+  },
+  "industryCorporateAffiliations": [],
+  "academicAffiliations": [
+    {
+      "title": "Professor of Medicine, Section of Pulmonary and Critical Care Medicine",
+      "institution": "Baylor College of Medicine"
+    }
+  ],
+  "researchActivities": {
+    "recentStudies": [
+      {
+        "title": "Principal Investigator for the American Lung Association Airways Clinical Research Center at Baylor College of Medicine"
+      },
+      {
+        "title": "Principal Investigator or Co-Investigator in several clinical trials in asthma and COPD"
+      }
+    ],
+    "researchInterests": [
+      "Airway pharmacology",
+      "Management of asthma and COPD",
+      "Clinical trials investigating novel treatments"
+    ],
+    "notablePublications": [
+      "Over 320 peer-reviewed papers, book chapters, editorials, and reviews on asthma and COPD"
+    ]
+  },
+  "professionalMemberships": [
+    "Fellow, American College of Chest Physicians (ACCP)",
+    "Fellow, American College of Physicians (ACP)",
+    "Fellow, Royal College of Physicians and Surgeons of Canada (FRCP(C))",
+    "Fellow, European Respiratory Society (FERS)",
+    "Member, Health Policy Committee, American Thoracic Society (ATS)",
+    "Member, European Respiratory Society (ERS)",
+    "Member, Society of Critical Care Medicine"
+  ],
+  "speakingEngagements": [
+    "Invited speaker at local, regional, national, and international meetings on topics related to asthma and COPD"
+  ],
+  "charitableAffiliations": [],
+  "communityInvolvement": [],
+  "awardsHonorsRecognitions": [
+    {
+      "title": "Fellow of European Respiratory Society (FERS)",
+      "year": 2016
+    },
+    {
+      "title": "Thomas Petty, MD, Master ACCP Memorial Lectureship in COPD",
+      "year": 201 

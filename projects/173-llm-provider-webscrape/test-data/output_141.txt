@@ -1,0 +1,258 @@
+**Angela Yen Moore, MD – Professional Profile (Dermatology and Dermatopathology)**
+
+**Overview**
+
+Dr. Angela Yen Moore is a board-certified dermatologist and dermatopathologist with over 30 years of experience. She specializes in diagnosing and treating a wide range of skin conditions, including acne, rosacea, psoriasis, and skin cancers. Dr. Moore is dedicated to providing efficient and high-quality medical, surgical, and cosmetic dermatology services to patients of all ages. ([doctor.webmd.com](https://doctor.webmd.com/doctor/angela-moore-a00fc87d-9bd1-4b3a-b6bd-9ba982d8abab-overview?utm_source=openai))
+
+**Education and Training**
+
+- **Medical School:** Baylor College of Medicine, Houston, TX (1992)
+- **Internship:** Internal Medicine, University of Texas Medical Branch Hospitals, Galveston, TX (1992–1993)
+- **Residency:** Dermatology, University of Texas Medical Branch Hospitals, Galveston, TX (1993–1996)
+- **Fellowship:** Dermatopathology, University of Texas Medical Branch Hospitals, Galveston, TX (1996–1997)
+
+**Board Certifications and Licenses**
+
+- **Board Certifications:**
+  - Dermatology – American Board of Dermatology
+  - Dermatopathology – American Board of Dermatology
+- **Medical License:**
+  - Texas State Medical License (J4627), active through 2025
+
+**Clinical Practice**
+
+- **Specialties:** Dermatology, Dermatopathology
+- **Hospital Affiliations:**
+  - Baylor Scott & White All Saints Medical Center – Fort Worth
+  - Baylor University Medical Center, Dallas, TX
+  - Texas Health Arlington Memorial Hospital, Arlington, TX
+- **Practice Location:**
+  - Arlington Center for Dermatology
+    - 711 E. Lamar Blvd, Suite 200, Arlington, TX 76011
+    - Phone: 817-795-7546
+- **Telemedicine Availability:** Yes
+
+**Professional and Administrative Roles**
+
+- **Current Positions:**
+  - Dermatologist, Arlington Center for Dermatology (1998–present)
+  - Dermatopathologist, ACD Pathology (2008–present)
+  - Principal Clinical Trials Investigator, Arlington Research Center (2007–present)
+  - Adjunct Associate Professor, TCU and UNTHSC School of Medicine, Fort Worth, TX (2019–present)
+  - Clinical Assistant Professor of Dermatology, Baylor University Medical Center, Dallas, TX (2000–present)
+  - Adjunct Assistant Clinical Professor, The University of Texas at Arlington School of Nursing, Arlington, TX (2000–present)
+  - Clinical Assistant Professor of Dermatology, University of Texas Medical Branch at Galveston, TX (1997–present)
+- **Previous Roles:**
+  - Clinical Assistant Professor of Dermatology, The University of Texas Southwestern Medical Center, Dallas, TX (1998–2005)
+  - Dermatologist, Mullanax Dermatology Associates, Arlington, TX (June 1998–July 1999)
+  - Dermatopathologist, Cockerell and Associates, Dallas, TX (August 1998–September 1999)
+  - Dermatologist and Dermatopathologist, Department of Veterans Affairs, North Texas Health Care System, Dallas, TX (September 1998–September 1999)
+  - Dermatologist, Arlington Dermatology Clinic, Arlington, TX (July 1999–December 2000)
+
+**Industry and Corporate Affiliations**
+
+- **Medical Device Companies:** None available.
+- **Pharmaceutical Companies:** None available.
+- **Healthcare Startups:** None available.
+- **Other Relevant Companies:** None available.
+
+**Academic and Teaching Affiliations**
+
+- Adjunct Associate Professor, TCU and UNTHSC School of Medicine, Fort Worth, TX
+- Clinical Assistant Professor of Dermatology, Baylor University Medical Center, Dallas, TX
+- Adjunct Assistant Clinical Professor, The University of Texas at Arlington School of Nursing, Arlington, TX
+- Clinical Assistant Professor of Dermatology, University of Texas Medical Branch at Galveston, TX
+
+**Research Activities and Publications**
+
+- **Recent or Prominent Studies:**
+  - "Trifarotene Reduces Risk for Atrophic Acne Scars: Results from A Phase 4 Controlled Study" (2023)
+  - "Once-daily Dapsone 7.5% Gel for the Treatment of Acne Vulgaris in Preadolescent Patients: A Phase IV, Open-label, 12-week Study" (2021)
+- **Areas of Research Interest:**
+  - Acne and rosacea treatments
+  - Psoriasis management
+  - Dermatopathology
+- **Notable Publications:**
+  - "Sarecycline: A Review of Preclinical and Clinical Evidence" (2020)
+  - "The effect of secukinumab on moderate-to-severe scalp psoriasis: Results of a 24-week, randomized, double-blind, placebo-controlled phase 3b study" (2017)
+
+**Professional Memberships and Societies**
+
+- Fellow, American Academy of Dermatology
+- President, Christian Medical and Dental Association, Dermatology Section (2015–present)
+- Texas Dermatology Society Executive Board Member (2008–present)
+- Delegate to the Advisory Board for the American Academy of Dermatology (2019–present)
+
+**Speaking Engagements and Conferences**
+
+- Invited speaker at over 20 international, 40 national, and 40 regional meetings
+
+**Charitable Affiliations and Volunteer Work**
+
+- Leader of mission trips to multiple continents
+
+**Community Involvement or Service**
+
+- Leader of the Fort Worth Dermatology Journal Club (2006–present)
+
+**Awards, Honors, and Recognitions**
+
+- Editorial Board Member, Journal of the American Academy of Dermatology (JAAD), with over 410 manuscripts reviewed (2008–present)
+- Section Editor, JAAD Clinical Pearls Section (2013–present)
+- Top 15 Reviewers for JAAD (2018)
+- Top Reviewer for JAAD (2017)
+- American Academy of Dermatology (AAD) President’s Citation (March 2017)
+- AAD Model State Award (2016, 2017, 2018)
+- Honorary Medical Chair for National Psoriasis Foundation (April 2014–2015)
+
+**Board Memberships**
+
+- Texas Dermatology Society Executive Board Member (2008–present)
+
+**Advisory Roles**
+
+- Delegate to the Advisory Board for the American Academy of Dermatology (2019–present)
+
+
+{
+  "name": "Angela Yen Moore, MD",
+  "npi": "1235142266",
+  "specialty": "Dermatology",
+  "subspecialties": ["Dermatopathology"],
+  "education": [
+    {
+      "degree": "MD",
+      "institution": "Baylor College of Medicine",
+      "year": 1992
+    },
+    {
+      "training": "Internship",
+      "specialty": "Internal Medicine",
+      "institution": "University of Texas Medical Branch Hospitals",
+      "year": 1993
+    },
+    {
+      "training": "Residency",
+      "specialty": "Dermatology",
+      "institution": "University of Texas Medical Branch Hospitals",
+      "year": 1996
+    },
+    {
+      "training": "Fellowship",
+      "specialty": "Dermatopathology",
+      "institution": "University of Texas Medical Branch Hospitals",
+      "year": 1997
+    }
+  ],
+  "boardCertifications": [
+    "Dermatology – American Board of Dermatology",
+    "Dermatopathology – American Board of Dermatology"
+  ],
+  "licenses": [
+    {
+      "state": "Texas",
+      "licenseNumber": "J4627",
+      "expirationYear": 2025
+    }
+  ],
+  "hospitalAffiliations": [
+    "Baylor Scott & White All Saints Medical Center – Fort Worth",
+    "Baylor University Medical Center, Dallas, TX",
+    "Texas Health Arlington Memorial Hospital, Arlington, TX"
+  ],
+  "practiceLocations": [
+    {
+      "name": "Arlington Center for Dermatology",
+      "address": "711 E. Lamar Blvd, Suite 200, Arlington, TX 76011",
+      "phone": "817-795-7546"
+    }
+  ],
+  "telemedicineAvailability": true,
+  "professionalRoles": {
+    "current": [
+      {
+        "title": "Dermatologist",
+        "organization": "Arlington Center for Dermatology",
+        "startYear": 1998
+      },
+      {
+        "title": "Dermatopathologist",
+        "organization": "ACD Pathology",
+        "startYear": 2008
+      },
+      {
+        "title": "Principal Clinical Trials Investigator",
+        "organization": "Arlington Research Center",
+        "startYear": 2007
+      },
+      {
+        "title": "Adjunct Associate Professor",
+        "organization": "TCU and UNTHSC School of Medicine, Fort Worth, TX",
+        "startYear": 2019
+      },
+      {
+        "title": "Clinical Assistant Professor of Dermatology",
+        "organization": "Baylor University Medical Center, Dallas, TX",
+        "startYear": 2000
+      },
+      {
+        "title": "Adjunct Assistant Clinical Professor",
+        "organization": "The University of Texas at Arlington School of Nursing, Arlington, TX",
+        "startYear": 2000
+      },
+      {
+        "title": "Clinical Assistant Professor of Dermatology",
+        "organization": "University of Texas Medical Branch at Galveston, TX",
+        "startYear": 1997
+      }
+    ],
+    "previous": [
+      {
+        "title": "Clinical Assistant Professor of Dermatology",
+        "organization": "The University of Texas Southwestern Medical Center, Dallas, TX",
+        "startYear": 1998,
+        "endYear": 2005
+      },
+      {
+        "title": "Dermatologist",
+        "organization": "Mullanax Dermatology Associates, Arlington, TX",
+        "startYear": 1998,
+        "endYear": 1999
+      },
+      {
+        "title": "Dermatopathologist",
+        "organization": "Cockerell and Associates, Dallas, TX",
+        "startYear": 1998,
+        "endYear": 1999
+      },
+      {
+        "title": "Dermatologist and Dermatopathologist",
+        "organization": "Department of Veterans Affairs, North Texas Health Care System, Dallas, TX",
+        "startYear": 1998,
+        "endYear": 1999
+      },
+      {
+        "title": "Dermatologist",
+        "organization": "Arlington Dermatology Clinic, Arlington, TX",
+        "startYear": 1999,
+        "endYear": 2000
+      }
+    ]
+  },
+  "industryCorporateAffiliations": [],
+  "academicAffiliations": [
+    {
+      "title": "Adjunct Associate Professor",
+      "organization": "TCU and UNTHSC School of Medicine, Fort Worth, TX"
+    },
+    {
+      "title": "Clinical Assistant Professor of Dermatology",
+      "organization": "Baylor University Medical Center, Dallas, TX"
+    },
+    {
+      "title": "Adjunct Assistant Clinical Professor",
+      "organization": "The University of Texas at Arlington School of Nursing, Arlington, TX"
+    },
+    {
+      "title": "Clinical Assistant Professor of Dermatology",
+      "organization": "University of Texas Medical Branch at Galvest 

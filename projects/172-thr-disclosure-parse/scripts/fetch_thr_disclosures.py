@@ -53,7 +53,8 @@ def fetch_disclosure_data():
         query = f"""
         WITH parsed_disclosures AS (
             SELECT 
-                document_id as id,
+                document_id,
+                document_id as id,  -- Keep for backwards compatibility
                 timestamp,
                 
                 -- Parse reporter information
@@ -61,6 +62,7 @@ def fetch_disclosure_data():
                 JSON_VALUE(data, '$.reporter.email') as provider_email,
                 JSON_VALUE(data, '$.reporter.id') as reporter_user_id,
                 JSON_VALUE(data, '$.reporter.authed_user_id') as authed_user_id,
+                JSON_VALUE(data, '$.reporter.search_name') as reporter_search_name,
                 
                 -- Parse disclosure type and category
                 COALESCE(
@@ -70,6 +72,10 @@ def fetch_disclosure_data():
                         ELSE 'Not Specified'
                     END
                 ) as relationship_type,
+                
+                -- Additional question metadata
+                JSON_VALUE(data, '$.question.question_id') as question_id,
+                JSON_VALUE(data, '$.question.category_id') as category_id,
                 
                 -- Fix category names to match standard format
                 CASE
@@ -83,6 +89,7 @@ def fetch_disclosure_data():
                 -- Parse company/entity information
                 JSON_VALUE(data, '$.company_name') as company_name,
                 JSON_VALUE(data, '$.company_id') as company_id,
+                JSON_VALUE(data, '$.search_company_name') as search_company_name,
                 
                 -- Parse financial information
                 CAST(JSON_VALUE(data, '$.compensation_value') AS FLOAT64) as financial_amount,
@@ -96,10 +103,19 @@ def fetch_disclosure_data():
                 JSON_VALUE(data, '$.reviewer') as reviewer,
                 JSON_VALUE(data, '$.review_date') as review_date,
                 
+                -- Additional metadata
+                JSON_VALUE(data, '$.source') as source,
+                JSON_VALUE(data, '$.campaign_title') as campaign_title,
+                JSON_VALUE(data, '$.service_provided') as service_provided,
+                JSON_VALUE(data, '$.interests') as interests,
+                
                 -- Parse dates
                 JSON_VALUE(data, '$.service_start_date') as relationship_start_date,
                 JSON_VALUE(data, '$.service_end_date') as relationship_end_date,
                 CAST(JSON_VALUE(data, '$.is_relationship_concluded') AS BOOL) as is_relationship_concluded,
+                JSON_VALUE(data, '$.disclosure_timeframe_start_date') as disclosure_timeframe_start,
+                JSON_VALUE(data, '$.disclosure_timeframe_end_date') as disclosure_timeframe_end,
+                JSON_VALUE(data, '$.updated_at') as updated_at,
                 
                 -- Parse research and dispute flags
                 CAST(JSON_VALUE(data, '$.is_research') AS BOOL) as is_research,
@@ -111,14 +127,15 @@ def fetch_disclosure_data():
                 -- Parse signature
                 JSON_VALUE(data, '$.signature.full_name') as signature_name,
                 JSON_VALUE(data, '$.signature.initials') as signature_initials,
+                JSON_VALUE(data, '$.signature_date._seconds') as signature_date_seconds,
                 
                 -- Parse person_id and manager
                 JSON_VALUE(data, '$.person_id') as person_id,
                 JSON_VALUE(data, '$.manager') as manager_name,
                 
-                -- Get the full question fields for entity extraction
-                JSON_QUERY(data, '$.question.field_values') as field_values_json,
-                JSON_QUERY(data, '$.question.fields') as fields_json
+                -- Raw JSON for dynamic field extraction
+                JSON_EXTRACT(data, '$.question.field_values') as field_values_json,
+                JSON_EXTRACT(data, '$.question.fields') as fields_json
                 
             FROM `{config.PROJECT_ID}.{config.DISCLOSURES_TABLE}`
             WHERE JSON_VALUE(data, '$.group_id') = '{config.GROUP_ID}'
@@ -140,23 +157,52 @@ def fetch_disclosure_data():
                     ELSE COALESCE(company_name, 'Not Disclosed')
                 END as entity_name,
                 
-                -- Extract job title for Related Parties
+                -- Extract Related Party fields
                 CASE
                     WHEN relationship_type = 'Related Parties' THEN
-                        JSON_VALUE(field_values_json, '$[3].value')
+                        JSON_VALUE(field_values_json, '$[0].value')
                     ELSE NULL
-                END as related_job_title,
+                END as related_party_first_name,
                 
-                -- Extract entity location for Related Parties
+                CASE
+                    WHEN relationship_type = 'Related Parties' THEN
+                        JSON_VALUE(field_values_json, '$[1].value')
+                    ELSE NULL
+                END as related_party_last_name,
+                
                 CASE
                     WHEN relationship_type = 'Related Parties' THEN
                         JSON_VALUE(field_values_json, '$[2].value')
                     ELSE NULL
-                END as related_entity_location
+                END as related_party_entity_location,
+                
+                CASE
+                    WHEN relationship_type = 'Related Parties' THEN
+                        JSON_VALUE(field_values_json, '$[3].value')
+                    ELSE NULL
+                END as related_party_job_title,
+                
+                -- Extract Person With Interest (common in Financial & External Roles)
+                -- This requires parsing based on field structure
+                CASE
+                    WHEN fields_json IS NOT NULL AND field_values_json IS NOT NULL THEN
+                        -- Complex extraction will be done in Python
+                        'TO_BE_EXTRACTED'
+                    ELSE NULL
+                END as person_with_interest_placeholder,
+                
+                -- Extract Type of Interest
+                CASE
+                    WHEN fields_json IS NOT NULL AND field_values_json IS NOT NULL THEN
+                        -- Complex extraction will be done in Python
+                        'TO_BE_EXTRACTED'
+                    ELSE NULL
+                END as interest_type_placeholder
                 
             FROM parsed_disclosures
         )
         SELECT 
+            document_id,
             id,
             provider_name,
             provider_email,
@@ -164,6 +210,8 @@ def fetch_disclosure_data():
             entity_name,
             relationship_type,
             category_label,
+            question_id,
+            category_id,
             COALESCE(financial_amount, 0) as financial_amount,
             compensation_type,
             compensation_received_by,
@@ -180,10 +228,23 @@ def fetch_disclosure_data():
             disputed,
             notes,
             signature_name,
+            signature_initials,
+            signature_date_seconds,
             person_id,
             manager_name,
-            related_job_title,
-            related_entity_location,
+            source,
+            campaign_title,
+            service_provided,
+            interests,
+            disclosure_timeframe_start,
+            disclosure_timeframe_end,
+            updated_at,
+            related_party_first_name,
+            related_party_last_name,
+            related_party_entity_location,
+            related_party_job_title,
+            field_values_json,
+            fields_json,
             timestamp as created_at
         FROM enriched_disclosures
         ORDER BY timestamp DESC
@@ -204,6 +265,75 @@ def fetch_disclosure_data():
         import traceback
         traceback.print_exc()
         return None
+
+
+def extract_dynamic_fields(df):
+    """
+    Extract dynamic fields from field_values_json and fields_json.
+    This includes Person With Interest, Type of Interest, and other dynamic fields.
+    """
+    
+    logger.info("Extracting dynamic fields from JSON...")
+    
+    # Initialize new columns
+    df['person_with_interest'] = None
+    df['interest_type'] = None
+    
+    for idx, row in df.iterrows():
+        try:
+            # Skip if no field values
+            if pd.isna(row['field_values_json']) or pd.isna(row['fields_json']):
+                continue
+            
+            field_values = json.loads(row['field_values_json'])
+            fields = json.loads(row['fields_json'])
+            
+            # Create a mapping of field IDs to field definitions
+            field_map = {field['id']: field for field in fields}
+            
+            # Extract values based on field titles
+            for fv in field_values:
+                field_id = fv.get('id')
+                value = fv.get('value')
+                
+                if field_id in field_map:
+                    field_def = field_map[field_id]
+                    field_title = field_def.get('title', '')
+                    field_type = field_def.get('type', '')
+                    
+                    # Extract Person With Interest
+                    if 'Person With Interest' in field_title or 'Person involved' in field_title or 'Person Holding' in field_title:
+                        if isinstance(value, dict):
+                            df.at[idx, 'person_with_interest'] = value.get('name', str(value))
+                        else:
+                            df.at[idx, 'person_with_interest'] = str(value) if value else None
+                    
+                    # Extract Type of Interest
+                    elif 'Type of Interest' in field_title and field_type == 'listOfCategories':
+                        df.at[idx, 'interest_type'] = str(value) if value else None
+                    
+                    # Extract jurisdiction/location for Political disclosures
+                    elif 'Jurisdiction' in field_title or 'Location of Office' in field_title:
+                        df.at[idx, 'jurisdiction_location'] = str(value) if value else None
+                    
+                    # Extract resolution date for Legal disclosures
+                    elif 'Resolution Date' in field_title:
+                        df.at[idx, 'resolution_date'] = str(value) if value else None
+                    
+                    # Extract entity where activity occurred
+                    elif 'Entity where activity occurred' in field_title:
+                        df.at[idx, 'entity_where_occurred'] = str(value) if value else None
+                        
+        except Exception as e:
+            logger.warning(f"Error extracting dynamic fields for row {idx}: {e}")
+            continue
+    
+    # Drop the JSON columns as they're no longer needed
+    df = df.drop(columns=['field_values_json', 'fields_json'], errors='ignore')
+    
+    logger.info(f"Extracted dynamic fields: {(df['person_with_interest'].notna()).sum()} with Person With Interest, {(df['interest_type'].notna()).sum()} with Interest Type")
+    
+    return df
 
 
 def join_with_member_data(disclosure_df, member_df):
@@ -281,9 +411,15 @@ def clean_and_format_data(df):
     
     logger.info("Cleaning and formatting data...")
     
+    # Convert signature_date from seconds to datetime
+    if 'signature_date_seconds' in df.columns:
+        df['signature_date'] = pd.to_datetime(df['signature_date_seconds'].astype(float), unit='s', errors='coerce')
+        df['signature_date'] = df['signature_date'].dt.strftime(config.DATE_FORMAT)
+    
     # Clean up date formats
     date_columns = ['disclosure_date', 'relationship_start_date', 'relationship_end_date', 
-                   'review_date', 'last_review_date']
+                   'review_date', 'last_review_date', 'disclosure_timeframe_start', 
+                   'disclosure_timeframe_end', 'resolution_date', 'updated_at']
     for col in date_columns:
         if col in df.columns:
             df[col] = pd.to_datetime(df[col], errors='coerce').dt.strftime(config.DATE_FORMAT)
@@ -298,7 +434,16 @@ def clean_and_format_data(df):
         'compensation_type': '',
         'review_status': 'Pending',
         'job_title': 'Not Specified',
-        'department': 'Texas Health'
+        'department': 'Texas Health',
+        'person_with_interest': '',
+        'interest_type': '',
+        'source': 'form',
+        'service_provided': '',
+        'interests': '',
+        'signature_initials': '',
+        'campaign_title': '2025 Texas Health COI Survey',
+        'question_id': '',
+        'category_id': ''
     })
     
     # Convert boolean columns
@@ -309,14 +454,21 @@ def clean_and_format_data(df):
     
     # Order columns for readability
     column_order = [
-        'id', 'provider_name', 'provider_npi', 'provider_email', 'job_title', 'department',
-        'manager_name', 'entity_name', 'relationship_type', 'category_label',
-        'financial_amount', 'compensation_type', 'compensation_received_by',
-        'compensation_received_by_self', 'risk_tier', 'risk_score',
-        'disclosure_date', 'relationship_start_date', 'relationship_end_date',
-        'relationship_ongoing', 'status', 'review_status', 'reviewer',
-        'last_review_date', 'next_review_date', 'is_research', 'disputed',
-        'notes', 'signature_name', 'person_id', 'created_at'
+        'document_id', 'id', 'provider_name', 'provider_npi', 'provider_email', 
+        'job_title', 'department', 'manager_name', 'person_with_interest',
+        'entity_name', 'relationship_type', 'category_label', 'interest_type',
+        'question_id', 'category_id', 'financial_amount', 'compensation_type', 
+        'compensation_received_by', 'compensation_received_by_self', 
+        'risk_tier', 'risk_score', 'disclosure_date', 'relationship_start_date', 
+        'relationship_end_date', 'relationship_ongoing', 'status', 'review_status', 
+        'reviewer', 'last_review_date', 'next_review_date', 'is_research', 
+        'disputed', 'notes', 'signature_name', 'signature_initials', 'signature_date',
+        'source', 'campaign_title', 'service_provided', 'interests',
+        'disclosure_timeframe_start', 'disclosure_timeframe_end',
+        'related_party_first_name', 'related_party_last_name', 
+        'related_party_entity_location', 'related_party_job_title',
+        'jurisdiction_location', 'resolution_date', 'entity_where_occurred',
+        'person_id', 'created_at', 'updated_at'
     ]
     
     # Reorder columns (only include columns that exist)
@@ -434,23 +586,27 @@ def main():
             logger.error("No disclosure data retrieved")
             return False
         
-        # Step 3: Join with member data
-        logger.info("\nStep 3: Joining with member data...")
+        # Step 3: Extract dynamic fields
+        logger.info("\nStep 3: Extracting dynamic fields...")
+        disclosure_df = extract_dynamic_fields(disclosure_df)
+        
+        # Step 4: Join with member data
+        logger.info("\nStep 4: Joining with member data...")
         enriched_df = join_with_member_data(disclosure_df, member_df)
         
-        # Step 4: Calculate risk metrics
-        logger.info("\nStep 4: Calculating risk metrics...")
+        # Step 5: Calculate risk metrics
+        logger.info("\nStep 5: Calculating risk metrics...")
         enriched_df = calculate_risk_metrics(enriched_df)
         
-        # Step 5: Clean and format
-        logger.info("\nStep 5: Cleaning and formatting data...")
+        # Step 6: Clean and format
+        logger.info("\nStep 6: Cleaning and formatting data...")
         final_df = clean_and_format_data(enriched_df)
         
-        # Step 6: Export data
-        logger.info("\nStep 6: Exporting data...")
+        # Step 7: Export data
+        logger.info("\nStep 7: Exporting data...")
         output_path = export_data(final_df)
         
-        # Step 7: Print statistics
+        # Step 8: Print statistics
         print_statistics(final_df)
         
         logger.info("\n" + "=" * 50)

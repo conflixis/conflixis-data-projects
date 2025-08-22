@@ -1,0 +1,268 @@
+Dr. Darin T. Okuda is a distinguished neurologist specializing in multiple sclerosis and other demyelinating disorders of the central nervous system. He currently serves as a Professor in the Department of Neurology at UT Southwestern Medical Center, where he holds multiple leadership roles, including Director of the Neuroinnovation Program and the Multiple Sclerosis and Neuroimmunology Imaging Program. ([profiles.utsouthwestern.edu](https://profiles.utsouthwestern.edu/profile/146752/darin-okuda.html?utm_source=openai))
+
+**Overview**
+
+Dr. Okuda is a clinician-scientist renowned for his contributions to the understanding and management of multiple sclerosis (MS). He is internationally recognized for defining and investigating the radiologically isolated syndrome (RIS), a condition characterized by MRI findings suggestive of MS in individuals without clinical symptoms. His research focuses on developing innovative diagnostic and clinical surveillance metrics, as well as transforming medical decision-making through technology. ([profiles.utsouthwestern.edu](https://profiles.utsouthwestern.edu/profile/146752/darin-okuda.html?utm_source=openai))
+
+**Education and Training**
+
+- **Medical School:** University of Hawaii at Manoa John A. Burns School of Medicine (2000)
+- **Internship:** St. Joseph's Hospital & Medical Center (2001), Internal Medicine
+- **Residency:** St. Joseph's Hospital & Medical Center (2004), Neurology
+- **Fellowship:** UCSF Multiple Sclerosis Center (2006), Neuroimmunology
+
+**Board Certifications and Licenses**
+
+- Diplomate, American Board of Psychiatry and Neurology
+
+**Clinical Practice**
+
+- **Specialties:** Neurology
+- **Subspecialties:** Multiple Sclerosis, Autoimmune Neurology
+- **Hospital Affiliations:** UT Southwestern Medical Center
+- **Practice Locations:**
+  - Neurology Clinic - Multiple Sclerosis and Neuroimmunology
+    - 5303 Harry Hines Blvd., 8th Floor, Dallas, Texas 75390
+    - Phone: (214) 645-8800
+- **Telemedicine Availability:** Not specified
+
+**Professional and Administrative Roles**
+
+- **Current Positions:**
+  - Professor, Department of Neurology, UT Southwestern Medical Center
+  - Director, Neuroinnovation Program
+  - Director, Multiple Sclerosis and Neuroimmunology Imaging Program
+  - Deputy Director, Multiple Sclerosis Program and Clinical Center for Multiple Sclerosis
+- **Previous Roles:** Not specified
+
+**Industry and Corporate Affiliations**
+
+- Technological advisor to several start-ups and Fortune 500 companies
+
+**Academic and Teaching Affiliations**
+
+- Professor, Department of Neurology, UT Southwestern Medical Center
+
+**Research Activities and Publications**
+
+- **Recent or Prominent Studies:**
+  - "Analysis of healthcare utilization before the diagnosis of radiologically isolated syndrome" (Multiple Sclerosis Journal, 2025)
+  - "Faster and better than a physician?: Assessing diagnostic proficiency of ChatGPT in misdiagnosed individuals with neuromyelitis optica spectrum disorder" (Journal of the Neurological Sciences, 2025)
+- **Areas of Research Interest:**
+  - Multiple sclerosis
+  - Radiologically isolated syndrome
+  - Neuroimaging
+  - Artificial intelligence in healthcare
+- **Notable Publications:**
+  - "Transforming grayscale MRI images to color utilizing generative artificial intelligence to better understand multiple sclerosis" (Journal of Central Nervous System Disease, 2025)
+  - "Time to move past typical syndromes in the diagnosis of multiple sclerosis" (Multiple Sclerosis Journal, 2024)
+
+**Professional Memberships and Societies**
+
+- Fellow, American Academy of Neurology
+- Fellow, American Neurological Association
+- Member, American Academy of Neurology Committees on Neuroimaging and Ethics
+- American Society of Neuroimaging
+- Fellow, British Medical Journal
+- New York Academy of Sciences
+
+**Speaking Engagements and Conferences**
+
+- Presenter at various national and international conferences on multiple sclerosis and neuroimmunology
+
+**Charitable Affiliations and Volunteer Work**
+
+- Not specified
+
+**Community Involvement or Service**
+
+- Not specified
+
+**Awards, Honors, and Recognitions**
+
+- Mimics Innovation Award, North and South America Finalist (2020)
+- STRATASYS Neuroscience Innovation Award (2020)
+- Alpha Omega Alpha Honor Medical Society (2019)
+- American Academy of Neurology, Brainstorm: A Competition for the Innovator in All of Us, Grand Prize Winner (2018)
+- International Congress on Advanced Treatments & Technologies in Multiple Sclerosis, Best Abstract Award (2018)
+- Merck KGaA: Multiple Sclerosis Innovation Award (2018)
+- Reality Science: DeeperMind Innovation Award (2018)
+- Alpha Omega Alpha Honor Medical Society Research Fellowship (1997)
+
+**Board Memberships**
+
+- Not specified
+
+**Advisory Roles**
+
+- Technological advisor to several start-ups and Fortune 500 companies
+
+{
+  "name": "Darin T. Okuda, MD",
+  "npi": "1043255722",
+  "specialty": "Neurology",
+  "subspecialties": ["Multiple Sclerosis", "Autoimmune Neurology"],
+  "education": [
+    {
+      "degree": "MD",
+      "institution": "University of Hawaii at Manoa John A. Burns School of Medicine",
+      "year": 2000
+    },
+    {
+      "degree": "Internship",
+      "institution": "St. Joseph's Hospital & Medical Center",
+      "year": 2001,
+      "specialty": "Internal Medicine"
+    },
+    {
+      "degree": "Residency",
+      "institution": "St. Joseph's Hospital & Medical Center",
+      "year": 2004,
+      "specialty": "Neurology"
+    },
+    {
+      "degree": "Fellowship",
+      "institution": "UCSF Multiple Sclerosis Center",
+      "year": 2006,
+      "specialty": "Neuroimmunology"
+    }
+  ],
+  "boardCertifications": ["American Board of Psychiatry and Neurology"],
+  "licenses": [],
+  "hospitalAffiliations": ["UT Southwestern Medical Center"],
+  "practiceLocations": [
+    {
+      "name": "Neurology Clinic - Multiple Sclerosis and Neuroimmunology",
+      "address": "5303 Harry Hines Blvd., 8th Floor, Dallas, Texas 75390",
+      "phone": "(214) 645-8800"
+    }
+  ],
+  "telemedicineAvailability": false,
+  "professionalRoles": {
+    "current": [
+      {
+        "title": "Professor",
+        "department": "Department of Neurology",
+        "institution": "UT Southwestern Medical Center"
+      },
+      {
+        "title": "Director",
+        "program": "Neuroinnovation Program",
+        "institution": "UT Southwestern Medical Center"
+      },
+      {
+        "title": "Director",
+        "program": "Multiple Sclerosis and Neuroimmunology Imaging Program",
+        "institution": "UT Southwestern Medical Center"
+      },
+      {
+        "title": "Deputy Director",
+        "program": "Multiple Sclerosis Program and Clinical Center for Multiple Sclerosis",
+        "institution": "UT Southwestern Medical Center"
+      }
+    ],
+    "previous": []
+  },
+  "industryCorporateAffiliations": [
+    {
+      "role": "Technological advisor",
+      "companies": ["Several start-ups", "Fortune 500 companies"]
+    }
+  ],
+  "academicAffiliations": [
+    {
+      "title": "Professor",
+      "department": "Department of Neurology",
+      "institution": "UT Southwestern Medical Center"
+    }
+  ],
+  "researchActivities": {
+    "recentStudies": [
+      {
+        "title": "Analysis of healthcare utilization before the diagnosis of radiologically isolated syndrome",
+        "journal": "Multiple Sclerosis Journal",
+        "year": 2025
+      },
+      {
+        "title": "Faster and better than a physician?: Assessing diagnostic proficiency of ChatGPT in misdiagnosed individuals with neuromyelitis optica spectrum disorder",
+        "journal": "Journal of the Neurological Sciences",
+        "year": 2025
+      }
+    ],
+    "researchInterests": [
+      "Multiple sclerosis",
+      "Radiologically isolated syndrome",
+      "Neuroimaging",
+      "Artificial intelligence in healthcare"
+    ],
+    "notablePublications": [
+      {
+        "title": "Transforming grayscale MRI images to color utilizing generative artificial intelligence to better understand multiple sclerosis",
+        "journal": "Journal of Central Nervous System Disease",
+        "year": 2025
+      },
+      {
+        "title": "Time to move past typical syndromes in the diagnosis of multiple sclerosis",
+        "journal": "Multiple Sclerosis Journal",
+        "year": 2024
+      }
+    ]
+  },
+  "professionalMemberships": [
+    "Fellow, American Academy of Neurology",
+    "Fellow, American Neurological Association",
+    "Member, American Academy of Neurology Committees on Neuroimaging and Ethics",
+    "American Society of Neuroimaging",
+    "Fellow, British Medical Journal",
+    "New York Academy of Sciences"
+  ],
+  "speakingEngagements": [
+    {
+      "event": "Various national and international conferences on multiple sclerosis and neuroimmunology"
+    }
+  ],
+  "charitableAffiliations": [],
+  "communityInvolvement": [],
+  "awardsHonorsRecognitions": [
+    {
+      "award": "Mimics Innovation Award",
+      "year": 2020,
+      "details": "North and South America Finalist"
+    },
+    {
+      "award": "STRATASYS Neuroscience Innovation Award",
+      "year": 2020
+    },
+    {
+      "award": "Alpha Omega Alpha Honor Medical Society",
+      "year": 2019
+    },
+    {
+      "award": "American Academy of Neurology, Brainstorm: A Competition for the Innovator in All of Us, Grand Prize Winner",
+      "year": 2018
+    },
+    {
+      "award": "International Congress on Advanced Treatments & Technologies in Multiple Sclerosis, Best Abstract Award",
+      "year": 2018
+    },
+    {
+      "award": "Merck KGaA: Multiple Sclerosis Innovation Award",
+      "year": 2018
+    },
+    {
+      "award": "Reality Science: DeeperMind Innovation Award",
+      "year": 2018
+    },
+    {
+      "award": "Alpha Omega Alpha Honor Medical Society Research Fellowship",
+      "year": 1997
+    }
+  ],
+  "boardMemberships": [],
+  "advisoryRoles": [
+    {
+      "role": "Technological advisor",
+      "companies": ["Several start-ups", "Fortune 500 companies"]
+    }
+  ]
+}

@@ -1,0 +1,239 @@
+**Luis A. Mignucci, M.D. – Professional Profile (Neurological Surgery and Current Title/Role)**
+
+Dr. Luis A. Mignucci is a board-certified neurosurgeon specializing in neurological surgery, with a focus on spine surgery. He is the founder and lead surgeon at Neurospine Surgical Consultants in Plano, Texas. ([neurospinesurgical.com](https://neurospinesurgical.com/dr-luis/?utm_source=openai))
+
+**Overview**
+
+With over 30 years of experience, Dr. Mignucci was the first board-certified neurosurgeon in the Dallas-Fort Worth area to complete a formal fellowship in spine surgery at the Cleveland Clinic Foundation. He has been providing medical care at Neurospine Surgical Consultants for more than three decades, offering advanced treatments for various spinal conditions. ([dmagazine.com](https://www.dmagazine.com/publications/d-magazine/2022/february/face-of-neurosurgery-spine/?utm_source=openai))
+
+**Education and Training**
+
+- **Medical School:** University of Puerto Rico School of Medicine, M.D., 1983 ([health.usnews.com](https://health.usnews.com/doctors/luis-mignucci-29243?utm_source=openai))
+- **Internship:** General Surgery, University of Puerto Rico Affiliated Hospitals ([neurospinesurgical.com](https://neurospinesurgical.com/dr-luis/?utm_source=openai))
+- **Residency:** Neurosurgery, University of Puerto Rico School of Medicine Affiliated Hospitals ([neurospinesurgical.com](https://neurospinesurgical.com/dr-luis/?utm_source=openai))
+- **Fellowship:** Spine Surgery, Cleveland Clinic Foundation ([neurospinesurgical.com](https://neurospinesurgical.com/dr-luis/?utm_source=openai))
+- **Additional Training:**
+  - Neurology Rotation, National Hospital for Nervous Diseases, University of London
+  - Visiting Neurosurgery Resident, Neurochirurgische Klinik, Universitätsspital Zürich, Switzerland ([neurospinesurgical.com](https://neurospinesurgical.com/dr-luis/?utm_source=openai))
+
+**Board Certifications and Licenses**
+
+- **Board Certifications:**
+  - American Board of Neurological Surgery
+  - American Board of Spine Surgery ([neurospinesurgical.com](https://neurospinesurgical.com/dr-luis/?utm_source=openai))
+- **Medical License:**
+  - Texas License No. H8758 ([npifinder.com](https://npifinder.com/1407801970/luis-a-mignucci?utm_source=openai))
+
+**Clinical Practice**
+
+- **Specialties:** Neurological Surgery
+- **Subspecialties:** Spine Surgery
+- **Hospital Affiliations:**
+  - Medical City Plano
+  - Methodist Hospital for Surgery
+  - Texas Health Presbyterian Hospital Plano ([health.usnews.com](https://health.usnews.com/doctors/luis-mignucci-29243?utm_source=openai))
+- **Practice Locations:**
+  - Neurospine Surgical Consultants
+    - 6160 Windhaven Parkway, Suite 200, Plano, TX 75093
+    - Phone: (972) 378-6908
+    - Fax: (972) 378-6749 ([npifinder.com](https://npifinder.com/1407801970/luis-a-mignucci?utm_source=openai))
+- **Telemedicine Availability:** Not specified
+
+**Professional and Administrative Roles**
+
+- **Current Positions:**
+  - Founder and Lead Surgeon, Neurospine Surgical Consultants
+  - Clinical Assistant Professor of Neurological Surgery, University of Texas Southwestern Medical Center ([neurospinesurgical.com](https://neurospinesurgical.com/dr-luis/?utm_source=openai))
+- **Previous Roles:**
+  - Chief Resident, Neurosurgery Residency Program, University of Puerto Rico School of Medicine (1988–1989)
+  - Consulting Neurological Surgeon, Veterans Administration Hospital, Dallas, Texas (1991–Present) ([neurospinesurgical.com](https://neurospinesurgical.com/dr-luis/?utm_source=openai))
+
+**Industry and Corporate Affiliations**
+
+- **Medical Device Companies:** Actively involved in the design of advanced medical devices and equipment, including the creation of the Expandable Working Ramp distributed by Performance Grafts, LLC. ([windhavensurgery.com](https://www.windhavensurgery.com/dr-luis-mignucci?utm_source=openai))
+- **Pharmaceutical Companies:** None available.
+- **Healthcare Startups:** None available.
+- **Other Relevant Companies:** None available.
+
+**Academic and Teaching Affiliations**
+
+- Clinical Assistant Professor of Neurological Surgery, University of Texas Southwestern Medical Center ([neurospinesurgical.com](https://neurospinesurgical.com/dr-luis/?utm_source=openai))
+
+**Research Activities and Publications**
+
+- **Recent or Prominent Studies:** Actively involved in spine research and clinical trials. ([windhavensurgery.com](https://www.windhavensurgery.com/dr-luis-mignucci?utm_source=openai))
+- **Areas of Research Interest:** Spine surgery techniques and medical device development.
+- **Notable Publications:** None available.
+
+**Professional Memberships and Societies**
+
+- American Association of Neurological Surgeons
+- American Medical Association
+- Congress of Neurological Surgeons
+- Dallas County Medical Society
+- North American Spine Society
+- Texas Association of Neurological Surgeons
+- Texas Medical Association
+- Texas Medical Foundation ([methodisthospitalforsurgery.com](https://www.methodisthospitalforsurgery.com/physician-directory/physicians/luis-a-mignucci/?utm_source=openai))
+
+**Speaking Engagements and Conferences**
+
+None available.
+
+**Charitable Affiliations and Volunteer Work**
+
+None available.
+
+**Community Involvement or Service**
+
+None available.
+
+**Awards, Honors, and Recognitions**
+
+- Recognized as one of the Best Doctors in Dallas for ten consecutive years. ([windhavensurgery.com](https://www.windhavensurgery.com/dr-luis-mignucci?utm_source=openai))
+- Featured in D Magazine's "Face of Neurosurgery/Spine" (2022, 2023) ([dmagazine.com](https://www.dmagazine.com/publications/d-magazine/2022/february/face-of-neurosurgery-spine/?utm_source=openai), [dmagazine.com](https://www.dmagazine.com/publications/d-magazine/2023/february/face-of-neurosurgery-spine/?utm_source=openai))
+- Inducted into D Magazine's Hall of Fame (2022) ([dmagazine.com](https://www.dmagazine.com/publications/d-magazine/2022/march/hall-of-fame-luis-antonio-mignucci/?utm_source=openai))
+
+**Board Memberships**
+
+None available.
+
+**Advisory Roles**
+
+None available.
+
+{
+  "name": "Luis A. Mignucci, M.D.",
+  "npi": "1407801970",
+  "specialty": "Neurological Surgery",
+  "subspecialties": ["Spine Surgery"],
+  "education": [
+    {
+      "degree": "M.D.",
+      "institution": "University of Puerto Rico School of Medicine",
+      "year": 1983
+    },
+    {
+      "training": "General Surgery Internship",
+      "institution": "University of Puerto Rico Affiliated Hospitals"
+    },
+    {
+      "training": "Neurosurgery Residency",
+      "institution": "University of Puerto Rico School of Medicine Affiliated Hospitals"
+    },
+    {
+      "training": "Spine Surgery Fellowship",
+      "institution": "Cleveland Clinic Foundation"
+    },
+    {
+      "training": "Neurology Rotation",
+      "institution": "National Hospital for Nervous Diseases, University of London"
+    },
+    {
+      "training": "Visiting Neurosurgery Resident",
+      "institution": "Neurochirurgische Klinik, Universitätsspital Zürich, Switzerland"
+    }
+  ],
+  "boardCertifications": [
+    "American Board of Neurological Surgery",
+    "American Board of Spine Surgery"
+  ],
+  "licenses": [
+    {
+      "state": "Texas",
+      "licenseNumber": "H8758"
+    }
+  ],
+  "hospitalAffiliations": [
+    "Medical City Plano",
+    "Methodist Hospital for Surgery",
+    "Texas Health Presbyterian Hospital Plano"
+  ],
+  "practiceLocations": [
+    {
+      "name": "Neurospine Surgical Consultants",
+      "address": "6160 Windhaven Parkway, Suite 200, Plano, TX 75093",
+      "phone": "(972) 378-6908",
+      "fax": "(972) 378-6749"
+    }
+  ],
+  "telemedicineAvailability": false,
+  "professionalRoles": {
+    "current": [
+      {
+        "title": "Founder and Lead Surgeon",
+        "organization": "Neurospine Surgical Consultants"
+      },
+      {
+        "title": "Clinical Assistant Professor of Neurological Surgery",
+        "organization": "University of Texas Southwestern Medical Center"
+      }
+    ],
+    "previous": [
+      {
+        "title": "Chief Resident, Neurosurgery Residency Program",
+        "organization": "University of Puerto Rico School of Medicine",
+        "years": "1988–1989"
+      },
+      {
+        "title": "Consulting Neurological Surgeon",
+        "organization": "Veterans Administration Hospital, Dallas, Texas",
+        "years": "1991–Present"
+      }
+    ]
+  },
+  "industryCorporateAffiliations": [
+    {
+      "company": "Performance Grafts, LLC",
+      "role": "Medical Device Designer"
+    }
+  ],
+  "academicAffiliations": [
+    {
+      "title": "Clinical Assistant Professor of Neurological Surgery",
+      "institution": "University of Texas Southwestern Medical Center"
+    }
+  ],
+  "researchActivities": {
+    "recentStudies": [
+      {
+        "topic": "Spine research and clinical trials",
+        "description": "Actively involved in spine research and clinical trials."
+      }
+    ],
+    "researchInterests": ["Spine surgery techniques", "Medical device development"],
+    "notablePublications": []
+  },
+  "professionalMemberships": [
+    "American Association of Neurological Surgeons",
+    "American Medical Association",
+    "Congress of Neurological Surgeons",
+    "Dallas County Medical Society",
+    "North American Spine Society",
+    "Texas Association of Neurological Surgeons",
+    "Texas Medical Association",
+    "Texas Medical Foundation"
+  ],
+  "speakingEngagements": [],
+  "charitableAffiliations": [],
+  "communityInvolvement": [],
+  "awardsHonorsRecognitions": [
+    {
+      "award": "Best Doctors in Dallas",
+      "organization": "D Magazine",
+      "years": "Ten consecutive years"
+    },
+    {
+      "award": "Face of Neurosurgery/Spine",
+      "organization": "D Magazine",
+      "years": ["2022", "2023"]
+    },
+    {
+      "award": "Hall of Fame",
+      "organization": "D Magazine",
+      "year": "2022"
+    }
+  ],
+  "boardMemberships": [],
+  "advisoryRoles": []
+}

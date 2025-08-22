@@ -1,0 +1,298 @@
+Dr. Michael S. Hisey is a board-certified orthopedic spine surgeon specializing in minimally invasive and motion-preserving techniques. He currently serves as an orthopedic surgeon at the Texas Back Institute. ([texasback.com](https://texasback.com/physician/michael-s-hisey/?utm_source=openai))
+
+**Overview**
+
+Dr. Hisey has over two decades of experience in orthopedic spine surgery, focusing on advanced, minimally invasive procedures to treat spinal disorders. He emphasizes returning patients to productive, pain-free activity, holding surgery as a last option. ([texasback.com](https://texasback.com/physician/michael-s-hisey/?utm_source=openai))
+
+**Education and Training**
+
+- **Bachelor of Science in Mechanical Engineering**: California Institute of Technology, 1983
+- **Medical Degree**: University of California, San Diego, 1992
+- **Surgical Internship**: Albert Einstein Medical Center, Philadelphia, PA, 1992-1993
+- **Residency in Orthopedic Surgery**: Albert Einstein Medical Center, Philadelphia, PA, 1994-1998
+- **AO Trauma Fellowship**: University Clinic for Traumatology, Innsbruck, Austria, September 1997
+- **Spine Surgery Fellowship**: Texas Back Institute, Plano, TX, 1998-1999
+
+**Board Certifications and Licenses**
+
+- **Board Certification**: American Board of Orthopedic Surgery
+- **Medical Licenses**:
+  - Texas (Active through 2025)
+  - Pennsylvania (Active through 2008)
+  - Arizona (Active through 2012)
+
+**Clinical Practice**
+
+- **Specialties**: Orthopedic Surgery, Spine Surgery
+- **Hospital Affiliations**:
+  - Medical City Denton
+  - Medical City Plano
+  - North Texas Medical Center
+  - Texas Health Presbyterian Hospital Flower Mound
+  - Texas Health Presbyterian Hospital Plano
+- **Practice Locations**:
+  - **Denton**: 3537 South Interstate 35 Suite 308, Denton, TX 76210
+  - **Flower Mound**: 4370 Medical Arts Drive, River Walk Building III, Suite 230, Flower Mound, TX 75028
+- **Telemedicine Availability**: Not specified
+
+**Professional and Administrative Roles**
+
+- **Current Positions**:
+  - Medical Director, Texas Back Institute
+  - Medical Director, SpineMark Clinical Research Organization at Texas Back Institute
+- **Previous Roles**:
+  - President, Texas Back Institute (2010-2013)
+  - Vice Chairman, Department of Surgery, Denton Regional Medical Center
+  - Chairman, Board of Managers, Texas Health Presbyterian Hospital Flower Mound
+  - Vice Chairman, Governing Board, Texas Health Presbyterian Hospital Flower Mound
+
+**Industry and Corporate Affiliations**
+
+- **Medical Device Companies**: Consultant to several spine implant companies
+- **Healthcare Startups**: Involved in the development and validation of products for correcting spinal disorders with minimally invasive techniques
+
+**Academic and Teaching Affiliations**
+
+- Serves on several committees for national medical societies such as the North American Spine Society (NASS)
+
+**Research Activities and Publications**
+
+- **Recent or Prominent Studies**:
+  - Principal Investigator, Dynesys IDE Trial
+  - Principal Investigator, Flexicore Lumbar Artificial Disc IDE Trial
+  - Co-Principal Investigator, Mobi-C Cervical Artificial Disc IDE Trial
+- **Areas of Research Interest**:
+  - Minimally invasive spine surgery techniques
+  - Motion-preserving spinal procedures
+- **Notable Publications**:
+  - "Subsequent surgery rates after cervical total disc replacement using a Mobi-C Cervical Disc Prosthesis versus anterior cervical discectomy and fusion: A prospective randomized clinical trial with 5-year follow-up"
+  - "Two-level total disc replacement with Mobi-C cervical artificial disc versus anterior discectomy and fusion: a prospective, randomized, controlled multicenter clinical trial with 4-year follow-up results"
+  - "Long-term Evaluation of Cervical Disc Arthroplasty with the Mobi-C© Cervical Disc: A Randomized, Prospective, Multicenter Clinical Trial with Seven-Year Follow-up"
+
+**Professional Memberships and Societies**
+
+- Fellow, American Academy of Orthopedic Surgeons
+- Member, North American Spine Society (NASS)
+
+**Speaking Engagements and Conferences**
+
+- Regularly presents research papers and symposia at national medical society meetings
+
+**Charitable Affiliations and Volunteer Work**
+
+- Official spine specialist for FC Dallas soccer organization
+
+**Community Involvement or Service**
+
+- Not specified
+
+**Awards, Honors, and Recognitions**
+
+- D Magazine Best Doctor: 2009, 2012, 2013, 2016, 2018, 2020, 2022
+- Texas Monthly Super Doctor: 2012-2022
+- Mary Ann E. Keenan Research Award
+- Industrial Liaison Fellow, University of California, San Diego
+
+**Board Memberships**
+
+- Chairman, Board of Managers, Texas Health Presbyterian Hospital Flower Mound
+
+**Advisory Roles**
+
+- Vice Chairman, Governing Board, Texas Health Presbyterian Hospital Flower Mound
+
+{
+  "name": "Michael S. Hisey, MD",
+  "npi": "1346283348",
+  "specialty": "Orthopedic Surgery",
+  "subspecialties": ["Spine Surgery"],
+  "education": [
+    {
+      "degree": "BS",
+      "field": "Mechanical Engineering",
+      "institution": "California Institute of Technology",
+      "year": 1983
+    },
+    {
+      "degree": "MD",
+      "institution": "University of California, San Diego",
+      "year": 1992
+    },
+    {
+      "training": "Surgical Internship",
+      "institution": "Albert Einstein Medical Center, Philadelphia, PA",
+      "years": "1992-1993"
+    },
+    {
+      "training": "Residency in Orthopedic Surgery",
+      "institution": "Albert Einstein Medical Center, Philadelphia, PA",
+      "years": "1994-1998"
+    },
+    {
+      "training": "AO Trauma Fellowship",
+      "institution": "University Clinic for Traumatology, Innsbruck, Austria",
+      "year": 1997
+    },
+    {
+      "training": "Spine Surgery Fellowship",
+      "institution": "Texas Back Institute, Plano, TX",
+      "years": "1998-1999"
+    }
+  ],
+  "boardCertifications": ["American Board of Orthopedic Surgery"],
+  "licenses": [
+    {
+      "state": "Texas",
+      "status": "Active through 2025"
+    },
+    {
+      "state": "Pennsylvania",
+      "status": "Active through 2008"
+    },
+    {
+      "state": "Arizona",
+      "status": "Active through 2012"
+    }
+  ],
+  "hospitalAffiliations": [
+    "Medical City Denton",
+    "Medical City Plano",
+    "North Texas Medical Center",
+    "Texas Health Presbyterian Hospital Flower Mound",
+    "Texas Health Presbyterian Hospital Plano"
+  ],
+  "practiceLocations": [
+    {
+      "location": "Denton",
+      "address": "3537 South Interstate 35 Suite 308, Denton, TX 76210"
+    },
+    {
+      "location": "Flower Mound",
+      "address": "4370 Medical Arts Drive, River Walk Building III, Suite 230, Flower Mound, TX 75028"
+    }
+  ],
+  "telemedicineAvailability": false,
+  "professionalRoles": {
+    "current": [
+      {
+        "title": "Medical Director",
+        "organization": "Texas Back Institute"
+      },
+      {
+        "title": "Medical Director",
+        "organization": "SpineMark Clinical Research Organization at Texas Back Institute"
+      }
+    ],
+    "previous": [
+      {
+        "title": "President",
+        "organization": "Texas Back Institute",
+        "years": "2010-2013"
+      },
+      {
+        "title": "Vice Chairman",
+        "organization": "Department of Surgery, Denton Regional Medical Center"
+      },
+      {
+        "title": "Chairman",
+        "organization": "Board of Managers, Texas Health Presbyterian Hospital Flower Mound"
+      },
+      {
+        "title": "Vice Chairman",
+        "organization": "Governing Board, Texas Health Presbyterian Hospital Flower Mound"
+      }
+    ]
+  },
+  "industryCorporateAffiliations": [
+    {
+      "role": "Consultant",
+      "organization": "Several spine implant companies"
+    },
+    {
+      "role": "Developer",
+      "organization": "Products for correcting spinal disorders with minimally invasive techniques"
+    }
+  ],
+  "academicAffiliations": [
+    {
+      "role": "Committee Member",
+      "organization": "North American Spine Society (NASS)"
+    }
+  ],
+  "researchActivities": {
+    "recentStudies": [
+      {
+        "title": "Principal Investigator",
+        "study": "Dynesys IDE Trial"
+      },
+      {
+        "title": "Principal Investigator",
+        "study": "Flexicore Lumbar Artificial Disc IDE Trial"
+      },
+      {
+        "title": "Co-Principal Investigator",
+        "study": "Mobi-C Cervical Artificial Disc IDE Trial"
+      }
+    ],
+    "researchInterests": [
+      "Minimally invasive spine surgery techniques",
+      "Motion-preserving spinal procedures"
+    ],
+    "notablePublications": [
+      {
+        "title": "Subsequent surgery rates after cervical total disc replacement using a Mobi-C Cervical Disc Prosthesis versus anterior cervical discectomy and fusion: A prospective randomized clinical trial with 5-year follow-up"
+      },
+      {
+        "title": "Two-level total disc replacement with Mobi-C cervical artificial disc versus anterior discectomy and fusion: a prospective, randomized, controlled multicenter clinical trial with 4-year follow-up results"
+      },
+      {
+        "title": "Long-term Evaluation of Cervical Disc Arthroplasty with the Mobi-C© Cervical Disc: A Randomized, Prospective, Multicenter Clinical Trial with Seven-Year Follow-up"
+      }
+    ]
+  },
+  "professionalMemberships": [
+    "Fellow, American Academy of Orthopedic Surgeons",
+    "Member, North American Spine Society (NASS)"
+  ],
+  "speakingEngagements": [
+    {
+      "description": "Regularly presents research papers and symposia at national medical society meetings"
+    }
+  ],
+  "charitableAffiliations": [
+    {
+      "role": "Official Spine Specialist",
+      "organization": "FC Dallas soccer organization"
+    }
+  ],
+  "communityInvolvement": [],
+  "awardsHonorsRecognitions": [
+    {
+      "award": "D Magazine Best Doctor",
+      "years": ["2009", "2012", "2013", "2016", "2018", "2020", "2022"]
+    },
+    {
+      "award": "Texas Monthly Super Doctor",
+      "years": ["2012-2022"]
+    },
+    {
+      "award": "Mary Ann E. Keenan Research Award"
+    },
+    {
+      "award": "Industrial Liaison Fellow",
+      "organization": "University of California, San Diego"
+    }
+  ],
+  "boardMemberships": [
+    {
+      "title": "Chairman",
+      "organization": "Board of Managers, Texas Health Presbyterian Hospital Flower Mound"
+    }
+  ],
+  "advisoryRoles": [
+    {
+      "title": "Vice Chairman",
+      "organization": "Governing Board, Texas Health Presbyterian Hospital Flower Mound"
+    }
+  ]
+}

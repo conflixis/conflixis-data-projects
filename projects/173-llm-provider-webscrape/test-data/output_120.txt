@@ -1,0 +1,236 @@
+**Dr. Carl Lauryssen – Professional Profile (Neurological Surgery, Neurosurgeon at Baylor Scott & White Medical Center)**
+
+**Overview**
+
+Dr. Carl Lauryssen is a board-certified neurosurgeon with over 36 years of experience specializing in neurological surgery. He is affiliated with Baylor Scott & White Medical Center and has a distinguished career focusing on minimally invasive spine surgery, motion preservation, and the treatment of complex spinal disorders. ([health.usnews.com](https://health.usnews.com/doctors/carl-lauryssen-877844?utm_source=openai))
+
+**Education and Training**
+
+- **Medical Degree:** University of Cape Town Faculty of Medicine, South Africa, 1988
+- **Residency:** Neurosurgery, University of Calgary, Alberta, Canada, 1991–1995
+- **Fellowship:** Spinal Neurosurgery, University of Alabama at Birmingham School of Medicine ([md.com](https://www.md.com/doctor/carl-lauryssen-md/about?utm_source=openai))
+
+**Board Certifications and Licenses**
+
+- **Board Certifications:**
+  - American Board of Neurological Surgery
+  - Royal College of Physicians and Surgeons of Canada
+- **Medical Licenses:**
+  - California (License No. C50914)
+  - Texas (Active through 2026)
+  - Alabama (Active through 1996) ([health.usnews.com](https://health.usnews.com/doctors/carl-lauryssen-877844?utm_source=openai))
+
+**Clinical Practice**
+
+- **Specialties:** Neurological Surgery
+- **Subspecialties:** Spinal Neurosurgery
+- **Hospital Affiliations:**
+  - Baylor Scott & White Medical Center
+  - St. David's Round Rock Medical Center
+  - Methodist Hospital Hill Country ([health.usnews.com](https://health.usnews.com/doctors/carl-lauryssen-877844?utm_source=openai))
+- **Practice Locations:**
+  - Central Texas Brain & Spine, 2217 Park Bend Drive, Suite 400, Austin, TX 78758
+  - Central Texas Brain & Spine - Hutto, 4801 Gattis School Rd, Suite 100, Hutto, TX 78634
+  - Central Texas Brain & Spine - Leander, 505 St. David's Loop, Suite 315, Leander, TX 78641
+  - Central Texas Brain & Spine - Fredericksburg, 205 W. Windcrest, Suite 230, Fredericksburg, TX 78624
+  - Central Texas Brain & Spine - Round Rock, 7200 Wyoming Springs Dr, Suite 1550, Round Rock, TX 78681 ([adrspine.com](https://www.adrspine.com/doctor/dr-carl-lauryssen?utm_source=openai))
+- **Telemedicine Availability:** Not specified
+
+**Professional and Administrative Roles**
+
+- **Current Positions:**
+  - Neurosurgeon at Baylor Scott & White Medical Center
+  - Practicing at Central Texas Brain & Spine
+- **Previous Roles:**
+  - Director of Neurosurgery at St. David's Round Rock Medical Center
+  - Co-Director of Spine Research and Development at Olympia Medical Center
+  - Faculty Member at Washington University School of Medicine, St. Louis
+  - Director of Advanced Neurosurgical Spine Program at Barnes-Jewish Hospital
+  - Director of Research and Education at Cedars-Sinai Institute for Spinal Disorders ([adrspine.com](https://www.adrspine.com/doctor/dr-carl-lauryssen?utm_source=openai))
+
+**Industry and Corporate Affiliations**
+
+- **Medical Device Companies:** Holds several patents and inventions used in spinal surgery worldwide
+- **Pharmaceutical Companies:** None available
+- **Healthcare Startups:** None available
+- **Other Relevant Companies:** Served on the boards of companies researching materials to reduce brain injuries in sports-related concussions ([adrspine.com](https://www.adrspine.com/doctor/dr-carl-lauryssen?utm_source=openai))
+
+**Academic and Teaching Affiliations**
+
+- Faculty Member at Washington University School of Medicine, St. Louis
+- Director of Research and Education at Cedars-Sinai Institute for Spinal Disorders ([adrspine.com](https://www.adrspine.com/doctor/dr-carl-lauryssen?utm_source=openai))
+
+**Research Activities and Publications**
+
+- **Recent or Prominent Studies:**
+  - First neurosurgeon to inject stem cells into a human spinal cord as part of an FDA trial
+- **Areas of Research Interest:**
+  - Minimally invasive spine surgery
+  - Motion preservation
+  - Stem cell research
+- **Notable Publications:**
+  - "Evaluation of Decompression and Interlaminar Stabilization Compared with Decompression and Fusion for the Treatment of Lumbar Spinal Stenosis: 5-year Follow-up of a Prospective, Randomized, Controlled Trial"
+  - "Risk factors for surgical site infection in spinal surgery"
+  - "Effects of decreasing endotracheal tube cuff pressures during neck retraction for anterior cervical spine surgery" ([doximity.com](https://www.doximity.com/pub/carl-lauryssen-md?utm_source=openai))
+
+**Professional Memberships and Societies**
+
+- Fellow of the American Association of Neurological Surgeons (FAANS) ([doximity.com](https://www.doximity.com/pub/carl-lauryssen-md?utm_source=openai))
+
+**Speaking Engagements and Conferences**
+
+- Invited by the President of Botswana to perform the first spinal neurosurgery procedures at Sir Ketumile Masire Teaching Hospital ([adrspine.com](https://www.adrspine.com/doctor/dr-carl-lauryssen?utm_source=openai))
+
+**Charitable Affiliations and Volunteer Work**
+
+- Started and led a neurosurgery program in Kenya ([adrspine.com](https://www.adrspine.com/doctor/dr-carl-lauryssen?utm_source=openai))
+
+**Community Involvement or Service**
+
+- None available
+
+**Awards, Honors, and Recognitions**
+
+- Twice awarded the Young Investigator Award from the American Association of Neurological Surgeons for research on cervical disorders and stem cell work ([beckersspine.com](https://www.beckersspine.com/spine-leaders/23660-spine-surgeon-leader-to-know-dr-carl-lauryssen-of-olympia-medical-center.html?utm_source=openai))
+
+**Board Memberships**
+
+- Served on the boards of companies researching materials to reduce brain injuries in sports-related concussions ([adrspine.com](https://www.adrspine.com/doctor/dr-carl-lauryssen?utm_source=openai))
+
+**Advisory Roles**
+
+- None available
+
+{
+  "name": "Dr. Carl Lauryssen",
+  "npi": "1568410629",
+  "specialty": "Neurological Surgery",
+  "subspecialties": ["Spinal Neurosurgery"],
+  "education": [
+    {
+      "degree": "MD",
+      "institution": "University of Cape Town Faculty of Medicine",
+      "year": 1988
+    },
+    {
+      "residency": "Neurosurgery",
+      "institution": "University of Calgary, Alberta, Canada",
+      "years": "1991–1995"
+    },
+    {
+      "fellowship": "Spinal Neurosurgery",
+      "institution": "University of Alabama at Birmingham School of Medicine"
+    }
+  ],
+  "boardCertifications": [
+    "American Board of Neurological Surgery",
+    "Royal College of Physicians and Surgeons of Canada"
+  ],
+  "licenses": [
+    {
+      "state": "California",
+      "licenseNumber": "C50914"
+    },
+    {
+      "state": "Texas",
+      "licenseNumber": "Active through 2026"
+    },
+    {
+      "state": "Alabama",
+      "licenseNumber": "Active through 1996"
+    }
+  ],
+  "hospitalAffiliations": [
+    "Baylor Scott & White Medical Center",
+    "St. David's Round Rock Medical Center",
+    "Methodist Hospital Hill Country"
+  ],
+  "practiceLocations": [
+    {
+      "name": "Central Texas Brain & Spine",
+      "address": "2217 Park Bend Drive, Suite 400, Austin, TX 78758"
+    },
+    {
+      "name": "Central Texas Brain & Spine - Hutto",
+      "address": "4801 Gattis School Rd, Suite 100, Hutto, TX 78634"
+    },
+    {
+      "name": "Central Texas Brain & Spine - Leander",
+      "address": "505 St. David's Loop, Suite 315, Leander, TX 78641"
+    },
+    {
+      "name": "Central Texas Brain & Spine - Fredericksburg",
+      "address": "205 W. Windcrest, Suite 230, Fredericksburg, TX 78624"
+    },
+    {
+      "name": "Central Texas Brain & Spine - Round Rock",
+      "address": "7200 Wyoming Springs Dr, Suite 1550, Round Rock, TX 78681"
+    }
+  ],
+  "telemedicineAvailability": false,
+  "professionalRoles": {
+    "current": [
+      "Neurosurgeon at Baylor Scott & White Medical Center",
+      "Practicing at Central Texas Brain & Spine"
+    ],
+    "previous": [
+      "Director of Neurosurgery at St. David's Round Rock Medical Center",
+      "Co-Director of Spine Research and Development at Olympia Medical Center",
+      "Faculty Member at Washington University School of Medicine, St. Louis",
+      "Director of Advanced Neurosurgical Spine Program at Barnes-Jewish Hospital",
+      "Director of Research and Education at Cedars-Sinai Institute for Spinal Disorders"
+    ]
+  },
+  "industryCorporateAffiliations": [
+    {
+      "type": "Medical Device Companies",
+      "details": "Holds several patents and inventions used in spinal surgery worldwide"
+    },
+    {
+      "type": "Other Relevant Companies",
+      "details": "Served on the boards of companies researching materials to reduce brain injuries in sports-related concussions"
+    }
+  ],
+  "academicAffiliations": [
+    "Faculty Member at Washington University School of Medicine, St. Louis",
+    "Director of Research and Education at Cedars-Sinai Institute for Spinal Disorders"
+  ],
+  "researchActivities": {
+    "recentStudies": [
+      "First neurosurgeon to inject stem cells into a human spinal cord as part of an FDA trial"
+    ],
+    "researchInterests": [
+      "Minimally invasive spine surgery",
+      "Motion preservation",
+      "Stem cell research"
+    ],
+    "notablePublications": [
+      {
+        "title": "Evaluation of Decompression and Interlaminar Stabilization Compared with Decompression and Fusion for the Treatment of Lumbar Spinal Stenosis: 5-year Follow-up of a Prospective, Randomized, Controlled Trial"
+      },
+      {
+        "title": "Risk factors for surgical site infection in spinal surgery"
+      },
+      {
+        "title": "Effects of decreasing endotracheal tube cuff pressures during neck retraction for anterior cervical spine surgery"
+      }
+    ]
+  },
+  "professionalMemberships": [
+    "Fellow of the American Association of Neurological Surgeons (FAANS)"
+  ],
+  "speakingEngagements": [
+    "Invited by the President of Botswana to perform the first spinal neurosurgery procedures at Sir Ketumile Masire Teaching Hospital"
+  ],
+  "charitableAffiliations": [
+    "Started and led a neurosurgery program in Kenya"
+  ],
+  "communityInvolvement": [],
+  "awardsHonorsRecognitions": [
+    "Twice awarded the Young Investigator Award from the American Association of Neurological Surgeons for research on cervical disorders and stem cell work"
+  ],
+  "boardMemberships": [
+    "Served on the boards of companies researching materials to reduce brain injuries in sports-related concussions"
+  ],
+  "advisoryRoles": []
+}
