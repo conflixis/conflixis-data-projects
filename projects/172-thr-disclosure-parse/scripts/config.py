@@ -30,26 +30,6 @@ MEMBERS_TABLE = 'firestore_export.member_shards_raw_latest_parsed'
 GROUP_ID = 'gcO9AHYlNSzFeGTRSFRa'  # Texas Health Resources group
 CAMPAIGN_ID = 'qyH2ggzVV0WLkuRfem7S'  # 2025 Texas Health COI Survey
 
-# Risk Tier Thresholds
-RISK_THRESHOLDS = {
-    'low': 5000,
-    'moderate': 25000,
-    'high': 100000
-}
-
-def get_risk_tier(amount):
-    """Calculate risk tier based on financial amount"""
-    if amount <= 0:
-        return 'none'
-    elif amount <= RISK_THRESHOLDS['low']:
-        return 'low'
-    elif amount <= RISK_THRESHOLDS['moderate']:
-        return 'moderate'
-    elif amount <= RISK_THRESHOLDS['high']:
-        return 'high'
-    else:
-        return 'critical'
-
 # Export Configuration
 EXPORT_FORMATS = ['csv', 'parquet', 'json', 'excel']  # Formats to export
 DATE_FORMAT = '%Y-%m-%d'

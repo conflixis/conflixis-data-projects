@@ -69,8 +69,7 @@ This will:
 1. Fetch member data from BigQuery
 2. Fetch disclosure data from BigQuery
 3. Join the datasets on provider names
-4. Calculate risk metrics
-5. Export to CSV (and optionally Parquet/JSON)
+4. Export to CSV (and optionally Parquet/JSON/Excel)
 
 ### Run Individual Components
 
@@ -88,7 +87,6 @@ All outputs are saved in `data/output/` directory:
 
 - **Primary Output**: `thr_disclosures_[timestamp].csv`
   - Human-readable CSV with all disclosure information
-  - Includes calculated risk tiers and scores
   
 - **Additional Formats** (if configured):
   - `thr_disclosures_[timestamp].parquet` - High-performance binary format
@@ -110,8 +108,6 @@ All outputs are saved in `data/output/` directory:
 | `category_label` | Category of disclosure |
 | `financial_amount` | Dollar amount of financial interest |
 | `compensation_type` | Type of compensation |
-| `risk_tier` | Calculated risk level (none/low/moderate/high/critical) |
-| `risk_score` | Numerical risk score (0-100) |
 | `disclosure_date` | Date of disclosure |
 | `relationship_start_date` | When relationship began |
 | `relationship_ongoing` | Whether relationship is active |
@@ -121,15 +117,6 @@ All outputs are saved in `data/output/` directory:
 | `disputed` | Whether disclosure is disputed |
 | `notes` | Additional notes |
 
-## Risk Tier Calculation
-
-Risk tiers are calculated based on financial amounts:
-
-- **None**: $0
-- **Low**: ≤ $5,000
-- **Moderate**: ≤ $25,000
-- **High**: ≤ $100,000
-- **Critical**: > $100,000
 
 ## Data Processing Pipeline
 
@@ -148,12 +135,7 @@ Risk tiers are calculated based on financial amounts:
    - Add NPI, job title, department from member data
    - Handle unmatched records gracefully
 
-4. **Calculate Metrics**
-   - Assign risk tiers based on financial amounts
-   - Calculate risk scores (0-100 scale)
-   - Add review dates
-
-5. **Export Results**
+4. **Export Results**
    - Primary CSV format for analysis
    - Optional Parquet for performance
    - Optional JSON with metadata
@@ -164,7 +146,6 @@ The script provides detailed statistics including:
 - Total records processed
 - Provider counts and match rates
 - Financial amount distributions
-- Risk tier distributions
 - Category breakdowns
 
 ## Troubleshooting

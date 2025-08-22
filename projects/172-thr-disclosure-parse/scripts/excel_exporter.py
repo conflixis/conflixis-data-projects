@@ -16,11 +16,6 @@ COLORS = {
     'header_bg': '#0c343a',  # Conflixis green
     'header_text': '#FFFFFF',
     'subheader_bg': '#eab96d',  # Conflixis gold
-    'risk_none': '#E8E8E8',
-    'risk_low': '#90EE90',
-    'risk_moderate': '#FFD700',
-    'risk_high': '#FFA500',
-    'risk_critical': '#FF6B6B',
     'alternate_row': '#F5F5F5'
 }
 
@@ -39,8 +34,6 @@ COLUMN_RENAMES = {
     'entity_name': 'Entity/Company',
     'interest_type': 'Interest Type',
     'financial_amount': 'Amount (USD)',
-    'risk_tier': 'Risk Level',
-    'risk_score': 'Risk Score',
     'compensation_type': 'Compensation Type',
     'compensation_received_by': 'Received By',
     'compensation_received_by_self': 'Self Received',
@@ -113,7 +106,7 @@ def create_summary_sheet(df):
         'Total Financial Amount',
         'Average Financial Amount',
         'Providers with NPI',
-        'Disclosures with Risk'
+        'Disclosures with Financial Amount'
     ])
     
     summary_data['Value'].extend([
@@ -122,7 +115,7 @@ def create_summary_sheet(df):
         format_currency(df['financial_amount'].sum()),
         format_currency(df['financial_amount'].mean()),
         f'{(df["provider_npi"].notna()).sum():,}',
-        f'{(df["risk_tier"] != "none").sum():,}'
+        f'{(df["financial_amount"] > 0).sum():,}'
     ])
     
     summary_df = pd.DataFrame(summary_data)
@@ -135,16 +128,13 @@ def create_summary_sheet(df):
     }).reset_index()
     category_summary.columns = ['Category', 'Count', 'Total Amount', 'Unique Providers']
     
-    # Risk distribution
-    risk_summary = df['risk_tier'].value_counts().reset_index()
-    risk_summary.columns = ['Risk Level', 'Count']
     
     # Top 10 by amount
     top_amounts = df.nlargest(10, 'financial_amount')[
-        ['provider_name', 'entity_name', 'financial_amount', 'risk_tier']
+        ['provider_name', 'entity_name', 'financial_amount']
     ].copy()
     
-    return summary_df, category_summary, risk_summary, top_amounts
+    return summary_df, category_summary, top_amounts
 
 
 def filter_columns_for_category(df, category):
@@ -165,12 +155,12 @@ def filter_columns_for_category(df, category):
         ],
         'Financial & Investment Interests': base_columns + [
             'relationship_type', 'person_with_interest', 'entity_name',
-            'interest_type', 'financial_amount', 'risk_tier', 'risk_score',
+            'interest_type', 'financial_amount',
             'compensation_type', 'compensation_received_by', 'compensation_received_by_self',
             'service_provided', 'relationship_start_date', 'relationship_end_date'
         ],
         'Open Payments (CMS Imports)': base_columns + [
-            'entity_name', 'financial_amount', 'risk_tier', 'risk_score',
+            'entity_name', 'financial_amount',
             'disclosure_timeframe_start', 'disclosure_timeframe_end'
         ],
         'Political, Community, and Advocacy Activities': base_columns + [
@@ -222,17 +212,9 @@ def export_to_excel(df, transactions_df=None, output_path=None):
         currency_format = workbook.add_format({'num_format': '$#,##0.00'})
         date_format = workbook.add_format({'num_format': 'mm/dd/yyyy'})
         
-        risk_formats = {
-            'none': workbook.add_format({'bg_color': COLORS['risk_none']}),
-            'low': workbook.add_format({'bg_color': COLORS['risk_low']}),
-            'moderate': workbook.add_format({'bg_color': COLORS['risk_moderate']}),
-            'high': workbook.add_format({'bg_color': COLORS['risk_high']}),
-            'critical': workbook.add_format({'bg_color': COLORS['risk_critical']})
-        }
-        
         # 1. Executive Summary Sheet
         logger.info("Creating Executive Summary sheet...")
-        summary_df, category_summary, risk_summary, top_amounts = create_summary_sheet(df)
+        summary_df, category_summary, top_amounts = create_summary_sheet(df)
         
         summary_df.to_excel(writer, sheet_name='Executive Summary', index=False, startrow=1)
         worksheet = writer.sheets['Executive Summary']
@@ -243,14 +225,10 @@ def export_to_excel(df, transactions_df=None, output_path=None):
         category_summary.to_excel(writer, sheet_name='Executive Summary', 
                                  index=False, startrow=len(summary_df) + 4)
         
-        # Write risk summary
-        risk_summary.to_excel(writer, sheet_name='Executive Summary',
-                            index=False, startrow=len(summary_df) + len(category_summary) + 7)
-        
         # Write top amounts
         top_amounts['financial_amount'] = top_amounts['financial_amount'].apply(format_currency)
         top_amounts.to_excel(writer, sheet_name='Executive Summary',
-                            index=False, startrow=len(summary_df) + len(category_summary) + len(risk_summary) + 10)
+                            index=False, startrow=len(summary_df) + len(category_summary) + 7)
         
         # 2. All Disclosures Sheet
         logger.info("Creating All Disclosures sheet...")

@@ -381,28 +381,6 @@ def join_with_member_data(disclosure_df, member_df):
     return enriched_df
 
 
-def calculate_risk_metrics(df):
-    """
-    Calculate risk tiers and scores based on financial amounts.
-    """
-    
-    logger.info("Calculating risk metrics...")
-    
-    # Calculate risk tier
-    df['risk_tier'] = df['financial_amount'].apply(config.get_risk_tier)
-    
-    # Calculate risk score (0-100 scale)
-    df['risk_score'] = df['financial_amount'].apply(
-        lambda x: min(100, int((x / 1000) if pd.notna(x) and x > 0 else 0))
-    )
-    
-    # Add review dates
-    today = datetime.now().strftime(config.DATE_FORMAT)
-    df['last_review_date'] = df['review_date'].fillna(today)
-    df['next_review_date'] = '2025-12-31'  # End of year review
-    
-    return df
-
 
 def clean_and_format_data(df):
     """
@@ -475,8 +453,6 @@ def clean_and_format_data(df):
         
         # 4. Financial Information (if applicable)
         'financial_amount',
-        'risk_tier',
-        'risk_score',
         'compensation_type',
         'compensation_received_by',
         'compensation_received_by_self',
@@ -508,8 +484,7 @@ def clean_and_format_data(df):
         'status',
         'review_status',
         'reviewer',
-        'last_review_date',
-        'next_review_date',
+        'review_date',
         'disputed',
         
         # 10. Additional Metadata
@@ -597,7 +572,6 @@ def export_data(df):
                 'record_count': len(df),
                 'group_id': config.GROUP_ID,
                 'campaign_id': config.CAMPAIGN_ID,
-                'risk_distribution': df['risk_tier'].value_counts().to_dict(),
                 'total_financial_amount': float(df['financial_amount'].sum()),
                 'average_financial_amount': float(df['financial_amount'].mean())
             },
@@ -634,15 +608,6 @@ def print_statistics(df):
     for key, value in stats.items():
         logger.info(f"{key}: {value}")
     
-    # Risk distribution
-    logger.info("\nRisk Distribution:")
-    risk_counts = df['risk_tier'].value_counts()
-    for tier in ['none', 'low', 'moderate', 'high', 'critical']:
-        if tier in risk_counts.index:
-            count = risk_counts[tier]
-            pct = count / len(df) * 100
-            logger.info(f"  {tier.capitalize()}: {count} ({pct:.1f}%)")
-    
     # Category distribution
     logger.info("\nCategory Distribution:")
     for category, count in df['category_label'].value_counts().head(5).items():
@@ -650,9 +615,9 @@ def print_statistics(df):
     
     # Sample records
     logger.info("\nSample Records:")
-    sample = df.nlargest(5, 'financial_amount')[['provider_name', 'entity_name', 'financial_amount', 'risk_tier']]
+    sample = df.nlargest(5, 'financial_amount')[['provider_name', 'entity_name', 'financial_amount']]
     for _, row in sample.iterrows():
-        logger.info(f"  {row['provider_name']} - {row['entity_name']}: ${row['financial_amount']:,.2f} ({row['risk_tier']})")
+        logger.info(f"  {row['provider_name']} - {row['entity_name']}: ${row['financial_amount']:,.2f}")
 
 
 def main():
@@ -687,16 +652,12 @@ def main():
         logger.info("\nStep 4: Joining with member data...")
         enriched_df = join_with_member_data(disclosure_df, member_df)
         
-        # Step 5: Calculate risk metrics
-        logger.info("\nStep 5: Calculating risk metrics...")
-        enriched_df = calculate_risk_metrics(enriched_df)
-        
-        # Step 6: Clean and format
-        logger.info("\nStep 6: Cleaning and formatting data...")
+        # Step 5: Clean and format
+        logger.info("\nStep 5: Cleaning and formatting data...")
         final_df = clean_and_format_data(enriched_df)
         
-        # Step 7: Export data
-        logger.info("\nStep 7: Exporting data...")
+        # Step 6: Export data
+        logger.info("\nStep 6: Exporting data...")
         output_path = export_data(final_df)
         
         # Step 8: Print statistics

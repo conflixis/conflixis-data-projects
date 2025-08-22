@@ -130,19 +130,6 @@ The extraction script generates data in multiple formats:
 | `service_provided` | string | Services provided for compensation | "Medical consulting" |
 | `is_research` | boolean | Research-related payment | false |
 
-### Risk Assessment Fields
-| Field Name | Data Type | Description | Example |
-|------------|-----------|-------------|---------|
-| `risk_tier` | string | Risk level based on amount | "moderate" |
-| `risk_score` | integer | Risk score (0-100) | 45 |
-
-**Risk Tier Thresholds:**
-- None: $0
-- Low: $1 - $999
-- Moderate: $1,000 - $9,999
-- High: $10,000 - $99,999
-- Critical: $100,000+
-
 ---
 
 ## 3. POLITICAL, COMMUNITY, AND ADVOCACY ACTIVITIES
