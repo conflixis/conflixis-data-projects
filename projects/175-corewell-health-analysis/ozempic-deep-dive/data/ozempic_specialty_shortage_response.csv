@@ -1,0 +1,21 @@
+Primary_Specialty,period,payment_status,providers,total_prescriptions,total_patients,avg_rx_per_provider
+Endocrinology,Pre-Shortage,No Payments,12,3022.000000000,2302.000000000,251.833333333
+Endocrinology,Pre-Shortage,With Payments,41,25067.000000000,17587.000000000,611.390243902
+Endocrinology,Shortage Period,No Payments,18,5723.000000000,4318.000000000,317.944444444
+Endocrinology,Shortage Period,With Payments,43,56677.000000000,40273.000000000,1318.069767442
+Family Practice,Pre-Shortage,No Payments,268,7430.000000000,5671.000000000,27.723880597
+Family Practice,Pre-Shortage,With Payments,303,19285.000000000,14019.000000000,63.646864686
+Family Practice,Shortage Period,No Payments,540,54696.000000000,41647.000000000,101.288888889
+Family Practice,Shortage Period,With Payments,425,77537.000000000,57464.000000000,182.440000000
+Internal Medicine,Pre-Shortage,No Payments,164,4989.000000000,3715.000000000,30.420731707
+Internal Medicine,Pre-Shortage,With Payments,324,18047.000000000,13609.000000000,55.700617284
+Internal Medicine,Shortage Period,No Payments,405,30437.000000000,22805.000000000,75.153086420
+Internal Medicine,Shortage Period,With Payments,430,89522.000000000,65910.000000000,208.190697674
+Nurse - Nurse Practitioner,Pre-Shortage,No Payments,126,3074.000000000,2314.000000000,24.396825397
+Nurse - Nurse Practitioner,Pre-Shortage,With Payments,163,10974.000000000,8046.000000000,67.325153374
+Nurse - Nurse Practitioner,Shortage Period,No Payments,410,16906.000000000,13321.000000000,41.234146341
+Nurse - Nurse Practitioner,Shortage Period,With Payments,341,37814.000000000,28118.000000000,110.891495601
+Physician Assistant,Pre-Shortage,No Payments,103,2272.000000000,1768.000000000,22.058252427
+Physician Assistant,Pre-Shortage,With Payments,176,10232.000000000,7627.000000000,58.136363636
+Physician Assistant,Shortage Period,No Payments,269,15580.000000000,11854.000000000,57.918215613
+Physician Assistant,Shortage Period,With Payments,283,34093.000000000,25005.000000000,120.469964664
