@@ -1,0 +1,18 @@
+Corewell Health NPI Consolidation Summary
+============================================================
+
+Processing Date: 2025-08-26 16:36:12
+
+Files Processed:
+  - Corewell_BHSH.csv
+  - Corewell_Beaumont.csv
+  - Corewell_Health_South.csv
+  - Corewell_Health_West.csv
+
+Total Records: 28350
+Unique NPIs: 14175
+Duplicate NPIs Removed: 14175
+
+NPIs in Multiple Files: 14175
+
+============================================================

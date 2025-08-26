@@ -1,0 +1,2 @@
+unique_prescribers,unique_drugs,total_prescriptions,total_payments,total_charges,total_patients,avg_payment_per_claim,min_year,max_year
+13122,5537,177520680.000000000,15538951322.551545000,7464777669.959554000,154866698.000000000,170.728913691,2020.000000000,2024.000000000
