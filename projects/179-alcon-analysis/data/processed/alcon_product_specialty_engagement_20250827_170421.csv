@@ -1,0 +1,256 @@
+product,specialty,providers,payments,total_amount,specialty_rank,product_rank
+A.C.S (Alcon Closure System),Allopathic & Osteopathic Physicians|Ophthalmology,12,19,808.400000000,1,54
+"ACRYSOF, IQ RESTOR",Eye and Vision Services Providers|Optometrist,17,26,1404.900000000,1,44
+"ACRYSOF, IQ RESTOR",Allopathic & Osteopathic Physicians|Ophthalmology,13,30,1021.260000000,2,51
+ACTIVEFOCUS,Allopathic & Osteopathic Physicians|Ophthalmology,42,51,875.160000000,1,52
+ACTIVEFOCUS,Eye and Vision Services Providers|Optometrist,8,9,148.300000000,2,49
+AIR OPTIX,Eye and Vision Services Providers|Optometrist,1586,5341,1151665.950000000,1,5
+AIR OPTIX,Eye and Vision Services Providers|Optometrist|Corneal and Contact Management,54,230,38587.260000000,2,5
+AIR OPTIX,Allopathic & Osteopathic Physicians|Ophthalmology,38,78,21852.550000000,3,39
+AIR OPTIX,Eye and Vision Services Providers|Optometrist|Vision Therapy,5,7,2101.760000000,4,5
+AIR OPTIX Aqua,Eye and Vision Services Providers|Optometrist,32,472,147452.730000000,1,15
+ARGOS,Allopathic & Osteopathic Physicians|Ophthalmology,3698,11801,1164961.330000000,1,3
+ARGOS,Eye and Vision Services Providers|Optometrist,718,1299,60059.570000000,2,22
+ARGOS,Allopathic & Osteopathic Physicians|Ophthalmology|Cornea and External Diseases Specialist,74,167,14631.880000000,3,5
+ARGOS,Allopathic & Osteopathic Physicians|Ophthalmology|Retina Specialist,48,86,10738.480000000,4,6
+ARGOS,Allopathic & Osteopathic Physicians|Ophthalmology|Glaucoma Specialist,69,154,7411.370000000,5,10
+ARGOS,Allopathic & Osteopathic Physicians|Ophthalmology|Pediatric Ophthalmology and Strabismus Specialist,5,20,1645.450000000,6,3
+ARGOS,Allopathic & Osteopathic Physicians|Ophthalmology|Ophthalmic Plastic and Reconstructive Surgery,11,19,1424.030000000,7,3
+ARGOS,Allopathic & Osteopathic Physicians|Family Medicine,8,8,717.210000000,9,4
+ARGOS,Allopathic & Osteopathic Physicians|Ophthalmology|Neuro-ophthalmology,5,10,530.830000000,10,3
+"Accurus, 25+, Alcon",Allopathic & Osteopathic Physicians|Ophthalmology,17,17,350.040000000,1,56
+"Accurus, 25+, Alcon",Eye and Vision Services Providers|Optometrist,5,5,125.590000000,2,50
+AcrySof,Allopathic & Osteopathic Physicians|Ophthalmology,1590,3002,604678.150000000,1,12
+AcrySof,Allopathic & Osteopathic Physicians|Ophthalmology|Retina Specialist,24,43,15621.090000000,2,5
+AcrySof,Eye and Vision Services Providers|Optometrist,241,284,13098.710000000,3,31
+AcrySof,Allopathic & Osteopathic Physicians|Internal Medicine,31,63,4432.320000000,4,4
+AcrySof,Allopathic & Osteopathic Physicians|Ophthalmology|Cornea and External Diseases Specialist,22,41,3785.330000000,5,11
+AcrySof,Allopathic & Osteopathic Physicians|Ophthalmology|Ophthalmic Plastic and Reconstructive Surgery,8,14,985.030000000,7,5
+AcrySof IQ PanOptix,Allopathic & Osteopathic Physicians|Ophthalmology,3591,8837,1088585.830000000,1,4
+AcrySof IQ PanOptix,Eye and Vision Services Providers|Optometrist,1356,1844,110160.680000000,2,17
+AcrySof IQ PanOptix,Allopathic & Osteopathic Physicians|Ophthalmology|Cornea and External Diseases Specialist,41,101,16456.640000000,3,4
+AcrySof IQ PanOptix,Allopathic & Osteopathic Physicians|Ophthalmology|Glaucoma Specialist,62,116,5030.930000000,4,12
+AcrySof IQ PanOptix,Allopathic & Osteopathic Physicians|Ophthalmology|Retina Specialist,52,79,4547.250000000,5,10
+AcrySof IQ PanOptix,Allopathic & Osteopathic Physicians|General Practice,13,19,1193.560000000,8,3
+AcrySof IQ PanOptix,Allopathic & Osteopathic Physicians|Ophthalmology|Pediatric Ophthalmology and Strabismus Specialist,7,8,413.830000000,11,5
+AcrySof IQ PanOptix UV IOL,Allopathic & Osteopathic Physicians|Ophthalmology,1760,3460,816485.210000000,1,9
+AcrySof IQ PanOptix UV IOL,Eye and Vision Services Providers|Optometrist,562,711,42609.790000000,2,27
+AcrySof IQ PanOptix UV IOL,Allopathic & Osteopathic Physicians|Ophthalmology|Cornea and External Diseases Specialist,32,77,40768.190000000,3,2
+AcrySof IQ PanOptix UV IOL,Allopathic & Osteopathic Physicians|Ophthalmology|Glaucoma Specialist,27,49,3219.720000000,4,13
+AcrySof IQ PanOptix UV IOL,Eye and Vision Services Providers|Optometrist|Corneal and Contact Management,17,18,1248.540000000,5,17
+AcrySof IQ PanOptix UV IOL,Allopathic & Osteopathic Physicians|Anesthesiology,7,9,304.650000000,9,5
+AcrySof IQ TORIC IOL,Allopathic & Osteopathic Physicians|Ophthalmology,25,25,4749.740000000,1,45
+AcrySof IQ VIVITY,Allopathic & Osteopathic Physicians|Ophthalmology,1192,1952,551593.140000000,1,13
+AcrySof IQ VIVITY,Eye and Vision Services Providers|Optometrist,286,355,22504.510000000,2,29
+AcrySof IQ VIVITY,Allopathic & Osteopathic Physicians|Ophthalmology|Cornea and External Diseases Specialist,31,49,7814.860000000,3,10
+AcrySof IQ VIVITY,Allopathic & Osteopathic Physicians|Ophthalmology|Glaucoma Specialist,33,43,1791.230000000,4,15
+AcrySof IQ VIVITY,Allopathic & Osteopathic Physicians|Ophthalmology|Retina Specialist,14,19,830.170000000,5,17
+AcrySof IQ VIVITY IOL,Allopathic & Osteopathic Physicians|Ophthalmology,2383,4336,700077.010000000,1,10
+AcrySof IQ VIVITY IOL,Eye and Vision Services Providers|Optometrist,781,938,59745.510000000,2,23
+AcrySof IQ VIVITY IOL,Allopathic & Osteopathic Physicians|Ophthalmology|Cornea and External Diseases Specialist,37,67,12880.050000000,3,6
+AcrySof IQ VIVITY IOL,Allopathic & Osteopathic Physicians|Ophthalmology|Glaucoma Specialist,39,70,11782.290000000,4,8
+AcrySof IQ VIVITY IOL,Allopathic & Osteopathic Physicians|Internal Medicine,26,49,4442.700000000,5,3
+AcrySof IQ VIVITY IOL,"Physician Assistants & Advanced Practice Nursing Providers|Nurse Anesthetist, Certified Registered",10,11,243.420000000,10,5
+AcrySof Toric Aspheric UV Absorbing IOL,Allopathic & Osteopathic Physicians|Ophthalmology,31,74,97900.420000000,1,23
+AcrySof UltraSert,Allopathic & Osteopathic Physicians|Ophthalmology,48,58,4455.240000000,1,46
+Acrysof Cachet,Allopathic & Osteopathic Physicians|Ophthalmology,7,9,283.980000000,1,57
+"Acrysof, IQ ReSTOR",Allopathic & Osteopathic Physicians|Ophthalmology,29,96,2901.020000000,1,48
+"Acrysof, IQ ReSTOR",Eye and Vision Services Providers|Optometrist,22,34,1499.630000000,2,43
+Air Optix Color,Eye and Vision Services Providers|Optometrist,125,211,180078.550000000,1,11
+Air Optix Color,Eye and Vision Services Providers|Optometrist|Corneal and Contact Management,5,7,4000.000000000,2,10
+Air Optix plus HydraGlyde,Eye and Vision Services Providers|Optometrist,80,84,16201.430000000,1,30
+Alcon Greishaber Finesse,Allopathic & Osteopathic Physicians|Ophthalmology,6,8,31482.200000000,1,35
+Argos 1.5 biometer,Allopathic & Osteopathic Physicians|Ophthalmology,29,36,708.160000000,1,55
+Blephex,Eye and Vision Services Providers|Optometrist,28,53,126241.360000000,1,16
+Blephex,Allopathic & Osteopathic Physicians|Ophthalmology,14,15,5278.580000000,2,44
+Capella Aberrometer,Allopathic & Osteopathic Physicians|Ophthalmology,12,44,44170.000000000,1,31
+Centurion,Allopathic & Osteopathic Physicians|Ophthalmology,3274,7170,866127.390000000,1,8
+Centurion,Allopathic & Osteopathic Physicians|Ophthalmology|Glaucoma Specialist,75,123,24532.160000000,2,5
+Centurion,Eye and Vision Services Providers|Optometrist,144,179,12097.120000000,3,33
+Centurion,Allopathic & Osteopathic Physicians|Ophthalmology|Retina Specialist,42,70,8627.580000000,4,8
+Centurion,Allopathic & Osteopathic Physicians|Ophthalmology|Cornea and External Diseases Specialist,72,150,8538.660000000,5,9
+Centurion,Allopathic & Osteopathic Physicians|Internal Medicine,62,120,4072.060000000,6,5
+Centurion,Allopathic & Osteopathic Physicians|Ophthalmology|Pediatric Ophthalmology and Strabismus Specialist,11,20,1613.210000000,7,4
+Centurion,"Physician Assistants & Advanced Practice Nursing Providers|Nurse Anesthetist, Certified Registered",35,53,1005.310000000,8,3
+Centurion,Allopathic & Osteopathic Physicians|Surgery,8,10,602.580000000,9,2
+Centurion,Allopathic & Osteopathic Physicians|Family Medicine,8,12,508.660000000,10,5
+Centurion,Allopathic & Osteopathic Physicians|Anesthesiology,12,19,445.030000000,12,3
+Centurion,Allopathic & Osteopathic Physicians|Ophthalmology|Neuro-ophthalmology,5,7,441.320000000,13,4
+Centurion,Allopathic & Osteopathic Physicians|General Practice,12,16,415.920000000,15,4
+Clareon,Allopathic & Osteopathic Physicians|Ophthalmology,7820,34438,3366883.390000000,1,2
+Clareon,Eye and Vision Services Providers|Optometrist,2759,4744,280572.910000000,2,8
+Clareon,Allopathic & Osteopathic Physicians|Ophthalmology|Cornea and External Diseases Specialist,175,794,185514.520000000,3,1
+Clareon,Allopathic & Osteopathic Physicians|Ophthalmology|Glaucoma Specialist,201,707,52236.020000000,4,3
+Clareon,Allopathic & Osteopathic Physicians|Ophthalmology|Retina Specialist,179,334,23642.120000000,5,4
+Clareon,Allopathic & Osteopathic Physicians|Internal Medicine,82,191,15097.500000000,6,1
+Clareon,Allopathic & Osteopathic Physicians|Ophthalmology|Ophthalmic Plastic and Reconstructive Surgery,59,106,6384.970000000,7,1
+Clareon,Allopathic & Osteopathic Physicians|Ophthalmology|Pediatric Ophthalmology and Strabismus Specialist,29,64,4275.890000000,9,1
+Clareon,Allopathic & Osteopathic Physicians|General Practice,19,45,3069.140000000,10,1
+Clareon,Allopathic & Osteopathic Physicians|Family Medicine,26,36,2940.990000000,11,1
+Clareon,"Physician Assistants & Advanced Practice Nursing Providers|Nurse Anesthetist, Certified Registered",53,89,2003.170000000,12,1
+Clareon,Allopathic & Osteopathic Physicians|Anesthesiology,38,54,1800.440000000,13,1
+Clareon,Allopathic & Osteopathic Physicians|Ophthalmology|Neuro-ophthalmology,16,28,1771.920000000,14,1
+Clareon,Allopathic & Osteopathic Physicians|Surgery,9,35,1701.050000000,15,1
+Clareon,Physician Assistants & Advanced Practice Nursing Providers|Physician Assistant,15,24,884.720000000,16,2
+Clareon,Allopathic & Osteopathic Physicians|Ophthalmology|Uveitis and Ocular Inflammatory Disease,8,11,847.850000000,17,1
+Clareon,Eye and Vision Services Providers|Optometrist|Pediatrics,5,11,772.800000000,18,5
+Clareon,Eye and Vision Services Providers|Optometrist|Low Vision Rehabilitation,8,11,549.070000000,20,4
+Clareon,Physician Assistants & Advanced Practice Nursing Providers|Nurse Practitioner|Family,10,16,539.030000000,21,1
+Clareon,Allopathic & Osteopathic Physicians|Pediatrics,9,9,478.870000000,22,1
+Clear Care,Eye and Vision Services Providers|Optometrist,90,132,2517.470000000,1,40
+Constellation,Allopathic & Osteopathic Physicians|Ophthalmology,674,1861,1044088.990000000,1,5
+Constellation,Allopathic & Osteopathic Physicians|Ophthalmology|Retina Specialist,244,752,408061.850000000,2,1
+Constellation,Eye and Vision Services Providers|Optometrist,27,29,1547.690000000,3,42
+Constellation,Allopathic & Osteopathic Physicians|Internal Medicine,5,7,867.220000000,4,11
+Constellation,Allopathic & Osteopathic Physicians|Ophthalmology|Glaucoma Specialist,7,8,636.050000000,5,17
+DAILIES,Eye and Vision Services Providers|Optometrist,11832,32970,1509037.680000000,1,4
+DAILIES,Eye and Vision Services Providers|Optometrist|Corneal and Contact Management,234,713,47231.130000000,2,4
+DAILIES,Allopathic & Osteopathic Physicians|Ophthalmology,316,453,21002.150000000,3,40
+DAILIES,Eye and Vision Services Providers|Optometrist|Vision Therapy,47,112,4286.560000000,4,3
+DAILIES,Eye and Vision Services Providers|Optometrist|Pediatrics,32,78,4108.980000000,5,3
+DAILIES,Eye and Vision Services Providers|Optometrist|Low Vision Rehabilitation,22,40,911.560000000,7,3
+DAILIES,Eye and Vision Services Providers|Optometrist|Occupational Vision,7,13,657.840000000,8,3
+DAILIES TOTAL1,Eye and Vision Services Providers|Optometrist,5507,12724,2047082.150000000,1,3
+DAILIES TOTAL1,Eye and Vision Services Providers|Optometrist|Corneal and Contact Management,107,330,66678.500000000,2,3
+DAILIES TOTAL1,Allopathic & Osteopathic Physicians|Ophthalmology,132,189,22852.260000000,3,38
+DAILIES TOTAL1,Eye and Vision Services Providers|Optometrist|Vision Therapy,22,97,2502.960000000,4,4
+DAILIES TOTAL1,Eye and Vision Services Providers|Optometrist|Pediatrics,11,25,1060.550000000,5,4
+DAILIES TOTAL1,Eye and Vision Services Providers|Optometrist|Low Vision Rehabilitation,11,17,378.480000000,6,5
+DAILIES TOTAL1 Multifocal,Eye and Vision Services Providers|Optometrist,288,501,156004.880000000,1,13
+DAILIES TOTAL1 Multifocal,Eye and Vision Services Providers|Optometrist|Corneal and Contact Management,7,26,6388.760000000,2,7
+Dailies Aqua Comfort Plus,Eye and Vision Services Providers|Optometrist,414,648,165456.780000000,1,12
+Dailies Aqua Comfort Plus,Eye and Vision Services Providers|Optometrist|Corneal and Contact Management,11,18,5228.920000000,2,8
+Dailies Aqua Comfort Plus,Allopathic & Osteopathic Physicians|Ophthalmology,8,10,1711.950000000,3,49
+Digital Health Suite,Allopathic & Osteopathic Physicians|Ophthalmology,5,16,54444.880000000,1,28
+Discovisc,Allopathic & Osteopathic Physicians|Ophthalmology,13,28,30515.750000000,1,36
+EYSUVIS,Eye and Vision Services Providers|Optometrist,1096,2666,81675.810000000,1,19
+EYSUVIS,Allopathic & Osteopathic Physicians|Ophthalmology,732,1482,63679.970000000,2,25
+EYSUVIS,Allopathic & Osteopathic Physicians|Ophthalmology|Glaucoma Specialist,23,39,1706.870000000,3,16
+EYSUVIS,Eye and Vision Services Providers|Optometrist|Corneal and Contact Management,25,66,1088.230000000,4,19
+EYSUVIS,Allopathic & Osteopathic Physicians|Ophthalmology|Cornea and External Diseases Specialist,20,29,551.850000000,5,19
+FINESSE SHARKSKIN,Allopathic & Osteopathic Physicians|Ophthalmology,15,29,31910.730000000,1,34
+FINESSE SHARKSKIN,Allopathic & Osteopathic Physicians|Ophthalmology|Retina Specialist,5,9,4845.640000000,2,9
+Freshlook,Eye and Vision Services Providers|Optometrist,128,161,5576.710000000,1,34
+Freshlook,Eye and Vision Services Providers|Optometrist|Corneal and Contact Management,7,12,207.130000000,2,24
+HYDRUS Microstent,Allopathic & Osteopathic Physicians|Ophthalmology,3842,13380,9082322.150000000,1,1
+HYDRUS Microstent,Allopathic & Osteopathic Physicians|Ophthalmology|Glaucoma Specialist,199,1249,454838.270000000,2,1
+HYDRUS Microstent,Eye and Vision Services Providers|Optometrist,1437,2226,288274.910000000,3,7
+HYDRUS Microstent,Allopathic & Osteopathic Physicians|Ophthalmology|Cornea and External Diseases Specialist,58,148,24312.400000000,4,3
+HYDRUS Microstent,Allopathic & Osteopathic Physicians|Ophthalmology|Retina Specialist,52,92,10526.380000000,5,7
+HYDRUS Microstent,Allopathic & Osteopathic Physicians|Internal Medicine,35,71,5368.580000000,6,2
+HYDRUS Microstent,Allopathic & Osteopathic Physicians|Ophthalmology|Pediatric Ophthalmology and Strabismus Specialist,14,28,2386.260000000,7,2
+HYDRUS Microstent,Allopathic & Osteopathic Physicians|Ophthalmology|Ophthalmic Plastic and Reconstructive Surgery,24,27,1873.210000000,9,2
+HYDRUS Microstent,Allopathic & Osteopathic Physicians|Family Medicine,13,19,1533.610000000,10,2
+HYDRUS Microstent,Allopathic & Osteopathic Physicians|General Practice,6,14,1209.230000000,11,2
+HYDRUS Microstent,"Physician Assistants & Advanced Practice Nursing Providers|Nurse Anesthetist, Certified Registered",48,62,1206.790000000,12,2
+HYDRUS Microstent,Allopathic & Osteopathic Physicians|Ophthalmology|Neuro-ophthalmology,10,15,896.740000000,13,2
+HYDRUS Microstent,Allopathic & Osteopathic Physicians|Surgery,7,9,545.220000000,14,3
+HYDRUS Microstent,Allopathic & Osteopathic Physicians|Anesthesiology,13,19,362.420000000,15,4
+ILUX,Eye and Vision Services Providers|Optometrist,1840,3322,551628.160000000,1,6
+ILUX,Allopathic & Osteopathic Physicians|Ophthalmology,657,1184,300938.640000000,2,17
+ILUX,Eye and Vision Services Providers|Optometrist|Corneal and Contact Management,61,114,23805.290000000,3,6
+ILUX,Allopathic & Osteopathic Physicians|Ophthalmology|Glaucoma Specialist,6,7,7452.630000000,4,9
+ILUX,Allopathic & Osteopathic Physicians|Ophthalmology|Cornea and External Diseases Specialist,10,21,649.260000000,5,18
+LenSx,Allopathic & Osteopathic Physicians|Ophthalmology,1007,2513,944814.690000000,1,6
+LenSx,Allopathic & Osteopathic Physicians|Ophthalmology|Cornea and External Diseases Specialist,17,27,10446.850000000,2,8
+LenSx,Allopathic & Osteopathic Physicians|Ophthalmology|Glaucoma Specialist,16,26,5662.340000000,3,11
+LenSx,Eye and Vision Services Providers|Optometrist,58,72,4036.170000000,4,35
+LenSx,Allopathic & Osteopathic Physicians|Internal Medicine,6,11,2326.880000000,5,6
+LenSx,Allopathic & Osteopathic Physicians|Otolaryngology,6,6,146.910000000,9,1
+Luxor,Allopathic & Osteopathic Physicians|Ophthalmology,599,886,211742.960000000,1,20
+Luxor,Allopathic & Osteopathic Physicians|Ophthalmology|Retina Specialist,22,63,166255.240000000,2,3
+Luxor,Eye and Vision Services Providers|Optometrist,31,33,2453.760000000,3,41
+Luxor,Allopathic & Osteopathic Physicians|Ophthalmology|Cornea and External Diseases Specialist,16,23,897.940000000,4,16
+Luxor,Allopathic & Osteopathic Physicians|Ophthalmology|Ophthalmic Plastic and Reconstructive Surgery,5,5,653.790000000,5,9
+MARLO,Eye and Vision Services Providers|Optometrist,1885,2658,50520.170000000,1,25
+MARLO,Allopathic & Osteopathic Physicians|Ophthalmology,37,42,18225.310000000,2,41
+MARLO,Eye and Vision Services Providers|Optometrist|Corneal and Contact Management,43,58,1057.760000000,3,20
+MARLO,Eye and Vision Services Providers|Optometrist|Pediatrics,11,15,304.660000000,4,6
+MARLO,Eye and Vision Services Providers|Optometrist|Vision Therapy,12,14,216.610000000,5,10
+NGENUITY,Allopathic & Osteopathic Physicians|Ophthalmology,1109,2543,882783.490000000,1,7
+NGENUITY,Allopathic & Osteopathic Physicians|Ophthalmology|Retina Specialist,116,338,203296.360000000,2,2
+NGENUITY,Allopathic & Osteopathic Physicians|Ophthalmology|Glaucoma Specialist,15,33,14584.800000000,3,7
+NGENUITY,Eye and Vision Services Providers|Optometrist,39,46,3261.480000000,4,37
+NGENUITY,Allopathic & Osteopathic Physicians|Ophthalmology|Cornea and External Diseases Specialist,10,12,2089.150000000,5,14
+NGENUITY,"Physician Assistants & Advanced Practice Nursing Providers|Nurse Anesthetist, Certified Registered",24,43,871.500000000,7,4
+NGENUITY,Allopathic & Osteopathic Physicians|Family Medicine,6,6,852.210000000,8,3
+NGENUITY,Allopathic & Osteopathic Physicians|Anesthesiology,5,8,473.590000000,9,2
+ORA,Allopathic & Osteopathic Physicians|Ophthalmology,514,906,177217.080000000,1,22
+ORA,Eye and Vision Services Providers|Optometrist,58,64,3002.240000000,2,39
+ORA,Allopathic & Osteopathic Physicians|Ophthalmology|Cornea and External Diseases Specialist,7,8,232.620000000,3,20
+ORA,Allopathic & Osteopathic Physicians|Ophthalmology|Glaucoma Specialist,5,6,205.420000000,4,20
+ORA System VerifEye,Allopathic & Osteopathic Physicians|Ophthalmology,266,385,43985.600000000,1,32
+ORA System VerifEye,Eye and Vision Services Providers|Optometrist,12,16,462.980000000,2,47
+Opti-Free,Eye and Vision Services Providers|Optometrist,23,33,3544.350000000,1,36
+Pataday,Allopathic & Osteopathic Physicians|Ophthalmology,9,26,56432.440000000,1,27
+Pataday,Eye and Vision Services Providers|Optometrist,26,49,44893.900000000,2,26
+Precision 1,Eye and Vision Services Providers|Optometrist,16332,53982,2388422.510000000,1,2
+Precision 1,Eye and Vision Services Providers|Optometrist|Corneal and Contact Management,349,1263,71435.110000000,2,2
+Precision 1,Allopathic & Osteopathic Physicians|Ophthalmology,590,803,37566.430000000,3,33
+Precision 1,Eye and Vision Services Providers|Optometrist|Vision Therapy,69,280,7479.180000000,4,2
+Precision 1,Eye and Vision Services Providers|Optometrist|Pediatrics,45,147,5306.640000000,5,1
+Precision 1,Eye and Vision Services Providers|Optometrist|Low Vision Rehabilitation,24,63,1638.740000000,7,2
+Precision 1,Eye and Vision Services Providers|Optometrist|Occupational Vision,9,28,1104.870000000,8,1
+Precision 7,Eye and Vision Services Providers|Optometrist,2016,2759,271270.350000000,1,9
+Precision 7,Eye and Vision Services Providers|Optometrist|Corneal and Contact Management,43,49,2095.880000000,2,14
+Precision 7,Allopathic & Osteopathic Physicians|Ophthalmology,18,19,857.270000000,3,53
+Precision 7,Eye and Vision Services Providers|Optometrist|Vision Therapy,5,5,245.550000000,4,9
+ReSTOR,Allopathic & Osteopathic Physicians|Ophthalmology,126,153,8479.050000000,1,43
+ReSTOR,Allopathic & Osteopathic Physicians|Ophthalmology|Retina Specialist,9,9,1006.960000000,2,15
+ReSTOR,Eye and Vision Services Providers|Optometrist,12,13,511.000000000,3,46
+Rhopressa,Allopathic & Osteopathic Physicians|Ophthalmology,179,373,212887.350000000,1,19
+Rhopressa,Allopathic & Osteopathic Physicians|Ophthalmology|Glaucoma Specialist,14,58,40212.360000000,2,4
+Rhopressa,Eye and Vision Services Providers|Optometrist,142,196,37794.080000000,3,28
+Rhopressa,Allopathic & Osteopathic Physicians|Ophthalmology|Cornea and External Diseases Specialist,5,5,88.270000000,4,21
+Rocklatan,Allopathic & Osteopathic Physicians|Ophthalmology,3557,11860,608900.870000000,1,11
+Rocklatan,Eye and Vision Services Providers|Optometrist,2804,6462,214101.070000000,2,10
+Rocklatan,Allopathic & Osteopathic Physicians|Ophthalmology|Glaucoma Specialist,161,701,105453.550000000,3,2
+Rocklatan,Allopathic & Osteopathic Physicians|Ophthalmology|Cornea and External Diseases Specialist,57,146,3406.810000000,4,13
+Rocklatan,Allopathic & Osteopathic Physicians|Ophthalmology|Retina Specialist,66,136,3179.880000000,5,11
+Rocklatan,Physician Assistants & Advanced Practice Nursing Providers|Physician Assistant,17,71,1897.740000000,7,1
+Rocklatan,Physician Assistants & Advanced Practice Nursing Providers|Nurse Practitioner|Family,5,9,200.220000000,10,2
+SMART Suite,Allopathic & Osteopathic Physicians|Ophthalmology,26,44,46655.510000000,1,30
+Simbrinza,Allopathic & Osteopathic Physicians|Ophthalmology,2779,6512,244559.800000000,1,18
+Simbrinza,Eye and Vision Services Providers|Optometrist,1792,3240,85277.500000000,2,18
+Simbrinza,Allopathic & Osteopathic Physicians|Ophthalmology|Glaucoma Specialist,98,299,21318.170000000,3,6
+Simbrinza,Allopathic & Osteopathic Physicians|Ophthalmology|Retina Specialist,45,72,1920.060000000,4,13
+Simbrinza,Eye and Vision Services Providers|Optometrist|Corneal and Contact Management,32,48,1229.360000000,5,18
+Simbrinza,Allopathic & Osteopathic Physicians|Ophthalmology|Ophthalmic Plastic and Reconstructive Surgery,14,44,1128.060000000,7,4
+Simbrinza,Physician Assistants & Advanced Practice Nursing Providers|Physician Assistant,11,24,672.350000000,8,3
+Simbrinza,Physician Assistants & Advanced Practice Nursing Providers|Physician Assistant|Medical,5,7,149.490000000,10,1
+Systane,Allopathic & Osteopathic Physicians|Ophthalmology,40,94,184914.770000000,1,21
+Systane,Eye and Vision Services Providers|Optometrist,143,276,151050.310000000,2,14
+Systane Complete,Allopathic & Osteopathic Physicians|Ophthalmology,81,99,1409.110000000,1,50
+Systane Complete,Eye and Vision Services Providers|Optometrist,54,64,1186.670000000,2,45
+TOTAL30,Eye and Vision Services Providers|Optometrist,18397,62386,3857113.990000000,1,1
+TOTAL30,Eye and Vision Services Providers|Optometrist|Corneal and Contact Management,308,1176,173197.030000000,2,1
+TOTAL30,Allopathic & Osteopathic Physicians|Ophthalmology,568,892,29124.970000000,3,37
+TOTAL30,Eye and Vision Services Providers|Optometrist|Vision Therapy,67,214,7571.010000000,4,1
+TOTAL30,Eye and Vision Services Providers|Optometrist|Pediatrics,47,117,4948.670000000,5,2
+TOTAL30,Eye and Vision Services Providers|Optometrist|Low Vision Rehabilitation,28,89,2896.200000000,6,1
+TOTAL30,Eye and Vision Services Providers|Optometrist|Occupational Vision,7,18,799.350000000,7,2
+TOTAL30,Physician Assistants & Advanced Practice Nursing Providers|Physician Assistant,7,8,391.740000000,10,4
+TOTAL30,Physician Assistants & Advanced Practice Nursing Providers|Nurse Practitioner|Family,6,7,200.030000000,12,3
+UltraSert,Allopathic & Osteopathic Physicians|Ophthalmology,44,64,3127.790000000,1,47
+Verion,Allopathic & Osteopathic Physicians|Ophthalmology,149,230,50558.450000000,1,29
+Verion,Eye and Vision Services Providers|Optometrist,11,13,452.630000000,2,48
+Viscoat,Allopathic & Osteopathic Physicians|Ophthalmology,8,11,11445.000000000,1,42
+WaveLight EX500 Excimer Laser,Allopathic & Osteopathic Physicians|Ophthalmology,147,216,56472.560000000,1,26
+WaveLight EX500 Excimer Laser,Eye and Vision Services Providers|Optometrist,40,49,3003.380000000,2,38
+Wavelight,Allopathic & Osteopathic Physicians|Ophthalmology,335,771,84306.040000000,1,24
+Wavelight,Eye and Vision Services Providers|Optometrist,185,278,12190.250000000,2,32
+Wavelight,Allopathic & Osteopathic Physicians|Ophthalmology|Cornea and External Diseases Specialist,8,17,816.010000000,3,17
+Wavelight,Allopathic & Osteopathic Physicians|Ophthalmology|Retina Specialist,5,6,472.580000000,4,21
+Wavelight,Eye and Vision Services Providers|Optometrist|Corneal and Contact Management,7,10,179.770000000,5,25
+Wavelight Refractive Suite,Allopathic & Osteopathic Physicians|Ophthalmology,576,1635,544371.050000000,1,14
+Wavelight Refractive Suite,Eye and Vision Services Providers|Optometrist,582,945,65885.670000000,2,21
+Wavelight Refractive Suite,Allopathic & Osteopathic Physicians|Ophthalmology|Cornea and External Diseases Specialist,23,50,12714.860000000,3,7
+Wavelight Refractive Suite,Eye and Vision Services Providers|Optometrist|Corneal and Contact Management,12,20,1453.480000000,4,16
+rhopressa,Allopathic & Osteopathic Physicians|Ophthalmology,1578,2530,348778.710000000,1,16
+rhopressa,Eye and Vision Services Providers|Optometrist,833,1082,58419.400000000,2,24
+rhopressa,Allopathic & Osteopathic Physicians|Internal Medicine,10,11,314.990000000,3,17
+rhopressa,Physician Assistants & Advanced Practice Nursing Providers|Physician Assistant,9,16,309.210000000,4,6
+rocklatan,Allopathic & Osteopathic Physicians|Ophthalmology,2068,3608,405700.440000000,1,15
+rocklatan,Eye and Vision Services Providers|Optometrist,1092,1492,69921.180000000,2,20
+rocklatan,Allopathic & Osteopathic Physicians|Internal Medicine,8,9,351.120000000,3,15
+rocklatan,Physician Assistants & Advanced Practice Nursing Providers|Physician Assistant,5,11,314.290000000,4,5
