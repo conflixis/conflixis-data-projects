@@ -1,0 +1,2 @@
+unique_prescribers,unique_drugs,unique_manufacturers,total_prescriptions,total_payments,total_charges,total_patients,total_days_supply,avg_payment_per_prescription,min_year,max_year
+453924,69,11,15078321.000000000,2908981334.413960000,1471247941.997207000,12332860.000000000,476861694.000000000,230.201612590,2020.000000000,2024.000000000

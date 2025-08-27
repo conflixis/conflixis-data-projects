@@ -8,11 +8,11 @@ The scope of industry engagement with Corewell Health providers is substantial a
 
 ### Key Observations
 
-1. **Profound Correlation Patterns**: The data reveals that providers receiving industry payments demonstrate prescribing volumes that exceed their unpaid colleagues by factors ranging from 92x to 426x for specific medications. These correlations persist across therapeutic categories and payment types, suggesting a systematic relationship between financial engagement and clinical behavior.
+1. **Profound Correlation Patterns**: The data reveals that providers receiving drug-specific industry payments demonstrate prescribing volumes that exceed their unpaid colleagues by factors ranging from 79x to 401x for specific medications. These correlations persist across therapeutic categories and payment types, suggesting a systematic relationship between financial engagement and clinical behavior.
 
 2. **Extraordinary Return on Investment**: The analysis uncovers that pharmaceutical manufacturers achieve returns exceeding 400x per dollar invested in provider relationships for certain medications. This efficiency of influence suggests that even minimal financial relationships may significantly alter prescribing patterns.
 
-3. **Differential Provider Vulnerability**: Physician Assistants and Nurse Practitioners exhibit heightened susceptibility to payment influence, with PAs showing a 407.6% increase in prescribing volume when receiving any industry payments. This finding highlights potential vulnerabilities in the supervision and oversight structures for mid-level providers.
+3. **Differential Provider Vulnerability**: All provider types show significant susceptibility to payment influence, with Physicians showing the highest at 159.2% increase, followed by Nurse Practitioners at 113.3%, and Physician Assistants at 99.1% increase in prescribing volume when receiving industry payments. This finding challenges assumptions that seniority and training protect against influence.
 
 4. **Sustained Engagement Patterns**: The identification of 2,343 providers receiving consecutive annual payments throughout the five-year study period indicates the establishment of durable financial relationships that may compound influence over time.
 
@@ -41,13 +41,13 @@ The trajectory of industry payments over the analysis period reveals a deliberat
 
 | Year | Total Payments | Providers | Year-over-Year Growth |
 |------|---------------|-----------|----------------------|
-| 2020 | $8,954,534 | 104 | Baseline (Pandemic) |
-| 2021 | $16,418,286 | 289 | +83.3% |
-| 2022 | $18,997,418 | 276 | +15.7% |
-| 2023 | $20,354,891 | 320 | +7.1% |
-| 2024 | $22,148,119 | 415 | +8.8% |
+| 2020 | $8,954,534 | 3,405 | Baseline (Pandemic) |
+| 2021 | $16,418,286 | 5,632 | +83.3% |
+| 2022 | $18,997,418 | 6,678 | +15.7% |
+| 2023 | $20,354,891 | 7,463 | +7.1% |
+| 2024 | $22,148,119 | 8,026 | +8.8% |
 
-**Critical Observation**: The post-2020 surge in payments coincides with the introduction of several high-cost specialty medications and the expansion of existing drug indications. The steady year-over-year growth since 2021 suggests that manufacturers have identified Corewell Health as a strategic market for investment, with the provider count quadrupling from 104 to 415 recipients. This expansion pattern indicates a broadening of influence networks rather than deepening relationships with existing recipients alone.
+**Critical Observation**: The post-2020 surge in payments coincides with the introduction of several high-cost specialty medications and the expansion of existing drug indications. The steady year-over-year growth since 2021 suggests that manufacturers have identified Corewell Health as a strategic market for investment, with the provider count increasing 136% from 3,405 to 8,026 recipients. This expansion pattern indicates both a broadening of influence networks and deepening relationships across the health system.
 
 ### Payment Category Analysis: Mechanisms of Influence
 
@@ -109,23 +109,23 @@ The patterns identified cannot be explained by differences in patient population
 **Krystexxa (Pegloticase) - Severe Gout Treatment**
 - Providers WITH payments: $3,524,074 average prescription value
 - Providers WITHOUT payments: $8,271 average prescription value
-- **Influence Factor: 426x increased prescribing**
+- **Influence Factor: 401x increased prescribing**
 - Return on Investment: $4 generated per dollar of payments
 
-The Krystexxa findings represent the most extreme correlation identified in our analysis. This specialty biologic for severe gout carries a list price exceeding $5,000 per dose, with treatment courses often exceeding $100,000. The 426-fold difference in prescribing between paid and unpaid providers cannot be attributed to clinical factors alone. Severe tophaceous gout requiring Krystexxa is relatively rare, suggesting that payment relationships may be expanding the perceived patient population appropriate for this expensive therapy.
+The Krystexxa findings represent the most extreme correlation identified in our analysis. This specialty biologic for severe gout carries a list price exceeding $5,000 per dose, with treatment courses often exceeding $100,000. The 401-fold difference in prescribing between paid and unpaid providers cannot be attributed to clinical factors alone. Severe tophaceous gout requiring Krystexxa is relatively rare, suggesting that payment relationships may be expanding the perceived patient population appropriate for this expensive therapy.
 
 **Enbrel (Etanercept) - Autoimmune Conditions**
 - Providers WITH payments: $113,261,502 average prescription value
 - Providers WITHOUT payments: $518,787 average prescription value
-- **Influence Factor: 218x increased prescribing**
+- **Influence Factor: 197x increased prescribing**
 - Return on Investment: $99 generated per dollar of payments
 
-Enbrel, a TNF inhibitor with annual treatment costs approaching $84,000, shows the second-highest influence correlation. The 218-fold difference suggests that payment relationships may be driving preferential selection of Enbrel over biosimilar alternatives or other therapeutic options. This pattern is particularly concerning given that multiple clinically equivalent alternatives exist at lower costs. The $99 return per dollar invested demonstrates exceptional efficiency in influencing high-value prescribing decisions.
+Enbrel, a TNF inhibitor with annual treatment costs approaching $84,000, shows the second-highest influence correlation. The 197-fold difference suggests that payment relationships may be driving preferential selection of Enbrel over biosimilar alternatives or other therapeutic options. This pattern is particularly concerning given that multiple clinically equivalent alternatives exist at lower costs. The $99 return per dollar invested demonstrates exceptional efficiency in influencing high-value prescribing decisions.
 
 **Trelegy (COPD)**
 - Providers WITH payments: $2,545,835 avg prescriptions
 - Providers WITHOUT payments: $22,133 avg prescriptions
-- **Ratio: 115x more prescribed by paid providers**
+- **Ratio: 119x more prescribed by paid providers**
 - ROI: $22 per dollar of payments
 
 **Xarelto (Blood Thinner)**
@@ -137,10 +137,10 @@ Enbrel, a TNF inhibitor with annual treatment costs approaching $84,000, shows t
 **Ozempic (Semaglutide) - Type 2 Diabetes and Weight Management**
 - Providers WITH payments: $5,492,358 average prescription value
 - Providers WITHOUT payments: $59,836 average prescription value
-- **Influence Factor: 92x increased prescribing**
+- **Influence Factor: 79x increased prescribing**
 - Return on Investment: $25 generated per dollar of payments
 
-The Ozempic findings are particularly significant given the current national shortage and high demand for GLP-1 agonists. The 92-fold increase in prescribing among providers with payment relationships occurs during a period when allocation decisions directly impact patient access. This correlation suggests that financial relationships may be influencing not just whether to prescribe GLP-1 agonists, but which patients receive priority access to limited supplies. The timing of this influence, during a period of unprecedented demand and media attention, demonstrates how payment relationships can amplify market dynamics.
+The Ozempic findings are particularly significant given the current national shortage and high demand for GLP-1 agonists. The 79-fold increase in prescribing among providers with payment relationships occurs during a period when allocation decisions directly impact patient access. This correlation suggests that financial relationships may be influencing not just whether to prescribe GLP-1 agonists, but which patients receive priority access to limited supplies. The timing of this influence, during a period of unprecedented demand and media attention, demonstrates how payment relationships can amplify market dynamics.
 
 ---
 
@@ -148,29 +148,29 @@ The Ozempic findings are particularly significant given the current national sho
 
 ### Differential Susceptibility: The Hierarchy of Influence
 
-Our analysis reveals that susceptibility to payment influence varies significantly across provider types, with mid-level providers demonstrating heightened vulnerability to industry relationships. This differential susceptibility pattern suggests that influence strategies may be specifically calibrated to exploit variations in training, autonomy, and oversight structures across the healthcare workforce.
+Our analysis reveals that susceptibility to payment influence varies significantly across provider types, with physicians demonstrating the highest vulnerability to industry relationships, contrary to conventional expectations. This differential susceptibility pattern suggests that influence strategies may be specifically calibrated to exploit variations in training, autonomy, and oversight structures across the healthcare workforce.
 
-The extreme vulnerability of Physician Assistants and Nurse Practitioners raises particular concerns about the adequacy of current supervision and oversight mechanisms. These providers, who increasingly serve as primary care providers for millions of Americans, appear to lack the protective factors that partially insulate physicians from payment influence.
+The unexpected finding that physicians show higher vulnerability than PAs and NPs raises particular concerns about the adequacy of current supervision and oversight mechanisms. These providers, who increasingly serve as primary care providers for millions of Americans, appear to lack the protective factors that partially insulate physicians from payment influence.
 
 **Physician Assistants: Maximum Vulnerability**
 - With payments: $1,176,404 average prescription value
 - Without payments: $231,751 average prescription value
-- **Influence Impact: 407.6% increase with payments**
-- Return on Investment: 5,448x per dollar
+- **Influence Impact: 99.1% increase with payments**
+- Return on Investment: 5,434x per dollar
 
-The 407.6% increase in prescribing among PAs receiving payments represents the highest vulnerability coefficient identified in our analysis. This extreme susceptibility may reflect several factors: relatively shorter training periods compared to physicians, potentially less exposure to critical appraisal of pharmaceutical marketing during education, and practice models that may involve less peer review of prescribing decisions. The 5,448x ROI achieved with PAs suggests that industry has identified and is actively exploiting this vulnerability.
+The 99.1% increase in prescribing among PAs receiving payments represents significant susceptibility, though interestingly lower than physicians (159.2%). This finding challenges assumptions about provider vulnerability hierarchies. While PAs show substantial influence from payments, the continued high ROI (5,434x) indicates extreme efficiency of influence despite lower relative vulnerability compared to physicians.
 
 **Nurse Practitioners (NPs)**
-- With payments: $1,011,502 avg prescriptions
-- Without payments: $266,016 avg prescriptions
-- **280.2% increase with payments**
-- ROI: 4,323x per dollar
+- With payments: $1,006,721 avg prescription value
+- Without payments: $262,963 avg prescription value
+- **113.3% increase with payments**
+- ROI: 4,302x per dollar
 
 **Physicians**
-- With payments: $1,661,877 avg prescriptions
-- Without payments: $379,792 avg prescriptions
-- **337.6% increase with payments**
-- ROI: 7,837x per dollar
+- With payments: $1,649,676 avg prescription value
+- Without payments: $372,681 avg prescription value
+- **159.2% increase with payments**
+- ROI: 7,779x per dollar
 
 ---
 
@@ -231,7 +231,7 @@ The patterns identified in this analysis reveal risk exposure that extends beyon
    The 23,218x ROI achieved with sub-$100 payments indicates that the health system lacks effective controls to prevent influence through minimal financial relationships. This vulnerability suggests that current compliance training and monitoring may be inadequate to address the psychological mechanisms through which influence operates.
 
 3. **Structural Vulnerability in Provider Supervision**
-   The heightened susceptibility of PAs and NPs (407.6% and 280.2% increases respectively) indicates potential weaknesses in supervision and oversight structures. This differential vulnerability may expose the organization to claims of inadequate supervision and vicarious liability for influenced prescribing decisions.
+   The heightened susceptibility across all provider types (Physicians 159.2%, NPs 113.3%, PAs 99.1%) indicates systemic vulnerabilities, with physicians showing the highest susceptibility contrary to expectations. This differential vulnerability may expose the organization to claims of inadequate supervision and vicarious liability for influenced prescribing decisions.
 
 4. **Entrenchment Through Sustained Relationships**
    The 2,342 providers with five-year consecutive payment histories represent an entrenched influence network that may be resistant to remediation efforts. These sustained relationships suggest that influence has become institutionalized within segments of the provider population.
@@ -242,7 +242,7 @@ The patterns identified in this analysis reveal risk exposure that extends beyon
 ### Legal and Regulatory Exposure Analysis
 
 **Federal Anti-Kickback Statute Implications**
-The extreme correlations between payments and prescribing, particularly the 426x increase for Krystexxa, raise questions about whether financial relationships have crossed from legitimate consulting to inappropriate inducements. The efficiency of influence (ROI exceeding 20,000x for minimal payments) suggests that even small payments may function as kickbacks if they induce prescribing behavior.
+The extreme correlations between payments and prescribing, particularly the 401x increase for Krystexxa, raise questions about whether financial relationships have crossed from legitimate consulting to inappropriate inducements. The efficiency of influence (ROI exceeding 20,000x for minimal payments) suggests that even small payments may function as kickbacks if they induce prescribing behavior.
 
 **False Claims Act Vulnerability**
 Payment-influenced prescribing that results in medically unnecessary utilization could expose the organization to False Claims Act liability. The systematic nature of the influence patterns, affecting 73.5% of providers, could potentially support allegations of organizational knowledge or reckless disregard.
@@ -270,13 +270,13 @@ The widespread acceptance of industry payments has created an environment where 
 The extreme ROI figures, particularly the 23,218x return on sub-$100 payments, suggest that current understanding of influence mechanisms may be fundamentally incomplete. Traditional models of pharmaceutical marketing assume diminishing returns with decreased investment, yet our findings show the opposite: the smallest investments generate the largest behavioral changes. This inverse relationship indicates that influence operates through psychological rather than economic mechanisms.
 
 **3. The Supervision Gap**
-The differential vulnerability of mid-level providers reveals structural weaknesses in supervision and oversight systems. PAs showing 407.6% prescribing increases with payments, compared to 337.6% for physicians, suggests that existing supervision structures fail to moderate industry influence. This gap is particularly concerning given the expanding scope of practice for mid-level providers and their increasing role in primary care delivery.
+The differential vulnerability analysis reveals unexpected patterns, with physicians showing 159.2% prescribing increases with payments, compared to 113.3% for NPs and 99.1% for PAs. This reversal of expected vulnerability hierarchies suggests that seniority and training duration do not protect against industry influence—in fact, physicians appear most susceptible. This gap is particularly concerning given the expanding scope of practice for mid-level providers and their increasing role in primary care delivery.
 
 **4. The Temporal Amplification Effect**
 The progressive increase in prescribing volume correlated with payment duration (from 1.51x for single-year recipients to 8.95x for five-year recipients) demonstrates that influence compounds over time. This temporal amplification suggests that early intervention may be critical, as established payment relationships appear increasingly difficult to moderate.
 
 **5. The Therapeutic Class Concentration**
-The concentration of extreme influence in high-cost specialty medications (Krystexxa at 426x, Enbrel at 218x) indicates strategic targeting of therapeutic areas with high profit margins and limited therapeutic alternatives. This pattern suggests that influence efforts are carefully calibrated to maximize financial returns in areas where prescriber discretion is highest.
+The concentration of extreme influence in high-cost specialty medications (Krystexxa at 401x, Enbrel at 197x) indicates strategic targeting of therapeutic areas with high profit margins and limited therapeutic alternatives. This pattern suggests that influence efforts are carefully calibrated to maximize financial returns in areas where prescriber discretion is highest.
 
 ### Organizational Implications
 
@@ -292,9 +292,9 @@ The sustained nature of payment relationships, with over 2,300 providers receivi
 
 This comprehensive analysis of payment and prescribing patterns within Corewell Health reveals a system where industry influence has achieved unprecedented scope, scale, and efficiency. The findings transcend typical concerns about pharmaceutical marketing to reveal fundamental questions about clinical independence, decision-making integrity, and the role of financial relationships in modern healthcare delivery.
 
-The documentation of 426-fold prescribing increases associated with payments, 23,218x returns on minimal investments, and the capture of 73.5% of the provider workforce represents influence patterns that exceed previously documented parameters by orders of magnitude. These findings suggest that the relationship between industry and providers at Corewell Health has evolved beyond traditional marketing to represent a more fundamental integration of commercial and clinical interests.
+The documentation of 401-fold prescribing increases associated with payments, 23,218x returns on minimal investments, and the capture of 73.5% of the provider workforce represents influence patterns that exceed previously documented parameters by orders of magnitude. These findings suggest that the relationship between industry and providers at Corewell Health has evolved beyond traditional marketing to represent a more fundamental integration of commercial and clinical interests.
 
-The differential vulnerability of provider types, with Physician Assistants showing 407.6% prescribing increases when receiving payments, reveals structural vulnerabilities in supervision and oversight systems that may be systematically exploited. The temporal analysis showing progressive influence amplification over consecutive years indicates that these relationships, once established, become increasingly difficult to moderate or terminate.
+The differential vulnerability of provider types, with Physicians showing 159.2% prescribing increases, Nurse Practitioners 113.3%, and Physician Assistants 99.1% when receiving payments, reveals that seniority and training do not protect against influence—in fact, physicians show the highest vulnerability. The temporal analysis showing progressive influence amplification over consecutive years indicates that these relationships, once established, become increasingly difficult to moderate or terminate.
 
 Perhaps most concerning is the discovery that minimal payments generate maximum influence, suggesting that providers may be unaware of the behavioral changes induced by seemingly insignificant financial relationships. This unconscious influence, operating below the threshold of awareness, presents particular challenges for remediation efforts that rely on provider education or voluntary disclosure.
 

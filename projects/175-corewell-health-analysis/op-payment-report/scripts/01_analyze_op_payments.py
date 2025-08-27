@@ -119,25 +119,17 @@ def analyze_payments_by_year(client):
         COUNT(*) as transactions,
         SUM(total_amount_of_payment_usdollars) as total_payments,
         AVG(total_amount_of_payment_usdollars) as avg_payment,
-        PERCENTILE_CONT(total_amount_of_payment_usdollars, 0.5) OVER (PARTITION BY program_year) as median_payment,
-        PERCENTILE_CONT(total_amount_of_payment_usdollars, 0.95) OVER (PARTITION BY program_year) as p95_payment
+        MAX(total_amount_of_payment_usdollars) as max_payment
     FROM corewell_payments
-    GROUP BY program_year, total_amount_of_payment_usdollars
+    GROUP BY program_year
     ORDER BY program_year
     """
     
     logger.info("\nAnalyzing payments by year...")
     df = client.query(query).to_dataframe()
     
-    # Aggregate to year level
-    yearly = df.groupby('program_year').agg({
-        'unique_providers': 'max',
-        'transactions': 'sum',
-        'total_payments': 'sum',
-        'avg_payment': 'mean',
-        'median_payment': 'max',
-        'p95_payment': 'max'
-    }).reset_index()
+    # Data is already aggregated by year
+    yearly = df.copy()
     
     logger.info("\nYearly Payment Trends:")
     for _, row in yearly.iterrows():

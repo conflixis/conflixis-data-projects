@@ -1,0 +1,21 @@
+specialty,prescribers,rx_value,prescriptions,patients,unique_products
+Allopathic & Osteopathic Physicians|Ophthalmology,18028,1742978966.748413000,7970914.000000000,6401759.000000000,68
+Allopathic & Osteopathic Physicians|General Practice,30970,928216647.020332000,4294767.000000000,3446607.000000000,68
+Allopathic & Osteopathic Physicians|Internal Medicine,77534,723925920.448107000,3655762.000000000,2957021.000000000,68
+Eye and Vision Services Providers|Optometrist,33124,512162716.432337000,2695384.000000000,2216916.000000000,65
+Unknown,122146,178895265.267662000,1224439.000000000,1027817.000000000,69
+Allopathic & Osteopathic Physicians|Ophthalmology|Glaucoma Specialist,519,160521644.299856000,635850.000000000,510448.000000000,55
+Allopathic & Osteopathic Physicians|Family Medicine,57641,121920972.789281000,803547.000000000,663717.000000000,67
+Allopathic & Osteopathic Physicians|Pediatrics,26306,93763548.353398000,566455.000000000,472887.000000000,60
+Physician Assistants & Advanced Practice Nursing Providers|Nurse Practitioner|Family,53433,82515181.506435000,503513.000000000,438603.000000000,65
+Physician Assistants & Advanced Practice Nursing Providers|Nurse Practitioner,48193,79803224.852632000,486679.000000000,421919.000000000,65
+Allopathic & Osteopathic Physicians|Otolaryngology,7766,69773045.537890000,372878.000000000,300267.000000000,58
+Allopathic & Osteopathic Physicians|Ophthalmology|Retina Specialist,1488,60605355.887427000,320828.000000000,264672.000000000,60
+Physician Assistants & Advanced Practice Nursing Providers|Physician Assistant,31577,54645344.152529000,343928.000000000,288679.000000000,64
+Physician Assistants & Advanced Practice Nursing Providers|Nurse Practitioner|Adult Health,20653,26969869.851548000,183285.000000000,156719.000000000,64
+Allopathic & Osteopathic Physicians|Ophthalmology|Cornea and External Diseases Specialist,385,24924661.680847000,129097.000000000,103371.000000000,57
+Physician Assistants & Advanced Practice Nursing Providers|Nurse Practitioner|Pediatrics,6160,24423389.527972000,134407.000000000,118319.000000000,49
+Physician Assistants & Advanced Practice Nursing Providers|Physician Assistant|Medical,11216,18186702.343302000,120951.000000000,101438.000000000,62
+Allopathic & Osteopathic Physicians|Internal Medicine|Rheumatology,1449,16383060.601120000,72898.000000000,60097.000000000,56
+Allopathic & Osteopathic Physicians|Otolaryngology|Pediatric Otolaryngology,523,11523447.289733000,59485.000000000,46538.000000000,29
+Allopathic & Osteopathic Physicians|Allergy & Immunology,3607,11162648.715776000,102106.000000000,83697.000000000,54

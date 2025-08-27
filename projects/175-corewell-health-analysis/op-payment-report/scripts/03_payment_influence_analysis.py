@@ -136,15 +136,25 @@ def analyze_drug_payment_correlation(client, drug_name):
         with_payment = df[df['received_payment'] == 1].iloc[0] if len(df[df['received_payment'] == 1]) > 0 else None
         
         if no_payment is not None and with_payment is not None:
-            ratio = with_payment['avg_rx_payments'] / no_payment['avg_rx_payments'] if no_payment['avg_rx_payments'] > 0 else 0
-            logger.info(f"  Providers WITH payments: ${with_payment['avg_rx_payments']:,.0f} avg")
-            logger.info(f"  Providers WITHOUT payments: ${no_payment['avg_rx_payments']:,.0f} avg")
-            logger.info(f"  Ratio: {ratio:.2f}x more prescribed by paid providers")
+            # Calculate influence factor based on prescription counts, not payment amounts
+            prescription_ratio = with_payment['avg_prescriptions'] / no_payment['avg_prescriptions'] if no_payment['avg_prescriptions'] > 0 else 0
+            payment_ratio = with_payment['avg_rx_payments'] / no_payment['avg_rx_payments'] if no_payment['avg_rx_payments'] > 0 else 0
+            
+            logger.info(f"  Providers WITH payments:")
+            logger.info(f"    - {with_payment['provider_count']:,} providers")
+            logger.info(f"    - {with_payment['avg_prescriptions']:.1f} avg prescriptions")
+            logger.info(f"    - ${with_payment['avg_rx_payments']:,.0f} avg prescription value")
+            logger.info(f"  Providers WITHOUT payments:")
+            logger.info(f"    - {no_payment['provider_count']:,} providers")
+            logger.info(f"    - {no_payment['avg_prescriptions']:.1f} avg prescriptions")
+            logger.info(f"    - ${no_payment['avg_rx_payments']:,.0f} avg prescription value")
+            logger.info(f"  Influence Factor: {prescription_ratio:.1f}x prescriptions with payments")
+            logger.info(f"  Payment Value Factor: {payment_ratio:.1f}x prescription value with payments")
             
             # Calculate ROI if we have payment data
             if with_payment['avg_op_payment'] > 0:
                 roi = (with_payment['avg_rx_payments'] - no_payment['avg_rx_payments']) / with_payment['avg_op_payment']
-                logger.info(f"  ROI: ${roi:.0f} per dollar of payments")
+                logger.info(f"  ROI: ${roi:.0f} per dollar of Open Payments")
     
     return df
 
@@ -362,6 +372,7 @@ def analyze_np_pa_vulnerability(client):
             COALESCE(pp.NPI, pr.NPI) as NPI,
             COALESCE(pp.total_op_payments, 0) as total_op_payments,
             COALESCE(pr.total_rx_payments, 0) as total_rx_payments,
+            COALESCE(pr.total_prescriptions, 0) as total_prescriptions,
             CASE WHEN pp.total_op_payments > 0 THEN 1 ELSE 0 END as received_payment
         FROM provider_payments pp
         FULL OUTER JOIN provider_rx pr
@@ -373,12 +384,14 @@ def analyze_np_pa_vulnerability(client):
         COUNT(DISTINCT NPI) as provider_count,
         AVG(total_op_payments) as avg_op_payment,
         AVG(total_rx_payments) as avg_rx_payment,
+        AVG(total_prescriptions) as avg_prescriptions,
         SUM(total_rx_payments) as sum_rx_payments,
+        SUM(total_prescriptions) as sum_prescriptions,
         AVG(CASE WHEN total_op_payments > 0 
             THEN total_rx_payments / total_op_payments 
             ELSE 0 END) as roi
     FROM combined
-    WHERE total_rx_payments > 0
+    WHERE total_prescriptions > 0
     GROUP BY provider_type, received_payment
     ORDER BY provider_type, received_payment
     """
@@ -386,7 +399,7 @@ def analyze_np_pa_vulnerability(client):
     logger.info("\nAnalyzing NP/PA payment vulnerability...")
     df = client.query(query).to_dataframe()
     
-    # Calculate vulnerability metrics
+    # Calculate vulnerability metrics based on prescription counts
     for provider_type in ['NP', 'PA', 'Physician']:
         type_data = df[df['provider_type'] == provider_type]
         if len(type_data) >= 2:
@@ -394,11 +407,21 @@ def analyze_np_pa_vulnerability(client):
             with_payment = type_data[type_data['received_payment'] == 1].iloc[0] if len(type_data[type_data['received_payment'] == 1]) > 0 else None
             
             if no_payment is not None and with_payment is not None:
-                vulnerability = (with_payment['avg_rx_payment'] - no_payment['avg_rx_payment']) / no_payment['avg_rx_payment'] * 100 if no_payment['avg_rx_payment'] > 0 else 0
-                logger.info(f"\n{provider_type} Vulnerability:")
-                logger.info(f"  With payments: ${with_payment['avg_rx_payment']:,.0f}")
-                logger.info(f"  Without payments: ${no_payment['avg_rx_payment']:,.0f}")
-                logger.info(f"  Vulnerability: {vulnerability:.1f}% increase with payments")
+                # Calculate vulnerability based on prescriptions, not payments
+                prescription_vulnerability = (with_payment['avg_prescriptions'] - no_payment['avg_prescriptions']) / no_payment['avg_prescriptions'] * 100 if no_payment['avg_prescriptions'] > 0 else 0
+                payment_vulnerability = (with_payment['avg_rx_payment'] - no_payment['avg_rx_payment']) / no_payment['avg_rx_payment'] * 100 if no_payment['avg_rx_payment'] > 0 else 0
+                
+                logger.info(f"\n{provider_type} Vulnerability Analysis:")
+                logger.info(f"  With payments:")
+                logger.info(f"    - {with_payment['provider_count']:,} providers")
+                logger.info(f"    - {with_payment['avg_prescriptions']:.1f} avg prescriptions")
+                logger.info(f"    - ${with_payment['avg_rx_payment']:,.0f} avg prescription value")
+                logger.info(f"  Without payments:")
+                logger.info(f"    - {no_payment['provider_count']:,} providers")
+                logger.info(f"    - {no_payment['avg_prescriptions']:.1f} avg prescriptions")
+                logger.info(f"    - ${no_payment['avg_rx_payment']:,.0f} avg prescription value")
+                logger.info(f"  Prescription Increase: {prescription_vulnerability:.1f}%")
+                logger.info(f"  Payment Value Increase: {payment_vulnerability:.1f}%")
                 if with_payment['avg_op_payment'] > 0:
                     logger.info(f"  ROI: {with_payment['roi']:.1f}x")
     
