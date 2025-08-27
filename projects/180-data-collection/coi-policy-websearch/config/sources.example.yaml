@@ -1,0 +1,140 @@
+# COI Policy WebSearch Configuration
+# Focus: US Healthcare Systems Only
+
+# Major US healthcare systems to search
+healthcare_systems:
+  - name: "Mayo Clinic"
+    domains:
+      - "mayoclinic.org"
+      - "mayo.edu"
+  - name: "Cleveland Clinic"
+    domains:
+      - "clevelandclinic.org"
+  - name: "Johns Hopkins"
+    domains:
+      - "hopkinsmedicine.org"
+      - "jhmi.edu"
+  - name: "Kaiser Permanente"
+    domains:
+      - "kaiserpermanente.org"
+      - "kp.org"
+  - name: "HCA Healthcare"
+    domains:
+      - "hcahealthcare.com"
+  - name: "CommonSpirit Health"
+    domains:
+      - "commonspirit.org"
+  - name: "Ascension"
+    domains:
+      - "ascension.org"
+  - name: "Providence"
+    domains:
+      - "providence.org"
+  - name: "Advocate Aurora Health"
+    domains:
+      - "advocateaurorahealth.org"
+  - name: "NYU Langone"
+    domains:
+      - "nyulangone.org"
+  - name: "Mount Sinai"
+    domains:
+      - "mountsinai.org"
+  - name: "Mass General Brigham"
+    domains:
+      - "massgeneralbrigham.org"
+  - name: "UPMC"
+    domains:
+      - "upmc.com"
+  - name: "Northwell Health"
+    domains:
+      - "northwell.edu"
+  - name: "Cedars-Sinai"
+    domains:
+      - "cedars-sinai.org"
+  - name: "Stanford Medicine"
+    domains:
+      - "stanfordhealthcare.org"
+      - "med.stanford.edu"
+  - name: "UCLA Health"
+    domains:
+      - "uclahealth.org"
+  - name: "Duke Health"
+    domains:
+      - "dukehealth.org"
+  - name: "Penn Medicine"
+    domains:
+      - "pennmedicine.org"
+  - name: "Michigan Medicine"
+    domains:
+      - "uofmhealth.org"
+
+# Targeted search queries for US healthcare COI policies
+search_queries:
+  - "site:*.org conflict of interest policy healthcare"
+  - "site:*.edu medical center conflict of interest disclosure"
+  - "\"conflict of interest\" policy hospital USA"
+  - "physician conflict of interest disclosure form"
+  - "healthcare compliance COI policy United States"
+  - "medical staff conflict of interest policy"
+  - "pharmaceutical relationships disclosure policy"
+  - "vendor relationships healthcare policy"
+  - "industry relationships medical center policy"
+  - "financial disclosure healthcare providers"
+  - "sunshine act compliance policy hospital"
+  - "open payments disclosure policy"
+  
+# State-specific searches for major states
+state_searches:
+  - "California hospital conflict of interest policy"
+  - "Texas healthcare COI policy"
+  - "New York medical center conflict of interest"
+  - "Florida hospital COI disclosure"
+  - "Pennsylvania healthcare conflict of interest"
+  - "Ohio medical center COI policy"
+  - "Illinois hospital conflict of interest"
+  - "Michigan healthcare COI"
+  - "Massachusetts hospital conflict of interest policy"
+  - "North Carolina medical center COI"
+
+# Academic medical centers (top US medical schools)
+academic_medical_centers:
+  - "Harvard Medical School conflict of interest"
+  - "Johns Hopkins School of Medicine COI policy"
+  - "Stanford School of Medicine conflict of interest"
+  - "UCSF Medical Center COI policy"
+  - "Columbia Medical Center conflict of interest"
+  - "Yale School of Medicine COI"
+  - "Washington University School of Medicine conflict of interest"
+  - "Vanderbilt Medical Center COI policy"
+  - "Northwestern Medicine conflict of interest"
+  - "Mount Sinai School of Medicine COI"
+
+# Government and regulatory sites
+government_sources:
+  - site: "cms.gov"
+    keywords: ["conflict of interest", "disclosure", "sunshine act"]
+  - site: "hhs.gov"
+    keywords: ["COI policy", "conflict of interest guidelines"]
+  - site: "nih.gov"
+    keywords: ["conflict of interest", "financial disclosure"]
+
+# Search parameters
+max_results_per_query: 20
+timeout_seconds: 30
+user_agent: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36"
+
+# Filtering criteria
+filter_keywords:
+  must_include:
+    - "conflict"
+    - "interest"
+  should_include:
+    - "policy"
+    - "disclosure"
+    - "compliance"
+    - "guidelines"
+  exclude:
+    - "job posting"
+    - "career"
+    - "news"
+    - "press release"
