@@ -7,6 +7,8 @@ data/raw/*.json
 data/output/*.csv
 data/output/*.parquet
 data/output/*.json
+data/output/*.xlsx
+*.xlsx
 
 # But keep the directory structure
 !data/raw/.gitkeep
