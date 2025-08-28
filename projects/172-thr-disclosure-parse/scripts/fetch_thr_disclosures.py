@@ -9,6 +9,7 @@ import os
 import sys
 import logging
 import pandas as pd
+import csv
 from datetime import datetime
 from pathlib import Path
 from google.oauth2 import service_account
@@ -310,7 +311,10 @@ def extract_dynamic_fields(df):
                     
                     # Extract Type of Interest
                     elif 'Type of Interest' in field_title and field_type == 'listOfCategories':
-                        df.at[idx, 'interest_type'] = str(value) if value else None
+                        if isinstance(value, dict):
+                            df.at[idx, 'interest_type'] = value.get('name', '')
+                        else:
+                            df.at[idx, 'interest_type'] = str(value) if value else None
                     
                     # Extract jurisdiction/location for Political disclosures
                     elif 'Jurisdiction' in field_title or 'Location of Office' in field_title:
@@ -519,9 +523,9 @@ def export_data(df):
     
     timestamp = datetime.now().strftime('%Y%m%d_%H%M%S')
     
-    # Export to CSV (primary format)
+    # Export to CSV (primary format) with proper quoting for fields with commas
     csv_path = config.OUTPUT_DIR / f"thr_disclosures_{timestamp}.csv"
-    df.to_csv(csv_path, index=False)
+    df.to_csv(csv_path, index=False, quoting=csv.QUOTE_NONNUMERIC)
     logger.info(f"✓ CSV exported to: {csv_path}")
     
     # Export to Excel workbook with multiple sheets
