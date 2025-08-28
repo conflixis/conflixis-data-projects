@@ -1,0 +1,979 @@
+<!DOCTYPE html>
+<!--[if IE 8]>      <html class="ie ie8"> <![endif]-->
+<!--[if IE 9]>      <html class="ie ie9"> <![endif]-->
+<!--[if gt IE 9]><!-->  <html lang="en"> <!--<![endif]-->
+  <head>
+     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta charset="utf-8" />
+    <title>Page or Document Not Found</title>
+    <meta http-equiv="Refresh" content="4;url=http://www.azdhs.gov/search/">
+    <meta name="robots" content="noindex" />
+    <!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-T87GV2');</script>
+<!-- End Google Tag Manager -->
+
+<!-- prevents page view from being cached -->
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+<meta http-equiv="Pragma" content="no-cache" />
+<meta http-equiv="Expires" content="-1" />
+
+
+<!-- mobile settings -->
+<meta name="viewport" content="width=device-width, maximum-scale=1, initial-scale=1, user-scalable=0" />
+
+<!-- web fonts -->
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700,800&amp;subset=latin,latin-ext,cyrillic,cyrillic-ext" rel="stylesheet" type="text/css" />
+
+<!-- core CSS -->
+<link href="/assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+<script src="https://kit.fontawesome.com/36356a5437.js" crossorigin="anonymous"></script>
+<link href="/assets/css/sky-forms.css" rel="stylesheet" type="text/css" />
+<link href="/assets/css/weather-icons.min.css" rel="stylesheet" type="text/css" />
+<link href="/assets/css/line-icons.css" rel="stylesheet" type="text/css" />
+<link href="/assets/plugins/magnific-popup/magnific-popup.css" rel="stylesheet" type="text/css" />
+<link href="/assets/css/animate.css" rel="stylesheet" type="text/css" />
+<link href="/assets/css/fancybox.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" type="text/css" href="/assets/css/tablesorter.css" />
+
+
+<!-- theme CSS -->
+<link href="/assets/css/essentials.css?v=a5602c76977bf79d4683ff3022326245" rel="stylesheet" type="text/css" />
+<link href="/assets/css/layout.css" rel="stylesheet" type="text/css" />
+<link href="/assets/css/header-default.css" rel="stylesheet" type="text/css" />
+<link href="/assets/css/footer-default.css?v=5.0" rel="stylesheet" type="text/css" />
+<link href="/assets/css/color_scheme/adhsred.css" rel="stylesheet" type="text/css" id="color_scheme" />
+
+<!-- Lite Tooltip -->
+<link href="/assets/css/litetooltip.css" rel="stylesheet" type="text/css" />
+
+<!-- Social Feed Plugin CSS, must be BEFORE customCSS -->
+<link href="/assets/css/jquery.socialfeed.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-rqn26AG5Pj86AF4SO72RK5fyefcQ/x32DNQfChxWvbXIyXFePlEktwD18fEz+kQU" crossorigin="anonymous">
+
+<link href="/assets/css/custom.css?v=a5602c76977bf79d4683ff3022326245" rel="stylesheet" type="text/css" />
+
+<!-- special header text font for new (red) logo -->
+<link href='https://fonts.googleapis.com/css?family=Abel' rel='stylesheet' type='text/css' />
+<link href='https://fonts.googleapis.com/css?family=Fira+Sans:400italic,300italic' rel='stylesheet' type='text/css' />
+
+<!--[if IE 9]>
+	<link rel="stylesheet" type="text/css" href="/assets/css/ie9.css" />
+<![endif]-->
+
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<!-- jQuery.exLink plugin - https://github.com/YupItsZac/jQuery.exLink -->
+<script type="text/javascript" src="/assets/js/jquery.exLink.min.js"></script>
+
+<!--[if lte IE 9]>
+      <script type="text/javascript" src="/assets/plugins/modernizr.min.js"></script>
+      <script type="text/javascript" src="/assets/js/html5shiv.js"></script>
+      <script type="text/javascript" src="/assets/plugins/respond.js"></script>
+      <script type="text/javascript" src="/assets/js/IEwarning.js"></script>
+<![endif]-->
+
+<!-- Google translate code -->
+ <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+ <script type="text/javascript">
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
+}
+</script> 
+ <!-- End Google translate code -->
+
+<!-- Data Table CSS -->
+<link rel="stylesheet" type="text/css" href="/assets/plugins/datatables/datatables.min.css"/>
+
+<!-- ADHS Components -->
+<link href="/assets/css/adhs-components.css?v=faabdbbc4985185e39c962487d223180" rel="stylesheet" type="text/css" />
+
+<!-- Favicon -->
+<link rel="shortcut icon" href="/favicon.png?v=20240916" />
+
+</head>
+
+<body class="smoothscroll">
+<div id="wrapper">
+
+
+
+    <!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T87GV2"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+<!-- Display an indicator that you are not working on production -->
+
+<!-- Display an indicator that you are not working on production -->
+
+<style>
+  .pull-left {
+    margin-right: 0 !important;
+  }
+</style>
+
+
+
+<ul class="skiplink">
+  <li><a href="#contentHead">Skip to page content</a></li>
+  <li><a href="#sidebar-nav">Skip to page menu</a></li>
+  <li><a href="#search">Skip to site search</a></li>
+</ul>
+
+<div class="sliver-container">
+  <ul class="sliver-ul">
+    <li class="sliver-li-right">
+      <a href="https://servicearizona.com/" target="_blank"><img width="14" class="img-fluid" style="margin-right:2px;margin-bottom: 3px;" src="/assets/images/vote-icon.png" alt="Google Translate"/> Register to vote</a>
+      <a id="languageBtn" href="#" data-toggle="modal" data-target="#languageModal"><img width="14" class="img-fluid" style="margin-right:2px;margin-bottom: 3px;" src="/assets/images/g-logo.png" alt="Google Translate"/> Translate</a>
+      <a href="https://www.azoca.gov/" target="_blank"><img width="14" class="img-fluid" style="margin-right:2px;margin-bottom: 3px;" src="/assets/images/obudsman.png" alt="Ombudsman Citizens' Aide"/> Ombudsman Citizens' Aide</a>
+      <a href="https://azdot.gov/mvd/services/driver-services/arizona-travel-id" target="_blank"><img width="24" class="img-fluid" style="margin-right:2px;margin-bottom: 3px;" src="/assets/images/az-logos/travel-id.png" alt="Get the New Travel ID' Aide"/> Get the New Travel ID</a>
+      <a href="http://az.gov/search/">
+        <img class="sliver-img" src="/assets/images/az-logos/az-generic-logo-white.png" alt="search az.gov" /><span>Search az.gov</span>
+      </a>
+      <a href="http://az.gov" class="sliver-logo">
+        <img class="az-main-header-img" src="/assets/images/az-logos/az-generic-logo-white-copper.png" title="Go to AZ State Government Webpage" alt="A hyperlink to the AZ State Government Webpage - Arizona logo" />
+      </a>
+    </li>
+  </ul>
+
+  <!-- Modal -->
+  <div class="modal fade" id="languageModal" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-body">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="float:right;"><span aria-hidden="true">&times;</span></button>
+          <div class="text-center" id="google_translate_element"></div>
+        </div>
+        <div class="modal-footer">
+
+        </div>
+      </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+  </div><!-- /.modal -->
+  <!-- End Modal -->
+</div>
+<script>
+  /* GOOGLE - OLD FUNCTION
+  $('#languageModal').on('shown.bs.modal', function () {
+    var selectArray = $('.goog-te-combo');
+    if(selectArray.length) {
+      selectArray[0].focus();
+    }
+  });
+  */
+  function showModalGoogle(){
+    let languageSelect = document.getElementsByClassName('goog-te-combo');
+    if(languageSelect.length) {
+      languageSelect.item(0).focus();
+    }
+
+    $('#languageModal').modal('show');
+  }
+</script>
+
+<style>
+  .siteWide-alert-danger {
+    background-color: rgba(231, 195, 195, 0.5);
+  }
+
+  .siteWide-alert-danger a {
+    color: #B92928;
+    text-decoration: none;
+  }
+</style>
+
+
+<div id="header">
+  <!-- Top Bar -->
+  <header id="topBar">
+    <div class="container">
+      <!-- Logo -->
+      <a href="/index.php" class="azdhs-logo-container">
+        <img src="/assets/images/logo-red/adhs-logo.png" alt="A hyperlink to the main ADHS webpage - ADHS logo" title="Arizona Department of Health Services Home" class="img-responsive adhs-header-logo" />
+        <div class="adhs-logo-text-section">
+          <h1 class="title hidden-xs">ARIZONA DEPARTMENT OF HEALTH SERVICES</h1>
+          <h1 class="motto hidden-xs">Health and Wellness for All Arizonans</h1>
+          <h1 class="title-mobile hidden-lg hidden-md hidden-sm text-center">ADHS</h1>
+        </div>
+        <img src="/assets/images/az-logos/az-generic-logo-color.png" alt="A hyperlink to the main ADHS webpage - AZ generic logo" title="Go to ADHS main page" class="az-header-generic-logo" />
+      </a>
+
+      <!-- a href="/index.php"><img src="/assets/images/logo-red/adhs-logo.png" alt="ADHS logo" title="Arizona Department of Health Services Home" class="img-responsive logo" />
+      </a>
+      <h1 class="title hidden-xs">ARIZONA DEPARTMENT OF HEALTH SERVICES</h1>
+      <h1 class="motto hidden-xs">Health and Wellness for All Arizonans</h1>
+      <h1 class="title-mobile hidden-lg hidden-md hidden-sm text-center">ARIZONA DEPARTMENT<br />OF HEALTH SERVICES</h1 -->
+    </div><!-- /.container -->
+  </header>
+  <!-- /Top Bar -->
+
+  <!-- Top Nav -->
+  <header id="topNav">
+    <div class="container">
+      <!-- Mobile Menu Button -->
+      <button class="btn btn-mobile" data-toggle="collapse" data-target=".nav-main-collapse">
+        <span class="sr-only">Toggle Navigation</span>
+        <i class="fa fa-bars" alt="toggle navigation"></i>
+      </button>
+
+      <!-- Search
+      <form class="search" method="get" action="page-search.html">
+          <input type="text" class="form-control" name="s" value="" placeholder="Search">
+          <button class="fa fa-search"></button>
+      </form>
+			<!- /Search -->
+
+      <script>
+        (function() {
+          var cx = '001225935467932717699:vl4yt5w5dzq';
+          var gcse = document.createElement('script');
+          gcse.type = 'text/javascript';
+          gcse.async = true;
+          gcse.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') +
+            '//www.google.com/cse/cse.js?cx=' + cx;
+          var s = document.getElementsByTagName('script')[0];
+          s.parentNode.insertBefore(gcse, s);
+
+        })();
+      </script>
+
+      <div class="searchBoxContainer" id="search">
+        <gcse:searchbox-only resultsUrl="/search/index.php"></gcse:searchbox-only>
+      </div>
+            <!-- Top Nav -->
+      <div class="navbar-collapse nav-main-collapse collapse">
+        <nav class="nav-main">
+          <ul id="topMain" class="nav nav-pills nav-main">
+                        <li><a href="/index.php">HOME</a></li>
+                            <li><a class="dropdown-toggle" href="#">AUDIENCES</a>
+                    <ul class="dropdown-menu">
+                                              <li>
+                          <a class="capturedSingle" href="/audiences/index.php#women-home" >
+                            Women                          </a>
+                      </li>
+                                          <li>
+                          <a class="capturedSingle" href="/audiences/index.php#men-home" >
+                            Men                          </a>
+                      </li>
+                                          <li>
+                          <a class="capturedSingle" href="/audiences/index.php#children-home" >
+                            Children &amp; Teens                          </a>
+                      </li>
+                                          <li>
+                          <a class="capturedSingle" href="/audiences/index.php#seniors-home" >
+                            Seniors                          </a>
+                      </li>
+                                          <li>
+                          <a class="capturedSingle" href="/audiences/clinicians/index.php" >
+                            Clinicians                          </a>
+                      </li>
+                                          <li>
+                          <a class="capturedSingle" href="/audiences/index.php#schools-home" >
+                            School Representatives                          </a>
+                      </li>
+                                          <li>
+                          <a class="capturedSingle" href="/audiences/index.php#spanish" >
+                            Spanish Speakers                          </a>
+                      </li>
+                                          <li>
+                          <a class="capturedSingle" href="/audiences/index.php#veterans-home" >
+                            Veterans                          </a>
+                      </li>
+                                    </ul>
+                </li>
+                                          <li><a class="dropdown-toggle" href="#">TOPICS</a>
+                    <ul class="dropdown-menu">
+                                              <li>
+                          <a class="capturedSingle" href="/prevention/womens-childrens-health/womens-health/adoption-option-arizona/index.php" >
+                            Adoption Option                          </a>
+                      </li>
+                                          <li>
+                          <a class="capturedSingle" href="/topics/healthy-kids/index.php" >
+                            Back to School                          </a>
+                      </li>
+                                          <li>
+                          <a class="capturedSingle" href="/policy-intergovernmental-affairs/vital-records/index.php" >
+                            Birth/Death Certificates                           </a>
+                      </li>
+                                          <li>
+                          <a class="capturedSingle" href="/topics/index.php#cancer-home" >
+                            Cancer                          </a>
+                      </li>
+                                          <li>
+                          <a class="capturedSingle" href="/operations/human-resources/index.php#careers" >
+                            Careers                          </a>
+                      </li>
+                                          <li>
+                          <a class="capturedSingle" href="/preparedness/epidemiology-disease-control/infectious-disease-epidemiology/index.php#novel-coronavirus-home" >
+                            COVID-19                          </a>
+                      </li>
+                                          <li>
+                          <a class="capturedSingle" href="/operations/informatics-visual-analytics/index.php" >
+                            Data Dashboards                          </a>
+                      </li>
+                                          <li>
+                          <a class="capturedSingle" href="https://data.azdhs.gov/?utm_source=adhs_website&utm_medium=menu_topic&utm_campaign=data_portal_launch&utm_id=adhs_data_porta_oct_2024_launch&utm_term=data_portal_menu" >
+                            Data Portal                          </a>
+                      </li>
+                                          <li>
+                          <a class="capturedSingle" href="/operations/index.php#data-requests" >
+                            Data Requests to ADHS                          </a>
+                      </li>
+                                          <li>
+                          <a class="capturedSingle" href="/operations/index.php#data-source-profiles" >
+                            Data Source Profiles                          </a>
+                      </li>
+                                          <li>
+                          <a class="capturedSingle" href="/topics/index.php#digital-library-home" >
+                            Digital Library                          </a>
+                      </li>
+                                          <li>
+                          <a class="capturedSingle" href="/preparedness/epidemiology-disease-control/index.php#infectious-diseases" >
+                            Diseases                          </a>
+                      </li>
+                                          <li>
+                          <a class="capturedSingle" href="/preparedness/epidemiology-disease-control/extreme-weather/heat-safety/extreme-heat-preparedness/index.php#home" >
+                            Extreme Heat Preparedness                          </a>
+                      </li>
+                                          <li>
+                          <a class="capturedSingle" href="https://app.azdhs.gov/ls/online_complaint/onlinecomplaint.aspx" >
+                            File a Complaint                          </a>
+                      </li>
+                                          <li>
+                          <a class="capturedSingle" href="/policy-intergovernmental-affairs/vital-records/genealogy/index.php" >
+                            Genealogy                          </a>
+                      </li>
+                                          <li>
+                          <a class="capturedSingle" href="/prevention/chronic-disease/cancer-prevention-control/index.php" >
+                            Health Screenings                          </a>
+                      </li>
+                                          <li>
+                          <a class="capturedSingle" href="/topics/index.php#baby-home" >
+                            Healthy Babies                          </a>
+                      </li>
+                                          <li>
+                          <a class="capturedSingle" href="/preparedness/epidemiology-disease-control/extreme-weather/heat-safety/index.php" >
+                            Heat Safety                          </a>
+                      </li>
+                                          <li>
+                          <a class="capturedSingle" href="/preparedness/epidemiology-disease-control/immunization/index.php" >
+                            Immunizations                          </a>
+                      </li>
+                                          <li>
+                          <a class="capturedSingle" href="/topics/index.php#licenses-certification" >
+                            Licenses &amp; Certification                          </a>
+                      </li>
+                                          <li>
+                          <a class="capturedSingle" href="/licensing/marijuana/index.php" >
+                            Marijuana Licensing                          </a>
+                      </li>
+                                          <li>
+                          <a class="capturedSingle" href="/opioid/index.php" >
+                            Opioid Prevention                          </a>
+                      </li>
+                                          <li>
+                          <a class="capturedSingle" href="/topics/index.php#summer-safety" >
+                            Summer Safety                          </a>
+                      </li>
+                                          <li>
+                          <a class="capturedSingle" href="/policy-intergovernmental-affairs/vital-records/index.php" >
+                            Vital Records                          </a>
+                      </li>
+                                          <li>
+                          <a class="capturedSingle" href="/yrbs/index.php" >
+                            Youth Risk Behavioral Survey (YRBS)                          </a>
+                      </li>
+                                    </ul>
+                </li>
+                                          <li class="dropdown mega-menu" id="divisions-mega-menu"><a class="dropdown-toggle" href="#">DIVISIONS</a>
+                  <ul class="dropdown-menu divisions-dropdown-menu">
+                    <li>
+                      <div class="row">
+                                                  <div class="col-sm-3">
+                                                                                          <h3><a href="/az-state-hospital/index.php" class="headerlink">Arizona State Hospital</a></h3>
+                                <ul>
+                                                                      <li>
+                                      <a href="/az-state-hospital/index.php#patients-families-home" >
+                                        Patients &amp; Families                                      </a>
+                                    </li>
+                                                                      <li>
+                                      <a href="/az-state-hospital/index.php#acptc-home" >
+                                        Arizona Community Protection and Treatment Center (ACPTC)                                      </a>
+                                    </li>
+                                                                      <li>
+                                      <a href="/az-state-hospital/index.php#cfe" >
+                                        Center for Psychiatric Excellence                                      </a>
+                                    </li>
+                                                                      <li>
+                                      <a href="/az-state-hospital/index.php#volunteers-donations" >
+                                        Volunteer Services &amp; Charitable Donations                                      </a>
+                                    </li>
+                                                                  </ul>
+                                                                                                                    <h3><a href="/director/index.php" class="headerlink">Director's Office</a></h3>
+                                <ul>
+                                                                      <li>
+                                      <a href="/about.php" >
+                                        About Us                                      </a>
+                                    </li>
+                                                                      <li>
+                                      <a href="/director/reports/index.php" >
+                                        Agency Reports                                      </a>
+                                    </li>
+                                                                      <li>
+                                      <a href="/operations/managing-excellence/index.php" >
+                                        Office of Strategic Initiatives                                      </a>
+                                    </li>
+                                                                      <li>
+                                      <a href="/director/index.php#legislative-services" >
+                                        Legislative Services                                      </a>
+                                    </li>
+                                                                      <li>
+                                      <a href="/director/request-info-records/index.php" >
+                                        Request Information, Records, or Data                                      </a>
+                                    </li>
+                                                                  </ul>
+                                                                                                                                                                                                                                                                                                                                                            </div>
+                                                <div class="col-sm-3">
+                                                                                                                                                                                                      <h3><a href="/licensing/index.php" class="headerlink">Licensing</a></h3>
+                                <ul>
+                                                                      <li>
+                                      <a href="/licensing/index.php#azcarecheck" >
+                                        License History Search                                      </a>
+                                    </li>
+                                                                      <li>
+                                      <a href="https://app.azdhs.gov/ls/online_complaint/onlinecomplaint.aspx" >
+                                        Online Complaint Forms                                      </a>
+                                    </li>
+                                                                      <li>
+                                      <a href="https://licensing.azdhs.gov/LicensingOnline/" >
+                                        Online Provider Services                                      </a>
+                                    </li>
+                                                                      <li>
+                                      <a href="/licensing/index.php#databases" >
+                                        Provider &amp; Facility Databases                                      </a>
+                                    </li>
+                                                                      <li>
+                                      <a href="/gis/adhs-licensed-facilities/index.php" >
+                                        Map of Health and Child Care Facilities                                      </a>
+                                    </li>
+                                                                      <li>
+                                      <a href="/licensing/childcare-facilities/index.php" >
+                                        Child Care Licensing                                      </a>
+                                    </li>
+                                                                      <li>
+                                      <a href="/licensing/radiation-regulatory/index.php" >
+                                        Bureau of Radiation Control                                      </a>
+                                    </li>
+                                                                      <li>
+                                      <a href="/licensing/bbhl-facilities/index.php" >
+                                        Behavioral Health Facilities Licensing                                      </a>
+                                    </li>
+                                                                      <li>
+                                      <a href="/licensing/ltc-facilities/index.php" >
+                                        Long-Term Care Licensing                                      </a>
+                                    </li>
+                                                                      <li>
+                                      <a href="/licensing/medical-facilities/index.php" >
+                                        Medical Facilities Licensing                                      </a>
+                                    </li>
+                                                                      <li>
+                                      <a href="/licensing/residential-facilities/index.php" >
+                                        Assisted Living Facilities Licensing                                      </a>
+                                    </li>
+                                                                      <li>
+                                      <a href="/licensing/blpo/index.php" >
+                                        Professions & Occupations                                      </a>
+                                    </li>
+                                                                      <li>
+                                      <a href="/licensing/marijuana/index.php" >
+                                        Marijuana Licensing                                      </a>
+                                    </li>
+                                                                      <li>
+                                      <a href="/licensing/index.php#license-revocations" >
+                                        Professional License Revocations                                      </a>
+                                    </li>
+                                                                      <li>
+                                      <a href="/licensing/index.php#forms" >
+                                        License Application Forms                                      </a>
+                                    </li>
+                                                                      <li>
+                                      <a href="/licensing/index.php#emergency-waivers" >
+                                        Emergency Waivers                                      </a>
+                                    </li>
+                                                                  </ul>
+                                                                                                                                                                                                                                                                                                      </div>
+                                                <div class="col-sm-3">
+                                                                                                                                                                                                                                                            <h3><a href="/operations/index.php" class="headerlink">Planning &amp; Operations</a></h3>
+                                <ul>
+                                                                      <li>
+                                      <a href="/operations/financial-services/index.php" >
+                                        Financial Services                                      </a>
+                                    </li>
+                                                                      <li>
+                                      <a href="/operations/human-resources/index.php" >
+                                        Human Resources                                      </a>
+                                    </li>
+                                                                      <li>
+                                      <a href="/operations/index.php#information-technology" >
+                                        Information Technology Services                                      </a>
+                                    </li>
+                                                                      <li>
+                                      <a href="/operations/financial-services/procurement/index.php" >
+                                        Procurement                                      </a>
+                                    </li>
+                                                                  </ul>
+                                                                                                                    <h3><a href="/policy-intergovernmental-affairs/index.php" class="headerlink">Policy and Intergovernmental Affairs</a></h3>
+                                <ul>
+                                                                      <li>
+                                      <a href="/policy-intergovernmental-affairs/vital-records/index.php" >
+                                        Vital Records                                      </a>
+                                    </li>
+                                                                      <li>
+                                      <a href="/policy-intergovernmental-affairs/index.php#public-information" >
+                                        Public Information                                      </a>
+                                    </li>
+                                                                      <li>
+                                      <a href="/policy-intergovernmental-affairs/communications/index.php" >
+                                        Communications                                      </a>
+                                    </li>
+                                                                      <li>
+                                      <a href="/policy-intergovernmental-affairs/tribal-liaison/index.php" >
+                                        Tribal Health                                      </a>
+                                    </li>
+                                                                      <li>
+                                      <a href="/policy-intergovernmental-affairs/border-health/index.php" >
+                                        Border Health                                      </a>
+                                    </li>
+                                                                      <li>
+                                      <a href="/policy-intergovernmental-affairs/health-equity/index.php" >
+                                        Health Equity                                      </a>
+                                    </li>
+                                                                      <li>
+                                      <a href="/policy-intergovernmental-affairs/administrative-counsel-rules/index.php" >
+                                        Administrative Counsel &amp; Rules                                      </a>
+                                    </li>
+                                                                      <li>
+                                      <a href="/policy-intergovernmental-affairs/index.php#community-integration" >
+                                        Community Integration Officer                                      </a>
+                                    </li>
+                                                                      <li>
+                                      <a href="/policy-intergovernmental-affairs/tribal-liaison/index.php" >
+                                        County Health Liaison                                      </a>
+                                    </li>
+                                                                      <li>
+                                      <a href="/policy-intergovernmental-affairs/index.php#public-health-reporting-registries" >
+                                        Public Health Reporting &amp; Registries                                      </a>
+                                    </li>
+                                                                  </ul>
+                                                                                                                                                                                          </div>
+                                                <div class="col-sm-3">
+                                                                                                                                                                                                                                                                                                                                                                        <h3><a href="/preparedness/index.php" class="headerlink">Preparedness</a></h3>
+                                <ul>
+                                                                      <li>
+                                      <a href="/preparedness/bureau-of-infectious-disease-and-services/index.php" >
+                                        Bureau of Infectious Disease and Services                                      </a>
+                                    </li>
+                                                                      <li>
+                                      <a href="/preparedness/epidemiology-disease-control/index.php" >
+                                        Epidemiology &amp; Disease Control                                      </a>
+                                    </li>
+                                                                      <li>
+                                      <a href="/preparedness/operational-readiness-response/index.php" >
+                                        Operational Readiness and Response                                      </a>
+                                    </li>
+                                                                      <li>
+                                      <a href="/preparedness/office-of-rapid-response/index.php" >
+                                        Office of Rapid Response Disease Investigation                                      </a>
+                                    </li>
+                                                                      <li>
+                                      <a href="/preparedness/emergency-medical-services-trauma-system/index.php" >
+                                        Emergency Medical Services &amp; Trauma System                                      </a>
+                                    </li>
+                                                                      <li>
+                                      <a href="/preparedness/state-laboratory/index.php" >
+                                        State Laboratory Services                                      </a>
+                                    </li>
+                                                                      <li>
+                                      <a href="/preparedness/public-health-statistics/index.php" >
+                                        Public Health Statistics                                      </a>
+                                    </li>
+                                                                      <li>
+                                      <a href="/preparedness/epidemiology-disease-control/smoke-free-arizona/index.php" >
+                                        Smoke-Free Arizona                                      </a>
+                                    </li>
+                                                                  </ul>
+                                                                                                                    <h3><a href="/prevention/index.php" class="headerlink">Prevention</a></h3>
+                                <ul>
+                                                                      <li>
+                                      <a href="/prevention/chronic-disease/index.php" >
+                                        Chronic Disease and Health Promotion                                      </a>
+                                    </li>
+                                                                      <li>
+                                      <a href="/prevention/health-systems-development/index.php" >
+                                        Health Systems Development                                      </a>
+                                    </li>
+                                                                      <li>
+                                      <a href="/prevention/healthy-people-healthy-communities/index.php" >
+                                        Healthy People Healthy Communities IGA                                      </a>
+                                    </li>
+                                                                      <li>
+                                      <a href="/prevention/womens-childrens-health/index.php" >
+                                        Women's &amp; Children's Health                                      </a>
+                                    </li>
+                                                                      <li>
+                                      <a href="/prevention/nutrition-physical-activity/index.php" >
+                                        Nutrition and Physical Activity                                      </a>
+                                    </li>
+                                                                      <li>
+                                      <a href="/prevention/chronic-disease/tobacco-free-az/index.php" >
+                                        Tobacco Free Arizona                                      </a>
+                                    </li>
+                                                                      <li>
+                                      <a href="/yrbs/index.php" >
+                                        Youth Risk Behavioral Survey (YRBS)                                      </a>
+                                    </li>
+                                                                  </ul>
+                                                                              </div>
+                                            </div>
+                    </li>
+                  </ul>
+                </li>
+                                                  <li class="nav-item border-end p-3">
+              <a class="nav-link text-uppercase fs-6 fw-lighter ps-4 pe-4" aria-current="page" href="https://data.azdhs.gov/?utm_source=adhs_website&utm_medium=menu&utm_campaign=data_portal_launch&utm_id=adhs_data_porta_oct_2024_launch&utm_term=data_portal_menu" target="_blank" style="font-size: 1em !important; padding-left: 20px !important;padding-right: 20px !important;">
+                Data Portal
+              </a>
+            </li>
+            <li class="dropdown mega-menu"><a href="#" class="dropdown-toggle">A-Z INDEX</a>
+              <ul class="dropdown-menu">
+                <li>
+                  <div class="row a-z-menu">
+                    <ul class="a-z-list">
+                                              <li><a href="/a-to-z/index.php?pg=a">A</a></li>
+                                              <li><a href="/a-to-z/index.php?pg=b">B</a></li>
+                                              <li><a href="/a-to-z/index.php?pg=c">C</a></li>
+                                              <li><a href="/a-to-z/index.php?pg=de">D</a></li>
+                                              <li><a href="/a-to-z/index.php?pg=de">E</a></li>
+                                              <li><a href="/a-to-z/index.php?pg=fg">F</a></li>
+                                              <li><a href="/a-to-z/index.php?pg=fg">G</a></li>
+                                              <li><a href="/a-to-z/index.php?pg=h">H</a></li>
+                                              <li><a href="/a-to-z/index.php?pg=i">I</a></li>
+                                              <li><a href="/a-to-z/index.php?pg=jkl">J</a></li>
+                                              <li><a href="/a-to-z/index.php?pg=jkl">K</a></li>
+                                              <li><a href="/a-to-z/index.php?pg=jkl">L</a></li>
+                                              <li><a href="/a-to-z/index.php?pg=mno">M</a></li>
+                                              <li><a href="/a-to-z/index.php?pg=mno">N</a></li>
+                                              <li><a href="/a-to-z/index.php?pg=mno">O</a></li>
+                                              <li><a href="/a-to-z/index.php?pg=pq">P</a></li>
+                                              <li><a href="/a-to-z/index.php?pg=pq">Q</a></li>
+                                              <li><a href="/a-to-z/index.php?pg=r">R</a></li>
+                                              <li><a href="/a-to-z/index.php?pg=s">S</a></li>
+                                              <li><a href="/a-to-z/index.php?pg=tuv">T</a></li>
+                                              <li><a href="/a-to-z/index.php?pg=tuv">U</a></li>
+                                              <li><a href="/a-to-z/index.php?pg=tuv">V</a></li>
+                                              <li><a href="/a-to-z/index.php?pg=wxyz">W</a></li>
+                                              <li><a href="/a-to-z/index.php?pg=wxyz">X</a></li>
+                                              <li><a href="/a-to-z/index.php?pg=wxyz">Y</a></li>
+                                              <li><a href="/a-to-z/index.php?pg=wxyz">Z</a></li>
+                      
+                    </ul>
+                  </div>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+      </div>
+
+
+
+      <!-- /Top Nav -->
+    </div><!-- /.container -->
+  </header>
+  <!-- /Top Nav -->
+</div><!-- end .header -->
+
+ 
+<!-- begin breadcrumbs -->
+      <section class="page-title hidden-xs">
+        <div class="container">
+
+          <header>
+
+            <h2>Page or Document Not Found</h2>
+            <!-- /Page Title -->
+
+            <ul class="breadcrumb hidden-xs"><!-- breadcrumb -->
+              <li><a href="/index.php">ADHS Home</a></li>
+
+              <li>Page or Document Not Found</li>
+            </ul><!-- /breadcrumb -->
+
+          </header>
+        </div>
+      </section>
+<!-- end breadcrumbs -->
+
+<!-- begin content -->
+
+      <section class="content">
+       <div class="container">
+
+
+       <div class="row">
+
+
+         <p class="text-center">You will be automatically re-directed to our Search ADHS page in a few seconds.</p>
+         <p class="text-center">If you don't want to wait, you may immediately go to the <a href="/search/index.php">Search ADHS page</a>.</p>
+
+       </div><!-- end .row -->
+
+
+
+       </div><!-- end .container -->
+    </section>
+
+<!-- end content -->
+
+
+<style>
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+</style>
+<div id="footer-main-bg">
+  <div class="container">
+    <div id="footer-main">
+      <div id="footer-main-logos">
+        <div class="azdhs-logo">
+          <img src="/assets/images/home-page/logo-50th-anniversary.png" title="50 Years of Health & Wellness" alt="50 Years of Health & Wellness"/>
+        </div>
+        <div class="azdhs-board-logo">
+          <img src="/assets/images/home-page/logo-hawp-award-platinum.png" title="HAWP Award Platinum" alt="HAWP Award Platinum"/>
+          <img src="/assets/images/home-page/logo-gold-seal-of-ghk-2023-2024.png" title="Gold Seal of Good Health Keeping 2023 - 2024" alt="Gold Seal of Good Health Keeping 2023 - 2024"/>
+          <img src="/assets/images/home-page/logo-phab.png?v=20240503" title="Accredited Health Department - Public Health Accreditation Board" alt="Accredited Health Department - Public Health Accreditation Board"/>
+        </div>
+      </div>
+      <div id="footer-main-content">
+        <div class="row">
+          <div class="col-md-4">
+            <p class="ft-title">Arizona Department of Health Services</p>
+            <address class="ft-content">
+              <a href="https://goo.gl/maps/TIa2N" target="_blank">
+                150 North 18th Avenue<br />
+                Phoenix, Arizona 85007<br />
+              </a>
+            </address>
+
+            <p class="ft-title">Operating hours</p>
+            <p class="ft-content">
+              Monday to Friday<br />
+              8:00 a.m. to 5:00 p.m.<br />
+              Closed weekends and state holidays.
+            </p>
+          </div>
+          <div class="col-md-4">
+            <p class="ft-title">General public information</p>
+            <p class="ft-content">
+              <a href="tel:602-542-1025">
+                <span class="ft-icon"><img src="/assets/images/home-page/phone-icon.svg" alt="Phone Icon" title="Phone" />602-542-1025</span>
+              </a>
+              <span class="ft-icon"><img alt="Fax Icon" title="Fax" src="/assets/images/home-page/fax-icon.svg" />602-542-0883</span>
+              <a href="/about.php">About us</a> | <a href="/director/index.php#org-chart">Org chart</a> | <a href="/operations/human-resources/index.php#careers">Careers</a><br />
+              <a href="/adhs-employees/" title="Employees">Employees</a> | <a href="/contact.php">Contact us</a> | <a href="https://azhealth.gov/pio">Media</a><br /><br />
+              Individuals with hearing or speech challenges, please call <a href="tel:711">711</a> for Relay.
+            </p>
+          </div>
+          <div class="col-md-4">
+            <p class="ft-title">Data & communications</p>
+            <p class="ft-content">
+              <a href="/director/request-info-records/index.php">Request Information, Records, or Data</a><br />
+            </p>
+
+            <p class="ft-content">
+              <a href="/social-media.php">Connect with ADHS</a><br />
+
+              <form id="GD-snippet-form"
+                  action="https://public.govdelivery.com/accounts/AZDHS/subscribers/qualify"
+                  accept-charset="UTF-8"
+                  method="post"
+                  class="ft-form">
+
+              <input name="utf8" type="hidden" value="✓">
+              <input type="hidden" name="authenticity_token" value="LKuRJQtIbQfj0SuEcgbyGe1oAbWWEIMFSh/7JZ/aQKOxhzGAnxHVkbVJUhkD9NfQzSpbPrGGbHBjU65/W56rUQ==">
+              <input type="hidden" name="topic_id" id="topic_id" value="AZDHS_21">
+
+              <label for="email" class="visually-hidden">Email address</label>
+              <input
+                class="form-control ft-input-email"
+                placeholder="Sign up for email updates"
+                type="email"
+                name="email"
+                id="email"
+                aria-label="Sign up for email updates"
+                required>
+
+              <button class="btn ft-input-submit" type="submit" name="commit" value="Submit">
+                <i class="fa fa-envelope" aria-hidden="true"></i>
+                <span class="visually-hidden">Submit</span>
+              </button>
+            </form>
+
+              <a id="languageBtnFooter" href="javascript:void(0);" onclick="showModalGoogle()" data-bs-toggle="modal" data-bs-target="#languageModal">
+                <img class="google-translate" src="/assets/images/home-page/google-translate.png" alt="Google Translate"/>
+              </a>
+            </p>
+          </div>
+        </div>
+        <div class="disclaimer">
+          <p>Any documents contained on this website that are translations from original text written in English are unofficial and not binding on this state or a political subdivision of this state. To learn about how the Arizona Department of Health Services collects information about website users, please review our <a href="/privacy-policy.php">Website Privacy Policy</a>. Los documentos que son traducciones al Español y que se encuentran en esta página Web no tienen validez oficial ni legal en este Estado o en alguna entidad politica del mismo. © 2009 to 2025, Arizona Department of Health Services.</p>
+
+          <p>The Arizona Department of Health Services' public meeting notices and agendas are posted in the lobby of the Department and on the <a href="/director/administrative-counsel-rules/index.php#public-meeting-notices">public meeting notices</a> page.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="footer-social-bg">
+  <div class="container">
+    <div id="footer-social">
+      <a class="nav-link" href="http://www.twitter.com/azdhs" title="Twitter">
+        <img src="/assets/images/sm/twitter-32X32.png?v=2.0" alt="Twitter" class="img-responsive" alt=""/>
+      </a>
+      <a class="nav-link" href="https://www.facebook.com/azdhs" title="Facebook">
+        <img src="/assets/images/sm/facebook-32X32.png?v=2.0" alt="Facebook" class="img-responsive"/>
+      </a>
+      <a class="nav-link" href="http://www.youtube.com/azdhs" title="YouTube">
+        <img src="/assets/images/sm/youtube-32X32.png?v=2.0" alt="YouTube" class="img-responsive"/>
+      </a>
+      <a class="nav-link" href="http://directorsblog.health.azdhs.gov/" title="blog">
+        <img src="/assets/images/sm/blog-32X32.png?v=2.0" alt="Blog" class="img-responsive"/>
+      </a>
+      <a class="nav-link" href="http://pinterest.com/azdhs/" title="Pinterest">
+        <img src="/assets/images/sm/pinterest-32X32.png?v=2.0" alt="Pinterest" class="img-responsive"/>
+      </a>
+      <a class="nav-link" href="http://instagram.com/azdhs/" title="Instagram">
+        <img src="/assets/images/sm/instagram-32x32.png?v=2.0" alt="Instagram" class="img-responsive"/>
+      </a>
+      <a class="nav-link" href="https://www.linkedin.com/company/arizona-department-of-health-services/" title="Linkedin">
+        <img src="/assets/images/sm/linkedin-32x32.png?v=2.0" alt="Linkedin" class="img-responsive"/>
+      </a>
+      <a class="nav-link" href="https://public.govdelivery.com/accounts/AZDHS/subscriber/topics?qsp=CODE_RED" title="email">
+        <img src="/assets/images/sm/email-32x32.png?v=2.0" alt="email" class="img-responsive" />
+      </a>
+      <a class="nav-link" href="https://www.flickr.com/photos/azdhs" title="Flickr">
+        <img src="/assets/images/sm/flickr-32x32.png?v=2.0" alt="Flickr" class="img-responsive" />
+      </a>
+    </div>
+  </div>
+</div>
+
+<div id="footer-logo-bg">
+  <div class="container">
+    <div id="footer-logo">
+      <div class="section-adhs-footer-logos">
+        <img src="/assets/images/adhs-logo.png" class="" alt="AZDHS - Logo"/>
+        <img src="/assets/images/az-logos/az-generic-logo-white.png" class="az-footer-generic-logo" alt="AZDHS - Logo"/>
+      </div>
+      <p>&copy; 2009 - 2025 Arizona Department of Health Services. All rights reserved.</p>
+    </div>
+  </div>
+</div>
+
+
+
+<a href="#" id="toTop"></a>
+</div><!-- end #wrapper -->
+
+
+<!-- begin scripts -->
+<!-- these scripts are used sitewide, add local scripts to affected pages -->
+
+
+<script type="text/javascript" src="/assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="/assets/plugins/magnific-popup/jquery.magnific-popup.min.js"></script>
+<script type="text/javascript" src="/assets/js/scripts.js?v=2024-03-22-02"></script>
+<script type="text/javascript" src="/assets/plugins/holder.js"></script>
+<script type="text/javascript" src="/assets/js/jquery.fancybox.js"></script>
+<script type="text/javascript" src="/assets/js/viewportDetect.js"></script>
+<script type="text/javascript" src="/assets/js/custom.js?v=2024-03-22-01"></script>
+<script type="text/javascript" src="/assets/js/jquery.tablesorter.js"></script>
+<!-- <script type="text/javascript" src="https://code.jquery.com/mobile/1.5.0-rc1/jquery.mobile-1.5.0-rc1.min.js"></script> -->
+<script type="text/javascript" src="/assets/plugins/datatables/datatables.min.js"></script>
+
+<!-- Lite Tooltip -->
+<script type="text/javascript" src="/assets/js/litetooltip.js"></script>
+
+<!-- begin Bootstrap script initializations -->
+<script>
+  $(function() {
+    var navTabsFirst = $('.nav-tabs a:first');
+    if(navTabsFirst.length) {
+      navTabsFirst.tab('show');
+    } // activates display of first tab
+  });
+</script>
+
+<script>
+  //Determine if we are on a mobile device, or not. This is used later.
+
+  if (screen.width > 767) {
+    (function() {
+      var uv = document.createElement('script');
+      uv.type = 'text/javascript';
+      uv.async = true;
+      uv.src = '//widget.uservoice.com/qLtw9CxMNKoARWpwSZkrzQ.js';
+      var s = document.getElementsByTagName('script')[0];
+      s.parentNode.insertBefore(uv, s)
+    })();
+  }
+</script>
+
+<!-- end uservoice script -->
+<!-- //Director's Twitter Link Fix// -->
+<script>
+  $(function() {
+
+    $('#twitter-link-blog').removeAttr('class');
+    $('#twitter-link-blog').attr('target', '_blank');
+
+  });
+</script>
+<!-- /////////////////////////////// -->
+<!-- Twitter universal website tag code -->
+<script>
+  ! function(e, t, n, s, u, a) {
+    e.twq || (s = e.twq = function() {
+        s.exe ? s.exe.apply(s, arguments) : s.queue.push(arguments);
+      }, s.version = '1.1', s.queue = [], u = t.createElement(n), u.async = !0, u.src = '//static.ads-twitter.com/uwt.js',
+      a = t.getElementsByTagName(n)[0], a.parentNode.insertBefore(u, a))
+  }(window, document, 'script');
+  // Insert Twitter Pixel ID and Standard Event data below
+  twq('init', 'nxhwf');
+  twq('track', 'PageView');
+</script>
+<!-- End Twitter universal website tag code --> <script async src="https://www.googletagmanager.com/gtag/js?id=G-KPBR0SR9M2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-KPBR0SR9M2');
+</script>
+
+<!-- end scripts -->
+
+</body>
+</html>

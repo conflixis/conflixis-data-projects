@@ -1,0 +1,314 @@
+{
+  "timestamp": "2025-08-28T09:37:33.334395",
+  "total_attempted": 42,
+  "successful": 11,
+  "already_exist": 0,
+  "failed": 31,
+  "results": [
+    {
+      "success": true,
+      "org": "Allina Health",
+      "url": "https://www.allinahealth.org/-/media/allina-health/files/research/outside-interests-and-conflicts-management-policy_sys-final.pdf",
+      "filename": "data/raw/policies/Allina_Health_ad2447b0.pdf",
+      "size": 802453,
+      "status": "downloaded"
+    },
+    {
+      "success": true,
+      "org": "Baystate Health",
+      "url": "https://www.baystatehealth.org/~/media/files/about-us/community-programs/conflict-of-interest-policy.pdf",
+      "filename": "data/raw/policies/Baystate_Health_250802b1.pdf",
+      "size": 145852,
+      "status": "downloaded"
+    },
+    {
+      "success": true,
+      "org": "Cambridge Memorial Hospital",
+      "url": "https://www.cmh.org/sites/default/files/2024-11/Policy%202-A-36_1.pdf",
+      "filename": "data/raw/policies/Cambridge_Memorial_Hospital_d9fa4197.pdf",
+      "size": 199010,
+      "status": "downloaded"
+    },
+    {
+      "success": true,
+      "org": "Catholic Health Initiatives",
+      "url": "https://www.catholichealthinitiatives.org/content/dam/chi-national/website/ethics/conflict-of-interest-policy.pdf",
+      "filename": "data/raw/policies/Catholic_Health_Initiatives_c5f26a6b.pdf",
+      "size": 206788,
+      "status": "downloaded"
+    },
+    {
+      "success": true,
+      "org": "Community Health Systems",
+      "url": "https://www.chs.net/wp-content/uploads/2021/03/conflict-of-interest-policy.pdf",
+      "filename": "data/raw/policies/Community_Health_Systems_826cf6c3.pdf",
+      "size": 149929,
+      "status": "downloaded"
+    },
+    {
+      "success": true,
+      "org": "Cone Health",
+      "url": "https://www.conehealth.com/app/files/public/conflict-of-interest-policy.pdf",
+      "filename": "data/raw/policies/Cone_Health_34700c96.pdf",
+      "size": 252457,
+      "status": "downloaded"
+    },
+    {
+      "success": true,
+      "org": "Covenant Health",
+      "url": "https://www.covenanthealth.org/media/file/conflict-of-interest-policy.pdf",
+      "filename": "data/raw/policies/Covenant_Health_8e0a8334.pdf",
+      "size": 209803,
+      "status": "downloaded"
+    },
+    {
+      "success": true,
+      "org": "Einstein Healthcare Network",
+      "url": "https://www.einstein.edu/app/files/public/conflict-of-interest-policy.pdf",
+      "filename": "data/raw/policies/Einstein_Healthcare_Network_10b122d3.pdf",
+      "size": 8321,
+      "status": "downloaded"
+    },
+    {
+      "success": true,
+      "org": "Nuvance Health",
+      "url": "https://www.nuvancehealth.org/sites/default/files/2025-04/Conflict%20of%20Interest%20Policy%20and%20Procedure.pdf",
+      "filename": "data/raw/policies/Nuvance_Health_e843882c.pdf",
+      "size": 154557,
+      "status": "downloaded"
+    },
+    {
+      "success": true,
+      "org": "RWJBarnabas Health",
+      "url": "https://www.rwjbh.org/documents/mmcsc/conflict-of-interest-1-2024.pdf",
+      "filename": "data/raw/policies/RWJBarnabas_Health_2749ad54.pdf",
+      "size": 128385,
+      "status": "downloaded"
+    },
+    {
+      "success": true,
+      "org": "Stanford Health Care",
+      "url": "https://stanfordhealthcare.org/content/dam/SHC/health-care-professionals/medical-staff/annual-physician-education/shctvlpchshctvconflictofinterestpolicyjune2024.pdf",
+      "filename": "data/raw/policies/Stanford_Health_Care_d1f4eb2d.pdf",
+      "size": 302684,
+      "status": "downloaded"
+    },
+    {
+      "success": false,
+      "org": "Advocate Health",
+      "url": "https://www.advocatehealth.com/assets/documents/compliance/conflict-of-interest-policy.pdf",
+      "error": "HTTP 404",
+      "status": "failed"
+    },
+    {
+      "success": false,
+      "org": "Atlantic Health System",
+      "url": "https://www.atlantichealth.org/assets/documents/patients-visitors/conflict-of-interest-policy.pdf",
+      "error": "HTTP 404",
+      "status": "failed"
+    },
+    {
+      "success": false,
+      "org": "Atrium Health Navicent",
+      "url": "https://www.navicenthealth.org/content/dam/atrium/navicent/documents/conflict-of-interest-policy.pdf",
+      "error": "HTTP 404",
+      "status": "failed"
+    },
+    {
+      "success": false,
+      "org": "Aurora Health Care",
+      "url": "https://www.aurorahealthcare.org/patients-visitors/billing-insurance/financial-assistance/documents/conflict-of-interest.pdf",
+      "error": "HTTP 404",
+      "status": "failed"
+    },
+    {
+      "success": false,
+      "org": "Billings Clinic",
+      "url": "https://www.billingsclinic.com/app/files/public/conflict-of-interest-policy.pdf",
+      "error": "HTTP 404",
+      "status": "failed"
+    },
+    {
+      "success": false,
+      "org": "Blanchard Valley Health System",
+      "url": "https://www.bvhealthsystem.org/media/file/conflict-of-interest-policy.pdf",
+      "error": "HTTP 404",
+      "status": "failed"
+    },
+    {
+      "success": false,
+      "org": "Bon Secours",
+      "url": "https://www.bonsecours.com/assets/documents/conflict-of-interest-policy.pdf",
+      "error": "HTTP 404",
+      "status": "failed"
+    },
+    {
+      "success": false,
+      "org": "Cape Cod Healthcare",
+      "url": "https://www.capecodhealth.org/medical-professionals/conflict-of-interest-policy.pdf",
+      "error": "HTTP 404",
+      "status": "failed"
+    },
+    {
+      "success": false,
+      "org": "CarolinaEast Health System",
+      "url": "https://www.carolinaeasthealth.com/app/files/public/8469/Conflict-of-Interest-Policy.pdf",
+      "error": "HTTP 403",
+      "status": "failed"
+    },
+    {
+      "success": false,
+      "org": "Centura Health",
+      "url": "https://www.centura.org/sites/default/files/conflict-of-interest-policy.pdf",
+      "error": "HTTP 404",
+      "status": "failed"
+    },
+    {
+      "success": false,
+      "org": "ChristianaCare",
+      "url": "https://christianacare.org/documents/compliance/conflict-of-interest-policy.pdf",
+      "error": "HTTP 404",
+      "status": "failed"
+    },
+    {
+      "success": false,
+      "org": "Cottage Health",
+      "url": "https://www.cottagehealth.org/app/files/public/conflict-of-interest-policy.pdf",
+      "error": "HTTP 404",
+      "status": "failed"
+    },
+    {
+      "success": false,
+      "org": "DCH Health System",
+      "url": "https://www.dchsystem.com/docs/default-source/compliance/conflict-of-interest-policy.pdf",
+      "error": "HTTP 404",
+      "status": "failed"
+    },
+    {
+      "success": false,
+      "org": "Dartmouth-Hitchcock",
+      "url": "https://www.dartmouth-hitchcock.org/sites/default/files/2021-01/conflict-of-interest-policy.pdf",
+      "error": "HTTP 404",
+      "status": "failed"
+    },
+    {
+      "success": false,
+      "org": "Deaconess Health System",
+      "url": "https://www.deaconess.com/About-Us/Conflict-of-Interest-Policy",
+      "error": "HTTPSConnectionPool(host='www.deaconess.com', port=443): Max retries exceeded with url: /About-Us/Co",
+      "status": "error"
+    },
+    {
+      "success": false,
+      "org": "Eisenhower Health",
+      "url": "https://www.eisenhowerhealth.org/assets/documents/conflict-of-interest-policy.pdf",
+      "error": "HTTP 404",
+      "status": "failed"
+    },
+    {
+      "success": false,
+      "org": "Erlanger Health System",
+      "url": "https://www.erlanger.org/media/file/conflict-of-interest-policy.pdf",
+      "error": "HTTP 404",
+      "status": "failed"
+    },
+    {
+      "success": false,
+      "org": "Essentia Health",
+      "url": "https://www.essentiahealth.org/app/files/public/conflict-of-interest-policy.pdf",
+      "error": "HTTP 404",
+      "status": "failed"
+    },
+    {
+      "success": false,
+      "org": "Fairview Health Services",
+      "url": "https://www.fairview.org/fv/groups/public/documents/content/conflict-of-interest-policy.pdf",
+      "error": "HTTP 404",
+      "status": "failed"
+    },
+    {
+      "success": false,
+      "org": "FirstHealth",
+      "url": "https://www.firsthealth.org/app/files/public/conflict-of-interest-policy.pdf",
+      "error": "HTTP 404",
+      "status": "failed"
+    },
+    {
+      "success": false,
+      "org": "Franciscan Health",
+      "url": "https://www.franciscanhealth.org/docs/default-source/compliance/conflict-of-interest-policy.pdf",
+      "error": "HTTP 404",
+      "status": "failed"
+    },
+    {
+      "success": false,
+      "org": "Gundersen Health System",
+      "url": "https://www.gundersenhealth.org/app/files/public/conflict-of-interest-policy.pdf",
+      "error": "HTTP 404",
+      "status": "failed"
+    },
+    {
+      "success": false,
+      "org": "Hartford HealthCare",
+      "url": "https://hartfordhealthcare.org/file-repository/Compliance/conflict-of-interest-policy.pdf",
+      "error": "HTTP 404",
+      "status": "failed"
+    },
+    {
+      "success": false,
+      "org": "HealthPartners",
+      "url": "https://www.healthpartners.com/ucm/groups/public/@hp/@public/documents/documents/conflict-interest-policy.pdf",
+      "error": "HTTP 404",
+      "status": "failed"
+    },
+    {
+      "success": false,
+      "org": "HonorHealth",
+      "url": "https://www.honorhealth.com/sites/default/files/documents/conflict-of-interest-policy.pdf",
+      "error": "HTTP 404",
+      "status": "failed"
+    },
+    {
+      "success": false,
+      "org": "Houston Methodist",
+      "url": "https://www.houstonmethodist.org/-/media/pdf/for-health-professionals/conflict-of-interest-policy.pdf",
+      "error": "HTTP 404",
+      "status": "failed"
+    },
+    {
+      "success": false,
+      "org": "Huntsville Hospital",
+      "url": "https://www.huntsvillehospital.org/media/conflict-of-interest-policy.pdf",
+      "error": "HTTP 404",
+      "status": "failed"
+    },
+    {
+      "success": false,
+      "org": "IU Health",
+      "url": "https://iuhealth.org/~/media/files/global/compliance/conflict-of-interest-policy.pdf",
+      "error": "HTTP 403",
+      "status": "failed"
+    },
+    {
+      "success": false,
+      "org": "Inova Health System",
+      "url": "https://www.inova.org/upload/docs/About_Inova/conflict-of-interest-policy.pdf",
+      "error": "HTTP 404",
+      "status": "failed"
+    },
+    {
+      "success": false,
+      "org": "JPS Health Network",
+      "url": "https://www.jpshealthnet.org/sites/default/files/conflict_of_interest_policy.pdf",
+      "error": "HTTPSConnectionPool(host='www.jpshealthnet.org', port=443): Max retries exceeded with url: /sites/de",
+      "status": "error"
+    },
+    {
+      "success": false,
+      "org": "Prisma Health",
+      "url": "https://prismahealth.org/getmedia/76a9ff04-3a2a-47d3-9aa0-e503883bca2e/Prisma-Health-Conflict-of-Interest.pdf",
+      "error": "HTTP 403",
+      "status": "failed"
+    }
+  ]
+}

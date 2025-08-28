@@ -1,0 +1,1258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5">
+        <meta name="robots" content="noindex" />
+            <title>Error | SSM Health</title>
+        <meta property="og:title" content="Error | SSM Health" />
+    <link rel="canonical" href="https://www.ssmhealth.com/error" />
+
+    <link href="/SSMHealth/media/Design/Images/favicons/favicon-16.ico" type="image/x-icon" rel="shortcut icon" sizes="16x16" />
+    <link href="/SSMHealth/media/Design/Images/favicons/favicon-16.ico" type="image/x-icon" rel="icon" sizes="16x16" />
+    <link href="/SSMHealth/media/Design/Images/favicons/favicon-32.png" type="image/png" rel="shortcut icon" sizes="32x32" />
+    <link href="/SSMHealth/media/Design/Images/favicons/favicon-32.png" type="image/png" rel="icon" sizes="32x32" />
+    <link href="/SSMHealth/media/Design/Images/favicons/favicon-64.png" type="image/png" rel="shortcut icon" sizes="64x64" />
+    <link href="/SSMHealth/media/Design/Images/favicons/favicon-64.png" type="image/png" rel="icon" sizes="64x64" />
+ 
+    <link rel="preload" href="/js/compiled/scripts/loadScripts.min.js.gz" as="script" />
+    <script type="text/javascript" src="/js/compiled/scripts/loadScripts.min.js.gz"></script>
+    <script>
+        window.UserContextAsync = new Promise(function (resolve) {
+            if (window.UserContext) {
+                resolve(window.UserContext);
+            }
+            fetch("/api/Location/GetUserContext").then(x => x.json()).then(x => {
+                window.UserContext = x;
+                resolve(x);
+            });
+        });
+    </script>
+
+        <link rel="preload" href="" as="image" fetchpriority="high" />
+
+    
+<!-- Prefetch DNS for external assets -->
+<!-- Preload Anything important for initial rendering (CSS Related) -->
+<link href="/css/compiled/legacy-bundle/legacy.min.css.gz?v=9xSq05vu6cUFvG1tomhQQaCgXBwUvqVr4ZT_FXX6hSY" rel="preload" as="style" />
+
+
+    <link rel="preload" href="/css/compiled/header-bundle/styles-bundle.min.css.gz?v=CqbvJlytwhwpgXBJshcNQFKg_Fqyf1TKs8jrbTvn3o8" as="style" />
+
+
+
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600&display=swap" rel="preload" as="style" type="text/css" />
+
+
+<link href="/js/compiled/scripts/jquery/jquery.min.js.gz?v=Is6FoEvFW8CvJgHR3myV89docGYF8pPFtZDWYZgmtTY" rel="preload" as="script" />
+<link href="/js/compiled/scripts/jquery.unobtrusive.ajax/jquery.unobtrusive-ajax.min.js.gz?v=wAtfBeEGqN-Uwr9hPq6VKx6xy2v4pqxmldakc_3-2LM" rel="preload" as="script" />
+<link href="/js/compiled/scripts/updatableFormHelper.min.js.gz?v=5cYbcMcNRDhy07s2XvEKVOUACBSRkUJjR2e-2ghiXJ4" rel="preload" as="script" />
+<link href="/js/compiled/scripts/inputmask.min.js.gz?v=T-0iAAGaUqXRhJw53EZPwSyMtbNclFaL7o3fFf3AML8" rel="preload" as="script" />
+
+<link href="/js/compiled/scripts/jquery.validate/jquery.validate.min.js.gz?v=BlpRNEaMu3ehbd3nTMOYg2rLBIoaXKuMIkYH5-ZkpzE" rel="preload" as="script" />
+<link href="/js/compiled/scripts/file-uploader.js?v=mmEC9zfJ3DfFew4UAexo6QvpVPQU79evVOXCb16mZuI" rel="preload" as="script" />
+<link href="/js/compiled/scripts/run-queued-scripts.min.js.gz" rel="preload" as="script" />
+
+    <link href="/js/compiled/footer-bundle/bundleJSFooter.min.js.gz?v=Z9HvT_TG00o7G8sNeDV_Jx6K9Qsp4m1XtvI6Y799JwI" rel="preload" as="script" />
+
+
+
+<link rel="modulepreload" href="https://cdn.jsdelivr.net/npm/@geocodeearth/autocomplete-element/dist/bundle.js" crossorigin='anonymous' />
+<link rel="preload" href="https://resources.static.evaliahealth.com/evalia-implementation-kit/evalia.js" as="script" />
+
+<link href="https://mychart.ssmhc.com/MyChart/Scripts/lib/Widget/widget_sdk.js" rel="preload" as="script" />
+
+
+
+<link rel="stylesheet" href="/css/compiled/legacy-bundle/legacy.min.css.gz?v=9xSq05vu6cUFvG1tomhQQaCgXBwUvqVr4ZT_FXX6hSY" />
+<link rel="stylesheet" href="/css/compiled/components/zebra_datepicker.min.css?v=uL_Y0jQX3bizYGBDAbKBeemieNyDV3rphE172vL1nXY"  />
+
+
+
+    <link rel="stylesheet" href="/css/compiled/header-bundle/styles-bundle.min.css.gz?v=CqbvJlytwhwpgXBJshcNQFKg_Fqyf1TKs8jrbTvn3o8" />
+
+
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600&display=swap" media="print" onload="this.media='all'" />
+
+    <script src="/js/compiled/scripts/jquery/jquery.min.js.gz?v=Is6FoEvFW8CvJgHR3myV89docGYF8pPFtZDWYZgmtTY"></script>
+    <script type="text/javascript">
+        LoadScriptOnceNow([
+            { src: "https://mychart.ssmhc.com/MyChart/Scripts/lib/Widget/widget_sdk.js", head: true }
+            , { src: "/js/compiled/scripts/file-uploader.js?v=mmEC9zfJ3DfFew4UAexo6QvpVPQU79evVOXCb16mZuI", head: true }
+            , { src: "/js/compiled/scripts/inputmask.min.js.gz?v=T-0iAAGaUqXRhJw53EZPwSyMtbNclFaL7o3fFf3AML8", head: true }
+            , { src: "/js/compiled/scripts/updatableFormHelper.min.js.gz?v=5cYbcMcNRDhy07s2XvEKVOUACBSRkUJjR2e-2ghiXJ4", head: true }
+            // , { src: "/FormBuilder/Public/formComponents.min.js.gz?v=OAjTu0e0wHsqauYyouX7DE2tz0q7mDacMpAmo9hf8b8", head: true }
+        ])
+    </script>
+    <script src="/FormBuilder/Public/formComponents.min.js.gz?v=OAjTu0e0wHsqauYyouX7DE2tz0q7mDacMpAmo9hf8b8"></script>
+
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+<script src="/js/compiled/components/anchor-nav.js"></script>
+
+    
+    
+
+    <script type="application/ld+json">
+        {
+            "@context": "http://schema.org",
+            "@type": "Organization",
+            "url": "https://www.ssmhealth.com/",
+            "name": "SSM Health",
+            "logo": "https://www.ssmhealth.com/SSMHealth/media/Images/About%20SSM%20Health/archive-logos/ssm-health-logo.png",
+            "sameAs": [
+                "https://www.facebook.com/ssmhealth",
+                "https://www.youtube.com/user/SSMHC/",
+                "https://twitter.com/ssmhealth",
+                "https://www.instagram.com/ssm_health/",
+                "https://www.linkedin.com/company/ssm-health-care"
+            ],
+            "contactPoint": [
+                {
+                    "@type": "ContactPoint",
+                    "telephone": "+1-314-994-7800",
+                    "contactType": "Customer Service"
+                }
+            ]
+        }
+    </script>
+
+    
+
+    <script type="application/ld+json">
+    {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.ssmhealth.com/"},{"@type":"ListItem","position":2,"name":"Error","item":"https://www.ssmhealth.com/error"}]}
+</script>
+    <script src="/js/compiled/scripts/LocationByIP.min.js.gz"></script>
+    <script type="text/javascript">
+    function loadUserLocationHeap(region) {
+        let userRegionObject = region ?? {
+            ZipCode: "No value",
+            Latitude: "0",
+            Longitude: "0",
+            DisplayName: "No value",
+            RegionNames: ["Global","NoRegion"],
+            ParentRegionNames: ["Global","NoRegion"]
+        };
+        if (userRegionObject.RegionNames.length === 0)
+        {
+            return;
+        }
+        let userRegionFormatted = JSON.stringify(userRegionObject);
+        let userRegionInfo = JSON.parse(userRegionFormatted);
+        window.heapReadyCb = window.heapReadyCb || [], window.heap = window.heap || [], heap.load = function (e, t) {
+            window.heap.envId = e, window.heap.clientConfig = t = t || {}, window.heap.clientConfig.shouldFetchServerConfig = !1;
+            var a = document.createElement("script");
+            a.type = "text/javascript", a.async = !0, a.src = "https://cdn.us.heap-api.com/config/" + e + "/heap_config.js";
+            var r = document.getElementsByTagName("script")[0];
+            r.parentNode.insertBefore(a, r);
+            var n = ["init", "startTracking", "stopTracking", "track", "resetIdentity", "identify", "identifyHashed", "getSessionId", "getUserId", "getIdentity", "addUserProperties", "addEventProperties", "removeEventProperty", "clearEventProperties", "addAccountProperties", "addAdapter", "addTransformer", "addTransformerFn", "onReady", "addPageviewProperties", "removePageviewProperty", "clearPageviewProperties", "trackPageview"],
+                i = function (e) {
+                    return function () {
+                        var t = Array.prototype.slice.call(arguments, 0);
+                        window.heapReadyCb.push({
+                            name: e, fn: function () {
+                                heap[e] && heap[e].apply(heap, t)
+                            }
+                        })
+                    }
+                };
+            for (var p = 0; p < n.length; p++) heap[n[p]] = i(n[p])
+        };
+        heap.load("1996611381", {supportedDomains: ['ssmhealth.com', 'carefinder.io'], enableSecureCookies: true});
+        heap.addUserProperties(userRegionInfo);
+    }
+    
+    if (true) {
+        console.log("Attempt to load via lat lon");
+        GetLocationByIP().then(function (data) {
+            if (data.okay) {
+                fetch("/api/location/GetUserLocation",
+                    {
+                        method: "POST",
+                        body: JSON.stringify(
+                            {
+                                lat: data.data.latitude,
+                                lng: data.data.longitude,
+                                displayname: data.data.city + ', ' + data.data.region,
+                                zip: data.data.postal
+                            }
+                        ),
+                        headers: {
+                            'Accept': 'application/json',
+                            'Content-Type': 'application/json'
+                        }
+                    }).then(
+                    function (response) {
+                        if (response.ok) {
+                            return response.json();
+                        } else {
+                            throw response.text();
+                        }
+                    }
+                ).then(function (json) {
+                    let userRegionObject = {
+                        ZipCode: json.zipCode,
+                        Latitude: json.latitude,
+                        Longitude: json.longitude,
+                        DisplayName: json.displayName,
+                        RegionNames: JSON.stringify(json.regions),
+                        ParentRegionNames: JSON.stringify(json.parentRegions)
+                    };
+                    loadUserLocationHeap(userRegionObject);
+                }).catch(function (data) {
+                    console.error(data);
+                });
+            } else {
+                console.error(data);
+            }
+        }).catch(function (data) {
+            console.error(data);
+        })
+    } else {
+        loadUserLocationHeap();
+    }
+
+</script>
+<script type="text/javascript">!function(T,l,y){var S=T.location,k="script",D="instrumentationKey",C="ingestionendpoint",I="disableExceptionTracking",E="ai.device.",b="toLowerCase",w="crossOrigin",N="POST",e="appInsightsSDK",t=y.name||"appInsights";(y.name||T[e])&&(T[e]=t);var n=T[t]||function(d){var g=!1,f=!1,m={initialize:!0,queue:[],sv:"5",version:2,config:d};function v(e,t){var n={},a="Browser";return n[E+"id"]=a[b](),n[E+"type"]=a,n["ai.operation.name"]=S&&S.pathname||"_unknown_",n["ai.internal.sdkVersion"]="javascript:snippet_"+(m.sv||m.version),{time:function(){var e=new Date;function t(e){var t=""+e;return 1===t.length&&(t="0"+t),t}return e.getUTCFullYear()+"-"+t(1+e.getUTCMonth())+"-"+t(e.getUTCDate())+"T"+t(e.getUTCHours())+":"+t(e.getUTCMinutes())+":"+t(e.getUTCSeconds())+"."+((e.getUTCMilliseconds()/1e3).toFixed(3)+"").slice(2,5)+"Z"}(),iKey:e,name:"Microsoft.ApplicationInsights."+e.replace(/-/g,"")+"."+t,sampleRate:100,tags:n,data:{baseData:{ver:2}}}}var h=d.url||y.src;if(h){function a(e){var t,n,a,i,r,o,s,c,u,p,l;g=!0,m.queue=[],f||(f=!0,t=h,s=function(){var e={},t=d.connectionString;if(t)for(var n=t.split(";"),a=0;a<n.length;a++){var i=n[a].split("=");2===i.length&&(e[i[0][b]()]=i[1])}if(!e[C]){var r=e.endpointsuffix,o=r?e.location:null;e[C]="https://"+(o?o+".":"")+"dc."+(r||"services.visualstudio.com")}return e}(),c=s[D]||d[D]||"",u=s[C],p=u?u+"/v2/track":d.endpointUrl,(l=[]).push((n="SDK LOAD Failure: Failed to load Application Insights SDK script (See stack for details)",a=t,i=p,(o=(r=v(c,"Exception")).data).baseType="ExceptionData",o.baseData.exceptions=[{typeName:"SDKLoadFailed",message:n.replace(/\./g,"-"),hasFullStack:!1,stack:n+"\nSnippet failed to load ["+a+"] -- Telemetry is disabled\nHelp Link: https://go.microsoft.com/fwlink/?linkid=2128109\nHost: "+(S&&S.pathname||"_unknown_")+"\nEndpoint: "+i,parsedStack:[]}],r)),l.push(function(e,t,n,a){var i=v(c,"Message"),r=i.data;r.baseType="MessageData";var o=r.baseData;return o.message='AI (Internal): 99 message:"'+("SDK LOAD Failure: Failed to load Application Insights SDK script (See stack for details) ("+n+")").replace(/\"/g,"")+'"',o.properties={endpoint:a},i}(0,0,t,p)),function(e,t){if(JSON){var n=T.fetch;if(n&&!y.useXhr)n(t,{method:N,body:JSON.stringify(e),mode:"cors"});else if(XMLHttpRequest){var a=new XMLHttpRequest;a.open(N,t),a.setRequestHeader("Content-type","application/json"),a.send(JSON.stringify(e))}}}(l,p))}function i(e,t){f||setTimeout(function(){!t&&m.core||a()},500)}var e=function(){var n=l.createElement(k);n.src=h;var e=y[w];return!e&&""!==e||"undefined"==n[w]||(n[w]=e),n.onload=i,n.onerror=a,n.onreadystatechange=function(e,t){"loaded"!==n.readyState&&"complete"!==n.readyState||i(0,t)},n}();y.ld<0?l.getElementsByTagName("head")[0].appendChild(e):setTimeout(function(){l.getElementsByTagName(k)[0].parentNode.appendChild(e)},y.ld||0)}try{m.cookie=l.cookie}catch(p){}function t(e){for(;e.length;)!function(t){m[t]=function(){var e=arguments;g||m.queue.push(function(){m[t].apply(m,e)})}}(e.pop())}var n="track",r="TrackPage",o="TrackEvent";t([n+"Event",n+"PageView",n+"Exception",n+"Trace",n+"DependencyData",n+"Metric",n+"PageViewPerformance","start"+r,"stop"+r,"start"+o,"stop"+o,"addTelemetryInitializer","setAuthenticatedUserContext","clearAuthenticatedUserContext","flush"]),m.SeverityLevel={Verbose:0,Information:1,Warning:2,Error:3,Critical:4};var s=(d.extensionConfig||{}).ApplicationInsightsAnalytics||{};if(!0!==d[I]&&!0!==s[I]){var c="onerror";t(["_"+c]);var u=T[c];T[c]=function(e,t,n,a,i){var r=u&&u(e,t,n,a,i);return!0!==r&&m["_"+c]({message:e,url:t,lineNumber:n,columnNumber:a,error:i}),r},d.autoExceptionInstrumented=!0}return m}(y.cfg);function a(){y.onInit&&y.onInit(n)}(T[t]=n).queue&&0===n.queue.length?(n.queue.push(a),n.trackPageView({})):a()}(window,document,{
+src: "https://js.monitor.azure.com/scripts/b/ai.2.min.js", // The SDK URL Source
+crossOrigin: "anonymous", 
+cfg: { // Application Insights Configuration
+    connectionString: 'InstrumentationKey=a757ce4f-93b0-4166-aeb3-addebef61f58;IngestionEndpoint=https://centralus-2.in.applicationinsights.azure.com/;LiveEndpoint=https://centralus.livediagnostics.monitor.azure.com/;ApplicationId=2d17368c-78d3-4293-800f-b974636f788d'
+}});</script></head>
+<body class="ContentBody ">
+
+    
+        <script type="text/javascript">
+    var InvalidToValidPostalCodes = new Array();
+InvalidToValidPostalCodes["53701"] = "53703"; 
+        OnScriptsLoaded(function () {
+            window["geocodeEarthApiUrl"] = 'https://api.geocode.earth/v1/autocomplete';
+            window["geocodeEarthApiKey"] = 'ge-cac5cc991d70ce5d';
+            window["openSchedulingBaseUrl"] = 'https://mychart.ssmhc.com/MyChart';
+            window["openSchedulingApiKey"] = 'KxhuDwkOHWINTgH';
+        });
+
+    window.osBaseUrlDomain = "https://mychart.ssmhc.com";
+    window.osBaseUrl = "https://mychart.ssmhc.com/MyChart/SignupAndSchedule/EmbeddedSchedule";
+
+    window.osDestinationCriteria = [];
+    window.osBodyScrollBehavior = "no-scroll";
+
+    var WisconsinMammogramDeptIDs = ['130992020068','20018068','100100222','100010222','100200222','100030222','100070222','1300410120222','1309920384207','1309920454207','1309921824207','101700222','20019325'];
+    var WisconsinReplacementVisitType = "2847";
+
+    var OklahomaMammogramDeptIDs = '105000006';
+    var OklahomaReplacementVisitType = "2847";
+
+    window["photoUrlBase"] = "/SSMHealth/provider-photos/";
+
+</script>
+<div id="ipDataApiKey" data-apikey="fd63e44b4aa56d69525d29e4ea742577d54376d37f5287e169f9270a" data-apiUrl="https://api.ipdata.co"></div>
+        
+    
+
+
+
+    <div id="sticky-header">
+        <a class="ADAKeyboardOnly" href="#ADASkipContent">Skip to Document Content</a>
+        
+            
+
+<!--NOINDEX-->
+<div id="alerts-master">
+</div>
+<!--ENDNOINDEX-->
+            
+        
+
+        
+            
+        
+
+        
+
+            
+
+<div class="w-100 container-fluid pl-0" data-ktc-search-exclude>
+	<div id="header" class="row">
+				<div class="row ml-auto mr-3 d-md-none">
+					<div class="col-12">
+						<div id="mobile-location-schedule" class="row m-0">
+							<div class="text-center location p-0">
+								<div id="mobile-my-location" class="toggleLocationPanel open-location-pane d-md-none" role="button">
+									<i class="fas fa-map-marker-alt"></i>
+									<span class="MyLocationDisplay">Arnold, MO</span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+		<div id="logo" class="col-12 col-md-5 p-0">
+            <a title="SSM Health.com homepage link" href="/">
+                    <img title="SSM Health Logo" width="376" height="44" loading="lazy" src="/getmedia/78da3d63-04d1-46a4-bdc6-fc0c8d1b5d95/SSM_Health_Logo_1.png?width=376&amp;height=44&amp;ext=.png" alt="SSM Health Logo" />
+            </a>
+				<button onclick="$(this).children().toggleClass('hidden');$('#primary-navigation').toggleClass('open');$('#primary-navigation').closest('#navigation-container').toggleClass('open');" class="navbar-toggler d-inline-block d-md-none" type="button" aria-controls="primary-navigation" aria-expanded="false" aria-label="Toggle navigation">
+					<i class="fas fa-bars ssm-text-gray"></i>
+				</button>
+		</div>
+
+			<div id="navigation-container" class="col-12 col-md-7 p-0">
+			<div id="top-navigation" role="navigation">
+						<div id="my-location" class="toggleLocationPanel open-location-pane">
+							<i class="fas fa-map-marker-alt"></i>
+							<button type="button" class="MyLocationDisplay">My Location</button>
+						</div>
+				
+					<a role="button" class="d-flex" title="Log into MyChart" href="/mychart">MyChart
+						
+					</a>
+					<a role="button" class="d-none d-md-flex" title="Schedule Online" href="/access/available-online-scheduling-options">Schedule Online
+						
+					</a>
+					<a role="button" class="d-flex" title="Careers" href="https://jobs.ssmhealth.com/us/en">Careers
+						
+					</a>
+					<a role="button" class="d-flex" title="Donate" href="https://www.givetossmhealth.org/">Donate
+						
+					</a>
+
+				<div class="search-box"  data-search-url="/search">
+					<i aria-hidden="true" class="fas fa-search pr-2 ssm-text-gray toggle-search">&nbsp;</i>
+					<div class="searchBox">
+						<label class="sr-only" for="lblSearch">Search for:</label>
+						<input name="lblSearch" type="text" maxlength="1000" id="lblSearch" class="form-control search-field">
+
+                    <button class="SearchButton" aria-label="Search" onclick="Search();">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20.75" height="22.2" viewBox="0 0 20.75 22.2">
+                            <path d="M8.5,3A5.549,5.549,0,0,1,14,8.5,5.549,5.549,0,0,1,8.5,14,5.549,5.549,0,0,1,3,8.5,5.549,5.549,0,0,1,8.5,3m0-3A8.5,8.5,0,1,0,17,8.5,8.493,8.493,0,0,0,8.5,0Z" fill="#008487" />
+                            <path d="M19.3,22.2a1.5,1.5,0,0,1-1.1-.4l-5.9-5.9a1.485,1.485,0,0,1,2.1-2.1l5.9,5.9a1.45,1.45,0,0,1,0,2.1A1.159,1.159,0,0,1,19.3,22.2Z" fill="#008487" />
+                        </svg>
+                    </button>
+					<div id="PredictiveResultsHolder" class="predictiveSearchHolder"></div>
+					</div>
+					<span class="ssm-text-gray toggle-search">Search</span>
+				</div>
+			</div>
+
+			<div id="primary-navigation-container">
+				<nav id="primary-navigation" class="main-navigation navigation" role="navigation" aria-label="main navigation">
+					<button type="button" onclick="$('#primary-navigation').toggleClass('open');$('#primary-navigation').closest('#navigation-container').toggleClass('open');" class="d-md-none close" style="background-color:#fff;" aria-controls="primary-navigation" aria-expanded="false" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+					<div class="mobile-search-box d-md-none">
+						<i aria-hidden="true" class="fas fa-search pr-2 ssm-text-gray toggle-search">&nbsp;</i>
+						<div class="searchBox">
+							<input type="text" maxlength="1000" id="smartSearchBox2" class="form-control search-field">
+							<button class="SearchButton" onclick="Search();">
+								<svg xmlns="http://www.w3.org/2000/svg" width="20.75" height="22.2" viewBox="0 0 20.75 22.2">
+									<path d="M8.5,3A5.549,5.549,0,0,1,14,8.5,5.549,5.549,0,0,1,8.5,14,5.549,5.549,0,0,1,3,8.5,5.549,5.549,0,0,1,8.5,3m0-3A8.5,8.5,0,1,0,17,8.5,8.493,8.493,0,0,0,8.5,0Z" fill="#008487" />
+									<path d="M19.3,22.2a1.5,1.5,0,0,1-1.1-.4l-5.9-5.9a1.485,1.485,0,0,1,2.1-2.1l5.9,5.9a1.45,1.45,0,0,1,0,2.1A1.159,1.159,0,0,1,19.3,22.2Z" fill="#008487" />
+								</svg>
+							</button>
+							<div id="smart2" class="predictiveSearchHolder">
+							</div>
+						</div>
+					</div>
+					<ul class="iphone-nav">
+								<li class="nav-item d-md-none" data-navpath="/navigation/navigation/primary-navigation/home" data-navhref="/home">
+									<a role="button" title="Home" href="/Home">
+										<span>Home</span>
+										
+											<?xml version="1.0" encoding="utf-8"?>
+											<svg version="1.1"
+													xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 200 200"
+													style="enable-background:new 0 0 200 200;" xml:space="preserve">
+												<g>
+													<g id="Layer_1">
+														<path class="st0 d-md-none " d="M196.5,89.97l-32.31-29.64V15.99c0-1.81-1.46-3.27-3.27-3.27h-31.89c-1.81,0-3.27,1.46-3.27,3.27v9.07
+															L103.96,5.05c-2.53-2.29-6.35-2.28-8.87,0.04L3.49,89.98c-2.35,2.15-2.82,5.67-1.12,8.37c1.21,1.92,3.35,3.06,5.73,3.06h19.71
+															v88.67c0,3.63,2.95,6.58,6.58,6.58h43.14c3.55,0,6.44-2.89,6.44-6.44v-51.69c0-0.4,0.33-0.73,0.73-0.73h30.6
+															c0.4,0,0.73,0.33,0.73,0.73v51.69c0,3.55,2.89,6.44,6.44,6.44h43.14c3.63,0,6.58-2.95,6.58-6.58v-88.67h19.72
+															c2.39,0,4.53-1.15,5.74-3.07C199.33,95.63,198.85,92.11,196.5,89.97z"/>
+													</g>
+													<g id="Layer_2">
+													</g>
+												</g>
+											</svg>
+									</a>
+								</li>
+								<li class="nav-item" data-navpath="/navigation/navigation/primary-navigation/doctors" data-navhref="/resources">
+									<a role="button" title="Patients" href="/resources">
+										<span>Patients</span>
+										
+											<i class="bi bi-chevron-right"></i>
+									</a>
+								</li>
+								<li class="nav-item" data-navpath="/navigation/navigation/primary-navigation/locations" data-navhref="/locations">
+									<a role="button" title="Find a Location" href="/locations">
+										<span>Locations</span>
+										
+											<i class="bi bi-chevron-right"></i>
+									</a>
+								</li>
+								<li class="nav-item" data-navpath="/navigation/navigation/primary-navigation/health-services" data-navhref="/conditions-treatments">
+									<a role="button" title="Health Services" href="/conditions-treatments">
+										<span>Health Services</span>
+										
+											<i class="bi bi-chevron-right"></i>
+									</a>
+								</li>
+								<li class="nav-item" data-navpath="/navigation/navigation/primary-navigation/find-a-provider" data-navhref="/find-a-doctor">
+									<a role="button" title="Find a Provider" href="/find-a-doctor">
+										<span>Find a Provider</span>
+										
+											<i class="bi bi-chevron-right"></i>
+									</a>
+								</li>
+								<li class="nav-item d-flex additional-links d-md-none" data-navpath="/navigation/navigation/primary-navigation/additional-links" data-navhref="#">
+									<a role="button" class="additional-links" title="Additional Links" href="#">Additional Links</a>
+									<ul>
+											<li class="nav-item pl-3 additional d-md-none" data-navpath="/navigation/navigation/primary-navigation/additional-links/bill-pay" data-navhref="/resources/pay-my-bill">
+												<a role="button" class="font-weight-normal additional" title="Bill Pay" href="/resources/pay-my-bill">
+													<span>Bill Pay</span>
+												</a>
+											</li>
+											<li class="nav-item pl-3 d-md-none" data-navpath="/navigation/navigation/primary-navigation/additional-links/careers" data-navhref="https://jobs.ssmhealth.com/">
+												<a role="button" class="font-weight-normal" title="Careers" href="https://jobs.ssmhealth.com/">
+													<span>Careers</span>
+												</a>
+											</li>
+											<li class="nav-item pl-3 d-md-none" data-navpath="/navigation/navigation/primary-navigation/additional-links/classes-events" data-navhref="/classes-events">
+												<a role="button" class="font-weight-normal" title="Classes &amp; Events" href="/Classes-Events">
+													<span>Classes &amp; Events</span>
+												</a>
+											</li>
+											<li class="nav-item pl-3 d-md-none" data-navpath="/navigation/navigation/primary-navigation/additional-links/donate-to-ssm-health" data-navhref="/donate">
+												<a role="button" class="font-weight-normal" title="Donate to SSM Health" href="/donate">
+													<span>Donate to SSM Health</span>
+												</a>
+											</li>
+											<li class="nav-item pl-3 d-md-none" data-navpath="/navigation/navigation/primary-navigation/additional-links/get-my-medical-records" data-navhref="/resources/get-my-medical-records">
+												<a role="button" class="font-weight-normal" title="Get Medical Records" href="/resources/Get-My-Medical-Records">
+													<span>Get Medical Records</span>
+												</a>
+											</li>
+											<li class="nav-item pl-3 background d-md-none" data-navpath="/navigation/navigation/primary-navigation/additional-links/my-chart" data-navhref="/mychart-67aa1be46ff9f2db17095928f57e2267">
+												<a role="button" class="font-weight-normal background" title="My Chart" href="/mychart-67aa1be46ff9f2db17095928f57e2267">
+													<span>My Chart</span>
+												</a>
+											</li>
+											<li class="nav-item pl-3 d-md-none" data-navpath="/navigation/navigation/primary-navigation/additional-links/scheduling-options" data-navhref="/access/available-online-scheduling-options">
+												<a role="button" class="font-weight-normal" title="Schedule Online" href="/Access/Available-Online-Scheduling-Options">
+													<span>Schedule Online</span>
+												</a>
+											</li>
+									</ul>
+								</li>
+					</ul>
+				</nav>
+			</div>
+		</div>
+	</div>
+</div>
+            
+        
+    </div>
+
+    <div class="pb-3" id="main">
+        <a name="ADASkipContent" style="visibility: 0;"></a>
+        <div id="" class="">
+            
+
+    <div class="banner-container"><div class="container-fluid px-0 of-x-hidden">
+    <div class="row no-gutters">
+        <div class="col-md-12">
+            
+
+
+
+
+
+            
+
+    <div id="banner-carousel" class="carousel slide gradient-stroke banner short gradient-stroke " data-touch="true" data-keyboard="true" data-wrap="true" data-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <div data-show-banner-mobile="false" data-anchor-side="left" class="banner-img" style="background-color: #001F5F"></div>
+            </div>
+        </div>
+    </div>
+
+
+<script type="text/javascript">
+	OnScriptsLoaded(function () {
+
+        shortBannerCalculations();
+
+        $(".alert .close").on("click", function (event) {
+			setTimeout(function () { 
+				shortBannerCalculations(); 
+			}, 500);
+		});
+	});
+</script></partial>
+
+
+
+    
+
+
+        </div>
+    </div>
+</div></div>
+
+<div class="container">
+        <div class="pb-3">
+
+	<div class="pb-3 breads" role="navigation" aria-label="breadcrumb navigation">
+				<a class="CMSBreadCrumbsLink" href="/">Home</a>
+				<span> / </span>
+				<span class="CMSBreadCrumbsCurrentItem">Error</span>
+	</div>
+
+</div>
+    
+    
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            
+
+
+
+
+
+
+
+    <div class="fr-view">
+        <h1 style="text-align: center">Oops! We can't find that page.</h1>
+
+<h2 style="text-align: center">Error Code: 404</h2>
+
+    </div>
+
+
+    
+
+
+        </div>
+    </div>
+</div><div class="container">
+    <div class="row row--with-cols-padding">
+        <div class="col-md-6">
+            
+
+
+
+
+
+
+
+    <div class="fr-view">
+        <p>The page may have been removed or incorporated into another area of the site. Try going back to the previous page, <a href="/search">use&nbsp;</a><a href="/search?">site search</a> to find something specific, or <a href="/">return to the SSM Health Homepage</a>.</p><p>You can also use these frequently visited pages as a jumping off point:</p><p><a href="/locations">Care Locations Near You</a><br><a href="/find-a-doctor">Find a Doctor</a><br><a href="https://www.ssmhealth.com/resources/for-patients">Patient &amp; Visitor Resources</a><br><a href="/access/express-virtual-care">Virtual Care Options</a></p>
+    </div>
+
+
+    
+
+
+        </div>
+        <div class="col-md-6">
+            
+
+
+
+
+
+    <img src="/SSMHealth/media/Images/error-page/young-girl-dressed-up-as-a-doctor-looking-through-magnifying-glass.jpg"
+         
+         alt=young girl dressed in doctor suit with magnifying glass
+         
+         
+         
+          />
+
+    
+
+
+        </div>
+    </div>
+</div><div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            
+
+
+
+
+
+
+
+    <div class="fr-view">
+        <hr><p style="text-align: center">Visit our other sites: <a href="/cardinal-glennon">cardinalglennon.com</a>, <a href="/treffert-center">treffertcenter.com</a>, <a href="/slucare">slucare.com</a>, and <a href="https://www.givetossmhealth.org/" rel="noopener noreferrer" target="_blank">givetossmhealth.org</a>.</p>
+    </div>
+
+
+    
+
+
+        </div>
+    </div>
+</div>
+        </div>
+    </div>
+
+    <footer data-ktc-search-exclude>
+        <!-- ONLY Cache header partial widget page if the widgets / content of the header have no personalization!! -->
+        
+                                
+                                    
+                                        
+
+    
+        <div id="footer-top" class="footer-top" role="contentinfo">
+            
+<div class="bg-navy">
+  <div class="container">
+    
+    
+    
+    <div class="row">
+        <div class="col-md-12 text-center">
+            
+
+
+
+
+<div class="widget-container social-links">
+  
+  
+  
+    
+    <p><span><strong>Connect with us:&nbsp;</strong></span><a href="https://www.facebook.com/ssmhealth" title="facebook"><i class="bi bi-facebook">&nbsp;</i></a><a href="https://www.youtube.com/user/SSMHC/" title="youtube"><i class="bi bi-youtube">&nbsp;</i></a><a href="https://x.com/ssmhealth" title="twitter"><i class="bi bi-twitter-x">&nbsp;</i></a><a href="https://www.instagram.com/ssm_health/" title="instagram"><i class="bi bi-instagram">&nbsp;</i></a><a href="https://www.linkedin.com/company/ssm-health-care" title="linkedin"><i class="bi bi-linkedin">&nbsp;</i></a></p>
+    
+
+</div>
+    
+
+
+        </div>
+    </div>
+
+  </div>
+</div>
+  <div class="container-fluid bg-navy">
+  
+  
+  
+    <div class="row">
+        <div class="col-md-3">
+            
+
+
+
+
+
+    
+    <p><a href="/resources/about">About SSM Health</a></p><p><a href="/classes-events">Classes &amp; Events</a></p><p><a href="/donate">Donate</a></p><p><a href="/resources/pay-my-bill/Financial-Assistance">Financial Assistance</a></p>
+    
+
+    
+
+
+        </div>
+        <div class="col-md-3">
+            
+
+
+
+
+
+    
+    <p><a href="/resources/get-my-medical-records">Get My Medical Records</a></p><p><a href="/resources/pay-my-bill">Pay My Bill</a></p><p><a href="/resources/pay-my-bill/price-estimate/price-transparency-disclaimer">Price Transparency</a></p><p><a href="/blogs">Read Our Blog</a></p>
+    
+
+    
+
+
+        </div>
+        <div class="col-md-3">
+            
+
+
+
+
+
+    
+    <p><a href="/resources/about/community-health">Serving Our Communities</a></p><p><a href="/newsroom">Visit Our Newsroom</a></p><p><a href="/donate/volunteer">Volunteer</a></p>
+    
+
+    
+
+
+        </div>
+        <div class="col-md-3">
+            
+
+
+
+
+
+    
+    <p><strong>Contact Our Locations</strong></p><p><a href="/resources/about/contact-us/call-us">Call Us</a></p><p><a href="/resources/about/contact-us">Write Us</a></p>
+    
+
+    
+
+
+        </div>
+    </div>
+
+</div>
+  <div class="container-fluid text-center bg-navy">
+  
+  
+  
+    <div class="row">
+        <div class="col-md-12">
+            
+
+
+
+
+<div class="container text-center">
+  
+  
+  
+    
+    <p style="text-align: center;"><strong>Interested in working for SSM Health?</strong> <a href="https://jobs.ssmhealth.com/us/en">Explore our career paths <i class="bi bi-arrow-right"></i></a></p>
+    
+
+</div>
+    
+
+
+        </div>
+    </div>
+
+</div>
+  <div class="container-fluid bg-navy">
+  
+  
+  
+    <div class="row">
+        <div class="col-md-12">
+            
+
+
+
+
+
+    
+    <hr>
+    
+
+    
+
+
+        </div>
+    </div>
+
+</div>
+<div class="bg-navy">
+  <div class="container">
+    
+    
+    
+    <div class="row">
+        <div class="col-md-3 text-center">
+            
+
+
+
+
+
+    
+    <p><a href="/cardinal-glennon">cardinalglennon.com</a></p>
+    
+
+    
+
+
+        </div>
+        <div class="col-md-3 text-center">
+            
+
+
+
+
+
+    
+    <p><a href="/treffert-center">treffertcenter.com</a></p>
+    
+
+    
+
+
+        </div>
+        <div class="col-md-3 text-center">
+            
+
+
+
+
+
+    
+    <p><a href="/slucare" rel="noopener noreferrer" target="_blank">slucare.com</a></p>
+    
+
+    
+
+
+        </div>
+        <div class="col-md-3 text-center">
+            
+
+
+
+
+
+    
+    <p><a href="https://www.givetossmhealth.org/" rel="noopener noreferrer" target="_blank">givetossmhealth.org</a></p>
+    
+
+    
+
+
+        </div>
+    </div>
+
+  </div>
+</div>
+  <div class="container-fluid bg-navy">
+  
+  
+  
+    <div class="row">
+        <div class="col-md-12">
+            
+
+
+
+
+
+    
+    <hr>
+    
+
+    
+
+
+        </div>
+    </div>
+
+</div>
+  <div class="container-fluid bg-navy">
+  
+  
+  
+    <div class="row">
+        <div class="col-6">
+            
+
+
+
+
+
+    
+    <p><a href="/resources-for-health-professionals">Resources for Health Professionals</a></p>
+    
+
+    
+
+
+        </div>
+        <div class="col-6">
+            
+
+
+
+
+
+    
+    <p class="text-right"><a href="/employee-culture-communications">Resources for Employees</a></p>
+    
+
+    
+
+
+        </div>
+    </div>
+
+</div>
+        </div>
+        <div id="footer-bottom" class="bottom-footer">
+            
+
+    <div class="row">
+        <div class="col-md-12">
+            
+
+
+
+
+<div class="container pt-4">
+  
+  
+  
+    
+    <div><ul class="list-inline text-center"><li class="list-inline-item"><a href="/notice-privacy-practices">Privacy</a></li><li class="list-inline-item"><a href="/website-terms-of-use">Terms and Conditions</a></li><li class="list-inline-item"><a href="/non-discrimination">Notice of Non-Discrimination</a></li><li class="list-inline-item">Copyright&copy; 2025 SSM Health</li></ul><div><ul class="languages list-inline text-center"><li class="list-inline-item"><span>Language Assistance Services:</span></li><li class="list-inline-item"><a href="/privacy-notices-terms-of-use/language-assistance-contact">Espa&ntilde;ol</a></li><li class="list-inline-item"><a href="/privacy-notices-terms-of-use/language-assistance-contact">Hmoob</a></li><li class="list-inline-item"><a href="/privacy-notices-terms-of-use/language-assistance-contact">简体中文</a></li><li class="list-inline-item"><a href="/privacy-notices-terms-of-use/language-assistance-contact">Deutsch</a></li><li class="list-inline-item"><a href="/privacy-notices-terms-of-use/language-assistance-contact">ગુજરાતી</a></li><li class="list-inline-item"><a href="/privacy-notices-terms-of-use/language-assistance-contact">Русский</a></li><li class="list-inline-item"><a href="/privacy-notices-terms-of-use/language-assistance-contact">한국어</a></li><li class="list-inline-item"><a href="/privacy-notices-terms-of-use/language-assistance-contact">Tiếng Việt</a></li><li class="list-inline-item"><a href="/privacy-notices-terms-of-use/language-assistance-contact">Fran&ccedil;ais</a></li><li class="list-inline-item"><a href="/privacy-notices-terms-of-use/language-assistance-contact">Polski</a></li><li class="list-inline-item"><a href="/privacy-notices-terms-of-use/language-assistance-contact">Pennsylvaanisch Deitsch</a></li><li class="list-inline-item"><a href="/privacy-notices-terms-of-use/language-assistance-contact">HRVATSKI</a></li><li class="list-inline-item"><a href="/privacy-notices-terms-of-use/language-assistance-contact">Tagalog</a></li><li class="list-inline-item"><a href="/privacy-notices-terms-of-use/language-assistance-contact">Hindi</a></li><li class="list-inline-item"><a href="/privacy-notices-terms-of-use/language-assistance-contact">العربية</a></li></ul></div><div class="my-5"><br></div></div>
+    
+
+</div>
+    
+
+
+        </div>
+    </div>
+
+        </div>
+    
+
+
+
+                                    
+                                    
+        
+    </footer>
+
+    <div class="overlay"></div>
+<div class="sidenav SelectLocationPanel" id="select-location" data-auto-focus="true">
+	<button id="CloseSelectLocationPanel" type="button" class="close" aria-label="Close"
+			onclick="$('#select-location').toggleClass('sidenav-open');">
+		<span aria-hidden="true">×</span>
+	</button>
+	<h3>Select Location</h3>
+	<div class="dropdownContent">
+		<p class="section-sm">
+			Enter your location to receive information about nearby SSM Health services.
+		</p>
+		<label for="tbxLocation">
+			My location is
+		</label>
+		<input type="text" id="tbxLocation" class="d-block w-100 sidepanel-places-search-textbox" name="tbxLocation"
+			   data-ge-api-key="ge-cac5cc991d70ce5d" data-reload="true" autocomplete="off" />
+		<a href="javascript:void(0);" onclick="$('#WhyWeAsk').toggleClass('hidden');">
+			Why do we ask?
+		</a>
+		<div id="WhyWeAsk" class="hidden">
+			<p><strong>Why do we ask?</strong></p>
+<p>SSM Health uses your location to provide you with relevant content, like doctor suggestions and local services.</p>
+<p>We will never share this information.</p>
+		</div>
+	</div>
+</div>
+<link href="https://cdn.jsdelivr.net/npm/places.js?1.12.0" rel="preload" as="script" />
+
+<script>
+	//    var UserLocation = {% SSM.GetCurrentUserLocationJSON() %}
+	LoadScript({ src: "https://cdn.jsdelivr.net/npm/places.js?1.12.0" })
+</script>
+
+
+    <!--page-builder-scripts-->
+
+
+
+
+    <script>
+        LoadScript([
+            { src: "/js/compiled/scripts/jquery.unobtrusive.ajax/jquery.unobtrusive-ajax.min.js.gz?v=wAtfBeEGqN-Uwr9hPq6VKx6xy2v4pqxmldakc_3-2LM" }
+        ]);
+    </script>
+
+
+<script>LoadScript({ src: "/js/compiled/footer-bundle/bundleJSFooter.min.js.gz?v=Z9HvT_TG00o7G8sNeDV_Jx6K9Qsp4m1XtvI6Y799JwI" })</script>
+
+<!-- Includes the jQuery Validator for MVC-->
+<script>
+    LoadScript({
+        src: "/js/compiled/scripts/jquery.validate/jquery.validate.min.js.gz?v=BlpRNEaMu3ehbd3nTMOYg2rLBIoaXKuMIkYH5-ZkpzE"
+        , async: true
+        , defer: true
+        , onload: function () {
+            $.validator.setDefaults({ ignore: null });
+        }
+    });
+</script>
+
+<script type="text/javascript">
+    LoadScript([
+        { src: "https://cdn.jsdelivr.net/npm/@geocodeearth/autocomplete-element/dist/bundle.js", async: true, defer: true, type: "module", crossorigin: 'anonymous' }
+        , { src: "https://resources.static.evaliahealth.com/evalia-implementation-kit/evalia.js", async: true, defer: true }
+    ]);
+</script>
+
+
+
+<script>
+    OnScriptsLoaded(function () {
+
+        // Daisy Award Form
+        $('.daisy-provide-care-location :input').on('change',
+            function (event) {
+                var careLocation = $(this).val();
+                var emailRecipientsSelect = $('.dasiy-email-recipients select');
+                var emailOptions = $('.dasiy-email-recipients select option');
+                for (index = 0; index < emailOptions.length; index++) {
+                    if (careLocation === $(emailOptions[index]).html()) {
+                        emailRecipientsSelect.val(emailOptions[index].value);
+                    }
+                }
+            }
+        );
+
+        // Bee Award Form
+        $('.bee-provide-care-location :input').on('change',
+            function (event) {
+                var careLocation = $(this).val();
+                var emailRecipientsSelect = $('.bee-email-recipients select');
+                var emailOptions = $('.bee-email-recipients select option');
+                for (index = 0; index < emailOptions.length; index++) {
+                    if (careLocation === $(emailOptions[index]).html()) {
+                        emailRecipientsSelect.val(emailOptions[index].value);
+                    }
+                }
+            }
+        );
+
+
+        // Clinical placement form
+        $('.region-rotation :input').on('change',
+            function (event) {
+                var careLocation = $(this).val();
+                var emailRecipientsSelect = $('.region-rotation-email select');
+                var emailOptions = $('.region-rotation-email select option');
+                for (index = 0; index < emailOptions.length; index++) {
+                    if (careLocation === $(emailOptions[index]).html()) {
+                        emailRecipientsSelect.val(emailOptions[index].value);
+                    }
+                }
+            }
+        );
+
+        // Search Box
+        $('.search-box .toggle-search').on('click',
+            function (event) {
+                $('.search-box, #top-navigation').toggleClass('open');
+            }
+        );
+
+        $('.search-box, .mobile-search-box').on('keydown',
+            function (event) {
+                if (event.keyCode === 13) {
+                    var baseUrl = $('.search-box').attr("data-search-url");
+                    Search(baseUrl);
+                }
+            }
+        );
+
+        $('.search-box .SearchButton, .mobile-search-box .SearchButton, .search-box span.toggle-search').on('click',
+            function (event) {
+                var baseUrl = $('.search-box').attr("data-search-url");
+                Search(baseUrl);
+            }
+        );
+
+        $('.mobile-search-box').on('keydown',
+            function (event) {
+                if (event.keyCode === 13) {
+                    var baseUrl = $('.search-box').attr("data-search-url");
+                    MobileSearch(baseUrl);
+                }
+            }
+        );
+
+        $('.mobile-search-box .SearchButton').on('click',
+            function (event) {
+                var baseUrl = $('.search-box').attr("data-search-url");
+                MobileSearch(baseUrl);
+            }
+        );
+
+        function Search(baseUrl) {
+            if (baseUrl) {
+                window.location = baseUrl + "?SearchValue=" + encodeURI(document.getElementById("lblSearch").value);
+            } else {
+                window.location = "/search?SearchValue=" + encodeURI(document.getElementById("lblSearch").value);
+            }
+        }
+
+        function MobileSearch(baseUrl) {
+            if (baseUrl) {
+                window.location = baseUrl + "?SearchValue=" + encodeURI(document.getElementById("smartSearchBox2").value);
+            } else {
+                window.location = "/search?SearchValue=" + encodeURI(document.getElementById("smartSearchBox2").value);
+            }
+        }
+
+        // Find a Doctor
+        $("#FindDoctorInput").keypress(function (e) {
+            if (e.which == 13) {
+                e.preventDefault();
+                SearchDoctor();
+            }
+        });
+        $("#FindDoctorSearchButton").click(function () {
+            SearchDoctor();
+        });
+
+
+        // Font Resizer
+        FontResize.init();
+
+        // Location Selector
+        $('.open-location-pane').click(function (event) {
+            event.stopPropagation();
+            if ($('#select-location').hasClass('sidenav-open')) {
+                CloseSideNav();
+            }
+            else {
+                OpenSideNav();
+            }
+        });
+
+        $('.mobile-search-box .toggle-search').on('click', function(event) {
+            $('.mobile-search-box .search-field').focus();
+        });
+        $('.mobile-search-box .search-field').on('focus', function(event) {
+            $('.mobile-search-box').addClass('focus');
+        });
+        $('.mobile-search-box .search-field').on('blur', function(event) {
+            $('.mobile-search-box').removeClass('focus');
+        });
+
+        window.ProviderApiUrl = "https://providers.ssmhealth.com/svc/api/";
+
+            require('initialize');
+    });
+</script>
+
+    
+
+
+    <div class="modal fade" id="leaving-ssm-modal" tabindex="-1" role="dialog">
+        <!-- modal-dialog -->
+        <div class="modal-dialog modal-lg" role="document">
+            <!-- modal-content -->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3 class="modal-title">Continuing to Cardinal Glennon</h3>
+                    <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span></button>
+                </div>
+                <div class="modal-body">
+                    <p>You are now leaving SSM Health.com and continuing to the Cardinal Glennon Children's Hospital's section of our website.</p>
+                </div>
+                <div class="modal-footer">
+                    <button id="cancelButton" type="button" class="btn btn-info" data-dismiss="modal">Cancel</button>
+                    <button id="okButton" type="button" class="btn btn-info">Continue</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript">
+        var showCGModal = function (cb) {
+            $('#leaving-ssm-modal').modal({
+                show: true,
+                keyboard: true,
+                focus: true
+            })
+            $("#leaving-ssm-modal #okButton").one("click", function (event) {
+                $('#leaving-ssm-modal').modal("hide");
+                if (cb) {
+                    cb(true);
+                }
+            });
+            $("#leaving-ssm-modal #cancelButton").one("click", function (event) {
+                $('#leaving-ssm-modal').modal("hide");
+                if (cb) {
+                    cb(false);
+                }
+            });
+        }
+        var hrefHandler = function (event, element) {
+            hrefObject = element;
+            destinationUrl = element.href;
+            // Ignore these
+            if (destinationUrl.toLowerCase().indexOf("registerforevent") > -1) {
+                return;
+            }
+            //test for leaving cardinal glennon subsite, but don't display for blogs or page anchor links (#) like accordions, tabs, etc.
+            //if (destinationUrl.toLowerCase().indexOf("javascript") > -1 && destinationUrl.toLowerCase().indexOf("inquicker")) {
+            if (1 == 0) {
+                event.preventDefault();
+                showCGModal(function (result) {
+                    if (result) {
+                        var guidIndex = destinationUrl.search(/(\{){0,1}[0-9a-fA-F]{8}\-[0-9a-fA-F]{4}\-[0-9a-fA-F]{4}\-[0-9a-fA-F]{4}\-[0-9a-fA-F]{12}(\}){0,1}/g);
+                        var guid = destinationUrl.substring(guidIndex, guidIndex + 36);
+                        GoToInquickerSchedule(guid);
+                    }
+                });
+            }
+            else if (
+                //Check if the destination URL has the cardinal glennon path in it or if its an external URL
+                (destinationUrl.toLowerCase().indexOf(window.location.host.toLowerCase() + "/cardinal-glennon") > -1) &&
+                //|| destinationUrl.toLowerCase().indexOf(window.location.host.toLowerCase()) == -1) &&
+                destinationUrl.toLowerCase().indexOf("/blogs") == -1 &&
+                hrefObject.getAttribute("href").indexOf("javascript") != 0 &&
+                hrefObject.getAttribute("href") != "#" &&
+                hrefObject.getAttribute("href").indexOf("#") != 0) {
+                    event.preventDefault();
+                    showCGModal(function (result) {
+                        if (result) {
+                            if (hrefObject.target == "_blank") {
+
+                                window.open(destinationUrl);
+                            }
+                            else {
+                                window.location.href = destinationUrl;
+                            }
+                        }
+                    });
+                }
+            }
+    </script>               
+
+
+<script type="text/javascript">
+    OnScriptsLoaded(function () {
+        $('a[href],button[href]').on("click", function (event) {
+            hrefHandler(event, this);
+        });
+        $('body').on('DOMNodeInserted', 'a[href],button[href]', function (event) {
+            $(this).on("click", function (event) {
+                hrefHandler(event, this);
+            });
+        });
+    });
+</script>
+
+    <div id="open-scheduling-container" class="fade open-scheduling-modal" data-body-scroll="no-scroll">
+</div>
+
+    
+
+    <script type="text/javascript">
+        ScriptsLoader.LoadScripts();
+    </script>
+</body>
+</html>

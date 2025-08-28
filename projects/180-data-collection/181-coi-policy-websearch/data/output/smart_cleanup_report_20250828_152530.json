@@ -1,0 +1,685 @@
+{
+  "timestamp": "2025-08-28T15:25:30.334123",
+  "summary": {
+    "kept_valid_pdfs": 43,
+    "kept_valid_doc": 0,
+    "kept_html_with_coi": 2,
+    "renamed_pdf_to_html": 1,
+    "removed_javascript": 3,
+    "removed_images": 1,
+    "removed_tiny_files": 2,
+    "removed_non_coi_html": 25,
+    "errors_for_review": 0,
+    "total_kept": 46,
+    "total_removed": 31
+  },
+  "detailed_results": {
+    "kept_html_coi": [
+      {
+        "path": "academic_medical_centers/Emory_Healthcare_44e7fa9f.html",
+        "name": "Emory_Healthcare_44e7fa9f.html",
+        "category": "academic_medical_centers",
+        "size_bytes": 3475,
+        "extension": ".html",
+        "actual_type": "data/raw/policies_categorized/academic_medical_centers/Emory_Healthcare_44e7fa9f.html: HTML document, ASCII text",
+        "coi_analysis": "Likely COI content (2 indicators)"
+      },
+      {
+        "path": "academic_medical_centers/Northwestern_Medicine_ac29457b.html",
+        "name": "Northwestern_Medicine_ac29457b.html",
+        "category": "academic_medical_centers",
+        "size_bytes": 15321,
+        "extension": ".html",
+        "actual_type": "data/raw/policies_categorized/academic_medical_centers/Northwestern_Medicine_ac29457b.html: HTML document, ASCII text, with very long lines (2198)",
+        "coi_analysis": "Strong COI content (6 indicators)"
+      }
+    ],
+    "renamed_html": [
+      {
+        "path": "academic_medical_centers/UCSF_dfa056f2.pdf",
+        "name": "UCSF_dfa056f2.pdf",
+        "category": "academic_medical_centers",
+        "size_bytes": 14186,
+        "extension": ".pdf",
+        "actual_type": "data/raw/policies_categorized/academic_medical_centers/UCSF_dfa056f2.pdf: HTML document, Unicode text, UTF-8 text, with very long lines (812)",
+        "coi_analysis": "Likely COI content (2 indicators)",
+        "new_name": "UCSF_dfa056f2.html"
+      }
+    ],
+    "valid_pdfs": [
+      {
+        "path": "academic_medical_centers/University_of_Colorado_Anschutz_a24df40a.pdf",
+        "name": "University_of_Colorado_Anschutz_a24df40a.pdf",
+        "category": "academic_medical_centers",
+        "size_bytes": 431915,
+        "extension": ".pdf",
+        "actual_type": "data/raw/policies_categorized/academic_medical_centers/University_of_Colorado_Anschutz_a24df40a.pdf: PDF document, version 1.6 (zip deflate encoded)"
+      },
+      {
+        "path": "academic_medical_centers/University_of_South_Carolina_d5040e36.pdf",
+        "name": "University_of_South_Carolina_d5040e36.pdf",
+        "category": "academic_medical_centers",
+        "size_bytes": 295000,
+        "extension": ".pdf",
+        "actual_type": "data/raw/policies_categorized/academic_medical_centers/University_of_South_Carolina_d5040e36.pdf: PDF document, version 1.6 (zip deflate encoded)"
+      },
+      {
+        "path": "academic_medical_centers/Brown_University_Health_e91df176.pdf",
+        "name": "Brown_University_Health_e91df176.pdf",
+        "category": "academic_medical_centers",
+        "size_bytes": 431372,
+        "extension": ".pdf",
+        "actual_type": "data/raw/policies_categorized/academic_medical_centers/Brown_University_Health_e91df176.pdf: PDF document, version 1.4, 14 page(s)"
+      },
+      {
+        "path": "academic_medical_centers/Stanford_Health_Care_d1f4eb2d.pdf",
+        "name": "Stanford_Health_Care_d1f4eb2d.pdf",
+        "category": "academic_medical_centers",
+        "size_bytes": 302684,
+        "extension": ".pdf",
+        "actual_type": "data/raw/policies_categorized/academic_medical_centers/Stanford_Health_Care_d1f4eb2d.pdf: PDF document, version 1.7 (zip deflate encoded)"
+      },
+      {
+        "path": "other_healthcare/Osivax_3fecde57.pdf",
+        "name": "Osivax_3fecde57.pdf",
+        "category": "other_healthcare",
+        "size_bytes": 216354,
+        "extension": ".pdf",
+        "actual_type": "data/raw/policies_categorized/other_healthcare/Osivax_3fecde57.pdf: PDF document, version 1.7, 10 page(s)"
+      },
+      {
+        "path": "research_professional_orgs/La_Jolla_Institute_for_Immunology_ae60ab74.html",
+        "name": "La_Jolla_Institute_for_Immunology_ae60ab74.html",
+        "category": "research_professional_orgs",
+        "size_bytes": 527238,
+        "extension": ".html",
+        "actual_type": "data/raw/policies_categorized/research_professional_orgs/La_Jolla_Institute_for_Immunology_ae60ab74.html: PDF document, version 1.6 (zip deflate encoded)"
+      },
+      {
+        "path": "research_professional_orgs/American_Society_of_Gene_and_Cell_Therapy_93698ffd.html",
+        "name": "American_Society_of_Gene_and_Cell_Therapy_93698ffd.html",
+        "category": "research_professional_orgs",
+        "size_bytes": 58736,
+        "extension": ".html",
+        "actual_type": "data/raw/policies_categorized/research_professional_orgs/American_Society_of_Gene_and_Cell_Therapy_93698ffd.html: PDF document, version 1.5, 6 page(s)"
+      },
+      {
+        "path": "research_professional_orgs/Public_Health_Institute_35d3596f.pdf",
+        "name": "Public_Health_Institute_35d3596f.pdf",
+        "category": "research_professional_orgs",
+        "size_bytes": 482752,
+        "extension": ".pdf",
+        "actual_type": "data/raw/policies_categorized/research_professional_orgs/Public_Health_Institute_35d3596f.pdf: PDF document, version 1.7 (zip deflate encoded)"
+      },
+      {
+        "path": "research_professional_orgs/Vitalant_Research_Institute_af2e5cc3.pdf",
+        "name": "Vitalant_Research_Institute_af2e5cc3.pdf",
+        "category": "research_professional_orgs",
+        "size_bytes": 105124,
+        "extension": ".pdf",
+        "actual_type": "data/raw/policies_categorized/research_professional_orgs/Vitalant_Research_Institute_af2e5cc3.pdf: PDF document, version 1.4, 10 page(s)"
+      },
+      {
+        "path": "research_professional_orgs/American_Society_of_Nephrology_1b45cea0.pdf",
+        "name": "American_Society_of_Nephrology_1b45cea0.pdf",
+        "category": "research_professional_orgs",
+        "size_bytes": 188042,
+        "extension": ".pdf",
+        "actual_type": "data/raw/policies_categorized/research_professional_orgs/American_Society_of_Nephrology_1b45cea0.pdf: PDF document, version 1.6 (zip deflate encoded)"
+      },
+      {
+        "path": "research_professional_orgs/National_Bureau_of_Economic_Research_4812b0ce.pdf",
+        "name": "National_Bureau_of_Economic_Research_4812b0ce.pdf",
+        "category": "research_professional_orgs",
+        "size_bytes": 71210,
+        "extension": ".pdf",
+        "actual_type": "data/raw/policies_categorized/research_professional_orgs/National_Bureau_of_Economic_Research_4812b0ce.pdf: PDF document, version 1.5 (zip deflate encoded)"
+      },
+      {
+        "path": "research_professional_orgs/GE_HealthCare_1aed756b.pdf",
+        "name": "GE_HealthCare_1aed756b.pdf",
+        "category": "research_professional_orgs",
+        "size_bytes": 391684,
+        "extension": ".pdf",
+        "actual_type": "data/raw/policies_categorized/research_professional_orgs/GE_HealthCare_1aed756b.pdf: PDF document, version 1.6 (zip deflate encoded)"
+      },
+      {
+        "path": "research_professional_orgs/American_College_of_Surgeons_2a1b07c0.pdf",
+        "name": "American_College_of_Surgeons_2a1b07c0.pdf",
+        "category": "research_professional_orgs",
+        "size_bytes": 106812,
+        "extension": ".pdf",
+        "actual_type": "data/raw/policies_categorized/research_professional_orgs/American_College_of_Surgeons_2a1b07c0.pdf: PDF document, version 1.6 (zip deflate encoded)"
+      },
+      {
+        "path": "research_professional_orgs/American_Cancer_Society_5062a593.pdf",
+        "name": "American_Cancer_Society_5062a593.pdf",
+        "category": "research_professional_orgs",
+        "size_bytes": 266334,
+        "extension": ".pdf",
+        "actual_type": "data/raw/policies_categorized/research_professional_orgs/American_Cancer_Society_5062a593.pdf: PDF document, version 1.6 (zip deflate encoded)"
+      },
+      {
+        "path": "federal-state/California_Alt_349b1559.pdf",
+        "name": "California_Alt_349b1559.pdf",
+        "category": "federal-state",
+        "size_bytes": 128973,
+        "extension": ".pdf",
+        "actual_type": "data/raw/policies_categorized/federal-state/California_Alt_349b1559.pdf: PDF document, version 1.7 (zip deflate encoded)"
+      },
+      {
+        "path": "federal-state/California_CDPH_Employee_COI.pdf",
+        "name": "California_CDPH_Employee_COI.pdf",
+        "category": "federal-state",
+        "size_bytes": 144190,
+        "extension": ".pdf",
+        "actual_type": "data/raw/policies_categorized/federal-state/California_CDPH_Employee_COI.pdf: PDF document, version 1.6 (zip deflate encoded)"
+      },
+      {
+        "path": "federal-state/Wisconsin_Dept_of_Health_Services_84dd6048.pdf",
+        "name": "Wisconsin_Dept_of_Health_Services_84dd6048.pdf",
+        "category": "federal-state",
+        "size_bytes": 924453,
+        "extension": ".pdf",
+        "actual_type": "data/raw/policies_categorized/federal-state/Wisconsin_Dept_of_Health_Services_84dd6048.pdf: PDF document, version 1.6 (zip deflate encoded)"
+      },
+      {
+        "path": "federal-state/Florida_Alt_c2dbc8f5.pdf",
+        "name": "Florida_Alt_c2dbc8f5.pdf",
+        "category": "federal-state",
+        "size_bytes": 578505,
+        "extension": ".pdf",
+        "actual_type": "data/raw/policies_categorized/federal-state/Florida_Alt_c2dbc8f5.pdf: PDF document, version 1.7, 2 page(s)"
+      },
+      {
+        "path": "federal-state/Texas_HHS_PEFC_COI_Policy.pdf",
+        "name": "Texas_HHS_PEFC_COI_Policy.pdf",
+        "category": "federal-state",
+        "size_bytes": 1446589,
+        "extension": ".pdf",
+        "actual_type": "data/raw/policies_categorized/federal-state/Texas_HHS_PEFC_COI_Policy.pdf: PDF document, version 1.6 (zip deflate encoded)"
+      },
+      {
+        "path": "federal-state/North_Carolina_DHHS_fe178725.pdf",
+        "name": "North_Carolina_DHHS_fe178725.pdf",
+        "category": "federal-state",
+        "size_bytes": 270627,
+        "extension": ".pdf",
+        "actual_type": "data/raw/policies_categorized/federal-state/North_Carolina_DHHS_fe178725.pdf: PDF document, version 1.5, 1 page(s)"
+      },
+      {
+        "path": "federal-state/Mississippi_State_Dept_of_Health_4ab768ec.pdf",
+        "name": "Mississippi_State_Dept_of_Health_4ab768ec.pdf",
+        "category": "federal-state",
+        "size_bytes": 1767193,
+        "extension": ".pdf",
+        "actual_type": "data/raw/policies_categorized/federal-state/Mississippi_State_Dept_of_Health_4ab768ec.pdf: PDF document, version 1.6 (zip deflate encoded)"
+      },
+      {
+        "path": "federal-state/FDA_Ethics_d1f090fd.pdf",
+        "name": "FDA_Ethics_d1f090fd.pdf",
+        "category": "federal-state",
+        "size_bytes": 118384,
+        "extension": ".pdf",
+        "actual_type": "data/raw/policies_categorized/federal-state/FDA_Ethics_d1f090fd.pdf: PDF document, version 1.6 (zip deflate encoded)"
+      },
+      {
+        "path": "major_health_systems/Mayo_Clinic_Institutional_COI.pdf",
+        "name": "Mayo_Clinic_Institutional_COI.pdf",
+        "category": "major_health_systems",
+        "size_bytes": 148831,
+        "extension": ".pdf",
+        "actual_type": "data/raw/policies_categorized/major_health_systems/Mayo_Clinic_Institutional_COI.pdf: PDF document, version 1.4, 4 page(s)"
+      },
+      {
+        "path": "major_health_systems/RWJBarnabas_Health_2749ad54.pdf",
+        "name": "RWJBarnabas_Health_2749ad54.pdf",
+        "category": "major_health_systems",
+        "size_bytes": 128385,
+        "extension": ".pdf",
+        "actual_type": "data/raw/policies_categorized/major_health_systems/RWJBarnabas_Health_2749ad54.pdf: PDF document, version 1.6 (zip deflate encoded)"
+      },
+      {
+        "path": "major_health_systems/Hospital_for_Special_Surgery_(HSS)_3596a506.pdf",
+        "name": "Hospital_for_Special_Surgery_(HSS)_3596a506.pdf",
+        "category": "major_health_systems",
+        "size_bytes": 626190,
+        "extension": ".pdf",
+        "actual_type": "data/raw/policies_categorized/major_health_systems/Hospital_for_Special_Surgery_(HSS)_3596a506.pdf: PDF document, version 1.5, 11 page(s)"
+      },
+      {
+        "path": "major_health_systems/Virtua_Health_5bb10d3a.pdf",
+        "name": "Virtua_Health_5bb10d3a.pdf",
+        "category": "major_health_systems",
+        "size_bytes": 235498,
+        "extension": ".pdf",
+        "actual_type": "data/raw/policies_categorized/major_health_systems/Virtua_Health_5bb10d3a.pdf: PDF document, version 1.5 (zip deflate encoded)"
+      },
+      {
+        "path": "major_health_systems/Nuvance_Health_e843882c.pdf",
+        "name": "Nuvance_Health_e843882c.pdf",
+        "category": "major_health_systems",
+        "size_bytes": 154557,
+        "extension": ".pdf",
+        "actual_type": "data/raw/policies_categorized/major_health_systems/Nuvance_Health_e843882c.pdf: PDF document, version 1.5, 5 page(s)"
+      },
+      {
+        "path": "major_health_systems/Kaiser_Permanente_Research_COI.pdf",
+        "name": "Kaiser_Permanente_Research_COI.pdf",
+        "category": "major_health_systems",
+        "size_bytes": 108927,
+        "extension": ".pdf",
+        "actual_type": "data/raw/policies_categorized/major_health_systems/Kaiser_Permanente_Research_COI.pdf: PDF document, version 1.5 (zip deflate encoded)"
+      },
+      {
+        "path": "major_health_systems/Atrium_Health_9ce5badc.pdf",
+        "name": "Atrium_Health_9ce5badc.pdf",
+        "category": "major_health_systems",
+        "size_bytes": 59063,
+        "extension": ".pdf",
+        "actual_type": "data/raw/policies_categorized/major_health_systems/Atrium_Health_9ce5badc.pdf: PDF document, version 1.5 (zip deflate encoded)"
+      },
+      {
+        "path": "major_health_systems/Mayo_Clinic_Research_d5ff9687.pdf",
+        "name": "Mayo_Clinic_Research_d5ff9687.pdf",
+        "category": "major_health_systems",
+        "size_bytes": 256374,
+        "extension": ".pdf",
+        "actual_type": "data/raw/policies_categorized/major_health_systems/Mayo_Clinic_Research_d5ff9687.pdf: PDF document, version 1.6 (zip deflate encoded)"
+      },
+      {
+        "path": "major_health_systems/Mayo_Clinic_2c6f29e4.pdf",
+        "name": "Mayo_Clinic_2c6f29e4.pdf",
+        "category": "major_health_systems",
+        "size_bytes": 353276,
+        "extension": ".pdf",
+        "actual_type": "data/raw/policies_categorized/major_health_systems/Mayo_Clinic_2c6f29e4.pdf: PDF document, version 1.5, 0 page(s)"
+      },
+      {
+        "path": "major_health_systems/Stony_Brook_Medicine_69c2aaad.pdf",
+        "name": "Stony_Brook_Medicine_69c2aaad.pdf",
+        "category": "major_health_systems",
+        "size_bytes": 181538,
+        "extension": ".pdf",
+        "actual_type": "data/raw/policies_categorized/major_health_systems/Stony_Brook_Medicine_69c2aaad.pdf: PDF document, version 1.6 (zip deflate encoded)"
+      },
+      {
+        "path": "major_health_systems/Allina_Health_ad2447b0.pdf",
+        "name": "Allina_Health_ad2447b0.pdf",
+        "category": "major_health_systems",
+        "size_bytes": 802453,
+        "extension": ".pdf",
+        "actual_type": "data/raw/policies_categorized/major_health_systems/Allina_Health_ad2447b0.pdf: PDF document, version 1.6 (zip deflate encoded)"
+      },
+      {
+        "path": "major_health_systems/Atrium_Health_Wake_Forest_Baptist_216474d9.pdf",
+        "name": "Atrium_Health_Wake_Forest_Baptist_216474d9.pdf",
+        "category": "major_health_systems",
+        "size_bytes": 943526,
+        "extension": ".pdf",
+        "actual_type": "data/raw/policies_categorized/major_health_systems/Atrium_Health_Wake_Forest_Baptist_216474d9.pdf: PDF document, version 1.6 (zip deflate encoded)"
+      },
+      {
+        "path": "major_health_systems/Albany_Med_Health_System_262e8377.pdf",
+        "name": "Albany_Med_Health_System_262e8377.pdf",
+        "category": "major_health_systems",
+        "size_bytes": 155514,
+        "extension": ".pdf",
+        "actual_type": "data/raw/policies_categorized/major_health_systems/Albany_Med_Health_System_262e8377.pdf: PDF document, version 1.5 (zip deflate encoded)"
+      },
+      {
+        "path": "major_health_systems/Cambridge_Memorial_Hospital_d9fa4197.pdf",
+        "name": "Cambridge_Memorial_Hospital_d9fa4197.pdf",
+        "category": "major_health_systems",
+        "size_bytes": 199010,
+        "extension": ".pdf",
+        "actual_type": "data/raw/policies_categorized/major_health_systems/Cambridge_Memorial_Hospital_d9fa4197.pdf: PDF document, version 1.6 (zip deflate encoded)"
+      },
+      {
+        "path": "major_health_systems/Memorial_Sloan_Kettering_5d2de1c8.pdf",
+        "name": "Memorial_Sloan_Kettering_5d2de1c8.pdf",
+        "category": "major_health_systems",
+        "size_bytes": 344454,
+        "extension": ".pdf",
+        "actual_type": "data/raw/policies_categorized/major_health_systems/Memorial_Sloan_Kettering_5d2de1c8.pdf: PDF document, version 1.6 (zip deflate encoded)"
+      },
+      {
+        "path": "major_health_systems/Cone_Health_34700c96.pdf",
+        "name": "Cone_Health_34700c96.pdf",
+        "category": "major_health_systems",
+        "size_bytes": 252457,
+        "extension": ".pdf",
+        "actual_type": "data/raw/policies_categorized/major_health_systems/Cone_Health_34700c96.pdf: PDF document, version 1.7, 3 page(s)"
+      },
+      {
+        "path": "childrens_hospitals/Children's_Mercy_ecc1d37b.pdf",
+        "name": "Children's_Mercy_ecc1d37b.pdf",
+        "category": "childrens_hospitals",
+        "size_bytes": 111216,
+        "extension": ".pdf",
+        "actual_type": "data/raw/policies_categorized/childrens_hospitals/Children's_Mercy_ecc1d37b.pdf: PDF document, version 1.7, 9 page(s)"
+      },
+      {
+        "path": "childrens_hospitals/Children's_Hospital_of_Philadelphia_e0f5d0a6.pdf",
+        "name": "Children's_Hospital_of_Philadelphia_e0f5d0a6.pdf",
+        "category": "childrens_hospitals",
+        "size_bytes": 568195,
+        "extension": ".pdf",
+        "actual_type": "data/raw/policies_categorized/childrens_hospitals/Children's_Hospital_of_Philadelphia_e0f5d0a6.pdf: PDF document, version 1.5 (zip deflate encoded)"
+      },
+      {
+        "path": "childrens_hospitals/Children's_National_Hospital_938f5b50.pdf",
+        "name": "Children's_National_Hospital_938f5b50.pdf",
+        "category": "childrens_hospitals",
+        "size_bytes": 313921,
+        "extension": ".pdf",
+        "actual_type": "data/raw/policies_categorized/childrens_hospitals/Children's_National_Hospital_938f5b50.pdf: PDF document, version 1.7, 47 page(s)"
+      },
+      {
+        "path": "childrens_hospitals/Boston_Children's_Hospital_c46d2ff9.pdf",
+        "name": "Boston_Children's_Hospital_c46d2ff9.pdf",
+        "category": "childrens_hospitals",
+        "size_bytes": 198242,
+        "extension": ".pdf",
+        "actual_type": "data/raw/policies_categorized/childrens_hospitals/Boston_Children's_Hospital_c46d2ff9.pdf: PDF document, version 1.7, 15 page(s)"
+      },
+      {
+        "path": "childrens_hospitals/Stanley_Manne_Children's_Research_Institute_3283f4ec.pdf",
+        "name": "Stanley_Manne_Children's_Research_Institute_3283f4ec.pdf",
+        "category": "childrens_hospitals",
+        "size_bytes": 415355,
+        "extension": ".pdf",
+        "actual_type": "data/raw/policies_categorized/childrens_hospitals/Stanley_Manne_Children's_Research_Institute_3283f4ec.pdf: PDF document, version 1.7 (zip deflate encoded)"
+      }
+    ],
+    "valid_doc": [],
+    "removed_javascript": [
+      {
+        "path": "federal-state/Pennsylvania_Dept_of_Health_5cb21368.pdf",
+        "name": "Pennsylvania_Dept_of_Health_5cb21368.pdf",
+        "category": "federal-state",
+        "size_bytes": 184113,
+        "extension": ".pdf",
+        "actual_type": "data/raw/policies_categorized/federal-state/Pennsylvania_Dept_of_Health_5cb21368.pdf: JavaScript source, Unicode text, UTF-8 text, with very long lines (586), with CRLF, LF line terminators",
+        "reason": "JavaScript file"
+      },
+      {
+        "path": "federal-state/Illinois_Alt_34e0eb49.pdf",
+        "name": "Illinois_Alt_34e0eb49.pdf",
+        "category": "federal-state",
+        "size_bytes": 91115,
+        "extension": ".pdf",
+        "actual_type": "data/raw/policies_categorized/federal-state/Illinois_Alt_34e0eb49.pdf: JavaScript source, Unicode text, UTF-8 text, with very long lines (740), with CRLF, LF line terminators",
+        "reason": "JavaScript file"
+      },
+      {
+        "path": "major_health_systems/Johns_Hopkins_Medicine_9408bf44.html",
+        "name": "Johns_Hopkins_Medicine_9408bf44.html",
+        "category": "major_health_systems",
+        "size_bytes": 43392,
+        "extension": ".html",
+        "actual_type": "data/raw/policies_categorized/major_health_systems/Johns_Hopkins_Medicine_9408bf44.html: JavaScript source, Unicode text, UTF-8 text, with very long lines (553), with CRLF, LF line terminators",
+        "reason": "JavaScript file"
+      }
+    ],
+    "removed_images": [
+      {
+        "path": "federal-state/Kansas_Dept_of_Health_f75fa3b8.pdf",
+        "name": "Kansas_Dept_of_Health_f75fa3b8.pdf",
+        "category": "federal-state",
+        "size_bytes": 1046,
+        "extension": ".pdf",
+        "actual_type": "data/raw/policies_categorized/federal-state/Kansas_Dept_of_Health_f75fa3b8.pdf: PNG image data, 200 x 200, 4-bit colormap, non-interlaced",
+        "reason": "Image file"
+      }
+    ],
+    "removed_tiny": [
+      {
+        "path": "federal-state/NewYork_Attachment_9.pdf",
+        "name": "NewYork_Attachment_9.pdf",
+        "category": "federal-state",
+        "size_bytes": 919,
+        "extension": ".pdf",
+        "actual_type": "data/raw/policies_categorized/federal-state/NewYork_Attachment_9.pdf: HTML document, ASCII text",
+        "reason": "File too small (919 bytes)"
+      },
+      {
+        "path": "federal-state/NewYork_Attachment_A.pdf",
+        "name": "NewYork_Attachment_A.pdf",
+        "category": "federal-state",
+        "size_bytes": 919,
+        "extension": ".pdf",
+        "actual_type": "data/raw/policies_categorized/federal-state/NewYork_Attachment_A.pdf: HTML document, ASCII text",
+        "reason": "File too small (919 bytes)"
+      }
+    ],
+    "removed_non_coi_html": [
+      {
+        "path": "academic_medical_centers/University_of_Miami_Health_5a46afe2.pdf",
+        "name": "University_of_Miami_Health_5a46afe2.pdf",
+        "category": "academic_medical_centers",
+        "size_bytes": 129325,
+        "extension": ".pdf",
+        "actual_type": "data/raw/policies_categorized/academic_medical_centers/University_of_Miami_Health_5a46afe2.pdf: JavaScript source, ASCII text, with very long lines (62588), with CRLF, LF line terminators",
+        "coi_analysis": "No COI indicators found"
+      },
+      {
+        "path": "academic_medical_centers/Penn_Medicine_b213a917.pdf",
+        "name": "Penn_Medicine_b213a917.pdf",
+        "category": "academic_medical_centers",
+        "size_bytes": 17733,
+        "extension": ".pdf",
+        "actual_type": "data/raw/policies_categorized/academic_medical_centers/Penn_Medicine_b213a917.pdf: HTML document, ASCII text, with very long lines (1442), with CRLF, LF line terminators",
+        "coi_analysis": "No COI indicators found"
+      },
+      {
+        "path": "academic_medical_centers/Vanderbilt_4415f885.html",
+        "name": "Vanderbilt_4415f885.html",
+        "category": "academic_medical_centers",
+        "size_bytes": 42775,
+        "extension": ".html",
+        "actual_type": "data/raw/policies_categorized/academic_medical_centers/Vanderbilt_4415f885.html: HTML document, Unicode text, UTF-8 text, with very long lines (26378), with CRLF, LF line terminators",
+        "coi_analysis": "Too little content"
+      },
+      {
+        "path": "federal-state/National_Science_Foundation_181ed196.pdf",
+        "name": "National_Science_Foundation_181ed196.pdf",
+        "category": "federal-state",
+        "size_bytes": 63543,
+        "extension": ".pdf",
+        "actual_type": "data/raw/policies_categorized/federal-state/National_Science_Foundation_181ed196.pdf: HTML document, ASCII text, with very long lines (2745)",
+        "coi_analysis": "No COI indicators found"
+      },
+      {
+        "path": "federal-state/Alaska_Alt_0a99c318.pdf",
+        "name": "Alaska_Alt_0a99c318.pdf",
+        "category": "federal-state",
+        "size_bytes": 189055,
+        "extension": ".pdf",
+        "actual_type": "data/raw/policies_categorized/federal-state/Alaska_Alt_0a99c318.pdf: JavaScript source, ASCII text, with very long lines (374), with CRLF, LF line terminators",
+        "coi_analysis": "No COI indicators found"
+      },
+      {
+        "path": "federal-state/Connecticut_Dept_of_Public_Health_1d776678.pdf",
+        "name": "Connecticut_Dept_of_Public_Health_1d776678.pdf",
+        "category": "federal-state",
+        "size_bytes": 23093,
+        "extension": ".pdf",
+        "actual_type": "data/raw/policies_categorized/federal-state/Connecticut_Dept_of_Public_Health_1d776678.pdf: JavaScript source, ASCII text, with very long lines (1125), with CRLF, LF line terminators",
+        "coi_analysis": "No COI indicators found"
+      },
+      {
+        "path": "federal-state/VA_Research_82fba279.pdf",
+        "name": "VA_Research_82fba279.pdf",
+        "category": "federal-state",
+        "size_bytes": 11358,
+        "extension": ".pdf",
+        "actual_type": "data/raw/policies_categorized/federal-state/VA_Research_82fba279.pdf: HTML document, ASCII text, with very long lines (947), with CRLF line terminators",
+        "coi_analysis": "No COI indicators found"
+      },
+      {
+        "path": "federal-state/Minnesota_Alt_3c82fbf2.html",
+        "name": "Minnesota_Alt_3c82fbf2.html",
+        "category": "federal-state",
+        "size_bytes": 21621,
+        "extension": ".html",
+        "actual_type": "data/raw/policies_categorized/federal-state/Minnesota_Alt_3c82fbf2.html: JavaScript source, ASCII text, with very long lines (12063)",
+        "coi_analysis": "No COI indicators found"
+      },
+      {
+        "path": "federal-state/Alabama_Dept_of_Public_Health_ed8b8b6e.pdf",
+        "name": "Alabama_Dept_of_Public_Health_ed8b8b6e.pdf",
+        "category": "federal-state",
+        "size_bytes": 39250,
+        "extension": ".pdf",
+        "actual_type": "data/raw/policies_categorized/federal-state/Alabama_Dept_of_Public_Health_ed8b8b6e.pdf: HTML document, Unicode text, UTF-8 text, with very long lines (2612)",
+        "coi_analysis": "No COI indicators found"
+      },
+      {
+        "path": "federal-state/Utah_Dept_of_Health_e3a4095a.pdf",
+        "name": "Utah_Dept_of_Health_e3a4095a.pdf",
+        "category": "federal-state",
+        "size_bytes": 17402,
+        "extension": ".pdf",
+        "actual_type": "data/raw/policies_categorized/federal-state/Utah_Dept_of_Health_e3a4095a.pdf: HTML document, Unicode text, UTF-8 text, with very long lines (877)",
+        "coi_analysis": "No COI indicators found"
+      },
+      {
+        "path": "federal-state/Iowa_Dept_of_Public_Health_62b984d8.pdf",
+        "name": "Iowa_Dept_of_Public_Health_62b984d8.pdf",
+        "category": "federal-state",
+        "size_bytes": 217825,
+        "extension": ".pdf",
+        "actual_type": "data/raw/policies_categorized/federal-state/Iowa_Dept_of_Public_Health_62b984d8.pdf: JavaScript source, ASCII text, with very long lines (62617)",
+        "coi_analysis": "No COI indicators found"
+      },
+      {
+        "path": "federal-state/Arizona_Alt_ff3951ac.pdf",
+        "name": "Arizona_Alt_ff3951ac.pdf",
+        "category": "federal-state",
+        "size_bytes": 51601,
+        "extension": ".pdf",
+        "actual_type": "data/raw/policies_categorized/federal-state/Arizona_Alt_ff3951ac.pdf: HTML document, Unicode text, UTF-8 (with BOM) text, with CRLF line terminators",
+        "coi_analysis": "No COI indicators found"
+      },
+      {
+        "path": "federal-state/New_York_Alt_b5744346.pdf",
+        "name": "New_York_Alt_b5744346.pdf",
+        "category": "federal-state",
+        "size_bytes": 28350,
+        "extension": ".pdf",
+        "actual_type": "data/raw/policies_categorized/federal-state/New_York_Alt_b5744346.pdf: HTML document, Unicode text, UTF-8 text, with very long lines (1280)",
+        "coi_analysis": "No COI indicators found"
+      },
+      {
+        "path": "federal-state/Arizona_Dept_of_Health_Services_2fa2b2aa.pdf",
+        "name": "Arizona_Dept_of_Health_Services_2fa2b2aa.pdf",
+        "category": "federal-state",
+        "size_bytes": 57609,
+        "extension": ".pdf",
+        "actual_type": "data/raw/policies_categorized/federal-state/Arizona_Dept_of_Health_Services_2fa2b2aa.pdf: HTML document, Unicode text, UTF-8 text, with very long lines (613), with CRLF, LF line terminators",
+        "coi_analysis": "No COI indicators found"
+      },
+      {
+        "path": "major_health_systems/Community_Health_Systems_826cf6c3.pdf",
+        "name": "Community_Health_Systems_826cf6c3.pdf",
+        "category": "major_health_systems",
+        "size_bytes": 149929,
+        "extension": ".pdf",
+        "actual_type": "data/raw/policies_categorized/major_health_systems/Community_Health_Systems_826cf6c3.pdf: HTML document, ASCII text, with very long lines (26407)",
+        "coi_analysis": "No COI indicators found"
+      },
+      {
+        "path": "major_health_systems/Baystate_Health_250802b1.pdf",
+        "name": "Baystate_Health_250802b1.pdf",
+        "category": "major_health_systems",
+        "size_bytes": 145852,
+        "extension": ".pdf",
+        "actual_type": "data/raw/policies_categorized/major_health_systems/Baystate_Health_250802b1.pdf: JavaScript source, ASCII text, with very long lines (1720), with CRLF, LF line terminators",
+        "coi_analysis": "No COI indicators found"
+      },
+      {
+        "path": "major_health_systems/SCL_Health_a3186b6f.pdf",
+        "name": "SCL_Health_a3186b6f.pdf",
+        "category": "major_health_systems",
+        "size_bytes": 364330,
+        "extension": ".pdf",
+        "actual_type": "data/raw/policies_categorized/major_health_systems/SCL_Health_a3186b6f.pdf: HTML document, ASCII text, with very long lines (65536), with no line terminators",
+        "coi_analysis": "No COI indicators found"
+      },
+      {
+        "path": "major_health_systems/SSM_Health_feb613bc.pdf",
+        "name": "SSM_Health_feb613bc.pdf",
+        "category": "major_health_systems",
+        "size_bytes": 51438,
+        "extension": ".pdf",
+        "actual_type": "data/raw/policies_categorized/major_health_systems/SSM_Health_feb613bc.pdf: HTML document, Unicode text, UTF-8 text, with very long lines (3818), with CRLF, LF line terminators",
+        "coi_analysis": "No COI indicators found"
+      },
+      {
+        "path": "major_health_systems/Veterans_Health_Administration_6cd22729.pdf",
+        "name": "Veterans_Health_Administration_6cd22729.pdf",
+        "category": "major_health_systems",
+        "size_bytes": 70855,
+        "extension": ".pdf",
+        "actual_type": "data/raw/policies_categorized/major_health_systems/Veterans_Health_Administration_6cd22729.pdf: HTML document, Unicode text, UTF-8 text, with very long lines (527), with CRLF, LF line terminators",
+        "coi_analysis": "No COI indicators found"
+      },
+      {
+        "path": "major_health_systems/Einstein_Healthcare_Network_10b122d3.pdf",
+        "name": "Einstein_Healthcare_Network_10b122d3.pdf",
+        "category": "major_health_systems",
+        "size_bytes": 8321,
+        "extension": ".pdf",
+        "actual_type": "data/raw/policies_categorized/major_health_systems/Einstein_Healthcare_Network_10b122d3.pdf: JavaScript source, ASCII text, with very long lines (2209)",
+        "coi_analysis": "No COI indicators found"
+      },
+      {
+        "path": "major_health_systems/Spectrum_Health_64bb0614.pdf",
+        "name": "Spectrum_Health_64bb0614.pdf",
+        "category": "major_health_systems",
+        "size_bytes": 366541,
+        "extension": ".pdf",
+        "actual_type": "data/raw/policies_categorized/major_health_systems/Spectrum_Health_64bb0614.pdf: HTML document, ASCII text, with very long lines (65536), with no line terminators",
+        "coi_analysis": "No COI indicators found"
+      },
+      {
+        "path": "major_health_systems/Geisinger_95e3857a.pdf",
+        "name": "Geisinger_95e3857a.pdf",
+        "category": "major_health_systems",
+        "size_bytes": 17047,
+        "extension": ".pdf",
+        "actual_type": "data/raw/policies_categorized/major_health_systems/Geisinger_95e3857a.pdf: HTML document, Unicode text, UTF-8 text, with very long lines (7548)",
+        "coi_analysis": "No COI indicators found"
+      },
+      {
+        "path": "major_health_systems/Catholic_Health_Initiatives_c5f26a6b.pdf",
+        "name": "Catholic_Health_Initiatives_c5f26a6b.pdf",
+        "category": "major_health_systems",
+        "size_bytes": 206788,
+        "extension": ".pdf",
+        "actual_type": "data/raw/policies_categorized/major_health_systems/Catholic_Health_Initiatives_c5f26a6b.pdf: HTML document, ASCII text, with very long lines (902), with CRLF, LF line terminators",
+        "coi_analysis": "No COI indicators found"
+      },
+      {
+        "path": "major_health_systems/Covenant_Health_8e0a8334.pdf",
+        "name": "Covenant_Health_8e0a8334.pdf",
+        "category": "major_health_systems",
+        "size_bytes": 209803,
+        "extension": ".pdf",
+        "actual_type": "data/raw/policies_categorized/major_health_systems/Covenant_Health_8e0a8334.pdf: HTML document, ASCII text, with very long lines (38223)",
+        "coi_analysis": "No COI indicators found"
+      },
+      {
+        "path": "major_health_systems/Legacy_Health_ad8949c7.pdf",
+        "name": "Legacy_Health_ad8949c7.pdf",
+        "category": "major_health_systems",
+        "size_bytes": 57433,
+        "extension": ".pdf",
+        "actual_type": "data/raw/policies_categorized/major_health_systems/Legacy_Health_ad8949c7.pdf: HTML document, Unicode text, UTF-8 text, with very long lines (22847), with CRLF, LF line terminators",
+        "coi_analysis": "No COI indicators found"
+      }
+    ],
+    "errors": []
+  }
+}

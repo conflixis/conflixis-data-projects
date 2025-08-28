@@ -1,0 +1,46 @@
+# Data files - we WANT to commit these
+# Removing gitignore for data folder as these are valuable collected assets
+
+# Keep output reports
+!data/output/*.json
+
+# Archive folder (contains test scripts and intermediate files)
+archive/
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+venv/
+env/
+
+# Environment
+.env
+.env.local
+
+# Logs
+logs/
+*.log
+
+# Testing
+.coverage
+.pytest_cache/
+htmlcov/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Temporary files
+*.tmp
+*.bak
+downloads/

@@ -1,0 +1,1277 @@
+<!doctype html>
+<html lang="en">
+<head>
+<!-- START: META DATA -->
+   <meta charset="utf-8">
+   <meta name="author" content="National Center for Ethics in Health Care 10E1E" />
+  <meta name="dcterms.subject" content="National Center for Ethics in Health Care" />
+   <meta name="keywords" content="National Center for Ethics in Health Care, ethics, ethics in health care, IntegratedEthics, National Center for Ethics, medical ethics, bioethics, integrated ethics, imed" />
+   <meta name="description" content="The National Center for Ethics in Health Care (NCEHC) is VA's primary office for addressing the complex ethical issues that arise in patient care, health care management, and research. Our role is to clarify and promote ethical health care practices throughout VHA and nationwide. Guided by the premise that ethics is essential to quality, we serve as a resource center for VHA leaders and staff on issues in clinical, organizational, and research ethics." />
+   <meta name="dcterms.created" content="20130815" />
+   <meta name="dcterms.dateAccepted" content="20241114" />
+   <meta name="dcterms.type" content="Program Homepage">
+
+   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+<!-- END: Meta tags for Twitter cards -->
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+   <!-- END: META DATA -->
+
+   <title>National Center for Ethics in Health Care Home</title>
+   
+
+   
+
+
+
+<!-- Bootstrap -->
+
+	<link href="/va_files/2014/responsive/images/favicon.ico" media="all" rel="shortcut icon" type="image/x-icon">
+
+	<link href="/va_files/2014/responsive/styles/bootstrap.css" media="all" rel="stylesheet" type="text/css">
+	<link href="/va_files/2014/responsive/styles/layout.css" media="all" rel="stylesheet" type="text/css"><!-- Different Stylesheet for the Homepage -->
+	<link href="/va_files/2014/responsive/styles/accessibleMegaMenu.css" media="all" rel="stylesheet" type="text/css">
+	<link href="/va_files/2014/responsive/styles/health.css" media="all" rel="stylesheet" type="text/css">
+	<link href="/va_files/2014/responsive/styles/slider.css" media="all" rel="stylesheet" type="text/css">
+	<link href="/va_files/2014/responsive/styles/slide-menu-custom.css" media="all" rel="stylesheet" type="text/css">
+	<link href="/va_files/2014/responsive/styles/tabs.css" media="all" rel="stylesheet" type="text/css">
+	<link href="/va_files/2014/responsive/styles/modal.css" media="all" rel="stylesheet" type="text/css">
+	<link href="https://cdn.eo.va.gov/vendor/fa5/current/css/all.css" rel="stylesheet" type="text/css"/>
+
+<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+  <script type="text/javascript" src="/va_files/2014/responsive/scripts/html5shiv.js"></script>
+  <script type="text/javascript" src="/va_files/2014/responsive/scripts/respond.min.js"></script>
+<![endif]-->
+<!--[if IE]>
+	<link href="/va_files/2014/responsive/styles/ie9all.css" media="all" rel="stylesheet" type="text/css">
+<![endif]-->
+<!--[if IE 8]>
+	<link href="/va_files/2014/responsive/styles/ie8.css" media="all" rel="stylesheet" type="text/css">
+<![endif]-->
+<!--[if IE 7]>
+	<link href="/va_files/2014/responsive/styles/ie7.css" media="all" rel="stylesheet" type="text/css">
+<![endif]-->
+
+
+<script type="text/javascript" src="/va_files/2014/responsive/scripts/jquery-1-10-2.js"></script>
+<script type="text/javascript" src="/va_files/2014/responsive/scripts/swipe-min.js"></script>
+<script type="text/javascript" src="/va_files/2014/responsive/scripts/scrollable.js"></script>
+<script type="text/javascript" src="/va_files/2014/responsive/scripts/left-nav.js"></script>
+<script type="text/javascript" src="/va_files/2014/responsive/scripts/tabs-library.js"></script>
+<script type="text/javascript" src="/va_files/2014/responsive/scripts/tabs-accord.js"></script>
+<script type="text/javascript" src="/va_files/2014/responsive/scripts/accessible2.js"></script>
+<script type="text/javascript" src="/va_files/2014/responsive/scripts/custom.js"></script>
+
+<script src="/va_files/2014/responsive/scripts/externalLinks.js" type="text/javascript"></script>
+
+<script async type="text/javascript" src="https://dap.digitalgov.gov/Universal-Federated-Analytics-Min.js?agency=VA&yt=1&pga4=G-Y8BBTRX2M1" id="_fed_an_ua_tag"></script>
+<style type="text/css">.brand-consolidation-deprecated { display: none !important; } </style>
+<link rel="stylesheet" href="https://prod-va-gov-assets.s3-us-gov-west-1.amazonaws.com/generated/styleConsolidated.css" />
+<script type="text/javascript" src="https://prod-va-gov-assets.s3-us-gov-west-1.amazonaws.com/generated/polyfills.entry.js"></script>
+<script type="text/javascript" src="https://prod-va-gov-assets.s3-us-gov-west-1.amazonaws.com/generated/vendor.entry.js"></script>
+<script type="text/javascript" src="https://prod-va-gov-assets.s3-us-gov-west-1.amazonaws.com/generated/proxy-rewrite.entry.js"></script>
+<script type="text/javascript" src="https://prod-va-gov-assets.s3-us-gov-west-1.amazonaws.com/js/vendor/uswds.min.js"></script>
+
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl+ '&gtm_auth=EVfhr6k93Fl16jzaZVCafQ&gtm_preview=env-2&gtm_cookies_win=x';f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-WZ6MXMD');</script>
+<!-- End Google Tag Manager -->
+
+
+<!-- consolidation_4c8f2cfe1e1c427c5b14529d202ee961 -->
+
+<meta property="og:locale" content="en_US" />
+<meta property="og:type" content="website" />
+<meta content="https://www.va.gov/img/design/logo/va-og-image.png" property="og:image" />
+<meta content="VA.gov | Veterans Affairs" property="og:title">
+
+<meta content="VA.gov | Veterans Affairs" name="twitter:title">
+<meta name="twitter:card" content="Summary" />
+<meta name="twitter:site" content="@DeptVetAffairs" />
+<meta content="Apply for and manage the VA benefits and services you’ve earned as a Veteran, Servicemember, or family member—like health care, disability, education, and more." property="og:description" />
+<meta content="Apply for and manage the VA benefits and services you’ve earned as a Veteran, Servicemember, or family member—like health care, disability, education, and more." name="twitter:description" />
+<meta content="Apply for and manage the VA benefits and services you’ve earned as a Veteran, Servicemember, or family member—like health care, disability, education, and more." name="description" />
+<meta name="twitter:image" content="https://www.va.gov/img/design/logo/va-og-twitter-image.png" />
+
+
+<style type="text/css" media="screen,print">
+   @import url(/TS_SHARED/2014/responsive/va_administrations/VHA/styles/site-styles.css);
+</style>
+<script type="text/javascript">
+   var vaSurvey = 'mcenter';
+   var vaSiteFolder = 'ETHICS';
+</script>
+
+<script type="text/javascript" src="/TS_SHARED/2014/responsive/va_administrations/VHA/scripts/analytics-po.js"></script>
+
+
+   
+<style type="text/css">
+   
+   
+   #tabContent {
+                margin-bottom: 2em; 
+   }
+   
+  
+   #homeinnerContent .widget {
+                width: 100%;
+                margin-left: 0px;
+   }
+
+   #homeinnerContent .widget-title {
+                width: 94%;
+                float: none;
+                align: center;
+   }
+
+   .widget .threeCol {
+                width: 30%;
+                float: left;
+                margin-right: 20px;
+                margin-bottom: 20px; 
+   }
+      
+      #badgecontainer {
+   
+          text-align: justify;
+          -ms-text-justify: distribute-all-lines;
+          text-justify: distribute-all-lines;
+      }
+   
+      #badgecontainer > div {
+      
+          vertical-align: top;
+          display: inline-block;
+          *display: inline;
+          zoom: 1
+      }
+      .stretch {
+      
+          width: 100%;
+          display: inline-block;
+          font-size: 0;
+          line-height: 0
+   }   
+
+</style>
+
+
+
+   </head>
+   <body>
+    
+<div id="skiplink"> <a href="#main-content" >skip to page content</a></div>
+
+        <!-- BACK GROUND WRAPPER EFFECTS -->   
+	<div id="main">
+	
+	<div id="bg-main">
+	 <div id="bg-middle-effect"> 
+      <div class="container" id="main-wrap">
+	  
+        <header class="row main-header-wrap">
+
+		
+			<div class="csshide">
+
+	Attention A T users.  To access the menus on this page please perform the following steps.
+
+
+
+		1. Please switch auto forms mode to off.
+
+		2. Hit enter to expand a main menu option (Health, Benefits, etc).
+
+		3. To enter and activate the submenu links, hit the down arrow.
+
+
+
+	You will now be able to tab or arrow up or down through the submenu options to access/activate the submenu links.
+
+	</div>
+
+          <div class="main-header clearfix">
+
+            <!-- #Top tab-->
+
+            <div id="locator-mobile">
+
+             <div class="va-crisis-line">
+
+	<div class="va-flex">
+
+		<button data-show="#modal-crisisline" class="va-crisis-line-button va-overlay-trigger"> <span class="va-flex"> <span class="vcl"></span>Get help from Veterans Crisis Line </span> </button>
+
+	</div>
+
+</div>
+
+              <div id="mainLocator-btn">Locator</div>
+
+                <div id="mainContact-btn">Contact</div>
+
+              <div class="search-btn" id="search-btn">Search</div>
+
+             <div id="main-contact">
+
+			    <div class="title">Contact Us</div>
+
+                <p><a href="https://www.va.gov/contact-us/#explore-our-faqs-and-other-res">FAQs</a></p>
+
+				<p><a href="https://www.va.gov/contact-us/#contact-us-online-through-ask-">Ask a Question</a></p>
+
+			    <p><a href="https://www.va.gov/contact-us/#call-us">Toll Free Numbers</a></p>
+
+              </div>
+
+              <div id="main-locator">
+
+			   <div class="title">Locator</div>
+
+                <p><a href="https://www.va.gov/directory/guide/division_flsh.asp?dnum=1">Hospitals and Clinics</a></p>
+
+				<p><a href="https://www.va.gov/directory/guide/vetcenter_flsh.asp">Vet Centers</a></p>
+
+				<p><a href="https://www.va.gov/directory/guide/division_flsh.asp?dnum=3">Regional Benefits Offices</a></p>
+
+				<p><a href="https://www.benefits.va.gov/homeloans/contact_rlc_info.asp">Regional Loan Centers</a></p>
+
+				<p><a href="https://www.va.gov/directory/guide/division_flsh.asp?dnum=4 ">Cemetery Locations</a></p>
+
+              </div>
+
+            </div>
+
+            <!-- end-->
+
+            <!-- # social and search -->
+
+            <div class="social-n-search">
+
+        <div class="va-crisis-line">
+
+	<div class="va-flex">
+
+		<button data-show="#modal-crisisline" class="va-crisis-line-button va-overlay-trigger"> <span class="va-flex"> <span class="vcl"></span>Get help from Veterans Crisis Line </span> </button>
+
+	</div>
+
+</div>
+
+
+
+              <div class="search-btn">Search</div>
+
+                            <div id="main-search">
+
+                <!-- SEARCH -->
+
+
+
+                                 <div id="search-area">
+
+<form id="searchForm" method="GET" action="https://www.va.gov/search/">
+
+
+
+
+
+        <!-- do not insert line breaks in the div tag below -->
+
+        <div id="mainSearchForm"><label for="searchtxt" class="positionsearch">Enter your search text</label><input name="query" type="text" id="searchtxt" size="5" title="Enter your search text" value="" /><input name="t" type="hidden" value="false" /><label class="positionsearch" for="edit-submit">Button to start search</label><input id="edit-submit" class="form-submit" type="image" src="https://www.va.gov/va_files/2014/responsive/images/main-search-button.png" alt="Click here to submit your search" name="submit"></div>
+
+
+
+</form>
+
+                                 </div>
+
+                            <!-- END SEARCH -->
+
+              </div>
+
+              <!-- End main site search -->
+
+              <div id="main-social-wrapper">
+
+                <div class="social-wrapper-508">
+
+                <div id="main-secondary-nav">
+
+                <ul class="secondary-nav">
+
+					<li><a href="https://www.va.gov/site_map.htm" title="Site Map A-Z">site map [a-z]</a></li>
+
+                </ul>
+
+               </div><!--End main secondary nav -->
+
+                <div class="main-social-containers"><a title="Link to VA's Email Directory" href="https://public.govdelivery.com/accounts/USVA/subscriber/new/"><img src="https://www.va.gov/va_files/2014/responsive/images/social-email.png" alt="Email icon"></a></div>
+
+                <div class="main-social-containers"><a title="Link to VA's main Facebook page" href="https://www.facebook.com/VeteransAffairs"><img src="https://www.va.gov/va_files/2014/responsive/images/social-fb.png" alt="Facebook icon"></a></div>
+
+                <div class="main-social-containers"><a title="Link to VA's main Twitter account" href="https://www.twitter.com/DeptVetAffairs/"><img src="https://www.va.gov/va_files/2014/responsive/images/social-twitter.png" alt="Twitter icon"></a></div>
+
+                <div class="main-social-containers"><a title="Link to VA News" href="https://news.va.gov"><img src="https://www.va.gov/va_files/2014/responsive/images/social-blog.png" alt="Blog icon"></a></div>
+
+                <div class="main-social-containers"><a title="Link to VA's main Flickr account" href="https://www.flickr.com/photos/VeteransAffairs/"><img src="https://www.va.gov/va_files/2014/responsive/images/social-flickr.png" alt="Flickr icon"></a></div>
+
+                <div class="main-social-containers"><a title="Link to VA's main Youtube account" href="https://www.youtube.com/user/DeptVetAffairs"><img src="https://www.va.gov/va_files/2014/responsive/images/social-youtube.png" alt="Youtube icon"></a></div>
+
+                <div class="main-social-containers"><a title="Link to VA's main Instagram account" href="https://www.instagram.com/deptvetaffairs/"><img src="https://www.va.gov/va_files/2014/responsive/images/social-instagram.png" alt="Instagram icon"></a></div>
+
+			</div><!-- End social-wrapper-508 -->
+
+
+
+
+
+            </div><!--End main social wrapper -->
+
+
+
+
+
+
+
+
+
+            </div>
+
+            <!-- # social and search -->
+
+            <!-- # logo -->
+
+            <div id="main-logo"> <a href="https://www.va.gov" title="Go to VA.gov"  class="logo"><img src="/va_files/2014/responsive/images/header-logo.png" alt="Official seal of the United States Department of Veterans Affairs"></a> </div>
+
+            <!-- / logo -->
+
+          </div>
+
+
+  <!-- ************************************** START MAIN NAVIGATION   ********************************************* -->
+
+           <!-- main navigation -->
+          <nav id="main-nav" class="main-nav">
+            <div id="menu-btn" class="menu-btn">
+              <div class="rt-menu"><span>More VA</span></div>
+            </div>
+            <!-- # navigation -->
+            <div id="nav-wrap">
+			<b id="close-nav"></b>
+              <div class="menu-btn" id="menu-btn-close">
+                <div class="rt-menu"><span>More VA</span></div>
+              </div>
+
+			 	 <div id="nav-container" class="nav-container-close">
+				<ol class="accessible-megamenu">
+				   <li class="accessible-megamenu-top-nav-item"> <!-- Begin Heathcare Dropdown -->
+						<span class="mega-hdr-text"> <a href="https://www.va.gov/health" aria-haspopup="true">Health</a></span>
+						<div class="cols-1 firstcol accessible-megamenu-panel">
+							<ol>
+								<li class="accessible-megamenu-panel-group">
+									 <ol>
+                                	<li><a href="https://www.va.gov/health-care/">Health Care Information</a></li>
+                         			<li><a href="https://www.va.gov/health/topics/">A-Z Health Topic Finder</a></li>
+                        		 	<li><a href="https://www.myhealth.va.gov/">My Health<strong><em>e</em></strong>Vet</a></li>
+                         			<li><a href="https://www.va.gov/health-care/refill-track-prescriptions">Prescriptions Refills</a></li>
+                                    <li><a href="https://www.va.gov/health-care/schedule-view-va-appointments">Schedule a VA Appointment</a></li>
+                         			<li><a href="https://www.veteranscrisisline.net/">Veterans Crisis Line</a></li>
+                         			<li><a href="https://www.mentalhealth.va.gov/">Mental Health</a></li>
+                         			<li><a href="https://www.ptsd.va.gov/">PTSD</a></li>
+                         			<li><a href="https://www.publichealth.va.gov/">Public Health</a></li>
+									<li><a href="https://www.va.gov/communitycare/">Community Care</a></li>
+                                    <li><a href="https://www.caregiver.va.gov/">Caregiver Support </a></li>
+                                    <li><a href="https://www.va.gov/resources/choosing-between-urgent-and-emergency-care/">Urgent Care </a></li>
+
+                            </ol>
+								</li>
+							</ol>
+						</div>
+				  </li> <!-- End Health Dropdown -->
+					<li class="accessible-megamenu-top-nav-item"> <!-- Begin Benefits Dropdown -->
+						<span class="mega-hdr-text"> <a href="https://www.benefits.va.gov/" aria-haspopup="true">Benefits</a></span>
+						<div class="cols-1 accessible-megamenu-panel">
+							<ol>
+								<li class="accessible-megamenu-panel-group">
+									 <ol>
+                               	    <li><a href="https://www.benefits.va.gov/">General Benefits Information</a></li>
+                        			<li><a href="https://www.benefits.va.gov/compensation/">Disability Compensation</a></li>
+                        			<li><a href="https://www.benefits.va.gov/pension/">Pension</a></li>
+                        			<li><a href="https://www.benefits.va.gov/gibill/">GI Bill <span class="registeredmark">&#174;</span></a></li>
+                        			<li><a href="https://www.benefits.va.gov/vocrehab/" >Vocational Rehabilitation &amp; Employment</a></li>
+
+                        			<li><a href="https://www.benefits.va.gov/gibill/survivor_dependent_assistance.asp">Dependents&#39; Educational Assistance</a></li>
+                        			<li><a href="https://www.va.gov/opa/persona/dependent_survivor.asp">Survivor Benefits</a></li>
+                        			<li><a href="https://www.benefits.va.gov/homeloans/">Home Loans</a></li>
+                        			<li><a href="https://www.benefits.va.gov/insurance/">Life Insurance</a></li>
+                                    <li><a href="https://benefits.va.gov/benefits/appeals.asp">Appeals Modernization</a></li>
+
+                            </ol>
+								</li>
+							</ol>
+						</div>
+					</li> <!-- End Benefits Dropdown Dropdown -->
+					<li class="accessible-megamenu-top-nav-item"> <!-- Begin Burials and Memorials Dropdown -->
+						<span class="mega-hdr-text"> <a href="https://www.cem.va.gov/" aria-haspopup="true">Burials &amp; Memorials</a></span>
+						<div class="cols-1 accessible-megamenu-panel" >
+							<ol>
+								<li class="accessible-megamenu-panel-group">
+									 <ol>
+                                <li><a href="https://www.cem.va.gov/">National Cemetery Information</a></li>
+                        			<li><a href="https://www.cem.va.gov/burial-memorial-benefits/">Burial and Memorial Benefits</a></li>
+                        			<!-- <li><a href="https://www.cem.va.gov/hmm/">Headstones Markers &amp; Medallions</a></li> -->
+                        			<!-- <li><a href="https://www.cem.va.gov/pmc.asp">Presidential Memorial Certificates</a></li> -->
+                        			<li><a href="https://www.cem.va.gov/find-cemetery/">Find a Cemetery</a></li>
+                        			<li><a href="https://www.cem.va.gov/nationwide-gravesite-locator/">Locate a Grave</a></li>
+                        			<!-- <li><a href="https://www.cem.va.gov/burial_benefits/burial_flags.asp">Burial Flags</a></li> -->
+                        			<!-- <li><a href="https://www.cem.va.gov/burial_benefits/">Burial Allowance</a></li> -->
+                        			<li><a href="https://www.va.gov/burials-and-memorials/pre-need/form-10007-apply-for-eligibility/introduction">Apply for Pre-need Eligibility</a></li>
+                        			<li><a href="https://www.va.gov/burials-memorials/schedule-a-burial/">Schedule a Burial</a></li>
+                        			<li><a href="https://www.cem.va.gov/grants/">Cemetery Grants</a></li>
+                        			<li><a href="https://www.cem.va.gov/hmm/cemetery-restoration.asp">Cemetery Restoration</a></li>
+                        			<li><a href=" https://www.va.gov/remember/">Veterans Legacy Memorial</a></li>
+                        			<li><a href="https://www.cem.va.gov/history/">NCA History Program</a></li>
+                        			<li><a href="https://www.cem.va.gov/legacy/">Veterans Legacy Program</a></li>                                      
+                            </ol>
+								</li>
+							</ol>
+						</div>
+					</li> <!-- EndBurials and Memorials Dropdown -->
+					<li class="accessible-megamenu-top-nav-item"> <!-- Begin About VA -->
+						<span class="mega-hdr-text"><a href="https://www.va.gov/landing2_about.htm" aria-haspopup="true">About VA</a></span>
+						<div class="cols-2 fifthtolast accessible-megamenu-panel">
+							<ol>
+								<li class="accessible-megamenu-panel-group">
+									<span class="mega-hdr-sub-text"><span class="panelheader">Inside VA</span></span>
+									<ol class="accessible-megamenu-lvl3">
+                    				<li><a href="https://www.va.gov/opa/bios/secva.asp">Secretary of VA</a></li>
+                    				<li><a href="https://www.va.gov/opa/bios/">Executive Biographies</a></li>
+                    				<li><a href="https://www.va.gov/landing_organizations.htm">Organizations</a></li>
+                    				<li><a href="https://www.va.gov/about_va/vahistory.asp">History</a></li>
+                            </ol>
+								</li>
+								<li class="accessible-megamenu-panel-group">
+									<span class="mega-hdr-sub-text"><span class="panelheader">Budget and Performance</span></span>
+									 <ol class="accessible-megamenu-lvl3">
+                    				<li><a href="https://www.va.gov/performance/">VA Plans, Budget, &amp; Performance</a></li>
+                    				<li><a href="https://www.va.gov/finance/afr/index.asp">Agency Financial Report (AFR)</a></li>
+                    				<li><a href="https://www.va.gov/budget/products.asp">Budget Submission</a></li>
+                    				<li><a href="https://www.va.gov/recovery/">Recovery Act</a></li>
+                            </ol>
+								</li>
+							</ol>
+						</div>
+					</li><!-- End About VA -->
+					<li class="accessible-megamenu-top-nav-item"><!-- Begin Resources -->
+						<span class="mega-hdr-text"><a href="https://www.va.gov/landing_organizations.htm" aria-haspopup="true" aria-label="VA Resources">Resources</a></span>
+						<div class="cols-1 accessible-megamenu-panel">
+							 <ol>
+                              <li class="accessible-megamenu-panel-group">
+									<ol>
+                                <li><a href="https://www.va.gov/landing2_business.htm">Business</a></li>
+                    				<li><a href="https://www.va.gov/oca/index.asp" >Congressional Affairs</a></li>
+                   					<li><a href="https://www.va.gov/jobs/">Jobs</a></li>
+                    				<li><a href="https://www.va.gov/opa/publications/benefits_book.asp">Benefits Booklet</a></li>
+                    				<li><a href="https://www.va.gov/vetdata/">Data &amp; Statistics</a></li>
+                    				<li><a href="https://www.va.gov/data/">VA Open Data</a></li>
+                    				<li><a href="https://mobile.va.gov/appstore/"> VA App Store</a></li>
+                    				<li><a href="https://www.nrd.gov/">National Resource Directory</a></li>
+                                    <li><a href="https://www.va.gov/ogc/recognizedvsos.asp">Veteran Service Organizations</a></li>
+                                    <li><a href="https://www.va.gov/accountability/">Office of Accountability &amp; Whistleblower Protection</a></li>
+                                    <li><a href="https://www.va.gov/transparency/">Transparency</a></li>
+                            </ol>
+							   </li>
+                            </ol>
+						</div>
+					</li><!-- End Resources -->
+					<li class="accessible-megamenu-top-nav-item">
+						<span class="mega-hdr-text"><a href="https://www.va.gov/landing2_media_room.htm" aria-haspopup="true">Media Room</a></span>
+						<div class="cols-3 thirdtolast accessible-megamenu-panel">
+							<ol>
+								<li class="accessible-megamenu-panel-group">
+									<span class="mega-hdr-sub-text"><span class="panelheader">Inside the Media Room</span></span>
+										<ol class="accessible-megamenu-lvl3">
+											<li><a href="https://www.va.gov/opa/">Public Affairs</a></li>
+											<li><a href="https://www.va.gov/opa/pressrel/">News Releases</a></li>
+											<li><a href="https://www.va.gov/opa/speeches/">Speeches</a></li>
+											<li><a href="https://www.youtube.com/user/DeptVetAffairs">Videos</a></li>
+											<li><a href="https://www.va.gov/opa/publications/">Publications</a></li>
+                                        </ol>
+								</li>
+								<li class="accessible-megamenu-panel-group">
+									<span class="mega-hdr-sub-text"><span class="panelheader">National Observances</span></span>
+									 <ol class="accessible-megamenu-lvl3">
+                                	<li><a href="https://www.va.gov/opa/vetsday/">Veterans Day</a></li>
+                     				<li><a href="https://www.va.gov/opa/speceven/memday/">Memorial Day</a></li>
+                     				<li><a href="https://www.va.gov/opa/publications/celebrate_americas_freedoms.asp">Celebrating America&#39;s Freedoms</a></li>
+                                 </ol>
+								</li>
+								<li class="accessible-megamenu-panel-group">
+									<span class="mega-hdr-sub-text"><span class="panelheader">Special Events</span></span>
+									 <ol class="accessible-megamenu-lvl3">
+										<li><a href="https://www.blogs.va.gov/nvspse/">Adaptive Sports Program</a></li>
+										<li><a href="https://www.blogs.va.gov/nvspse/national-veterans-creative-arts-festival/">Creative Arts Festival</a></li>
+										<li><a href="https://www.blogs.va.gov/nvspse/national-veterans-golden-age-games/">Golden Age Games</a></li>
+										<li><a href="https://www.blogs.va.gov/nvspse/national-veterans-summer-sports-clinic/">Summer Sports Clinic</a></li>
+										<li><a href="https://www.veteransgolfclinic.org/">Training - Exposure - Experience (TEE) Tournament</a></li>
+										<li><a href="https://wheelchairgames.org/">Wheelchair Games</a></li>
+										<li><a href="https://www.wintersportsclinic.org/">Winter Sports Clinic</a></li>
+                                      </ol>
+								</li>
+
+							</ol>
+						</div>
+					</li>
+					<li class="accessible-megamenu-top-nav-item"><!-- Begin Locations -->
+						<span class="mega-hdr-text"><a href="https://www.va.gov/landing2_locations.htm" aria-haspopup="true">Locations</a></span>
+						<div class="cols-1 secondtolast accessible-megamenu-panel" >
+							<ol>
+								<li class="accessible-megamenu-panel-group">
+								 <ol>
+                                <li><a href="https://www.va.gov/directory/guide/division.asp?dnum=1&amp;isFlash=0">Hospitals &amp; Clinics</a></li>
+                                <li><a href="https://www.va.gov/directory/guide/vetcenter.asp?isFlash=0">Vet Centers</a></li>
+                               	<li><a href="https://www.va.gov/directory/guide/division.asp?dnum=3&amp;isFlash=0">Regional Benefits Offices</a></li>
+                                <li><a href="https://www.benefits.va.gov/homeloans/contact_rlc_info.asp">Regional Loan Centers</a></li>
+                                <li><a href="https://www.va.gov/directory/guide/division.asp?dnum=4&amp;isFlash=0">Cemetery Locations</a></li>
+                            </ol>
+								</li>
+							</ol>
+						</div>
+					</li><!-- End Locations -->
+
+					 <li class="accessible-megamenu-top-nav-item last"><!-- Begin Contact Us -->
+						<span class="mega-hdr-text"><a href="https://www.va.gov/contact-us/" aria-haspopup="true">Contact Us</a></span>
+						<div class="cols-1 last accessible-megamenu-panel" >
+							<ol>
+								<li class="accessible-megamenu-panel-group">
+									 <ol>
+                                <li><a href="https://www.va.gov/contact-us/#explore-our-faqs-and-other-res">FAQs</a></li>
+                                <li><a href="https://www.va.gov/contact-us/#contact-us-online-through-ask-">Ask a Question</a></li>
+                                <li><a href="https://www.va.gov/contact-us/#call-us">Toll Free Numbers</a></li>
+
+                            </ol>
+								</li>
+							</ol>
+						</div>
+					</li><!-- End Contact Us -->
+				</ol>
+			 </div>
+
+            </div>
+            <!-- /navigation -->
+          </nav>
+          <!-- main navigation --><!-- ************************************** END MAIN NAVIGTATION   ********************************************* -->
+
+
+        </header>
+        <section class="row" id="container">
+           <div id="mainContentWrapper">
+             <a id="content-wrapper"></a> <!-- For Skip Nav -->
+             
+             <!-- **************************** START BREADCRUMBS *********************************** -->
+             <div id="breadCrumbPath">
+                
+                <a href="https://www.va.gov/">VA</a> &raquo; 
+                
+                <a href="https://www.va.gov/health">Health Care</a> &raquo;
+                National Center for Ethics in Health Care 
+             </div>
+             <!-- **************************** END BREADCRUMBS ************************************* -->
+             
+             <!-- **************************** START Site Name ************************************ -->
+             <h1>National Center for Ethics in Health Care</h1>
+             <!-- **************************** END Site Name ************************************** -->
+             
+             </div> <!--End main content wrapper -->
+         <!-- Left Container -->
+          <div class="col-md-3" id="left-bar-wrap"  >
+            <div class="fill">                
+
+                    <!-- *************************** START LEFT NAVIGATION MENU ******************************* -->
+                    
+
+
+
+
+
+<!-- *************** START LEFT NAVIGATION MENU ***************** -->
+<!-- ********** START LEFT NAV MENU CODE ********** -->
+<div id="leftNavContainer" class="clearfix">
+   <!-- ********** START LEFT NAVIGATION *************** -->
+   <div class="sitemap" id="sitemapup"><span>Menu</span></div>
+   <div id="leftNavWrap">
+      <div id="leftNav" class="lftNavhide">
+         <div class="sitemap" ><span>Menu</span></div>
+	 <ul class="accordion" style="margin-left:0px; padding-top:0px;">
+            <!-- ********** START PROGRAM OFFICE NAV ************ -->
+
+
+
+
+   
+         <li><a href="#" title="National Center for Ethics in Health Care"><span></span>National Center for Ethics in Health Care</a>
+            <ul class="sub-menu">
+   
+   
+   
+   
+      
+               <li><a href="/index.asp" title="Center Home">Center Home</a></li>
+      
+   
+   
+   
+   
+      
+               <li><a href="/for_veterans.asp" title="For Veterans, Patients, and Families">For Veterans, Patients, and Families</a></li>
+      
+   
+   
+   
+   
+      
+               <li><a href="https://dvagov.sharepoint.com/sites/VHAethics/SitePages/NCEHC_Home.aspx" title="For VA Staff">For VA Staff</a></li>
+      
+   
+   
+   
+   
+      
+               <li><a href="/policy.asp" title="Health Care Ethics Policy and Guidance">Health Care Ethics Policy and Guidance</a></li>
+      
+   
+   
+   
+   
+      
+               <li><a href="https://www.ethics.va.gov/GoCC.asp" title="Goals of Care Conversations Skills Training">Goals of Care Conversations Skills Training</a></li>
+      
+   
+   
+   
+            </ul>
+   
+
+
+
+<!-- ********** START VHA NAV ************ -->
+              <li><a href="#"><span></span>More Health Care</a>
+                  <ul class="sub-menu">
+                     <li><a href="https://www.va.gov/health/index.asp">Veterans Health Administration</a></li>
+                     <li><a href="#"><span></span>Health Benefits</a>
+                        <ul class="sub-sub-menu">
+                           <li><a href="https://www.va.gov/health-care/">Health Benefits Home</a></li>
+                           <li><a href="#"><span></span>Apply for VA Care</a>
+                              <ul class="sub-sub-menu">
+                                 <li><a href="https://www.va.gov/health-care/how-to-apply/">Apply Online</a></li>
+                                 <li><a href="https://www.va.gov/health-care/eligibility/">Veteran Eligibility</a></li>
+                                 <li><a href="https://www.va.gov/healthbenefits/apply/active_duty.asp">Active Duty</a></li>
+                                 <li><a href="https://www.va.gov/health-care/family-caregiver-benefits/">Families of Veterans</a></li>
+                                 <li><a href="https://www.va.gov/health-care/health-needs-conditions/womens-health-needs/">Women Veterans</a></li>
+                              </ul>
+                           </li>
+                           <li><a href="#"><span></span>Determine Costs</a>
+                              <ul class="sub-sub-menu">
+                                 <li><a href="https://www.va.gov/communitycare/revenue_ops/copays.asp">Copays</a></li>
+                                 <li><a href="https://www.va.gov/healthbenefits/cost/financial_assessment.asp">Means Test</a></li>
+                                 <li><a href="https://www.va.gov/health-care/about-va-health-benefits/va-health-care-and-other-insurance/">Health Insurance</a></li>
+                                 <li><a href="https://www.va.gov/healthbenefits/cost/make_a_payment.asp">Make a Payment</a></li>
+                              </ul>
+                           </li>
+                           <li><a href="#"><span></span>Community Care</a>
+                              <ul class="sub-sub-menu">
+                                 <li><a href="https://www.va.gov/communitycare/">Community Care Home</a></li>
+                                 <li><a href="https://www.va.gov/communitycare/programs/veterans/index.asp">For Veterans</a></li>
+                                 <li><a href="https://www.va.gov/communitycare/providers/index.asp">For Providers</a></li>
+                                 <li><a href="https://www.va.gov/communitycare/pubs/index.asp">Forms &amp; Publications</a></li>
+                              </ul>
+                           </li>
+                           <li><a href="#"><span></span>Affordable Care Act</a>
+                              <ul class="sub-sub-menu">
+                                 <li><a href="https://www.va.gov/health/aca/index.asp">Overview</a></li>
+                                 <li><a href="https://www.va.gov/health/aca/EnrolledVeterans.asp">Veterans Enrolled<br>in VA Health Care</a></li>
+                                 <li><a href="https://www.va.gov/health/aca/NonEnrolledVeterans.asp">Veterans Not Enrolled in VA<br>Health Care</a></li>
+                                 <li><a href="https://www.va.gov/health/aca/FamilyMembers.asp">Family Members</a></li>
+                                 <li><a href="https://www.va.gov/health/aca/FAQ.asp">Frequently Asked Questions</a></li>
+                              </ul>
+                           </li>
+                           <li><a href="https://www.va.gov/health-care/schedule-view-va-appointments/">Schedule a VA Appointment</a></li>
+                             <li><a href="https://www.caregiver.va.gov/">Caregiver Support</a></li>
+                 <li><a href="https://www.va.gov/resources/choosing-between-urgent-and-emergency-care/">Urgent Care</a></li>
+                        </ul>
+                     </li>
+                     <li><a href="#"><span></span>Conditions &amp; Treatments</a>
+                        <ul class="sub-sub-menu">
+                           <li><a href="https://www.va.gov/health/topics/index.asp">See All Conditions &amp; Treatments (A-Z)</a></li>
+                           <li><a href="https://www.hepatitis.va.gov/">Hepatitis</a></li>
+                           <li><a href="https://www.hiv.va.gov/">HIV</a></li>
+                           <li><a href="#"><span></span>Mental Health</a>
+                              <ul class="sub-sub-menu">
+                                 <li><a href="https://www.mentalhealth.va.gov/">Mental Health Home</a></li>
+                                 <li><a href="https://www.mentalhealth.va.gov/suicide_prevention/index.asp">Suicide Prevention</a></li>
+                                 <li><a href="https://www.mentalhealth.va.gov/substance-abuse/index.asp">Substance Abuse</a></li>
+                                 <li><a href="https://www.mentalhealth.va.gov/msthome/index.asp">Military Sexual Trauma</a></li>
+                                 <li><a href="https://www.ptsd.va.gov/">PTSD</a></li>
+                                 <li><a href="https://www.mirecc.va.gov/">Research (MIRECC)</a></li>
+                              </ul>
+                           </li>
+                           <li><a href="https://www.publichealth.va.gov/exposures/index.asp">Military Exposures</a></li>
+                           <li><a href="https://www.polytrauma.va.gov/">Polytrauma</a></li>
+                           <li><a href="https://www.patientcare.va.gov/RehabilitationServices.asp">Rehabilitation</a></li>
+                           <li><a href="https://www.sci.va.gov/">Spinal Cord Injury</a></li>
+                           <li><a href="https://www.telehealth.va.gov/">Telehealth</a></li>
+                           <li><a href="https://www.womenshealth.va.gov/">Womens Health Issues</a></li>
+                        </ul>
+                     </li>
+                     <li><a href="#"><span></span>Wellness Programs</a>
+                        <ul class="sub-sub-menu">
+                           <li><a href="https://www.myhealth.va.gov/mhv-portal-web/home">MyHealtheVet</a></li>
+                           <li><a href="https://www.nutrition.va.gov/">Nutrition</a></li>
+                           <li><a href="https://www.mentalhealth.va.gov/quit-tobacco/">Quitting Smoking</a></li>
+                           <li><a href="https://www.publichealth.va.gov/vaccines.asp">Vaccines &amp; Immunizations</a></li>
+                           <li><a href="https://www.publichealth.va.gov/flu/index.asp">Flu Vaccination</a></li>
+                           <li><a href="https://www.prevention.va.gov/">Prevention / Wellness</a></li>
+                           <li><a href="https://www.publichealth.va.gov/">Public Health</a></li>
+                           <li><a href="https://www.move.va.gov/">Weight Management (MOVE!)</a></li>
+                           <li><a href="https://www.va.gov/wholehealth/">Whole Health Program</a></li>
+                        </ul>
+                     </li>
+                     <li><a href="#"><span></span>Locations</a>
+                        <ul class="sub-sub-menu">
+                           <li><a href="https://www.va.gov/find-locations/?facilityType=health">Hospitals &amp; Clinics</a></li>
+                           <li><a href="https://www.va.gov/find-locations/?facilityType=vet_center">Vet Centers</a></li>
+                           <li><a href="https://www.vacanteen.va.gov/">Veterans Canteen Service (VCS)</a></li>
+                        </ul>
+                     </li>
+                     <li><a href="#"><span></span>Research</a>
+                        <ul class="sub-sub-menu">
+                           <li><a href="https://www.research.va.gov/">Research Home</a></li>
+                           <li><a href="https://www.research.va.gov/about/">About VA Research</a></li>
+                           <li><a href="https://www.research.va.gov/services/">Services</a></li>
+                           <li><a href="https://www.research.va.gov/programs/">Programs</a></li>
+                           <li><a href="https://www.research.va.gov/currents/">News, Events and Media</a></li>
+                           <li><a href="https://www.research.va.gov/topics/">Research Topics</a></li>
+                           <li><a href="https://www.research.va.gov/for_veterans/">For Veterans</a></li>
+                           <li><a href="https://www.research.va.gov/resources/">For Researchers</a></li>
+                           <li><a href="https://www.va.gov/oro/">Research Oversight</a></li>
+                        </ul>
+                     </li>
+                     <li><a href="#"><span></span>Special Groups</a>
+                        <ul class="sub-sub-menu">
+                           <li><a href="https://www.caregiver.va.gov/">Caregivers</a></li>
+                           <li><a href="#"><span></span>Combat Veterans &amp; their Families</a>
+                              <ul class="sub-sub-menu">
+                                 <li><a href="https://www.vetcenter.va.gov/">Readjustment Counseling (Vet Centers)</a></li>
+                                 <li><a href="https://www.warrelatedillness.va.gov/">War Related Illness &amp; Injury Study Center</a></li>
+                              </ul>
+                           </li>
+                           <li><a href="https://www.va.gov/homeless/">Homeless Veterans</a></li>
+                           <li><a href="https://www.oefoif.va.gov/">Returning Service Members</a></li>
+                           <li><a href="https://www.ruralhealth.va.gov/">Rural Veterans</a></li>
+                           <li><a href="https://www.va.gov/geriatrics/">Seniors &amp; Aging Veterans</a></li>
+                           <li><a href="https://www.volunteer.va.gov/">Volunteers</a></li>
+                           <li><a href="https://www.womenshealth.va.gov/">Women Veterans</a></li>
+                        </ul>
+                     </li>
+                     <li><a href="#"><span></span>Careers, Job Help &amp; Training</a>
+                        <ul class="sub-sub-menu">
+                           <li><a href="#"><span></span>Find a Job with VA</a>
+                              <ul class="sub-sub-menu">
+                                 <li><a href="https://www.vacareers.va.gov/">Health Care Jobs (VA Careers)</a></li>
+                                 <li><a href="https://www.va.gov/nursing/">Travel Nurses</a></li>
+                              </ul>
+                           </li>
+                           <li><a href="#"><span></span>Get Job Help</a>
+                              <ul class="sub-sub-menu">
+                                 <li><a href="https://www.va.gov/vetsinworkplace/">Vets in the Workplace</a></li>
+                                 <li><a href="https://www.vaforvets.va.gov/">VA for Vets</a></li>
+                                 <li><a href="https://www.va.gov/pbi/">Performance Based Interviewing</a></li>
+                              </ul>
+                           </li>
+                           <li><a href="https://www.va.gov/oaa/index.asp">Clinical Trainees (Academic Affiliations)</a>
+                           </li>
+                           <li><a href="#"><span></span>Employees &amp; Contractors</a>
+                              <ul class="sub-sub-menu">
+                                 <li><a href="https://www.tms.va.gov/SecureAuth35/">Talent Management System (TMS)</a></li>
+                                 <li><a href="https://www.valu.va.gov/Home/Index">VA Learning University (VALU)</a></li>
+                                 <li><a href="https://www.simlearn.va.gov/">SimLearn</a></li>
+                                 <li><a href="https://www.va.gov/library/valnet/index.asp">Libraries (VALNET)</a></li>
+                              </ul>
+                           </li>
+                           <li><a href="https://www.va.gov/vdl/">VA Software Documentation Library (VDL)</a></li>
+                        </ul>
+                     </li>
+                     <li><a href="#"><span></span>About VHA</a>
+                        <ul class="sub-sub-menu">
+                           <li><a href="https://www.va.gov/health/aboutVHA.asp">Learn about VHA</a></li>
+                           <li><a href="https://www.va.gov/vhapublications/">Forms &amp; Publications</a></li>
+                           <li><a href="#"><span></span>Quality &amp; Safety</a>
+                              <ul class="sub-sub-menu">
+                                 <li><a href="https://www.accesstocare.va.gov/">Access and Quality Data</a></li>
+                                 <li><a href="https://www.ethics.va.gov/">Ethics</a></li>
+                                 <li><a href="https://www.healthquality.va.gov/">VA/DOD Clinical Practice Guidelines</a></li>
+                                 <li><a href="https://www.va.gov/health/medicalinspector/">Medical Inspector</a></li>
+                                 <li><a href="https://www.patientsafety.va.gov/">Patient Safety</a></li>
+                              </ul>
+                           </li>
+                           <li><a href="#"><span></span>Organizations</a>
+                              <ul class="sub-sub-menu">
+                                 <li><a href="https://www.va.gov/health/landing_admin.asp">Administrative</a></li>
+                                 <li><a href="https://www.va.gov/health/landing_clinical.asp">Clinical</a></li>
+                              </ul>
+                           </li>
+                        </ul>
+                     </li>
+                  </ul>
+              </li>
+              <!-- ********** END VHA NAV ************ -->
+
+			</ul>
+			</div>
+			<!--************ END LEFT NAVIGATION ***************-->
+		</div>
+        <!-- *********** LEFT COLUMN ADDITIONAL CONTENT AREA *************** -->
+        <div id="left-col-content">
+           <!-- ****************** QUICK LINKS ********************** -->
+           <div class="widget clearfix">
+              <div class="widget-title"><span class="hdr-text">Quick Links </span></div>
+              <div id="widget-quick-links">
+                 <div id="widget-locator">
+                    <div id="locator-form">
+
+                       <script language="javascript" type="text/javascript">
+                          var address = "";
+                          var url = "";
+                          function Validate() {
+                            var addr=trim(document.zipSearch.inputaddress.value);
+                            if (addr.length==0 || addr.toLowerCase()=="zip code"){
+                               alert("Please enter Zip code.");
+                               document.zipSearch.inputaddress.focus();
+                               return false;
+                            } else {
+                               address = trim(document.zipSearch.inputaddress.value);
+                               pgname = "https://www.va.gov/find-locations/";
+                               url = pgname + "?address=" + address + "&page=1&facilityType=health&serviceType";
+                               window.location.href=url;
+                               return false;
+                            }
+                          }
+
+                          function trim(str) {
+                            var re = /^\s+(.*?)\s+$/;
+                            return str.replace(re,"$1");
+                          }
+                        </script>
+
+                        <form name="zipSearch" action="https://www.va.gov/find-locations/" method="get" onSubmit="return Validate();">
+                            <label for="LocatorPostalCode" class="positionset">Enter ZIP code here</label>
+                            <input id="LocatorPostalCode" class="inputstyle" type="text" onFocus="this.value=''" size="10" maxlength="10" value="Zip Code" name="inputaddress" title="Enter ZIP here">
+                            <div id="zipButton">
+                              <label for="zipInputButton" class="positionset">Enter ZIP code here</label>
+                              <input id="zipInputButton" type="image" src="/va_files/2012/images/button-locator.png" alt="Search" title="Click here to submit"><input type="submit" id="submit-hidethis" class="hidethis" value="Search" />
+                            </div>
+                            <!-- End ZIp Button -->
+                          </form>
+                    </div> <!-- End Locator Form -->
+
+                    <ul>
+                       <li><a title="Heath Programs" href="https://www.va.gov/health/programs/index.asp"><img src="https://www.va.gov/health/images/homepage/button-health.png" alt="Health Programs"></a></li>
+                       <li><a title="Public Health Issues" href="https://www.publichealth.va.gov/"><img src="https://www.va.gov/health/images/homepage/button-protect-your-health.png" alt="Protect your health"></a></li>
+                       <li><a title="A-Z Health Topics Index" href="https://www.va.gov/health/topics/index.asp"><img src="https://www.va.gov/health/images/homepage/button-health-a-z.png" alt="Learn more: A-Z Health"></a></li>
+                    </ul>
+                 </div><!--end locator -->
+              </div><!-- end quick links -->
+           </div> <!-- end widget -->
+           <!-- ****************** END QUICK LINKS ********************** -->
+
+           <div class="clearfix"></div>
+
+           <!-- ********************* MHV and Blue Button ************************* -->
+           <div class="badge"><a href="https://www.veteranscrisisline.net/"><img src="https://www.va.gov/health/images/homepage/badge_VCL.jpg" width="184" height="90" title="Veterans Crisis Line Badge" alt="Veterans Crisis Line Badge"></a></div>
+           <div class="badge"><a href="https://www.myhealth.va.gov/mhv-portal-web/home"><img src="https://www.va.gov/health/images/homepage/badge_MHEV.jpg" width="184" height="90" title="My healthevet badge" alt="My healthevet badge" ></a></div>
+           <!-- ********************* END OF MHV and Blue Button ************************* -->
+        </div><!--End Left Col Content -->
+        <!-- *********** END OF LEFT COLUMN ADDITIONAL CONTENT AREA *************** -->
+
+<style>
+       .va-footer-links-bottom:last-of-type {
+           margin-bottom: 20px;
+       }
+
+       #footer-alert {
+           position: fixed;
+           bottom: 0;
+           left:0;
+           z-index:1;
+           width: 100%;
+           height: 60px;
+           background-color: #f1f1f1;
+       }
+       
+       #footer-alert p {
+           margin: 8px auto;
+           text-align: center;
+           font-size: 16px;
+           font-weight: 700;
+           color: #004795;
+       }
+       
+       #footer-alert p a {
+           color: #004795;
+       }
+       
+       .va-banner-body > p > i {
+           display: none;
+       }
+
+@media (min-width: 480px) {	
+       
+       .va-banner-body > p > i {
+           display: inline-block;
+           background-color: #ffffff;
+           border-radius: 50%;
+           margin: 0.4rem;
+           padding: 0.8em;
+       }
+  
+       #footer-alert p {
+           margin: 5px auto;
+           font-size: 1.2em;
+       }
+}
+</style>
+
+	<script>
+        $(function() {
+            document.getElementById("sub-footer").style.marginBottom = "60px";
+  		    var alertMsg = "<div id=\"footer-alert\"><div class=\"va-banner-body\" role=\"banner\"><p><i class=\"fas fa-bullhorn icon-left\" aria-hidden=\"true\">&nbsp;</i><a href=\"https://www.va.gov/resources/the-pact-act-and-your-va-benefits\" title=\"PACT Act and your VA benefits\">Learn what the PACT Act means for your VA benefits <i class=\"fas fa-angle-double-right\" aria-hidden=\"true\"></i><\/a><\/p><\/div><\/div>";
+		    $("body").append(alertMsg);
+        });
+    </script>
+</div>
+<!--End of left nav container -->
+<!-- ******* END OF LEFT COLUMN ******** -->
+
+
+
+                    <!-- *************************** End LEFT NAVIGATION MENU ******************************* -->
+
+                 </div>
+           
+          </div>
+
+
+          <!-- Right Container -->
+          <div class="col-md-9">
+                 <!--************* EMERGENCY BOX ******************-->
+                    
+                  <!--************* END EMERGENCY BOX *****************-->      
+                <div class="fill">
+                  
+              <!-- # slider -->
+              <div id="healthslider" class="slider2 slider"> <a class="prev"><img src="/va_files/2014/responsive/images/arrow-left.png" alt="previous slide" title="previous slide"/></a>
+			  <div id="slider-controls">
+			      <a href="#" id="pause" tabindex="-1"><img width="20" height="20" id="pause1" alt="Pause" src="/va_files/2014/responsive/images/bt_pause_s2.png"></a>	
+			      <a href="#"  id="play" tabindex="-1"><img width="20" height="20" id="play1" alt="Play" src="/va_files/2014/responsive/images/bt_play_s2.png"></a>	
+					</div>
+                <div class="scrollable">
+                  <div class="items">
+                 
+                 <!--************* START GALLERY ********************-->
+
+                                       
+		     <div class="slide"><!--SLIDE 1 --> 
+		      <a href="https://www.ethics.va.gov/for_veterans.asp" tabindex="-1"> <img src="/images/Banner/Adelita_500x275.png" alt="Honoring Veteran's Healthcare Preferences" title="Healthcare Planning Stories" /> </a>
+			<div class="slider-info">
+
+                               <h3>Healthcare Planning Stories</h3>
+                               <p>All Veterans deserve to have their wishes heard and healthcare preferences honored. </p>
+                               <p><a tabindex="-1" href="https://www.ethics.va.gov/for_veterans.asp">Learn more &raquo;</a></p>
+           
+                         </div>
+                      </div><!-- end SLIDE 1 -->                    
+		     <div class="slide"><!--SLIDE 2 --> 
+		      <a href="/GOCC.asp" tabindex="-1"> <img src="/images/GoCC_Sticker_500x275.png" alt="GoCC Sticket" title="Goals of Care Conversations" /> </a>
+			<div class="slider-info">
+
+                               <h3>Goals of Care Conversations</h3>
+                               <p>Goals of care conversations are discussions between patients and health care teams to understand patients’ values, goals of care, and preferences.</p>
+                               <p><a tabindex="-1" href="/GOCC.asp">Learn more &raquo;</a></p>
+           
+                         </div>
+                      </div><!-- end SLIDE 2 -->                    
+		     <div class="slide"><!--SLIDE 3 --> 
+		      <a href="https://www.oit.va.gov/about/ethical-data-use/index.cfm" tabindex="-1"> <img src="/images/Banner/Veteran_Data_500x275.png" alt="Veteran Data" title="Veteran Data Use" /> </a>
+			<div class="slider-info">
+
+                               <h3>Veteran Data Use</h3>
+                               <p>VA launched Ethics Principles for Access to and Use of Veteran Data as part of ongoing efforts to protect Veteran data.</p>
+                               <p><a tabindex="-1" href="https://www.oit.va.gov/about/ethical-data-use/index.cfm">Learn more &raquo;</a></p>
+           
+                         </div>
+                      </div><!-- end SLIDE 3 -->
+                      
+
+                   	</div><!--close slides-->
+			</div>
+			<a class="next"><img title="next slide" alt="next slide" src="/va_files/2014/responsive/images/arrow-right.png"></a>
+			<!-- # slider thumbnail -->
+			<div class="slider-thumbnails">
+				<div class="thumbnails-wrap"> 
+				
+                   
+                   <a class="selected" target="_self" href=""> <span>Healthcare Planning</span> </a>
+                    
+                   
+                   <a class="" target="_self" href=""> <span>Goals of Care</span> </a>
+                      
+                   
+                   <a class="" target="_self" href=""> <span>Veteran Data Use</span> </a>
+                       
+
+                         	
+                   	</div>
+                  </div><!--close menu-->                   
+                </div><!--close gallery-->
+            </div><!--end tier2gallery-->
+           	<!--************* END GALLERY ********************-->
+                 
+                 
+          <!-- ***************************** START PAGE CONTENT  **************************************** -->
+            <div class="row">
+              <div class="col-md-8">
+			   <span style="position:absolute;"><a id="main-content">&nbsp;</a></span>	
+                <div id="homeinnerContent">
+				
+                       <!--****************** INTRO BOX BEGINS ***********************-->
+                       <p>The National Center for Ethics in Health Care serves as VA's authoritative resource for addressing the complex ethical issues that arise in patient care, health care management, and research.</p>
+<p>We provide information, education, and consultation and oversee nationwide programs and quality improvement projects to help health care practitioners and administrators to understand and apply health care ethics standards.</p>
+<p>We also provide information to Veterans, patients, and their families to help them understand ethical issues that relate to their health care experience.</p>
+<p><a href="/help.asp" target="_blank"><img alt="Where should I go for complaints, concerns, or help?" height="116" src="/images/Help.png" style="display: block; margin-left: auto; margin-right: auto;" width="300"></a></p>
+                       <!--****************** INTRO BOX Ends ***********************-->
+
+                   
+                    
+                   
+                    
+                   
+                    
+                   
+                    
+                   
+
+     <!-- ***************************** END PAGE CONTENT  **************************************** -->
+
+
+        <!-- ***************************** BEGIN RIGHT CONTENT  **************************************** -->
+        
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="fill">
+        	     <div id="rightContent">
+			<div id="tier4RightContent">
+           		 <div id="innerRightContent">
+
+
+                   
+                            <!-- ********* Start RESOURCES ************ -->
+		 <div class="clear"></div>
+          <div class="widget clearfix">
+             <div class="widget-title"><h4>Resources</h4></div>
+             <ul>
+           <li><a href="https://www.ethics.va.gov/about/Index.asp" title="About Us">About Us</a></li>
+           <li><a href="https://www.ethics.va.gov/about/staff/index.asp" title="NCEHC Leadership">NCEHC Leadership</a></li>
+             </ul>
+             </div><!-- End widget  -->
+         <!--********** END RESOURCES *********-->
+
+                    
+                    
+                   
+                    
+                   
+                    
+                   
+                    
+
+		    </div>
+                </div><!-- end Innercontent Right -->
+          </div><!--end right content -->
+        
+              </div>
+            </div>
+          </div>
+          <!-- Right Container End -->
+          </div>
+        </section> 
+          </div><!-- End Site Wrapper -->
+          </div><!-- End Middle Effect -->
+          </div><!--End BG Main -->
+          
+          <!-- ************************************** START SITE FOOTER   ********************************************* -->
+          <div id="footer-effect">
+	        <div class="container" id="footer">
+				<div class="row">
+                        <div class="VHA-administration-logo"><img src="/TS_SHARED/va_administrations/VHA/VAMC/images/homepage/vha-excellence.png"  height="46" width="198" alt="VHA Excellence"></div>
+
+
+	                
+        <div class="footer-accordion">
+        <div class="col connect">
+          <span class="blue-hdr top-level"><a href="javascript:void(0)">CONNECT</a></span>
+          <div id="connect" class="ftrcls">
+            <p class="mobile--hide"> <a href="https://www.veteranscrisisline.net/">Veterans Crisis Line:</a><br>
+              <span class="larger"><a href="tel:+988">Call: 988</a></span> (Press 1)</p>
+            <p class="h4correct">Social Media</p>
+            <div id="footer-social-wrapper">
+                <div class="main-social-containers"><a title="Link to VA's Email Directory" href="https://public.govdelivery.com/accounts/USVA/subscriber/new/"><img src="/va_files/2014/responsive/images/social-email.png" alt="Email icon"></a></div>
+                <div class="main-social-containers"><a title="Link to VA's main Facebook page" href="https://www.facebook.com/VeteransAffairs"><img src="/va_files/2014/responsive/images/social-fb.png" alt="Facebook icon"></a></div>
+                <div class="main-social-containers"><a title="Link to VA's main Twitter account" href="https://www.twitter.com/DeptVetAffairs/"><img src="/va_files/2014/responsive/images/social-twitter.png" alt="Twitter icon"></a></div>
+                <div class="main-social-containers"><a title="Link to VA News" href="https://news.va.gov"><img src="/va_files/2014/responsive/images/social-blog.png" alt="Blog icon"></a></div>
+                <div class="main-social-containers"><a title="Link to VA's main Flickr account" href="https://www.flickr.com/photos/VeteransAffairs/"><img src="/va_files/2014/responsive/images/social-flickr.png" alt="Flickr icon"></a></div>
+                <div class="main-social-containers"><a title="Link to VA's main Youtube account" href="https://www.youtube.com/user/DeptVetAffairs"><img src="/va_files/2014/responsive/images/social-youtube.png" alt="Youtube icon"></a></div>
+				<div class="main-social-containers"><a title="Link to VA's main Instagram account" href="https://www.instagram.com/deptvetaffairs/"><img src="/va_files/2014/responsive/images/social-instagram.png" alt="Instagram icon"></a></div>
+            </div>
+            <!--End Footer social wrapper -->
+            <p class="h4correct"><a href="https://www.va.gov/opa/socialmedia.asp" title="The complete social media directory for the Department of Veterans Affairs" >Complete Directory </a></p>
+            <div class="social-ft">
+              <span class="blue-hdr">EMAIL UPDATES</span>
+              <div id="footer-email">
+
+			  <form action="https://public.govdelivery.com/accounts/USVA/subscribers/qualify"  onSubmit="return window.confirm(&quot;You are submitting information to an external page.\nAre you sure?&quot;);">
+                            <input name="topic_id" type="hidden" value="USVA">
+                          <label class="positionset" for="email_footer">Email Address Required</label>
+
+                           <input class="email_footer" id="email_footer" name="email" type="text" size="10" value="Email Address" onFocus="this.value=''" title="Enter here">
+
+
+                             <div id="footer-email-Button">
+                            <label class="positionset" for="commit">Button to subscribe to email</label>
+                            <input name="commit" class="form_button" id="commit" type="image" src="/va_files/2014/responsive/images/button-footer-email.png" alt="Click here to submit your email" title="Click here to submit your email">
+                            </div>
+                              </form>
+
+
+              </div>
+            </div>
+          </div>
+        </div>
+          <div class="col">
+            <span class="blue-hdr top-level"><a href="javascript:void(0)">VA HOME</a></span>
+            <div class="ftrcls">
+              <ul>
+                        <li><a href="https://www.va.gov/about_va/va_notices.asp" >Notices</a></li>
+
+                        <li><a href="https://www.va.gov/privacy/" >Privacy</a></li>
+                        <li><a href="https://www.va.gov/foia/" >FOIA</a></li>
+                        <li><a href="https://www.va.gov/orpm/" >Regulations</a></li>
+                        <li><a href="https://www.va.gov/webpolicylinks.asp" >Web Policies</a></li>
+                        <li><a href="https://www.va.gov/orm/NOFEAR_Select.asp" >No FEAR Act</a></li>
+                        <li><a href="https://www.va.gov/accountability/" >Whistleblower Rights &amp; Protections</a></li>
+                        <li><a href="https://www.va.gov/general/site_map.htm" >Site Index</a></li>
+                        <li><a href="https://www.usa.gov/" >USA.gov</a></li>
+                        <li><a href="https://www.whitehouse.gov/" >White House</a></li>
+                        <li><a href="https://www.va.gov/oig/" >Inspector General</a></li>
+                    </ul>
+            </div>
+          </div>
+          <!--/ .col -->
+          <div class="col">
+            <span class="blue-hdr top-level"><a href="javascript:void(0)">QUICK LIST</a></span>
+            <div class="ftrcls">
+               <ul>
+                        <li><a href="https://www.benefits.va.gov/BENEFITS/Applying.asp" >Apply for Benefits</a></li>
+                        <li><a href="https://www.va.gov/health-care/how-to-apply/" >Apply for Health Care</a></li>
+                  		<li><a href="https://www.myhealth.va.gov/pharmacy">Prescriptions</a></li>
+				  		<li><a href="https://www.myhealth.va.gov/" >My Health<span>e</span>Vet</a></li>
+                  		<li><a href="https://benefits.va.gov/insurance/choose.asp" >Life Insurance Online Applications</a></li>
+                  		<li><a href="https://www.va.gov/vaforms/" >VA Forms</a></li>
+				  		<li><a href="https://www.va.gov/landing2_locations.htm" >State and Local Resources</a></li>
+				  		<li><a href="https://www.va.gov/op3/docs/StrategicPlanning/VA2014-2020strategicPlan.pdf" >Strat Plan FY 2014-2020</a> </li>
+				  		<li><a href="https://www.va.gov/performance/index.asp" >VA Plans, Budget, &amp; Performance</a></li>
+						<li><a href="https://www.va.gov/ogc/accreditation.asp" >VA Claims Representation</a></li>
+  					</ul>
+            </div>
+          </div>
+          <!--/ .col -->
+          <div class="col">
+            <span class="blue-hdr top-level"><a href="javascript:void(0)">RESOURCES</a></span>
+            <div class="ftrcls">
+              <ul>
+			            <li><a href="https://www.va.gov/jobs/">Careers at VA</a></li>
+                        <li><a href="https://www.vets.gov/employment/">Employment Center</a></li>
+						<li><a href="https://www.oefoif.va.gov/" >Returning Service Members</a></li>
+						<li><a href="https://www.benefits.va.gov/vocrehab/index.asp" >Vocational Rehabilitation &amp; Employment</a></li>
+						<li><a href="https://www.va.gov/homeless/" >Homeless Veterans</a></li>
+						<li><a href="https://www.va.gov/womenvet/" >Women Veterans</a></li>
+						<li><a href="https://www.va.gov/centerforminorityveterans/" >Minority Veterans</a></li>
+                        <li><a href="https://www.va.gov/opa/Plain_Language.asp" >Plain Language</a></li>
+						<li><a href="https://www.va.gov/survivors/" >Surviving Spouses &amp; Dependents</a></li>
+						<li><a href="https://www.va.gov/adaptivesports/" >Adaptive Sports Program</a></li>
+  					</ul>
+            </div>
+          </div>
+          <!--/ .col -->
+          <div class="col">
+            <span class="blue-hdr top-level"><a href="javascript:void(0)">ADMINISTRATION</a></span>
+            <div class="ftrcls">
+            <ul>
+                  		<li><a href="https://www.va.gov/health/default.asp" >Veterans Health Administration</a></li>
+                  		<li><a href="https://www.benefits.va.gov/benefits/" >Veterans Benefits Administration</a></li>
+                  		<li><a href="https://www.cem.va.gov/" >National Cemetery Administration</a></li>
+          			</ul>
+            </div>
+          </div>
+          <!--/ .col -->
+        </div>
+
+
+
+				</div>
+			</div>
+	                <div id="sub-footer">
+	                         <p>U.S. Department of Veterans Affairs | 810 Vermont Avenue, NW Washington DC 20420</p>
+	                         <p class="small-print">Last updated November 14, 2024</p>
+	                </div><!--/sub-footer-->
+
+               </div><!--/#footer-->
+
+        </div><!--End Footer Effect -->
+
+<div id="modal-crisisline" class="va-overlay va-modal va-modal-large" role="alertdialog" >
+	<div class="va-crisis-panel va-modal-inner va-rounded--all">
+	<h2 id="va-crisis-title"  class="va-text-center va-uppercase">Get help from Veterans Crisis Line</h2>
+	<div class="va-overlay-body va-crisis-panel-body">
+	<ul>
+		<li><a href="tel:988" tabindex='0' id="va-crisis-primary"><i class="fas fa-phone icon-left" aria-hidden="true"></i> Call <strong>988 (Press 1)</strong></a></li>
+		<li><a href="sms:838255"><i class="fas fa-mobile-alt icon-left" aria-hidden="true"></i> Text to <b>838255</b></a></li>
+		<li><a href="https://www.veteranscrisisline.net/ChatTermsOfService.aspx?account=Veterans%20Chat"><i class="far fa-comments"></i> Chat <b>confidentially now</b></a></li>
+	<li ><i class="fa fa-fw fa-deaf icon-left margin-right-2  margin-top-2 fa-lg" aria-hidden="true"></i><a href="tel:18007994889"> Call TTY if you
+          have hearing loss <strong>1-800-799-4889</strong></a></li>
+          </ul>
+	<p>If you are in crisis or having thoughts of suicide,
+	visit <a href="https://www.veteranscrisisline.net/">VeteransCrisisLine.net</a> for more resources.</p>
+	</div>
+<button class="va-modal-close va-overlay-close" type="button" id="va-vcl-close-btn"><span class="usa-sr-only">Close this modal</span> <i class="far fa-times-circle fa-2x va-overlay-close usa-text-blue" aria-hidden="true" title="close this modal"></i> </button>
+</div>
+</div>
+<script src="/va_files/2014/responsive/scripts/crisis-modal2.js"></script>
+
+<script>
+healthslider();
+</script>
+</body>
+</html>
+
+
+

@@ -1,0 +1,1813 @@
+
+
+
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+    <!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-W98BKP');</script>
+<!-- End Google Tag Manager -->
+    
+
+
+
+<meta charset="utf-8" />
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Baystate Health | Healthcare in Western MA</title>
+<meta name="description" content="Baystate Health is a not-for-profit, academic healthcare system offering comprehensive medical services, health information, and community support.">
+
+<script>
+    document.querySelector('html').classList.remove('no-js');
+</script>
+<script>
+    lazySizesConfig = {
+    init: false,
+    autoUnload: false,
+    unloadPixelThreshold: 1000
+    }
+</script>
+
+
+
+
+<meta property="og:title" content="Baystate Health | Healthcare in Western MA">
+<meta property="og:description" content="Baystate Health is a not-for-profit, academic healthcare system offering comprehensive medical services, health information, and community support.">
+<meta property="og:url" content="https://www.baystatehealth.org">
+<meta property="og:image" content="https://www.baystatehealth.org/-/media/images/placeholder-images/baystate-opengraph-placeholder.jpg">
+
+
+
+<meta name="twitter:card" content="summary"> 
+<meta name="twitter:site" content="Baystate_Health"> 
+<meta name="twitter:url" content="https://www.baystatehealth.org">
+<meta name="twitter:title" content="Baystate Health | Healthcare in Western MA">
+<meta name="twitter:description" content="Baystate Health is a not-for-profit, academic healthcare system offering comprehensive medical services, health information, and community support.">
+<meta name="twitter:image" content="https://www.baystatehealth.org/-/media/images/placeholder-images/placeholder--151.png?rev=61ad0663dab24ee6a42c801d28900273"> 
+
+
+<meta name="contextId" id="contextId" content="{E8126768-60D1-409F-9F01-B4A6E6FCC129}" />
+
+<link rel="canonical" href="https://www.baystatehealth.org"> 
+<link rel="shortcut icon" href="/assets/images/icons/favicon-baystate.ico" />
+
+ 
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    
+
+<link rel="stylesheet" href="/assets/css/global.css?v=638881892580000000">
+    <link rel="stylesheet" href="/assets/css/baystate-theme.css?v=638881892530000000">
+
+<script type="text/javascript" defer src="https://medchatapp.com/widget/widget.js?api-key=d7ITdpzdYEab6GX7uUv3Yw"></script>
+
+<!-- Freshpaint begin -->
+<script type="text/javascript">
+    (function(){function p(r,e){(e==null||e>r.length)&&(e=r.length);for(var t=0,a=new Array(e);t<e;t++)a[t]=r[t];return a}function v(r){if(Array.isArray(r))return p(r)}function h(r){if(typeof Symbol!="undefined"&&r[Symbol.iterator]!=null||r["@@iterator"]!=null)return Array.from(r)}function A(){throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.")}function I(r,e){if(r){if(typeof r=="string")return p(r,e);var t=Object.prototype.toString.call(r).slice(8,-1);if(t==="Object"&&r.constructor&&(t=r.constructor.name),t==="Map"||t==="Set")return Array.from(t);if(t==="Arguments"||/^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(t))return p(r,e)}}function y(r){return v(r)||h(r)||I(r)||A()}var E=function(r,e){if(!e.__SV){try{var t,a,m=window.location,c=m.hash,x=function(n,o){return t=n.match(new RegExp(o+"=([^&]*)")),t?t[1]:null};c&&x(c,"fpState")&&(a=JSON.parse(decodeURIComponent(x(c,"fpState"))),a.action==="fpeditor"&&(window.sessionStorage.setItem("_fpcehash",c),history.replaceState(a.desiredHash||"",r.title,m.pathname+m.search)))}catch(S){}e.__loaded=!1,e.config=!1,e.__SV=2,window.freshpaint=new Proxy(e,{get:function(n,o){return n[o]!==void 0?n[o]:o==="init"?function(l,u,i){var _,d;(_=n)[d="_i"]||(_[d]=[]),n._i.push([l,u||{},i||"freshpaint"])}:function(){for(var l=arguments.length,u=new Array(l),i=0;i<l;i++)u[i]=arguments[i];var _=[o].concat(y(u));return n.push(_),new Proxy(_,{get:function(f,w){return f[w]?f[w]:function(){for(var b=arguments.length,g=new Array(b),s=0;s<b;s++)g[s]=arguments[s];f.length=0,f.push([o].concat(y(u))),f.push([w].concat(y(g)))}}})}}})}};E(document,window.freshpaint||[]);})();
+    freshpaint.init("238a7647-1136-44d3-8508-5cebb37147ba");
+    freshpaint.page();
+</script>
+<script src="https://freshpaint-cdn.com/js/238a7647-1136-44d3-8508-5cebb37147ba/freshpaint.js"></script>
+<!-- Freshpaint end-->
+
+<script type="application/ld+json">
+    {
+    "@context": "https://schema.org",
+    "@type": ["MedicalOrganization", "Organization"],
+    "@id": "https://www.baystatehealth.org/",
+	"name": "Baystate Health ",
+	"url": "https://www.baystatehealth.org", 
+	"sameAs": ["https://www.baystatehealth.org", "https://www.facebook.com/baystatehealth", "http://twitter.com/Baystate_Health", "https://www.instagram.com/baystate_health", "https://www.youtube.com/user/BAYSTATEHEALTH", "https://www.linkedin.com/company/baystate-health"],
+	"address": {
+        "@type": "PostalAddress",
+        "streetAddress": "759 Chestnut Street",
+        "addressLocality": "Springfield",
+        "addressRegion": "MA",
+        "postalCode": "01199",
+        "addressCountry": "US"
+    },
+	"logo": {
+        "@type": "ImageObject",
+        "name": "Baystate Health Logo",
+        "url": "https://www.baystatehealth.org:443/-/media/images/about-us/baystatehealthog1200.jpg?h=1200"
+    },
+	"description": "Baystate Health is a not-for-profit health system in western Massachusetts providing both specialized and primary care across 200+ medical practices and 5 hospitals.",
+    "knowsAbout": "Healthcare",
+	"nonprofitStatus" : "Nonprofit501c3",
+	"diversityPolicy" : "https://www.baystatehealth.org/about-us/diversity-inclusion",
+	"areaServed": "https://en.wikipedia.org/wiki/United_States",
+    "contactPoint": {
+        "@type": "ContactPoint",
+        "@id": "https://www.baystatehealth.org/contact-us",
+        "areaServed": "https://en.wikipedia.org/wiki/United_States",
+        "availableLanguage": "https://en.wikipedia.org/wiki/English_language",
+        "contactType": "customer support",
+        "name": "Baystate Health Contact point",
+        "telephone": "413-794-0000",
+        "url": "https://www.baystatehealth.org/contact-us"
+    }   
+}, {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "@id": "https://www.baystatehealth.org/#website",
+    "name": "Baystate Health | baystatehealth.org",
+    "url": "https://www.baystatehealth.org/",
+    "potentialAction": {
+        "@type": "SearchAction",
+        "name": "website search action",
+        "query-input": "required name=search_term_string",
+        "target": "https://www.baystatehealth.org/search-results?keyword={search_term_string}"
+        }
+}
+</script>
+
+
+
+    
+    
+</head>
+<body id="body" data-theme="baystate">
+    <!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-W98BKP"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+    <nav class="skip-links">
+        <a href="#main" class="show-on-focus js-skip-link">Skip to main content</a>
+        <a href="#nav" class="show-on-focus js-skip-link">Skip to navigation</a>
+        <a href="#search" class="show-on-focus js-skip-link">Skip to search</a>
+    </nav>
+
+    
+
+
+
+
+
+<header class="header js-header" data-margin-top="0" data-dynamic-height="false">
+
+    
+    <div class="header-desktop u-content">
+        <div class="primary-nav__logo">
+            <span class="show-for-sr">Go to Homepage</span>
+            <a href="https://www.baystatehealth.org" class="primary-nav__logo-link"><img class="primary-nav__logo-img" src="/-/media/images/testing/fed-images/static/baystate_health_2l_wht.svg?rev=320f9336013f44f9a9314afd43596670" alt="baystate health logo"></a>
+        </div>
+        <div class="primary-nav-container">
+            <div class="utility-nav">
+                <a href="https://mybaystate.baystatehealth.org/#/login" target="_blank" class="utility-nav__login-btn">
+                    <svg width="50" height="50" viewBox="0 0 50 50" class="icon icon--login" aria-hidden="true"><use xlink:href="/assets/images/static/icons.svg#login"></use></svg>
+                    <span>MyBaystate Login</span>
+                </a>
+            </div>
+            <nav class="main-nav" id="nav" aria-label="Desktop Global Navigation">
+                <ul class="main-nav__items dropdown menu js-main-nav-desktop" data-dropdown-menu data-disable-hover="true" data-click-open="true">
+                        <li class="main-nav__item">
+                            <a href="#" class="main-nav__link js-main-nav-link">
+                                <span>For Patients and Visitors</span>
+                                <svg width="50" height="50" viewBox="0 0 50 50" class="icon icon--plus" aria-hidden="true"><use xlink:href="/assets/images/static/icons.svg#plus"></use></svg>
+                                <svg width="50" height="50" viewBox="0 0 50 50" class="icon icon--minus" aria-hidden="true"><use xlink:href="/assets/images/static/icons.svg#minus"></use></svg>
+                            </a>
+                            <ul class="main-nav__flyout js-main-nav-flyout">
+                                <li class="flyout__content">
+                                    <button class="main-nav__close-flyout js-flyout-close" type="button" aria-label="Close For Patients and Visitors Flyout">
+                                        <svg width="50" height="50" viewBox="0 0 50 50" class="icon icon--close" aria-hidden="true"><use xlink:href="/assets/images/static/icons.svg#close"></use></svg>
+                                    </button>
+                                        <div class="flyout__section">
+                                            <a href="/patients-and-visitors"  class="flyout__title"><span>For Patients and Visitors</span></a>
+                                            <div class="flyout__lists">
+                                                    <ul class="flyout__link-items">
+                                                            <li class="flyout__item flyout__item--category">Start Your Care</li>
+                                                                                                                    <li class="flyout__item">
+                                                                <a href="/providers"  class="flyout__link"><span>Find a Provider</span></a>
+                                                            </li>
+                                                            <li class="flyout__item">
+                                                                <a href="/locations"  class="flyout__link"><span>Find a Location</span></a>
+                                                            </li>
+                                                            <li class="flyout__item">
+                                                                <a href="/medical-services/get-care"  class="flyout__link"><span>Get Care</span></a>
+                                                            </li>
+                                                            <li class="flyout__item">
+                                                                <a href="/medical-services"  class="flyout__link"><span>Medical and Health Services</span></a>
+                                                            </li>
+                                                    </ul>
+                                                    <ul class="flyout__link-items">
+                                                            <li class="flyout__item flyout__item--category">Before Your Visit</li>
+                                                                                                                    <li class="flyout__item">
+                                                                <a href="/patients-and-visitors/healthcare-prices-and-billing"  class="flyout__link"><span>Healthcare Prices &amp; Billing</span></a>
+                                                            </li>
+                                                            <li class="flyout__item">
+                                                                <a href="/patients-and-visitors/insurance"  class="flyout__link"><span>Insurance</span></a>
+                                                            </li>
+                                                            <li class="flyout__item">
+                                                                <a href="/patients-and-visitors/visiting-hours-and-policies/parking-and-directions"  class="flyout__link"><span>Parking and Directions</span></a>
+                                                            </li>
+                                                    </ul>
+                                                    <ul class="flyout__link-items">
+                                                            <li class="flyout__item flyout__item--category">During Your Visit</li>
+                                                                                                                    <li class="flyout__item">
+                                                                <a href="/patients-and-visitors/staying-at-the-hospital"  class="flyout__link"><span>Staying at the Hospital</span></a>
+                                                            </li>
+                                                            <li class="flyout__item">
+                                                                <a href="/patients-and-visitors/support-services"  class="flyout__link"><span>Patient Resources and Support Groups</span></a>
+                                                            </li>
+                                                            <li class="flyout__item">
+                                                                <a href="/patients-and-visitors/visiting-hours-and-policies"  class="flyout__link"><span>Visiting Hours and Policies</span></a>
+                                                            </li>
+                                                    </ul>
+                                                    <ul class="flyout__link-items">
+                                                            <li class="flyout__item flyout__item--category">After Your Visit</li>
+                                                                                                                    <li class="flyout__item">
+                                                                <a href="/patients-and-visitors/healthcare-prices-and-billing/making-payments"  class="flyout__link"><span>Pay My Bill</span></a>
+                                                            </li>
+                                                            <li class="flyout__item">
+                                                                <a href="/patients-and-visitors/find-your-medical-records"  class="flyout__link"><span>Find My Medical Records</span></a>
+                                                            </li>
+                                                    </ul>
+                                            </div>
+                                        </div>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="main-nav__item">
+                            <a href="#" class="main-nav__link js-main-nav-link">
+                                <span>For Healthcare Professionals</span>
+                                <svg width="50" height="50" viewBox="0 0 50 50" class="icon icon--plus" aria-hidden="true"><use xlink:href="/assets/images/static/icons.svg#plus"></use></svg>
+                                <svg width="50" height="50" viewBox="0 0 50 50" class="icon icon--minus" aria-hidden="true"><use xlink:href="/assets/images/static/icons.svg#minus"></use></svg>
+                            </a>
+                            <ul class="main-nav__flyout js-main-nav-flyout">
+                                <li class="flyout__content">
+                                    <button class="main-nav__close-flyout js-flyout-close" type="button" aria-label="Close For Healthcare Professionals Flyout">
+                                        <svg width="50" height="50" viewBox="0 0 50 50" class="icon icon--close" aria-hidden="true"><use xlink:href="/assets/images/static/icons.svg#close"></use></svg>
+                                    </button>
+                                        <div class="flyout__section">
+                                            <a href="/healthcare-professionals"  class="flyout__title"><span>For Healthcare Professionals</span></a>
+                                            <div class="flyout__lists">
+                                                    <ul class="flyout__link-items">
+                                                            <li class="flyout__item flyout__item--category">Quick Links</li>
+                                                                                                                    <li class="flyout__item">
+                                                                <a href="/healthcare-professionals/refer-a-patient"  class="flyout__link"><span>Refer a Patient</span></a>
+                                                            </li>
+                                                            <li class="flyout__item">
+                                                                <a href="/healthcare-professionals/hospital-transfer-services"  class="flyout__link"><span>Hospital Transfer Services</span></a>
+                                                            </li>
+                                                            <li class="flyout__item">
+                                                                <a href="https://baystatehealthjobs.com/" target="_blank" class="flyout__link"><span>Careers</span></a>
+                                                            </li>
+                                                    </ul>
+                                                    <ul class="flyout__link-items">
+                                                            <li class="flyout__item flyout__item--category">For Care Team Members</li>
+                                                                                                                    <li class="flyout__item">
+                                                                <a href="/healthcare-professionals/physician-liaison-team"  class="flyout__link"><span>Physician Liaison Team</span></a>
+                                                            </li>
+                                                            <li class="flyout__item">
+                                                                <a href="/healthcare-professionals/advanced-practice-providers"  class="flyout__link"><span>Advanced Practice Providers</span></a>
+                                                            </li>
+                                                            <li class="flyout__item">
+                                                                <a href="/healthcare-professionals/medical-staff-services"  class="flyout__link"><span>Medical Staff Services</span></a>
+                                                            </li>
+                                                    </ul>
+                                            </div>
+                                        </div>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="main-nav__item">
+                            <a href="#" class="main-nav__link js-main-nav-link">
+                                <span>Education and Research</span>
+                                <svg width="50" height="50" viewBox="0 0 50 50" class="icon icon--plus" aria-hidden="true"><use xlink:href="/assets/images/static/icons.svg#plus"></use></svg>
+                                <svg width="50" height="50" viewBox="0 0 50 50" class="icon icon--minus" aria-hidden="true"><use xlink:href="/assets/images/static/icons.svg#minus"></use></svg>
+                            </a>
+                            <ul class="main-nav__flyout js-main-nav-flyout">
+                                <li class="flyout__content">
+                                    <button class="main-nav__close-flyout js-flyout-close" type="button" aria-label="Close Education and Research Flyout">
+                                        <svg width="50" height="50" viewBox="0 0 50 50" class="icon icon--close" aria-hidden="true"><use xlink:href="/assets/images/static/icons.svg#close"></use></svg>
+                                    </button>
+                                        <div class="flyout__section">
+                                            <a href="/healthcare-education"  class="flyout__title"><span>Education and Research</span></a>
+                                            <div class="flyout__lists">
+                                                    <ul class="flyout__link-items">
+                                                            <li class="flyout__item flyout__item--category">Education</li>
+                                                                                                                    <li class="flyout__item">
+                                                                <a href="/healthcare-education/academic-programs"  class="flyout__link"><span>Academic Programs at Baystate Health</span></a>
+                                                            </li>
+                                                            <li class="flyout__item">
+                                                                <a href="/healthcare-education/academic-programs/umass-chan-medical-school-baystate/residencies"  class="flyout__link"><span>Medical Residency Programs at UMass Chan-Baystate</span></a>
+                                                            </li>
+                                                            <li class="flyout__item">
+                                                                <a href="/healthcare-education/academic-programs/umass-chan-medical-school-baystate"  class="flyout__link"><span>UMass Chan Medical School - Baystate </span></a>
+                                                            </li>
+                                                            <li class="flyout__item">
+                                                                <a href="/healthcare-education/academic-programs/continuing-interprofessional-education"  class="flyout__link"><span>Continuing Interprofessional Education</span></a>
+                                                            </li>
+                                                            <li class="flyout__item">
+                                                                <a href="/healthcare-education/academic-programs/umass-chan-medical-school-baystate/academic-departments"  class="flyout__link"><span>Academic Departments</span></a>
+                                                            </li>
+                                                    </ul>
+                                                    <ul class="flyout__link-items">
+                                                            <li class="flyout__item flyout__item--category">Research</li>
+                                                                                                                    <li class="flyout__item">
+                                                                <a href="/research-at-baystate-health"  class="flyout__link"><span>Research at UMass Chan-Baystate</span></a>
+                                                            </li>
+                                                            <li class="flyout__item">
+                                                                <a href="/research-at-baystate-health/for-researchers"  class="flyout__link"><span>For Researchers</span></a>
+                                                            </li>
+                                                            <li class="flyout__item">
+                                                                <a href="/research-at-baystate-health/for-research-sponsors"  class="flyout__link"><span>For Sponsors</span></a>
+                                                            </li>
+                                                            <li class="flyout__item">
+                                                                <a href="/research-at-baystate-health/clinical-trials"  class="flyout__link"><span>For Patients</span></a>
+                                                            </li>
+                                                    </ul>
+                                                    <ul class="flyout__link-items">
+                                                            <li class="flyout__item flyout__item--category">For Faculty</li>
+                                                                                                                    <li class="flyout__item">
+                                                                <a href="/healthcare-education/academic-programs/umass-chan-medical-school-baystate/faculty-information"  class="flyout__link"><span>The Office of Faculty Affairs</span></a>
+                                                            </li>
+                                                    </ul>
+                                            </div>
+                                        </div>
+                                </li>
+                            </ul>
+                        </li>
+                    <li class="main-nav__item">
+                        <button type="button" class="primary-nav__search-toggle js-toggle-search" id="search" aria-label="Toggle Site Search">
+                            <svg width="50" height="50" viewBox="0 0 50 50" class="icon icon--search" aria-hidden="true"><use xlink:href="/assets/images/static/icons.svg#search"></use></svg>
+                        </button>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+
+    
+    <div class="header-mobile">
+        <div class="header-mobile__content u-content">
+            <button type="button" class="primary-nav__search-toggle js-toggle-search" aria-label="Toggle Site Search">
+                <svg width="50" height="50" viewBox="0 0 50 50" class="icon icon--mobile-close" aria-hidden="true"><use xlink:href="/assets/images/static/icons.svg#mobile-close"></use></svg>
+                <svg width="50" height="50" viewBox="0 0 50 50" class="icon icon--mobile-search" aria-hidden="true"><use xlink:href="/assets/images/static/icons.svg#mobile-search"></use></svg>
+            </button>
+            <div class="primary-nav__logo">
+                <span class="show-for-sr">Go to Homepage</span>
+                <a href="https://www.baystatehealth.org" class="primary-nav__logo-link"><img class="primary-nav__logo-img" src="/-/media/images/testing/fed-images/static/baystate_health_1l_wht.svg?rev=68e0c3a8626047d8b9a176d90748e52f" alt="baystate health logo"></a>
+            </div>
+            <button type="button" class="primary-nav__hamburger-btn js-toggle-mobile-nav" aria-label="Toggle Mobile Primary Nav Menu">
+                <svg width="50" height="50" viewBox="0 0 50 50" class="icon icon--mobile-close" aria-hidden="true"><use xlink:href="/assets/images/static/icons.svg#mobile-close"></use></svg>
+                <svg width="50" height="50" viewBox="0 0 50 50" class="icon icon--mobile-menu" aria-hidden="true"><use xlink:href="/assets/images/static/icons.svg#mobile-menu"></use></svg>
+            </button>
+        </div>
+        <div class="primary-nav-container">
+            <nav class="main-nav" aria-label="Mobile Global Navigation">
+                <ul class="main-nav__items vertical drilldown menu js-main-nav-mobile"
+                    data-drilldown data-auto-height="true">
+                        <li class="main-nav__item">
+                            <a href="#" class="main-nav__link js-main-nav-link">
+                                <span>For Patients and Visitors</span>
+                            </a>
+                            <ul class="main-nav__flyout js-main-nav-flyout">
+                                <li class="flyout__content">
+                                        <div class="flyout__section">
+                                            <a href="/patients-and-visitors"  class="flyout__title"><span>For Patients and Visitors</span></a>
+                                            <div class="flyout__lists">
+                                                    <ul class="flyout__link-items">
+                                                            <li class="flyout__item flyout__item--category">Start Your Care</li>
+                                                                                                                    <li class="flyout__item">
+                                                                <a href="/providers"  class="flyout__link"><span>Find a Provider</span></a>
+                                                            </li>
+                                                            <li class="flyout__item">
+                                                                <a href="/locations"  class="flyout__link"><span>Find a Location</span></a>
+                                                            </li>
+                                                            <li class="flyout__item">
+                                                                <a href="/medical-services/get-care"  class="flyout__link"><span>Get Care</span></a>
+                                                            </li>
+                                                            <li class="flyout__item">
+                                                                <a href="/medical-services"  class="flyout__link"><span>Medical and Health Services</span></a>
+                                                            </li>
+                                                    </ul>
+                                                    <ul class="flyout__link-items">
+                                                            <li class="flyout__item flyout__item--category">Before Your Visit</li>
+                                                                                                                    <li class="flyout__item">
+                                                                <a href="/patients-and-visitors/healthcare-prices-and-billing"  class="flyout__link"><span>Healthcare Prices &amp; Billing</span></a>
+                                                            </li>
+                                                            <li class="flyout__item">
+                                                                <a href="/patients-and-visitors/insurance"  class="flyout__link"><span>Insurance</span></a>
+                                                            </li>
+                                                            <li class="flyout__item">
+                                                                <a href="/patients-and-visitors/visiting-hours-and-policies/parking-and-directions"  class="flyout__link"><span>Parking and Directions</span></a>
+                                                            </li>
+                                                    </ul>
+                                                    <ul class="flyout__link-items">
+                                                            <li class="flyout__item flyout__item--category">During Your Visit</li>
+                                                                                                                    <li class="flyout__item">
+                                                                <a href="/patients-and-visitors/staying-at-the-hospital"  class="flyout__link"><span>Staying at the Hospital</span></a>
+                                                            </li>
+                                                            <li class="flyout__item">
+                                                                <a href="/patients-and-visitors/support-services"  class="flyout__link"><span>Patient Resources and Support Groups</span></a>
+                                                            </li>
+                                                            <li class="flyout__item">
+                                                                <a href="/patients-and-visitors/visiting-hours-and-policies"  class="flyout__link"><span>Visiting Hours and Policies</span></a>
+                                                            </li>
+                                                    </ul>
+                                                    <ul class="flyout__link-items">
+                                                            <li class="flyout__item flyout__item--category">After Your Visit</li>
+                                                                                                                    <li class="flyout__item">
+                                                                <a href="/patients-and-visitors/healthcare-prices-and-billing/making-payments"  class="flyout__link"><span>Pay My Bill</span></a>
+                                                            </li>
+                                                            <li class="flyout__item">
+                                                                <a href="/patients-and-visitors/find-your-medical-records"  class="flyout__link"><span>Find My Medical Records</span></a>
+                                                            </li>
+                                                    </ul>
+                                            </div>
+                                        </div>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="main-nav__item">
+                            <a href="#" class="main-nav__link js-main-nav-link">
+                                <span>For Healthcare Professionals</span>
+                            </a>
+                            <ul class="main-nav__flyout js-main-nav-flyout">
+                                <li class="flyout__content">
+                                        <div class="flyout__section">
+                                            <a href="/healthcare-professionals"  class="flyout__title"><span>For Healthcare Professionals</span></a>
+                                            <div class="flyout__lists">
+                                                    <ul class="flyout__link-items">
+                                                            <li class="flyout__item flyout__item--category">Quick Links</li>
+                                                                                                                    <li class="flyout__item">
+                                                                <a href="/healthcare-professionals/refer-a-patient"  class="flyout__link"><span>Refer a Patient</span></a>
+                                                            </li>
+                                                            <li class="flyout__item">
+                                                                <a href="/healthcare-professionals/hospital-transfer-services"  class="flyout__link"><span>Hospital Transfer Services</span></a>
+                                                            </li>
+                                                            <li class="flyout__item">
+                                                                <a href="https://baystatehealthjobs.com/" target="_blank" class="flyout__link"><span>Careers</span></a>
+                                                            </li>
+                                                    </ul>
+                                                    <ul class="flyout__link-items">
+                                                            <li class="flyout__item flyout__item--category">For Care Team Members</li>
+                                                                                                                    <li class="flyout__item">
+                                                                <a href="/healthcare-professionals/physician-liaison-team"  class="flyout__link"><span>Physician Liaison Team</span></a>
+                                                            </li>
+                                                            <li class="flyout__item">
+                                                                <a href="/healthcare-professionals/advanced-practice-providers"  class="flyout__link"><span>Advanced Practice Providers</span></a>
+                                                            </li>
+                                                            <li class="flyout__item">
+                                                                <a href="/healthcare-professionals/medical-staff-services"  class="flyout__link"><span>Medical Staff Services</span></a>
+                                                            </li>
+                                                    </ul>
+                                            </div>
+                                        </div>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="main-nav__item">
+                            <a href="#" class="main-nav__link js-main-nav-link">
+                                <span>Education and Research</span>
+                            </a>
+                            <ul class="main-nav__flyout js-main-nav-flyout">
+                                <li class="flyout__content">
+                                        <div class="flyout__section">
+                                            <a href="/healthcare-education"  class="flyout__title"><span>Education and Research</span></a>
+                                            <div class="flyout__lists">
+                                                    <ul class="flyout__link-items">
+                                                            <li class="flyout__item flyout__item--category">Education</li>
+                                                                                                                    <li class="flyout__item">
+                                                                <a href="/healthcare-education/academic-programs"  class="flyout__link"><span>Academic Programs at Baystate Health</span></a>
+                                                            </li>
+                                                            <li class="flyout__item">
+                                                                <a href="/healthcare-education/academic-programs/umass-chan-medical-school-baystate/residencies"  class="flyout__link"><span>Medical Residency Programs at UMass Chan-Baystate</span></a>
+                                                            </li>
+                                                            <li class="flyout__item">
+                                                                <a href="/healthcare-education/academic-programs/umass-chan-medical-school-baystate"  class="flyout__link"><span>UMass Chan Medical School - Baystate </span></a>
+                                                            </li>
+                                                            <li class="flyout__item">
+                                                                <a href="/healthcare-education/academic-programs/continuing-interprofessional-education"  class="flyout__link"><span>Continuing Interprofessional Education</span></a>
+                                                            </li>
+                                                            <li class="flyout__item">
+                                                                <a href="/healthcare-education/academic-programs/umass-chan-medical-school-baystate/academic-departments"  class="flyout__link"><span>Academic Departments</span></a>
+                                                            </li>
+                                                    </ul>
+                                                    <ul class="flyout__link-items">
+                                                            <li class="flyout__item flyout__item--category">Research</li>
+                                                                                                                    <li class="flyout__item">
+                                                                <a href="/research-at-baystate-health"  class="flyout__link"><span>Research at UMass Chan-Baystate</span></a>
+                                                            </li>
+                                                            <li class="flyout__item">
+                                                                <a href="/research-at-baystate-health/for-researchers"  class="flyout__link"><span>For Researchers</span></a>
+                                                            </li>
+                                                            <li class="flyout__item">
+                                                                <a href="/research-at-baystate-health/for-research-sponsors"  class="flyout__link"><span>For Sponsors</span></a>
+                                                            </li>
+                                                            <li class="flyout__item">
+                                                                <a href="/research-at-baystate-health/clinical-trials"  class="flyout__link"><span>For Patients</span></a>
+                                                            </li>
+                                                    </ul>
+                                                    <ul class="flyout__link-items">
+                                                            <li class="flyout__item flyout__item--category">For Faculty</li>
+                                                                                                                    <li class="flyout__item">
+                                                                <a href="/healthcare-education/academic-programs/umass-chan-medical-school-baystate/faculty-information"  class="flyout__link"><span>The Office of Faculty Affairs</span></a>
+                                                            </li>
+                                                    </ul>
+                                            </div>
+                                        </div>
+                                </li>
+                            </ul>
+                        </li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+    
+    <div class="header-search__flyout js-search-flyout">
+        <div class="flyout__content u-content">
+            <form class="flyout__search js-header-search" action="/search">
+                <label for="header-search-input-" class="show-for-sr">Site Search</label>
+                <div class="input__wrap">
+                    <svg width="50" height="50" viewBox="0 0 50 50" class="icon icon--search" aria-hidden="true"><use xlink:href="/assets/images/static/icons.svg#search"></use></svg>
+                    <input placeholder="How can we help you?" type="search" class="flyout__input js-typeahead-input"
+                           id="header-search-input-"
+                           name="keyword"
+                           autocomplete="off">
+                </div>
+                <button type="submit" class="flyout__submit button button--primary" aria-label="Submit Search">
+                    <span>Search</span>
+                </button>
+            </form>
+            <button class="close-button js-close-search show-for-tablet-l" type="button">
+                <span class="show-for-sr">Close search flyout</span>
+                <svg width="50" height="50" viewBox="0 0 50 50" class="icon icon--close" aria-hidden="true"><use xlink:href="/assets/images/static/icons.svg#close"></use></svg>
+            </button>
+        </div>
+    </div>
+</header>
+
+    
+
+    <main id="main" class="main">
+        <section class="content-block">
+            
+
+    <section class="hero hero--no-image" data-component="COMP-10" data-in-view="once">
+        <div class="u-content">
+            <div class="hero__wrapper">
+<h2 class="hero__title">Advancing Care, Enhancing Lives</h2>                <div class="hero__sub-title">Baystate Health has been providing high-quality and compassionate healthcare in western Massachusetts for more than 140 years.</div>
+                    <ul class="hero__ctas">
+                            <li><a href="/medical-services/get-care"  class="cta button button--primary button--white"><span>Get Care</span></a></li>
+                            <li><a href="/providers"  class="cta button button--primary button--white"><span>Find a Provider</span></a></li>
+                            <li><a href="/locations"  class="cta button button--primary button--white"><span>Find a Location</span></a></li>
+                            <li><a href="/patients-and-visitors/healthcare-prices-and-billing/making-payments"  class="cta button button--primary button--white"><span>Pay My Bill</span></a></li>
+                            <li><a href="/patients-and-visitors/find-your-medical-records"  class="cta button button--primary button--white"><span>Find My Medical Records</span></a></li>
+                            <li><a href="https://baystatehealthjobs.com/" target="_blank" class="cta button button--primary button--white"><span>Careers</span></a></li>
+                    </ul>
+            </div>
+        </div>
+
+        <svg class="hero__background" viewBox="0 0 1440 720">
+            <g class="hero-background-overlay-0">
+                <linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="1779.0564" y1="-35.2835" x2="1548.8135" y2="-277.7235" gradientTransform="matrix(-1 0 0 1 2249.6775 648)">
+                    <stop offset="0" style="stop-color:#FFFFFF" />
+                    <stop offset="1" style="stop-color:#FFFFFF;stop-opacity:0" />
+                </linearGradient>
+                <rect x="395" y="333" class="hero-background-overlay-1" width="315" height="387" />
+            </g>
+            <g class="hero-background-overlay-2">
+                <linearGradient id="SVGID_00000156583614648864146340000000467542469902277274_" gradientUnits="userSpaceOnUse" x1="2342.8193" y1="-46.3674" x2="2035.6896" y2="-8.2024" gradientTransform="matrix(-1 0 0 1 2701.6775 648)">
+                    <stop offset="0" style="stop-color:#FFFFFF;stop-opacity:0.35" />
+                    <stop offset="1" style="stop-color:#FFFFFF" />
+                </linearGradient>
+                <rect x="190" y="534" style="fill:url(#SVGID_00000156583614648864146340000000467542469902277274_);fill-opacity:0.2;" width="746" height="186" />
+                <rect x="190" y="534" class="hero-background-overlay-4" width="746" height="186" />
+            </g>
+            <g>
+                <linearGradient id="SVGID_00000065787356524791796580000013372463163581485737_" gradientUnits="userSpaceOnUse" x1="2282.9995" y1="-673.9546" x2="2627.9094" y2="-20.3755" gradientTransform="matrix(-1 0 0 1 3707.6775 648)">
+                    <stop offset="0" style="stop-color:#FFFFFF;stop-opacity:0.15" />
+                    <stop offset="1" style="stop-color:#FFFFFF;stop-opacity:0.8" />
+                </linearGradient>
+                <rect x="1003" style="fill:url(#SVGID_00000065787356524791796580000013372463163581485737_);fill-opacity:0.35;" width="436" height="720" />
+            </g>
+            <g>
+                <linearGradient id="SVGID_00000052791965515019172230000012444566778540065442_" gradientUnits="userSpaceOnUse" x1="2730.1775" y1="232.846" x2="2730.1775" y2="84" gradientTransform="matrix(-1 0 0 1 3669.6775 114)">
+                    <stop offset="0" style="stop-color:#FFFFFF" />
+                    <stop offset="1" style="stop-color:#FFFFFF;stop-opacity:0" />
+                </linearGradient>
+                <rect x="459" y="198" style="fill:url(#SVGID_00000052791965515019172230000012444566778540065442_);fill-opacity:0.2;" width="961" height="255" />
+            </g>
+            <g class="hero-background-overlay-0">
+                <linearGradient id="SVGID_00000178900219180587014380000002117737713263820186_" gradientUnits="userSpaceOnUse" x1="2125.365" y1="-188.9714" x2="2447.9351" y2="-420.0614" gradientTransform="matrix(-1 0 0 1 3283.6775 648)">
+                    <stop offset="0" style="stop-color:#FFFFFF" />
+                    <stop offset="1" style="stop-color:#FFFFFF;stop-opacity:0.2" />
+                </linearGradient>
+                <rect x="936" y="88" style="fill:url(#SVGID_00000178900219180587014380000002117737713263820186_);fill-opacity:0.2;" width="291" height="632" />
+            </g>
+            <g class="hero-background-overlay-0">
+                <linearGradient id="SVGID_00000163030534865063537440000016384426063264027272_" gradientUnits="userSpaceOnUse" x1="2226.407" y1="19.4345" x2="1909.7769" y2="-198.0605" gradientTransform="matrix(-1 0 0 1 3013.6775 558)">
+                    <stop offset="0" style="stop-color:#FFFFFF;stop-opacity:0.36" />
+                    <stop offset="0.6354" style="stop-color:#FFFFFF" />
+                </linearGradient>
+                <rect x="708" y="325" style="fill:url(#SVGID_00000163030534865063537440000016384426063264027272_);fill-opacity:0.3;" width="384" height="350" />
+            </g>
+            <g class="hero-background-overlay-0">
+                <linearGradient id="SVGID_00000047050669638818906580000004946580621768117930_" gradientUnits="userSpaceOnUse" x1="2173.7458" y1="246.244" x2="1867.396" y2="25.069" gradientTransform="matrix(-1 0 0 1 2915.6775 124)">
+                    <stop offset="0" style="stop-color:#FFFFFF;stop-opacity:0.36" />
+                    <stop offset="0.6354" style="stop-color:#FFFFFF" />
+                </linearGradient>
+                <rect x="659" y="125" style="fill:url(#SVGID_00000047050669638818906580000004946580621768117930_);fill-opacity:0.3;" width="384" height="333" />
+            </g>
+            <g class="hero-background-overlay-0">
+                <linearGradient id="SVGID_00000027566833631886944280000016809596314048596363_" gradientUnits="userSpaceOnUse" x1="2627.5676" y1="221.6878" x2="2307.6775" y2="-143.9782" gradientTransform="matrix(-1 0 0 1 3589.6775 276)">
+                    <stop offset="0" style="stop-color:#FFFFFF;stop-opacity:0.36" />
+                    <stop offset="0.6354" style="stop-color:#FFFFFF" />
+                </linearGradient>
+                <rect x="772" y="201" style="fill:url(#SVGID_00000027566833631886944280000016809596314048596363_);fill-opacity:0.4;" width="608" height="333" />
+            </g>
+            <g class="hero-background-overlay-0">
+                <linearGradient id="SVGID_00000160893547990236980450000014759107080917382058_" gradientUnits="userSpaceOnUse" x1="2394.5281" y1="70.4347" x2="2433.0581" y2="-84.4433" gradientTransform="matrix(-1 0 0 1 3709.6775 604)">
+                    <stop offset="0" style="stop-color:#FFFFFF" />
+                    <stop offset="1" style="stop-color:#FFFFFF;stop-opacity:0.2" />
+                </linearGradient>
+                <rect x="1156" y="513" style="fill:url(#SVGID_00000160893547990236980450000014759107080917382058_);fill-opacity:0.4;" width="284" height="185" />
+            </g>
+            <g class="hero-background-overlay-0">
+                <linearGradient id="SVGID_00000098178612414788807870000010371706838197913998_" gradientUnits="userSpaceOnUse" x1="2730.1584" y1="134.2798" x2="2742.5586" y2="-29.2422" gradientTransform="matrix(-1 0 0 1 3709.6775 484)">
+                    <stop offset="0" style="stop-color:#FFFFFF" />
+                    <stop offset="1" style="stop-color:#FFFFFF;stop-opacity:0.2" />
+                </linearGradient>
+                <rect x="508" y="453" style="fill:url(#SVGID_00000098178612414788807870000010371706838197913998_);fill-opacity:0.4;" width="932" height="185" />
+            </g>
+            <g class="hero-background-overlay-0">
+                <linearGradient id="SVGID_00000080191507141202688630000014222363798590228924_" gradientUnits="userSpaceOnUse" x1="1949.2859" y1="-10.4627" x2="2074.8159" y2="-224.7947" gradientTransform="matrix(-1 0 0 1 2835.6775 648)">
+                    <stop offset="0" style="stop-color:#FFFFFF" />
+                    <stop offset="1" style="stop-color:#FFFFFF;stop-opacity:0.2" />
+                </linearGradient>
+                <rect x="710" y="453" style="fill:url(#SVGID_00000080191507141202688630000014222363798590228924_);fill-opacity:0.5;" width="293" height="267" />
+            </g>
+        </svg>
+
+    </section>
+
+
+        <section class="cta-grid" data-max-columns="3" data-component="COMP-11">
+                <img class="cta-grid__bg-image lazyload" data-src="/-/media/images/services/get-care/ways-to-get-care-background-1440.jpg?rev=6f695198d00f4127a0fc1b4ef95d1779" alt="doctor taking patient&#39;s blood pressure with blood pressure cuff" />
+            <div class="u-content">
+                <div class="cta-grid__wrapper">
+                        <h2 class="cta-grid__title">Ways to Get Care at Baystate Health</h2>
+                                                                <ul class="cta-grid__items">
+                                <li class="item item--link">
+                                    <a href="/medical-services/get-care/primary-and-preventive-care"  class="item__link">
+                                            <img class="item__icon lazyload" data-src="/-/media/images/testing/fed-images/icons/stethoblue.svg?rev=9a1cf075ba2f4bf2b812046e44816cc3" alt="stethoscope icon" />
+                                        <div class="item__text">
+                                            <h3 class="item__title">Primary and Preventive Care</h3>
+                                            <p class="item__teaser">We offer family medicine and adult and pediatric primary care. Depending on your needs, you can choose from several types of primary care providers.</p>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="item item--link">
+                                    <a href="/medical-services/get-care/convenient-care"  class="item__link">
+                                            <img class="item__icon lazyload" data-src="/-/media/images/testing/fed-images/icons/clockblue.svg?rev=2f75d01108ce49baa83d190a4e20e176" alt="clock icon" />
+                                        <div class="item__text">
+                                            <h3 class="item__title">Convenient Care Clinics</h3>
+                                            <p class="item__teaser">Can&#39;t wait for a regular primary care appointment? Convenient Care offers same-day, walk-in care with extended hours to fit your schedule.</p>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="item item--link">
+                                    <a href="/medical-services/get-care/emergency-medicine"  class="item__link">
+                                            <img class="item__icon lazyload" data-src="/-/media/images/testing/fed-images/icons/sirenblue.svg?rev=e710fe8f6b5e47ac8c0647bfa737e68a" alt="siren icon" />
+                                        <div class="item__text">
+                                            <h3 class="item__title">Emergency Care</h3>
+                                            <p class="item__teaser">Baystate Health&#39;s five emergency rooms provide care when you need it, close to where you live.</p>
+                                        </div>
+                                    </a>
+                                </li>
+                        </ul>
+                                            <ul class="cta-grid__ctas">
+                            <li><a href="/medical-services/get-care"  class="cta button button--primary"><span>More Ways to Get Care</span></a></li>
+                        </ul>
+                </div>
+            </div>
+        </section>
+
+
+        <section class="feature-carousel feature-carousel--tall js-feature-carousel " data-component="COMP-12" data-max-columns="4">
+            <div class="u-content">
+                <div class="feature-carousel__wrapper">
+                    <h2 class="feature-carousel__title">Featured Services</h2>
+                                            <div class="feature-carousel__items js-carousel-items">
+                                <div class="item">
+                                    <a href="/medical-services/cancer"  class="item__wrapper">
+                                        <div class="item__image-wrapper">
+                                            <img class="item__image lazyload" data-src="/-/media/images/services/cancer/doctor-arenas-cancer-314.jpg?rev=b1d819c560e24d16acafc810a00836c7" alt="doctor arenas and a nurse navigator discuss healthcare options with a cancer patient">
+                                        </div>
+                                        <div class="item__text">
+                                            <h3 class="item__title"><span>Cancer Care</span></h3>
+                                            <p class="item__teaser">Baystate Health provides world-class cancer care in state-of-the-art facilities using the latest technology.</p>
+                                            <div class="item__cta"><span>View Oncology</span></div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="item">
+                                    <a href="/medical-services/heart-and-vascular"  class="item__wrapper">
+                                        <div class="item__image-wrapper">
+                                            <img class="item__image lazyload" data-src="/-/media/images/services/heart-and-vascular/heart-and-vascular-surgical-team-314.jpg?rev=1a4bb8a56e6a4882890079ae32aa36b6" alt="heart and vascular surgeon doctor saadat performs heart surgery with a surgical team">
+                                        </div>
+                                        <div class="item__text">
+                                            <h3 class="item__title"><span>Heart and Vascular</span></h3>
+                                            <p class="item__teaser">As a nationally recognized heart program, our cardiologists provide cardiovascular treatments for heart attack and more.</p>
+                                            <div class="item__cta"><span>View Heart and Vascular</span></div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="item">
+                                    <a href="/medical-services/neurology"  class="item__wrapper">
+                                        <div class="item__image-wrapper">
+                                            <img class="item__image lazyload" data-src="/-/media/images/services/neurology/neurology-team-operating-314.jpg?rev=88d90a1fcee245a5b33d3093d1dd25a4" alt="doctor oh and neurology team operating on a patient">
+                                        </div>
+                                        <div class="item__text">
+                                            <h3 class="item__title"><span>Neurology</span></h3>
+                                            <p class="item__teaser">Our expert neurologists provide outstanding team-based neurology services to patients throughout western Massachusetts.</p>
+                                            <div class="item__cta"><span>View Neurology</span></div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="item">
+                                    <a href="/medical-services/obstetrics-gynecology"  class="item__wrapper">
+                                        <div class="item__image-wrapper">
+                                            <img class="item__image lazyload" data-src="/-/media/images/services/obstetrics-gynecology/practitioner-obstetrics-and-gynecology-314.jpg?rev=91f5cbb6b3b641919538368934540357" alt="doctor consults with a woman patient in a gynecology office">
+                                        </div>
+                                        <div class="item__text">
+                                            <h3 class="item__title"><span>Obstetrics &amp; Gynecology</span></h3>
+                                            <p class="item__teaser">We provide comprehensive OBGYN care including prenatal and birthing, gynecology, care for pelvic floor disorders, and more.</p>
+                                            <div class="item__cta"><span>View Obstetrics &amp; Gynecology</span></div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="item">
+                                    <a href="/medical-services/pediatrics"  class="item__wrapper">
+                                        <div class="item__image-wrapper">
+                                            <img class="item__image lazyload" data-src="/-/media/images/services/pediatrics/bch-and-pediatrics-314.jpg?rev=a8802239618c4d48b2d9faa5dcaa7131" alt="nurse taking care of child in the Baystate Children&#39;s Hospital">
+                                        </div>
+                                        <div class="item__text">
+                                            <h3 class="item__title"><span>Pediatrics</span></h3>
+                                            <p class="item__teaser">We care for children at Baystate Children&#39;s Hospital, Springfield pediatrics practices, and primary and specialty pediatric care across western Massachusetts.</p>
+                                            <div class="item__cta"><span>View Pediatrics</span></div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="item">
+                                    <a href="/medical-services/get-care/primary-and-preventive-care"  class="item__wrapper">
+                                        <div class="item__image-wrapper">
+                                            <img class="item__image lazyload" data-src="/-/media/images/services/get-care/doctor-lysee-primary-care-314.jpg?rev=c2ae42abdf37480a96239cec022d66d9" alt="doctor mario lysse, holding a clipboard, consults with a patient">
+                                        </div>
+                                        <div class="item__text">
+                                            <h3 class="item__title"><span>Primary Care</span></h3>
+                                            <p class="item__teaser">Our primary care providers (doctors, nurse practitioners, and physician assistants) care for your total well-being. We provide both family medicine and adult primary care (internal medicine).</p>
+                                            <div class="item__cta"><span>View Primary Care</span></div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="item">
+                                    <a href="/medical-services/surgery"  class="item__wrapper">
+                                        <div class="item__image-wrapper">
+                                            <img class="item__image lazyload" data-src="/-/media/images/services/services-old-site/interventional-operating-room-surgical-suite-320.jpg?rev=fd3fdc822466420b8111b2a9e28c31bc" alt="surgical suite at baystate medical center">
+                                        </div>
+                                        <div class="item__text">
+                                            <h3 class="item__title"><span>Surgery</span></h3>
+                                            <p class="item__teaser">Baystate Health offers patients leading-edge surgical options performed by some of the region&#39;s top surgeons.</p>
+                                            <div class="item__cta"><span>View Surgery</span></div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="item">
+                                    <a href="/medical-services/radiology-and-imaging"  class="item__wrapper">
+                                        <div class="item__image-wrapper">
+                                            <img class="item__image lazyload" data-src="/-/media/images/services/radiology-and-imaging/bmc-ct-scanner-314.jpg?rev=2121bcba690444ca8a8d288531138a72" alt="ct scanner at baystate medical center">
+                                        </div>
+                                        <div class="item__text">
+                                            <h3 class="item__title"><span>Radiology</span></h3>
+                                            <p class="item__teaser">Baystate Health provides inpatient and outpatient radiology and imaging services for adults and children across a number of subspecialties.</p>
+                                            <div class="item__cta"><span>View Radiology and Imaging</span></div>
+                                        </div>
+                                    </a>
+                                </div>
+                        </div>
+                                    </div>
+            </div>
+        </section>
+
+
+    <section class="feature feature--photo feature--image-left" data-component="COMP-19">
+        <div class="u-content">
+            <div class="feature__wrapper">
+
+
+                        <div class="feature__image-wrapper">
+                            <img class="feature__image lazyload" data-src="/-/media/images/patients-and-visitors/bh-visitor-policy-comp600.jpg?rev=50b424bc71104b4fae2cd198a0abf629" alt="an illustration of a doctor caring for a patient in the hospital" />
+                        </div>
+                    <div class="feature__text">
+                        <h2 class="feature__title">Update to Visiting Hours</h2>
+                        <div class="feature__teaser rtf"><p>Visiting hours are 10 a.m. to 8 p.m. Thank you for helping us support a restful care environment and ensure the well-being of our patients and caregivers.</p></div>
+                            <div class="feature__ctas">
+                                <a href="/patients-and-visitors/visiting-hours-and-policies"  class="cta button button--primary"><span>Visiting Hours &amp; Policies</span></a>
+                            </div>
+                    </div>
+            </div>
+        </div>
+    </section>
+
+
+        <section class="teaser-list teaser-list--vertical-bg" data-component="COMP-13">
+            <div class="u-content">
+                <div class="teaser-list__wrapper">
+                    <div class="teaser-list__text">
+                        <h2 class="teaser-list__title">Your Community Partner in Care</h2>
+                    </div>
+                        <div class="teaser-list__items-wrapper">
+                            <ul class="teaser-list__items">
+                                    <li>
+                                        <a href="/about-us/community-programs"  class="item">
+                                            <div class="item__title"><span>Community Programs</span></div>
+                                            <span class="item__teaser">We strive to address the health and social needs within the communities we serve. </span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="/about-us/diversity-equity-inclusion"  class="item">
+                                            <div class="item__title"><span>Diversity, Equity, and Inclusion</span></div>
+                                            <span class="item__teaser">We are committed to confronting racism and bias, reducing health disparities, and achieving equity.</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="/about-us/community-programs/community-benefits"  class="item">
+                                            <div class="item__title"><span>Community Partnerships</span></div>
+                                            <span class="item__teaser">Learn about opportunities to seek funding or partner with Baystate Health in our effort to make the greatest positive impact on the well-being of our community.</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="/about-us/volunteering-opportunities"  class="item">
+                                            <div class="item__title"><span>Volunteer Opportunities</span></div>
+                                            <span class="item__teaser">Our volunteers are a dedicated group who provide invaluable resources throughout the health system.</span>
+                                        </a>
+                                    </li>
+                            </ul>
+                        </div>
+                                            <a href="/about-us/community-programs"  class="cta button button--secondary"><span>View All Community Programs</span></a>
+                </div>
+            </div>
+                <div class="teaser-list__bg-image-wrapper">
+                    <img class="teaser-list__bg-image rellax" data-rellax data-rellax-center src="/-/media/images/cta-component-images/your-community-partner-in-care-background-test-1440.jpg?rev=e8d28607a57d47af8a609f4daa8de0e2" alt="child at baystate health foundation radiothon">
+                </div>
+        </section>
+
+
+    <section class="teaser-list teaser-list--vertical-no-bg" data-component="COMP-14">
+        <div class="u-content">
+            <div class="teaser-list__wrapper">
+                <div class="teaser-list__text">
+                    <h2 class="teaser-list__title">Leaders in Research, Improving Patient Care and Outcomes</h2>
+                        <img class="teaser-list__image lazyload" data-src="/-/media/images/research/leaders-in-research-homepage-600.jpg?rev=6508d384ae8241168bf1ec20e5f0f501" alt="researchers engaging with a touch screen presenting a research poster" />
+                    <p class="teaser-list__teaser">Research discoveries at Baystate Health bring new treatments and care options to our patients.</p>
+                </div>
+                <div class="teaser-list__items-wrapper">
+                    <ul class="teaser-list__items">
+                            <li>
+                                <a href="/research-at-baystate-health/clinical-trials"  class="item">
+                                    <div class="item__title"><span>Clinical Trials for Patients</span></div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/research-at-baystate-health/for-researchers"  class="item">
+                                    <div class="item__title"><span>Information for Researchers</span></div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/research-at-baystate-health/for-research-sponsors"  class="item">
+                                    <div class="item__title"><span>Clinical Research Inquiries</span></div>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="teaser-list teaser-list--horizontal-bg" data-component="COMP-15">
+        <div class="u-content">
+            <div class="teaser-list__wrapper">
+                <div class="teaser-list__text">
+                    <h2 class="teaser-list__title">Educating Healthcare Professionals for More Than a Century</h2>
+                    <p class="teaser-list__teaser">We are proud to be the regional campus of UMass Chan Medical School. We educate more than 30 different health professionals among 12 different programs.</p>
+                </div>
+                <div class="teaser-list__items-wrapper">
+                    <h3 class="teaser-list__sub-title">Explore Our Programs</h3>
+                    <ul class="teaser-list__items">
+                            <li>
+                                <a href="/healthcare-education/academic-programs/umass-chan-medical-school-baystate"  class="item">
+                                    <div class="item__title"><span>UMass Chan Medical School - Baystate </span></div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/healthcare-education/academic-programs/umass-chan-medical-school-baystate/residencies"  class="item">
+                                    <div class="item__title"><span>Medical Residency Programs at UMass Chan-Baystate</span></div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/healthcare-education/academic-programs/umass-chan-medical-school-baystate/fellowships"  class="item">
+                                    <div class="item__title"><span>Medical Fellowship Programs at UMass Chan-Baystate</span></div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/healthcare-education/academic-programs/continuing-interprofessional-education"  class="item">
+                                    <div class="item__title"><span>Continuing Interprofessional Education</span></div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/healthcare-education/clinicals-internships"  class="item">
+                                    <div class="item__title"><span>Resources for Allied Health and Advanced Practitioner Students</span></div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/healthcare-education/academic-programs/midwifery-education"  class="item">
+                                    <div class="item__title"><span>Midwifery Education</span></div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/healthcare-education/academic-programs/pharmacy-education"  class="item">
+                                    <div class="item__title"><span>Pharmacy Residencies</span></div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/healthcare-education/academic-programs/nursing-education"  class="item">
+                                    <div class="item__title"><span>Nursing Education</span></div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/healthcare-education/simulation-education"  class="item">
+                                    <div class="item__title"><span>Simulation Education</span></div>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+                    <a href="/healthcare-education"  class="cta button button--secondary button--white"><span>Explore All Education Programs</span></a>
+            </div>
+        </div>
+            <div class="teaser-list__bg-image-wrapper">
+                <img class="teaser-list__bg-image" src="/-/media/images/education/education-programs-component-1440.jpg?rev=ccc90ca5a96343acbc0eabd84871a26d" alt="outside of baystate medical center" />
+            </div>
+    </section>
+
+
+    <section class="feature feature--icon" data-component="COMP-16">
+        <div class="u-content">
+            <div class="feature__wrapper">
+                    <div class="feature__image-wrapper">
+                        <img class="feature__image lazyload" data-src="/-/media/images/icons/baystate_icon_handsheart.svg?rev=c3d1fa147af24f08b927c0ccd2f76a7c" alt="hands and heart icon" />
+                    </div>
+                <div class="feature__text">
+                    <h2 class="feature__title">Giving Back to Baystate Health</h2>
+                    <div class="feature__teaser">Your donation helps bring the best healthcare to our region. Consider a gift to advance care for patients, fuel innovation and drive research and technology in your own backyard.</div>
+                    <ul class="feature__ctas">
+                            <li><a href="https://secure2.convio.net/bayhf/site/Donation2;jsessionid=00000000.app295a?df_id=1682&amp;mfc_pref=T&amp;1682.donation=form1&amp;NONCE_TOKEN=42DB0C70D4F85FE136F518619E41F931" target="_blank" class="cta button button--primary"><span>Donate Now</span></a></li>
+                            <li><a href="/foundation"  class="cta button button--primary"><span>Baystate Health Foundation</span></a></li>
+                            <li><a href="/foundation/fundraising-events"  class="cta button button--primary"><span>Fundraising Events</span></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+        <section class="feature-carousel feature-carousel--short js-feature-carousel " data-component="COMP-17" data-max-columns="3">
+            <div class="u-content">
+                <div class="feature-carousel__wrapper">
+                    <h2 class="feature-carousel__title">Health &amp; Wellness Stories</h2>
+                                            <div class="feature-carousel__items js-carousel-items">
+                                <div class="item">
+                                    <a href="/articles/summer-safety-tips"  class="item__link">
+                                        <div class="item__image-wrapper">
+                                            <img class="item__image lazyload" data-src="/-/media/images/blog-health-articles/2025/primary-and-preventive-care/summer-safety-tips600.jpg?rev=9edc98182c064d87ac0e97c07c585995" alt="a dark-haired man waits in a pool to safely catch a little girl, standing on the side of the pool wearing personal floatation devices">
+                                        </div>
+                                            <span class="item__tag">Wellness &amp; Prevention</span>
+                                        <div class="item__text">
+                                            <h3 class="item__title"><span>5 Summer Safety Tips for Keeping Your Family Healthy and Safe</span></h3>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="item">
+                                    <a href="/articles/emergency-stroke-treatment"  class="item__link">
+                                        <div class="item__image-wrapper">
+                                            <img class="item__image lazyload" data-src="/-/media/images/blog-health-articles/2025/neurology/time-lost-is-brain-lost-stroke600.jpg?rev=5e48021c03cc44a4ac43af6929491137" alt="an ambulance rushing a stroke patient to the hospital for immediate care">
+                                        </div>
+                                            <span class="item__tag">Coping with Illness</span>
+                                        <div class="item__text">
+                                            <h3 class="item__title"><span>Every Second Counts: Get Emergency Treatment for Stroke Symptoms</span></h3>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="item">
+                                    <a href="/news/sandp-rating"  class="item__link">
+                                        <div class="item__image-wrapper">
+                                            <img class="item__image lazyload" data-src="/-/media/images/modules/news/default-bh-new-image-600.jpg?rev=ea637783bbcc4270afa44fde477c2c79" alt="baystate health news">
+                                        </div>
+                                            <span class="item__tag">Announcements</span>
+                                        <div class="item__text">
+                                            <h3 class="item__title"><span>S&amp;P Global Ratings Revises Credit Outlook to Stable for Baystate Health</span></h3>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="item">
+                                    <a href="/news/get-with-the-guidelines"  class="item__link">
+                                        <div class="item__image-wrapper">
+                                            <img class="item__image lazyload" data-src="/-/media/images/modules/news/default-bh-new-image-600.jpg?rev=ea637783bbcc4270afa44fde477c2c79" alt="baystate health news">
+                                        </div>
+                                            <span class="item__tag">Announcements</span>
+                                        <div class="item__text">
+                                            <h3 class="item__title"><span>Get With The Guidelines</span></h3>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="item">
+                                    <a href="/news/us-news-2025"  class="item__link">
+                                        <div class="item__image-wrapper">
+                                            <img class="item__image lazyload" data-src="/-/media/images/modules/news/default-bh-new-image-600.jpg?rev=ea637783bbcc4270afa44fde477c2c79" alt="baystate health news">
+                                        </div>
+                                            <span class="item__tag">Awards &amp; Recognition</span>
+                                        <div class="item__text">
+                                            <h3 class="item__title"><span>U.S. News &amp; World Report Names Baystate Medical Center Among Best Hospitals for 2025-2026 in Massachusetts </span></h3>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="item">
+                                    <a href="/articles/tick-prevention"  class="item__link">
+                                        <div class="item__image-wrapper">
+                                            <img class="item__image lazyload" data-src="/-/media/images/blog-health-articles/2025/infectious-disease/tick-safety600.jpg?rev=df512e366f60427dbca70eaa88a09933" alt="a red and white triangle-shaped sign in the woods with a silhouette of a tick that reads Beware of Ticks!">
+                                        </div>
+                                            <span class="item__tag">Wellness &amp; Prevention</span>
+                                        <div class="item__text">
+                                            <h3 class="item__title"><span>Tick Safety Guide: Tick Checks, Removal, and Symptoms to Know</span></h3>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="item">
+                                    <a href="/articles/reading-nutrition-labels"  class="item__link">
+                                        <div class="item__image-wrapper">
+                                            <img class="item__image lazyload" data-src="/-/media/images/blog-health-articles/2025/nutrition/deciphering-nutrition-labels-600.jpg?rev=96bb28a4664846d6bd39f12deb202d8f" alt="a man in a long-sleeved blue shirt and a woman in a bright yellow shirt reading nutrition labels in the grocery store aisle">
+                                        </div>
+                                            <span class="item__tag">Wellness &amp; Prevention</span>
+                                        <div class="item__text">
+                                            <h3 class="item__title"><span>Nutrition Labels 101: Essential Tips for Healthier Choices</span></h3>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="item">
+                                    <a href="/news/kate-healy"  class="item__link">
+                                        <div class="item__image-wrapper">
+                                            <img class="item__image lazyload" data-src="/-/media/images/news/2025/07/kate-healey600.jpg?rev=4e28fcd8804d4e37bb3f2ebe9fc3c620" alt="a woman with shoulder-length blonde hair wearing a black shirt and smiling for the camera">
+                                        </div>
+                                            <span class="item__tag">Announcements</span>
+                                        <div class="item__text">
+                                            <h3 class="item__title"><span>Baystate Health Appoints Kathleen Healy as Chief Legal Officer</span></h3>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="item">
+                                    <a href="/news/scott-lichtenberger"  class="item__link">
+                                        <div class="item__image-wrapper">
+                                            <img class="item__image lazyload" data-src="/-/media/images/news/2025/07/scott-lichtenberger-600.jpg?rev=fc31c60447cd437997375ffc06246c6d" alt="a man wearing a white button-down shirt and dark suit jacket smiling for the camera">
+                                        </div>
+                                            <span class="item__tag">Announcements</span>
+                                        <div class="item__text">
+                                            <h3 class="item__title"><span>Baystate Health Appoints Scott Lichtenberger, MD, as Chief Operating Officer</span></h3>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="item">
+                                    <a href="/articles/stroke-treatment-advances"  class="item__link">
+                                        <div class="item__image-wrapper">
+                                            <img class="item__image lazyload" data-src="/-/media/images/blog-health-articles/2025/neurology/advances-stroke-treatment600.jpg?rev=c1661750eff94889b42e30c0b62c0458" alt="a neurologist caring for a stroke patient in recovery">
+                                        </div>
+                                            <span class="item__tag">Coping with Illness</span>
+                                        <div class="item__text">
+                                            <h3 class="item__title"><span>Stroke Treatment Advances: Improving Recovery Outcomes</span></h3>
+                                        </div>
+                                    </a>
+                                </div>
+                        </div>
+                                            <div class="feature-carousel__ctas">
+                            <a href="/articles"  class="cta button button--primary"><span>View All Articles</span></a>
+                        </div>
+                </div>
+            </div>
+        </section>
+
+
+    <section class="rich-promo" data-component="COMP-18" data-in-view="once">
+        <div class="u-content">
+            <div class="rich-promo__wrapper">
+                    <div class="rich-promo__image-wrapper">
+                        <img class="rich-promo__image show-for-tablet-l" src="/-/media/images/cta-component-images/mybaystate-feature-cta-test-268.png?rev=571d9a6792e44f73a4ccd22488a6b13f" alt="mybaystate patient portal app login screen">
+                    </div>
+                <div class="rich-promo__text">
+                    <h2 class="rich-promo__title">Your Health Record, the Way You Want it</h2>
+                    <div class="rich-promo__bg">
+                        <div class="rtf">
+                            With MyBaystate, you can easily manage your health record and schedule appointments, message your providers, and refill prescriptions.
+                        </div>
+                        <h3 class="rich-promo__sub-title">Get Started</h3>
+                            <ul class="rich-promo__ctas">
+                                    <li><a href="https://my.baystatehealth.org/myhealth/index.html#/home" target="_blank" class="cta button button--secondary button--white"><span>Sign In to My Baystate</span></a></li>
+                                    <li><a href="https://mybaystate.baystatehealth.org/#/enroll/1" target="_blank" class="cta button button--secondary button--white"><span>Sign Up for MyBaystate</span></a></li>
+                            </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="feature-carousel feature-carousel--events js-feature-carousel" data-component="COMP-20" data-max-columns="3">
+        <div class="u-content">
+            <div class="feature-carousel__wrapper">
+                <h2 class="feature-carousel__title">Upcoming Events</h2>
+                                    <div class="feature-carousel__items js-carousel-items">
+                            <div class="item">
+                                <a href="/events/general-cancer-support-group" class="item__link">
+                                        <div class="item__image-wrapper">
+                                            <img class="item__image lazyload" data-src="/-/media/images/default-images/event-default-600.jpg?rev=8fe53d69c1b94d76a36e66f9e48cd574" alt="a pushpin in a calendar">
+                                        </div>
+                                    <div class="item__date">
+                                        <span class="date__month">Sep</span>
+                                        <span class="date__day">03</span>
+                                    </div>
+                                    <div class="item__text">
+                                        <div class="item__event-info">
+                                                <span class="item__time">11 am - 12:30 pm</span>
+                                                                                            <span class="item__location">Remote</span>
+                                        </div>
+                                        <h3 class="item__title"><span>General Cancer Support Group</span></h3>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="item">
+                                <a href="/events/partners-in-caregiving" class="item__link">
+                                        <div class="item__image-wrapper">
+                                            <img class="item__image lazyload" data-src="/-/media/images/default-images/event-default-600.jpg?rev=8fe53d69c1b94d76a36e66f9e48cd574" alt="a pushpin in a calendar">
+                                        </div>
+                                    <div class="item__date">
+                                        <span class="date__month">Sep</span>
+                                        <span class="date__day">10</span>
+                                    </div>
+                                    <div class="item__text">
+                                        <div class="item__event-info">
+                                                <span class="item__time">5 pm - 6:30 pm</span>
+                                                                                            <span class="item__location">Remote</span>
+                                        </div>
+                                        <h3 class="item__title"><span>Partners in Caregiving</span></h3>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="item">
+                                <a href="/events/expressive-writing-through-cancer" class="item__link">
+                                        <div class="item__image-wrapper">
+                                            <img class="item__image lazyload" data-src="/-/media/images/default-images/event-default-600.jpg?rev=8fe53d69c1b94d76a36e66f9e48cd574" alt="a pushpin in a calendar">
+                                        </div>
+                                    <div class="item__date">
+                                        <span class="date__month">Sep</span>
+                                        <span class="date__day">17</span>
+                                    </div>
+                                    <div class="item__text">
+                                        <div class="item__event-info">
+                                                <span class="item__time">11 am - 1 pm</span>
+                                                                                            <span class="item__location">Remote</span>
+                                        </div>
+                                        <h3 class="item__title"><span>Expressive Writing through Cancer</span></h3>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="item">
+                                <a href="/events/find-your-champion" class="item__link">
+                                        <div class="item__image-wrapper">
+                                            <img class="item__image lazyload" data-src="/-/media/images/services/transplant/living-kidney-donor-600.jpg?rev=34219214c68e4985abda4e88227cf43e" alt="two hands cupped to hold a flat model of a heart">
+                                        </div>
+                                    <div class="item__date">
+                                        <span class="date__month">Sep</span>
+                                        <span class="date__day">22</span>
+                                    </div>
+                                    <div class="item__text">
+                                        <div class="item__event-info">
+                                                <span class="item__time">5:30 pm</span>
+                                                                                            <span class="item__location">Remote</span>
+                                        </div>
+                                        <h3 class="item__title"><span>Find Your Champion</span></h3>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="item">
+                                <a href="/events/breast-cancer-support-group" class="item__link">
+                                        <div class="item__image-wrapper">
+                                            <img class="item__image lazyload" data-src="/-/media/images/default-images/event-default-600.jpg?rev=8fe53d69c1b94d76a36e66f9e48cd574" alt="a pushpin in a calendar">
+                                        </div>
+                                    <div class="item__date">
+                                        <span class="date__month">Sep</span>
+                                        <span class="date__day">24</span>
+                                    </div>
+                                    <div class="item__text">
+                                        <div class="item__event-info">
+                                                <span class="item__time">11 am - 12:30 pm</span>
+                                                                                            <span class="item__location">Remote</span>
+                                        </div>
+                                        <h3 class="item__title"><span>Breast Cancer Support Group</span></h3>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="item">
+                                <a href="/events/weight-loss-surgery-support-group" class="item__link">
+                                        <div class="item__image-wrapper">
+                                            <img class="item__image lazyload" data-src="/-/media/images/services/bariatric-surgery/bariatric-surgery-support-component-600.jpg?rev=34a0dd5d8bec4999b858d8c493e738eb" alt="an adult woman shares her story at a bariatric surgery support group session">
+                                        </div>
+                                    <div class="item__date">
+                                        <span class="date__month">Sep</span>
+                                        <span class="date__day">25</span>
+                                    </div>
+                                    <div class="item__text">
+                                        <div class="item__event-info">
+                                                <span class="item__time">10 am - 11 am</span>
+                                                                                            <span class="item__location">Remote</span>
+                                        </div>
+                                        <h3 class="item__title"><span>Weight Loss Surgery Support Group</span></h3>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="item">
+                                <a href="/events/general-cancer-support-group" class="item__link">
+                                        <div class="item__image-wrapper">
+                                            <img class="item__image lazyload" data-src="/-/media/images/default-images/event-default-600.jpg?rev=8fe53d69c1b94d76a36e66f9e48cd574" alt="a pushpin in a calendar">
+                                        </div>
+                                    <div class="item__date">
+                                        <span class="date__month">Oct</span>
+                                        <span class="date__day">01</span>
+                                    </div>
+                                    <div class="item__text">
+                                        <div class="item__event-info">
+                                                <span class="item__time">11 am - 12:30 pm</span>
+                                                                                            <span class="item__location">Remote</span>
+                                        </div>
+                                        <h3 class="item__title"><span>General Cancer Support Group</span></h3>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="item">
+                                <a href="/events/weight-loss-surgery-support-group" class="item__link">
+                                        <div class="item__image-wrapper">
+                                            <img class="item__image lazyload" data-src="/-/media/images/services/bariatric-surgery/bariatric-surgery-support-component-600.jpg?rev=34a0dd5d8bec4999b858d8c493e738eb" alt="an adult woman shares her story at a bariatric surgery support group session">
+                                        </div>
+                                    <div class="item__date">
+                                        <span class="date__month">Oct</span>
+                                        <span class="date__day">01</span>
+                                    </div>
+                                    <div class="item__text">
+                                        <div class="item__event-info">
+                                                <span class="item__time">11 am - 12 pm</span>
+                                                                                            <span class="item__location">In-Person</span>
+                                        </div>
+                                        <h3 class="item__title"><span>Weight Loss Surgery Support Group</span></h3>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="item">
+                                <a href="/events/partners-in-caregiving" class="item__link">
+                                        <div class="item__image-wrapper">
+                                            <img class="item__image lazyload" data-src="/-/media/images/default-images/event-default-600.jpg?rev=8fe53d69c1b94d76a36e66f9e48cd574" alt="a pushpin in a calendar">
+                                        </div>
+                                    <div class="item__date">
+                                        <span class="date__month">Oct</span>
+                                        <span class="date__day">08</span>
+                                    </div>
+                                    <div class="item__text">
+                                        <div class="item__event-info">
+                                                <span class="item__time">5 pm - 6:30 pm</span>
+                                                                                            <span class="item__location">Remote</span>
+                                        </div>
+                                        <h3 class="item__title"><span>Partners in Caregiving</span></h3>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="item">
+                                <a href="/events/weight-loss-surgery-support-group" class="item__link">
+                                        <div class="item__image-wrapper">
+                                            <img class="item__image lazyload" data-src="/-/media/images/services/bariatric-surgery/bariatric-surgery-support-component-600.jpg?rev=34a0dd5d8bec4999b858d8c493e738eb" alt="an adult woman shares her story at a bariatric surgery support group session">
+                                        </div>
+                                    <div class="item__date">
+                                        <span class="date__month">Oct</span>
+                                        <span class="date__day">08</span>
+                                    </div>
+                                    <div class="item__text">
+                                        <div class="item__event-info">
+                                                <span class="item__time">6 pm - 7 pm</span>
+                                                                                            <span class="item__location">Remote</span>
+                                        </div>
+                                        <h3 class="item__title"><span>Weight Loss Surgery Support Group</span></h3>
+                                    </div>
+                                </a>
+                            </div>
+                    </div>
+                                    <div class="feature-carousel__ctas">
+                        <a href="/events"  class="cta button button--primary"><span>View Events Calendar</span></a>
+                    </div>
+            </div>
+        </div>
+    </section>
+
+
+<div class="in-page-jump js-in-page-jump">
+  <p>Back to Top</p>
+</div> 
+
+        </section>
+    </main>
+
+    
+    
+
+    <footer id="footer" class="footer js-footer">
+        
+        <div class="footer-desktop footer__content u-content">
+            <section class="footer__main">
+                <div class="footer__main--left">
+                    <a href="https://www.baystatehealth.org"><img class="footer__logo" alt="Footer Logo" src="/-/media/images/logos/baystate-health-white-284.svg?rev=f625035ac9d94d25b5d80eae99e95b8d"></a>
+                    <ul class="footer__socials">
+                        <div class="footer__socials--bg"></div>
+                            <li class="footer__socials--item">
+                                <a href="https://www.instagram.com/baystate_health" target="_blank" class="footer__socials--link" aria-label="instagram link">
+                                    <svg width="50" height="50" viewBox="0 0 50 50" class="icon icon--icon-instagram" aria-hidden="true"><use xlink:href="/assets/images/static/icons.svg#icon-instagram"></use></svg>
+                                </a>
+                            </li>
+                                                    <li class="footer__socials--item">
+                                <a href="http://twitter.com/Baystate_Health" target="_blank" class="footer__socials--link" aria-label="twitter link">
+                                    <svg width="50" height="50" viewBox="0 0 50 50" class="icon icon--icon-twitter" aria-hidden="true"><use xlink:href="/assets/images/static/icons.svg#icon-twitter"></use></svg>
+                                </a>
+                            </li>
+                                                    <li class="footer__socials--item">
+                                <a href="https://www.facebook.com/baystatehealth" target="_blank" class="footer__socials--link" aria-label="facebook link">
+                                    <svg width="50" height="50" viewBox="0 0 50 50" class="icon icon--icon-facebook" aria-hidden="true"><use xlink:href="/assets/images/static/icons.svg#icon-facebook"></use></svg>
+                                </a>
+                            </li>
+                                                    <li class="footer__socials--item">
+                                <a href="https://www.linkedin.com/company/baystate-health" target="_blank" class="footer__socials--link" aria-label="linkedin link">
+                                    <svg width="50" height="50" viewBox="0 0 50 50" class="icon icon--icon-linkedin" aria-hidden="true"><use xlink:href="/assets/images/static/icons.svg#icon-linkedin"></use></svg>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+                    <div class="footer__main--nav-columns">
+                            <div class="footer__main--nav-column">
+                            </div>
+                            <div class="footer__main--nav-column">
+                                    <p class="footer__main--nav-column--title">Patients and Visitors</p>
+                                    <ul class="footer__main--nav-column--menu">
+                                            <li class="footer__main--nav-column--item">
+                                                <a href="https://mybaystate.baystatehealth.org/#/login" target="_blank">
+                                                    Sign in to MyBaystate
+<svg width="50" height="50" viewBox="0 0 50 50" class="icon icon--external-link" aria-hidden="true"><use xlink:href="/assets/images/static/icons.svg#external-link"></use></svg>                                                </a>
+                                            </li>
+                                            <li class="footer__main--nav-column--item">
+                                                <a href="https://baystatehealth.ci.healthpay24.cloud/account/login?ReturnUrl=%2F" target="_blank">
+                                                    Pay My Bill Online
+<svg width="50" height="50" viewBox="0 0 50 50" class="icon icon--external-link" aria-hidden="true"><use xlink:href="/assets/images/static/icons.svg#external-link"></use></svg>                                                </a>
+                                            </li>
+                                            <li class="footer__main--nav-column--item">
+                                                <a href="/patients-and-visitors/find-your-medical-records" >
+                                                    Find My Medical Records
+                                                </a>
+                                            </li>
+                                            <li class="footer__main--nav-column--item">
+                                                <a href="/patients-and-visitors/visiting-hours-and-policies" >
+                                                    Visiting Hours and Policies
+                                                </a>
+                                            </li>
+                                            <li class="footer__main--nav-column--item">
+                                                <a href="/patients-and-visitors/support-services" >
+                                                    Patient Resources and Support Groups
+                                                </a>
+                                            </li>
+                                            <li class="footer__main--nav-column--item">
+                                                <a href="/articles" >
+                                                    Health &amp; Wellness Articles
+                                                </a>
+                                            </li>
+                                            <li class="footer__main--nav-column--item">
+                                                <a href="/patients-and-visitors/insurance" >
+                                                    Insurance
+                                                </a>
+                                            </li>
+                                            <li class="footer__main--nav-column--item">
+                                                <a href="/patients-and-visitors/healthcare-prices-and-billing/protection-from-surprise-billing" >
+                                                    Protection from Surprise Billing
+                                                </a>
+                                            </li>
+                                    </ul>
+                            </div>
+                            <div class="footer__main--nav-column">
+                                    <p class="footer__main--nav-column--title">Providers and Employees</p>
+                                    <ul class="footer__main--nav-column--menu">
+                                            <li class="footer__main--nav-column--item">
+                                                <a href="/healthcare-professionals/refer-a-patient" >
+                                                    Refer a Patient
+                                                </a>
+                                            </li>
+                                            <li class="footer__main--nav-column--item">
+                                                <a href="/healthcare-education/academic-programs/continuing-interprofessional-education" >
+                                                    Continuing Interprofessional Education
+                                                </a>
+                                            </li>
+                                            <li class="footer__main--nav-column--item">
+                                                <a href="/employee-resources" >
+                                                    For Baystate Health Employees
+                                                </a>
+                                            </li>
+                                            <li class="footer__main--nav-column--item">
+                                                <a href="https://remote.bhs.org/vpn/index.html" >
+                                                    Secure Access Login
+<svg width="50" height="50" viewBox="0 0 50 50" class="icon icon--external-link" aria-hidden="true"><use xlink:href="/assets/images/static/icons.svg#external-link"></use></svg>                                                </a>
+                                            </li>
+                                    </ul>
+                                    <p class="footer__main--nav-column--title">Community Members</p>
+                                    <ul class="footer__main--nav-column--menu">
+                                            <li class="footer__main--nav-column--item">
+                                                <a href="/about-us/community-programs" >
+                                                    Community Programs
+                                                </a>
+                                            </li>
+                                            <li class="footer__main--nav-column--item">
+                                                <a href="/about-us/volunteering-opportunities" >
+                                                    Volunteer Opportunities
+                                                </a>
+                                            </li>
+                                            <li class="footer__main--nav-column--item">
+                                                <a href="/about-us/community-programs/health-initiatives" >
+                                                    Health Initiatives
+                                                </a>
+                                            </li>
+                                            <li class="footer__main--nav-column--item">
+                                                <a href="/about-us/community-programs/community-health-needs-assessments" >
+                                                    Community Health Needs Assessments
+                                                </a>
+                                            </li>
+                                            <li class="footer__main--nav-column--item">
+                                                <a href="/foundation" >
+                                                    Giving to Baystate
+                                                </a>
+                                            </li>
+                                    </ul>
+                            </div>
+                            <div class="footer__main--nav-column">
+                                    <p class="footer__main--nav-column--title">Research and Academics</p>
+                                    <ul class="footer__main--nav-column--menu">
+                                            <li class="footer__main--nav-column--item">
+                                                <a href="/research-at-baystate-health/clinical-trials" >
+                                                    For Patients
+                                                </a>
+                                            </li>
+                                            <li class="footer__main--nav-column--item">
+                                                <a href="/research-at-baystate-health/office-of-research" >
+                                                    Office of Research
+                                                </a>
+                                            </li>
+                                            <li class="footer__main--nav-column--item">
+                                                <a href="/healthcare-education/academic-programs/continuing-interprofessional-education" >
+                                                    Continuing Interprofessional Education
+                                                </a>
+                                            </li>
+                                            <li class="footer__main--nav-column--item">
+                                                <a href="/healthcare-education/academic-programs/umass-chan-medical-school-baystate" >
+                                                    UMass Chan Medical School - Baystate 
+                                                </a>
+                                            </li>
+                                            <li class="footer__main--nav-column--item">
+                                                <a href="/healthcare-education/academic-programs" >
+                                                    Academic Programs at Baystate Health
+                                                </a>
+                                            </li>
+                                    </ul>
+                                    <p class="footer__main--nav-column--title">About Baystate</p>
+                                    <ul class="footer__main--nav-column--menu">
+                                            <li class="footer__main--nav-column--item">
+                                                <a href="/about-us" >
+                                                    About Us
+                                                </a>
+                                            </li>
+                                            <li class="footer__main--nav-column--item">
+                                                <a href="https://baystatehealthjobs.com/" target="_blank">
+                                                    Careers
+<svg width="50" height="50" viewBox="0 0 50 50" class="icon icon--external-link" aria-hidden="true"><use xlink:href="/assets/images/static/icons.svg#external-link"></use></svg>                                                </a>
+                                            </li>
+                                            <li class="footer__main--nav-column--item">
+                                                <a href="/contact-us" >
+                                                    Contact Us
+                                                </a>
+                                            </li>
+                                            <li class="footer__main--nav-column--item">
+                                                <a href="/about-us/leadership" >
+                                                    Baystate Health Leadership
+                                                </a>
+                                            </li>
+                                            <li class="footer__main--nav-column--item">
+                                                <a href="/news" >
+                                                    Baystate Health News &amp; Media Relations
+                                                </a>
+                                            </li>
+                                            <li class="footer__main--nav-column--item">
+                                                <a href="/about-us/information-for-vendors" >
+                                                    Vendor Information and Policies 
+                                                </a>
+                                            </li>
+                                    </ul>
+                            </div>
+                    </div>
+            </section>
+            <nav class="footer__compliance">
+                <p class="footer__compliance-item footer__compliance-item--copyright">&#169; Copyright 2025 Baystate Health</p>
+                <ul class="footer__compliance-links">
+                        <li class="footer__compliance-item">
+                            <a href="/terms-of-use"  class="footer__compliance-link link--underline-primary">Website Terms of Use</a>
+                        </li>
+                        <li class="footer__compliance-item">
+                            <a href="/website-privacy-policy"  class="footer__compliance-link link--underline-primary">Website Privacy Policy</a>
+                        </li>
+                        <li class="footer__compliance-item">
+                            <a href="/patients-and-visitors/rights-and-responsibilities/nondiscrimination-notice"  class="footer__compliance-link link--underline-primary">Nondiscrimination Notice</a>
+                        </li>
+                        <li class="footer__compliance-item">
+                            <a href="/notice-of-privacy-practices"  class="footer__compliance-link link--underline-primary">Notice of Privacy Practices</a>
+                        </li>
+                        <li class="footer__compliance-item">
+                            <a href="/patients-and-visitors/healthcare-prices-and-billing/hospital-standard-charges"  class="footer__compliance-link link--underline-primary">Price Transparency</a>
+                        </li>
+                </ul>
+            </nav>
+        </div>
+        
+        <div class="footer-mobile footer__content u-content">
+            <section class="footer__main">
+                <div class="footer__main--left">
+                    <a href="https://www.baystatehealth.org"><img class="footer__logo" alt="Footer Logo" src="/-/media/images/logos/baystate-health-white-284.svg?rev=f625035ac9d94d25b5d80eae99e95b8d"></a>
+                    <ul class="footer__socials">
+                        <div class="footer__socials--bg"></div>
+                            <li class="footer__socials--item">
+                                <a href="https://www.instagram.com/baystate_health" target="_blank" class="footer__socials--link" aria-label="instagram link">
+                                    <svg width="50" height="50" viewBox="0 0 50 50" class="icon icon--icon-instagram" aria-hidden="true"><use xlink:href="/assets/images/static/icons.svg#icon-instagram"></use></svg>
+                                </a>
+                            </li>
+                                                    <li class="footer__socials--item">
+                                <a href="http://twitter.com/Baystate_Health" target="_blank" class="footer__socials--link" aria-label="twitter link">
+                                    <svg width="50" height="50" viewBox="0 0 50 50" class="icon icon--icon-twitter" aria-hidden="true"><use xlink:href="/assets/images/static/icons.svg#icon-twitter"></use></svg>
+                                </a>
+                            </li>
+                                                    <li class="footer__socials--item">
+                                <a href="https://www.facebook.com/baystatehealth" target="_blank" class="footer__socials--link" aria-label="facebook link">
+                                    <svg width="50" height="50" viewBox="0 0 50 50" class="icon icon--icon-facebook" aria-hidden="true"><use xlink:href="/assets/images/static/icons.svg#icon-facebook"></use></svg>
+                                </a>
+                            </li>
+                                                    <li class="footer__socials--item">
+                                <a href="https://www.linkedin.com/company/baystate-health" target="_blank" class="footer__socials--link" aria-label="linkedin link">
+                                    <svg width="50" height="50" viewBox="0 0 50 50" class="icon icon--icon-linkedin" aria-hidden="true"><use xlink:href="/assets/images/static/icons.svg#icon-linkedin"></use></svg>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+                    <ul class="footer__main--nav-accordion accordion" data-accordion data-allow-all-closed="true">
+                            <li class="accordion-item" data-accordion-item>
+                                <a href="#" class="footer__main--nav-accordion--title accordion-title">
+                                    Patients and Visitors <svg width="50" height="50" viewBox="0 0 50 50" class="icon icon--chevron-right" aria-hidden="true"><use xlink:href="/assets/images/static/icons.svg#chevron-right"></use></svg>
+                                </a>
+                                <ul class="footer__main--nav-accordion--content accordion-content" data-tab-content>
+                                        <li class="footer__main--nav-column--item footer__main--nav-accordion--item">
+                                            <a href="https://mybaystate.baystatehealth.org/#/login" target="_blank">
+                                                Sign in to MyBaystate
+<svg width="50" height="50" viewBox="0 0 50 50" class="icon icon--external-link" aria-hidden="true"><use xlink:href="/assets/images/static/icons.svg#external-link"></use></svg>                                            </a>
+                                        </li>
+                                        <li class="footer__main--nav-column--item footer__main--nav-accordion--item">
+                                            <a href="https://baystatehealth.ci.healthpay24.cloud/account/login?ReturnUrl=%2F" target="_blank">
+                                                Pay My Bill Online
+<svg width="50" height="50" viewBox="0 0 50 50" class="icon icon--external-link" aria-hidden="true"><use xlink:href="/assets/images/static/icons.svg#external-link"></use></svg>                                            </a>
+                                        </li>
+                                        <li class="footer__main--nav-column--item footer__main--nav-accordion--item">
+                                            <a href="/patients-and-visitors/find-your-medical-records" >
+                                                Find My Medical Records
+                                            </a>
+                                        </li>
+                                        <li class="footer__main--nav-column--item footer__main--nav-accordion--item">
+                                            <a href="/patients-and-visitors/visiting-hours-and-policies" >
+                                                Visiting Hours and Policies
+                                            </a>
+                                        </li>
+                                        <li class="footer__main--nav-column--item footer__main--nav-accordion--item">
+                                            <a href="/patients-and-visitors/support-services" >
+                                                Patient Resources and Support Groups
+                                            </a>
+                                        </li>
+                                        <li class="footer__main--nav-column--item footer__main--nav-accordion--item">
+                                            <a href="/articles" >
+                                                Health &amp; Wellness Articles
+                                            </a>
+                                        </li>
+                                        <li class="footer__main--nav-column--item footer__main--nav-accordion--item">
+                                            <a href="/patients-and-visitors/insurance" >
+                                                Insurance
+                                            </a>
+                                        </li>
+                                        <li class="footer__main--nav-column--item footer__main--nav-accordion--item">
+                                            <a href="/patients-and-visitors/healthcare-prices-and-billing/protection-from-surprise-billing" >
+                                                Protection from Surprise Billing
+                                            </a>
+                                        </li>
+                                </ul>
+                            </li>
+                            <li class="accordion-item" data-accordion-item>
+                                <a href="#" class="footer__main--nav-accordion--title accordion-title">
+                                    Providers and Employees <svg width="50" height="50" viewBox="0 0 50 50" class="icon icon--chevron-right" aria-hidden="true"><use xlink:href="/assets/images/static/icons.svg#chevron-right"></use></svg>
+                                </a>
+                                <ul class="footer__main--nav-accordion--content accordion-content" data-tab-content>
+                                        <li class="footer__main--nav-column--item footer__main--nav-accordion--item">
+                                            <a href="/healthcare-professionals/refer-a-patient" >
+                                                Refer a Patient
+                                            </a>
+                                        </li>
+                                        <li class="footer__main--nav-column--item footer__main--nav-accordion--item">
+                                            <a href="/healthcare-education/academic-programs/continuing-interprofessional-education" >
+                                                Continuing Interprofessional Education
+                                            </a>
+                                        </li>
+                                        <li class="footer__main--nav-column--item footer__main--nav-accordion--item">
+                                            <a href="/employee-resources" >
+                                                For Baystate Health Employees
+                                            </a>
+                                        </li>
+                                        <li class="footer__main--nav-column--item footer__main--nav-accordion--item">
+                                            <a href="https://remote.bhs.org/vpn/index.html" >
+                                                Secure Access Login
+<svg width="50" height="50" viewBox="0 0 50 50" class="icon icon--external-link" aria-hidden="true"><use xlink:href="/assets/images/static/icons.svg#external-link"></use></svg>                                            </a>
+                                        </li>
+                                </ul>
+                            </li>
+                            <li class="accordion-item" data-accordion-item>
+                                <a href="#" class="footer__main--nav-accordion--title accordion-title">
+                                    Community Members <svg width="50" height="50" viewBox="0 0 50 50" class="icon icon--chevron-right" aria-hidden="true"><use xlink:href="/assets/images/static/icons.svg#chevron-right"></use></svg>
+                                </a>
+                                <ul class="footer__main--nav-accordion--content accordion-content" data-tab-content>
+                                        <li class="footer__main--nav-column--item footer__main--nav-accordion--item">
+                                            <a href="/about-us/community-programs" >
+                                                Community Programs
+                                            </a>
+                                        </li>
+                                        <li class="footer__main--nav-column--item footer__main--nav-accordion--item">
+                                            <a href="/about-us/volunteering-opportunities" >
+                                                Volunteer Opportunities
+                                            </a>
+                                        </li>
+                                        <li class="footer__main--nav-column--item footer__main--nav-accordion--item">
+                                            <a href="/about-us/community-programs/health-initiatives" >
+                                                Health Initiatives
+                                            </a>
+                                        </li>
+                                        <li class="footer__main--nav-column--item footer__main--nav-accordion--item">
+                                            <a href="/about-us/community-programs/community-health-needs-assessments" >
+                                                Community Health Needs Assessments
+                                            </a>
+                                        </li>
+                                        <li class="footer__main--nav-column--item footer__main--nav-accordion--item">
+                                            <a href="/foundation" >
+                                                Giving to Baystate
+                                            </a>
+                                        </li>
+                                </ul>
+                            </li>
+                            <li class="accordion-item" data-accordion-item>
+                                <a href="#" class="footer__main--nav-accordion--title accordion-title">
+                                    Research and Academics <svg width="50" height="50" viewBox="0 0 50 50" class="icon icon--chevron-right" aria-hidden="true"><use xlink:href="/assets/images/static/icons.svg#chevron-right"></use></svg>
+                                </a>
+                                <ul class="footer__main--nav-accordion--content accordion-content" data-tab-content>
+                                        <li class="footer__main--nav-column--item footer__main--nav-accordion--item">
+                                            <a href="/research-at-baystate-health/clinical-trials" >
+                                                For Patients
+                                            </a>
+                                        </li>
+                                        <li class="footer__main--nav-column--item footer__main--nav-accordion--item">
+                                            <a href="/research-at-baystate-health/office-of-research" >
+                                                Office of Research
+                                            </a>
+                                        </li>
+                                        <li class="footer__main--nav-column--item footer__main--nav-accordion--item">
+                                            <a href="/healthcare-education/academic-programs/continuing-interprofessional-education" >
+                                                Continuing Interprofessional Education
+                                            </a>
+                                        </li>
+                                        <li class="footer__main--nav-column--item footer__main--nav-accordion--item">
+                                            <a href="/healthcare-education/academic-programs/umass-chan-medical-school-baystate" >
+                                                UMass Chan Medical School - Baystate 
+                                            </a>
+                                        </li>
+                                        <li class="footer__main--nav-column--item footer__main--nav-accordion--item">
+                                            <a href="/healthcare-education/academic-programs" >
+                                                Academic Programs at Baystate Health
+                                            </a>
+                                        </li>
+                                </ul>
+                            </li>
+                            <li class="accordion-item" data-accordion-item>
+                                <a href="#" class="footer__main--nav-accordion--title accordion-title">
+                                    About Baystate <svg width="50" height="50" viewBox="0 0 50 50" class="icon icon--chevron-right" aria-hidden="true"><use xlink:href="/assets/images/static/icons.svg#chevron-right"></use></svg>
+                                </a>
+                                <ul class="footer__main--nav-accordion--content accordion-content" data-tab-content>
+                                        <li class="footer__main--nav-column--item footer__main--nav-accordion--item">
+                                            <a href="/about-us" >
+                                                About Us
+                                            </a>
+                                        </li>
+                                        <li class="footer__main--nav-column--item footer__main--nav-accordion--item">
+                                            <a href="https://baystatehealthjobs.com/" target="_blank">
+                                                Careers
+<svg width="50" height="50" viewBox="0 0 50 50" class="icon icon--external-link" aria-hidden="true"><use xlink:href="/assets/images/static/icons.svg#external-link"></use></svg>                                            </a>
+                                        </li>
+                                        <li class="footer__main--nav-column--item footer__main--nav-accordion--item">
+                                            <a href="/contact-us" >
+                                                Contact Us
+                                            </a>
+                                        </li>
+                                        <li class="footer__main--nav-column--item footer__main--nav-accordion--item">
+                                            <a href="/about-us/leadership" >
+                                                Baystate Health Leadership
+                                            </a>
+                                        </li>
+                                        <li class="footer__main--nav-column--item footer__main--nav-accordion--item">
+                                            <a href="/news" >
+                                                Baystate Health News &amp; Media Relations
+                                            </a>
+                                        </li>
+                                        <li class="footer__main--nav-column--item footer__main--nav-accordion--item">
+                                            <a href="/about-us/information-for-vendors" >
+                                                Vendor Information and Policies 
+                                            </a>
+                                        </li>
+                                </ul>
+                            </li>
+                    </ul>
+            </section>
+
+            <nav class="footer__compliance">
+                <p class="footer__compliance-item footer__compliance-item--copyright">&#169; Copyright 2025 Baystate Health</p>
+                <ul class="footer__compliance-links">
+                        <li class="footer__compliance-item">
+                            <a href="/terms-of-use"  class="footer__compliance-link link--underline-primary">Website Terms of Use</a>
+                        </li>
+                        <li class="footer__compliance-item">
+                            <a href="/website-privacy-policy"  class="footer__compliance-link link--underline-primary">Website Privacy Policy</a>
+                        </li>
+                        <li class="footer__compliance-item">
+                            <a href="/patients-and-visitors/rights-and-responsibilities/nondiscrimination-notice"  class="footer__compliance-link link--underline-primary">Nondiscrimination Notice</a>
+                        </li>
+                        <li class="footer__compliance-item">
+                            <a href="/notice-of-privacy-practices"  class="footer__compliance-link link--underline-primary">Notice of Privacy Practices</a>
+                        </li>
+                        <li class="footer__compliance-item">
+                            <a href="/patients-and-visitors/healthcare-prices-and-billing/hospital-standard-charges"  class="footer__compliance-link link--underline-primary">Price Transparency</a>
+                        </li>
+                </ul>
+            </nav>
+        </div>
+    </footer>
+
+    
+
+<script type="text/javascript">
+    window.KYRUUS_TOKEN = '5aMUAaIgOoQsZzooetZ2qJxH1Mxv1gJ8';
+    window.API_ENDPOINTS =
+    {
+        locations: '/-/media/api-feeds/locations.json?v=638919644210000000',
+        providers: '/-/media/api-feeds/providers.json?v=638919644400000000',
+        careData: '/-/media/api-feeds/services.json?v=638919644190000000'
+    }
+    window.consentBannerContent =
+    {
+        message: 'We use cookies on our website to enhance your experience, to deliver more relevant content, and to improve the quality of our site. By using our website, you are agreeing to cookies being collected in line with our Privacy Policy.',
+        close: 'Close cookie information',
+        dismiss: 'Acknowledge',
+        link: 'https://www.baystatehealth.org/website-privacy-policy',
+        linkText: 'Read Privacy Policy'
+    }
+</script>
+
+<script src="/assets/js/main.js?v=638881892710000000"></script>
+
+<script type="text/javascript" src="/WebsiteClient/gsight.js"></script>
+
+
+    
+</body>
+</html>

@@ -1,0 +1,828 @@
+{
+  "timestamp": "2025-08-28T13:30:48.595755",
+  "total_attempted": 117,
+  "successful": 10,
+  "already_exist": 10,
+  "failed": 97,
+  "results": [
+    {
+      "success": true,
+      "org": "Alabama Dept of Public Health",
+      "filename": "data/raw/policies/Alabama_Dept_of_Public_Health_ed8b8b6e.pdf",
+      "status": "already_exists"
+    },
+    {
+      "success": true,
+      "org": "Alaska Alt",
+      "url": "http://dhss.alaska.gov/dph/Documents/COI-Policy.pdf",
+      "filename": "data/raw/policies/Alaska_Alt_0a99c318.pdf",
+      "size": 189055,
+      "status": "downloaded"
+    },
+    {
+      "success": true,
+      "org": "Arizona Alt",
+      "url": "https://www.azahcccs.gov/Resources/Downloads/COI_Policy.pdf",
+      "filename": "data/raw/policies/Arizona_Alt_ff3951ac.pdf",
+      "size": 51601,
+      "status": "downloaded"
+    },
+    {
+      "success": true,
+      "org": "Arizona Dept of Health Services",
+      "url": "https://www.azdhs.gov/documents/operations/conflict-of-interest-policy.pdf",
+      "filename": "data/raw/policies/Arizona_Dept_of_Health_Services_2fa2b2aa.pdf",
+      "size": 57609,
+      "status": "downloaded"
+    },
+    {
+      "success": true,
+      "org": "California Alt",
+      "url": "https://www.dhcs.ca.gov/formsandpubs/Documents/MMCDAPLsandPolicyLetters/APL2017/APL17-010.pdf",
+      "filename": "data/raw/policies/California_Alt_349b1559.pdf",
+      "size": 128973,
+      "status": "downloaded"
+    },
+    {
+      "success": true,
+      "org": "Connecticut Dept of Public Health",
+      "url": "https://portal.ct.gov/-/media/Departments-and-Agencies/DPH/dph/state_health_planning/SHA-SHIP/HCCDocuments/COI_Policy.pdf",
+      "filename": "data/raw/policies/Connecticut_Dept_of_Public_Health_1d776678.pdf",
+      "size": 23093,
+      "status": "downloaded"
+    },
+    {
+      "success": true,
+      "org": "FDA Ethics",
+      "filename": "data/raw/policies/FDA_Ethics_d1f090fd.pdf",
+      "status": "already_exists"
+    },
+    {
+      "success": true,
+      "org": "Florida Alt",
+      "url": "https://ahca.myflorida.com/content/download/7653/file/Conflict_of_Interest_Policy.pdf",
+      "filename": "data/raw/policies/Florida_Alt_c2dbc8f5.pdf",
+      "size": 578505,
+      "status": "downloaded"
+    },
+    {
+      "success": true,
+      "org": "Illinois Alt",
+      "url": "https://www.illinois.gov/hfs/SiteCollectionDocuments/ConflictofInterestPolicy.pdf",
+      "filename": "data/raw/policies/Illinois_Alt_34e0eb49.pdf",
+      "size": 91115,
+      "status": "downloaded"
+    },
+    {
+      "success": true,
+      "org": "Iowa Dept of Public Health",
+      "filename": "data/raw/policies/Iowa_Dept_of_Public_Health_62b984d8.pdf",
+      "status": "already_exists"
+    },
+    {
+      "success": true,
+      "org": "Kansas Dept of Health",
+      "filename": "data/raw/policies/Kansas_Dept_of_Health_f75fa3b8.pdf",
+      "status": "already_exists"
+    },
+    {
+      "success": true,
+      "org": "Minnesota Alt",
+      "url": "https://mn.gov/dhs/partners-and-providers/policies-and-procedures/conflict-of-interest/",
+      "filename": "data/raw/policies/Minnesota_Alt_3c82fbf2.html",
+      "size": 21621,
+      "status": "downloaded"
+    },
+    {
+      "success": true,
+      "org": "Mississippi State Dept of Health",
+      "filename": "data/raw/policies/Mississippi_State_Dept_of_Health_4ab768ec.pdf",
+      "status": "already_exists"
+    },
+    {
+      "success": true,
+      "org": "National Science Foundation",
+      "filename": "data/raw/policies/National_Science_Foundation_181ed196.pdf",
+      "status": "already_exists"
+    },
+    {
+      "success": true,
+      "org": "New York Alt",
+      "url": "https://www.health.ny.gov/regulations/recently_adopted/docs/2011-02-23_conflict_of_interest.pdf",
+      "filename": "data/raw/policies/New_York_Alt_b5744346.pdf",
+      "size": 28350,
+      "status": "downloaded"
+    },
+    {
+      "success": true,
+      "org": "North Carolina DHHS",
+      "filename": "data/raw/policies/North_Carolina_DHHS_fe178725.pdf",
+      "status": "already_exists"
+    },
+    {
+      "success": true,
+      "org": "Pennsylvania Dept of Health",
+      "filename": "data/raw/policies/Pennsylvania_Dept_of_Health_5cb21368.pdf",
+      "status": "already_exists"
+    },
+    {
+      "success": true,
+      "org": "Utah Dept of Health",
+      "filename": "data/raw/policies/Utah_Dept_of_Health_e3a4095a.pdf",
+      "status": "already_exists"
+    },
+    {
+      "success": true,
+      "org": "VA Research",
+      "url": "https://www.research.va.gov/resources/policies/coi.pdf",
+      "filename": "data/raw/policies/VA_Research_82fba279.pdf",
+      "size": 11358,
+      "status": "downloaded"
+    },
+    {
+      "success": true,
+      "org": "Wisconsin Dept of Health Services",
+      "filename": "data/raw/policies/Wisconsin_Dept_of_Health_Services_84dd6048.pdf",
+      "status": "already_exists"
+    },
+    {
+      "success": false,
+      "org": "AHRQ",
+      "url": "https://www.ahrq.gov/sites/default/files/publications/files/coi-policy.pdf",
+      "error": "HTTP 404",
+      "status": "failed"
+    },
+    {
+      "success": false,
+      "org": "Alaska DHSS",
+      "url": "https://dhss.alaska.gov/Commissioner/Documents/COI-policy.pdf",
+      "error": "HTTP 404",
+      "status": "failed"
+    },
+    {
+      "success": false,
+      "org": "Arkansas Alt",
+      "url": "https://humanservices.arkansas.gov/wp-content/uploads/COI-Policy.pdf",
+      "error": "HTTP 404",
+      "status": "failed"
+    },
+    {
+      "success": false,
+      "org": "Arkansas Dept of Health",
+      "url": "https://www.healthy.arkansas.gov/images/uploads/pdf/ConflictofInterestPolicy.pdf",
+      "error": "HTTP 404",
+      "status": "failed"
+    },
+    {
+      "success": false,
+      "org": "CDC Ethics Office",
+      "url": "https://www.cdc.gov/about/ethics/pdf/coi-policy.pdf",
+      "error": "HTTP 404",
+      "status": "failed"
+    },
+    {
+      "success": false,
+      "org": "CDC Ethics Office Alt",
+      "url": "https://www.cdc.gov/about/organization/ethics/pdf/coi-guidance.pdf",
+      "error": "HTTP 404",
+      "status": "failed"
+    },
+    {
+      "success": false,
+      "org": "CMS Ethics Division",
+      "url": "https://www.cms.gov/files/document/cms-conflict-interest-policy.pdf",
+      "error": "HTTP 404",
+      "status": "failed"
+    },
+    {
+      "success": false,
+      "org": "California Dept of Public Health",
+      "url": "https://www.cdph.ca.gov/Programs/CID/DCDC/CDPH%20Document%20Library/COI_Policy.pdf",
+      "error": "HTTP 404",
+      "status": "failed"
+    },
+    {
+      "success": false,
+      "org": "Colorado Alt",
+      "url": "https://hcpf.colorado.gov/sites/hcpf/files/Conflict%20of%20Interest%20Policy.pdf",
+      "error": "HTTP 404",
+      "status": "failed"
+    },
+    {
+      "success": false,
+      "org": "Colorado Dept of Public Health",
+      "url": "https://cdphe.colorado.gov/sites/cdphe/files/CHED_COI_Policy.pdf",
+      "error": "HTTP 404",
+      "status": "failed"
+    },
+    {
+      "success": false,
+      "org": "Connecticut Alt",
+      "url": "https://portal.ct.gov/DSS/Health-And-Home-Care/Conflict-of-Interest-Policy",
+      "error": "HTTP 404",
+      "status": "failed"
+    },
+    {
+      "success": false,
+      "org": "DC Alt",
+      "url": "https://dhcf.dc.gov/sites/default/files/dc/sites/dhcf/page_content/attachments/COI%20Policy.pdf",
+      "error": "HTTP 404",
+      "status": "failed"
+    },
+    {
+      "success": false,
+      "org": "DC Health",
+      "url": "https://dchealth.dc.gov/sites/default/files/dc/sites/doh/page_content/attachments/Conflict%20of%20Interest%20Policy.pdf",
+      "error": "HTTP 404",
+      "status": "failed"
+    },
+    {
+      "success": false,
+      "org": "DOD Military Health System",
+      "url": "https://health.mil/Reference-Center/Policies/2021/08/20/Conflict-of-Interest-Policy",
+      "error": "HTTP 404",
+      "status": "failed"
+    },
+    {
+      "success": false,
+      "org": "DOE Office of Science",
+      "url": "https://science.osti.gov/-/media/grants/pdf/COI-Policy.pdf",
+      "error": "HTTP 404",
+      "status": "failed"
+    },
+    {
+      "success": false,
+      "org": "Delaware Alt",
+      "url": "https://dhss.delaware.gov/dph/files/coipolicy.pdf",
+      "error": "HTTP 999",
+      "status": "failed"
+    },
+    {
+      "success": false,
+      "org": "Delaware Health and Social Services",
+      "url": "https://www.dhss.delaware.gov/dhss/admin/files/coi_policy.pdf",
+      "error": "HTTP 404",
+      "status": "failed"
+    },
+    {
+      "success": false,
+      "org": "EPA Office of Research",
+      "url": "https://www.epa.gov/sites/default/files/2018-03/documents/coi_policy_2018.pdf",
+      "error": "HTTP 403",
+      "status": "failed"
+    },
+    {
+      "success": false,
+      "org": "FDA CDER",
+      "url": "https://www.fda.gov/media/85073/download",
+      "error": "HTTP 404",
+      "status": "failed"
+    },
+    {
+      "success": false,
+      "org": "Florida Dept of Health",
+      "url": "http://www.floridahealth.gov/about/administrative-functions/general-counsel/_documents/conflict-of-interest-policy.pdf",
+      "error": "HTTP 404",
+      "status": "failed"
+    },
+    {
+      "success": false,
+      "org": "Georgia Alt",
+      "url": "https://dch.georgia.gov/sites/dch.georgia.gov/files/COI-Policy.pdf",
+      "error": "HTTP 404",
+      "status": "failed"
+    },
+    {
+      "success": false,
+      "org": "Georgia Dept of Public Health",
+      "url": "https://dph.georgia.gov/document/publication/conflict-interest-policy/download",
+      "error": "HTTP 404",
+      "status": "failed"
+    },
+    {
+      "success": false,
+      "org": "HHS General",
+      "url": "https://www.hhs.gov/about/agencies/oga/about-oga/ethics/financial-disclosure/index.html",
+      "error": "HTTP 404",
+      "status": "failed"
+    },
+    {
+      "success": false,
+      "org": "HHS Office of Inspector General",
+      "url": "https://oig.hhs.gov/documents/root/162/coi_policy.pdf",
+      "error": "HTTP 404",
+      "status": "failed"
+    },
+    {
+      "success": false,
+      "org": "HRSA Bureau of Health Workforce",
+      "url": "https://bhw.hrsa.gov/sites/default/files/bureau-health-workforce/funding/coi-policy.pdf",
+      "error": "HTTP 404",
+      "status": "failed"
+    },
+    {
+      "success": false,
+      "org": "Hawaii Alt",
+      "url": "https://medquest.hawaii.gov/content/dam/formsanddocuments/resources/COI-Policy.pdf",
+      "error": "HTTP 404",
+      "status": "failed"
+    },
+    {
+      "success": false,
+      "org": "Hawaii Dept of Health",
+      "url": "https://health.hawaii.gov/opppd/files/2019/08/COI-Policy.pdf",
+      "error": "HTTP 404",
+      "status": "failed"
+    },
+    {
+      "success": false,
+      "org": "Health Resources Services Admin",
+      "url": "https://www.hrsa.gov/sites/default/files/hrsa/grants/manage/technicalassistance/conflict-of-interest.pdf",
+      "error": "HTTP 404",
+      "status": "failed"
+    },
+    {
+      "success": false,
+      "org": "Idaho Alt",
+      "url": "https://publichealth.idaho.gov/wp-content/uploads/COI_Policy.pdf",
+      "error": "HTTP Error",
+      "status": "failed"
+    },
+    {
+      "success": false,
+      "org": "Idaho Dept of Health",
+      "url": "https://healthandwelfare.idaho.gov/sites/default/files/2019-11/COI_Policy.pdf",
+      "error": "HTTP 404",
+      "status": "failed"
+    },
+    {
+      "success": false,
+      "org": "Illinois Dept of Public Health",
+      "url": "https://dph.illinois.gov/content/dam/soi/en/web/idph/files/conflict-of-interest-policy.pdf",
+      "error": "HTTP 404",
+      "status": "failed"
+    },
+    {
+      "success": false,
+      "org": "Indian Health Service",
+      "url": "https://www.ihs.gov/sites/omc/themes/responsive2017/display_objects/documents/COI_Policy.pdf",
+      "error": "HTTP 404",
+      "status": "failed"
+    },
+    {
+      "success": false,
+      "org": "Indiana Alt",
+      "url": "https://www.in.gov/fssa/files/Conflict_of_Interest_Policy.pdf",
+      "error": "HTTP 404",
+      "status": "failed"
+    },
+    {
+      "success": false,
+      "org": "Indiana State Dept of Health",
+      "url": "https://www.in.gov/health/files/Conflict-of-Interest-Policy.pdf",
+      "error": "HTTP 404",
+      "status": "failed"
+    },
+    {
+      "success": false,
+      "org": "Kentucky Alt",
+      "url": "https://prd.chfs.ky.gov/Documents/coi_policy.pdf",
+      "error": "HTTP 404",
+      "status": "failed"
+    },
+    {
+      "success": false,
+      "org": "Kentucky Cabinet for Health",
+      "url": "https://chfs.ky.gov/agencies/os/oig/Documents/ConflictofInterestPolicy.pdf",
+      "error": "HTTP 404",
+      "status": "failed"
+    },
+    {
+      "success": false,
+      "org": "Louisiana Alt",
+      "url": "https://ldh.la.gov/assets/medicaid/COI_Policy.pdf",
+      "error": "HTTP 404",
+      "status": "failed"
+    },
+    {
+      "success": false,
+      "org": "Louisiana Dept of Health",
+      "url": "https://ldh.la.gov/assets/docs/BayouHealth/ConflictofInterest.pdf",
+      "error": "HTTP 404",
+      "status": "failed"
+    },
+    {
+      "success": false,
+      "org": "Maine Alt",
+      "url": "https://www.maine.gov/dhhs/sites/maine.gov.dhhs/files/documents/coi-policy.pdf",
+      "error": "HTTP 404",
+      "status": "failed"
+    },
+    {
+      "success": false,
+      "org": "Maine CDC",
+      "url": "https://www.maine.gov/dhhs/mecdc/public-health-systems/coi-policy.pdf",
+      "error": "HTTP 404",
+      "status": "failed"
+    },
+    {
+      "success": false,
+      "org": "Maryland Alt",
+      "url": "https://mmcp.health.maryland.gov/Documents/COI_Policy.pdf",
+      "error": "HTTP 404",
+      "status": "failed"
+    },
+    {
+      "success": false,
+      "org": "Maryland Dept of Health",
+      "url": "https://health.maryland.gov/docs/COI_Policy.pdf",
+      "error": "HTTP 404",
+      "status": "failed"
+    },
+    {
+      "success": false,
+      "org": "Massachusetts Alt",
+      "url": "https://www.mass.gov/files/documents/2016/08/tn/conflict-of-interest-guide.pdf",
+      "error": "HTTP 404",
+      "status": "failed"
+    },
+    {
+      "success": false,
+      "org": "Massachusetts Dept of Public Health",
+      "url": "https://www.mass.gov/doc/conflict-of-interest-policy-0/download",
+      "error": "HTTP 404",
+      "status": "failed"
+    },
+    {
+      "success": false,
+      "org": "Michigan Alt",
+      "url": "https://www.michigan.gov/documents/mdch/COI_Policy_617918_7.pdf",
+      "error": "HTTP 404",
+      "status": "failed"
+    },
+    {
+      "success": false,
+      "org": "Michigan Dept of Health",
+      "url": "https://www.michigan.gov/mdhhs/-/media/Project/Websites/mdhhs/Folder1/Folder52/COI_Policy.pdf",
+      "error": "HTTP 404",
+      "status": "failed"
+    },
+    {
+      "success": false,
+      "org": "Minnesota Dept of Health",
+      "url": "https://www.health.state.mn.us/about/org/conflict-interest-policy.pdf",
+      "error": "HTTP 404",
+      "status": "failed"
+    },
+    {
+      "success": false,
+      "org": "Missouri Alt",
+      "url": "https://dss.mo.gov/mhd/general/pdf/coi-policy.pdf",
+      "error": "HTTP 404",
+      "status": "failed"
+    },
+    {
+      "success": false,
+      "org": "Missouri Dept of Health",
+      "url": "https://health.mo.gov/about/pdf/conflict-of-interest-policy.pdf",
+      "error": "HTTP 404",
+      "status": "failed"
+    },
+    {
+      "success": false,
+      "org": "Montana Alt",
+      "url": "https://dphhs.mt.gov/Portals/85/Documents/COI-Policy.pdf",
+      "error": "HTTP 404",
+      "status": "failed"
+    },
+    {
+      "success": false,
+      "org": "Montana DPHHS",
+      "url": "https://dphhs.mt.gov/assets/publichealth/CDEpi/COI_Policy.pdf",
+      "error": "HTTP 404",
+      "status": "failed"
+    },
+    {
+      "success": false,
+      "org": "NIH Clinical Center",
+      "url": "https://clinicalcenter.nih.gov/pdf/coi-policy.pdf",
+      "error": "HTTP 404",
+      "status": "failed"
+    },
+    {
+      "success": false,
+      "org": "NIH Ethics Office",
+      "url": "https://oir.nih.gov/sites/default/files/uploads/sourcebook/documents/ethical_conduct/coi-guide-2021.pdf",
+      "error": "HTTP 404",
+      "status": "failed"
+    },
+    {
+      "success": false,
+      "org": "NOAA Research",
+      "url": "https://nrc.noaa.gov/LinkClick.aspx?fileticket=qMZKIYV1pPo%3D&tabid=140",
+      "error": "HTTP 503",
+      "status": "failed"
+    },
+    {
+      "success": false,
+      "org": "Nebraska Alt",
+      "url": "https://dhhs.ne.gov/Medicaid%20Provider%20Bulletins/COI-Policy.pdf",
+      "error": "HTTP 404",
+      "status": "failed"
+    },
+    {
+      "success": false,
+      "org": "Nebraska DHHS",
+      "url": "http://dhhs.ne.gov/Documents/COI-Policy.pdf",
+      "error": "HTTP 404",
+      "status": "failed"
+    },
+    {
+      "success": false,
+      "org": "Nevada Alt",
+      "url": "https://dpbh.nv.gov/uploadedFiles/dpbhnvgov/content/COI-Policy.pdf",
+      "error": "HTTP Error",
+      "status": "failed"
+    },
+    {
+      "success": false,
+      "org": "Nevada Dept of Health",
+      "url": "https://dhhs.nv.gov/uploadedFiles/dhhs.nv.gov/content/Resources/AdminSupport/COI-Policy.pdf",
+      "error": "HTTP Error",
+      "status": "failed"
+    },
+    {
+      "success": false,
+      "org": "New Jersey Alt",
+      "url": "https://www.state.nj.us/health/forms/conflict-of-interest-policy.pdf",
+      "error": "HTTP 404",
+      "status": "failed"
+    },
+    {
+      "success": false,
+      "org": "New Jersey Dept of Health",
+      "url": "https://www.nj.gov/health/legal/documents/conflict-of-interest.pdf",
+      "error": "HTTP 404",
+      "status": "failed"
+    },
+    {
+      "success": false,
+      "org": "New Mexico Alt",
+      "url": "https://www.hsd.state.nm.us/wp-content/uploads/COI-Policy.pdf",
+      "error": "HTTP 404",
+      "status": "failed"
+    },
+    {
+      "success": false,
+      "org": "New Mexico Dept of Health",
+      "url": "https://www.nmhealth.org/publication/view/policy/6093/",
+      "error": "HTTP 404",
+      "status": "failed"
+    },
+    {
+      "success": false,
+      "org": "New York State Dept of Health",
+      "url": "https://www.health.ny.gov/funding/forms/attachment_10_coi.pdf",
+      "error": "HTTP 404",
+      "status": "failed"
+    },
+    {
+      "success": false,
+      "org": "North Dakota Alt",
+      "url": "https://www.hhs.nd.gov/sites/www/files/documents/COI-Policy.pdf",
+      "error": "HTTP 404",
+      "status": "failed"
+    },
+    {
+      "success": false,
+      "org": "North Dakota Dept of Health",
+      "url": "https://www.ndhealth.gov/Files/COI_Policy.pdf",
+      "error": "HTTP 404",
+      "status": "failed"
+    },
+    {
+      "success": false,
+      "org": "Ohio Alt",
+      "url": "https://medicaid.ohio.gov/static/Resources/COI-Policy.pdf",
+      "error": "HTTP 404",
+      "status": "failed"
+    },
+    {
+      "success": false,
+      "org": "Ohio Dept of Health",
+      "url": "https://odh.ohio.gov/wps/wcm/connect/gov/conflict-of-interest-policy.pdf",
+      "error": "HTTP 404",
+      "status": "failed"
+    },
+    {
+      "success": false,
+      "org": "Oklahoma Alt",
+      "url": "https://www.ok.gov/health2/documents/COI_Policy.pdf",
+      "error": "HTTP 404",
+      "status": "failed"
+    },
+    {
+      "success": false,
+      "org": "Oklahoma State Dept of Health",
+      "url": "https://oklahoma.gov/content/dam/ok/en/health/health2/documents/conflict-of-interest-policy.pdf",
+      "error": "HTTP 404",
+      "status": "failed"
+    },
+    {
+      "success": false,
+      "org": "Oregon Alt",
+      "url": "https://www.oregon.gov/oha/FOD/PIAU/Documents/COI-Policy.pdf",
+      "error": "HTTP 404",
+      "status": "failed"
+    },
+    {
+      "success": false,
+      "org": "Oregon Health Authority",
+      "url": "https://www.oregon.gov/oha/HPA/HP-PCO/Documents/COI-Policy.pdf",
+      "error": "HTTP 404",
+      "status": "failed"
+    },
+    {
+      "success": false,
+      "org": "PCORI",
+      "url": "https://www.pcori.org/sites/default/files/PCORI-Conflict-of-Interest-Policy.pdf",
+      "error": "HTTP 404",
+      "status": "failed"
+    },
+    {
+      "success": false,
+      "org": "Public Health Service",
+      "url": "https://www.hhs.gov/sites/default/files/financial-conflict-of-interest.pdf",
+      "error": "HTTP 404",
+      "status": "failed"
+    },
+    {
+      "success": false,
+      "org": "Rhode Island Alt",
+      "url": "https://eohhs.ri.gov/sites/g/files/xkgbur226/files/COI-Policy.pdf",
+      "error": "HTTP 404",
+      "status": "failed"
+    },
+    {
+      "success": false,
+      "org": "Rhode Island Dept of Health",
+      "url": "https://health.ri.gov/publications/policies/ConflictOfInterest.pdf",
+      "error": "HTTP 404",
+      "status": "failed"
+    },
+    {
+      "success": false,
+      "org": "SAMHSA",
+      "url": "https://www.samhsa.gov/sites/default/files/conflict-of-interest-policy.pdf",
+      "error": "HTTP 404",
+      "status": "failed"
+    },
+    {
+      "success": false,
+      "org": "South Carolina Alt",
+      "url": "https://www.scdhhs.gov/sites/default/files/COI_Policy.pdf",
+      "error": "HTTP 404",
+      "status": "failed"
+    },
+    {
+      "success": false,
+      "org": "South Carolina DHEC",
+      "url": "https://scdhec.gov/sites/default/files/Library/CR-012148.pdf",
+      "error": "HTTP 404",
+      "status": "failed"
+    },
+    {
+      "success": false,
+      "org": "South Dakota Alt",
+      "url": "https://dss.sd.gov/docs/medicaid/providers/COI-Policy.pdf",
+      "error": "HTTP 404",
+      "status": "failed"
+    },
+    {
+      "success": false,
+      "org": "South Dakota Dept of Health",
+      "url": "https://doh.sd.gov/documents/COI-Policy.pdf",
+      "error": "HTTP 404",
+      "status": "failed"
+    },
+    {
+      "success": false,
+      "org": "Tennessee Alt",
+      "url": "https://www.tn.gov/tenncare/information-statistics/conflict-of-interest.html",
+      "error": "HTTP Error",
+      "status": "failed"
+    },
+    {
+      "success": false,
+      "org": "Tennessee Dept of Health",
+      "url": "https://www.tn.gov/content/dam/tn/health/documents/conflict-of-interest-policy.pdf",
+      "error": "HTTP Error",
+      "status": "failed"
+    },
+    {
+      "success": false,
+      "org": "Texas Alt",
+      "url": "https://www.dshs.texas.gov/sites/default/files/coi-policy.pdf",
+      "error": "HTTP 404",
+      "status": "failed"
+    },
+    {
+      "success": false,
+      "org": "Texas Health and Human Services",
+      "url": "https://www.hhs.texas.gov/sites/default/files/documents/laws-regulations/policies-rules/coi-policy.pdf",
+      "error": "HTTP 404",
+      "status": "failed"
+    },
+    {
+      "success": false,
+      "org": "USAID Global Health",
+      "url": "https://www.usaid.gov/sites/default/files/documents/1864/303maa.pdf",
+      "error": "HTTP 404",
+      "status": "failed"
+    },
+    {
+      "success": false,
+      "org": "USDA Food Safety",
+      "url": "https://www.fsis.usda.gov/sites/default/files/media_file/2021-02/COI-Policy.pdf",
+      "error": "HTTP 404",
+      "status": "failed"
+    },
+    {
+      "success": false,
+      "org": "Vermont Alt",
+      "url": "https://dvha.vermont.gov/sites/dvha/files/documents/COI-Policy.pdf",
+      "error": "HTTP 404",
+      "status": "failed"
+    },
+    {
+      "success": false,
+      "org": "Vermont Dept of Health",
+      "url": "https://www.healthvermont.gov/sites/default/files/documents/pdf/COI_Policy.pdf",
+      "error": "HTTP 404",
+      "status": "failed"
+    },
+    {
+      "success": false,
+      "org": "Veterans Affairs",
+      "url": "https://www.ethics.va.gov/docs/policy/policies_coi_20210826.pdf",
+      "error": "HTTP 404",
+      "status": "failed"
+    },
+    {
+      "success": false,
+      "org": "Virginia Alt",
+      "url": "https://www.dmas.virginia.gov/files/links/220/COI%20Policy.pdf",
+      "error": "HTTP 404",
+      "status": "failed"
+    },
+    {
+      "success": false,
+      "org": "Virginia Dept of Health",
+      "url": "https://www.vdh.virginia.gov/content/uploads/sites/191/2020/09/VDH-COI-Policy.pdf",
+      "error": "HTTP 404",
+      "status": "failed"
+    },
+    {
+      "success": false,
+      "org": "Washington Alt",
+      "url": "https://www.hca.wa.gov/assets/billers-and-providers/conflict-of-interest-policy.pdf",
+      "error": "HTTP 404",
+      "status": "failed"
+    },
+    {
+      "success": false,
+      "org": "Washington State Dept of Health",
+      "url": "https://www.doh.wa.gov/Portals/1/Documents/1000/COI-Policy.pdf",
+      "error": "HTTP 404",
+      "status": "failed"
+    },
+    {
+      "success": false,
+      "org": "West Virginia Alt",
+      "url": "https://oeps.wv.gov/coi/Documents/COI_Policy.pdf",
+      "error": "HTTP 404",
+      "status": "failed"
+    },
+    {
+      "success": false,
+      "org": "West Virginia DHHR",
+      "url": "https://dhhr.wv.gov/bms/Documents/COI_Policy.pdf",
+      "error": "HTTP 404",
+      "status": "failed"
+    },
+    {
+      "success": false,
+      "org": "Wyoming Alt",
+      "url": "https://health.wyo.gov/healthcarefin/medicaid/programs-and-eligibility/conflict-of-interest-policy/",
+      "error": "HTTP 404",
+      "status": "failed"
+    },
+    {
+      "success": false,
+      "org": "Wyoming Dept of Health",
+      "url": "https://health.wyo.gov/wp-content/uploads/2020/10/COI-Policy.pdf",
+      "error": "HTTP 404",
+      "status": "failed"
+    }
+  ]
+}

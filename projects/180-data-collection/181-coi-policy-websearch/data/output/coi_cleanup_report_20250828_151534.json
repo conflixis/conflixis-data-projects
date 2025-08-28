@@ -1,0 +1,623 @@
+{
+  "timestamp": "2025-08-28T15:15:34.740034",
+  "summary": {
+    "total_files_analyzed": 88,
+    "actual_coi_policies": 4,
+    "non_coi_documents": 11,
+    "uncertain": 73,
+    "files_moved": 11
+  },
+  "actual_coi_policies": [
+    {
+      "path": "federal-state/California_CDPH_Employee_COI.pdf",
+      "name": "California_CDPH_Employee_COI.pdf",
+      "category": "federal-state",
+      "size": 144190
+    },
+    {
+      "path": "federal-state/Texas_HHS_PEFC_COI_Policy.pdf",
+      "name": "Texas_HHS_PEFC_COI_Policy.pdf",
+      "category": "federal-state",
+      "size": 1446589
+    },
+    {
+      "path": "major_health_systems/Kaiser_Permanente_Research_COI.pdf",
+      "name": "Kaiser_Permanente_Research_COI.pdf",
+      "category": "major_health_systems",
+      "size": 108927
+    },
+    {
+      "path": "major_health_systems/Mayo_Clinic_Institutional_COI.pdf",
+      "name": "Mayo_Clinic_Institutional_COI.pdf",
+      "category": "major_health_systems",
+      "size": 148831
+    }
+  ],
+  "non_coi_documents": [
+    {
+      "path": "major_health_systems/Intermountain_Health_2075b1b2.pdf",
+      "name": "Intermountain_Health_2075b1b2.pdf",
+      "category": "major_health_systems",
+      "size": 23,
+      "document_type": "agreements_and_contracts"
+    },
+    {
+      "path": "major_health_systems/Intermountain_Healthcare_dc199ce1.pdf",
+      "name": "Intermountain_Healthcare_dc199ce1.pdf",
+      "category": "major_health_systems",
+      "size": 257045,
+      "document_type": "agreements_and_contracts"
+    },
+    {
+      "path": "childrens_hospitals/Nemours_Children's_Health_a1da3148.pdf",
+      "name": "Nemours_Children's_Health_a1da3148.pdf",
+      "category": "childrens_hospitals",
+      "size": 174245,
+      "document_type": "agreements_and_contracts"
+    },
+    {
+      "path": "major_health_systems/Kaiser_Code_of_Conduct.pdf",
+      "name": "Kaiser_Code_of_Conduct.pdf",
+      "category": "major_health_systems",
+      "size": 241191,
+      "document_type": "codes_of_conduct"
+    },
+    {
+      "path": "major_health_systems/Mount_Sinai_Code_of_Conduct.pdf",
+      "name": "Mount_Sinai_Code_of_Conduct.pdf",
+      "category": "major_health_systems",
+      "size": 403005,
+      "document_type": "codes_of_conduct"
+    },
+    {
+      "path": "federal-state/Minnesota_MDH_COI_Disclosure.pdf",
+      "name": "Minnesota_MDH_COI_Disclosure.pdf",
+      "category": "federal-state",
+      "size": 118,
+      "document_type": "forms_and_disclosures"
+    },
+    {
+      "path": "federal-state/California_CDT_COI_Statement.doc",
+      "name": "California_CDT_COI_Statement.doc",
+      "category": "federal-state",
+      "size": 38912,
+      "document_type": "forms_and_disclosures"
+    },
+    {
+      "path": "federal-state/California_Form_700.pdf",
+      "name": "California_Form_700.pdf",
+      "category": "federal-state",
+      "size": 42141,
+      "document_type": "forms_and_disclosures"
+    },
+    {
+      "path": "federal-state/NIH_FCOI_Tutorial_2018.pdf",
+      "name": "NIH_FCOI_Tutorial_2018.pdf",
+      "category": "federal-state",
+      "size": 10629185,
+      "document_type": "training_materials"
+    },
+    {
+      "path": "federal-state/NIH_FCOI_User_Guide.pdf",
+      "name": "NIH_FCOI_User_Guide.pdf",
+      "category": "federal-state",
+      "size": 1231965,
+      "document_type": "training_materials"
+    },
+    {
+      "path": "federal-state/NIH_COI_Fact_Sheet.pdf",
+      "name": "NIH_COI_Fact_Sheet.pdf",
+      "category": "federal-state",
+      "size": 35157,
+      "document_type": "training_materials"
+    }
+  ],
+  "uncertain_documents": [
+    {
+      "path": "academic_medical_centers/Brown_University_Health_e91df176.pdf",
+      "name": "Brown_University_Health_e91df176.pdf",
+      "category": "academic_medical_centers",
+      "size": 431372
+    },
+    {
+      "path": "academic_medical_centers/Emory_Healthcare_44e7fa9f.html",
+      "name": "Emory_Healthcare_44e7fa9f.html",
+      "category": "academic_medical_centers",
+      "size": 3475
+    },
+    {
+      "path": "academic_medical_centers/Northwestern_Medicine_ac29457b.html",
+      "name": "Northwestern_Medicine_ac29457b.html",
+      "category": "academic_medical_centers",
+      "size": 15321
+    },
+    {
+      "path": "academic_medical_centers/Penn_Medicine_b213a917.pdf",
+      "name": "Penn_Medicine_b213a917.pdf",
+      "category": "academic_medical_centers",
+      "size": 17733
+    },
+    {
+      "path": "academic_medical_centers/Stanford_Health_Care_d1f4eb2d.pdf",
+      "name": "Stanford_Health_Care_d1f4eb2d.pdf",
+      "category": "academic_medical_centers",
+      "size": 302684
+    },
+    {
+      "path": "academic_medical_centers/UCSF_dfa056f2.pdf",
+      "name": "UCSF_dfa056f2.pdf",
+      "category": "academic_medical_centers",
+      "size": 14186
+    },
+    {
+      "path": "academic_medical_centers/University_of_Colorado_Anschutz_a24df40a.pdf",
+      "name": "University_of_Colorado_Anschutz_a24df40a.pdf",
+      "category": "academic_medical_centers",
+      "size": 431915
+    },
+    {
+      "path": "academic_medical_centers/University_of_Miami_Health_5a46afe2.pdf",
+      "name": "University_of_Miami_Health_5a46afe2.pdf",
+      "category": "academic_medical_centers",
+      "size": 129325
+    },
+    {
+      "path": "academic_medical_centers/University_of_South_Carolina_d5040e36.pdf",
+      "name": "University_of_South_Carolina_d5040e36.pdf",
+      "category": "academic_medical_centers",
+      "size": 295000
+    },
+    {
+      "path": "academic_medical_centers/Vanderbilt_4415f885.html",
+      "name": "Vanderbilt_4415f885.html",
+      "category": "academic_medical_centers",
+      "size": 42775
+    },
+    {
+      "path": "childrens_hospitals/Boston_Children's_Hospital_c46d2ff9.pdf",
+      "name": "Boston_Children's_Hospital_c46d2ff9.pdf",
+      "category": "childrens_hospitals",
+      "size": 198242
+    },
+    {
+      "path": "childrens_hospitals/Children's_Hospital_of_Philadelphia_e0f5d0a6.pdf",
+      "name": "Children's_Hospital_of_Philadelphia_e0f5d0a6.pdf",
+      "category": "childrens_hospitals",
+      "size": 568195
+    },
+    {
+      "path": "childrens_hospitals/Children's_Mercy_ecc1d37b.pdf",
+      "name": "Children's_Mercy_ecc1d37b.pdf",
+      "category": "childrens_hospitals",
+      "size": 111216
+    },
+    {
+      "path": "childrens_hospitals/Children's_National_Hospital_938f5b50.pdf",
+      "name": "Children's_National_Hospital_938f5b50.pdf",
+      "category": "childrens_hospitals",
+      "size": 313921
+    },
+    {
+      "path": "childrens_hospitals/Stanley_Manne_Children's_Research_Institute_3283f4ec.pdf",
+      "name": "Stanley_Manne_Children's_Research_Institute_3283f4ec.pdf",
+      "category": "childrens_hospitals",
+      "size": 415355
+    },
+    {
+      "path": "federal-state/Alabama_Dept_of_Public_Health_ed8b8b6e.pdf",
+      "name": "Alabama_Dept_of_Public_Health_ed8b8b6e.pdf",
+      "category": "federal-state",
+      "size": 39250
+    },
+    {
+      "path": "federal-state/Alaska_Alt_0a99c318.pdf",
+      "name": "Alaska_Alt_0a99c318.pdf",
+      "category": "federal-state",
+      "size": 189055
+    },
+    {
+      "path": "federal-state/Arizona_Alt_ff3951ac.pdf",
+      "name": "Arizona_Alt_ff3951ac.pdf",
+      "category": "federal-state",
+      "size": 51601
+    },
+    {
+      "path": "federal-state/Arizona_Dept_of_Health_Services_2fa2b2aa.pdf",
+      "name": "Arizona_Dept_of_Health_Services_2fa2b2aa.pdf",
+      "category": "federal-state",
+      "size": 57609
+    },
+    {
+      "path": "federal-state/California_Alt_349b1559.pdf",
+      "name": "California_Alt_349b1559.pdf",
+      "category": "federal-state",
+      "size": 128973
+    },
+    {
+      "path": "federal-state/Connecticut_Dept_of_Public_Health_1d776678.pdf",
+      "name": "Connecticut_Dept_of_Public_Health_1d776678.pdf",
+      "category": "federal-state",
+      "size": 23093
+    },
+    {
+      "path": "federal-state/FDA_Ethics_d1f090fd.pdf",
+      "name": "FDA_Ethics_d1f090fd.pdf",
+      "category": "federal-state",
+      "size": 118384
+    },
+    {
+      "path": "federal-state/Florida_Alt_c2dbc8f5.pdf",
+      "name": "Florida_Alt_c2dbc8f5.pdf",
+      "category": "federal-state",
+      "size": 578505
+    },
+    {
+      "path": "federal-state/Illinois_Alt_34e0eb49.pdf",
+      "name": "Illinois_Alt_34e0eb49.pdf",
+      "category": "federal-state",
+      "size": 91115
+    },
+    {
+      "path": "federal-state/Iowa_Dept_of_Public_Health_62b984d8.pdf",
+      "name": "Iowa_Dept_of_Public_Health_62b984d8.pdf",
+      "category": "federal-state",
+      "size": 217825
+    },
+    {
+      "path": "federal-state/Kansas_Dept_of_Health_f75fa3b8.pdf",
+      "name": "Kansas_Dept_of_Health_f75fa3b8.pdf",
+      "category": "federal-state",
+      "size": 1046
+    },
+    {
+      "path": "federal-state/Minnesota_Alt_3c82fbf2.html",
+      "name": "Minnesota_Alt_3c82fbf2.html",
+      "category": "federal-state",
+      "size": 21621
+    },
+    {
+      "path": "federal-state/Mississippi_State_Dept_of_Health_4ab768ec.pdf",
+      "name": "Mississippi_State_Dept_of_Health_4ab768ec.pdf",
+      "category": "federal-state",
+      "size": 1767193
+    },
+    {
+      "path": "federal-state/National_Science_Foundation_181ed196.pdf",
+      "name": "National_Science_Foundation_181ed196.pdf",
+      "category": "federal-state",
+      "size": 63543
+    },
+    {
+      "path": "federal-state/NewYork_Attachment_9.pdf",
+      "name": "NewYork_Attachment_9.pdf",
+      "category": "federal-state",
+      "size": 919
+    },
+    {
+      "path": "federal-state/NewYork_Attachment_A.pdf",
+      "name": "NewYork_Attachment_A.pdf",
+      "category": "federal-state",
+      "size": 919
+    },
+    {
+      "path": "federal-state/New_York_Alt_b5744346.pdf",
+      "name": "New_York_Alt_b5744346.pdf",
+      "category": "federal-state",
+      "size": 28350
+    },
+    {
+      "path": "federal-state/North_Carolina_DHHS_fe178725.pdf",
+      "name": "North_Carolina_DHHS_fe178725.pdf",
+      "category": "federal-state",
+      "size": 270627
+    },
+    {
+      "path": "federal-state/Pennsylvania_Dept_of_Health_5cb21368.pdf",
+      "name": "Pennsylvania_Dept_of_Health_5cb21368.pdf",
+      "category": "federal-state",
+      "size": 184113
+    },
+    {
+      "path": "federal-state/Utah_Dept_of_Health_e3a4095a.pdf",
+      "name": "Utah_Dept_of_Health_e3a4095a.pdf",
+      "category": "federal-state",
+      "size": 17402
+    },
+    {
+      "path": "federal-state/VA_Research_82fba279.pdf",
+      "name": "VA_Research_82fba279.pdf",
+      "category": "federal-state",
+      "size": 11358
+    },
+    {
+      "path": "federal-state/Wisconsin_Dept_of_Health_Services_84dd6048.pdf",
+      "name": "Wisconsin_Dept_of_Health_Services_84dd6048.pdf",
+      "category": "federal-state",
+      "size": 924453
+    },
+    {
+      "path": "major_health_systems/Albany_Med_Health_System_262e8377.pdf",
+      "name": "Albany_Med_Health_System_262e8377.pdf",
+      "category": "major_health_systems",
+      "size": 155514
+    },
+    {
+      "path": "major_health_systems/Allina_Health_ad2447b0.pdf",
+      "name": "Allina_Health_ad2447b0.pdf",
+      "category": "major_health_systems",
+      "size": 802453
+    },
+    {
+      "path": "major_health_systems/Atrium_Health_9ce5badc.pdf",
+      "name": "Atrium_Health_9ce5badc.pdf",
+      "category": "major_health_systems",
+      "size": 59063
+    },
+    {
+      "path": "major_health_systems/Atrium_Health_Wake_Forest_Baptist_216474d9.pdf",
+      "name": "Atrium_Health_Wake_Forest_Baptist_216474d9.pdf",
+      "category": "major_health_systems",
+      "size": 943526
+    },
+    {
+      "path": "major_health_systems/Baystate_Health_250802b1.pdf",
+      "name": "Baystate_Health_250802b1.pdf",
+      "category": "major_health_systems",
+      "size": 145852
+    },
+    {
+      "path": "major_health_systems/Cambridge_Memorial_Hospital_d9fa4197.pdf",
+      "name": "Cambridge_Memorial_Hospital_d9fa4197.pdf",
+      "category": "major_health_systems",
+      "size": 199010
+    },
+    {
+      "path": "major_health_systems/Catholic_Health_Initiatives_c5f26a6b.pdf",
+      "name": "Catholic_Health_Initiatives_c5f26a6b.pdf",
+      "category": "major_health_systems",
+      "size": 206788
+    },
+    {
+      "path": "major_health_systems/Community_Health_Systems_826cf6c3.pdf",
+      "name": "Community_Health_Systems_826cf6c3.pdf",
+      "category": "major_health_systems",
+      "size": 149929
+    },
+    {
+      "path": "major_health_systems/Cone_Health_34700c96.pdf",
+      "name": "Cone_Health_34700c96.pdf",
+      "category": "major_health_systems",
+      "size": 252457
+    },
+    {
+      "path": "major_health_systems/Covenant_Health_8e0a8334.pdf",
+      "name": "Covenant_Health_8e0a8334.pdf",
+      "category": "major_health_systems",
+      "size": 209803
+    },
+    {
+      "path": "major_health_systems/Einstein_Healthcare_Network_10b122d3.pdf",
+      "name": "Einstein_Healthcare_Network_10b122d3.pdf",
+      "category": "major_health_systems",
+      "size": 8321
+    },
+    {
+      "path": "major_health_systems/Geisinger_95e3857a.pdf",
+      "name": "Geisinger_95e3857a.pdf",
+      "category": "major_health_systems",
+      "size": 17047
+    },
+    {
+      "path": "major_health_systems/Hospital_for_Special_Surgery_(HSS)_3596a506.pdf",
+      "name": "Hospital_for_Special_Surgery_(HSS)_3596a506.pdf",
+      "category": "major_health_systems",
+      "size": 626190
+    },
+    {
+      "path": "major_health_systems/Johns_Hopkins_Medicine_9408bf44.html",
+      "name": "Johns_Hopkins_Medicine_9408bf44.html",
+      "category": "major_health_systems",
+      "size": 43392
+    },
+    {
+      "path": "major_health_systems/Legacy_Health_ad8949c7.pdf",
+      "name": "Legacy_Health_ad8949c7.pdf",
+      "category": "major_health_systems",
+      "size": 57433
+    },
+    {
+      "path": "major_health_systems/Mayo_Clinic_2c6f29e4.pdf",
+      "name": "Mayo_Clinic_2c6f29e4.pdf",
+      "category": "major_health_systems",
+      "size": 353276
+    },
+    {
+      "path": "major_health_systems/Mayo_Clinic_Research_d5ff9687.pdf",
+      "name": "Mayo_Clinic_Research_d5ff9687.pdf",
+      "category": "major_health_systems",
+      "size": 256374
+    },
+    {
+      "path": "major_health_systems/Memorial_Sloan_Kettering_5d2de1c8.pdf",
+      "name": "Memorial_Sloan_Kettering_5d2de1c8.pdf",
+      "category": "major_health_systems",
+      "size": 344454
+    },
+    {
+      "path": "major_health_systems/Nuvance_Health_e843882c.pdf",
+      "name": "Nuvance_Health_e843882c.pdf",
+      "category": "major_health_systems",
+      "size": 154557
+    },
+    {
+      "path": "major_health_systems/RWJBarnabas_Health_2749ad54.pdf",
+      "name": "RWJBarnabas_Health_2749ad54.pdf",
+      "category": "major_health_systems",
+      "size": 128385
+    },
+    {
+      "path": "major_health_systems/SCL_Health_a3186b6f.pdf",
+      "name": "SCL_Health_a3186b6f.pdf",
+      "category": "major_health_systems",
+      "size": 364330
+    },
+    {
+      "path": "major_health_systems/SSM_Health_feb613bc.pdf",
+      "name": "SSM_Health_feb613bc.pdf",
+      "category": "major_health_systems",
+      "size": 51438
+    },
+    {
+      "path": "major_health_systems/Spectrum_Health_64bb0614.pdf",
+      "name": "Spectrum_Health_64bb0614.pdf",
+      "category": "major_health_systems",
+      "size": 366541
+    },
+    {
+      "path": "major_health_systems/Stony_Brook_Medicine_69c2aaad.pdf",
+      "name": "Stony_Brook_Medicine_69c2aaad.pdf",
+      "category": "major_health_systems",
+      "size": 181538
+    },
+    {
+      "path": "major_health_systems/Veterans_Health_Administration_6cd22729.pdf",
+      "name": "Veterans_Health_Administration_6cd22729.pdf",
+      "category": "major_health_systems",
+      "size": 70855
+    },
+    {
+      "path": "major_health_systems/Virtua_Health_5bb10d3a.pdf",
+      "name": "Virtua_Health_5bb10d3a.pdf",
+      "category": "major_health_systems",
+      "size": 235498
+    },
+    {
+      "path": "other_healthcare/Osivax_3fecde57.pdf",
+      "name": "Osivax_3fecde57.pdf",
+      "category": "other_healthcare",
+      "size": 216354
+    },
+    {
+      "path": "research_professional_orgs/American_Cancer_Society_5062a593.pdf",
+      "name": "American_Cancer_Society_5062a593.pdf",
+      "category": "research_professional_orgs",
+      "size": 266334
+    },
+    {
+      "path": "research_professional_orgs/American_College_of_Surgeons_2a1b07c0.pdf",
+      "name": "American_College_of_Surgeons_2a1b07c0.pdf",
+      "category": "research_professional_orgs",
+      "size": 106812
+    },
+    {
+      "path": "research_professional_orgs/American_Society_of_Gene_and_Cell_Therapy_93698ffd.html",
+      "name": "American_Society_of_Gene_and_Cell_Therapy_93698ffd.html",
+      "category": "research_professional_orgs",
+      "size": 58736
+    },
+    {
+      "path": "research_professional_orgs/American_Society_of_Nephrology_1b45cea0.pdf",
+      "name": "American_Society_of_Nephrology_1b45cea0.pdf",
+      "category": "research_professional_orgs",
+      "size": 188042
+    },
+    {
+      "path": "research_professional_orgs/GE_HealthCare_1aed756b.pdf",
+      "name": "GE_HealthCare_1aed756b.pdf",
+      "category": "research_professional_orgs",
+      "size": 391684
+    },
+    {
+      "path": "research_professional_orgs/La_Jolla_Institute_for_Immunology_ae60ab74.html",
+      "name": "La_Jolla_Institute_for_Immunology_ae60ab74.html",
+      "category": "research_professional_orgs",
+      "size": 527238
+    },
+    {
+      "path": "research_professional_orgs/National_Bureau_of_Economic_Research_4812b0ce.pdf",
+      "name": "National_Bureau_of_Economic_Research_4812b0ce.pdf",
+      "category": "research_professional_orgs",
+      "size": 71210
+    },
+    {
+      "path": "research_professional_orgs/Public_Health_Institute_35d3596f.pdf",
+      "name": "Public_Health_Institute_35d3596f.pdf",
+      "category": "research_professional_orgs",
+      "size": 482752
+    },
+    {
+      "path": "research_professional_orgs/Vitalant_Research_Institute_af2e5cc3.pdf",
+      "name": "Vitalant_Research_Institute_af2e5cc3.pdf",
+      "category": "research_professional_orgs",
+      "size": 105124
+    }
+  ],
+  "moved_files": [
+    {
+      "file": "Minnesota_MDH_COI_Disclosure.pdf",
+      "from": "federal-state",
+      "to": "non_coi_documents/forms_and_disclosures",
+      "reason": "Identified as forms and disclosures"
+    },
+    {
+      "file": "California_CDT_COI_Statement.doc",
+      "from": "federal-state",
+      "to": "non_coi_documents/forms_and_disclosures",
+      "reason": "Identified as forms and disclosures"
+    },
+    {
+      "file": "NIH_FCOI_Tutorial_2018.pdf",
+      "from": "federal-state",
+      "to": "non_coi_documents/training_materials",
+      "reason": "Identified as training materials"
+    },
+    {
+      "file": "NIH_FCOI_User_Guide.pdf",
+      "from": "federal-state",
+      "to": "non_coi_documents/training_materials",
+      "reason": "Identified as training materials"
+    },
+    {
+      "file": "NIH_COI_Fact_Sheet.pdf",
+      "from": "federal-state",
+      "to": "non_coi_documents/training_materials",
+      "reason": "Identified as training materials"
+    },
+    {
+      "file": "California_Form_700.pdf",
+      "from": "federal-state",
+      "to": "non_coi_documents/forms_and_disclosures",
+      "reason": "Identified as forms and disclosures"
+    },
+    {
+      "file": "Kaiser_Code_of_Conduct.pdf",
+      "from": "major_health_systems",
+      "to": "non_coi_documents/codes_of_conduct",
+      "reason": "Identified as codes of conduct"
+    },
+    {
+      "file": "Intermountain_Health_2075b1b2.pdf",
+      "from": "major_health_systems",
+      "to": "non_coi_documents/agreements_and_contracts",
+      "reason": "Identified as agreements and contracts"
+    },
+    {
+      "file": "Mount_Sinai_Code_of_Conduct.pdf",
+      "from": "major_health_systems",
+      "to": "non_coi_documents/codes_of_conduct",
+      "reason": "Identified as codes of conduct"
+    },
+    {
+      "file": "Intermountain_Healthcare_dc199ce1.pdf",
+      "from": "major_health_systems",
+      "to": "non_coi_documents/agreements_and_contracts",
+      "reason": "Identified as agreements and contracts"
+    },
+    {
+      "file": "Nemours_Children's_Health_a1da3148.pdf",
+      "from": "childrens_hospitals",
+      "to": "non_coi_documents/agreements_and_contracts",
+      "reason": "Identified as agreements and contracts"
+    }
+  ]
+}
