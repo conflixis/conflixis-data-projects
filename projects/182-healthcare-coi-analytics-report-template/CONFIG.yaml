@@ -28,7 +28,7 @@ bigquery:
   # Table names
   tables:
     open_payments: "op_general_all_aggregate_static"
-    prescriptions: "prescription_claims_aggregated"
+    prescriptions: "PHYSICIAN_RX_2020_2024"  # Medicare Part D claims data
     provider_npis: "{{SHORT_NAME}}_provider_npis"  # Will be created
   
   # Query limits
