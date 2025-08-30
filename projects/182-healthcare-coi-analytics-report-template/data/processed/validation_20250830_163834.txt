@@ -1,0 +1,6 @@
+Validation Report - 2025-08-30 16:38:34.314133
+============================================================
+STATUS: FAILED
+
+Issues (1):
+  - ❌ Required package 'google.cloud.bigquery' is not installed

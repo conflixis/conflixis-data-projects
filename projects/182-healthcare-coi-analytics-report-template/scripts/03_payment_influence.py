@@ -82,7 +82,7 @@ def analyze_drug_payment_correlation(client, config, drug_name, npi_table):
             op.total_amount_of_payment_usdollars as payment_amount,
             op.applicable_manufacturer_or_applicable_gpo_making_payment_name AS manufacturer,
             -- Create 180-day influence window
-            DATE_ADD(PARSE_DATE('%Y-%m-%d', op.date_of_payment), INTERVAL 180 DAY) as influence_end_date
+            DATE_ADD(op.date_of_payment, INTERVAL 180 DAY) as influence_end_date
         FROM `{op_table}` op
         WHERE op.program_year BETWEEN {start_year} AND {end_year}
             AND op.name_of_drug_or_biological_or_device_or_medical_supply_1 IS NOT NULL
@@ -119,7 +119,7 @@ def analyze_drug_payment_correlation(client, config, drug_name, npi_table):
                 WHEN EXISTS (
                     SELECT 1 FROM drug_payments dp 
                     WHERE dp.NPI = drx.NPI 
-                    AND drx.rx_date BETWEEN PARSE_DATE('%Y-%m-%d', dp.date_of_payment) 
+                    AND drx.rx_date BETWEEN dp.date_of_payment 
                                         AND dp.influence_end_date
                 ) THEN 1 
                 ELSE 0 
@@ -560,7 +560,7 @@ def main():
         focus_drugs = config.get('focus_drugs', [])
         drug_results = []
         
-        for drug_info in focus_drugs[:10]:  # Limit to top 10 drugs
+        for drug_info in focus_drugs[:3]:  # Limit to top 3 drugs for testing
             drug_name = drug_info['name']
             result = analyze_drug_payment_correlation(client, config, drug_name, npi_table)
             drug_results.append(result)

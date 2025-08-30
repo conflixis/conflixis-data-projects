@@ -62,13 +62,27 @@ def validate_environment():
             issues.append("❌ GCP_SERVICE_ACCOUNT_KEY is not valid JSON")
     
     # Check Python packages
-    required_packages = ['pandas', 'numpy', 'google.cloud.bigquery', 'yaml', 'openpyxl', 'matplotlib']
-    for package in required_packages:
+    required_packages = [
+        ('pandas', 'pandas'),
+        ('numpy', 'numpy'),
+        ('yaml', 'yaml'),
+        ('openpyxl', 'openpyxl'),
+        ('matplotlib', 'matplotlib')
+    ]
+    
+    for display_name, import_name in required_packages:
         try:
-            __import__(package.replace('.', '_'))
-            logger.info(f"✅ Package '{package}' is installed")
+            __import__(import_name)
+            logger.info(f"✅ Package '{display_name}' is installed")
         except ImportError:
-            issues.append(f"❌ Required package '{package}' is not installed")
+            issues.append(f"❌ Required package '{display_name}' is not installed")
+    
+    # Check google-cloud-bigquery separately
+    try:
+        from google.cloud import bigquery
+        logger.info("✅ Package 'google.cloud.bigquery' is installed")
+    except ImportError:
+        issues.append("❌ Required package 'google.cloud.bigquery' is not installed")
     
     return issues
 

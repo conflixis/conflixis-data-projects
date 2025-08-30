@@ -71,8 +71,7 @@ def upload_npis_to_bigquery(client, config):
     
     # Upload to BigQuery
     job_config = bigquery.LoadJobConfig(
-        write_disposition="WRITE_TRUNCATE",
-        schema_update_options=[bigquery.SchemaUpdateOption.ALLOW_FIELD_ADDITION]
+        write_disposition="WRITE_TRUNCATE"
     )
     
     job = client.load_table_from_dataframe(df_npis, table_id, job_config=job_config)
@@ -110,7 +109,7 @@ def analyze_overall_payments(client, config, npi_table):
         COUNT(*) as total_transactions,
         SUM(payment_amount) as total_payments,
         AVG(payment_amount) as avg_payment,
-        MEDIAN(payment_amount) OVER() as median_payment,
+        APPROX_QUANTILES(payment_amount, 2)[OFFSET(1)] as median_payment,
         MAX(payment_amount) as max_payment,
         MIN(payment_amount) as min_payment,
         STDDEV(payment_amount) as stddev_payment
