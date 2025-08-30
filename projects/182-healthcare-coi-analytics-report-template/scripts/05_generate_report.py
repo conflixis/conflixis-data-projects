@@ -94,11 +94,26 @@ def format_number(value: float, format_type: str = 'number') -> str:
         return f"{value:.1f}%"
     elif format_type == 'decimal':
         return f"{value:.2f}"
-    else:  # number
+    elif format_type == 'count':  # For provider/people counts
         if value >= 1_000_000:
             return f"{value/1_000_000:.1f}M"
-        elif value >= 1_000:
+        elif value >= 100_000:
             return f"{value/1_000:.0f}K"
+        elif value >= 10_000:
+            return f"{value/1_000:.1f}K"
+        elif value >= 1_000:
+            return f"{value:,.0f}"
+        else:
+            return f"{value:.0f}"
+    else:  # generic number
+        if value >= 1_000_000:
+            return f"{value/1_000_000:.1f}M"
+        elif value >= 100_000:
+            return f"{value/1_000:.0f}K"
+        elif value >= 10_000:
+            return f"{value/1_000:.1f}K"
+        elif value >= 1_000:
+            return f"{value:,.0f}"
         else:
             return f"{value:.0f}"
 
@@ -126,6 +141,8 @@ def create_table_markdown(df: pd.DataFrame,
                 df[col] = df[col].apply(lambda x: f"${format_number(x, 'currency')}")
             elif 'pct' in col.lower() or 'percent' in col.lower():
                 df[col] = df[col].apply(lambda x: f"{format_number(x, 'percent')}")
+            elif 'provider' in col.lower() or 'count' in col.lower() or 'unique' in col.lower():
+                df[col] = df[col].apply(lambda x: format_number(x, 'count'))
             else:
                 df[col] = df[col].apply(lambda x: format_number(x))
     
@@ -148,7 +165,7 @@ def generate_yearly_trends_table(data: Dict[str, Any]) -> str:
     for _, row in df.iterrows():
         year = int(row['program_year'])
         total = format_number(row['total_payments'], 'currency')
-        providers = format_number(row['unique_providers'])
+        providers = format_number(row['unique_providers'], 'count')  # Use count format for providers
         growth = ""
         if pd.notna(row.get('yoy_growth')):
             growth = f"{row['yoy_growth']:.1f}%"
@@ -276,8 +293,8 @@ def populate_template(template_path: Path,
     if 'summary' in data:
         summary = data['summary']
         replacements.update({
-            'TOTAL_PROVIDERS': format_number(summary.get('total_providers', 0)),
-            'PROVIDERS_WITH_PAYMENTS': format_number(summary.get('providers_receiving_payments', 0)),
+            'TOTAL_PROVIDERS': format_number(summary.get('total_providers', 0), 'count'),
+            'PROVIDERS_WITH_PAYMENTS': format_number(summary.get('providers_receiving_payments', 0), 'count'),
             'PCT_PROVIDERS_PAID': f"{summary.get('percent_providers_paid', 0):.1f}",
             'TOTAL_PAYMENTS': format_number(summary.get('total_payments', 0), 'currency'),
             'TOTAL_TRANSACTIONS': format_number(summary.get('total_transactions', 0)),
@@ -309,8 +326,8 @@ def populate_template(template_path: Path,
             providers_paid = metrics.get('unique_providers_paid', 0)
             pct_paid = (providers_paid / total_providers * 100) if total_providers > 0 else 0
             replacements.update({
-                'TOTAL_PROVIDERS': format_number(total_providers),
-                'PROVIDERS_WITH_PAYMENTS': format_number(providers_paid),
+                'TOTAL_PROVIDERS': format_number(total_providers, 'count'),
+                'PROVIDERS_WITH_PAYMENTS': format_number(providers_paid, 'count'),
                 'PCT_PROVIDERS_PAID': f"{pct_paid:.1f}"
             })
     
@@ -349,7 +366,7 @@ def populate_template(template_path: Path,
         ]
         if not five_year_providers.empty:
             count = five_year_providers['provider_count'].iloc[0] if 'provider_count' in five_year_providers.columns else five_year_providers.iloc[0]['count']
-            replacements['CONSECUTIVE_YEAR_PROVIDERS'] = format_number(count)
+            replacements['CONSECUTIVE_YEAR_PROVIDERS'] = format_number(count, 'count')
         else:
             replacements['CONSECUTIVE_YEAR_PROVIDERS'] = '0'
     
