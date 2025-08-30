@@ -51,16 +51,12 @@ The trajectory of industry payments over the analysis period reveals strategic p
 
 Industry engagement strategies manifest through diverse payment mechanisms:
 
-| Category | Total Amount | % of Total | Avg Payment |
-|----------|-------------|------------|-------------|
 {{PAYMENT_CATEGORIES_TABLE}}
 
 ### Top Manufacturing Partners
 
 The following manufacturers demonstrate the highest financial engagement with {{HEALTH_SYSTEM_NAME}} providers:
 
-| Manufacturer | Total Payments | Providers Engaged | Avg per Provider |
-|--------------|---------------|-------------------|------------------|
 {{TOP_MANUFACTURERS_TABLE}}
 
 ---

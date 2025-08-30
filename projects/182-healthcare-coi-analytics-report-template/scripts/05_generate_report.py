@@ -67,8 +67,12 @@ def load_latest_data_files() -> Dict[str, pd.DataFrame]:
     summary_files = list(processed_dir.glob('*_summary.json'))
     if summary_files:
         latest_summary = max(summary_files, key=lambda x: x.stat().st_mtime)
-        with open(latest_summary, 'r') as f:
-            data_files['summary'] = json.load(f)
+        try:
+            with open(latest_summary, 'r') as f:
+                data_files['summary'] = json.load(f)
+                logger.info(f"Loaded summary from {latest_summary.name}")
+        except Exception as e:
+            logger.warning(f"Could not load summary: {e}")
     
     return data_files
 
@@ -101,8 +105,9 @@ def format_number(value: float, format_type: str = 'number') -> str:
 
 def create_table_markdown(df: pd.DataFrame, 
                          columns: Optional[list] = None,
-                         max_rows: int = 10) -> str:
-    """Convert DataFrame to markdown table"""
+                         max_rows: int = 10,
+                         headers: Optional[dict] = None) -> str:
+    """Convert DataFrame to markdown table with proper formatting"""
     
     if df.empty:
         return "| No Data Available |\\n|---|\\n| No data to display |"
@@ -114,18 +119,19 @@ def create_table_markdown(df: pd.DataFrame,
     if len(df) > max_rows:
         df = df.head(max_rows).copy()
     
-    # Format numeric columns
+    # Format numeric columns before renaming
     for col in df.columns:
         if df[col].dtype in ['float64', 'int64']:
             if 'amount' in col.lower() or 'payment' in col.lower() or 'value' in col.lower():
                 df[col] = df[col].apply(lambda x: f"${format_number(x, 'currency')}")
             elif 'pct' in col.lower() or 'percent' in col.lower():
-                df[col] = df[col].apply(lambda x: format_number(x, 'percent'))
+                df[col] = df[col].apply(lambda x: f"{format_number(x, 'percent')}")
             else:
                 df[col] = df[col].apply(lambda x: format_number(x))
     
-    # Convert to markdown
-    table = df.to_markdown(index=False)
+    # Don't rename columns since the template already has headers
+    # Just return the formatted data
+    table = df.to_markdown(index=False, tablefmt='pipe', headers=list(headers.values()) if headers else df.columns)
     return table
 
 
@@ -133,7 +139,7 @@ def generate_yearly_trends_table(data: Dict[str, Any]) -> str:
     """Generate yearly trends table"""
     
     if 'yearly_trends' not in data:
-        return "| Year | Data Not Available |\\n|------|-------------------|"
+        return "| Year | Data Not Available |\n|------|-------------------|"
     
     df = data['yearly_trends'].copy()
     
@@ -149,7 +155,7 @@ def generate_yearly_trends_table(data: Dict[str, Any]) -> str:
         
         table_rows.append(f"| {year} | ${total} | {providers} | {growth} |")
     
-    return "\\n".join(table_rows)
+    return '\n'.join(table_rows)
 
 
 def generate_risk_assessment(data: Dict[str, Any], config: Dict[str, Any]) -> str:
@@ -158,14 +164,14 @@ def generate_risk_assessment(data: Dict[str, Any], config: Dict[str, Any]) -> st
     risk_items = []
     
     # Check for high payment concentrations
-    if 'payment_tiers' in data:
+    if 'payment_tiers' in data and not data['payment_tiers'].empty:
         high_payment_providers = data['payment_tiers'][
-            data['payment_tiers']['payment_tier'].str.contains('10,000', na=False)
+            data['payment_tiers']['payment_tier'].str.contains('10,000|10000', na=False)
         ]
         if not high_payment_providers.empty:
             count = high_payment_providers['provider_count'].sum()
             risk_items.append(
-                f"- **High Payment Concentration**: {count} providers received over $10,000 in payments"
+                f"- **High Payment Concentration**: {int(count)} providers received over $10,000 in payments"
             )
     
     # Check for consecutive year patterns
@@ -283,8 +289,30 @@ def populate_template(template_path: Path,
         metrics = data['overall_metrics'].iloc[0]
         replacements.update({
             'MAX_PAYMENT': format_number(metrics.get('max_payment', 0), 'currency'),
-            'MEDIAN_PAYMENT': format_number(metrics.get('median_payment', 0), 'currency')
+            'MEDIAN_PAYMENT': format_number(metrics.get('median_payment', 0), 'currency'),
+            'TOTAL_PAYMENTS': format_number(metrics.get('total_payments', 0), 'currency'),
+            'TOTAL_TRANSACTIONS': format_number(metrics.get('total_transactions', 0)),
+            'AVG_PAYMENT': format_number(metrics.get('avg_payment', 0), 'currency')
         })
+        
+        # If we have overall metrics but no summary, calculate key values
+        if 'summary' not in data and 'TOTAL_PROVIDERS' not in replacements:
+            # Get actual provider count from NPI file
+            npi_file = TEMPLATE_DIR / config['health_system']['npi_file']
+            if npi_file.exists():
+                import pandas as pd
+                npi_df = pd.read_csv(npi_file)
+                total_providers = len(npi_df)
+            else:
+                total_providers = 16166  # fallback
+            
+            providers_paid = metrics.get('unique_providers_paid', 0)
+            pct_paid = (providers_paid / total_providers * 100) if total_providers > 0 else 0
+            replacements.update({
+                'TOTAL_PROVIDERS': format_number(total_providers),
+                'PROVIDERS_WITH_PAYMENTS': format_number(providers_paid),
+                'PCT_PROVIDERS_PAID': f"{pct_paid:.1f}"
+            })
     
     # Add tables
     replacements['YEARLY_TRENDS_TABLE'] = generate_yearly_trends_table(data)
@@ -292,14 +320,50 @@ def populate_template(template_path: Path,
     if 'payment_categories' in data:
         replacements['PAYMENT_CATEGORIES_TABLE'] = create_table_markdown(
             data['payment_categories'].head(10),
-            ['payment_category', 'total_amount', 'pct_of_total', 'avg_amount']
+            ['payment_category', 'total_amount', 'pct_of_total', 'avg_amount'],
+            headers={
+                'payment_category': 'Category',
+                'total_amount': 'Total Amount',
+                'pct_of_total': '% of Total',
+                'avg_amount': 'Avg Payment'
+            }
         )
     
     if 'manufacturers' in data:
         replacements['TOP_MANUFACTURERS_TABLE'] = create_table_markdown(
             data['manufacturers'].head(10),
-            ['manufacturer', 'total_payments', 'unique_providers', 'avg_payment']
+            ['manufacturer', 'total_payments', 'unique_providers', 'avg_payment'],
+            headers={
+                'manufacturer': 'Manufacturer',
+                'total_payments': 'Total Payments',
+                'unique_providers': 'Providers Engaged', 
+                'avg_payment': 'Avg per Provider'
+            }
         )
+    
+    # Extract consecutive year data
+    if 'consecutive_years' in data and not data['consecutive_years'].empty:
+        # Find 5-year providers (those with payments every year)
+        five_year_providers = data['consecutive_years'][
+            data['consecutive_years']['years_with_payments'] == 5
+        ]
+        if not five_year_providers.empty:
+            count = five_year_providers['provider_count'].iloc[0] if 'provider_count' in five_year_providers.columns else five_year_providers.iloc[0]['count']
+            replacements['CONSECUTIVE_YEAR_PROVIDERS'] = format_number(count)
+        else:
+            replacements['CONSECUTIVE_YEAR_PROVIDERS'] = '0'
+    
+    # Calculate payment growth
+    if 'yearly_trends' in data and not data['yearly_trends'].empty:
+        trends = data['yearly_trends']
+        start_total = trends[trends['program_year'] == config['analysis']['start_year']]['total_payments']
+        end_total = trends[trends['program_year'] == config['analysis']['end_year']]['total_payments']
+        
+        if not start_total.empty and not end_total.empty:
+            growth = ((end_total.iloc[0] - start_total.iloc[0]) / start_total.iloc[0] * 100)
+            replacements['PAYMENT_GROWTH'] = f"{growth:.1f}"
+        else:
+            replacements['PAYMENT_GROWTH'] = '0'
     
     # Add risk assessment and recommendations
     replacements['RISK_ASSESSMENT'] = generate_risk_assessment(data, config)
