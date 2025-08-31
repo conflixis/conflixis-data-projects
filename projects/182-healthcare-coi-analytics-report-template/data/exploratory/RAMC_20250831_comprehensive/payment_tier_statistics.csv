@@ -1,2 +1,0 @@
-correlation_payment_rx,p_value_payment_rx,correlation_payment_roi,p_value_payment_roi,linear_slope,linear_intercept,r_squared,linear_p_value,interpretation
-0.4258705053857821,0.3407573628765551,-0.5642647299555111,0.24343235067523114,0.22646003390144515,10562.318710378588,0.18136568735754144,0.34075736287655517,No significant linear trend

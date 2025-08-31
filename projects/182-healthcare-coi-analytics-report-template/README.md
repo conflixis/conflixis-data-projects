@@ -1,21 +1,57 @@
-# Healthcare COI Analytics Report Template
+# Healthcare COI Analytics Template v2.0
 
-## Overview
-This template provides a comprehensive framework for analyzing healthcare provider conflicts of interest (COI) through pharmaceutical/medical device payment data and prescribing patterns. Based on proven methodologies from multiple health system analyses, this template enables rapid deployment of COI analytics for any healthcare organization.
+A professional, enterprise-grade template for analyzing healthcare provider conflicts of interest using CMS Open Payments and Medicare Part D prescription data.
 
-## Features
-- **Payment Analysis**: Comprehensive Open Payments data analysis
-- **Prescription Patterns**: Medicare Part D and commercial claims analysis  
-- **Correlation Analytics**: Payment-prescription influence calculations
-- **Risk Assessment**: Multi-factor risk scoring for providers and drugs
-- **Provider Vulnerability**: Differential analysis by provider type (MD/DO vs NP/PA)
-- **Automated Reporting**: Generate professional reports in multiple formats
+## 🚀 Features
 
-## Quick Start
+### Core Capabilities
+- **Comprehensive Data Integration**: BigQuery-based analysis of Open Payments and Medicare Part D data
+- **Advanced Statistical Analysis**: Correlation analysis with confidence intervals, effect sizes, and multiple hypothesis testing
+- **ML-Based Risk Scoring**: Anomaly detection and multi-factor risk assessment using machine learning
+- **Specialty-Specific Analysis**: Vulnerability assessment by medical specialty and provider type
+- **Professional Reporting**: Multiple report formats (investigative, compliance, executive)
+- **Data Visualization**: Publication-ready charts with Conflixis branding
 
-### 1. Prerequisites
+### Key Analyses
+- Payment-prescription correlations with influence factors (up to 400x+)
+- Provider vulnerability assessment (MD vs NP/PA differential analysis)
+- Payment tier ROI analysis (revealing 2,300x returns on <$100 payments)
+- Temporal trend analysis with year-over-year growth metrics
+- Specialty-specific vulnerability patterns
+- Risk scoring and anomaly detection using Isolation Forest
+
+## 📁 New Modular Architecture (v2.0)
+
+```
+182-healthcare-coi-analytics-template/
+├── src/                          # Core analysis modules
+│   ├── data/                     # Data management
+│   │   ├── bigquery_connector.py # Singleton BigQuery client with caching
+│   │   ├── data_loader.py        # Unified data loading
+│   │   └── data_validator.py     # Data quality validation
+│   ├── analysis/                 # Analysis engines
+│   │   ├── open_payments.py      # Payment analysis
+│   │   ├── prescriptions.py      # Prescription analysis
+│   │   ├── correlations.py       # Statistical correlations
+│   │   ├── risk_scoring.py       # ML risk assessment
+│   │   └── specialty_analysis.py # Specialty patterns
+│   └── reporting/                # Report generation
+│       ├── report_generator.py   # Multi-format reports
+│       └── visualizations.py     # Chart generation
+├── pipelines/                    # Analysis orchestration
+│   └── full_analysis.py          # Complete pipeline
+├── config/                       # Configuration files
+├── data/                        # Data directories
+├── reports/                     # Generated reports
+└── docs/                        # Documentation
+```
+
+## 🔧 Quick Start
+
+### Prerequisites
 ```bash
 # Python 3.8+
+# Google Cloud Project with BigQuery access
 pip install -r requirements.txt
 
 # Set up environment variables

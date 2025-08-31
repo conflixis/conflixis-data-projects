@@ -1,3 +1,0 @@
-provider_type,unique_prescribers,total_prescriptions,total_payments,avg_payment,avg_prescriptions_per_provider,avg_cost_per_prescription
-Nurse Practitioner,2466,25827343.000000000,1584535683.700223000,123.491399573,1.205579949,61.351091504
-Physician Assistant,1184,11740197.000000000,626677168.126468000,117.117268077,1.260539609,53.378760861

@@ -1,7 +1,0 @@
-Validation Report - 2025-08-30 16:27:55.609000
-============================================================
-STATUS: FAILED
-
-Issues (2):
-  - ❌ Required package 'google.cloud.bigquery' is not installed
-  - ❌ Required package 'matplotlib' is not installed
