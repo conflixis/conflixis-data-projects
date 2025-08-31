@@ -2,8 +2,8 @@
 # Edit this file to customize the analysis for your health system
 
 health_system:
-  name: "Test Health System"  # Replace with your health system name
-  short_name: "THS"     # Abbreviation for file naming
+  name: "Regional Academic Medical Center"  # Replace with your health system name
+  short_name: "RAMC"     # Abbreviation for file naming
   npi_file: "data/inputs/provider_npis.csv"  # Path to your NPI list
   
 analysis:

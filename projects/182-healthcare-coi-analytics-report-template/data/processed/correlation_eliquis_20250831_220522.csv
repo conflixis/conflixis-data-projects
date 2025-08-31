@@ -1,0 +1,2 @@
+drug_name,providers_with_payments,providers_without_payments,avg_rx_with_payments,avg_rx_without_payments,influence_ratio,roi_per_dollar,avg_payment_amount
+ELIQUIS,1929,6864,1635371970.897588647,8986816.523960294,181.9745586813110872438014111,66.93168780960227519942811242,24299180.367304303
