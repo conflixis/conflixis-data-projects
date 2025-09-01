@@ -79,62 +79,80 @@ NPI,Full_Name,Primary_Specialty
 ```
 
 ### 4. Run Analysis
+
+#### Using the CLI Interface
 ```bash
-# Validate setup
-python scripts/00_validate_setup.py
+# Validate setup and data quality
+python cli.py validate
 
-# Run full analysis pipeline
-python scripts/run_full_analysis.py
+# Run full analysis with investigative report style
+python cli.py analyze --style investigative
 
-# Or run individual components
-python scripts/01_analyze_op_payments.py
-python scripts/02_analyze_prescriptions.py
-python scripts/03_payment_influence.py
-python scripts/04_risk_assessment.py
-python scripts/05_generate_report.py
+# Other report styles available
+python cli.py analyze --style compliance    # For compliance teams
+python cli.py analyze --style executive     # For C-suite executives
+
+# Additional options
+python cli.py analyze --force-reload        # Force reload data from BigQuery
+python cli.py analyze --no-viz              # Skip visualization generation
+
+# Export specific data
+python cli.py export payments --output exports/payments.csv
+python cli.py export prescriptions --output exports/rx.parquet
+
+# Check system info
+python cli.py info
+
+# Clean old cache files
+python cli.py clean --days 7
 ```
 
 ### 5. View Results
 Reports are generated in `data/output/`:
-- `[TIMESTAMP]_coi_report.md` - Full markdown report
-- `[TIMESTAMP]_coi_report.pdf` - PDF version
-- `[TIMESTAMP]_coi_analysis.xlsx` - Excel workbook with all data
+- `ramc_coi_report_[timestamp].md` - Full investigative report
+- `ramc_coi_report_[timestamp].pdf` - PDF version (if configured)
+- `ramc_coi_analysis_[timestamp].xlsx` - Excel workbook with all data
 
-## Project Structure
+## Current Project Structure
 ```
 182-healthcare-coi-analytics-report-template/
-├── CONFIG.yaml                    # Main configuration
+├── cli.py                        # Main CLI interface
+├── CONFIG.yaml                   # Main configuration
 ├── requirements.txt              # Python dependencies
 ├── .env.example                  # Environment variables template
 │
-├── scripts/                      # Analysis scripts
-│   ├── 00_validate_setup.py    # Validate environment and data
-│   ├── 01_analyze_op_payments.py
-│   ├── 02_analyze_prescriptions.py
-│   ├── 03_payment_influence.py
-│   ├── 04_risk_assessment.py
-│   ├── 05_generate_report.py
-│   ├── run_full_analysis.py    # Run complete pipeline
-│   └── utils/                   # Utility modules
+├── src/                          # Core analysis modules
+│   ├── data/                     # Data management
+│   │   ├── bigquery_connector.py # Singleton BigQuery client
+│   │   ├── data_loader.py        # Unified data loading
+│   │   └── data_validator.py     # Data quality validation
+│   ├── analysis/                 # Analysis engines
+│   │   ├── open_payments.py      # Payment analysis
+│   │   ├── prescriptions.py      # Prescription analysis
+│   │   ├── correlations.py       # Statistical correlations
+│   │   ├── risk_scoring.py       # ML risk assessment
+│   │   └── specialty_analysis.py # Specialty patterns
+│   └── reporting/                # Report generation
+│       ├── report_generator.py   # Multi-format reports
+│       └── visualizations.py     # Chart generation
 │
-├── templates/                    # Report templates
-│   ├── full_report.md
-│   └── sections/                # Individual sections
+├── pipelines/                    # Analysis orchestration
+│   └── full_analysis.py          # Complete pipeline
 │
 ├── config/                       # Configuration files
-│   ├── queries/                 # SQL query templates
-│   ├── drug_categories.yaml    # Drug categorizations
-│   └── risk_thresholds.yaml    # Risk scoring thresholds
+│   └── queries/                  # SQL query templates
 │
-├── data/                        # Data directories
-│   ├── inputs/                 # Your input files
-│   ├── processed/              # Intermediate results
-│   └── output/                 # Final reports
+├── scripts/                      # Utility scripts
+│   ├── queries/                  # SQL templates
+│   └── utils/                    # Helper utilities
 │
-└── docs/                        # Documentation
-    ├── USER_GUIDE.md
-    ├── METHODOLOGY.md
-    └── examples/
+├── data/                         # Data directories
+│   ├── inputs/                  # Your input files
+│   ├── processed/               # Intermediate results
+│   └── output/                  # Final reports
+│
+└── docs/                         # Documentation
+    └── instructions/             # Report style instructions
 ```
 
 ## Key Metrics Analyzed
@@ -157,6 +175,38 @@ Reports are generated in `data/output/`:
 - Return on investment (ROI) calculations
 - Provider vulnerability scores
 - Risk assessments
+
+## CLI Commands Reference
+
+### Main Commands
+- `python cli.py analyze` - Run full COI analysis pipeline
+- `python cli.py validate` - Validate data quality and configuration
+- `python cli.py clean` - Clean old cached and processed files
+- `python cli.py export` - Export analysis results to file
+- `python cli.py info` - Display system and configuration information
+
+### Analyze Command Options
+```bash
+python cli.py analyze [OPTIONS]
+
+Options:
+  --config PATH           Configuration file path (default: CONFIG.yaml)
+  --force-reload         Force reload data from BigQuery
+  --style [investigative|compliance|executive]  Report style (default: investigative)
+  --format [markdown|html]  Output format (default: markdown)
+  --no-viz               Skip visualization generation
+```
+
+### Export Command Options
+```bash
+python cli.py export DATA_TYPE [OPTIONS]
+
+Arguments:
+  DATA_TYPE  [payments|prescriptions|correlations]
+
+Options:
+  --output PATH  Output file path (supports .csv and .parquet)
+```
 
 ## Customization
 
@@ -203,5 +253,6 @@ For questions or issues, contact the Conflixis Data Analytics team.
 Proprietary - Conflixis Inc.
 
 ---
-*Template Version: 1.0.0*  
-*Based on DA-175 Corewell Health Analysis*
+*Template Version: 2.0.0*  
+*Based on DA-175 Corewell Health Analysis*  
+*Refactored with modular architecture and CLI interface*

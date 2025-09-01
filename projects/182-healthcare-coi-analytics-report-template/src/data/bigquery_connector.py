@@ -14,6 +14,10 @@ from google.cloud import bigquery
 from google.oauth2 import service_account
 import logging
 from datetime import datetime, timedelta
+from dotenv import load_dotenv
+
+# Load environment variables from .env file
+load_dotenv()
 
 logger = logging.getLogger(__name__)
 
