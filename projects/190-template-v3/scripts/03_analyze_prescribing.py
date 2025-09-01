@@ -28,7 +28,7 @@ def get_gcp_credentials(env_var='GCP_SERVICE_ACCOUNT_KEY'):
 
 def analyze_prescribing(config, credentials):
     """
-    Analyzes prescription data for the providers in the NPI list.
+    Downloads all prescription transactions for the providers in the NPI list.
     """
     project_paths = config['project_paths']
     health_system = config['health_system']
@@ -39,52 +39,38 @@ def analyze_prescribing(config, credentials):
 
     # Format table names
     npi_table_name = bq_config['npi_table'].replace('[abbrev]', health_system['short_name'])
-    npi_table_id = f"{bq_config['project_id']}.{bq_config['dataset_id']}.{npi_table_name}"
-    rx_table_id = f"{bq_config['project_id']}.{bq_config['dataset_id']}.{bq_config['rx_table']}"
+    npi_table_id = f"`{bq_config['project_id']}.{bq_config['dataset_id']}.{npi_table_name}`"
+    rx_table_id = f"`{bq_config['project_id']}.{bq_config['dataset_id']}.{bq_config['rx_table']}`"
 
-    # Construct the query
+    # Construct the query to fetch all transactions for the NPIs
     query = f"""
         SELECT
-            rx.npi,
-            COUNT(DISTINCT rx.drug_name) AS distinct_drugs_prescribed,
-            SUM(rx.total_claim_count) AS total_prescriptions,
-            SUM(rx.total_drug_cost) AS total_prescribing_cost
-        FROM
-            `{rx_table_id}` AS rx
-        JOIN
-            `{npi_table_id}` AS npi_list
-        ON
-            rx.npi = npi_list.NPI
-        GROUP BY
-            rx.npi
-        ORDER BY
-            total_prescribing_cost DESC
+            rx.NPI,
+            rx.BRAND_NAME,
+            rx.MANUFACTURER,
+            rx.PAYMENTS as prescription_value,
+            rx.PRESCRIPTIONS as prescription_count
+        FROM {rx_table_id} AS rx
+        WHERE rx.NPI IN (SELECT NPI FROM {npi_table_id})
     """
 
     try:
-        print("Running prescription analysis query in BigQuery...")
+        print("Downloading raw prescription transactions from BigQuery...")
         df = client.query(query).to_dataframe()
-        print(f"Successfully queried {len(df)} prescription records from BigQuery.")
+        print(f"Successfully downloaded {len(df)} prescription records from BigQuery.")
     except Exception as e:
         print(f"An error occurred during the BigQuery query: {e}")
-        try:
-            print(f"--- Attempting to fetch schema for table: {rx_table_id} ---")
-            table = client.get_table(rx_table_id)
-            for field in table.schema:
-                print(f"Column name: {field.name}, Data type: {field.field_type}")
-        except Exception as schema_e:
-            print(f"Could not fetch schema: {schema_e}")
         return
 
     # Save the results to a CSV file
     output_dir = os.path.join(project_paths['project_dir'], project_paths['output_dir'])
     os.makedirs(output_dir, exist_ok=True)
     
-    output_filename = f"{health_system['short_name']}_prescribing_summary.csv"
+    output_filename = f"{health_system['short_name']}_prescribing_raw.csv"
     output_path = os.path.join(output_dir, output_filename)
     
     df.to_csv(output_path, index=False)
-    print(f"Successfully saved prescription analysis to {output_path}")
+    print(f"Successfully saved raw prescription data to {output_path}")
 
 def main():
     """Main function to load config and run the analysis."""

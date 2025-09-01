@@ -34,12 +34,22 @@ payment_overview:
     3. Payment category analysis - what each category reveals about influence strategies
     4. Top manufacturers - name specific companies and their engagement levels
     
+    REQUIRED TABLES:
+    1. Create a markdown table showing yearly payment trends:
+       | Year | Providers | Total Payments | Average Payment | % Change |
+    
+    2. Create a markdown table of top 5 manufacturers:
+       | Manufacturer | Total Payments | Providers Reached | Avg per Provider | Market Share |
+    
+    3. Create a payment categories breakdown table:
+       | Payment Category | Total Amount | Transaction Count | Average Amount |
+    
     Style: Investigative but data-rich. Use phrases like:
     - "The data reveals strategic targeting..."
     - "This level of penetration raises fundamental questions..."
     - "The trajectory of payments reveals..."
     
-    Include a data table where appropriate.
+    Integrate tables naturally within the narrative, not just at the end.
     Length: 400-500 words
 
 prescription_patterns:
@@ -61,7 +71,15 @@ prescription_patterns:
     3. Specialty-specific patterns that suggest targeted influence
     4. Provider type differences (MD vs NP/PA prescribing volumes)
     
+    REQUIRED TABLES:
+    1. Create a table of top 10 drugs by total cost:
+       | Drug Name | Total Cost | Claims | Avg Cost/Claim | Unique Prescribers |
+    
+    2. If provider type data available, create comparison table:
+       | Provider Type | Total Prescriptions | Total Cost | Avg Cost per Rx |
+    
     Avoid just listing statistics. Interpret what these patterns mean for patient care.
+    Integrate tables within the narrative.
     Length: 300-400 words
 
 correlation_analysis:
@@ -83,12 +101,16 @@ correlation_analysis:
     3. ROI calculations showing efficiency of influence
     4. Statement that patterns "cannot be explained by clinical factors alone"
     
+    REQUIRED TABLE:
+    Create a comprehensive influence factors table:
+    | Drug Name | Prescribers w/ Payments | Avg Rx Value (Paid) | Prescribers w/o Payments | Avg Rx Value (No Pay) | Influence Factor | ROI |
+    
     Use dramatic but precise language:
     - "profound correlations"
     - "systematic redirection of clinical decision-making"
     - "factors ranging from 92x to 426x"
     
-    Include specific drug names and exact multipliers.
+    Include specific drug names and exact multipliers. Integrate the table within narrative.
     Length: 400-500 words
 
 provider_vulnerability:
@@ -110,8 +132,13 @@ provider_vulnerability:
     3. Implications for supervision and oversight
     4. Why mid-level providers may be more susceptible
     
+    REQUIRED TABLE:
+    Create provider type vulnerability comparison:
+    | Provider Type | Baseline Rx Value | With Payments Rx Value | Influence Increase % | Vulnerability Score |
+    
     Key message: Mid-level providers show disproportionate influence from payments.
     Use terms like "heightened susceptibility" and "vulnerability gap"
+    Integrate table within narrative.
     Length: 300-400 words
 
 payment_tiers:
@@ -131,7 +158,12 @@ payment_tiers:
     - Behavioral economics explanation (reciprocity principle)
     - Most providers receive small payments but show large behavior changes
     
+    REQUIRED TABLE:
+    Create payment tier analysis:
+    | Payment Range | Provider Count | Avg Rx Value | ROI Factor | % of Total Providers |
+    
     This section should be surprising and concerning.
+    Integrate table to show the disproportionate impact.
     Length: 250-350 words
 
 consecutive_years:
@@ -152,7 +184,12 @@ consecutive_years:
     3. How sustained relationships differ from one-time payments
     4. Normalization of influence over time
     
+    REQUIRED TABLE:
+    Create consecutive years impact table:
+    | Years of Payments | Provider Count | Avg Total Payments | Avg Total Rx Value | Multiplier vs Single Year |
+    
     Use terms like "entrenched relationships" and "compound influence"
+    Integrate table to show cumulative effect.
     Length: 250-350 words
 
 risk_assessment:
@@ -174,7 +211,12 @@ risk_assessment:
     3. Compliance vulnerabilities identified
     4. Potential regulatory exposure
     
+    REQUIRED TABLE:
+    Create risk distribution table:
+    | Risk Level | Provider Count | % of Total | Key Risk Indicators | Avg Risk Score |
+    
     Be specific about risks without being alarmist.
+    Integrate table to show distribution clearly.
     Length: 300-400 words
 
 recommendations:

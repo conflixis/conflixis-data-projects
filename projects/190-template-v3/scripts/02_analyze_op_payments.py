@@ -28,7 +28,7 @@ def get_gcp_credentials(env_var='GCP_SERVICE_ACCOUNT_KEY'):
 
 def analyze_op_payments(config, credentials):
     """
-    Analyzes Open Payments data for the providers in the NPI list.
+    Downloads all Open Payments transactions for the providers in the NPI list.
     """
     project_paths = config['project_paths']
     health_system = config['health_system']
@@ -39,53 +39,39 @@ def analyze_op_payments(config, credentials):
 
     # Format table names
     npi_table_name = bq_config['npi_table'].replace('[abbrev]', health_system['short_name'])
-    npi_table_id = f"{bq_config['project_id']}.{bq_config['dataset_id']}.{npi_table_name}"
-    op_table_id = f"{bq_config['project_id']}.{bq_config['dataset_id']}.{bq_config['op_table']}"
+    npi_table_id = f"`{bq_config['project_id']}.{bq_config['dataset_id']}.{npi_table_name}`"
+    op_table_id = f"`{bq_config['project_id']}.{bq_config['dataset_id']}.{bq_config['op_table']}`"
 
-    # Construct the query
+    # Construct the query to fetch all transactions for the NPIs
     query = f"""
         SELECT
-            op.covered_recipient_npi AS NPI,
-            SUM(op.total_amount_of_payment_usdollars) AS total_payments,
-            COUNT(DISTINCT op.applicable_manufacturer_or_applicable_gpo_making_payment_name) AS total_manufacturers,
-            MIN(op.date_of_payment) AS first_payment_date,
-            MAX(op.date_of_payment) AS last_payment_date
-        FROM
-            `{op_table_id}` AS op
-        JOIN
-            `{npi_table_id}` AS npi_list
-        ON
-            op.covered_recipient_npi = npi_list.NPI
-        GROUP BY
-            op.covered_recipient_npi
-        ORDER BY
-            total_payments DESC
+            op.covered_recipient_npi,
+            op.date_of_payment,
+            op.applicable_manufacturer_or_applicable_gpo_making_payment_name as manufacturer,
+            op.total_amount_of_payment_usdollars as payment_value,
+            op.nature_of_payment_or_transfer_of_value as payment_nature,
+            op.name_of_drug_or_biological_or_device_or_medical_supply_1 as product_name
+        FROM {op_table_id} AS op
+        WHERE op.covered_recipient_npi IN (SELECT NPI FROM {npi_table_id})
     """
 
     try:
-        print("Running Open Payments analysis query in BigQuery...")
+        print("Downloading raw Open Payments transactions from BigQuery...")
         df = client.query(query).to_dataframe()
-        print(f"Successfully queried {len(df)} records from BigQuery.")
+        print(f"Successfully downloaded {len(df)} payment records from BigQuery.")
     except Exception as e:
         print(f"An error occurred during the BigQuery query: {e}")
-        try:
-            print(f"--- Attempting to fetch schema for table: {op_table_id} ---")
-            table = client.get_table(op_table_id)
-            for field in table.schema:
-                print(f"Column name: {field.name}, Data type: {field.field_type}")
-        except Exception as schema_e:
-            print(f"Could not fetch schema: {schema_e}")
         return
 
     # Save the results to a CSV file
     output_dir = os.path.join(project_paths['project_dir'], project_paths['output_dir'])
     os.makedirs(output_dir, exist_ok=True)
     
-    output_filename = f"{health_system['short_name']}_op_payments_summary.csv"
+    output_filename = f"{health_system['short_name']}_op_payments_raw.csv"
     output_path = os.path.join(output_dir, output_filename)
     
     df.to_csv(output_path, index=False)
-    print(f"Successfully saved Open Payments analysis to {output_path}")
+    print(f"Successfully saved raw Open Payments data to {output_path}")
 
 def main():
     """Main function to load config and run the analysis."""

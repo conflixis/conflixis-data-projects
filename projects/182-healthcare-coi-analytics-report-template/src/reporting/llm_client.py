@@ -7,6 +7,7 @@ import os
 import json
 import logging
 from typing import Dict, Any, Optional, List
+import pandas as pd
 from anthropic import Anthropic
 from dotenv import load_dotenv
 import time
@@ -69,7 +70,14 @@ class ClaudeLLMClient:
         system_message = """You are an investigative healthcare journalist writing a data-driven report 
         about conflicts of interest in healthcare. Your style should be compelling and narrative-driven, 
         similar to ProPublica or Wall Street Journal investigations. Use specific numbers and avoid 
-        academic language or citations."""
+        academic language or citations.
+        
+        IMPORTANT: You MUST include markdown tables as specified in the prompts. Tables should:
+        - Have clear headers with pipes (|) as separators
+        - Include separator line with dashes (e.g., |---|---|---|)
+        - Be integrated naturally within the narrative, not just appended at the end
+        - Show actual data values from the provided data
+        - Be properly formatted for markdown rendering"""
         
         # Generate with retries
         for attempt in range(self.max_retries):
@@ -128,11 +136,19 @@ class ClaudeLLMClient:
                     formatted_parts.append(f"  - {sub_key}: {formatted_value}")
             
             elif hasattr(value, 'to_dict'):
-                # Handle DataFrames
-                formatted_parts.append(f"\n{key.replace('_', ' ').title()}:")
-                df_dict = value.head(10).to_dict('records')  # Limit to top 10 rows
-                for i, row in enumerate(df_dict, 1):
-                    formatted_parts.append(f"  {i}. {self._format_row(row)}")
+                # Handle DataFrames - format as table-ready data
+                formatted_parts.append(f"\n{key.replace('_', ' ').title()} (DataFrame with {len(value)} rows):")
+                
+                # Show column names
+                if not value.empty:
+                    cols = list(value.columns)
+                    formatted_parts.append(f"  Columns: {', '.join(cols)}")
+                    
+                    # Show first 10 rows as structured data
+                    df_dict = value.head(10).to_dict('records')
+                    formatted_parts.append("  Sample data (first 10 rows):")
+                    for i, row in enumerate(df_dict, 1):
+                        formatted_parts.append(f"    Row {i}: {self._format_row(row)}")
             
             else:
                 # Simple values
@@ -144,10 +160,25 @@ class ClaudeLLMClient:
         """Format a data row for display"""
         parts = []
         for k, v in row.items():
-            if isinstance(v, (int, float)) and v > 1000:
-                parts.append(f"{k}: ${v:,.0f}")
+            # Format column name
+            col_name = k.replace('_', ' ').title() if '_' in k else k
+            
+            # Format value
+            if pd.isna(v):
+                formatted_v = "N/A"
+            elif isinstance(v, (int, float)):
+                if v > 1000000:
+                    formatted_v = f"${v/1000000:.1f}M"
+                elif v > 1000:
+                    formatted_v = f"${v:,.0f}"
+                elif v > 1:
+                    formatted_v = f"{v:.2f}"
+                else:
+                    formatted_v = f"{v:.1%}" if v < 1 else str(v)
             else:
-                parts.append(f"{k}: {v}")
+                formatted_v = str(v)
+            
+            parts.append(f"{col_name}: {formatted_v}")
         return " | ".join(parts)
     
     def _summarize_previous_sections(self, sections: Dict[str, str]) -> str:
