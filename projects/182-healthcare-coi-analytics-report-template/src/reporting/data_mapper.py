@@ -13,14 +13,14 @@ logger = logging.getLogger(__name__)
 class SectionDataMapper:
     """Maps section requirements to actual analysis data"""
     
-    def __init__(self, analysis_results: Dict[str, Any]):
+    def __init__(self, report_data: Dict[str, Any]):
         """
-        Initialize mapper with analysis results
+        Initialize mapper with report data
         
         Args:
-            analysis_results: Complete analysis results from pipeline
+            report_data: Prepared report data from report generator
         """
-        self.analysis_results = analysis_results
+        self.report_data = report_data
         self.data_map = self._build_data_map()
     
     def _build_data_map(self) -> Dict[str, Any]:
@@ -33,8 +33,8 @@ class SectionDataMapper:
         data_map = {}
         
         # Open Payments mappings
-        if 'open_payments' in self.analysis_results:
-            op = self.analysis_results['open_payments']
+        if 'open_payments' in self.report_data:
+            op = self.report_data['open_payments']
             data_map['overall_payment_metrics'] = op.get('overall_metrics', {})
             data_map['overall_metrics'] = op.get('overall_metrics', {})
             data_map['yearly_trends'] = op.get('yearly_trends', pd.DataFrame())
@@ -47,8 +47,8 @@ class SectionDataMapper:
             )
         
         # Prescription mappings
-        if 'prescriptions' in self.analysis_results:
-            rx = self.analysis_results['prescriptions']
+        if 'prescriptions' in self.report_data:
+            rx = self.report_data['prescriptions']
             data_map['prescription_metrics'] = rx.get('overall_metrics', {})
             data_map['top_drugs'] = rx.get('top_drugs', pd.DataFrame())
             data_map['high_cost_drugs'] = rx.get('high_cost_drugs', pd.DataFrame())
@@ -56,8 +56,8 @@ class SectionDataMapper:
             data_map['provider_type_analysis'] = rx.get('by_provider_type', pd.DataFrame())
         
         # Correlation mappings
-        if 'correlations' in self.analysis_results:
-            corr = self.analysis_results['correlations']
+        if 'correlations' in self.report_data:
+            corr = self.report_data['correlations']
             data_map['key_correlations'] = corr.get('drug_specific', pd.DataFrame())
             data_map['drug_correlations'] = corr.get('drug_specific', pd.DataFrame())
             data_map['influence_factors'] = self._extract_influence_factors(corr)
@@ -74,8 +74,8 @@ class SectionDataMapper:
             data_map['specific_drug_examples'] = self._get_specific_drug_examples(corr)
         
         # Risk Assessment mappings
-        if 'risk_assessment' in self.analysis_results:
-            risk = self.analysis_results['risk_assessment']
+        if 'risk_assessment' in self.report_data:
+            risk = self.report_data['risk_assessment']
             data_map['high_risk_indicators'] = risk.get('high_risk_indicators', [])
             data_map['compliance_scores'] = risk.get('compliance_scores', {})
             data_map['risk_distribution'] = risk.get('distribution', [])
@@ -85,8 +85,8 @@ class SectionDataMapper:
             data_map['provider_categories'] = risk.get('provider_categories', {})
         
         # Consecutive years analysis - properly extract the data
-        if 'open_payments' in self.analysis_results and 'consecutive_years' in self.analysis_results['open_payments']:
-            cy = self.analysis_results['open_payments']['consecutive_years']
+        if 'open_payments' in self.report_data and 'consecutive_years' in self.report_data['open_payments']:
+            cy = self.report_data['open_payments']['consecutive_years']
             if isinstance(cy, pd.DataFrame) and not cy.empty:
                 # Create a formatted summary for the LLM
                 year_summary = {}
@@ -114,6 +114,13 @@ class SectionDataMapper:
         data_map['data_sources'] = "CMS Open Payments Database, Medicare Part D Claims"
         data_map['analysis_period'] = "2020-2024"
         data_map['provider_count'] = data_map.get('overall_payment_metrics', {}).get('unique_providers', 0)
+        
+        # Data Lineage
+        if 'data_lineage' in self.report_data:
+            data_map['data_lineage_markdown'] = self.report_data['data_lineage'].get('markdown', 'Data lineage tracking is available.')
+            data_map['data_lineage_summary'] = self.report_data['data_lineage'].get('summary', {})
+        else:
+            data_map['data_lineage_markdown'] = ''
         
         return data_map
     

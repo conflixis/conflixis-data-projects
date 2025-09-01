@@ -13,6 +13,7 @@ import yaml
 from google.cloud import bigquery
 
 from .bigquery_connector import BigQueryConnector
+from .data_lineage import DataLineageTracker
 
 logger = logging.getLogger(__name__)
 
@@ -28,6 +29,13 @@ class DataLoader:
         self.processed_dir = self.data_dir / "processed"
         self.processed_dir.mkdir(parents=True, exist_ok=True)
         
+        # Lineage tracker (will be set by pipeline)
+        self.lineage_tracker: Optional[DataLineageTracker] = None
+        
+    def set_lineage_tracker(self, tracker: DataLineageTracker):
+        """Set the lineage tracker for this data loader"""
+        self.lineage_tracker = tracker
+    
     def _load_config(self, config_path: str) -> Dict[str, Any]:
         """Load configuration file"""
         config_file = Path(config_path)
@@ -52,7 +60,18 @@ class DataLoader:
         
         if not force_reload and cache_file.exists():
             logger.info("Loading provider NPIs from cache")
-            return pd.read_parquet(cache_file)
+            df = pd.read_parquet(cache_file)
+            
+            # Track lineage even when loading from cache
+            if self.lineage_tracker:
+                self.lineage_tracker.add_source_data('provider_npis', {
+                    'source_file': str(self.config['health_system']['npi_file']),
+                    'rows': len(df),
+                    'columns': list(df.columns),
+                    'loaded_from': 'cache'
+                })
+            
+            return df
         
         # Always load from local file
         npi_file = Path(self.config['health_system']['npi_file'])
@@ -76,6 +95,14 @@ class DataLoader:
         # Cache the result
         df.to_parquet(cache_file, index=False)
         logger.info(f"Loaded {len(df):,} provider NPIs")
+        
+        # Track lineage
+        if self.lineage_tracker:
+            self.lineage_tracker.add_source_data('provider_npis', {
+                'source_file': str(npi_file),
+                'rows': len(df),
+                'columns': list(df.columns)
+            })
         
         return df
     
@@ -247,6 +274,20 @@ class DataLoader:
         result = self.bq.client.query(count_query).result()
         row_count = list(result)[0].count
         logger.info(f"Created detailed table with {row_count:,} rows")
+        
+        # Track lineage for detailed table
+        if self.lineage_tracker:
+            self.lineage_tracker.add_intermediate_table('open_payments_detailed', {
+                'table': detailed_table_path.replace('`', ''),
+                'rows': row_count,
+                'derived_from': f"{self.config['bigquery']['project_id']}.{self.config['bigquery']['dataset']}.{self.config['bigquery']['tables']['open_payments']}",
+                'date_range': f"{start_year}-{end_year}"
+            })
+            self.lineage_tracker.add_source_data('open_payments', {
+                'table': f"{self.config['bigquery']['project_id']}.{self.config['bigquery']['dataset']}.{self.config['bigquery']['tables']['open_payments']}",
+                'rows': row_count,
+                'date_range': f"{start_year}-{end_year}"
+            })
         
         # Create summary table from detailed
         create_summary_query = f"""
@@ -484,6 +525,20 @@ class DataLoader:
         result = self.bq.client.query(count_query).result()
         row_count = list(result)[0].count
         logger.info(f"Created detailed table with {row_count:,} rows")
+        
+        # Track lineage for detailed table
+        if self.lineage_tracker:
+            self.lineage_tracker.add_intermediate_table('prescriptions_detailed', {
+                'table': detailed_table_path.replace('`', ''),
+                'rows': row_count,
+                'derived_from': f"{self.config['bigquery']['project_id']}.{self.config['bigquery']['dataset']}.{self.config['bigquery']['tables']['prescriptions']}",
+                'date_range': f"{start_year}-{end_year}"
+            })
+            self.lineage_tracker.add_source_data('prescriptions', {
+                'table': f"{self.config['bigquery']['project_id']}.{self.config['bigquery']['dataset']}.{self.config['bigquery']['tables']['prescriptions']}",
+                'rows': row_count,
+                'date_range': f"{start_year}-{end_year}"
+            })
         
         # Create summary table from detailed
         create_summary_query = f"""

@@ -15,7 +15,7 @@ logger = logging.getLogger(__name__)
 class BigQueryAnalyzer:
     """Run analysis directly in BigQuery without downloading large datasets"""
     
-    def __init__(self, bq_client: bigquery.Client, config: Dict, start_year: int, end_year: int):
+    def __init__(self, bq_client: bigquery.Client, config: Dict, start_year: int, end_year: int, lineage_tracker=None):
         """
         Initialize BigQuery analyzer
         
@@ -24,11 +24,13 @@ class BigQueryAnalyzer:
             config: Configuration dictionary
             start_year: Start year for analysis
             end_year: End year for analysis
+            lineage_tracker: Optional data lineage tracker
         """
         self.client = bq_client
         self.config = config
         self.start_year = start_year
         self.end_year = end_year
+        self.lineage_tracker = lineage_tracker
         
         # Table references
         temp_dataset = config['bigquery'].get('temp_dataset', 'temp')
@@ -44,7 +46,9 @@ class BigQueryAnalyzer:
         Returns:
             Dictionary with analysis results (small aggregated data only)
         """
+        from datetime import datetime
         results = {}
+        start_time = datetime.now()
         
         # Overall metrics (1 row)
         metrics_query = f"""
@@ -161,6 +165,19 @@ class BigQueryAnalyzer:
         FROM provider_years
         """
         results['consecutive_years'] = self._run_query(consecutive_query).iloc[0].to_dict()
+        
+        # Track lineage
+        if self.lineage_tracker:
+            execution_time = int((datetime.now() - start_time).total_seconds() * 1000)
+            self.lineage_tracker.add_analysis_step(
+                'open_payments_analysis',
+                [self.op_summary.replace('`', '')],
+                {
+                    'unique_providers': results['overall_metrics'].get('unique_providers', 0),
+                    'total_payments': results['overall_metrics'].get('total_payments', 0)
+                },
+                execution_time
+            )
         
         return results
     

@@ -254,21 +254,29 @@ methodology_note:
     - data_sources
     - analysis_period
     - provider_count
-  context: "Appendix: Methodology and Limitations"
+    - data_lineage_markdown
+  context: "Appendix: Methodology and Data Lineage"
   prompt: |
-    Write a brief methodology note.
+    Write a comprehensive methodology note that includes data lineage information.
     
     Data:
     {data}
     
-    Include:
-    - Data sources (CMS Open Payments, Medicare Part D)
-    - Analysis period
-    - Statistical approach (brief)
-    - Key limitations
+    Structure the appendix as follows:
+    
+    1. Methodology section covering:
+       - Data sources (CMS Open Payments, Medicare Part D)
+       - Analysis period
+       - Statistical approach (brief)
+       - Key limitations
+    
+    2. Data Lineage section:
+       Include the following data lineage information EXACTLY as provided:
+       {data_lineage_markdown}
     
     Keep technical but accessible.
-    Length: 150-200 words
+    Combine both sections naturally.
+    Length: 300-400 words total
 
 # EXECUTIVE SUMMARY - Generated LAST after all sections are complete
 executive_summary:

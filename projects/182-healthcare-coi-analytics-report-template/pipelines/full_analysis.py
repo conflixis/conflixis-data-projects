@@ -14,6 +14,7 @@ import traceback
 sys.path.append(str(Path(__file__).parent.parent))
 
 from src.data import BigQueryConnector, DataLoader, DataValidator
+from src.data.data_lineage import DataLineageTracker
 from src.analysis import (
     OpenPaymentsAnalyzer,
     PrescriptionAnalyzer,
@@ -44,6 +45,7 @@ class FullAnalysisPipeline:
         self.config_path = config_path
         self.data_loader = DataLoader(config_path)
         self.validator = DataValidator()
+        self.lineage_tracker = None
         self.results = {}
         
     def run(
@@ -71,6 +73,9 @@ class FullAnalysisPipeline:
         logger.info("STARTING FULL HEALTHCARE COI ANALYSIS PIPELINE")
         logger.info("="*60)
         
+        # Initialize lineage tracking
+        self.lineage_tracker = DataLineageTracker()
+        
         try:
             if use_bigquery_analysis:
                 # Use BigQuery for all analysis - minimal downloads
@@ -86,7 +91,8 @@ class FullAnalysisPipeline:
                     self.data_loader.bq.client,
                     self.data_loader.config,
                     self.data_loader.config['analysis']['start_year'],
-                    self.data_loader.config['analysis']['end_year']
+                    self.data_loader.config['analysis']['end_year'],
+                    lineage_tracker=self.lineage_tracker
                 )
                 
                 logger.info("  - Analyzing Open Payments...")
@@ -145,6 +151,14 @@ class FullAnalysisPipeline:
             logger.info("\n[Final Step] Generating report...")
             report_path = self._generate_report(report_style, output_format)
             self.results['report_path'] = report_path
+            
+            # Finalize lineage tracking and add to results
+            self.lineage_tracker.finalize()
+            self.results['data_lineage'] = self.lineage_tracker.get_lineage()
+            
+            # Save lineage to file
+            lineage_path = self.lineage_tracker.save_lineage()
+            self.results['lineage_path'] = str(lineage_path)
             
             # Print summary
             self._print_summary()
@@ -281,6 +295,9 @@ class FullAnalysisPipeline:
     
     def _create_bigquery_tables(self, force_reload: bool):
         """Create tables in BigQuery temp dataset without downloading data"""
+        # Pass lineage tracker to data loader
+        self.data_loader.set_lineage_tracker(self.lineage_tracker)
+        
         # Load provider NPIs (creates table in BigQuery)
         logger.info("Creating provider NPI table in BigQuery...")
         self.data_loader.load_provider_npis(force_reload)

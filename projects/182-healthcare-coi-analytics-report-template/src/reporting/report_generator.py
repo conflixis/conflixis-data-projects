@@ -158,6 +158,17 @@ class ReportGenerator:
                 'vulnerability': spec.get('specialty_vulnerability', pd.DataFrame())
             }
         
+        # Format Data Lineage
+        if 'data_lineage' in analysis_results:
+            from ..data.data_lineage import DataLineageTracker
+            # Create a temp tracker to use the markdown generation method
+            temp_tracker = DataLineageTracker()
+            temp_tracker.lineage = analysis_results['data_lineage']
+            data['data_lineage'] = {
+                'summary': temp_tracker.get_summary(),
+                'markdown': temp_tracker.generate_lineage_markdown()
+            }
+        
         return data
     
     def _format_metrics(self, metrics: Dict[str, Any]) -> Dict[str, str]:
