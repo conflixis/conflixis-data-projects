@@ -111,8 +111,9 @@ class DataLoader:
         start_year: Optional[int] = None,
         end_year: Optional[int] = None,
         force_reload: bool = False,
-        summary_only: bool = False
-    ) -> pd.DataFrame:
+        summary_only: bool = False,
+        create_only: bool = False
+    ) -> Optional[pd.DataFrame]:
         """
         Load Open Payments data for specified providers and years
         Uses BigQuery temp dataset to avoid memory issues
@@ -144,6 +145,11 @@ class DataLoader:
             self._create_open_payments_tables(start_year, end_year, detailed_table_path, summary_table_path)
         else:
             logger.info(f"Using existing Open Payments tables in BigQuery")
+        
+        # If create_only, we're done - don't download any data
+        if create_only:
+            logger.info("Tables created in BigQuery temp dataset, skipping data download")
+            return None
         
         # Query from BigQuery table instead of loading all data
         if summary_only:
@@ -332,8 +338,9 @@ class DataLoader:
         start_year: Optional[int] = None,
         end_year: Optional[int] = None,
         force_reload: bool = False,
-        summary_only: bool = False
-    ) -> pd.DataFrame:
+        summary_only: bool = False,
+        create_only: bool = False
+    ) -> Optional[pd.DataFrame]:
         """
         Load Medicare Part D prescription data
         Uses BigQuery temp dataset to avoid memory issues
@@ -343,9 +350,10 @@ class DataLoader:
             end_year: End year for data
             force_reload: Force reload from BigQuery
             summary_only: Return aggregated summary instead of detailed data
+            create_only: Only create tables in BigQuery, don't download data
             
         Returns:
-            DataFrame with prescription data (summary or detailed)
+            DataFrame with prescription data (summary or detailed), or None if create_only
         """
         start_year = start_year or self.config['analysis']['start_year']
         end_year = end_year or self.config['analysis']['end_year']
@@ -365,6 +373,11 @@ class DataLoader:
             self._create_prescriptions_tables(start_year, end_year, detailed_table_path, summary_table_path)
         else:
             logger.info(f"Using existing Prescriptions tables in BigQuery")
+        
+        # If create_only, we're done - don't download any data
+        if create_only:
+            logger.info("Tables created in BigQuery temp dataset, skipping data download")
+            return None
         
         # Query from BigQuery table instead of loading all data
         if summary_only:

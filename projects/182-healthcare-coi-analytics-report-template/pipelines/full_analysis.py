@@ -21,6 +21,7 @@ from src.analysis import (
     RiskScorer,
     SpecialtyAnalyzer
 )
+from src.analysis.bigquery_analysis import BigQueryAnalyzer
 from src.reporting import ReportGenerator, VisualizationGenerator
 
 logging.basicConfig(
@@ -50,7 +51,8 @@ class FullAnalysisPipeline:
         force_reload: bool = False,
         generate_visualizations: bool = True,
         report_style: str = "investigative",
-        output_format: str = "markdown"
+        output_format: str = "markdown",
+        use_bigquery_analysis: bool = True
     ) -> Dict[str, Any]:
         """
         Run complete analysis pipeline
@@ -60,6 +62,7 @@ class FullAnalysisPipeline:
             generate_visualizations: Whether to generate charts
             report_style: Style of report to generate
             output_format: Output format for report
+            use_bigquery_analysis: Use BigQuery for analysis (no large downloads)
             
         Returns:
             Dictionary with analysis results and report path
@@ -69,35 +72,69 @@ class FullAnalysisPipeline:
         logger.info("="*60)
         
         try:
-            # Step 1: Load and validate data
-            logger.info("\n[Step 1/7] Loading and validating data...")
-            data = self._load_and_validate_data(force_reload)
-            
-            # Step 2: Analyze Open Payments
-            logger.info("\n[Step 2/7] Analyzing Open Payments...")
-            self.results['open_payments'] = self._analyze_open_payments(data['payments'])
-            
-            # Step 3: Analyze Prescriptions
-            logger.info("\n[Step 3/7] Analyzing prescription patterns...")
-            self.results['prescriptions'] = self._analyze_prescriptions(data['prescriptions'])
-            
-            # Step 4: Analyze Correlations
-            logger.info("\n[Step 4/7] Analyzing payment-prescription correlations...")
-            self.results['correlations'] = self._analyze_correlations(
-                data['payments'], data['prescriptions']
-            )
-            
-            # Step 5: Risk Assessment
-            logger.info("\n[Step 5/7] Performing risk assessment...")
-            self.results['risk_assessment'] = self._assess_risks(
-                data['payments'], data['prescriptions']
-            )
-            
-            # Step 6: Specialty Analysis
-            logger.info("\n[Step 6/7] Analyzing specialty patterns...")
-            self.results['specialty_analysis'] = self._analyze_specialties(
-                data['payments'], data['prescriptions']
-            )
+            if use_bigquery_analysis:
+                # Use BigQuery for all analysis - minimal downloads
+                logger.info("\n[Using BigQuery Analysis - No Large Downloads]")
+                
+                # Step 1: Create tables in BigQuery (no download)
+                logger.info("\n[Step 1/7] Creating BigQuery tables...")
+                self._create_bigquery_tables(force_reload)
+                
+                # Step 2-5: Run all analysis in BigQuery
+                logger.info("\n[Step 2-5/7] Running analysis in BigQuery...")
+                bq_analyzer = BigQueryAnalyzer(
+                    self.data_loader.bq.client,
+                    self.data_loader.config,
+                    self.data_loader.config['analysis']['start_year'],
+                    self.data_loader.config['analysis']['end_year']
+                )
+                
+                logger.info("  - Analyzing Open Payments...")
+                self.results['open_payments'] = bq_analyzer.analyze_open_payments()
+                
+                logger.info("  - Analyzing Prescriptions...")
+                self.results['prescriptions'] = bq_analyzer.analyze_prescriptions()
+                
+                logger.info("  - Analyzing Correlations...")
+                self.results['correlations'] = bq_analyzer.analyze_correlations()
+                
+                logger.info("  - Performing Risk Assessment...")
+                self.results['risk_assessment'] = bq_analyzer.analyze_risk_assessment()
+                
+                # Skip specialty analysis for now (can be added to BigQuery analyzer)
+                self.results['specialty_analysis'] = {}
+                
+            else:
+                # Original approach - downloads data to pandas
+                # Step 1: Load and validate data
+                logger.info("\n[Step 1/7] Loading and validating data...")
+                data = self._load_and_validate_data(force_reload)
+                
+                # Step 2: Analyze Open Payments
+                logger.info("\n[Step 2/7] Analyzing Open Payments...")
+                self.results['open_payments'] = self._analyze_open_payments(data['payments'])
+                
+                # Step 3: Analyze Prescriptions
+                logger.info("\n[Step 3/7] Analyzing prescription patterns...")
+                self.results['prescriptions'] = self._analyze_prescriptions(data['prescriptions'])
+                
+                # Step 4: Analyze Correlations
+                logger.info("\n[Step 4/7] Analyzing payment-prescription correlations...")
+                self.results['correlations'] = self._analyze_correlations(
+                    data['payments'], data['prescriptions']
+                )
+                
+                # Step 5: Risk Assessment
+                logger.info("\n[Step 5/7] Performing risk assessment...")
+                self.results['risk_assessment'] = self._assess_risks(
+                    data['payments'], data['prescriptions']
+                )
+                
+                # Step 6: Specialty Analysis
+                logger.info("\n[Step 6/7] Analyzing specialty patterns...")
+                self.results['specialty_analysis'] = self._analyze_specialties(
+                    data['payments'], data['prescriptions']
+                )
             
             # Step 7: Generate visualizations
             if generate_visualizations:
@@ -241,6 +278,32 @@ class FullAnalysisPipeline:
         
         logger.info(f"Report generated: {report_path}")
         return report_path
+    
+    def _create_bigquery_tables(self, force_reload: bool):
+        """Create tables in BigQuery temp dataset without downloading data"""
+        # Load provider NPIs (creates table in BigQuery)
+        logger.info("Creating provider NPI table in BigQuery...")
+        self.data_loader.load_provider_npis(force_reload)
+        
+        # Create Open Payments tables (detailed and summary)
+        logger.info("Creating Open Payments tables in BigQuery temp dataset...")
+        # This will create tables but not download the data
+        self.data_loader.load_open_payments(
+            force_reload=force_reload,
+            summary_only=False,  # Creates both detailed and summary tables
+            create_only=True    # Only create tables, don't download data
+        )
+        
+        # Create Prescriptions tables (detailed and summary)
+        logger.info("Creating Prescriptions tables in BigQuery temp dataset...")
+        # This will create tables but not download the data
+        self.data_loader.load_prescriptions(
+            force_reload=force_reload,
+            summary_only=False,  # Creates both detailed and summary tables
+            create_only=True    # Only create tables, don't download data
+        )
+        
+        logger.info("All BigQuery tables created successfully")
     
     def _print_summary(self):
         """Print analysis summary"""
