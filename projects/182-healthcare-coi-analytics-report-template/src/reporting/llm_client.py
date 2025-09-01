@@ -72,11 +72,15 @@ class ClaudeLLMClient:
         similar to ProPublica or Wall Street Journal investigations. Use specific numbers and avoid 
         academic language or citations.
         
+        CRITICAL: The data provided is from years 2020-2024. You MUST use these actual years in your narrative 
+        and tables. DO NOT use years like 2014-2018 or any other years not present in the data.
+        
         IMPORTANT: You MUST include markdown tables as specified in the prompts. Tables should:
         - Have clear headers with pipes (|) as separators
         - Include separator line with dashes (e.g., |---|---|---|)
         - Be integrated naturally within the narrative, not just appended at the end
         - Show actual data values from the provided data
+        - Use the EXACT years from the data (2020-2024)
         - Be properly formatted for markdown rendering"""
         
         # Generate with retries
@@ -144,8 +148,15 @@ class ClaudeLLMClient:
                     cols = list(value.columns)
                     formatted_parts.append(f"  Columns: {', '.join(cols)}")
                     
-                    # Show first 10 rows as structured data
-                    df_dict = value.head(10).to_dict('records')
+                    # Check if index has meaningful name (like payment_year)
+                    if value.index.name:
+                        formatted_parts.append(f"  Index: {value.index.name}")
+                        # Reset index to include it as a column in the data
+                        value_with_index = value.reset_index()
+                        df_dict = value_with_index.head(10).to_dict('records')
+                    else:
+                        df_dict = value.head(10).to_dict('records')
+                    
                     formatted_parts.append("  Sample data (first 10 rows):")
                     for i, row in enumerate(df_dict, 1):
                         formatted_parts.append(f"    Row {i}: {self._format_row(row)}")
@@ -166,8 +177,13 @@ class ClaudeLLMClient:
             # Format value
             if pd.isna(v):
                 formatted_v = "N/A"
+            elif k in ['payment_year', 'year', 'Year']:
+                # Keep years as integers
+                formatted_v = str(int(v))
             elif isinstance(v, (int, float)):
-                if v > 1000000:
+                if k.lower() in ['providers', 'count', 'transactions']:
+                    formatted_v = f"{int(v):,}"
+                elif v > 1000000:
                     formatted_v = f"${v/1000000:.1f}M"
                 elif v > 1000:
                     formatted_v = f"${v:,.0f}"
