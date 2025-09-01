@@ -351,7 +351,7 @@ class SpecialtyAnalyzer:
                         vulnerability_score += 30
                     
                     # High payment penetration
-                    if 'payment_penetration' in spec_overview and spec_overview['payment_penetration'] > 75:
+                    if 'payment_penetration' in spec_overview and pd.notna(spec_overview['payment_penetration']) and spec_overview['payment_penetration'] > 75:
                         vulnerability_score += 20
                     
                     # Significant p-value

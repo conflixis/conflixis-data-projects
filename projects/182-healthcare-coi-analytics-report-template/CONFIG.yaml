@@ -2,9 +2,9 @@
 # Edit this file to customize the analysis for your health system
 
 health_system:
-  name: "Regional Academic Medical Center"  # Replace with your health system name
-  short_name: "RAMC"     # Abbreviation for file naming
-  npi_file: "data/inputs/provider_npis.csv"  # Path to your NPI list
+  name: "Springfield Health"  # Replace with your health system name
+  short_name: "springfield"     # Abbreviation for file naming
+  npi_file: "data/inputs/springfieldhealth-npis.csv"  # Path to your NPI list
   
 analysis:
   start_year: 2020
@@ -29,11 +29,11 @@ bigquery:
   tables:
     open_payments: "op_general_all_aggregate_static"
     prescriptions: "PHYSICIAN_RX_2020_2024"  # Medicare Part D claims data
-    provider_npis: "{{SHORT_NAME}}_provider_npis"  # Will be created
+    provider_npis: "springfield_provider_npis"  # Will be created
   
   # Query limits
   max_rows: 1000000
-  timeout_seconds: 300
+  timeout_seconds: 600
 
 # Risk Assessment Thresholds
 thresholds:

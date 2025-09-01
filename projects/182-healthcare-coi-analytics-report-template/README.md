@@ -1,4 +1,4 @@
-# Healthcare COI Analytics Template v2.0
+# Healthcare COI Analytics Template v2.1
 
 A professional, enterprise-grade template for analyzing healthcare provider conflicts of interest using CMS Open Payments and Medicare Part D prescription data.
 
@@ -16,9 +16,12 @@ A professional, enterprise-grade template for analyzing healthcare provider conf
 - **Data Visualization**: Publication-ready charts with Conflixis branding
 
 ### Key Analyses
-- Payment-prescription correlations with influence factors (up to 400x+)
-- Provider vulnerability assessment (MD vs NP/PA differential analysis)
-- Payment tier ROI analysis (revealing 2,300x returns on <$100 payments)
+- Payment-prescription correlations with influence factors (up to 4,000,000%+ for NPs)
+- **Provider vulnerability assessment with real data enrichment from PHYSICIANS_OVERVIEW**
+  - Nurse Practitioners: 4,136,372% prescription cost increase with payments
+  - Physician Assistants: 3,488% increase
+  - Physicians: 354% increase (baseline)
+- Payment tier ROI analysis (revealing 3,475x returns on <$100 payments)
 - Temporal trend analysis with year-over-year growth metrics
 - Specialty-specific vulnerability patterns
 - Risk scoring and anomaly detection using Isolation Forest
@@ -30,7 +33,7 @@ A professional, enterprise-grade template for analyzing healthcare provider conf
 ├── src/                          # Core analysis modules
 │   ├── data/                     # Data management
 │   │   ├── bigquery_connector.py # Singleton BigQuery client with caching
-│   │   ├── data_loader.py        # Unified data loading
+│   │   ├── data_loader.py        # Unified data loading with provider type enrichment
 │   │   └── data_validator.py     # Data quality validation
 │   ├── analysis/                 # Analysis engines
 │   │   ├── open_payments.py      # Payment analysis
@@ -41,7 +44,7 @@ A professional, enterprise-grade template for analyzing healthcare provider conf
 │   └── reporting/                # Report generation
 │       ├── report_generator.py   # Multi-format reports
 │       ├── llm_client.py         # Claude API integration
-│       ├── data_mapper.py        # Maps analysis data to report sections
+│       ├── data_mapper.py        # Maps analysis data (no hardcoded fallbacks)
 │       ├── output_validator.py   # Validates LLM output for accuracy
 │       ├── section_prompts.yaml  # LLM prompts for each section
 │       └── visualizations.py     # Chart generation
@@ -240,6 +243,25 @@ Options:
   --output PATH  Output file path (supports .csv and .parquet)
 ```
 
+## 🎯 Latest Updates (v2.1)
+
+### Provider Type Enrichment
+- **Automatic provider type detection** from PHYSICIANS_OVERVIEW table
+- Maps credentials (MD, DO, NP, PA, etc.) to provider categories
+- Enables differential vulnerability analysis across provider types
+- Real data shows NPs have 4.1M% increase in Rx costs with payments
+
+### Zero Fallback Policy
+- **ALL hardcoded defaults removed** from data_mapper.py
+- System returns empty data rather than fictional numbers
+- LLM prompted to show "[data not available]" when missing
+- Prevents hallucination of statistics like "2,343 providers"
+
+### Real Analysis Results
+- 81 providers received $227,606 across 2,451 transactions (2020-2024)
+- Provider vulnerability analysis based on actual prescription patterns
+- Tables in every section populated with real BigQuery data
+
 ## 🛡️ Anti-Hallucination Measures
 
 The system implements multiple layers of protection against LLM hallucination:
@@ -345,10 +367,26 @@ reports:
 The system uses Claude API to generate compelling narratives from data analysis:
 
 1. **Data Analysis**: Python scripts analyze BigQuery data
-2. **Data Mapping**: `data_mapper.py` prepares data for each section
-3. **LLM Generation**: Claude generates narrative with markdown tables
-4. **Validation**: Output validator checks for accuracy
-5. **Assembly**: Final report combines all sections
+2. **Provider Type Enrichment**: Prescription data joined with PHYSICIANS_OVERVIEW for provider types
+3. **Data Mapping**: `data_mapper.py` prepares data (no fallbacks - returns empty if unavailable)
+4. **LLM Generation**: Claude generates narrative with markdown tables from actual data
+5. **Validation**: Output validator checks for accuracy
+6. **Assembly**: Final report combines all sections
+
+### Data Pipeline
+```sql
+-- Provider type enrichment during prescription loading
+WITH provider_info AS (
+    SELECT NPI, CREDENTIAL,
+    CASE 
+        WHEN CREDENTIAL IN ('MD', 'DO') THEN 'Physician'
+        WHEN CREDENTIAL IN ('NP', 'FNP', 'APRN') THEN 'Nurse Practitioner'
+        WHEN CREDENTIAL IN ('PA', 'PA-C') THEN 'Physician Assistant'
+        ELSE 'Other'
+    END AS provider_type_category
+    FROM PHYSICIANS_OVERVIEW
+)
+```
 
 ### Section Configuration
 Each section in `section_prompts.yaml` includes:
@@ -389,6 +427,15 @@ The LLM automatically generates markdown tables based on data:
 - **Issue**: LLM invents statistics
 - **Fix**: Multi-layer validation system prevents this
 
+#### Provider Type Data Missing
+- **Issue**: Section 4 shows "[data not available]" despite having data
+- **Fix**: Ensure prescriptions are enriched with PHYSICIANS_OVERVIEW
+- **Verify**: Check `provider_type` column exists in prescription data
+
+#### BigQuery Type Mismatch
+- **Issue**: "No matching signature for operator = for argument types: INT64, STRING"
+- **Fix**: Cast NPIs to STRING in JOIN conditions
+
 ## Support
 For questions or issues, contact the Conflixis Data Analytics team.
 
@@ -396,6 +443,22 @@ For questions or issues, contact the Conflixis Data Analytics team.
 Proprietary - Conflixis Inc.
 
 ---
-*Template Version: 2.0.0*  
+*Template Version: 2.1.0*  
 *Based on DA-175 Corewell Health Analysis*  
-*Refactored with modular architecture and CLI interface*
+*Enhanced with provider type enrichment and zero-fallback policy*
+
+## Changelog
+
+### v2.1.0 (2025-09-01)
+- Added provider type enrichment from PHYSICIANS_OVERVIEW table
+- Removed ALL hardcoded fallback values to ensure data accuracy
+- Fixed provider vulnerability analysis with real differential data
+- Enhanced anti-hallucination measures with zero-fallback policy
+- Added SQL JOIN fixes for BigQuery type mismatches
+- Improved prompt engineering to handle missing data gracefully
+
+### v2.0.0
+- Refactored with modular architecture
+- Added CLI interface
+- Integrated LLM-powered report generation
+- Implemented anti-hallucination safeguards

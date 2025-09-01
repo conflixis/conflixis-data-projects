@@ -132,15 +132,23 @@ class FullAnalysisPipeline:
         data['providers'] = self.data_loader.load_provider_npis(force_reload)
         self.validator.validate_provider_data(data['providers'])
         
-        # Load Open Payments
+        # Load Open Payments - use summary for memory efficiency
         logger.info("Loading Open Payments data...")
-        data['payments'] = self.data_loader.load_open_payments(force_reload=force_reload)
+        data['payments'] = self.data_loader.load_open_payments(
+            force_reload=force_reload,
+            summary_only=True  # Use summary to avoid memory issues
+        )
         self.validator.validate_payment_data(data['payments'])
+        logger.info(f"Loaded {len(data['payments']):,} Open Payments summary records")
         
-        # Load Prescriptions
+        # Load Prescriptions - use summary for memory efficiency  
         logger.info("Loading prescription data...")
-        data['prescriptions'] = self.data_loader.load_prescriptions(force_reload=force_reload)
+        data['prescriptions'] = self.data_loader.load_prescriptions(
+            force_reload=force_reload,
+            summary_only=True  # Use summary to avoid memory issues
+        )
         self.validator.validate_prescription_data(data['prescriptions'])
+        logger.info(f"Loaded {len(data['prescriptions']):,} prescription summary records")
         
         # Print validation summary
         self.validator.print_summary()

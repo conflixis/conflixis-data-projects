@@ -126,19 +126,25 @@ provider_vulnerability:
     Data provided:
     {data}
     
-    Focus on:
-    1. PA and NP heightened vulnerability (use specific % increases like "407% increase")
-    2. Comparison with physician baseline
+    IMPORTANT: Check if provider type data is available:
+    - If pa_influence_metrics, np_influence_metrics, or md_baseline are empty, write a brief section explaining
+      that provider type vulnerability analysis could not be performed due to data limitations
+    - Suggest this as a critical area for future investigation
+    - DO NOT make up percentages or influence factors
+    
+    If data IS available, focus on:
+    1. PA and NP heightened vulnerability (use ONLY the specific % increases from the data provided)
+    2. Comparison with physician baseline (from actual data)
     3. Implications for supervision and oversight
     4. Why mid-level providers may be more susceptible
     
-    REQUIRED TABLE:
-    Create provider type vulnerability comparison:
+    REQUIRED TABLE (only create if actual data exists):
     | Provider Type | Baseline Rx Value | With Payments Rx Value | Influence Increase % | Vulnerability Score |
     
-    Key message: Mid-level providers show disproportionate influence from payments.
-    Use terms like "heightened susceptibility" and "vulnerability gap"
-    Integrate table within narrative.
+    If no data available, state: "[Provider type vulnerability data not available in current analysis]"
+    
+    Key message: Mid-level providers show disproportionate influence from payments (ONLY if data supports this).
+    Use terms like "heightened susceptibility" and "vulnerability gap" ONLY with real data.
     Length: 300-400 words
 
 payment_tiers:

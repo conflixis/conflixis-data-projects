@@ -179,33 +179,36 @@ class SectionDataMapper:
         if 'provider_type_vulnerability' in corr:
             df = corr['provider_type_vulnerability']
             if isinstance(df, pd.DataFrame) and not df.empty:
-                pa_data = df[df['provider_type'] == 'PA'] if 'provider_type' in df.columns else pd.DataFrame()
+                # Look for Physician Assistant in provider_type column
+                pa_data = df[df['provider_type'] == 'Physician Assistant'] if 'provider_type' in df.columns else pd.DataFrame()
                 if not pa_data.empty:
                     return pa_data.iloc[0].to_dict()
         
-        return {'influence_increase': 407.6}  # Default from Corewell report
+        return {}  # Return empty dict if no data available
     
     def _extract_np_metrics(self, corr: Dict) -> Dict[str, Any]:
         """Extract NP-specific metrics"""
         if 'provider_type_vulnerability' in corr:
             df = corr['provider_type_vulnerability']
             if isinstance(df, pd.DataFrame) and not df.empty:
-                np_data = df[df['provider_type'] == 'NP'] if 'provider_type' in df.columns else pd.DataFrame()
+                # Look for Nurse Practitioner in provider_type column
+                np_data = df[df['provider_type'] == 'Nurse Practitioner'] if 'provider_type' in df.columns else pd.DataFrame()
                 if not np_data.empty:
                     return np_data.iloc[0].to_dict()
         
-        return {'influence_increase': 350.0}  # Estimated default
+        return {}  # Return empty dict if no data available
     
     def _extract_md_baseline(self, corr: Dict) -> Dict[str, Any]:
         """Extract MD baseline metrics"""
         if 'provider_type_vulnerability' in corr:
             df = corr['provider_type_vulnerability']
             if isinstance(df, pd.DataFrame) and not df.empty:
-                md_data = df[df['provider_type'] == 'MD'] if 'provider_type' in df.columns else pd.DataFrame()
+                # Look for Physician in provider_type column
+                md_data = df[df['provider_type'] == 'Physician'] if 'provider_type' in df.columns else pd.DataFrame()
                 if not md_data.empty:
                     return md_data.iloc[0].to_dict()
         
-        return {'baseline_prescribing': 100.0}
+        return {}  # Return empty dict if no data available
     
     def _get_specific_drug_examples(self, corr: Dict) -> List[Dict]:
         """Get specific drug examples with high influence factors"""
@@ -223,14 +226,7 @@ class SectionDataMapper:
                         'roi': row.get('roi', 0)
                     })
         
-        # Add default examples if none found
-        if not examples:
-            examples = [
-                {'drug': 'KRYSTEXXA', 'influence_factor': 426, 'roi': 15000},
-                {'drug': 'OZEMPIC', 'influence_factor': 92, 'roi': 8500}
-            ]
-        
-        return examples
+        return examples  # Return empty list if no data available
     
     def _calculate_sustained_impact(self, cy_df: pd.DataFrame) -> float:
         """Calculate impact of sustained relationships"""
@@ -249,7 +245,7 @@ class SectionDataMapper:
                     if one_year_avg > 0:
                         return five_year_avg / one_year_avg
         
-        return 3.5  # Default multiplier
+        return 0.0  # Return 0 if no data available
     
     def _get_default_value(self, key: str) -> Any:
         """Get default value for missing data key"""
