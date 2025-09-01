@@ -9,7 +9,10 @@ A professional, enterprise-grade template for analyzing healthcare provider conf
 - **Advanced Statistical Analysis**: Correlation analysis with confidence intervals, effect sizes, and multiple hypothesis testing
 - **ML-Based Risk Scoring**: Anomaly detection and multi-factor risk assessment using machine learning
 - **Specialty-Specific Analysis**: Vulnerability assessment by medical specialty and provider type
-- **Professional Reporting**: Multiple report formats (investigative, compliance, executive)
+- **LLM-Powered Narrative Generation**: Claude API integration for investigative journalism-style reports with anti-hallucination safeguards
+- **Modular Section Regeneration**: Ability to regenerate individual report sections without re-running full analysis
+- **Data Accuracy Validation**: Multi-layer validation to ensure LLM uses only actual data, never fictional numbers
+- **Professional Reporting**: Multiple report formats (investigative, compliance, executive) with markdown tables
 - **Data Visualization**: Publication-ready charts with Conflixis branding
 
 ### Key Analyses
@@ -37,9 +40,14 @@ A professional, enterprise-grade template for analyzing healthcare provider conf
 │   │   └── specialty_analysis.py # Specialty patterns
 │   └── reporting/                # Report generation
 │       ├── report_generator.py   # Multi-format reports
+│       ├── llm_client.py         # Claude API integration
+│       ├── data_mapper.py        # Maps analysis data to report sections
+│       ├── output_validator.py   # Validates LLM output for accuracy
+│       ├── section_prompts.yaml  # LLM prompts for each section
 │       └── visualizations.py     # Chart generation
 ├── pipelines/                    # Analysis orchestration
 │   └── full_analysis.py          # Complete pipeline
+├── regenerate_section.py         # Regenerate individual report sections
 ├── config/                       # Configuration files
 ├── data/                        # Data directories
 ├── reports/                     # Generated reports
@@ -107,6 +115,25 @@ python cli.py info
 python cli.py clean --days 7
 ```
 
+#### Regenerating Individual Sections
+If you need to regenerate a specific section of an existing report (e.g., to improve the executive summary):
+
+```bash
+# Regenerate just the executive summary
+python regenerate_section.py executive_summary reports/existing_report.md reports/updated_report.md
+
+# Available sections:
+# - executive_summary
+# - payment_overview
+# - prescription_patterns
+# - influence_analysis
+# - payment_tiers
+# - provider_types
+# - consecutive_years
+# - risk_assessment
+# - recommendations
+```
+
 ### 5. View Results
 Reports are generated in `data/output/`:
 - `ramc_coi_report_[timestamp].md` - Full investigative report
@@ -134,10 +161,15 @@ Reports are generated in `data/output/`:
 │   │   └── specialty_analysis.py # Specialty patterns
 │   └── reporting/                # Report generation
 │       ├── report_generator.py   # Multi-format reports
+│       ├── llm_client.py         # Claude API integration
+│       ├── data_mapper.py        # Maps analysis data to report sections
+│       ├── output_validator.py   # Validates LLM output for accuracy
+│       ├── section_prompts.yaml  # LLM prompts for each section
 │       └── visualizations.py     # Chart generation
 │
 ├── pipelines/                    # Analysis orchestration
 │   └── full_analysis.py          # Complete pipeline
+├── regenerate_section.py         # Regenerate individual report sections
 │
 ├── config/                       # Configuration files
 │   └── queries/                  # SQL query templates
@@ -208,6 +240,46 @@ Options:
   --output PATH  Output file path (supports .csv and .parquet)
 ```
 
+## 🛡️ Anti-Hallucination Measures
+
+The system implements multiple layers of protection against LLM hallucination:
+
+### 1. System-Level Constraints
+- **Explicit Year Guidance**: LLM is told data spans 2020-2024 only
+- **Number Validation**: Every statistic must come from provided data
+- **Fallback Requirements**: LLM must write "[data not available]" when data is missing
+
+### 2. Prompt Engineering
+- **CRITICAL warnings** in prompts about using exact numbers
+- **FORBIDDEN list** of common hallucinations (e.g., fictional provider counts)
+- **REQUIRED TABLES** specifications with exact data fields
+
+### 3. Data Formatting
+- **Clear Data Labels**: "=== ACTUAL DATA (USE THESE EXACT NUMBERS) ==="
+- **Explicit Values**: Numbers pre-formatted with exact precision
+- **Sample Rows**: First 10 rows shown to guide table creation
+
+### 4. Output Validation
+- **OutputValidator class** checks for known hallucination patterns
+- **Number verification** against source data
+- **Table structure validation** for required columns
+
+### Example Anti-Hallucination Prompt:
+```yaml
+CRITICAL DATA ACCURACY REQUIREMENTS:
+1. Use ONLY the exact numbers provided in the data
+2. Every statistic MUST come directly from the provided data
+3. If a specific number is not in the data, write "[data not available]"
+4. Do NOT create hypothetical scenarios or example numbers
+5. The data is from years 2020-2024. Use ONLY these years.
+
+FORBIDDEN:
+- Making up provider counts
+- Creating fictional dollar amounts
+- Inventing multipliers or percentages
+- Adding example data or hypothetical cases
+```
+
 ## Customization
 
 ### Adding Custom Queries
@@ -227,7 +299,28 @@ prescription_risk:
 ```
 
 ### Custom Report Sections
-Add markdown templates to `templates/sections/` and update `CONFIG.yaml`:
+Add new sections by editing `src/reporting/section_prompts.yaml`:
+
+```yaml
+custom_section:
+  context: "Custom Analysis Section"
+  prompt: |
+    Generate a custom analysis section using the following data:
+    {data}
+    
+    REQUIRED TABLES:
+    1. Key Metrics Table
+       - Columns: Metric | Value | Change
+       - Include top 5 metrics
+  constraints:
+    max_length: 500
+    style: "investigative"
+  required_data:
+    - custom_metrics
+    - trend_data
+```
+
+Then update `CONFIG.yaml` to include your section:
 ```yaml
 reports:
   sections:
@@ -245,6 +338,56 @@ reports:
 ### Optional
 - **Commercial Claims**: Additional prescription data
 - **Provider Specialties**: If not in BigQuery
+
+## 📊 Report Generation System
+
+### LLM Integration
+The system uses Claude API to generate compelling narratives from data analysis:
+
+1. **Data Analysis**: Python scripts analyze BigQuery data
+2. **Data Mapping**: `data_mapper.py` prepares data for each section
+3. **LLM Generation**: Claude generates narrative with markdown tables
+4. **Validation**: Output validator checks for accuracy
+5. **Assembly**: Final report combines all sections
+
+### Section Configuration
+Each section in `section_prompts.yaml` includes:
+- **context**: Section purpose
+- **prompt**: Template with `{data}` placeholder
+- **constraints**: Length and style requirements
+- **required_data**: Data keys needed
+- **REQUIRED TABLES**: Specific table formats
+
+### Markdown Table Generation
+The LLM automatically generates markdown tables based on data:
+
+```markdown
+| Provider Type | Influence Increase | Vulnerability Score |
+|---------------|-------------------|--------------------|
+| PA            | 407.6%            | High               |
+| NP            | 223.3%            | High               |
+| MD            | Baseline          | Low                |
+```
+
+## 🔧 Troubleshooting
+
+### Common Issues
+
+#### LLM Using Wrong Years
+- **Issue**: Report shows 2014-2018 instead of 2020-2024
+- **Fix**: System message explicitly states correct years
+
+#### Missing Tables in Sections
+- **Issue**: Sections lack data tables
+- **Fix**: REQUIRED TABLES specifications in prompts
+
+#### Executive Summary Quality
+- **Issue**: Poor executive summary
+- **Fix**: Use `regenerate_section.py` to regenerate just that section
+
+#### Hallucinated Numbers
+- **Issue**: LLM invents statistics
+- **Fix**: Multi-layer validation system prevents this
 
 ## Support
 For questions or issues, contact the Conflixis Data Analytics team.

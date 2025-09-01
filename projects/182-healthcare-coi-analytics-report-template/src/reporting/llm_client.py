@@ -21,7 +21,7 @@ logger = logging.getLogger(__name__)
 class ClaudeLLMClient:
     """Client for interacting with Claude API for report generation"""
     
-    def __init__(self, model: str = "claude-3-opus-20240229"):
+    def __init__(self, model: str = "claude-sonnet-4-20250514"):
         """
         Initialize Claude client
         
@@ -112,7 +112,7 @@ class ClaudeLLMClient:
                 response = self.client.messages.create(
                     model=self.model,
                     max_tokens=section_config.get('constraints', {}).get('max_length', 500) * 4,  # Approximate tokens
-                    temperature=0.7,
+                    temperature=0.1,
                     system=system_message,
                     messages=[
                         {"role": "user", "content": prompt}
