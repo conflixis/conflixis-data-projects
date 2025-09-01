@@ -309,7 +309,14 @@ class CorrelationAnalyzer:
                 })
         
         vulnerability_df = pd.DataFrame(vulnerability)
-        vulnerability_df = vulnerability_df.sort_values('rx_cost_influence_pct', ascending=False)
+        if not vulnerability_df.empty and 'rx_cost_influence_pct' in vulnerability_df.columns:
+            vulnerability_df = vulnerability_df.sort_values('rx_cost_influence_pct', ascending=False)
+        else:
+            # Return empty DataFrame with expected structure
+            vulnerability_df = pd.DataFrame(columns=['provider_type', 'providers_with_payments', 
+                                                    'providers_without_payments', 'avg_payments_received', 
+                                                    'avg_rx_with_payments', 'avg_rx_without_payments',
+                                                    'rx_cost_influence_pct', 'rx_volume_influence_pct'])
         
         logger.info(f"Analyzed vulnerability for {len(vulnerability_df)} provider types")
         return vulnerability_df
@@ -434,7 +441,11 @@ class CorrelationAnalyzer:
                 self.merged_data['received_payments']
             )
             
-            chi2, p_value, dof, expected = stats.chi2_contingency(contingency)
+            # Only perform chi-square if we have data
+            if contingency.size > 0 and contingency.shape[0] > 1 and contingency.shape[1] > 1:
+                chi2, p_value, dof, expected = stats.chi2_contingency(contingency)
+            else:
+                chi2, p_value, dof, expected = 0, 1.0, 0, None
             
             tests['chi_square_specialty_payment'] = {
                 'chi2_statistic': chi2,

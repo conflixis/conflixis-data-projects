@@ -332,11 +332,12 @@ class RiskScorer:
         ).round(1)
         
         # Add summary statistics
-        distribution = distribution.append({
+        summary_row = pd.DataFrame([{
             'risk_level': 'Mean Score',
             'provider_count': len(self.risk_scores),
             'percentage': self.risk_scores['composite_risk_score'].mean()
-        }, ignore_index=True)
+        }])
+        distribution = pd.concat([distribution, summary_row], ignore_index=True)
         
         return distribution
     

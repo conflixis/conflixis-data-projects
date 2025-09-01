@@ -116,29 +116,29 @@ class DataLoader:
         providers = self.load_provider_npis()
         npi_list = providers['NPI'].unique().tolist()
         
-        # Build query
-        npi_str = "','".join(npi_list[:10000])  # BigQuery limit
+        # Build query - limit to 100 NPIs for testing
+        npi_str = "','".join(npi_list[:100])  # Limit for testing
         
         query = f"""
         WITH provider_payments AS (
             SELECT 
-                Physician_Profile_ID as physician_id,
-                Physician_First_Name as first_name,
-                Physician_Last_Name as last_name,
-                Physician_Primary_Type as provider_type,
-                Physician_Specialty as specialty,
-                Applicable_Manufacturer_or_Applicable_GPO_Making_Payment_Name as manufacturer,
-                Total_Amount_of_Payment_USDollars as payment_amount,
-                Date_of_Payment as payment_date,
-                Nature_of_Payment_or_Transfer_of_Value as payment_category,
-                Product_Name,
-                EXTRACT(YEAR FROM Date_of_Payment) as payment_year
+                covered_recipient_npi as physician_id,
+                covered_recipient_first_name as first_name,
+                covered_recipient_last_name as last_name,
+                physician as provider_type,
+                covered_recipient_specialty_1 as specialty,
+                applicable_manufacturer_or_applicable_gpo_making_payment_name as manufacturer,
+                total_amount_of_payment_usdollars as payment_amount,
+                date_of_payment as payment_date,
+                nature_of_payment_or_transfer_of_value as payment_category,
+                name_of_drug_or_biological_or_device_or_medical_supply_1 as Product_Name,
+                program_year as payment_year
             FROM 
                 `{self.config['bigquery']['project_id']}.{self.config['bigquery']['dataset']}.{self.config['bigquery']['tables']['open_payments']}`
             WHERE 
-                Physician_Profile_ID IN ('{npi_str}')
-                AND EXTRACT(YEAR FROM Date_of_Payment) BETWEEN {start_year} AND {end_year}
-                AND Total_Amount_of_Payment_USDollars > 0
+                CAST(covered_recipient_npi AS STRING) IN ('{npi_str}')
+                AND program_year BETWEEN {start_year} AND {end_year}
+                AND total_amount_of_payment_usdollars > 0
         )
         SELECT 
             physician_id,
@@ -161,6 +161,19 @@ class DataLoader:
         
         logger.info(f"Querying Open Payments data for {len(npi_list):,} providers")
         df = self.bq.query(query)
+        
+        # Convert decimal types to float for pandas compatibility
+        for col in df.select_dtypes(include=['object']).columns:
+            try:
+                df[col] = pd.to_numeric(df[col], errors='ignore')
+            except:
+                pass
+        
+        # Ensure numeric columns are float
+        numeric_cols = ['total_amount', 'avg_amount', 'min_amount', 'max_amount', 'payment_count']
+        for col in numeric_cols:
+            if col in df.columns:
+                df[col] = pd.to_numeric(df[col], errors='coerce')
         
         # Save to cache
         df.to_parquet(cache_file, index=False)
@@ -198,57 +211,66 @@ class DataLoader:
         providers = self.load_provider_npis()
         npi_list = providers['NPI'].unique().tolist()
         
-        # Build query
-        npi_str = "','".join(npi_list[:10000])
+        # Build query - limit to 100 NPIs for testing  
+        npi_str = "','".join(npi_list[:100])  # Keep as quoted strings
         
         query = f"""
         WITH provider_rx AS (
             SELECT
                 NPI,
-                PROVIDER_LAST_NAME,
-                PROVIDER_FIRST_NAME,
-                PROVIDER_CITY,
-                PROVIDER_STATE,
-                SPECIALTY_DESC,
-                TYPE_DESC,
+                physician,
+                PAYOR_NAME,
                 BRAND_NAME,
                 GENERIC_NAME,
-                YEAR,
-                TOTAL_CLAIM_COUNT,
-                TOTAL_DAY_SUPPLY,
-                TOTAL_DRUG_COST,
-                BENE_COUNT,
-                GE65_BENE_COUNT,
-                TOTAL_CLAIM_COUNT_GE65,
-                TOTAL_DRUG_COST_GE65,
-                TOTAL_DAY_SUPPLY_GE65
+                CLAIM_YEAR,
+                CLAIM_MONTH,
+                SUM(PRESCRIPTIONS) as prescriptions,
+                SUM(DAYS_SUPPLY) as days_supply,
+                SUM(PAYMENTS) as total_cost,
+                SUM(UNIQUE_PATIENTS) as unique_patients,
+                AVG(PAYMENTS / NULLIF(PRESCRIPTIONS, 0)) as avg_cost_per_rx
             FROM 
                 `{self.config['bigquery']['project_id']}.{self.config['bigquery']['dataset']}.{self.config['bigquery']['tables']['prescriptions']}`
             WHERE 
-                NPI IN ('{npi_str}')
-                AND YEAR BETWEEN {start_year} AND {end_year}
-                AND TOTAL_CLAIM_COUNT >= 11  -- CMS suppression threshold
+                CAST(NPI AS STRING) IN ('{npi_str}')
+                AND CLAIM_YEAR BETWEEN {start_year} AND {end_year}
+                AND PRESCRIPTIONS > 0
+            GROUP BY NPI, physician, PAYOR_NAME, BRAND_NAME, GENERIC_NAME, CLAIM_YEAR, CLAIM_MONTH
         )
         SELECT 
             NPI,
-            PROVIDER_LAST_NAME,
-            PROVIDER_FIRST_NAME,
-            SPECIALTY_DESC as specialty,
-            TYPE_DESC as provider_type,
+            physician as PROVIDER_NAME,
+            '' as PROVIDER_LAST_NAME,
+            '' as PROVIDER_FIRST_NAME,
+            '' as specialty,
+            '' as provider_type,
             BRAND_NAME,
             GENERIC_NAME,
-            YEAR as rx_year,
-            SUM(TOTAL_CLAIM_COUNT) as total_claims,
-            SUM(TOTAL_DAY_SUPPLY) as total_days_supply,
-            SUM(TOTAL_DRUG_COST) as total_cost,
-            SUM(BENE_COUNT) as total_beneficiaries,
-            AVG(TOTAL_DRUG_COST / NULLIF(TOTAL_CLAIM_COUNT, 0)) as avg_cost_per_claim
+            CLAIM_YEAR as rx_year,
+            SUM(prescriptions) as total_claims,
+            SUM(days_supply) as total_days_supply,
+            SUM(total_cost) as total_cost,
+            SUM(unique_patients) as total_beneficiaries,
+            AVG(avg_cost_per_rx) as avg_cost_per_claim
         FROM provider_rx
-        GROUP BY 1,2,3,4,5,6,7,8
+        GROUP BY 1,2,3,4,5,6,7,8,9
         """
         
         logger.info(f"Querying prescription data for {len(npi_list):,} providers")
         df = self.bq.query(query)
+        
+        # Convert decimal types to float for pandas compatibility
+        for col in df.select_dtypes(include=['object']).columns:
+            try:
+                df[col] = pd.to_numeric(df[col], errors='ignore')
+            except:
+                pass
+        
+        # Ensure numeric columns are float
+        numeric_cols = ['total_claims', 'total_days_supply', 'total_cost', 'total_beneficiaries', 'avg_cost_per_claim']
+        for col in numeric_cols:
+            if col in df.columns:
+                df[col] = pd.to_numeric(df[col], errors='coerce')
         
         # Save to cache
         df.to_parquet(cache_file, index=False)

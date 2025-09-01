@@ -1,0 +1,46 @@
+# ==============================================================================
+# Configuration for the Healthcare COI Analytics Report Template
+#
+# Instructions:
+# 1. Fill in the details for the new client in the 'health_system' section.
+# 2. Update the 'bigquery' section with the correct project, dataset, and table names.
+# 3. Place the provider NPI list CSV in the 'data/inputs/' directory and update
+#    the 'npi_file' path below.
+# ==============================================================================
+
+health_system:
+  name: "Provider NPI Analysis"           # Full name, e.g., "Memorial Health System"
+  short_name: "pna"                 # Abbreviation for file naming, e.g., "mhs"
+  npi_file: "data/inputs/provider_npis.csv" # Path to the provider NPI list
+
+project_paths:
+  # The root directory of THIS project template.
+  # The scripts will use this to construct all other paths.
+  project_dir: "/home/incent/conflixis-data-projects/projects/190-template-v3"
+  output_dir: "data/processed"
+  reports_dir: "reports"
+
+bigquery:
+  project_id: "data-analytics-389803"
+  dataset_id: "conflixis_agent"
+  # NPI table should have a column named 'NPI'
+  npi_table: "[abbrev]_health_npis" # e.g., "mhs_health_npis" - This will be formatted at runtime
+  op_table: "op_general_all_aggregate_static"
+  rx_table: "PHYSICIAN_RX_2020_2024"
+
+report_settings:
+  analysis_period: "2020-2024"
+  # List of key drugs to focus on in the correlation analysis
+  key_drugs:
+    - 'Ozempic'
+    - 'Trelegy'
+    - 'Krystexxa'
+    - 'Farxiga'
+    - 'Mounjaro'
+    - 'Jardiance'
+    - 'Humira'
+    - 'Enbrel'
+    - 'Stelara'
+    - 'Xarelto'
+    - 'Eliquis'
+    - 'Entresto'

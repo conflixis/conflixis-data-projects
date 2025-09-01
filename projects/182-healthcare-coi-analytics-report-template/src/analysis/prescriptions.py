@@ -321,7 +321,7 @@ class PrescriptionAnalyzer:
             'total_beneficiaries': 'sum',
             'PROVIDER_LAST_NAME': 'first',
             'PROVIDER_FIRST_NAME': 'first',
-            'specialty': lambda x: x.mode()[0] if not x.empty else None
+            'specialty': lambda x: x.mode()[0] if not x.empty and len(x.mode()) > 0 else 'Unknown'
         }).round(2)
         
         # Calculate z-scores for key metrics

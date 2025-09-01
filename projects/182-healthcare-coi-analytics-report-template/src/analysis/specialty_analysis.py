@@ -182,7 +182,11 @@ class SpecialtyAnalyzer:
             })
         
         patterns_df = pd.DataFrame(patterns)
-        patterns_df = patterns_df.sort_values('total_rx_cost', ascending=False)
+        # Sort by existing column if available
+        if 'total_rx_cost' in patterns_df.columns:
+            patterns_df = patterns_df.sort_values('total_rx_cost', ascending=False)
+        elif 'avg_cost_per_claim' in patterns_df.columns:
+            patterns_df = patterns_df.sort_values('avg_cost_per_claim', ascending=False)
         
         logger.info(f"Analyzed prescription patterns for {len(patterns_df)} specialties")
         return patterns_df
