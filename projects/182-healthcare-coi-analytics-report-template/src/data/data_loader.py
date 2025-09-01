@@ -115,6 +115,7 @@ class DataLoader:
     ) -> pd.DataFrame:
         """
         Load Open Payments data for specified providers and years
+        Uses BigQuery temp dataset to avoid memory issues
         
         Args:
             start_year: Start year for data (default from config)
@@ -128,28 +129,51 @@ class DataLoader:
         start_year = start_year or self.config['analysis']['start_year']
         end_year = end_year or self.config['analysis']['end_year']
         
-        # Separate cache files for detailed and summary data
-        detailed_cache = self.processed_dir / f"open_payments_detailed_{start_year}_{end_year}.parquet"
-        summary_cache = self.processed_dir / f"open_payments_summary_{start_year}_{end_year}.parquet"
+        # Table names in BigQuery temp dataset
+        temp_dataset = self.config['bigquery'].get('temp_dataset', 'temp')
+        detailed_table = f"{self.config['health_system']['short_name']}_open_payments_detailed_{start_year}_{end_year}"
+        summary_table = f"{self.config['health_system']['short_name']}_open_payments_summary_{start_year}_{end_year}"
         
-        # If caches exist and not forcing reload
-        if not force_reload:
-            if summary_only and summary_cache.exists():
-                logger.info("Loading Open Payments summary from cache")
-                return pd.read_parquet(summary_cache)
-            elif detailed_cache.exists():
-                if summary_only:
-                    # Create summary from detailed if needed
-                    if not summary_cache.exists():
-                        logger.info("Creating summary from detailed Open Payments data")
-                        detailed_df = pd.read_parquet(detailed_cache)
-                        summary_df = self._create_open_payments_summary(detailed_df)
-                        summary_df.to_parquet(summary_cache, index=False)
-                    return pd.read_parquet(summary_cache)
-                else:
-                    logger.info("Loading detailed Open Payments from cache")
-                    return pd.read_parquet(detailed_cache)
+        # Full table paths
+        detailed_table_path = f"`{self.config['bigquery']['project_id']}.{temp_dataset}.{detailed_table}`"
+        summary_table_path = f"`{self.config['bigquery']['project_id']}.{temp_dataset}.{summary_table}`"
         
+        # Check if tables exist and create if needed or force_reload
+        if force_reload or not self._table_exists(temp_dataset, detailed_table):
+            logger.info(f"Creating Open Payments tables in BigQuery temp dataset")
+            self._create_open_payments_tables(start_year, end_year, detailed_table_path, summary_table_path)
+        else:
+            logger.info(f"Using existing Open Payments tables in BigQuery")
+        
+        # Query from BigQuery table instead of loading all data
+        if summary_only:
+            logger.info(f"Querying summary table: {summary_table}")
+            query = f"SELECT * FROM {summary_table_path}"
+        else:
+            logger.info(f"Querying detailed table: {detailed_table}")
+            query = f"SELECT * FROM {detailed_table_path}"
+        
+        df = self.bq.query(query)
+        logger.info(f"Loaded {len(df):,} Open Payments records from BigQuery")
+        return df
+    
+    def _table_exists(self, dataset: str, table_name: str) -> bool:
+        """Check if a table exists in BigQuery"""
+        try:
+            table_ref = f"{self.config['bigquery']['project_id']}.{dataset}.{table_name}"
+            self.bq.client.get_table(table_ref)
+            return True
+        except:
+            return False
+    
+    def _create_open_payments_tables(
+        self,
+        start_year: int,
+        end_year: int,
+        detailed_table_path: str,
+        summary_table_path: str
+    ):
+        """Create Open Payments tables in BigQuery temp dataset"""
         # Load provider NPIs (this will create BigQuery table if needed)
         providers = self.load_provider_npis()
         
@@ -200,38 +224,47 @@ class DataLoader:
         GROUP BY 1,2,3,4,5,6,7,8,9
         """
         
-        logger.info(f"Querying Open Payments data for {len(providers):,} providers")
-        df = self.bq.query(query)
+        # Create detailed table query with full aggregation
+        create_detailed_query = f"""
+        CREATE OR REPLACE TABLE {detailed_table_path} AS
+        {query}
+        """
         
-        # Convert decimal types to float for pandas compatibility
-        for col in df.select_dtypes(include=['object']).columns:
-            try:
-                df[col] = pd.to_numeric(df[col], errors='ignore')
-            except:
-                pass
+        logger.info(f"Creating detailed Open Payments table for {len(providers):,} providers")
+        job = self.bq.client.query(create_detailed_query)
+        job.result()  # Wait for completion
         
-        # Ensure numeric columns are float
-        numeric_cols = ['total_amount', 'avg_amount', 'min_amount', 'max_amount', 'payment_count']
-        for col in numeric_cols:
-            if col in df.columns:
-                df[col] = pd.to_numeric(df[col], errors='coerce')
+        # Get row count
+        count_query = f"SELECT COUNT(*) as count FROM {detailed_table_path}"
+        result = self.bq.client.query(count_query).result()
+        row_count = list(result)[0].count
+        logger.info(f"Created detailed table with {row_count:,} rows")
         
-        logger.info(f"Loaded {len(df):,} Open Payments records from BigQuery")
+        # Create summary table from detailed
+        create_summary_query = f"""
+        CREATE OR REPLACE TABLE {summary_table_path} AS
+        SELECT 
+            physician_id, first_name, last_name,
+            provider_type, specialty, manufacturer,
+            payment_year, payment_category,
+            SUM(payment_count) as payment_count,
+            SUM(total_amount) as total_amount,
+            AVG(avg_amount) as avg_amount,
+            MIN(min_amount) as min_amount,
+            MAX(max_amount) as max_amount
+        FROM {detailed_table_path}
+        GROUP BY 1,2,3,4,5,6,7,8
+        """
         
-        # Save detailed data to parquet first (before any memory issues)
-        df.to_parquet(detailed_cache, index=False)
-        logger.info(f"Saved detailed data to {detailed_cache.name}")
+        logger.info("Creating summary Open Payments table")
+        job = self.bq.client.query(create_summary_query)
+        job.result()  # Wait for completion
         
-        # Create and save summary
-        summary_df = self._create_open_payments_summary(df)
-        summary_df.to_parquet(summary_cache, index=False)
-        logger.info(f"Saved summary data to {summary_cache.name} ({len(summary_df):,} rows)")
-        
-        # Return based on what was requested
-        if summary_only:
-            return summary_df
-        else:
-            return df
+        # Get summary row count
+        count_query = f"SELECT COUNT(*) as count FROM {summary_table_path}"
+        result = self.bq.client.query(count_query).result()
+        summary_count = list(result)[0].count
+        logger.info(f"Created summary table with {summary_count:,} rows")
     
     def _create_open_payments_summary(self, df: pd.DataFrame) -> pd.DataFrame:
         """
@@ -303,6 +336,7 @@ class DataLoader:
     ) -> pd.DataFrame:
         """
         Load Medicare Part D prescription data
+        Uses BigQuery temp dataset to avoid memory issues
         
         Args:
             start_year: Start year for data
@@ -316,28 +350,42 @@ class DataLoader:
         start_year = start_year or self.config['analysis']['start_year']
         end_year = end_year or self.config['analysis']['end_year']
         
-        # Separate cache files for detailed and summary data
-        detailed_cache = self.processed_dir / f"prescriptions_detailed_{start_year}_{end_year}.parquet"
-        summary_cache = self.processed_dir / f"prescriptions_summary_{start_year}_{end_year}.parquet"
+        # Table names in BigQuery temp dataset
+        temp_dataset = self.config['bigquery'].get('temp_dataset', 'temp')
+        detailed_table = f"{self.config['health_system']['short_name']}_prescriptions_detailed_{start_year}_{end_year}"
+        summary_table = f"{self.config['health_system']['short_name']}_prescriptions_summary_{start_year}_{end_year}"
         
-        # If caches exist and not forcing reload
-        if not force_reload:
-            if summary_only and summary_cache.exists():
-                logger.info("Loading prescriptions summary from cache")
-                return pd.read_parquet(summary_cache)
-            elif detailed_cache.exists():
-                if summary_only:
-                    # Create summary from detailed if needed
-                    if not summary_cache.exists():
-                        logger.info("Creating summary from detailed prescriptions data")
-                        detailed_df = pd.read_parquet(detailed_cache)
-                        summary_df = self._create_prescriptions_summary(detailed_df)
-                        summary_df.to_parquet(summary_cache, index=False)
-                    return pd.read_parquet(summary_cache)
-                else:
-                    logger.info("Loading detailed prescriptions from cache")
-                    return pd.read_parquet(detailed_cache)
+        # Full table paths
+        detailed_table_path = f"`{self.config['bigquery']['project_id']}.{temp_dataset}.{detailed_table}`"
+        summary_table_path = f"`{self.config['bigquery']['project_id']}.{temp_dataset}.{summary_table}`"
         
+        # Check if tables exist and create if needed or force_reload
+        if force_reload or not self._table_exists(temp_dataset, detailed_table):
+            logger.info(f"Creating Prescriptions tables in BigQuery temp dataset")
+            self._create_prescriptions_tables(start_year, end_year, detailed_table_path, summary_table_path)
+        else:
+            logger.info(f"Using existing Prescriptions tables in BigQuery")
+        
+        # Query from BigQuery table instead of loading all data
+        if summary_only:
+            logger.info(f"Querying summary table: {summary_table}")
+            query = f"SELECT * FROM {summary_table_path}"
+        else:
+            logger.info(f"Querying detailed table: {detailed_table}")
+            query = f"SELECT * FROM {detailed_table_path}"
+        
+        df = self.bq.query(query)
+        logger.info(f"Loaded {len(df):,} prescription records from BigQuery")
+        return df
+    
+    def _create_prescriptions_tables(
+        self,
+        start_year: int,
+        end_year: int,
+        detailed_table_path: str,
+        summary_table_path: str
+    ):
+        """Create Prescriptions tables in BigQuery temp dataset"""
         # Load provider NPIs (this will create BigQuery table if needed)
         providers = self.load_provider_npis()
         
@@ -405,38 +453,46 @@ class DataLoader:
         GROUP BY 1,2,3,4,5,6,7,8,9
         """
         
-        logger.info(f"Querying prescription data for {len(providers):,} providers")
-        df = self.bq.query(query)
+        # Create detailed table with all prescription data
+        create_detailed_query = f"""
+        CREATE OR REPLACE TABLE {detailed_table_path} AS
+        {query}
+        """
         
-        # Convert decimal types to float for pandas compatibility
-        for col in df.select_dtypes(include=['object']).columns:
-            try:
-                df[col] = pd.to_numeric(df[col], errors='ignore')
-            except:
-                pass
+        logger.info(f"Creating detailed Prescriptions table for {len(providers):,} providers")
+        job = self.bq.client.query(create_detailed_query)
+        job.result()  # Wait for completion
         
-        # Ensure numeric columns are float
-        numeric_cols = ['total_claims', 'total_days_supply', 'total_cost', 'total_beneficiaries', 'avg_cost_per_claim']
-        for col in numeric_cols:
-            if col in df.columns:
-                df[col] = pd.to_numeric(df[col], errors='coerce')
+        # Get row count
+        count_query = f"SELECT COUNT(*) as count FROM {detailed_table_path}"
+        result = self.bq.client.query(count_query).result()
+        row_count = list(result)[0].count
+        logger.info(f"Created detailed table with {row_count:,} rows")
         
-        logger.info(f"Loaded {len(df):,} prescription records from BigQuery")
+        # Create summary table from detailed
+        create_summary_query = f"""
+        CREATE OR REPLACE TABLE {summary_table_path} AS
+        SELECT 
+            NPI, PROVIDER_NAME, specialty, provider_type,
+            BRAND_NAME, GENERIC_NAME, rx_year,
+            SUM(total_claims) as total_claims,
+            SUM(total_days_supply) as total_days_supply,
+            SUM(total_cost) as total_cost,
+            SUM(total_beneficiaries) as total_beneficiaries,
+            AVG(avg_cost_per_claim) as avg_cost_per_claim
+        FROM {detailed_table_path}
+        GROUP BY 1,2,3,4,5,6,7
+        """
         
-        # Save detailed data to parquet first (before any memory issues)
-        df.to_parquet(detailed_cache, index=False)
-        logger.info(f"Saved detailed data to {detailed_cache.name}")
+        logger.info("Creating summary Prescriptions table")
+        job = self.bq.client.query(create_summary_query)
+        job.result()  # Wait for completion
         
-        # Create and save summary
-        summary_df = self._create_prescriptions_summary(df)
-        summary_df.to_parquet(summary_cache, index=False)
-        logger.info(f"Saved summary data to {summary_cache.name} ({len(summary_df):,} rows)")
-        
-        # Return based on what was requested
-        if summary_only:
-            return summary_df
-        else:
-            return df
+        # Get summary row count
+        count_query = f"SELECT COUNT(*) as count FROM {summary_table_path}"
+        result = self.bq.client.query(count_query).result()
+        summary_count = list(result)[0].count
+        logger.info(f"Created summary table with {summary_count:,} rows")
     
     def _create_prescriptions_summary(self, df: pd.DataFrame) -> pd.DataFrame:
         """
@@ -510,6 +566,7 @@ class DataLoader:
     ) -> pd.DataFrame:
         """
         Load matched Open Payments and prescription data for attribution analysis
+        Uses temp dataset tables for efficiency
         
         Args:
             drug_name: Name of drug for attribution analysis
@@ -522,40 +579,32 @@ class DataLoader:
         start_year = start_year or self.config['analysis']['start_year']
         end_year = end_year or self.config['analysis']['end_year']
         
-        # Use the NPI table for efficient querying
-        npi_table = f"{self.config['health_system']['short_name']}_provider_npis"
+        # Use temp dataset tables
+        temp_dataset = self.config['bigquery'].get('temp_dataset', 'temp')
+        op_detailed_table = f"`{self.config['bigquery']['project_id']}.{temp_dataset}.{self.config['health_system']['short_name']}_open_payments_detailed_{start_year}_{end_year}`"
+        rx_detailed_table = f"`{self.config['bigquery']['project_id']}.{temp_dataset}.{self.config['health_system']['short_name']}_prescriptions_detailed_{start_year}_{end_year}`"
         
         query = f"""
         WITH drug_payments AS (
             SELECT 
-                CAST(covered_recipient_npi AS STRING) as physician_id,
-                SUM(total_amount_of_payment_usdollars) as op_amount,
-                COUNT(*) as op_count,
-                AVG(total_amount_of_payment_usdollars) as op_avg
-            FROM `{self.config['bigquery']['project_id']}.{self.config['bigquery']['dataset']}.{self.config['bigquery']['tables']['open_payments']}`
-            WHERE name_of_drug_or_biological_or_device_or_medical_supply_1 = '{drug_name}'
-                AND program_year BETWEEN {start_year} AND {end_year}
-                AND EXISTS (
-                    SELECT 1 FROM `{self.config['bigquery']['project_id']}.{self.config['bigquery']['dataset']}.{npi_table}` npi
-                    WHERE CAST(covered_recipient_npi AS STRING) = npi.NPI
-                )
-            GROUP BY 1
+                physician_id,
+                SUM(total_amount) as op_amount,
+                SUM(payment_count) as op_count,
+                AVG(avg_amount) as op_avg
+            FROM {op_detailed_table}
+            WHERE Product_Name = '{drug_name}'
+            GROUP BY physician_id
         ),
         drug_prescriptions AS (
             SELECT
-                CAST(NPI AS STRING) as physician_id,
-                SUM(PAYMENTS) as rx_cost,
-                SUM(PRESCRIPTIONS) as rx_count,
-                SUM(UNIQUE_PATIENTS) as rx_patients,
-                AVG(PAYMENTS / NULLIF(PRESCRIPTIONS, 0)) as rx_avg_cost
-            FROM `{self.config['bigquery']['project_id']}.{self.config['bigquery']['dataset']}.{self.config['bigquery']['tables']['prescriptions']}`
+                NPI as physician_id,
+                SUM(total_cost) as rx_cost,
+                SUM(total_claims) as rx_count,
+                SUM(total_beneficiaries) as rx_patients,
+                AVG(avg_cost_per_claim) as rx_avg_cost
+            FROM {rx_detailed_table}
             WHERE BRAND_NAME = '{drug_name}'
-                AND CLAIM_YEAR BETWEEN {start_year} AND {end_year}
-                AND EXISTS (
-                    SELECT 1 FROM `{self.config['bigquery']['project_id']}.{self.config['bigquery']['dataset']}.{npi_table}` npi
-                    WHERE CAST(NPI AS STRING) = npi.NPI
-                )
-            GROUP BY 1
+            GROUP BY NPI
         )
         SELECT 
             COALESCE(p.physician_id, r.physician_id) as physician_id,
@@ -565,13 +614,14 @@ class DataLoader:
             COALESCE(rx_cost, 0) as prescription_cost,
             COALESCE(rx_count, 0) as prescription_count,
             COALESCE(rx_patients, 0) as prescription_patients,
-            COALESCE(rx_avg_cost, 0) as prescription_avg_cost
+            COALESCE(rx_avg_cost, 0) as prescription_avg_cost,
+            CASE WHEN op_amount > 0 THEN rx_cost / op_amount ELSE NULL END as roi
         FROM drug_payments p
         FULL OUTER JOIN drug_prescriptions r
         ON p.physician_id = r.physician_id
         """
         
-        logger.info(f"Loading attribution data for {drug_name}")
+        logger.info(f"Loading attribution data for {drug_name} from temp tables")
         df = self.bq.query(query)
         
         # Convert to numeric
@@ -581,6 +631,67 @@ class DataLoader:
         
         logger.info(f"Loaded attribution data for {len(df):,} providers with {drug_name} activity")
         return df
+    
+    def create_monthly_analysis_table(
+        self,
+        start_year: Optional[int] = None,
+        end_year: Optional[int] = None
+    ) -> str:
+        """
+        Create monthly granularity table in BigQuery for time-series analysis
+        
+        Args:
+            start_year: Start year for data
+            end_year: End year for data
+            
+        Returns:
+            Table name created
+        """
+        start_year = start_year or self.config['analysis']['start_year']
+        end_year = end_year or self.config['analysis']['end_year']
+        
+        # Table name in temp dataset
+        temp_dataset = self.config['bigquery'].get('temp_dataset', 'temp')
+        monthly_table = f"{self.config['health_system']['short_name']}_monthly_analysis_{start_year}_{end_year}"
+        monthly_table_path = f"`{self.config['bigquery']['project_id']}.{temp_dataset}.{monthly_table}`"
+        
+        # Use the NPI table for filtering
+        npi_table = f"{self.config['health_system']['short_name']}_provider_npis"
+        
+        query = f"""
+        CREATE OR REPLACE TABLE {monthly_table_path} AS
+        SELECT 
+            CAST(covered_recipient_npi AS STRING) as physician_id,
+            program_year as payment_year,
+            EXTRACT(MONTH FROM CAST(date_of_payment AS DATE)) as payment_month,
+            nature_of_payment_or_transfer_of_value as payment_category,
+            applicable_manufacturer_or_applicable_gpo_making_payment_name as manufacturer,
+            name_of_drug_or_biological_or_device_or_medical_supply_1 as Product_Name,
+            COUNT(*) as payment_count,
+            SUM(total_amount_of_payment_usdollars) as total_amount,
+            AVG(total_amount_of_payment_usdollars) as avg_amount
+        FROM `{self.config['bigquery']['project_id']}.{self.config['bigquery']['dataset']}.{self.config['bigquery']['tables']['open_payments']}`
+        WHERE program_year BETWEEN {start_year} AND {end_year}
+            AND total_amount_of_payment_usdollars > 0
+            AND EXISTS (
+                SELECT 1 
+                FROM `{self.config['bigquery']['project_id']}.{self.config['bigquery']['dataset']}.{npi_table}` npi
+                WHERE CAST(covered_recipient_npi AS STRING) = npi.NPI
+            )
+        GROUP BY 1,2,3,4,5,6
+        """
+        
+        logger.info(f"Creating monthly analysis table: {monthly_table}")
+        job = self.bq.client.query(query)
+        job.result()  # Wait for completion
+        
+        # Get row count
+        count_query = f"SELECT COUNT(*) as count FROM {monthly_table_path}"
+        result = self.bq.client.query(count_query).result()
+        row_count = list(result)[0].count
+        logger.info(f"Created monthly analysis table with {row_count:,} rows")
+        
+        return monthly_table
     
     def load_analysis_results(self, analysis_type: str) -> pd.DataFrame:
         """

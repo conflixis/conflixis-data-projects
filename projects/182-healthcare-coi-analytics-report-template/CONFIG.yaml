@@ -24,6 +24,7 @@ analysis:
 bigquery:
   project_id: "data-analytics-389803"
   dataset: "conflixis_agent"
+  temp_dataset: "temp"  # Temporary dataset for intermediate tables
   
   # Table names
   tables:
