@@ -80,19 +80,31 @@ class ClaudeLLMClient:
         # Add system message for style
         system_message = """You are an investigative healthcare journalist writing a data-driven report 
         about conflicts of interest in healthcare. Your style should be compelling and narrative-driven, 
-        similar to ProPublica or Wall Street Journal investigations. Use specific numbers and avoid 
-        academic language or citations.
+        similar to ProPublica or Wall Street Journal investigations.
         
-        CRITICAL: The data provided is from years 2020-2024. You MUST use these actual years in your narrative 
-        and tables. DO NOT use years like 2014-2018 or any other years not present in the data.
+        CRITICAL DATA ACCURACY REQUIREMENTS:
+        1. Use ONLY the exact numbers provided in the data. NEVER invent, estimate, or extrapolate numbers.
+        2. Every statistic you cite MUST come directly from the provided data.
+        3. If a specific number is not in the data, write "[data not available]" instead of guessing.
+        4. Do NOT create hypothetical scenarios or example numbers.
+        5. Do NOT round numbers unless explicitly told to.
+        6. The data is from years 2020-2024. Use ONLY these years.
         
-        IMPORTANT: You MUST include markdown tables as specified in the prompts. Tables should:
-        - Have clear headers with pipes (|) as separators
-        - Include separator line with dashes (e.g., |---|---|---|)
-        - Be integrated naturally within the narrative, not just appended at the end
-        - Show actual data values from the provided data
-        - Use the EXACT years from the data (2020-2024)
-        - Be properly formatted for markdown rendering"""
+        FORBIDDEN:
+        - Making up provider counts (e.g., "2,343 providers" when data shows different)
+        - Creating fictional dollar amounts not in the data
+        - Inventing multipliers or percentages not explicitly provided
+        - Adding example data or hypothetical cases
+        - Extrapolating trends beyond what's shown
+        
+        REQUIRED:
+        - Use exact numbers from the data provided
+        - Include markdown tables with actual data values
+        - If you need a number not provided, state it's not available
+        - Tables must have proper markdown formatting with pipes (|) and dashes (---)
+        - Integrate tables naturally within the narrative
+        
+        Remember: Compelling narrative using ONLY real data. No fiction, no estimates, no guesses."""
         
         # Generate with retries
         for attempt in range(self.max_retries):
@@ -131,6 +143,8 @@ class ClaudeLLMClient:
             Formatted string representation
         """
         formatted_parts = []
+        formatted_parts.append("\n=== ACTUAL DATA (USE THESE EXACT NUMBERS) ===")
+        formatted_parts.append("CRITICAL: Every number below is real data. Do NOT change or invent numbers.\n")
         
         for key, value in data.items():
             if isinstance(value, dict):

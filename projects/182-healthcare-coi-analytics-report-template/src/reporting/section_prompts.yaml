@@ -178,10 +178,13 @@ consecutive_years:
     Data provided:
     {data}
     
+    CRITICAL: DO NOT use "2,343 providers" or any made-up number. Use ONLY the actual counts from the data.
+    If data shows 6 providers with all 5 years, use 6. If it shows different, use that exact number.
+    
     Analyze:
-    1. Number of providers with payments every year (e.g., "2,343 providers")
-    2. Cumulative impact on prescribing behavior
-    3. How sustained relationships differ from one-time payments
+    1. Number of providers with payments every year (USE EXACT NUMBER FROM DATA)
+    2. Cumulative impact on prescribing behavior (ONLY if specific data provided)
+    3. How sustained relationships differ from one-time payments (based on actual data)
     4. Normalization of influence over time
     
     REQUIRED TABLE:

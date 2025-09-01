@@ -84,13 +84,31 @@ class SectionDataMapper:
             data_map['highest_risk_areas'] = risk.get('top_risks', [])
             data_map['provider_categories'] = risk.get('provider_categories', {})
         
-        # Consecutive years analysis
-        if 'consecutive_years' in data_map:
-            cy = data_map['consecutive_years']
-            if not cy.empty:
-                data_map['consecutive_year_counts'] = len(cy)
-                data_map['cumulative_prescribing'] = cy['total_prescriptions'].sum() if 'total_prescriptions' in cy.columns else 0
+        # Consecutive years analysis - properly extract the data
+        if 'open_payments' in self.analysis_results and 'consecutive_years' in self.analysis_results['open_payments']:
+            cy = self.analysis_results['open_payments']['consecutive_years']
+            if isinstance(cy, pd.DataFrame) and not cy.empty:
+                # Create a formatted summary for the LLM
+                year_summary = {}
+                for _, row in cy.iterrows():
+                    years = int(row['consecutive_years'])
+                    count = int(row['provider_count'])
+                    avg_payment = float(row['avg_total_payment'])
+                    year_summary[f"{years}_years"] = {
+                        "provider_count": count,
+                        "avg_total_payment": avg_payment
+                    }
+                
+                data_map['consecutive_year_counts'] = year_summary
+                # Explicitly note the 5-year count
+                five_year_providers = cy[cy['consecutive_years'] == 5]['provider_count'].iloc[0] if len(cy[cy['consecutive_years'] == 5]) > 0 else 0
+                data_map['providers_all_5_years'] = int(five_year_providers)
+                data_map['cumulative_prescribing'] = cy['avg_total_payment'].sum() if 'avg_total_payment' in cy.columns else 0
                 data_map['sustained_relationship_impact'] = self._calculate_sustained_impact(cy)
+        else:
+            # Provide empty data if not available
+            data_map['consecutive_year_counts'] = {}
+            data_map['providers_all_5_years'] = 0
         
         # Metadata
         data_map['data_sources'] = "CMS Open Payments Database, Medicare Part D Claims"

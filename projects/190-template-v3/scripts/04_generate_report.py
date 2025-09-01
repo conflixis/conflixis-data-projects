@@ -26,14 +26,16 @@ def get_gcp_credentials(env_var='GCP_SERVICE_ACCOUNT_KEY'):
         raise RuntimeError(f"Failed to create credentials from service account info: {e}")
 
 def format_currency(value):
-    if value is None or not pd.notna(value):
-        return "$0"
-    return f"${value:,.0f}"
+    """Safely formats a value as currency."""
+    if isinstance(value, (int, float)) and pd.notna(value):
+        return f"${value:,.0f}"
+    return "$0"
 
 def format_multiplier(value):
-    if value is None or not pd.notna(value):
-        return "N/A"
-    return f"{value:.1f}x"
+    """Safely formats a value as a multiplier."""
+    if isinstance(value, (int, float)) and pd.notna(value):
+        return f"{value:.1f}x"
+    return "N/A"
 
 def get_provider_type_sql_case():
     """Returns a SQL CASE statement for classifying provider types."""
