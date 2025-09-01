@@ -147,18 +147,22 @@ class FullAnalysisPipeline:
                 logger.info("\n[Step 7/7] Generating visualizations...")
                 self.results['visualizations'] = self._generate_visualizations()
             
-            # Generate report
-            logger.info("\n[Final Step] Generating report...")
-            report_path = self._generate_report(report_style, output_format)
-            self.results['report_path'] = report_path
-            
-            # Finalize lineage tracking and add to results
+            # Finalize lineage tracking and add to results BEFORE report generation
             self.lineage_tracker.finalize()
-            self.results['data_lineage'] = self.lineage_tracker.get_lineage()
+            self.results['data_lineage'] = {
+                'markdown': self.lineage_tracker.generate_lineage_markdown(),
+                'summary': self.lineage_tracker.get_summary(),
+                'full_lineage': self.lineage_tracker.get_lineage()
+            }
             
             # Save lineage to file
             lineage_path = self.lineage_tracker.save_lineage()
             self.results['lineage_path'] = str(lineage_path)
+            
+            # Generate report (now with lineage data available)
+            logger.info("\n[Final Step] Generating report...")
+            report_path = self._generate_report(report_style, output_format)
+            self.results['report_path'] = report_path
             
             # Print summary
             self._print_summary()

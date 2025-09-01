@@ -11,6 +11,9 @@ import logging
 from datetime import datetime
 import yaml
 from google.cloud import bigquery
+import hashlib
+import json
+import os
 
 from .bigquery_connector import BigQueryConnector
 from .data_lineage import DataLineageTracker
@@ -32,9 +35,64 @@ class DataLoader:
         # Lineage tracker (will be set by pipeline)
         self.lineage_tracker: Optional[DataLineageTracker] = None
         
+        # Cache metadata file
+        self.cache_metadata_file = self.processed_dir / '.cache_metadata.json'
+        
     def set_lineage_tracker(self, tracker: DataLineageTracker):
         """Set the lineage tracker for this data loader"""
         self.lineage_tracker = tracker
+    
+    def _calculate_file_hash(self, file_path: Path) -> str:
+        """Calculate SHA256 hash of a file"""
+        sha256_hash = hashlib.sha256()
+        with open(file_path, "rb") as f:
+            for byte_block in iter(lambda: f.read(4096), b""):
+                sha256_hash.update(byte_block)
+        return sha256_hash.hexdigest()
+    
+    def _get_file_metadata(self, file_path: Path) -> Dict[str, Any]:
+        """Get metadata for a file including hash and modification time"""
+        return {
+            'file_path': str(file_path),
+            'file_hash': self._calculate_file_hash(file_path),
+            'modified_time': os.path.getmtime(file_path),
+            'modified_datetime': datetime.fromtimestamp(os.path.getmtime(file_path)).isoformat(),
+            'file_size': os.path.getsize(file_path)
+        }
+    
+    def _load_cache_metadata(self) -> Dict[str, Any]:
+        """Load cache metadata from file"""
+        if self.cache_metadata_file.exists():
+            with open(self.cache_metadata_file, 'r') as f:
+                return json.load(f)
+        return {}
+    
+    def _save_cache_metadata(self, metadata: Dict[str, Any]):
+        """Save cache metadata to file"""
+        with open(self.cache_metadata_file, 'w') as f:
+            json.dump(metadata, f, indent=2, default=str)
+    
+    def _is_cache_valid(self, cache_key: str, source_file: Path) -> bool:
+        """Check if cache is valid for a given source file"""
+        metadata = self._load_cache_metadata()
+        
+        if cache_key not in metadata:
+            logger.info(f"No cache metadata found for {cache_key}")
+            return False
+        
+        cached_info = metadata[cache_key]
+        current_hash = self._calculate_file_hash(source_file)
+        
+        if cached_info.get('file_hash') != current_hash:
+            logger.info(f"File hash changed for {source_file.name}: cache invalid")
+            return False
+        
+        if cached_info.get('file_path') != str(source_file):
+            logger.info(f"File path changed: cache invalid")
+            return False
+        
+        logger.info(f"Cache is valid for {cache_key}")
+        return True
     
     def _load_config(self, config_path: str) -> Dict[str, Any]:
         """Load configuration file"""
@@ -57,29 +115,42 @@ class DataLoader:
             DataFrame with provider NPIs and metadata
         """
         cache_file = self.processed_dir / "provider_npis.parquet"
-        
-        if not force_reload and cache_file.exists():
-            logger.info("Loading provider NPIs from cache")
-            df = pd.read_parquet(cache_file)
-            
-            # Track lineage even when loading from cache
-            if self.lineage_tracker:
-                self.lineage_tracker.add_source_data('provider_npis', {
-                    'source_file': str(self.config['health_system']['npi_file']),
-                    'rows': len(df),
-                    'columns': list(df.columns),
-                    'loaded_from': 'cache'
-                })
-            
-            return df
-        
-        # Always load from local file
+        cache_key = "provider_npis"
         npi_file = Path(self.config['health_system']['npi_file'])
+        
         if not npi_file.exists():
             raise FileNotFoundError(f"NPI file not found: {npi_file}")
         
+        # Check if cache is valid
+        use_cache = (not force_reload and 
+                    cache_file.exists() and 
+                    self._is_cache_valid(cache_key, npi_file))
+        
+        if use_cache:
+            logger.info("Loading provider NPIs from cache (validated)")
+            df = pd.read_parquet(cache_file)
+            
+            # Track lineage even when loading from cache
+            metadata = self._load_cache_metadata().get(cache_key, {})
+            if self.lineage_tracker:
+                self.lineage_tracker.add_source_data('provider_npis', {
+                    'source_file': str(npi_file),
+                    'rows': len(df),
+                    'columns': list(df.columns),
+                    'loaded_from': 'cache',
+                    'file_hash': metadata.get('file_hash', 'unknown')
+                })
+            
+            # Always update BigQuery table to ensure consistency
+            self._upload_npis_to_bigquery(df)
+            
+            return df
+        
         logger.info(f"Loading NPIs from file: {npi_file}")
         df = pd.read_csv(npi_file)
+        
+        # Get file metadata for caching
+        file_metadata = self._get_file_metadata(npi_file)
         
         # Standardize column names
         df.columns = df.columns.str.upper()
@@ -96,15 +167,51 @@ class DataLoader:
         df.to_parquet(cache_file, index=False)
         logger.info(f"Loaded {len(df):,} provider NPIs")
         
-        # Track lineage
+        # Update cache metadata
+        metadata = self._load_cache_metadata()
+        metadata[cache_key] = {
+            **file_metadata,
+            'rows': len(df),
+            'columns': list(df.columns),
+            'cached_at': datetime.now().isoformat()
+        }
+        self._save_cache_metadata(metadata)
+        
+        # Track lineage with file hash
         if self.lineage_tracker:
             self.lineage_tracker.add_source_data('provider_npis', {
                 'source_file': str(npi_file),
                 'rows': len(df),
-                'columns': list(df.columns)
+                'columns': list(df.columns),
+                'file_hash': file_metadata['file_hash'],
+                'loaded_from': 'source'
             })
         
         return df
+    
+    def _get_npi_hash_for_tables(self) -> str:
+        """Get the NPI hash that was used to create current BigQuery tables"""
+        metadata = self._load_cache_metadata()
+        if 'bigquery_tables' in metadata:
+            return metadata['bigquery_tables'].get('npi_hash', '')
+        return ''
+    
+    def _npis_changed_since_table_creation(self) -> bool:
+        """Check if NPIs have changed since BigQuery tables were created"""
+        npi_file = Path(self.config['health_system']['npi_file'])
+        if not npi_file.exists():
+            return False
+        
+        current_hash = self._calculate_file_hash(npi_file)
+        stored_hash = self._get_npi_hash_for_tables()
+        
+        if stored_hash and current_hash != stored_hash:
+            logger.warning(f"NPI file has changed since tables were created!")
+            logger.warning(f"  Previous hash: {stored_hash[:8]}...")
+            logger.warning(f"  Current hash:  {current_hash[:8]}...")
+            return True
+        
+        return False
     
     def _upload_npis_to_bigquery(self, df: pd.DataFrame):
         """Upload NPIs to BigQuery table for efficient joins"""
@@ -167,12 +274,26 @@ class DataLoader:
         detailed_table_path = f"`{self.config['bigquery']['project_id']}.{temp_dataset}.{detailed_table}`"
         summary_table_path = f"`{self.config['bigquery']['project_id']}.{temp_dataset}.{summary_table}`"
         
+        # Check if NPIs have changed
+        npis_changed = self._npis_changed_since_table_creation()
+        if npis_changed:
+            logger.warning("NPIs have changed - forcing table recreation")
+            force_reload = True
+        
         # Check if tables exist and create if needed or force_reload
         if force_reload or not self._table_exists(temp_dataset, detailed_table):
             logger.info(f"Creating Open Payments tables in BigQuery temp dataset")
             self._create_open_payments_tables(start_year, end_year, detailed_table_path, summary_table_path)
         else:
             logger.info(f"Using existing Open Payments tables in BigQuery")
+            # Track that we're using existing tables
+            if self.lineage_tracker:
+                self.lineage_tracker.add_intermediate_table('open_payments_existing', {
+                    'detailed_table': detailed_table_path.replace('`', ''),
+                    'summary_table': summary_table_path.replace('`', ''),
+                    'status': 'reused_existing',
+                    'npi_hash': self._get_npi_hash_for_tables()
+                })
         
         # If create_only, we're done - don't download any data
         if create_only:
@@ -275,13 +396,31 @@ class DataLoader:
         row_count = list(result)[0].count
         logger.info(f"Created detailed table with {row_count:,} rows")
         
+        # Get current NPI hash for tracking
+        npi_file = Path(self.config['health_system']['npi_file'])
+        current_npi_hash = self._calculate_file_hash(npi_file) if npi_file.exists() else 'unknown'
+        
+        # Update cache metadata with table creation info
+        metadata = self._load_cache_metadata()
+        if 'bigquery_tables' not in metadata:
+            metadata['bigquery_tables'] = {}
+        metadata['bigquery_tables'].update({
+            'npi_hash': current_npi_hash,
+            'tables_created_at': datetime.now().isoformat(),
+            'open_payments_detailed': detailed_table_path.replace('`', ''),
+            'open_payments_summary': summary_table_path.replace('`', '')
+        })
+        self._save_cache_metadata(metadata)
+        
         # Track lineage for detailed table
         if self.lineage_tracker:
             self.lineage_tracker.add_intermediate_table('open_payments_detailed', {
                 'table': detailed_table_path.replace('`', ''),
                 'rows': row_count,
                 'derived_from': f"{self.config['bigquery']['project_id']}.{self.config['bigquery']['dataset']}.{self.config['bigquery']['tables']['open_payments']}",
-                'date_range': f"{start_year}-{end_year}"
+                'date_range': f"{start_year}-{end_year}",
+                'npi_hash': current_npi_hash,
+                'created_at': datetime.now().isoformat()
             })
             self.lineage_tracker.add_source_data('open_payments', {
                 'table': f"{self.config['bigquery']['project_id']}.{self.config['bigquery']['dataset']}.{self.config['bigquery']['tables']['open_payments']}",
@@ -410,12 +549,26 @@ class DataLoader:
         detailed_table_path = f"`{self.config['bigquery']['project_id']}.{temp_dataset}.{detailed_table}`"
         summary_table_path = f"`{self.config['bigquery']['project_id']}.{temp_dataset}.{summary_table}`"
         
+        # Check if NPIs have changed
+        npis_changed = self._npis_changed_since_table_creation()
+        if npis_changed:
+            logger.warning("NPIs have changed - forcing prescription table recreation")
+            force_reload = True
+        
         # Check if tables exist and create if needed or force_reload
         if force_reload or not self._table_exists(temp_dataset, detailed_table):
             logger.info(f"Creating Prescriptions tables in BigQuery temp dataset")
             self._create_prescriptions_tables(start_year, end_year, detailed_table_path, summary_table_path)
         else:
             logger.info(f"Using existing Prescriptions tables in BigQuery")
+            # Track that we're using existing tables
+            if self.lineage_tracker:
+                self.lineage_tracker.add_intermediate_table('prescriptions_existing', {
+                    'detailed_table': detailed_table_path.replace('`', ''),
+                    'summary_table': summary_table_path.replace('`', ''),
+                    'status': 'reused_existing',
+                    'npi_hash': self._get_npi_hash_for_tables()
+                })
         
         # If create_only, we're done - don't download any data
         if create_only:
@@ -526,13 +679,31 @@ class DataLoader:
         row_count = list(result)[0].count
         logger.info(f"Created detailed table with {row_count:,} rows")
         
+        # Get current NPI hash for tracking
+        npi_file = Path(self.config['health_system']['npi_file'])
+        current_npi_hash = self._calculate_file_hash(npi_file) if npi_file.exists() else 'unknown'
+        
+        # Update cache metadata with prescription table info
+        metadata = self._load_cache_metadata()
+        if 'bigquery_tables' not in metadata:
+            metadata['bigquery_tables'] = {}
+        metadata['bigquery_tables'].update({
+            'npi_hash': current_npi_hash,
+            'prescriptions_tables_created_at': datetime.now().isoformat(),
+            'prescriptions_detailed': detailed_table_path.replace('`', ''),
+            'prescriptions_summary': summary_table_path.replace('`', '')
+        })
+        self._save_cache_metadata(metadata)
+        
         # Track lineage for detailed table
         if self.lineage_tracker:
             self.lineage_tracker.add_intermediate_table('prescriptions_detailed', {
                 'table': detailed_table_path.replace('`', ''),
                 'rows': row_count,
                 'derived_from': f"{self.config['bigquery']['project_id']}.{self.config['bigquery']['dataset']}.{self.config['bigquery']['tables']['prescriptions']}",
-                'date_range': f"{start_year}-{end_year}"
+                'date_range': f"{start_year}-{end_year}",
+                'npi_hash': current_npi_hash,
+                'created_at': datetime.now().isoformat()
             })
             self.lineage_tracker.add_source_data('prescriptions', {
                 'table': f"{self.config['bigquery']['project_id']}.{self.config['bigquery']['dataset']}.{self.config['bigquery']['tables']['prescriptions']}",

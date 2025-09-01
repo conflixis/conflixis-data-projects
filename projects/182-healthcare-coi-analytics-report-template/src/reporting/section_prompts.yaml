@@ -271,8 +271,7 @@ methodology_note:
        - Key limitations
     
     2. Data Lineage section:
-       Include the following data lineage information EXACTLY as provided:
-       {data_lineage_markdown}
+       Include the provided data lineage information from the data above (look for data_lineage_markdown in the data).
     
     Keep technical but accessible.
     Combine both sections naturally.
@@ -305,9 +304,9 @@ executive_summary:
     
     This summary should capture the essence of the entire report. Use specific numbers from the data. 
     Be dramatic but accurate. Avoid academic language.
-    Length: 400-500 words
+    Length: 200-300 words
   constraints:
-    max_length: 500
+    max_length: 300
     style: investigative_journalism
     must_include:
       - total_payment_amount

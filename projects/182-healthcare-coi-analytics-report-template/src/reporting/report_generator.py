@@ -160,14 +160,31 @@ class ReportGenerator:
         
         # Format Data Lineage
         if 'data_lineage' in analysis_results:
-            from ..data.data_lineage import DataLineageTracker
-            # Create a temp tracker to use the markdown generation method
-            temp_tracker = DataLineageTracker()
-            temp_tracker.lineage = analysis_results['data_lineage']
-            data['data_lineage'] = {
-                'summary': temp_tracker.get_summary(),
-                'markdown': temp_tracker.generate_lineage_markdown()
-            }
+            # Check if data_lineage already has the markdown and summary
+            if 'markdown' in analysis_results['data_lineage'] and 'summary' in analysis_results['data_lineage']:
+                # Use the pre-generated markdown and summary
+                data['data_lineage'] = {
+                    'summary': analysis_results['data_lineage']['summary'],
+                    'markdown': analysis_results['data_lineage']['markdown']
+                }
+            elif 'full_lineage' in analysis_results['data_lineage']:
+                # If we have full_lineage, generate from it
+                from ..data.data_lineage import DataLineageTracker
+                temp_tracker = DataLineageTracker()
+                temp_tracker.lineage = analysis_results['data_lineage']['full_lineage']
+                data['data_lineage'] = {
+                    'summary': temp_tracker.get_summary(),
+                    'markdown': temp_tracker.generate_lineage_markdown()
+                }
+            else:
+                # Fallback to the old behavior
+                from ..data.data_lineage import DataLineageTracker
+                temp_tracker = DataLineageTracker()
+                temp_tracker.lineage = analysis_results['data_lineage']
+                data['data_lineage'] = {
+                    'summary': temp_tracker.get_summary(),
+                    'markdown': temp_tracker.generate_lineage_markdown()
+                }
         
         return data
     

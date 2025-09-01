@@ -247,12 +247,13 @@ class DataLineageTracker:
         """
         summary = self.get_summary()
         
+        execution_time = summary['execution_time'] if summary['execution_time'] else 0
         markdown = f"""## Data Lineage
 
 ### Pipeline Execution
 - **Pipeline ID**: {summary['pipeline_id']}
 - **Execution Date**: {summary['execution_date']}
-- **Total Duration**: {summary['execution_time']:.1f if summary['execution_time'] else 0} seconds
+- **Total Duration**: {execution_time:.1f} seconds
 - **Validation Status**: {summary['validation_status']}
 
 ### Source Data
