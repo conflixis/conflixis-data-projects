@@ -58,11 +58,15 @@ def upload_npi_list_to_bigquery(config, credentials):
     table_name = bq_config['npi_table'].replace('[abbrev]', health_system['short_name'])
     table_id = f"{bq_config['project_id']}.{bq_config['dataset_id']}.{table_name}"
 
-    # Define job config
+    # Define job config with explicit schema
     job_config = bigquery.LoadJobConfig(
+        schema=[
+            bigquery.SchemaField("Full_Name", "STRING"),
+            bigquery.SchemaField("NPI", "STRING"),
+            bigquery.SchemaField("Primary_Specialty", "STRING"),
+        ],
         source_format=bigquery.SourceFormat.CSV,
-        skip_leading_rows=1,
-        autodetect=True,
+        skip_leading_rows=1, # Skip the header row in the CSV
         write_disposition=bigquery.WriteDisposition.WRITE_TRUNCATE,
     )
 

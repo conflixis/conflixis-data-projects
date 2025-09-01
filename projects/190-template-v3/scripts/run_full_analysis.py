@@ -80,8 +80,6 @@ def main():
 
     analysis_scripts = [
         "01_upload_npi_list.py",
-        "02_analyze_op_payments.py",
-        "03_analyze_prescribing.py",
         "04_generate_report.py"
     ]
 
