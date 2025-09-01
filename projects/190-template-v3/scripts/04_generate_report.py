@@ -26,10 +26,14 @@ def get_gcp_credentials(env_var='GCP_SERVICE_ACCOUNT_KEY'):
         raise RuntimeError(f"Failed to create credentials from service account info: {e}")
 
 def format_currency(value):
+    if value is None or not pd.notna(value):
+        return "$0"
     return f"${value:,.0f}"
 
 def format_multiplier(value):
-    return f"{value:.1f}x" if value is not None and pd.notna(value) else "N/A"
+    if value is None or not pd.notna(value):
+        return "N/A"
+    return f"{value:.1f}x"
 
 def get_provider_type_sql_case():
     """Returns a SQL CASE statement for classifying provider types."""
@@ -153,6 +157,18 @@ def generate_narrative_report(config, credentials):
     # Convert to DataFrames for easy formatting
     correlation_df = pd.DataFrame(drug_correlation_data)
     provider_type_df = pd.DataFrame(provider_type_data)
+
+    # --- Robust Type Conversion ---
+    # Ensure all relevant columns are numeric, coercing errors to NaN
+    cols_to_convert = ['avg_rx_paid', 'avg_rx_unpaid', 'roi']
+    for col in cols_to_convert:
+        if col in correlation_df.columns:
+            correlation_df[col] = pd.to_numeric(correlation_df[col], errors='coerce')
+    
+    cols_to_convert = ['avg_rx_paid', 'avg_rx_unpaid']
+    for col in cols_to_convert:
+        if col in provider_type_df.columns:
+            provider_type_df[col] = pd.to_numeric(provider_type_df[col], errors='coerce')
 
     # --- Generate Markdown Report ---
     health_system = config['health_system']

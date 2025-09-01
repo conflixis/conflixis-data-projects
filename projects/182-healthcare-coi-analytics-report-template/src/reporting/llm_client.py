@@ -56,15 +56,26 @@ class ClaudeLLMClient:
         Returns:
             Generated narrative text
         """
-        # Format the prompt with data
-        prompt = section_config['prompt'].format(
-            data=self._format_data_for_prompt(section_data)
-        )
+        # Format the prompt with data and previous sections
+        formatted_data = self._format_data_for_prompt(section_data)
         
-        # Add previous sections context if this is executive summary
-        if previous_sections and 'previous_sections' in section_config['prompt']:
+        # Prepare previous sections summary if available
+        if previous_sections and '{previous_sections}' in section_config['prompt']:
             sections_summary = self._summarize_previous_sections(previous_sections)
-            prompt = prompt.replace('{previous_sections}', sections_summary)
+        else:
+            sections_summary = ""
+        
+        # Format the prompt with both data and previous_sections
+        try:
+            prompt = section_config['prompt'].format(
+                data=formatted_data,
+                previous_sections=sections_summary
+            )
+        except KeyError:
+            # Fallback: try with just data if previous_sections not needed
+            prompt = section_config['prompt'].format(
+                data=formatted_data
+            )
         
         # Add system message for style
         system_message = """You are an investigative healthcare journalist writing a data-driven report 
