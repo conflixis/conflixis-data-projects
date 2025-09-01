@@ -82,7 +82,8 @@ class DataLoader:
     def _upload_npis_to_bigquery(self, df: pd.DataFrame):
         """Upload NPIs to BigQuery table for efficient joins"""
         table_name = f"{self.config['health_system']['short_name']}_provider_npis"
-        table_id = f"{self.config['bigquery']['project_id']}.{self.config['bigquery']['dataset']}.{table_name}"
+        temp_dataset = self.config['bigquery'].get('temp_dataset', 'temp')
+        table_id = f"{self.config['bigquery']['project_id']}.{temp_dataset}.{table_name}"
         
         logger.info(f"Uploading {len(df):,} NPIs to BigQuery table: {table_id}")
         
@@ -184,6 +185,7 @@ class DataLoader:
         providers = self.load_provider_npis()
         
         # Use the NPI table for efficient querying
+        temp_dataset = self.config['bigquery'].get('temp_dataset', 'temp')
         npi_table = f"{self.config['health_system']['short_name']}_provider_npis"
         
         query = f"""
@@ -205,7 +207,7 @@ class DataLoader:
             WHERE 
                 EXISTS (
                     SELECT 1 
-                    FROM `{self.config['bigquery']['project_id']}.{self.config['bigquery']['dataset']}.{npi_table}` npi
+                    FROM `{self.config['bigquery']['project_id']}.{temp_dataset}.{npi_table}` npi
                     WHERE CAST(op.covered_recipient_npi AS STRING) = npi.NPI
                 )
                 AND program_year BETWEEN {start_year} AND {end_year}
@@ -403,6 +405,7 @@ class DataLoader:
         providers = self.load_provider_npis()
         
         # Use the NPI table for efficient querying
+        temp_dataset = self.config['bigquery'].get('temp_dataset', 'temp')
         npi_table = f"{self.config['health_system']['short_name']}_provider_npis"
         
         query = f"""
@@ -423,7 +426,7 @@ class DataLoader:
             FROM 
                 `{self.config['bigquery']['project_id']}.{self.config['bigquery']['dataset']}.{self.config['bigquery']['tables']['prescriptions']}` rx
             INNER JOIN 
-                `{self.config['bigquery']['project_id']}.{self.config['bigquery']['dataset']}.{npi_table}` npi
+                `{self.config['bigquery']['project_id']}.{temp_dataset}.{npi_table}` npi
                 ON CAST(rx.NPI AS STRING) = npi.NPI
             WHERE 
                 rx.CLAIM_YEAR BETWEEN {start_year} AND {end_year}
@@ -443,7 +446,7 @@ class DataLoader:
                 END AS provider_type_category
             FROM `{self.config['bigquery']['project_id']}.{self.config['bigquery']['dataset']}.PHYSICIANS_OVERVIEW` po
             INNER JOIN 
-                `{self.config['bigquery']['project_id']}.{self.config['bigquery']['dataset']}.{npi_table}` npi
+                `{self.config['bigquery']['project_id']}.{temp_dataset}.{npi_table}` npi
                 ON CAST(po.NPI AS STRING) = npi.NPI
         )
         SELECT 
@@ -688,7 +691,7 @@ class DataLoader:
             AND total_amount_of_payment_usdollars > 0
             AND EXISTS (
                 SELECT 1 
-                FROM `{self.config['bigquery']['project_id']}.{self.config['bigquery']['dataset']}.{npi_table}` npi
+                FROM `{self.config['bigquery']['project_id']}.{temp_dataset}.{npi_table}` npi
                 WHERE CAST(covered_recipient_npi AS STRING) = npi.NPI
             )
         GROUP BY 1,2,3,4,5,6
