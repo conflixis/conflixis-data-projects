@@ -1,0 +1,258 @@
+# Healthcare COI Report Section Prompts
+# Each section has specific data requirements and tailored prompts for LLM analysis
+# NOTE: Sections are processed in order, with executive_summary generated LAST
+
+# PROCESSING ORDER (executive_summary is generated last)
+section_order:
+  - payment_overview
+  - prescription_patterns
+  - correlation_analysis
+  - provider_vulnerability
+  - payment_tiers
+  - consecutive_years
+  - risk_assessment
+  - recommendations
+  - methodology_note
+  - executive_summary  # MUST BE LAST - summarizes all previous sections
+
+payment_overview:
+  data_required:
+    - overall_metrics
+    - yearly_trends
+    - payment_categories
+    - top_manufacturers
+  context: "Section 1: The Landscape of Industry Financial Relationships"
+  prompt: |
+    Analyze the payment data and write "The Landscape of Industry Financial Relationships" section.
+    
+    Data provided:
+    {data}
+    
+    Structure your narrative around:
+    1. Overall metrics narrative - interpret what X providers receiving $Y means
+    2. Temporal evolution - explain the year-over-year growth pattern and what it suggests
+    3. Payment category analysis - what each category reveals about influence strategies
+    4. Top manufacturers - name specific companies and their engagement levels
+    
+    Style: Investigative but data-rich. Use phrases like:
+    - "The data reveals strategic targeting..."
+    - "This level of penetration raises fundamental questions..."
+    - "The trajectory of payments reveals..."
+    
+    Include a data table where appropriate.
+    Length: 400-500 words
+
+prescription_patterns:
+  data_required:
+    - prescription_metrics
+    - top_drugs
+    - specialty_patterns
+    - provider_type_analysis
+  context: "Section 2: Prescription Patterns Analysis"
+  prompt: |
+    Analyze prescription data to reveal prescribing patterns across the health system.
+    
+    Data provided:
+    {data}
+    
+    Focus on:
+    1. Overall prescribing metrics and what they reveal about practice patterns
+    2. Top prescribed drugs by value (name specific medications like Humira, Ozempic)
+    3. Specialty-specific patterns that suggest targeted influence
+    4. Provider type differences (MD vs NP/PA prescribing volumes)
+    
+    Avoid just listing statistics. Interpret what these patterns mean for patient care.
+    Length: 300-400 words
+
+correlation_analysis:
+  data_required:
+    - drug_correlations
+    - influence_factors
+    - roi_calculations
+    - specific_drug_examples
+  context: "Section 3: The Quantification of Influence"
+  prompt: |
+    Write "The Quantification of Influence: Extreme Correlations in Clinical Decision-Making" section.
+    
+    Data provided:
+    {data}
+    
+    This is the most critical section. Structure as:
+    1. Opening about correlations that "challenge conventional understanding"
+    2. Specific drug examples with influence factors (e.g., "Krystexxa: 426x increase")
+    3. ROI calculations showing efficiency of influence
+    4. Statement that patterns "cannot be explained by clinical factors alone"
+    
+    Use dramatic but precise language:
+    - "profound correlations"
+    - "systematic redirection of clinical decision-making"
+    - "factors ranging from 92x to 426x"
+    
+    Include specific drug names and exact multipliers.
+    Length: 400-500 words
+
+provider_vulnerability:
+  data_required:
+    - provider_type_comparison
+    - pa_influence_metrics
+    - np_influence_metrics
+    - md_baseline
+  context: "Section 4: The Hierarchy of Influence"
+  prompt: |
+    Write "The Hierarchy of Influence: Differential Susceptibility Across Provider Types" section.
+    
+    Data provided:
+    {data}
+    
+    Focus on:
+    1. PA and NP heightened vulnerability (use specific % increases like "407% increase")
+    2. Comparison with physician baseline
+    3. Implications for supervision and oversight
+    4. Why mid-level providers may be more susceptible
+    
+    Key message: Mid-level providers show disproportionate influence from payments.
+    Use terms like "heightened susceptibility" and "vulnerability gap"
+    Length: 300-400 words
+
+payment_tiers:
+  data_required:
+    - payment_tier_analysis
+    - small_payment_roi
+    - tier_prescribing_patterns
+  context: "Section 5: The Psychology of Micro-Influence"
+  prompt: |
+    Write "The Psychology of Micro-Influence: Disproportionate Impact of Minimal Payments" section.
+    
+    Data provided:
+    {data}
+    
+    Key finding to emphasize:
+    - Small payments (<$100) generate massive ROI (e.g., 2,300x)
+    - Behavioral economics explanation (reciprocity principle)
+    - Most providers receive small payments but show large behavior changes
+    
+    This section should be surprising and concerning.
+    Length: 250-350 words
+
+consecutive_years:
+  data_required:
+    - consecutive_year_counts
+    - cumulative_prescribing
+    - sustained_relationship_impact
+  context: "Section 6: The Compounding Effect"
+  prompt: |
+    Write "The Compounding Effect of Sustained Financial Relationships" section.
+    
+    Data provided:
+    {data}
+    
+    Analyze:
+    1. Number of providers with payments every year (e.g., "2,343 providers")
+    2. Cumulative impact on prescribing behavior
+    3. How sustained relationships differ from one-time payments
+    4. Normalization of influence over time
+    
+    Use terms like "entrenched relationships" and "compound influence"
+    Length: 250-350 words
+
+risk_assessment:
+  data_required:
+    - high_risk_indicators
+    - compliance_scores
+    - risk_distribution
+    - vulnerable_specialties
+  context: "Section 7: Risk Assessment and Compliance Vulnerabilities"
+  prompt: |
+    Analyze risk indicators and compliance vulnerabilities.
+    
+    Data provided:
+    {data}
+    
+    Structure as:
+    1. List of high-risk indicators found
+    2. Number of providers in each risk category
+    3. Compliance vulnerabilities identified
+    4. Potential regulatory exposure
+    
+    Be specific about risks without being alarmist.
+    Length: 300-400 words
+
+recommendations:
+  data_required:
+    - key_findings_summary
+    - highest_risk_areas
+    - provider_categories
+  context: "Section 8: Actionable Recommendations"
+  prompt: |
+    Based on the analysis, provide actionable recommendations.
+    
+    Key findings:
+    {data}
+    
+    Structure as:
+    1. Immediate actions (monitoring high-risk providers)
+    2. Policy changes (updating COI policies)
+    3. Education initiatives (targeting vulnerable provider types)
+    4. Long-term strategies
+    
+    Be specific and practical. Avoid generic recommendations.
+    Length: 300-400 words
+
+methodology_note:
+  data_required:
+    - data_sources
+    - analysis_period
+    - provider_count
+  context: "Appendix: Methodology and Limitations"
+  prompt: |
+    Write a brief methodology note.
+    
+    Data:
+    {data}
+    
+    Include:
+    - Data sources (CMS Open Payments, Medicare Part D)
+    - Analysis period
+    - Statistical approach (brief)
+    - Key limitations
+    
+    Keep technical but accessible.
+    Length: 150-200 words
+
+# EXECUTIVE SUMMARY - Generated LAST after all sections are complete
+executive_summary:
+  data_required:
+    - overall_payment_metrics
+    - key_correlations
+    - provider_vulnerability_summary
+    - consecutive_year_stats
+    - all_section_summaries  # Key findings from all previous sections
+  context: "Executive Summary - Written AFTER analyzing all findings"
+  prompt: |
+    You are an investigative healthcare journalist. Based on ALL the analysis sections already completed, write a compelling executive summary.
+    
+    Data and findings from all sections:
+    {data}
+    
+    Previous sections analyzed:
+    {previous_sections}
+    
+    Write in the style of a ProPublica or Wall Street Journal investigation. Include:
+    1. Opening statement about the scope of financial relationships (total $ amount, % providers affected)
+    2. The most striking correlation patterns from the analysis (e.g., "providers receiving payments prescribe XXx more")
+    3. Differential vulnerability finding (PA/NP vs MD susceptibility) 
+    4. Sustained engagement patterns (consecutive year relationships)
+    5. Most concerning findings that warrant immediate attention
+    
+    This summary should capture the essence of the entire report. Use specific numbers from the data. 
+    Be dramatic but accurate. Avoid academic language.
+    Length: 400-500 words
+  constraints:
+    max_length: 500
+    style: investigative_journalism
+    must_include:
+      - total_payment_amount
+      - provider_participation_rate
+      - highest_influence_factor
+      - pa_np_vulnerability
+      - key_risk_findings

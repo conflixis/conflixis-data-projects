@@ -1,6 +1,6 @@
 """
 Unified Report Generator Module
-Generates professional reports in multiple formats
+Generates professional reports in multiple formats using LLM analysis
 """
 
 import pandas as pd
@@ -11,6 +11,8 @@ import logging
 from datetime import datetime
 import yaml
 from jinja2 import Environment, FileSystemLoader
+from .llm_client import ClaudeLLMClient
+from .data_mapper import SectionDataMapper
 
 logger = logging.getLogger(__name__)
 
@@ -174,38 +176,113 @@ class ReportGenerator:
         return formatted
     
     def _generate_investigative_report(self) -> str:
-        """Generate investigative journalism style report"""
-        sections = []
+        """Generate investigative journalism style report using LLM analysis"""
         
-        # Executive Summary
-        sections.append(self._generate_executive_summary_investigative())
+        # Load section prompts
+        prompts_path = Path(__file__).parent / 'section_prompts.yaml'
+        with open(prompts_path, 'r') as f:
+            prompts_config = yaml.safe_load(f)
         
-        # Open Payments Overview
-        if 'open_payments' in self.report_data:
-            sections.append(self._generate_open_payments_section_investigative())
+        # Initialize LLM client and data mapper
+        llm_client = ClaudeLLMClient()
+        data_mapper = SectionDataMapper(self.report_data)
         
-        # Prescription Patterns
-        if 'prescriptions' in self.report_data:
-            sections.append(self._generate_prescriptions_section_investigative())
+        # Process sections in order
+        generated_sections = {}
+        section_order = prompts_config.get('section_order', [])
         
-        # Correlations - The Heart of the Investigation
-        if 'correlations' in self.report_data:
-            sections.append(self._generate_correlations_section_investigative())
+        for section_name in section_order:
+            if section_name == 'executive_summary':
+                # Skip executive summary for now, generate it last
+                continue
+            
+            logger.info(f"Generating section: {section_name}")
+            
+            # Get section configuration
+            section_config = prompts_config.get(section_name, {})
+            
+            # Get required data for this section
+            required_data = section_config.get('data_required', [])
+            section_data = data_mapper.get_section_data(section_name, required_data)
+            
+            # Generate narrative for this section
+            try:
+                narrative = llm_client.generate_section(
+                    section_config,
+                    section_data,
+                    previous_sections=generated_sections
+                )
+                generated_sections[section_name] = narrative
+            except Exception as e:
+                logger.error(f"Failed to generate {section_name}: {e}")
+                # Fallback to template-based generation
+                generated_sections[section_name] = self._generate_fallback_section(section_name)
         
-        # Provider Vulnerability
-        if 'correlations' in self.report_data:
-            sections.append(self._generate_vulnerability_section_investigative())
+        # Generate executive summary last with all sections complete
+        logger.info("Generating executive summary")
+        exec_config = prompts_config.get('executive_summary', {})
+        exec_data = data_mapper.get_section_data('executive_summary', exec_config.get('data_required', []))
         
-        # Risk Assessment
-        if 'risk_assessment' in self.report_data:
-            sections.append(self._generate_risk_section_investigative())
+        # Add all section summaries to exec data
+        exec_data['all_section_summaries'] = generated_sections
         
-        # Recommendations
-        sections.append(self._generate_recommendations_investigative())
+        try:
+            executive_summary = llm_client.generate_section(
+                exec_config,
+                exec_data,
+                previous_sections=generated_sections
+            )
+        except Exception as e:
+            logger.error(f"Failed to generate executive summary: {e}")
+            executive_summary = self._generate_fallback_executive_summary()
         
-        return "\n\n".join(sections)
+        # Assemble final report
+        report_parts = [
+            f"# {self.config['health_system']['name']} Conflict of Interest Analysis Report",
+            f"\n*Generated: {datetime.now().strftime('%B %d, %Y')}*",
+            f"*Analysis Period: {self.config['analysis']['start_year']}-{self.config['analysis']['end_year']}*\n",
+            "---\n",
+            "## Executive Summary\n",
+            executive_summary,
+            "\n---\n"
+        ]
+        
+        # Add each section with proper formatting
+        section_titles = {
+            'payment_overview': '## 1. The Landscape of Industry Financial Relationships',
+            'prescription_patterns': '## 2. Prescription Patterns',
+            'correlation_analysis': '## 3. The Quantification of Influence',
+            'provider_vulnerability': '## 4. The Hierarchy of Influence',
+            'payment_tiers': '## 5. The Psychology of Micro-Influence',
+            'consecutive_years': '## 6. The Compounding Effect of Sustained Relationships',
+            'risk_assessment': '## 7. Risk Assessment',
+            'recommendations': '## 8. Recommendations',
+            'methodology_note': '## Appendix: Methodology'
+        }
+        
+        for section_name in section_order:
+            if section_name != 'executive_summary' and section_name in generated_sections:
+                title = section_titles.get(section_name, f"## {section_name.replace('_', ' ').title()}")
+                report_parts.append(f"{title}\n")
+                report_parts.append(generated_sections[section_name])
+                report_parts.append("\n---\n")
+        
+        return "\n".join(report_parts)
     
-    def _generate_executive_summary_investigative(self) -> str:
+    def _generate_fallback_section(self, section_name: str) -> str:
+        """Generate fallback content when LLM fails"""
+        return f"[Section {section_name} - Data analysis in progress]"
+    
+    def _generate_fallback_executive_summary(self) -> str:
+        """Generate fallback executive summary when LLM fails"""
+        metrics = self.report_data.get('open_payments', {}).get('metrics', {})
+        return f"""This analysis examines financial relationships between pharmaceutical/medical device 
+        industries and {self.config['health_system']['name']} providers. 
+        
+        Key findings include {metrics.get('unique_providers', 0)} providers receiving 
+        {metrics.get('total_payments', '$0')} in industry payments during the analysis period."""
+    
+    def _generate_compliance_report(self) -> str:
         """Generate compelling executive summary"""
         summary = f"""# {self.report_data['health_system']} Conflict of Interest Analysis Report
 
