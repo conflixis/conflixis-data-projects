@@ -2,6 +2,16 @@
 # Each section has specific data requirements and tailored prompts for LLM analysis
 # NOTE: Sections are processed in order, with executive_summary generated LAST
 
+# GLOBAL TONE GUIDELINES FOR ALL SECTIONS:
+# - Present correlations as observations, not conclusions
+# - Avoid language that implies causation from correlation
+# - Use phrases like "associated with", "correlated with", "observed patterns"
+# - Avoid dramatic or alarmist language
+# - Include disclaimers about correlation vs causation where appropriate
+# - Make observations manufacturer-specific where possible
+# - Use professional, neutral tone throughout
+# - Focus on statistical associations rather than behavioral interpretations
+
 # PROCESSING ORDER (executive_summary is generated last)
 section_order:
   - payment_overview
@@ -48,6 +58,13 @@ payment_overview:
     - "The data reveals strategic targeting..."
     - "This level of penetration raises fundamental questions..."
     - "The trajectory of payments reveals..."
+    
+    TONE GUIDELINES:
+    - Use neutral language: "payment patterns" instead of "strategic targeting"
+    - Present data objectively without value judgments
+    - Avoid phrases that imply intent or strategy
+    - Focus on describing what the data shows, not interpreting intent
+    - Use "observed patterns" rather than "reveals strategies"
     
     Integrate tables naturally within the narrative, not just at the end.
     Length: 400-500 words
@@ -110,6 +127,16 @@ correlation_analysis:
     - "systematic redirection of clinical decision-making"
     - "factors ranging from 92x to 426x"
     
+    CRITICAL TONE GUIDELINES:
+    - DO NOT claim causation from correlation
+    - Use "associated with" or "correlated with", never "causes" or "leads to"
+    - Include disclaimer: "These correlations do not establish causation"
+    - Present findings as "observed associations" not "proven influence"
+    - Be manufacturer-specific: "Providers receiving payments from [Company X]..."
+    - Avoid: "systematic redirection", "cannot be explained by clinical factors"
+    - Use: "statistical associations", "warrants further investigation"
+    - Replace "profound correlations" with "notable associations"
+    
     Include specific drug names and exact multipliers. Integrate the table within narrative.
     Length: 400-500 words
 
@@ -165,6 +192,15 @@ provider_vulnerability:
     
     Key message: Mid-level providers show disproportionate influence from payments (ONLY if data supports this).
     Use terms like "heightened susceptibility" and "vulnerability gap" ONLY with real data.
+    
+    TONE GUIDELINES:
+    - Replace "vulnerability" and "susceptibility" with "variation" or "differences"
+    - Present as "observed patterns across provider types"
+    - Avoid implying weakness or exploitation
+    - Use neutral terms: "payment patterns", "prescribing differences"
+    - Don't use: "heightened susceptibility", "vulnerability gap"
+    - Use: "prescribing variations", "differential patterns"
+    
     Length: 300-400 words
 
 payment_tiers:
@@ -190,6 +226,16 @@ payment_tiers:
     
     This section should be surprising and concerning.
     Integrate table to show the disproportionate impact.
+    
+    TONE GUIDELINES:
+    - Remove psychological interpretations
+    - Present ROI data without behavioral economics explanations
+    - Focus on statistical observations only
+    - Don't speculate about reciprocity or psychological mechanisms
+    - Use: "correlation between payment size and prescribing"
+    - Avoid: "psychological influence", "reciprocity bias", "micro-influence"
+    - Present data neutrally without surprise or concern
+    
     Length: 250-350 words
 
 consecutive_years:
@@ -219,6 +265,15 @@ consecutive_years:
     
     Use terms like "entrenched relationships" and "compound influence"
     Integrate table to show cumulative effect.
+    
+    TONE GUIDELINES:
+    - Use neutral terms: "multi-year payment patterns" not "entrenched relationships"
+    - Avoid: "compound influence", "normalization", "entrenched"
+    - Present as temporal patterns without implying cumulative effect
+    - Focus on data trends without interpretation
+    - Use: "consecutive year observations", "multi-year associations"
+    - Describe patterns objectively without suggesting behavioral changes
+    
     Length: 250-350 words
 
 risk_assessment:
@@ -293,6 +348,9 @@ methodology_note:
     2. Data Lineage section:
        Include the provided data lineage information from the data above (look for data_lineage_markdown in the data).
     
+    3. IMPORTANT DISCLAIMER (must include):
+       "This analysis identifies statistical correlations between payment receipt and prescribing patterns. These correlations do not establish causation, and multiple factors including clinical appropriateness, patient populations, disease prevalence, and formulary restrictions may contribute to observed prescribing patterns. The associations presented are manufacturer-specific and should be interpreted within the context of individual clinical decision-making."
+    
     Keep technical but accessible.
     Combine both sections naturally.
     Length: 300-400 words total
@@ -324,6 +382,17 @@ executive_summary:
     
     This summary should capture the essence of the entire report. Use specific numbers from the data. 
     Be dramatic but accurate. Avoid academic language.
+    
+    TONE GUIDELINES:
+    - Professional and measured tone, not investigative journalism
+    - Present key findings without editorial commentary
+    - Use "analysis reveals" not "investigation uncovers"
+    - Include disclaimer about correlation vs causation
+    - Be specific about which manufacturers show which patterns
+    - Avoid dramatic language or calls to action
+    - Replace "striking" with "notable", "concerning" with "noteworthy"
+    - Focus on statistical findings rather than implications
+    
     Length: 200-300 words
   constraints:
     max_length: 300
