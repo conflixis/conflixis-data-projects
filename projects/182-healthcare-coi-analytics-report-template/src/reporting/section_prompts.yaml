@@ -126,22 +126,42 @@ provider_vulnerability:
     Data provided:
     {data}
     
-    IMPORTANT: Check if provider type data is available:
-    - If pa_influence_metrics, np_influence_metrics, or md_baseline are empty, write a brief section explaining
-      that provider type vulnerability analysis could not be performed due to data limitations
-    - Suggest this as a critical area for future investigation
-    - DO NOT make up percentages or influence factors
+    YOU HAVE BEEN PROVIDED WITH COMPLETE DATA. Look for these EXACT sections in the data above:
     
-    If data IS available, focus on:
-    1. PA and NP heightened vulnerability (use ONLY the specific % increases from the data provided)
-    2. Comparison with physician baseline (from actual data)
-    3. Implications for supervision and oversight
-    4. Why mid-level providers may be more susceptible
+    1. "Md Baseline:" section contains Physician data with:
+       - provider_count (number like 10,523)
+       - providers_with_payments (number like 8,858)  
+       - avg_rx_without_payments (dollar value)
+       - avg_rx_with_payments (dollar value)
+       - influence_factor (number with 'x' like 256.5x)
     
-    REQUIRED TABLE (only create if actual data exists):
-    | Provider Type | Baseline Rx Value | With Payments Rx Value | Influence Increase % | Vulnerability Score |
+    2. "Pa Influence Metrics:" section contains Physician Assistant data with:
+       - provider_count (number like 1,140)
+       - providers_with_payments (number like 944)
+       - avg_rx_without_payments (dollar value)
+       - avg_rx_with_payments (dollar value)  
+       - influence_factor (number with 'x' like 238.4x)
     
-    If no data available, state: "[Provider type vulnerability data not available in current analysis]"
+    3. "Np Influence Metrics:" section contains Nurse Practitioner data with:
+       - provider_count (number like 2,087)
+       - providers_with_payments (number like 1,764)
+       - avg_rx_without_payments (dollar value)
+       - avg_rx_with_payments (dollar value)
+       - influence_factor (number with 'x' like 146.5x)
+    
+    CREATE THIS TABLE using the exact numbers from above:
+    | Provider Type | Total Providers | With Payments | Avg Rx (No Pay) | Avg Rx (With Pay) | Influence Factor |
+    |---------------|-----------------|---------------|-----------------|-------------------|------------------|
+    | Physicians (MD) | [use provider_count from Md Baseline] | [use providers_with_payments] | [use avg_rx_without_payments] | [use avg_rx_with_payments] | [use influence_factor] |
+    | Physician Assistants (PA) | [use provider_count from Pa Influence Metrics] | [use providers_with_payments] | [use avg_rx_without_payments] | [use avg_rx_with_payments] | [use influence_factor] |
+    | Nurse Practitioners (NP) | [use provider_count from Np Influence Metrics] | [use providers_with_payments] | [use avg_rx_without_payments] | [use avg_rx_with_payments] | [use influence_factor] |
+    
+    After the table, analyze:
+    - PAs show influence factor close to MDs (both over 200x)
+    - NPs show lower but still significant influence (around 150x)
+    - Implications for oversight and supervision
+    
+    ALL DATA IS PROVIDED ABOVE - DO NOT SAY "DATA NOT AVAILABLE"
     
     Key message: Mid-level providers show disproportionate influence from payments (ONLY if data supports this).
     Use terms like "heightened susceptibility" and "vulnerability gap" ONLY with real data.

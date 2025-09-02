@@ -66,8 +66,9 @@ class SectionDataMapper:
             data_map['payment_tier_analysis'] = corr.get('payment_tiers', pd.DataFrame())
             data_map['small_payment_roi'] = self._calculate_small_payment_roi(corr)
             data_map['tier_prescribing_patterns'] = corr.get('payment_tiers', pd.DataFrame())
-            data_map['provider_vulnerability_summary'] = corr.get('provider_type_vulnerability', {})
-            data_map['provider_type_comparison'] = corr.get('provider_type_vulnerability', pd.DataFrame())
+            # Note: report_generator stores this as 'provider_vulnerability', not 'provider_type_vulnerability'
+            data_map['provider_vulnerability_summary'] = corr.get('provider_vulnerability', corr.get('provider_type_vulnerability', {}))
+            data_map['provider_type_comparison'] = corr.get('provider_vulnerability', corr.get('provider_type_vulnerability', pd.DataFrame()))
             data_map['pa_influence_metrics'] = self._extract_pa_metrics(corr)
             data_map['np_influence_metrics'] = self._extract_np_metrics(corr)
             data_map['md_baseline'] = self._extract_md_baseline(corr)
@@ -206,37 +207,37 @@ class SectionDataMapper:
     
     def _extract_pa_metrics(self, corr: Dict) -> Dict[str, Any]:
         """Extract PA-specific metrics"""
-        if 'provider_type_vulnerability' in corr:
-            df = corr['provider_type_vulnerability']
-            if isinstance(df, pd.DataFrame) and not df.empty:
-                # Look for Physician Assistant in provider_type column
-                pa_data = df[df['provider_type'] == 'Physician Assistant'] if 'provider_type' in df.columns else pd.DataFrame()
-                if not pa_data.empty:
-                    return pa_data.iloc[0].to_dict()
+        # Check both possible keys (report_generator uses 'provider_vulnerability')
+        df = corr.get('provider_vulnerability', corr.get('provider_type_vulnerability', pd.DataFrame()))
+        if isinstance(df, pd.DataFrame) and not df.empty:
+            # Look for Physician Assistant in provider_type column
+            pa_data = df[df['provider_type'] == 'Physician Assistant'] if 'provider_type' in df.columns else pd.DataFrame()
+            if not pa_data.empty:
+                return pa_data.iloc[0].to_dict()
         
         return {}  # Return empty dict if no data available
     
     def _extract_np_metrics(self, corr: Dict) -> Dict[str, Any]:
         """Extract NP-specific metrics"""
-        if 'provider_type_vulnerability' in corr:
-            df = corr['provider_type_vulnerability']
-            if isinstance(df, pd.DataFrame) and not df.empty:
-                # Look for Nurse Practitioner in provider_type column
-                np_data = df[df['provider_type'] == 'Nurse Practitioner'] if 'provider_type' in df.columns else pd.DataFrame()
-                if not np_data.empty:
-                    return np_data.iloc[0].to_dict()
+        # Check both possible keys (report_generator uses 'provider_vulnerability')
+        df = corr.get('provider_vulnerability', corr.get('provider_type_vulnerability', pd.DataFrame()))
+        if isinstance(df, pd.DataFrame) and not df.empty:
+            # Look for Nurse Practitioner in provider_type column
+            np_data = df[df['provider_type'] == 'Nurse Practitioner'] if 'provider_type' in df.columns else pd.DataFrame()
+            if not np_data.empty:
+                return np_data.iloc[0].to_dict()
         
         return {}  # Return empty dict if no data available
     
     def _extract_md_baseline(self, corr: Dict) -> Dict[str, Any]:
         """Extract MD baseline metrics"""
-        if 'provider_type_vulnerability' in corr:
-            df = corr['provider_type_vulnerability']
-            if isinstance(df, pd.DataFrame) and not df.empty:
-                # Look for Physician in provider_type column
-                md_data = df[df['provider_type'] == 'Physician'] if 'provider_type' in df.columns else pd.DataFrame()
-                if not md_data.empty:
-                    return md_data.iloc[0].to_dict()
+        # Check both possible keys (report_generator uses 'provider_vulnerability')
+        df = corr.get('provider_vulnerability', corr.get('provider_type_vulnerability', pd.DataFrame()))
+        if isinstance(df, pd.DataFrame) and not df.empty:
+            # Look for Physician in provider_type column
+            md_data = df[df['provider_type'] == 'Physician'] if 'provider_type' in df.columns else pd.DataFrame()
+            if not md_data.empty:
+                return md_data.iloc[0].to_dict()
         
         return {}  # Return empty dict if no data available
     

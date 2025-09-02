@@ -78,9 +78,19 @@ class ClaudeLLMClient:
             )
         
         # Add system message for style
-        system_message = """You are an investigative healthcare journalist writing a data-driven report 
-        about conflicts of interest in healthcare. Your style should be compelling and narrative-driven, 
-        similar to ProPublica or Wall Street Journal investigations.
+        system_message = """You are a healthcare data analyst writing a professional, objective report 
+        about financial relationships in healthcare. Your style should be factual, balanced, and analytical.
+        
+        WRITING STYLE REQUIREMENTS:
+        - Use neutral, professional language
+        - Avoid sensationalist terms like "staggering," "troubling," "shocking," "alarming"
+        - Present data objectively without emotional language
+        - Use descriptive headings rather than dramatic ones
+        - Focus on data patterns and statistical relationships
+        - Avoid implications of wrongdoing without evidence
+        - Use terms like "correlation," "relationship," "pattern" instead of "influence," "manipulation"
+        - Replace dramatic phrases with factual descriptions
+        - Avoid words like "machine," "web," "pipeline" in headlines
         
         CRITICAL DATA ACCURACY REQUIREMENTS:
         1. Use ONLY the exact numbers provided in the data. NEVER invent, estimate, or extrapolate numbers.
@@ -152,11 +162,21 @@ class ClaudeLLMClient:
                 formatted_parts.append(f"\n{key.replace('_', ' ').title()}:")
                 for sub_key, sub_value in value.items():
                     if isinstance(sub_value, (int, float)):
-                        # Format numbers
-                        if sub_value > 1000000:
-                            formatted_value = f"${sub_value/1000000:.1f}M"
-                        elif sub_value > 1000:
-                            formatted_value = f"${sub_value/1000:.1f}K"
+                        # Check if this is a count field (not monetary)
+                        if any(word in sub_key.lower() for word in ['count', 'providers', 'transactions', 'claims']):
+                            formatted_value = f"{int(sub_value):,}"
+                        # Check if this is an influence factor or multiplier
+                        elif 'factor' in sub_key.lower() or 'multiplier' in sub_key.lower():
+                            formatted_value = f"{sub_value:.1f}x" if sub_value > 1 else f"{sub_value:.3f}"
+                        # Check if this is explicitly a payment or cost field (monetary)
+                        elif any(word in sub_key.lower() for word in ['payment', 'cost', 'value', 'amount', 'rx']):
+                            if sub_value > 1000000:
+                                formatted_value = f"${sub_value/1000000:.1f}M"
+                            elif sub_value > 1000:
+                                formatted_value = f"${sub_value:,.0f}"
+                            else:
+                                formatted_value = f"${sub_value:.2f}"
+                        # Default handling for other numbers
                         else:
                             formatted_value = f"{sub_value:,.2f}"
                     else:
@@ -206,12 +226,25 @@ class ClaudeLLMClient:
                 # Keep years as integers
                 formatted_v = str(int(v))
             elif isinstance(v, (int, float)):
-                if k.lower() in ['providers', 'count', 'transactions']:
+                # Check if this is a count field (not monetary)
+                if any(word in k.lower() for word in ['count', 'providers', 'transactions', 'claims']):
                     formatted_v = f"{int(v):,}"
+                # Check if this is an influence factor or multiplier
+                elif 'factor' in k.lower() or 'multiplier' in k.lower():
+                    formatted_v = f"{v:.1f}x" if v > 1 else f"{v:.3f}"
+                # Check if this is explicitly a payment or cost field (monetary)
+                elif any(word in k.lower() for word in ['payment', 'cost', 'value', 'amount', 'rx']):
+                    if v > 1000000:
+                        formatted_v = f"${v/1000000:.1f}M"
+                    elif v > 1000:
+                        formatted_v = f"${v:,.0f}"
+                    else:
+                        formatted_v = f"${v:.2f}"
+                # Default handling for other numbers
                 elif v > 1000000:
-                    formatted_v = f"${v/1000000:.1f}M"
+                    formatted_v = f"{v/1000000:.1f}M"
                 elif v > 1000:
-                    formatted_v = f"${v:,.0f}"
+                    formatted_v = f"{v:,.0f}"
                 elif v > 1:
                     formatted_v = f"{v:.2f}"
                 else:
