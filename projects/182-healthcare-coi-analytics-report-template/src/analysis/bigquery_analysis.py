@@ -92,17 +92,26 @@ class BigQueryAnalyzer:
         start_time = datetime.now()
         
         # Overall metrics (1 row)
+        # Fixed: Aggregate by physician first to get correct statistics
         metrics_query = f"""
+        WITH physician_totals AS (
+            SELECT
+                physician_id,
+                SUM(total_amount) as physician_total,
+                SUM(payment_count) as physician_transactions
+            FROM {self.op_summary}
+            GROUP BY physician_id
+        )
         SELECT
             COUNT(DISTINCT physician_id) as unique_providers,
-            COUNT(*) as total_transactions,
-            SUM(total_amount) as total_payments,
-            AVG(total_amount) as avg_payment,
-            APPROX_QUANTILES(total_amount, 2)[OFFSET(1)] as median_payment,
-            MAX(total_amount) as max_payment,
-            MIN(total_amount) as min_payment,
-            STDDEV(total_amount) as std_payment
-        FROM {self.op_summary}
+            SUM(physician_transactions) as total_transactions,
+            SUM(physician_total) as total_payments,
+            AVG(physician_total) as avg_payment,
+            APPROX_QUANTILES(physician_total, 2)[OFFSET(1)] as median_payment,
+            MAX(physician_total) as max_payment,
+            MIN(physician_total) as min_payment,
+            STDDEV(physician_total) as std_payment
+        FROM physician_totals
         """
         metrics_df, status = self._run_query(metrics_query, "open_payments_metrics")
         if status == "failed":
@@ -290,14 +299,24 @@ class BigQueryAnalyzer:
         results = {}
         
         # Overall metrics (1 row)
+        # Fixed: Aggregate by NPI first to get correct per-prescriber averages
         metrics_query = f"""
+        WITH prescriber_totals AS (
+            SELECT
+                NPI,
+                SUM(total_claims) as npi_claims,
+                SUM(total_cost) as npi_cost,
+                SUM(total_beneficiaries) as npi_beneficiaries
+            FROM {self.rx_summary}
+            GROUP BY NPI
+        )
         SELECT
             COUNT(DISTINCT NPI) as unique_prescribers,
-            SUM(total_claims) as total_prescriptions,
-            SUM(total_cost) as total_prescription_value,
-            AVG(total_cost) as avg_prescription_value,
-            SUM(total_beneficiaries) as total_beneficiaries
-        FROM {self.rx_summary}
+            SUM(npi_claims) as total_prescriptions,
+            SUM(npi_cost) as total_prescription_value,
+            AVG(npi_cost) as avg_prescription_value,
+            SUM(npi_beneficiaries) as total_beneficiaries
+        FROM prescriber_totals
         """
         metrics_df, status = self._run_query(metrics_query, "prescription_metrics")
         if status == "failed":
@@ -306,13 +325,14 @@ class BigQueryAnalyzer:
         logger.info(f"Prescriptions: {results['overall_metrics']['unique_prescribers']:,} prescribers, ${results['overall_metrics']['total_prescription_value']:,.0f} total")
         
         # Yearly trends (5 rows)
+        # Fixed: Use weighted average for cost per claim
         yearly_query = f"""
         SELECT
             rx_year,
             COUNT(DISTINCT NPI) as prescribers,
             SUM(total_cost) as total_cost,
             SUM(total_claims) as total_claims,
-            AVG(avg_cost_per_claim) as avg_cost_per_claim
+            SAFE_DIVIDE(SUM(total_cost), SUM(total_claims)) as avg_cost_per_claim
         FROM {self.rx_summary}
         GROUP BY rx_year
         ORDER BY rx_year
@@ -324,13 +344,14 @@ class BigQueryAnalyzer:
         results['yearly_trends'] = yearly_df
         
         # Top drugs by cost (20 rows)
+        # Fixed: Use weighted average for cost per prescription
         top_drugs_query = f"""
         SELECT
             BRAND_NAME,
             SUM(total_cost) as total_cost,
             SUM(total_claims) as prescription_count,
             COUNT(DISTINCT NPI) as prescriber_count,
-            AVG(avg_cost_per_claim) as avg_cost_per_prescription,
+            SAFE_DIVIDE(SUM(total_cost), SUM(total_claims)) as avg_cost_per_prescription,
             ROUND(100.0 * SUM(total_cost) / (SELECT SUM(total_cost) FROM {self.rx_summary}), 2) as pct_of_total_cost
         FROM {self.rx_summary}
         GROUP BY BRAND_NAME
@@ -344,13 +365,14 @@ class BigQueryAnalyzer:
         results['top_drugs_by_cost'] = top_drugs_df
         
         # Provider type analysis (4-5 rows)
+        # Fixed: Use weighted average for cost per prescription
         provider_type_query = f"""
         SELECT
             provider_type,
             COUNT(DISTINCT NPI) as provider_count,
             SUM(total_cost) as total_cost,
             SUM(total_claims) as total_claims,
-            AVG(avg_cost_per_claim) as avg_cost_per_prescription
+            SAFE_DIVIDE(SUM(total_cost), SUM(total_claims)) as avg_cost_per_prescription
         FROM {self.rx_summary}
         GROUP BY provider_type
         ORDER BY total_cost DESC
@@ -362,13 +384,14 @@ class BigQueryAnalyzer:
         results['provider_types'] = provider_types_df
         
         # Specialty analysis (top 10 rows)
+        # Fixed: Use weighted average for cost per prescription
         specialty_query = f"""
         SELECT
             specialty,
             COUNT(DISTINCT NPI) as provider_count,
             SUM(total_cost) as total_cost,
             SUM(total_claims) as total_claims,
-            AVG(avg_cost_per_claim) as avg_cost_per_prescription
+            SAFE_DIVIDE(SUM(total_cost), SUM(total_claims)) as avg_cost_per_prescription
         FROM {self.rx_summary}
         WHERE specialty IS NOT NULL AND specialty != ''
         GROUP BY specialty
@@ -385,14 +408,24 @@ class BigQueryAnalyzer:
         results['by_specialty'] = results['top_specialties'].copy() if not results['top_specialties'].empty else pd.DataFrame()
         
         # Provider type analysis
+        # Fixed: Aggregate by NPI first to get correct per-provider averages
         provider_type_query = f"""
+        WITH provider_totals AS (
+            SELECT
+                COALESCE(provider_type, 'Unknown') as provider_type,
+                NPI,
+                SUM(total_claims) as npi_claims,
+                SUM(total_cost) as npi_cost
+            FROM {self.rx_summary}
+            GROUP BY provider_type, NPI
+        )
         SELECT
-            COALESCE(provider_type, 'Unknown') as provider_type,
+            provider_type,
             COUNT(DISTINCT NPI) as provider_count,
-            SUM(total_claims) as total_prescriptions,
-            SUM(total_cost) as total_cost,
-            AVG(total_cost) as avg_cost_per_provider
-        FROM {self.rx_summary}
+            SUM(npi_claims) as total_prescriptions,
+            SUM(npi_cost) as total_cost,
+            AVG(npi_cost) as avg_cost_per_provider
+        FROM provider_totals
         GROUP BY provider_type
         ORDER BY total_cost DESC
         """
