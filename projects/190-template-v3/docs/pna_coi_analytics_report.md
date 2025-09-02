@@ -1,6 +1,0 @@
-# Provider NPI Analysis Open Payments Report
-
-## Executive Summary
-
-This analysis examines financial relationships between industry and Provider NPI Analysis's network of 16,165 providers.
-

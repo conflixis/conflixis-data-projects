@@ -8,8 +8,42 @@ import numpy as np
 from typing import Dict, List, Optional, Any
 import logging
 from google.cloud import bigquery
+from datetime import datetime
 
 logger = logging.getLogger(__name__)
+
+
+class QueryTracker:
+    """Track query execution results for reporting"""
+    
+    def __init__(self):
+        self.queries = []
+        
+    def add_query(self, name: str, status: str, rows: int = 0):
+        """Add a query result to tracking"""
+        self.queries.append({
+            'name': name,
+            'status': status,
+            'rows': rows,
+            'timestamp': datetime.now().isoformat()
+        })
+        
+    def get_summary(self) -> Dict[str, Any]:
+        """Get summary of all queries"""
+        total = len(self.queries)
+        successful = sum(1 for q in self.queries if q['status'] == 'success')
+        empty = sum(1 for q in self.queries if q['status'] == 'empty')
+        failed = sum(1 for q in self.queries if q['status'] == 'failed')
+        
+        return {
+            'total_queries': total,
+            'successful_with_data': successful,
+            'successful_empty': empty,
+            'failed': failed,
+            'success_rate': (successful + empty) / total * 100 if total > 0 else 0,
+            'data_completeness': successful / total * 100 if total > 0 else 0,
+            'queries': self.queries
+        }
 
 
 class BigQueryAnalyzer:
@@ -31,6 +65,7 @@ class BigQueryAnalyzer:
         self.start_year = start_year
         self.end_year = end_year
         self.lineage_tracker = lineage_tracker
+        self.query_tracker = QueryTracker()  # Track query execution results
         
         # Table references
         temp_dataset = config['bigquery'].get('temp_dataset', 'temp')
@@ -69,8 +104,10 @@ class BigQueryAnalyzer:
             STDDEV(total_amount) as std_payment
         FROM {self.op_summary}
         """
-        metrics_df = self._run_query(metrics_query)
-        results['overall_metrics'] = metrics_df.iloc[0].to_dict()
+        metrics_df, status = self._run_query(metrics_query, "open_payments_metrics")
+        if status == "failed":
+            raise Exception("Failed to query open payments metrics")
+        results['overall_metrics'] = metrics_df.iloc[0].to_dict() if not metrics_df.empty else {}
         logger.info(f"Open Payments: {results['overall_metrics']['unique_providers']:,} providers, ${results['overall_metrics']['total_payments']:,.0f} total")
         
         # Yearly trends (5 rows)
@@ -85,7 +122,11 @@ class BigQueryAnalyzer:
         GROUP BY payment_year
         ORDER BY payment_year
         """
-        results['yearly_trends'] = self._run_query(yearly_query)
+        yearly_df, status = self._run_query(yearly_query, "open_payments_yearly_trends")
+        if status == "failed":
+            logger.error("Failed to query yearly trends")
+            yearly_df = pd.DataFrame()
+        results['yearly_trends'] = yearly_df
         
         # Payment categories (10-20 rows)
         categories_query = f"""
@@ -100,7 +141,11 @@ class BigQueryAnalyzer:
         GROUP BY payment_category
         ORDER BY total_amount DESC
         """
-        results['payment_categories'] = self._run_query(categories_query)
+        categories_df, status = self._run_query(categories_query, "payment_categories")
+        if status == "failed":
+            logger.error("Failed to query payment categories")
+            categories_df = pd.DataFrame()
+        results['payment_categories'] = categories_df
         
         # Top manufacturers (20 rows)
         manufacturers_query = f"""
@@ -116,7 +161,11 @@ class BigQueryAnalyzer:
         ORDER BY total_payments DESC
         LIMIT 20
         """
-        results['top_manufacturers'] = self._run_query(manufacturers_query)
+        manufacturers_df, status = self._run_query(manufacturers_query, "top_manufacturers")
+        if status == "failed":
+            logger.error("Failed to query top manufacturers")
+            manufacturers_df = pd.DataFrame()
+        results['top_manufacturers'] = manufacturers_df
         
         # Payment distribution tiers (5 rows)
         distribution_query = f"""
@@ -151,7 +200,11 @@ class BigQueryAnalyzer:
                 ELSE 6
             END
         """
-        results['payment_distribution'] = self._run_query(distribution_query)
+        distribution_df, status = self._run_query(distribution_query, "payment_distribution")
+        if status == "failed":
+            logger.error("Failed to query payment distribution")
+            distribution_df = pd.DataFrame()
+        results['payment_distribution'] = distribution_df
         
         # Consecutive years analysis - return as DataFrame for table display
         consecutive_query = f"""
@@ -185,7 +238,11 @@ class BigQueryAnalyzer:
         FROM year_groups
         ORDER BY consecutive_years
         """
-        results['consecutive_years'] = self._run_query(consecutive_query)
+        consecutive_df, status = self._run_query(consecutive_query, "consecutive_years_payments")
+        if status == "failed":
+            logger.error("Failed to query consecutive years")
+            consecutive_df = pd.DataFrame()
+        results['consecutive_years'] = consecutive_df
         
         # Track lineage
         if self.lineage_tracker:
@@ -221,8 +278,10 @@ class BigQueryAnalyzer:
             SUM(total_beneficiaries) as total_beneficiaries
         FROM {self.rx_summary}
         """
-        metrics_df = self._run_query(metrics_query)
-        results['overall_metrics'] = metrics_df.iloc[0].to_dict()
+        metrics_df, status = self._run_query(metrics_query, "prescription_metrics")
+        if status == "failed":
+            raise Exception("Failed to query prescription metrics")
+        results['overall_metrics'] = metrics_df.iloc[0].to_dict() if not metrics_df.empty else {}
         logger.info(f"Prescriptions: {results['overall_metrics']['unique_prescribers']:,} prescribers, ${results['overall_metrics']['total_prescription_value']:,.0f} total")
         
         # Yearly trends (5 rows)
@@ -237,7 +296,11 @@ class BigQueryAnalyzer:
         GROUP BY rx_year
         ORDER BY rx_year
         """
-        results['yearly_trends'] = self._run_query(yearly_query)
+        yearly_df, status = self._run_query(yearly_query, "prescription_yearly_trends")
+        if status == "failed":
+            logger.error("Failed to query prescription yearly trends")
+            yearly_df = pd.DataFrame()
+        results['yearly_trends'] = yearly_df
         
         # Top drugs by cost (20 rows)
         top_drugs_query = f"""
@@ -253,7 +316,11 @@ class BigQueryAnalyzer:
         ORDER BY total_cost DESC
         LIMIT 20
         """
-        results['top_drugs_by_cost'] = self._run_query(top_drugs_query)
+        top_drugs_df, status = self._run_query(top_drugs_query, "top_drugs_by_cost")
+        if status == "failed":
+            logger.error("Failed to query top drugs")
+            top_drugs_df = pd.DataFrame()
+        results['top_drugs_by_cost'] = top_drugs_df
         
         # Provider type analysis (4-5 rows)
         provider_type_query = f"""
@@ -267,7 +334,11 @@ class BigQueryAnalyzer:
         GROUP BY provider_type
         ORDER BY total_cost DESC
         """
-        results['provider_types'] = self._run_query(provider_type_query)
+        provider_types_df, status = self._run_query(provider_type_query, "prescription_provider_types")
+        if status == "failed":
+            logger.error("Failed to query provider types")
+            provider_types_df = pd.DataFrame()
+        results['provider_types'] = provider_types_df
         
         # Specialty analysis (top 10 rows)
         specialty_query = f"""
@@ -283,7 +354,11 @@ class BigQueryAnalyzer:
         ORDER BY total_cost DESC
         LIMIT 10
         """
-        results['top_specialties'] = self._run_query(specialty_query)
+        specialties_df, status = self._run_query(specialty_query, "top_specialties")
+        if status == "failed":
+            logger.error("Failed to query top specialties")
+            specialties_df = pd.DataFrame()
+        results['top_specialties'] = specialties_df
         
         # Also store as by_specialty for compatibility
         results['by_specialty'] = results['top_specialties'].copy() if not results['top_specialties'].empty else pd.DataFrame()
@@ -300,7 +375,11 @@ class BigQueryAnalyzer:
         GROUP BY provider_type
         ORDER BY total_cost DESC
         """
-        results['by_provider_type'] = self._run_query(provider_type_query)
+        provider_type_df, status = self._run_query(provider_type_query, "prescription_by_provider_type")
+        if status == "failed":
+            logger.error("Failed to query prescriptions by provider type")
+            provider_type_df = pd.DataFrame()
+        results['by_provider_type'] = provider_type_df
         
         # Drug-specific analysis (top drugs by cost)
         drug_specific_query = f"""
@@ -316,7 +395,15 @@ class BigQueryAnalyzer:
         ORDER BY total_cost DESC
         LIMIT 20
         """
-        results['drug_specific'] = self._run_query(drug_specific_query)
+        drug_df, status = self._run_query(drug_specific_query, "drug_specific_analysis")
+        if status == "failed":
+            logger.error("Failed to query drug specific analysis")
+            drug_df = pd.DataFrame()
+        if drug_df.empty:
+            logger.warning("Drug specific query returned no data")
+        else:
+            logger.info(f"Drug specific query returned {len(drug_df)} rows")
+        results['drug_specific'] = drug_df
         
         return results
     
@@ -368,8 +455,11 @@ class BigQueryAnalyzer:
             CORR(total_payments, total_rx_cost) as payment_rx_correlation
         FROM provider_summary
         """
-        correlation_df = self._run_query(correlation_query)
-        results['overall_metrics'] = correlation_df.iloc[0].to_dict()
+        correlation_df, status = self._run_query(correlation_query, "payment_prescription_correlation")
+        if status == "failed":
+            logger.error("Failed to query payment-prescription correlation")
+            correlation_df = pd.DataFrame()
+        results['overall_metrics'] = correlation_df.iloc[0].to_dict() if not correlation_df.empty else {}
         
         # ROI analysis (1 row)
         roi_query = f"""
@@ -390,7 +480,12 @@ class BigQueryAnalyzer:
             APPROX_QUANTILES(total_rx_cost / total_payments, 2)[OFFSET(1)] as median_provider_roi
         FROM matched_providers
         """
-        results['roi_metrics'] = self._run_query(roi_query).iloc[0].to_dict()
+        roi_df, status = self._run_query(roi_query, "roi_metrics")
+        if status == "failed" or roi_df.empty:
+            logger.error("Failed to query ROI metrics or empty result")
+            results['roi_metrics'] = {}
+        else:
+            results['roi_metrics'] = roi_df.iloc[0].to_dict()
         
         # Provider type influence (4-5 rows)
         provider_influence_query = f"""
@@ -417,7 +512,11 @@ class BigQueryAnalyzer:
         FROM provider_summary
         GROUP BY provider_type
         """
-        results['provider_type_influence'] = self._run_query(provider_influence_query)
+        provider_influence_df, status = self._run_query(provider_influence_query, "provider_type_influence")
+        if status == "failed":
+            logger.error("Failed to query provider type influence")
+            provider_influence_df = pd.DataFrame()
+        results['provider_type_influence'] = provider_influence_df
         
         # Top drug correlations (20 rows)
         drug_correlation_query = f"""
@@ -456,7 +555,11 @@ class BigQueryAnalyzer:
         ORDER BY total_rx_cost DESC
         LIMIT 20
         """
-        results['drug_correlations'] = self._run_query(drug_correlation_query)
+        drug_corr_df, status = self._run_query(drug_correlation_query, "drug_correlations")
+        if status == "failed":
+            logger.error("Failed to query drug correlations")
+            drug_corr_df = pd.DataFrame()
+        results['drug_correlations'] = drug_corr_df
         
         # Also store as drug_specific for compatibility
         results['drug_specific'] = results['drug_correlations'].copy() if not results['drug_correlations'].empty else pd.DataFrame()
@@ -517,7 +620,11 @@ class BigQueryAnalyzer:
                 ELSE 6
             END
         """
-        results['payment_tiers'] = self._run_query(payment_tier_query)
+        payment_tiers_df, status = self._run_query(payment_tier_query, "payment_tiers")
+        if status == "failed":
+            logger.error("Failed to query payment tiers")
+            payment_tiers_df = pd.DataFrame()
+        results['payment_tiers'] = payment_tiers_df
         
         # Provider vulnerability DataFrame
         provider_vulnerability_query = f"""
@@ -548,7 +655,11 @@ class BigQueryAnalyzer:
         GROUP BY provider_type
         ORDER BY provider_count DESC
         """
-        results['provider_type_vulnerability'] = self._run_query(provider_vulnerability_query)
+        provider_vuln_df, status = self._run_query(provider_vulnerability_query, "provider_type_vulnerability")
+        if status == "failed":
+            logger.error("Failed to query provider type vulnerability")
+            provider_vuln_df = pd.DataFrame()
+        results['provider_type_vulnerability'] = provider_vuln_df
         
         # Consecutive years analysis with prescription correlation
         consecutive_years_query = f"""
@@ -593,7 +704,20 @@ class BigQueryAnalyzer:
         ORDER BY years_of_payments
         LIMIT 5
         """
-        results['consecutive_years'] = self._run_query(consecutive_years_query)
+        consecutive_df, status = self._run_query(consecutive_years_query, "consecutive_years_correlation")
+        if consecutive_df.empty:
+            logger.warning("Consecutive years query returned no data")
+            # Create a default DataFrame with expected structure
+            consecutive_df = pd.DataFrame({
+                'years_of_payments': ['1 Year', '2 Consecutive', '3 Consecutive', '4 Consecutive', '5 Consecutive'],
+                'provider_count': [0, 0, 0, 0, 0],
+                'avg_total_payments': [0, 0, 0, 0, 0],
+                'avg_total_rx_value': [0, 0, 0, 0, 0],
+                'multiplier_vs_single_year': ['Baseline', '0x', '0x', '0x', '0x']
+            })
+        else:
+            logger.info(f"Consecutive years query returned {len(consecutive_df)} rows")
+        results['consecutive_years'] = consecutive_df
         
         return results
     
@@ -641,7 +765,10 @@ class BigQueryAnalyzer:
             AVG(CASE WHEN payment_percentile >= 0.9 AND rx_percentile >= 0.9 THEN rx_total ELSE NULL END) as avg_high_risk_rx_cost
         FROM provider_risk
         """
-        risk_df = self._run_query(risk_query)
+        risk_df, status = self._run_query(risk_query, "risk_assessment_summary")
+        if status == "failed":
+            logger.error("Failed to query risk assessment summary")
+            risk_df = pd.DataFrame()
         results['summary'] = risk_df.iloc[0].to_dict()
         
         # Top risk providers (20 rows)
@@ -681,7 +808,11 @@ class BigQueryAnalyzer:
         ORDER BY combined_total DESC
         LIMIT 20
         """
-        results['high_risk_providers'] = self._run_query(top_risk_query)
+        high_risk_df, status = self._run_query(top_risk_query, "high_risk_providers")
+        if status == "failed":
+            logger.error("Failed to query high risk providers")
+            high_risk_df = pd.DataFrame()
+        results['high_risk_providers'] = high_risk_df
         
         # Risk distribution for table display
         risk_distribution_query = f"""
@@ -734,24 +865,59 @@ class BigQueryAnalyzer:
                 ELSE 3
             END
         """
-        results['risk_distribution'] = self._run_query(risk_distribution_query)
+        risk_dist_df, status = self._run_query(risk_distribution_query, "risk_distribution")
+        if status == "failed":
+            logger.error("Failed to query risk distribution")
+            risk_dist_df = pd.DataFrame()
+        if risk_dist_df.empty:
+            logger.warning("Risk distribution query returned no data")
+            # Create a default DataFrame with expected structure
+            risk_dist_df = pd.DataFrame({
+                'risk_level': ['High Risk', 'Medium Risk', 'Low Risk'],
+                'provider_count': [0, 0, 0],
+                'percent_of_total': [0.0, 0.0, 0.0],
+                'key_risk_indicators': ['High payments + prescriptions', 'Moderate payments + prescriptions', 'Low payments or prescriptions'],
+                'avg_risk_score': [0.0, 0.0, 0.0]
+            })
+        else:
+            logger.info(f"Risk distribution query returned {len(risk_dist_df)} rows")
+        results['risk_distribution'] = risk_dist_df
         
         return results
     
-    def _run_query(self, query: str) -> pd.DataFrame:
+    def get_query_summary(self) -> Dict[str, Any]:
+        """Get summary of all query executions"""
+        return self.query_tracker.get_summary()
+    
+    def _run_query(self, query: str, query_name: str = "unnamed") -> tuple[pd.DataFrame, str]:
         """
-        Execute query and return results as DataFrame
+        Execute query and return results as DataFrame with status
         
         Args:
             query: SQL query to execute
+            query_name: Name of the query for tracking
             
         Returns:
-            Query results as DataFrame
+            Tuple of (DataFrame, status) where status is:
+            - "success": Query executed and returned data
+            - "empty": Query executed successfully but returned 0 rows
+            - "failed": Query failed to execute
         """
         try:
             job = self.client.query(query)
-            return job.to_dataframe()
+            df = job.to_dataframe()
+            
+            if df.empty:
+                logger.info(f"[{query_name}] Query executed successfully but returned 0 rows")
+                self.query_tracker.add_query(query_name, "empty", 0)
+                return df, "empty"
+            else:
+                logger.info(f"[{query_name}] Query executed successfully, returned {len(df)} rows")
+                self.query_tracker.add_query(query_name, "success", len(df))
+                return df, "success"
+                
         except Exception as e:
-            logger.error(f"Query failed: {str(e)}")
-            logger.error(f"Query was:\n{query}")
-            raise
+            logger.error(f"[{query_name}] Query failed with error: {str(e)}")
+            logger.error(f"Failed query was:\n{query[:500]}...")  # Log first 500 chars
+            self.query_tracker.add_query(query_name, "failed", 0)
+            return pd.DataFrame(), "failed"

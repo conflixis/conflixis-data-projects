@@ -110,6 +110,18 @@ class FullAnalysisPipeline:
                 # Skip specialty analysis for now (can be added to BigQuery analyzer)
                 self.results['specialty_analysis'] = {}
                 
+                # Add query tracking summary to lineage
+                query_summary = bq_analyzer.get_query_summary()
+                logger.info(f"\nQuery Execution Summary:")
+                logger.info(f"  Total queries: {query_summary['total_queries']}")
+                logger.info(f"  Successful with data: {query_summary['successful_with_data']}")
+                logger.info(f"  Successful but empty: {query_summary['successful_empty']}")
+                logger.info(f"  Failed: {query_summary['failed']}")
+                logger.info(f"  Data completeness: {query_summary['data_completeness']:.1f}%")
+                
+                # Add to results for lineage tracking
+                self.results['query_summary'] = query_summary
+                
             else:
                 # Original approach - downloads data to pandas
                 # Step 1: Load and validate data
@@ -149,11 +161,19 @@ class FullAnalysisPipeline:
             
             # Finalize lineage tracking and add to results BEFORE report generation
             self.lineage_tracker.finalize()
-            self.results['data_lineage'] = {
+            
+            # Include query summary in lineage if available
+            lineage_data = {
                 'markdown': self.lineage_tracker.generate_lineage_markdown(),
                 'summary': self.lineage_tracker.get_summary(),
                 'full_lineage': self.lineage_tracker.get_lineage()
             }
+            
+            # Add query summary if using BigQuery approach
+            if 'query_summary' in self.results:
+                lineage_data['query_summary'] = self.results['query_summary']
+                
+            self.results['data_lineage'] = lineage_data
             
             # Save lineage to file
             lineage_path = self.lineage_tracker.save_lineage()

@@ -40,27 +40,37 @@ wheels/
 *.sublime-workspace
 .DS_Store
 
-# Data and Cache
+# Data folder - ignore everything except structure
 data/cache/*
 !data/cache/.gitkeep
 data/processed/*
 !data/processed/.gitkeep
-data/raw/*
-!data/raw/.gitkeep
-data/outputs/*
-!data/outputs/.gitkeep
+data/output/*
+!data/output/.gitkeep
+data/lineage/*
+!data/lineage/.gitkeep
+data/inputs/*
+!data/inputs/.gitkeep
+
+# Reports folder - ignore all reports and figures
+reports/*.md
+reports/*.html
+reports/*.pdf
+reports/figures/*.png
+reports/figures/*.jpg
+reports/figures/*.svg
+!reports/.gitkeep
+!reports/figures/.gitkeep
+
+# Cache and processed files anywhere
 *.cache
 *.pkl
 *.parquet
-
-# Reports
-reports/**/*.html
-reports/**/*.pdf
-reports/**/*.md
-!reports/**/.gitkeep
+.cache_metadata.json
 
 # Logs
-logs/
+logs/*
+!logs/.gitkeep
 *.log
 
 # Testing
@@ -90,7 +100,6 @@ credentials.json
 
 # Large data files
 *.csv
-!data/inputs/*.csv
 *.xlsx
 *.xls
 *.zip

@@ -123,11 +123,21 @@ class ReportGenerator:
         # Format Prescription data
         if 'prescriptions' in analysis_results:
             rx = analysis_results['prescriptions']
+            # Map the actual keys returned by BigQuery analyzer
+            top_drugs_df = rx.get('top_drugs_by_cost', rx.get('top_drugs', pd.DataFrame()))
+            drug_specific_df = rx.get('drug_specific', pd.DataFrame())
+            
+            # Create high_cost_drugs from drug_specific if available
+            high_cost_drugs_df = drug_specific_df.head(10) if not drug_specific_df.empty else pd.DataFrame()
+            
             data['prescriptions'] = {
                 'metrics': self._format_metrics(rx.get('overall_metrics', {})),
                 'yearly_trends': rx.get('yearly_trends', pd.DataFrame()),
-                'top_drugs': rx.get('top_drugs', pd.DataFrame()),
-                'high_cost_drugs': rx.get('high_cost_drugs', pd.DataFrame())
+                'top_drugs': top_drugs_df,
+                'high_cost_drugs': high_cost_drugs_df,
+                'by_specialty': rx.get('by_specialty', pd.DataFrame()),
+                'by_provider_type': rx.get('by_provider_type', pd.DataFrame()),
+                'drug_specific': drug_specific_df
             }
         
         # Format Correlation data
@@ -137,16 +147,18 @@ class ReportGenerator:
                 'drug_specific': corr.get('drug_specific', pd.DataFrame()),
                 'payment_tiers': corr.get('payment_tiers', pd.DataFrame()),
                 'provider_vulnerability': corr.get('provider_type_vulnerability', pd.DataFrame()),
-                'influence_metrics': corr.get('influence_metrics', {})
+                'influence_metrics': corr.get('influence_metrics', {}),
+                'consecutive_years': corr.get('consecutive_years', pd.DataFrame())
             }
         
         # Format Risk Assessment data
         if 'risk_assessment' in analysis_results:
             risk = analysis_results['risk_assessment']
+            # Map the actual keys from BigQuery analyzer
             data['risk_assessment'] = {
                 'summary': risk.get('summary', {}),
-                'distribution': risk.get('distribution', []),
-                'top_risks': risk.get('top_risks', [])
+                'distribution': risk.get('risk_distribution', risk.get('distribution', pd.DataFrame())),
+                'top_risks': risk.get('high_risk_providers', risk.get('top_risks', pd.DataFrame()))
             }
         
         # Format Specialty Analysis data

@@ -85,25 +85,48 @@ class SectionDataMapper:
             data_map['provider_categories'] = risk.get('provider_categories', {})
         
         # Consecutive years analysis - properly extract the data
-        if 'open_payments' in self.report_data and 'consecutive_years' in self.report_data['open_payments']:
+        # Check in correlations first (where BigQuery analyzer puts it), then fall back to open_payments
+        cy = None
+        if 'correlations' in self.report_data and 'consecutive_years' in self.report_data['correlations']:
+            cy = self.report_data['correlations']['consecutive_years']
+        elif 'open_payments' in self.report_data and 'consecutive_years' in self.report_data['open_payments']:
             cy = self.report_data['open_payments']['consecutive_years']
+        
+        if cy is not None:
             if isinstance(cy, pd.DataFrame) and not cy.empty:
                 # Create a formatted summary for the LLM
+                # Handle both column name formats
                 year_summary = {}
                 for _, row in cy.iterrows():
-                    years = int(row['consecutive_years'])
-                    count = int(row['provider_count'])
-                    avg_payment = float(row['avg_total_payment'])
+                    # Get years value - check both possible column names
+                    if 'years_of_payments' in row:
+                        years_str = row['years_of_payments']
+                        # Extract numeric value from strings like "1 Year", "2 Consecutive", etc.
+                        if isinstance(years_str, str):
+                            years = int(years_str.split()[0]) if years_str.split()[0].isdigit() else 1
+                        else:
+                            years = int(years_str)
+                    else:
+                        years = int(row.get('consecutive_years', 1))
+                    
+                    count = int(row.get('provider_count', 0))
+                    avg_payment = float(row.get('avg_total_payments', row.get('avg_total_payment', 0)))
+                    avg_rx = float(row.get('avg_total_rx_value', 0))
+                    
                     year_summary[f"{years}_years"] = {
                         "provider_count": count,
-                        "avg_total_payment": avg_payment
+                        "avg_total_payment": avg_payment,
+                        "avg_rx_value": avg_rx,
+                        "multiplier": row.get('multiplier_vs_single_year', 'N/A')
                     }
                 
                 data_map['consecutive_year_counts'] = year_summary
+                data_map['consecutive_years_table'] = cy  # Store the full DataFrame for table rendering
                 # Explicitly note the 5-year count
-                five_year_providers = cy[cy['consecutive_years'] == 5]['provider_count'].iloc[0] if len(cy[cy['consecutive_years'] == 5]) > 0 else 0
+                five_year_mask = cy['years_of_payments'].str.contains('5') if 'years_of_payments' in cy.columns else cy.get('consecutive_years', pd.Series()) == 5
+                five_year_providers = cy[five_year_mask]['provider_count'].iloc[0] if any(five_year_mask) and len(cy[five_year_mask]) > 0 else 0
                 data_map['providers_all_5_years'] = int(five_year_providers)
-                data_map['cumulative_prescribing'] = cy['avg_total_payment'].sum() if 'avg_total_payment' in cy.columns else 0
+                data_map['cumulative_prescribing'] = cy['avg_total_payments'].sum() if 'avg_total_payments' in cy.columns else cy.get('avg_total_payment', pd.Series()).sum()
                 data_map['sustained_relationship_impact'] = self._calculate_sustained_impact(cy)
         else:
             # Provide empty data if not available
