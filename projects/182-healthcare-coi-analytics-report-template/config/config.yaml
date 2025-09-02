@@ -2,9 +2,9 @@
 
 # Health System
 health_system:
-  name: Springfield Health
-  short_name: springfield
-  npi_file: data/inputs/springfieldhealth-npis.csv
+  name: Northwell Health
+  short_name: northwell
+  npi_file: data/inputs/northwell-npis.csv
 
 # BigQuery settings
 bigquery:
@@ -23,7 +23,7 @@ analysis:
   
 # Provider settings
 provider:
-  npi_file: data/inputs/springfieldhealth-npis.csv
+  npi_file: data/inputs/northwell-npis.csv
   
 # Risk scoring thresholds
 risk_scoring:
