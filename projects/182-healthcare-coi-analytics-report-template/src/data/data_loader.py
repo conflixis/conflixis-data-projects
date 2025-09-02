@@ -339,7 +339,7 @@ class DataLoader:
         query = f"""
         WITH provider_payments AS (
             SELECT 
-                covered_recipient_npi as physician_id,
+                CAST(covered_recipient_npi AS STRING) as physician_id,
                 covered_recipient_first_name as first_name,
                 covered_recipient_last_name as last_name,
                 physician as provider_type,
@@ -379,6 +379,14 @@ class DataLoader:
         FROM provider_payments
         GROUP BY 1,2,3,4,5,6,7,8,9
         """
+        
+        # Drop existing table to ensure clean recreation with new schema
+        drop_query = f"DROP TABLE IF EXISTS {detailed_table_path}"
+        try:
+            self.bq.client.query(drop_query).result()
+            logger.info(f"Dropped existing detailed table")
+        except:
+            pass  # Table might not exist
         
         # Create detailed table query with full aggregation
         create_detailed_query = f"""
@@ -427,6 +435,14 @@ class DataLoader:
                 'rows': row_count,
                 'date_range': f"{start_year}-{end_year}"
             })
+        
+        # Drop existing summary table to ensure clean recreation
+        drop_summary_query = f"DROP TABLE IF EXISTS {summary_table_path}"
+        try:
+            self.bq.client.query(drop_summary_query).result()
+            logger.info(f"Dropped existing summary table")
+        except:
+            pass  # Table might not exist
         
         # Create summary table from detailed
         create_summary_query = f"""
@@ -663,6 +679,14 @@ class DataLoader:
         GROUP BY 1,2,3,4,5,6,7,8,9
         """
         
+        # Drop existing table to ensure clean recreation with new schema
+        drop_query = f"DROP TABLE IF EXISTS {detailed_table_path}"
+        try:
+            self.bq.client.query(drop_query).result()
+            logger.info(f"Dropped existing detailed prescriptions table")
+        except:
+            pass  # Table might not exist
+        
         # Create detailed table with all prescription data
         create_detailed_query = f"""
         CREATE OR REPLACE TABLE {detailed_table_path} AS
@@ -710,6 +734,14 @@ class DataLoader:
                 'rows': row_count,
                 'date_range': f"{start_year}-{end_year}"
             })
+        
+        # Drop existing summary table to ensure clean recreation
+        drop_summary_query = f"DROP TABLE IF EXISTS {summary_table_path}"
+        try:
+            self.bq.client.query(drop_summary_query).result()
+            logger.info(f"Dropped existing prescriptions summary table")
+        except:
+            pass  # Table might not exist
         
         # Create summary table from detailed
         create_summary_query = f"""

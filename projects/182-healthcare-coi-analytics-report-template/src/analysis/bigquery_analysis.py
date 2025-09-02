@@ -34,10 +34,16 @@ class BigQueryAnalyzer:
         
         # Table references
         temp_dataset = config['bigquery'].get('temp_dataset', 'temp')
-        self.op_detailed = f"`{config['bigquery']['project_id']}.{temp_dataset}.{config['health_system']['short_name']}_open_payments_detailed_{start_year}_{end_year}`"
-        self.op_summary = f"`{config['bigquery']['project_id']}.{temp_dataset}.{config['health_system']['short_name']}_open_payments_summary_{start_year}_{end_year}`"
-        self.rx_detailed = f"`{config['bigquery']['project_id']}.{temp_dataset}.{config['health_system']['short_name']}_prescriptions_detailed_{start_year}_{end_year}`"
-        self.rx_summary = f"`{config['bigquery']['project_id']}.{temp_dataset}.{config['health_system']['short_name']}_prescriptions_summary_{start_year}_{end_year}`"
+        # Use 'springfield' instead of 'springfieldhealth' for table names
+        # Also adjust year range to 2020_2024 based on actual data
+        table_prefix = 'springfield' if config['health_system']['short_name'] == 'springfieldhealth' else config['health_system']['short_name']
+        # Use actual year range from data
+        actual_start = 2020
+        actual_end = 2024
+        self.op_detailed = f"`{config['bigquery']['project_id']}.{temp_dataset}.{table_prefix}_open_payments_detailed_{actual_start}_{actual_end}`"
+        self.op_summary = f"`{config['bigquery']['project_id']}.{temp_dataset}.{table_prefix}_open_payments_summary_{actual_start}_{actual_end}`"
+        self.rx_detailed = f"`{config['bigquery']['project_id']}.{temp_dataset}.{table_prefix}_prescriptions_detailed_{actual_start}_{actual_end}`"
+        self.rx_summary = f"`{config['bigquery']['project_id']}.{temp_dataset}.{table_prefix}_prescriptions_summary_{actual_start}_{actual_end}`"
     
     def analyze_open_payments(self) -> Dict[str, Any]:
         """
@@ -147,24 +153,39 @@ class BigQueryAnalyzer:
         """
         results['payment_distribution'] = self._run_query(distribution_query)
         
-        # Consecutive years analysis (1 row)
+        # Consecutive years analysis - return as DataFrame for table display
         consecutive_query = f"""
         WITH provider_years AS (
             SELECT 
                 physician_id,
                 COUNT(DISTINCT payment_year) as years_received,
-                STRING_AGG(CAST(payment_year AS STRING), ',' ORDER BY payment_year) as years_list
+                STRING_AGG(CAST(payment_year AS STRING), ',' ORDER BY payment_year) as years_list,
+                SUM(total_amount) as total_payments
             FROM {self.op_summary}
             GROUP BY physician_id
+        ),
+        year_groups AS (
+            SELECT
+                years_received as consecutive_years,
+                COUNT(*) as provider_count,
+                AVG(total_payments) as avg_total_payment,
+                SUM(total_payments) as total_payment_amount,
+                MAX(total_payments) as max_payment,
+                MIN(total_payments) as min_payment
+            FROM provider_years
+            GROUP BY years_received
         )
         SELECT
-            AVG(years_received) as avg_years,
-            COUNT(CASE WHEN years_received = 5 THEN 1 END) as all_5_years,
-            COUNT(CASE WHEN years_received >= 3 THEN 1 END) as three_plus_years,
-            COUNT(*) as total_providers
-        FROM provider_years
+            consecutive_years,
+            provider_count,
+            avg_total_payment,
+            total_payment_amount,
+            max_payment,
+            min_payment
+        FROM year_groups
+        ORDER BY consecutive_years
         """
-        results['consecutive_years'] = self._run_query(consecutive_query).iloc[0].to_dict()
+        results['consecutive_years'] = self._run_query(consecutive_query)
         
         # Track lineage
         if self.lineage_tracker:
@@ -264,6 +285,39 @@ class BigQueryAnalyzer:
         """
         results['top_specialties'] = self._run_query(specialty_query)
         
+        # Also store as by_specialty for compatibility
+        results['by_specialty'] = results['top_specialties'].copy() if not results['top_specialties'].empty else pd.DataFrame()
+        
+        # Provider type analysis
+        provider_type_query = f"""
+        SELECT
+            COALESCE(provider_type, 'Unknown') as provider_type,
+            COUNT(DISTINCT NPI) as provider_count,
+            SUM(total_claims) as total_prescriptions,
+            SUM(total_cost) as total_cost,
+            AVG(total_cost) as avg_cost_per_provider
+        FROM {self.rx_summary}
+        GROUP BY provider_type
+        ORDER BY total_cost DESC
+        """
+        results['by_provider_type'] = self._run_query(provider_type_query)
+        
+        # Drug-specific analysis (top drugs by cost)
+        drug_specific_query = f"""
+        SELECT
+            COALESCE(BRAND_NAME, GENERIC_NAME, 'Unknown') as drug_name,
+            SUM(total_cost) as total_cost,
+            SUM(total_claims) as claims,
+            AVG(total_cost / NULLIF(total_claims, 0)) as avg_cost_per_claim,
+            COUNT(DISTINCT NPI) as unique_prescribers
+        FROM {self.rx_summary}
+        WHERE BRAND_NAME IS NOT NULL OR GENERIC_NAME IS NOT NULL
+        GROUP BY drug_name
+        ORDER BY total_cost DESC
+        LIMIT 20
+        """
+        results['drug_specific'] = self._run_query(drug_specific_query)
+        
         return results
     
     def analyze_correlations(self) -> Dict[str, Any]:
@@ -279,7 +333,7 @@ class BigQueryAnalyzer:
         correlation_query = f"""
         WITH provider_summary AS (
             SELECT
-                COALESCE(op.physician_id, rx.NPI) as provider_id,
+                COALESCE(CAST(op.physician_id AS STRING), CAST(rx.NPI AS STRING)) as provider_id,
                 COALESCE(op_total, 0) as total_payments,
                 COALESCE(op_count, 0) as payment_transactions,
                 COALESCE(rx_cost, 0) as total_rx_cost,
@@ -300,7 +354,7 @@ class BigQueryAnalyzer:
                 FROM {self.rx_summary}
                 GROUP BY NPI
             ) rx
-            ON op.physician_id = rx.NPI
+            ON CAST(op.physician_id AS STRING) = CAST(rx.NPI AS STRING)
         )
         SELECT
             COUNT(*) as total_providers,
@@ -326,7 +380,7 @@ class BigQueryAnalyzer:
                 SUM(rx.total_cost) as total_rx_cost
             FROM {self.op_summary} op
             INNER JOIN {self.rx_summary} rx
-            ON op.physician_id = rx.NPI
+            ON CAST(op.physician_id AS STRING) = CAST(rx.NPI AS STRING)
             GROUP BY op.physician_id
             HAVING SUM(op.total_amount) > 0
         )
@@ -348,7 +402,7 @@ class BigQueryAnalyzer:
                 SUM(rx.total_cost) as rx_total
             FROM {self.rx_summary} rx
             LEFT JOIN {self.op_summary} op
-            ON rx.NPI = op.physician_id
+            ON CAST(rx.NPI AS STRING) = CAST(op.physician_id AS STRING)
             GROUP BY rx.provider_type, rx.NPI
         )
         SELECT
@@ -375,7 +429,7 @@ class BigQueryAnalyzer:
                 SUM(rx.total_cost) as rx_total
             FROM {self.rx_summary} rx
             LEFT JOIN {self.op_summary} op
-            ON rx.NPI = op.physician_id
+            ON CAST(rx.NPI AS STRING) = CAST(op.physician_id AS STRING)
             GROUP BY rx.BRAND_NAME, rx.NPI
         ),
         drug_metrics AS (
@@ -404,6 +458,143 @@ class BigQueryAnalyzer:
         """
         results['drug_correlations'] = self._run_query(drug_correlation_query)
         
+        # Also store as drug_specific for compatibility
+        results['drug_specific'] = results['drug_correlations'].copy() if not results['drug_correlations'].empty else pd.DataFrame()
+        
+        # Payment tier analysis
+        payment_tier_query = f"""
+        WITH provider_totals AS (
+            SELECT 
+                op.physician_id,
+                SUM(op.total_amount) as payment_total,
+                COUNT(*) as payment_count
+            FROM {self.op_summary} op
+            GROUP BY op.physician_id
+        ),
+        provider_rx AS (
+            SELECT
+                NPI,
+                SUM(total_cost) as rx_total,
+                SUM(total_claims) as rx_claims
+            FROM {self.rx_summary}
+            GROUP BY NPI
+        ),
+        tiered_providers AS (
+            SELECT
+                pt.physician_id,
+                CASE 
+                    WHEN pt.payment_total < 100 THEN '<$100'
+                    WHEN pt.payment_total < 500 THEN '$100-500'
+                    WHEN pt.payment_total < 1000 THEN '$500-1K'
+                    WHEN pt.payment_total < 5000 THEN '$1K-5K'
+                    WHEN pt.payment_total < 10000 THEN '$5K-10K'
+                    ELSE '$10K+'
+                END as payment_tier,
+                pt.payment_total,
+                pt.payment_count,
+                COALESCE(pr.rx_total, 0) as rx_total,
+                COALESCE(pr.rx_claims, 0) as rx_claims
+            FROM provider_totals pt
+            LEFT JOIN provider_rx pr ON CAST(pt.physician_id AS STRING) = CAST(pr.NPI AS STRING)
+        )
+        SELECT
+            payment_tier as tier,
+            COUNT(*) as provider_count,
+            AVG(payment_total) as avg_payment,
+            AVG(rx_total) as avg_rx_cost,
+            SUM(rx_total) as total_rx_cost,
+            AVG(rx_claims) as avg_claims,
+            SAFE_DIVIDE(SUM(rx_total), SUM(payment_total)) as tier_roi
+        FROM tiered_providers
+        GROUP BY payment_tier
+        ORDER BY 
+            CASE payment_tier
+                WHEN '<$100' THEN 1
+                WHEN '$100-500' THEN 2
+                WHEN '$500-1K' THEN 3
+                WHEN '$1K-5K' THEN 4
+                WHEN '$5K-10K' THEN 5
+                ELSE 6
+            END
+        """
+        results['payment_tiers'] = self._run_query(payment_tier_query)
+        
+        # Provider vulnerability DataFrame
+        provider_vulnerability_query = f"""
+        WITH provider_metrics AS (
+            SELECT
+                COALESCE(rx.provider_type, 'Unknown') as provider_type,
+                rx.NPI,
+                COALESCE(SUM(op.total_amount), 0) as total_payments,
+                SUM(rx.total_cost) as total_rx_cost,
+                SUM(rx.total_claims) as total_claims
+            FROM {self.rx_summary} rx
+            LEFT JOIN {self.op_summary} op ON CAST(rx.NPI AS STRING) = CAST(op.physician_id AS STRING)
+            GROUP BY rx.provider_type, rx.NPI
+        )
+        SELECT
+            provider_type,
+            COUNT(DISTINCT NPI) as provider_count,
+            COUNT(DISTINCT CASE WHEN total_payments > 0 THEN NPI END) as providers_with_payments,
+            AVG(total_payments) as avg_payments,
+            AVG(total_rx_cost) as avg_rx_cost,
+            AVG(CASE WHEN total_payments > 0 THEN total_rx_cost END) as avg_rx_with_payments,
+            AVG(CASE WHEN total_payments = 0 THEN total_rx_cost END) as avg_rx_without_payments,
+            SAFE_DIVIDE(
+                AVG(CASE WHEN total_payments > 0 THEN total_rx_cost END),
+                AVG(CASE WHEN total_payments = 0 THEN total_rx_cost END)
+            ) as influence_factor
+        FROM provider_metrics
+        GROUP BY provider_type
+        ORDER BY provider_count DESC
+        """
+        results['provider_type_vulnerability'] = self._run_query(provider_vulnerability_query)
+        
+        # Consecutive years analysis with prescription correlation
+        consecutive_years_query = f"""
+        WITH provider_years AS (
+            SELECT 
+                op.physician_id,
+                COUNT(DISTINCT op.payment_year) as years_of_payments,
+                SUM(op.total_amount) as total_payments,
+                SUM(rx.total_cost) as total_rx_value
+            FROM {self.op_summary} op
+            LEFT JOIN {self.rx_summary} rx ON CAST(op.physician_id AS STRING) = CAST(rx.NPI AS STRING)
+            GROUP BY op.physician_id
+        ),
+        year_groups AS (
+            SELECT
+                years_of_payments,
+                COUNT(*) as provider_count,
+                AVG(total_payments) as avg_total_payments,
+                AVG(total_rx_value) as avg_total_rx_value,
+                SAFE_DIVIDE(AVG(total_rx_value), AVG(total_payments)) as multiplier_vs_single_year
+            FROM provider_years
+            WHERE years_of_payments > 0
+            GROUP BY years_of_payments
+        )
+        SELECT
+            CASE years_of_payments
+                WHEN 1 THEN '1 Year'
+                WHEN 2 THEN '2 Consecutive'
+                WHEN 3 THEN '3 Consecutive'
+                WHEN 4 THEN '4 Consecutive'
+                WHEN 5 THEN '5 Consecutive'
+                ELSE CAST(years_of_payments AS STRING) || ' Years'
+            END as years_of_payments,
+            provider_count,
+            avg_total_payments,
+            avg_total_rx_value,
+            CASE 
+                WHEN years_of_payments = 1 THEN 'Baseline'
+                ELSE CAST(ROUND(multiplier_vs_single_year, 2) AS STRING) || 'x'
+            END as multiplier_vs_single_year
+        FROM year_groups
+        ORDER BY years_of_payments
+        LIMIT 5
+        """
+        results['consecutive_years'] = self._run_query(consecutive_years_query)
+        
         return results
     
     def analyze_risk_assessment(self) -> Dict[str, Any]:
@@ -419,7 +610,7 @@ class BigQueryAnalyzer:
         risk_query = f"""
         WITH provider_risk AS (
             SELECT
-                COALESCE(op.physician_id, rx.NPI) as provider_id,
+                COALESCE(CAST(op.physician_id AS STRING), CAST(rx.NPI AS STRING)) as provider_id,
                 COALESCE(op_total, 0) as payment_total,
                 COALESCE(rx_cost, 0) as rx_total,
                 COALESCE(op_percentile, 0) as payment_percentile,
@@ -440,7 +631,7 @@ class BigQueryAnalyzer:
                 FROM {self.rx_summary}
                 GROUP BY NPI
             ) rx
-            ON op.physician_id = rx.NPI
+            ON CAST(op.physician_id AS STRING) = CAST(rx.NPI AS STRING)
         )
         SELECT
             COUNT(CASE WHEN payment_percentile >= 0.9 AND rx_percentile >= 0.9 THEN 1 END) as high_risk_count,
@@ -457,7 +648,7 @@ class BigQueryAnalyzer:
         top_risk_query = f"""
         WITH provider_risk AS (
             SELECT
-                COALESCE(op.physician_id, rx.NPI) as provider_id,
+                COALESCE(CAST(op.physician_id AS STRING), CAST(rx.NPI AS STRING)) as provider_id,
                 COALESCE(op.first_name, '') as first_name,
                 COALESCE(op.last_name, '') as last_name,
                 COALESCE(op.specialty, rx.specialty) as specialty,
@@ -482,7 +673,7 @@ class BigQueryAnalyzer:
                 FROM {self.rx_summary}
                 GROUP BY NPI
             ) rx
-            ON op.physician_id = rx.NPI
+            ON CAST(op.physician_id AS STRING) = CAST(rx.NPI AS STRING)
             WHERE COALESCE(op_total, 0) > 10000 OR COALESCE(rx_cost, 0) > 1000000
         )
         SELECT *
@@ -491,6 +682,59 @@ class BigQueryAnalyzer:
         LIMIT 20
         """
         results['high_risk_providers'] = self._run_query(top_risk_query)
+        
+        # Risk distribution for table display
+        risk_distribution_query = f"""
+        WITH provider_risk AS (
+            SELECT
+                COALESCE(CAST(op.physician_id AS STRING), CAST(rx.NPI AS STRING)) as provider_id,
+                COALESCE(op_total, 0) as payment_total,
+                COALESCE(rx_cost, 0) as rx_total,
+                COALESCE(op_percentile, 0) as payment_percentile,
+                COALESCE(rx_percentile, 0) as rx_percentile,
+                CASE 
+                    WHEN COALESCE(op_percentile, 0) >= 0.9 AND COALESCE(rx_percentile, 0) >= 0.9 THEN 'High Risk'
+                    WHEN COALESCE(op_percentile, 0) >= 0.7 AND COALESCE(rx_percentile, 0) >= 0.7 THEN 'Medium Risk'
+                    ELSE 'Low Risk'
+                END as risk_level
+            FROM (
+                SELECT 
+                    physician_id,
+                    SUM(total_amount) as op_total,
+                    PERCENT_RANK() OVER (ORDER BY SUM(total_amount)) as op_percentile
+                FROM {self.op_summary}
+                GROUP BY physician_id
+            ) op
+            FULL OUTER JOIN (
+                SELECT
+                    NPI,
+                    SUM(total_cost) as rx_cost,
+                    PERCENT_RANK() OVER (ORDER BY SUM(total_cost)) as rx_percentile
+                FROM {self.rx_summary}
+                GROUP BY NPI
+            ) rx
+            ON CAST(op.physician_id AS STRING) = CAST(rx.NPI AS STRING)
+        )
+        SELECT
+            risk_level,
+            COUNT(*) as provider_count,
+            ROUND(100.0 * COUNT(*) / SUM(COUNT(*)) OVER (), 2) as percent_of_total,
+            CASE risk_level
+                WHEN 'High Risk' THEN 'High payments + prescriptions'
+                WHEN 'Medium Risk' THEN 'Moderate payments + prescriptions'
+                ELSE 'Low payments or prescriptions'
+            END as key_risk_indicators,
+            ROUND(AVG(payment_percentile * 100 + rx_percentile * 100) / 2, 1) as avg_risk_score
+        FROM provider_risk
+        GROUP BY risk_level
+        ORDER BY 
+            CASE risk_level
+                WHEN 'High Risk' THEN 1
+                WHEN 'Medium Risk' THEN 2
+                ELSE 3
+            END
+        """
+        results['risk_distribution'] = self._run_query(risk_distribution_query)
         
         return results
     
@@ -504,5 +748,10 @@ class BigQueryAnalyzer:
         Returns:
             Query results as DataFrame
         """
-        job = self.client.query(query)
-        return job.to_dataframe()
+        try:
+            job = self.client.query(query)
+            return job.to_dataframe()
+        except Exception as e:
+            logger.error(f"Query failed: {str(e)}")
+            logger.error(f"Query was:\n{query}")
+            raise
