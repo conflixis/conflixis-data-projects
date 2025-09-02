@@ -111,14 +111,24 @@ class BigQueryAnalyzer:
         logger.info(f"Open Payments: {results['overall_metrics']['unique_providers']:,} providers, ${results['overall_metrics']['total_payments']:,.0f} total")
         
         # Yearly trends (5 rows)
+        # Fixed: Aggregate by physician first to get correct averages
         yearly_query = f"""
+        WITH physician_yearly AS (
+            SELECT
+                physician_id,
+                payment_year,
+                SUM(total_amount) as physician_year_total,
+                SUM(payment_count) as physician_year_transactions
+            FROM {self.op_summary}
+            GROUP BY physician_id, payment_year
+        )
         SELECT
             payment_year,
             COUNT(DISTINCT physician_id) as providers,
-            SUM(total_amount) as total_payments,
-            AVG(total_amount) as avg_payment,
-            SUM(payment_count) as transaction_count
-        FROM {self.op_summary}
+            SUM(physician_year_total) as total_payments,
+            AVG(physician_year_total) as avg_payment,
+            SUM(physician_year_transactions) as transaction_count
+        FROM physician_yearly
         GROUP BY payment_year
         ORDER BY payment_year
         """
@@ -129,15 +139,26 @@ class BigQueryAnalyzer:
         results['yearly_trends'] = yearly_df
         
         # Payment categories (10-20 rows)
+        # Fixed: Aggregate by physician-category first to get correct averages
         categories_query = f"""
+        WITH physician_category AS (
+            SELECT
+                physician_id,
+                payment_category,
+                SUM(total_amount) as physician_category_total,
+                SUM(payment_count) as physician_category_transactions
+            FROM {self.op_summary}
+            GROUP BY physician_id, payment_category
+        )
         SELECT
             payment_category,
-            SUM(total_amount) as total_amount,
-            AVG(total_amount) as avg_amount,
-            SUM(payment_count) as transaction_count,
+            SUM(physician_category_total) as total_amount,
+            AVG(physician_category_total) as avg_amount,
+            SUM(physician_category_transactions) as transaction_count,
             COUNT(DISTINCT physician_id) as unique_providers,
-            ROUND(100.0 * SUM(total_amount) / (SELECT SUM(total_amount) FROM {self.op_summary}), 1) as pct_of_total
-        FROM {self.op_summary}
+            ROUND(100.0 * SUM(physician_category_total) / 
+                (SELECT SUM(physician_category_total) FROM physician_category), 1) as pct_of_total
+        FROM physician_category
         GROUP BY payment_category
         ORDER BY total_amount DESC
         """
@@ -488,13 +509,15 @@ class BigQueryAnalyzer:
             results['roi_metrics'] = roi_df.iloc[0].to_dict()
         
         # Provider type influence (4-5 rows)
+        # Fixed to handle year dimension in summary table
         provider_influence_query = f"""
         WITH provider_summary AS (
             SELECT
                 rx.provider_type,
                 rx.NPI,
                 SUM(op.total_amount) as payment_total,
-                SUM(rx.total_cost) as rx_total
+                -- Fix: Average across years instead of summing
+                SUM(rx.total_cost) / COUNT(DISTINCT rx.rx_year) as rx_total
             FROM {self.rx_summary} rx
             LEFT JOIN {self.op_summary} op
             ON CAST(rx.NPI AS STRING) = CAST(op.physician_id AS STRING)
@@ -519,13 +542,15 @@ class BigQueryAnalyzer:
         results['provider_type_influence'] = provider_influence_df
         
         # Top drug correlations (20 rows)
+        # Fixed to handle year dimension in summary table
         drug_correlation_query = f"""
         WITH drug_summary AS (
             SELECT
                 rx.BRAND_NAME,
                 rx.NPI,
                 SUM(CASE WHEN op.physician_id IS NOT NULL THEN op.total_amount ELSE 0 END) as payment_total,
-                SUM(rx.total_cost) as rx_total
+                -- Fix: Average across years for per-provider metrics
+                SUM(rx.total_cost) / COUNT(DISTINCT rx.rx_year) as rx_total_yearly_avg
             FROM {self.rx_summary} rx
             LEFT JOIN {self.op_summary} op
             ON CAST(rx.NPI AS STRING) = CAST(op.physician_id AS STRING)
@@ -533,15 +558,16 @@ class BigQueryAnalyzer:
         ),
         drug_metrics AS (
             SELECT
-                BRAND_NAME,
-                COUNT(DISTINCT NPI) as prescriber_count,
-                COUNT(DISTINCT CASE WHEN payment_total > 0 THEN NPI END) as paid_prescriber_count,
-                AVG(CASE WHEN payment_total > 0 THEN rx_total ELSE NULL END) as avg_rx_with_payments,
-                AVG(CASE WHEN payment_total = 0 THEN rx_total ELSE NULL END) as avg_rx_without_payments,
-                SUM(rx_total) as total_rx_cost
-            FROM drug_summary
-            GROUP BY BRAND_NAME
-            HAVING COUNT(DISTINCT NPI) >= 10  -- Minimum prescribers for meaningful analysis
+                ds.BRAND_NAME,
+                COUNT(DISTINCT ds.NPI) as prescriber_count,
+                COUNT(DISTINCT CASE WHEN ds.payment_total > 0 THEN ds.NPI END) as paid_prescriber_count,
+                AVG(CASE WHEN ds.payment_total > 0 THEN ds.rx_total_yearly_avg ELSE NULL END) as avg_rx_with_payments,
+                AVG(CASE WHEN ds.payment_total = 0 THEN ds.rx_total_yearly_avg ELSE NULL END) as avg_rx_without_payments,
+                -- Get the actual total from the original table, not summing averages
+                (SELECT SUM(total_cost) FROM {self.rx_summary} WHERE BRAND_NAME = ds.BRAND_NAME) as total_rx_cost
+            FROM drug_summary ds
+            GROUP BY ds.BRAND_NAME
+            HAVING COUNT(DISTINCT ds.NPI) >= 10  -- Minimum prescribers for meaningful analysis
         )
         SELECT
             BRAND_NAME,
@@ -627,13 +653,15 @@ class BigQueryAnalyzer:
         results['payment_tiers'] = payment_tiers_df
         
         # Provider vulnerability DataFrame
+        # Fixed to handle year dimension in summary table
         provider_vulnerability_query = f"""
         WITH provider_metrics AS (
             SELECT
                 COALESCE(rx.provider_type, 'Unknown') as provider_type,
                 rx.NPI,
                 COALESCE(SUM(op.total_amount), 0) as total_payments,
-                SUM(rx.total_cost) as total_rx_cost,
+                -- Fix: Average across years instead of summing
+                SUM(rx.total_cost) / COUNT(DISTINCT rx.rx_year) as total_rx_cost,
                 SUM(rx.total_claims) as total_claims
             FROM {self.rx_summary} rx
             LEFT JOIN {self.op_summary} op ON CAST(rx.NPI AS STRING) = CAST(op.physician_id AS STRING)
