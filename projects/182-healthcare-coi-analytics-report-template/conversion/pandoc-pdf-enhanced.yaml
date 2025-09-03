@@ -10,11 +10,13 @@ variables:
 # === Page layout ===
 variables:
   geometry:
-    - top=1.2in
-    - bottom=1.2in
+    - top=1.5in
+    - bottom=1.5in
     - left=1.1in
     - right=1.1in
-    - headheight=25pt
+    - headheight=35pt
+    - headsep=25pt
+    - footskip=35pt
     - includehead
     - includefoot
   colorlinks: true

@@ -36,7 +36,7 @@ OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
 # BigQuery configuration
 PROJECT_ID = "data-analytics-389803"
 DATASET_ID = "conflixis_agent"
-NPI_TABLE = f"{PROJECT_ID}.{DATASET_ID}.corewell_health_npis"
+NPI_TABLE = f"{PROJECT_ID}.temp.corewell_provider_npis"
 OP_TABLE = f"{PROJECT_ID}.{DATASET_ID}.op_general_all_aggregate_static"
 
 def create_bigquery_client():
@@ -119,25 +119,15 @@ def analyze_payments_by_year(client):
         COUNT(*) as transactions,
         SUM(total_amount_of_payment_usdollars) as total_payments,
         AVG(total_amount_of_payment_usdollars) as avg_payment,
-        PERCENTILE_CONT(total_amount_of_payment_usdollars, 0.5) OVER (PARTITION BY program_year) as median_payment,
-        PERCENTILE_CONT(total_amount_of_payment_usdollars, 0.95) OVER (PARTITION BY program_year) as p95_payment
+        APPROX_QUANTILES(total_amount_of_payment_usdollars, 100)[OFFSET(50)] as median_payment,
+        APPROX_QUANTILES(total_amount_of_payment_usdollars, 100)[OFFSET(95)] as p95_payment
     FROM corewell_payments
-    GROUP BY program_year, total_amount_of_payment_usdollars
+    GROUP BY program_year
     ORDER BY program_year
     """
     
     logger.info("\nAnalyzing payments by year...")
-    df = client.query(query).to_dataframe()
-    
-    # Aggregate to year level
-    yearly = df.groupby('program_year').agg({
-        'unique_providers': 'max',
-        'transactions': 'sum',
-        'total_payments': 'sum',
-        'avg_payment': 'mean',
-        'median_payment': 'max',
-        'p95_payment': 'max'
-    }).reset_index()
+    yearly = client.query(query).to_dataframe()
     
     logger.info("\nYearly Payment Trends:")
     for _, row in yearly.iterrows():
