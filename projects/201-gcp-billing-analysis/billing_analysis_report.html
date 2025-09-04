@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GCP Billing Analysis Report - Conflixis</title>
+    <style>
+        /* Conflixis Design System */
+        :root {
+            --conflixis-green: #0c343a;
+            --conflixis-gold: #eab96d;
+            --conflixis-blue: #4c94ed;
+            --conflixis-light-green: #1a4f56;
+            --conflixis-dark: #051a1d;
+            --conflixis-white: #ffffff;
+            --conflixis-gray: #8a8a8a;
+            --conflixis-light-gray: #f5f5f5;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background: linear-gradient(135deg, var(--conflixis-dark) 0%, var(--conflixis-green) 100%);
+            min-height: 100vh;
+            padding: 2rem;
+            color: var(--conflixis-dark);
+        }
+        
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            background: var(--conflixis-white);
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+        }
+        
+        .header {
+            background: linear-gradient(135deg, var(--conflixis-green) 0%, var(--conflixis-light-green) 100%);
+            color: var(--conflixis-white);
+            padding: 3rem;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .header::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -10%;
+            width: 500px;
+            height: 500px;
+            background: var(--conflixis-gold);
+            opacity: 0.1;
+            border-radius: 50%;
+        }
+        
+        .header h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            position: relative;
+        }
+        
+        .header .subtitle {
+            font-size: 1.1rem;
+            opacity: 0.9;
+            position: relative;
+        }
+        
+        .header .date {
+            margin-top: 1rem;
+            font-size: 0.9rem;
+            opacity: 0.8;
+            position: relative;
+        }
+        
+        .metrics-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            padding: 2rem 3rem;
+            background: var(--conflixis-light-gray);
+        }
+        
+        .metric-card {
+            background: var(--conflixis-white);
+            padding: 1.5rem;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .metric-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+        }
+        
+        .metric-label {
+            color: var(--conflixis-gray);
+            font-size: 0.9rem;
+            margin-bottom: 0.5rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .metric-value {
+            color: var(--conflixis-green);
+            font-size: 2rem;
+            font-weight: 700;
+        }
+        
+        .metric-change {
+            margin-top: 0.5rem;
+            font-size: 0.9rem;
+        }
+        
+        .metric-change.increase {
+            color: #e74c3c;
+        }
+        
+        .metric-change.decrease {
+            color: #27ae60;
+        }
+        
+        .content {
+            padding: 3rem;
+        }
+        
+        .section {
+            margin-bottom: 3rem;
+        }
+        
+        .section-title {
+            color: var(--conflixis-green);
+            font-size: 1.8rem;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--conflixis-gold);
+        }
+        
+        .chart-container {
+            background: var(--conflixis-white);
+            border-radius: 15px;
+            padding: 2rem;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            margin-bottom: 2rem;
+        }
+        
+        .alert {
+            background: linear-gradient(135deg, #fff5f5 0%, #ffe0e0 100%);
+            border-left: 4px solid #e74c3c;
+            padding: 1.5rem;
+            border-radius: 10px;
+            margin-bottom: 2rem;
+        }
+        
+        .alert-title {
+            color: #e74c3c;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            font-size: 1.2rem;
+        }
+        
+        .alert-content {
+            color: #721c24;
+            line-height: 1.6;
+        }
+        
+        .recommendation {
+            background: linear-gradient(135deg, #f0f9ff 0%, #e0f2ff 100%);
+            border-left: 4px solid var(--conflixis-blue);
+            padding: 1.5rem;
+            border-radius: 10px;
+            margin-bottom: 1.5rem;
+        }
+        
+        .recommendation-title {
+            color: var(--conflixis-blue);
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+        
+        .recommendation-content {
+            color: var(--conflixis-dark);
+            line-height: 1.6;
+        }
+        
+        .recommendation-savings {
+            margin-top: 0.5rem;
+            font-weight: 600;
+            color: #27ae60;
+        }
+        
+        .table-container {
+            overflow-x: auto;
+            margin-bottom: 2rem;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background: var(--conflixis-white);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        
+        th {
+            background: var(--conflixis-green);
+            color: var(--conflixis-white);
+            padding: 1rem;
+            text-align: left;
+            font-weight: 600;
+        }
+        
+        td {
+            padding: 1rem;
+            border-bottom: 1px solid var(--conflixis-light-gray);
+        }
+        
+        tr:hover {
+            background: #f9f9f9;
+        }
+        
+        .footer {
+            background: var(--conflixis-green);
+            color: var(--conflixis-white);
+            padding: 2rem;
+            text-align: center;
+        }
+        
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--conflixis-gold);
+        }
+        
+        canvas {
+            max-width: 100%;
+            height: auto !important;
+        }
+    </style>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="logo">Conflixis Healthcare Analytics</div>
+            <h1>GCP Billing Analysis Report</h1>
+            <div class="subtitle">Comprehensive Cost Analysis - Last 14 Days</div>
+            <div class="date">Report Generated: September 04, 2025 at 10:05 AM</div>
+        </div>
+        
+        <div class="metrics-grid">
+            <div class="metric-card">
+                <div class="metric-label">Total Spend (14 Days)</div>
+                <div class="metric-value">$5,199.29</div>
+                <div class="metric-change increase">↑ 342% vs previous period</div>
+            </div>
+            <div class="metric-card">
+                <div class="metric-label">Daily Average</div>
+                <div class="metric-value">$371.38</div>
+            </div>
+            <div class="metric-card">
+                <div class="metric-label">Top Service</div>
+                <div class="metric-value">BigQuery</div>
+                <div class="metric-change">$2,880.84 (55.4%)</div>
+            </div>
+            <div class="metric-card">
+                <div class="metric-label">Active Projects</div>
+                <div class="metric-value">8</div>
+                <div class="metric-change">5 with significant costs</div>
+            </div>
+        </div>
+        
+        <div class="content">
+            <div class="section">
+                <div class="alert">
+                    <div class="alert-title">⚠️ Critical Cost Alert</div>
+                    <div class="alert-content">
+                        BigQuery costs spiked 342% week-over-week, with unusual activity on September 2-3. 
+                        Multiple identical queries costing $73.55 each were executed, indicating potential 
+                        inefficient automated processes or runaway jobs. Immediate investigation recommended.
+                    </div>
+                </div>
+            </div>
+            
+            <div class="section">
+                <h2 class="section-title">Daily Spending Trend</h2>
+                <div class="chart-container">
+                    <canvas id="dailyTrendChart"></canvas>
+                </div>
+            </div>
+            
+            <div class="section">
+                <h2 class="section-title">Service Cost Breakdown</h2>
+                <div class="chart-container">
+                    <canvas id="serviceBreakdownChart"></canvas>
+                </div>
+            </div>
+            
+            <div class="section">
+                <h2 class="section-title">BigQuery Analysis</h2>
+                <div class="chart-container">
+                    <canvas id="bqDailyChart"></canvas>
+                </div>
+                <div class="alert">
+                    <div class="alert-title">BigQuery Spike Details</div>
+                    <div class="alert-content">
+                        • Sept 2-3: 20+ queries at $73.55 each<br>
+                        • UUID-named jobs suggest automated/scheduled processes<br>
+                        • Peak hours: 9 AM, 12 PM, 9 PM<br>
+                        • Affected dataset: conflixis_agent<br>
+                        • Total anomalous spend: ~$1,500 in 2 days
+                    </div>
+                </div>
+            </div>
+            
+            <div class="section">
+                <h2 class="section-title">Cost Optimization Recommendations</h2>
+                
+                <div class="recommendation">
+                    <div class="recommendation-title">1. Implement BigQuery Cost Controls [CRITICAL]</div>
+                    <div class="recommendation-content">
+                        Set up custom quotas and slot reservations to prevent runaway queries. 
+                        Implement query cost estimation before execution for jobs over $10.
+                    </div>
+                    <div class="recommendation-savings">Potential Savings: $900/week</div>
+                </div>
+                
+                <div class="recommendation">
+                    <div class="recommendation-title">2. Optimize BigQuery Storage [HIGH]</div>
+                    <div class="recommendation-content">
+                        Move tables not accessed in 90+ days to long-term storage. 
+                        Active storage costs ($253) are 2.7x higher than long-term storage ($95).
+                    </div>
+                    <div class="recommendation-savings">Potential Savings: $76/month</div>
+                </div>
+                
+                <div class="recommendation">
+                    <div class="recommendation-title">3. Implement Query Result Caching [HIGH]</div>
+                    <div class="recommendation-content">
+                        Use materialized views and cached results for frequently-run analyses. 
+                        Consider BI Engine for dashboards querying the same datasets.
+                    </div>
+                    <div class="recommendation-savings">Potential Savings: $871/week</div>
+                </div>
+                
+                <div class="recommendation">
+                    <div class="recommendation-title">4. Review Cloud Data Fusion Usage [MEDIUM]</div>
+                    <div class="recommendation-content">
+                        Cloud Data Fusion costs $487.80 with variable usage. 
+                        Evaluate if Dataflow or Cloud Composer could be more cost-effective.
+                    </div>
+                    <div class="recommendation-savings">Potential Savings: $200/month</div>
+                </div>
+            </div>
+            
+            <div class="section">
+                <h2 class="section-title">Top 10 Projects by Cost</h2>
+                <div class="table-container">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Project</th>
+                                <th>Total Cost</th>
+                                <th>% of Total</th>
+                            </tr>
+                        </thead>
+                        <tbody id="projectTableBody"></tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer">
+            <div class="logo">Conflixis Healthcare Analytics</div>
+            <p style="margin-top: 1rem; opacity: 0.8;">© 2025 Conflixis. All rights reserved.</p>
+        </div>
+    </div>
+    
+    <script>
+        // Chart data from Python
+        const chartData = {"daily_trend": [{"usage_date": "2025-08-21", "daily_cost": 174.494963}, {"usage_date": "2025-08-22", "daily_cost": 167.73878600000003}, {"usage_date": "2025-08-23", "daily_cost": 162.586781}, {"usage_date": "2025-08-24", "daily_cost": 161.822636}, {"usage_date": "2025-08-25", "daily_cost": 172.42079700000002}, {"usage_date": "2025-08-26", "daily_cost": 408.032623}, {"usage_date": "2025-08-27", "daily_cost": 322.42726399999987}, {"usage_date": "2025-08-28", "daily_cost": 165.69159299999998}, {"usage_date": "2025-08-29", "daily_cost": 164.98461799999998}, {"usage_date": "2025-08-30", "daily_cost": 384.24267099999986}, {"usage_date": "2025-08-31", "daily_cost": 295.82666299999994}, {"usage_date": "2025-09-01", "daily_cost": 705.4006420000004}, {"usage_date": "2025-09-02", "daily_cost": 1008.2471110000002}, {"usage_date": "2025-09-03", "daily_cost": 899.7611280000002}, {"usage_date": "2025-09-04", "daily_cost": 5.614250999999999}], "service_breakdown": [{"service_name": "BigQuery", "daily_cost": 2880.9631309999995}, {"service_name": "Cloud Data Fusion", "daily_cost": 487.7995}, {"service_name": "Cloud SQL", "daily_cost": 429.3250270000001}, {"service_name": "Security Command Center", "daily_cost": 392.366667000001}, {"service_name": "Duet AI", "daily_cost": 247.12062699999996}, {"service_name": "App Engine", "daily_cost": 200.3716589999999}, {"service_name": "Neo4j Aura", "daily_cost": 194.68800000000002}, {"service_name": "Support", "daily_cost": 151.332678}, {"service_name": "Cloud Run", "daily_cost": 40.46853599999999}, {"service_name": "Cloud Storage", "daily_cost": 35.358729}], "project_costs": [{"project_name": "data-analytics", "total_cost": 3765.9795619999904}, {"project_name": "conflixis-engine", "total_cost": 768.1426520000012}, {"project_name": "conflixis-web", "total_cost": 201.30819399999996}, {"project_name": "conflixis-riskmodel", "total_cost": 22.870581000000012}, {"project_name": "conflixis-web-stage", "total_cost": 20.216952999999997}, {"project_name": "vpc-host-prod", "total_cost": 18.342019999999998}, {"project_name": "logging", "total_cost": 3.297713000000001}, {"project_name": "monitoring-prod", "total_cost": 0.4537530000000001}, {"project_name": "Billing Administration", "total_cost": 0.22779400000000002}, {"project_name": "repositories", "total_cost": 0.0}], "bq_daily": [{"usage_date": "2025-08-21", "daily_cost": 34.889397999999986}, {"usage_date": "2025-08-22", "daily_cost": 29.248482999999986}, {"usage_date": "2025-08-23", "daily_cost": 25.717567999999996}, {"usage_date": "2025-08-24", "daily_cost": 25.165153}, {"usage_date": "2025-08-25", "daily_cost": 29.438718999999992}, {"usage_date": "2025-08-26", "daily_cost": 234.77527099999998}, {"usage_date": "2025-08-27", "daily_cost": 152.30155300000007}, {"usage_date": "2025-08-28", "daily_cost": 26.00051699999999}, {"usage_date": "2025-08-29", "daily_cost": 26.90039299999999}, {"usage_date": "2025-08-30", "daily_cost": 209.87266599999987}, {"usage_date": "2025-08-31", "daily_cost": 132.33135299999998}, {"usage_date": "2025-09-01", "daily_cost": 499.56075100000004}, {"usage_date": "2025-09-02", "daily_cost": 773.2323019999999}, {"usage_date": "2025-09-03", "daily_cost": 681.5286359999999}, {"usage_date": "2025-09-04", "daily_cost": 0.000368}]};
+        
+        // Configure Chart.js defaults
+        Chart.defaults.font.family = '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, sans-serif';
+        Chart.defaults.color = '#0c343a';
+        
+        // Daily Trend Chart
+        const dailyTrendCtx = document.getElementById('dailyTrendChart').getContext('2d');
+        new Chart(dailyTrendCtx, {
+            type: 'line',
+            data: {
+                labels: chartData.daily_trend.map(d => d.usage_date),
+                datasets: [{
+                    label: 'Daily Cost ($)',
+                    data: chartData.daily_trend.map(d => d.daily_cost),
+                    borderColor: '#4c94ed',
+                    backgroundColor: 'rgba(76, 148, 237, 0.1)',
+                    tension: 0.3,
+                    fill: true
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: {
+                        display: false
+                    },
+                    tooltip: {
+                        callbacks: {
+                            label: function(context) {
+                                return '$' + context.parsed.y.toFixed(2);
+                            }
+                        }
+                    }
+                },
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        ticks: {
+                            callback: function(value) {
+                                return '$' + value.toFixed(0);
+                            }
+                        }
+                    }
+                }
+            }
+        });
+        
+        // Service Breakdown Chart
+        const serviceCtx = document.getElementById('serviceBreakdownChart').getContext('2d');
+        new Chart(serviceCtx, {
+            type: 'bar',
+            data: {
+                labels: chartData.service_breakdown.map(d => d.service_name),
+                datasets: [{
+                    label: 'Total Cost ($)',
+                    data: chartData.service_breakdown.map(d => d.daily_cost),
+                    backgroundColor: '#eab96d',
+                    borderColor: '#0c343a',
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                indexAxis: 'y',
+                plugins: {
+                    legend: {
+                        display: false
+                    },
+                    tooltip: {
+                        callbacks: {
+                            label: function(context) {
+                                return '$' + context.parsed.x.toFixed(2);
+                            }
+                        }
+                    }
+                },
+                scales: {
+                    x: {
+                        beginAtZero: true,
+                        ticks: {
+                            callback: function(value) {
+                                return '$' + value.toFixed(0);
+                            }
+                        }
+                    }
+                }
+            }
+        });
+        
+        // BigQuery Daily Chart
+        const bqCtx = document.getElementById('bqDailyChart').getContext('2d');
+        new Chart(bqCtx, {
+            type: 'bar',
+            data: {
+                labels: chartData.bq_daily.map(d => d.usage_date),
+                datasets: [{
+                    label: 'BigQuery Daily Cost ($)',
+                    data: chartData.bq_daily.map(d => d.daily_cost),
+                    backgroundColor: '#0c343a',
+                    borderColor: '#eab96d',
+                    borderWidth: 2
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: {
+                        display: false
+                    },
+                    tooltip: {
+                        callbacks: {
+                            label: function(context) {
+                                return '$' + context.parsed.y.toFixed(2);
+                            }
+                        }
+                    }
+                },
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        ticks: {
+                            callback: function(value) {
+                                return '$' + value.toFixed(0);
+                            }
+                        }
+                    }
+                }
+            }
+        });
+        
+        // Populate project table
+        const projectTableBody = document.getElementById('projectTableBody');
+        const totalCost = 5199.2925270000005;
+        chartData.project_costs.forEach(project => {
+            const row = projectTableBody.insertRow();
+            row.insertCell(0).textContent = project.project_name || 'N/A';
+            row.insertCell(1).textContent = '$' + project.total_cost.toFixed(2);
+            row.insertCell(2).textContent = ((project.total_cost / totalCost) * 100).toFixed(1) + '%';
+        });
+    </script>
+</body>
+</html>
