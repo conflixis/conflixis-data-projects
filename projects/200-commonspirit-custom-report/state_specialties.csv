@@ -1,0 +1,560 @@
+state,specialty_group,provider_count,pct_of_state
+AL,Physician Assistant,7,58.33
+AL,Internal Medicine,5,41.67
+AR,Nurse,171,22.83
+AR,Anesthesiology,67,8.95
+AR,Surgery,65,8.68
+AR,Family Practice,50,6.68
+AR,Internal Medicine,45,6.01
+AR,Cardiology,42,5.61
+AR,Emergency Medicine,41,5.47
+AR,Physician Assistant,39,5.21
+AR,Radiology,35,4.67
+AR,Hospitalist,23,3.07
+AR,Gastroenterology,20,2.67
+AR,Other,19,2.54
+AR,Neurology,15,2.0
+AR,Dermatology,13,1.74
+AR,Obstetrics/Gynecology,12,1.6
+AR,Pulmonary Disease,10,1.34
+AR,Psychiatry,8,1.07
+AR,Urology,8,1.07
+AR,Endocrinology,7,0.93
+AR,Pediatric Medicine,7,0.93
+AR,Oncology,7,0.93
+AR,Pathology,6,0.8
+AR,Allergy/Immunology,6,0.8
+AR,Otolaryngology,6,0.8
+AR,Pain Management,6,0.8
+AR,Ophthalmology,6,0.8
+AR,Infectious Disease,5,0.67
+AR,Physical Medicine and Rehabilitation,5,0.67
+AR,Chiropractic,5,0.67
+AZ,Nurse,552,20.99
+AZ,Physician Assistant,314,11.94
+AZ,Family Practice,185,7.03
+AZ,Internal Medicine,183,6.96
+AZ,Surgery,175,6.65
+AZ,Emergency Medicine,149,5.67
+AZ,Anesthesiology,135,5.13
+AZ,Obstetrics/Gynecology,89,3.38
+AZ,Hospitalist,86,3.27
+AZ,Cardiology,83,3.16
+AZ,Radiology,82,3.12
+AZ,Neurology,79,3.0
+AZ,Other,61,2.32
+AZ,Pediatric Medicine,35,1.33
+AZ,Podiatry,33,1.25
+AZ,Gastroenterology,31,1.18
+AZ,Critical Care (Intensivists),28,1.06
+AZ,Pulmonary Disease,26,0.99
+AZ,Psychology,26,0.99
+AZ,Endocrinology,26,0.99
+AZ,Oncology,23,0.87
+AZ,Physical Medicine and Rehabilitation,21,0.8
+AZ,Nephrology,20,0.76
+AZ,Otolaryngology,19,0.72
+AZ,Infectious Disease,19,0.72
+AZ,Pathology,18,0.68
+AZ,Ophthalmology,17,0.65
+AZ,Urology,16,0.61
+AZ,Psychiatry,15,0.57
+AZ,Dermatology,14,0.53
+AZ,Chiropractic,10,0.38
+AZ,Pain Management,10,0.38
+AZ,Therapy,10,0.38
+AZ,Allergy/Immunology,7,0.27
+AZ,Audiologist,6,0.23
+AZ,Hospice and Palliative Care,6,0.23
+AZ,General Practice,6,0.23
+AZ,Neonatal-Perinatal Medicine,5,0.19
+AZ,Rheumatology,5,0.19
+AZ,Optometry,5,0.19
+CA,Nurse,897,11.65
+CA,Physician Assistant,881,11.44
+CA,Family Practice,791,10.27
+CA,Internal Medicine,539,7.0
+CA,Surgery,537,6.97
+CA,Anesthesiology,396,5.14
+CA,Emergency Medicine,328,4.26
+CA,Hospitalist,322,4.18
+CA,Obstetrics/Gynecology,320,4.16
+CA,Radiology,243,3.16
+CA,Pediatric Medicine,242,3.14
+CA,Other,224,2.91
+CA,Cardiology,192,2.49
+CA,Ophthalmology,152,1.97
+CA,Podiatry,146,1.9
+CA,Psychiatry,121,1.57
+CA,Gastroenterology,107,1.39
+CA,Neurology,88,1.14
+CA,Oncology,87,1.13
+CA,Otolaryngology,79,1.03
+CA,Dermatology,76,0.99
+CA,Urology,71,0.92
+CA,Pulmonary Disease,64,0.83
+CA,Therapy,61,0.79
+CA,Pathology,60,0.78
+CA,Nephrology,59,0.77
+CA,General Practice,59,0.77
+CA,Physical Medicine and Rehabilitation,55,0.71
+CA,Critical Care (Intensivists),52,0.68
+CA,Chiropractic,48,0.62
+CA,Endocrinology,41,0.53
+CA,Infectious Disease,38,0.49
+CA,Optometry,34,0.44
+CA,Neonatal-Perinatal Medicine,34,0.44
+CA,Rheumatology,33,0.43
+CA,Allergy/Immunology,31,0.4
+CA,Social Worker,29,0.38
+CA,Psychology,25,0.32
+CA,Pain Management,25,0.32
+CA,Dietitian/Nutrition Professional,21,0.27
+CA,Audiologist,12,0.16
+CA,N/A,12,0.16
+CA,Sports Medicine,10,0.13
+CA,Osteopathic Manipulative Medicine,10,0.13
+CA,Dentist,9,0.12
+CA,Adolescent Medicine,8,0.1
+CA,Sleep Medicine,8,0.1
+CA,Hospice and Palliative Care,6,0.08
+CA,Occupational Medicine,6,0.08
+CA,Addiction Medicine,5,0.06
+CA,Geriatric Medicine,5,0.06
+CO,Nurse,407,16.45
+CO,Physician Assistant,371,15.0
+CO,Family Practice,345,13.95
+CO,Surgery,230,9.3
+CO,Anesthesiology,202,8.16
+CO,Internal Medicine,107,4.32
+CO,Hospitalist,96,3.88
+CO,Radiology,81,3.27
+CO,Emergency Medicine,77,3.11
+CO,Obstetrics/Gynecology,64,2.59
+CO,Cardiology,50,2.02
+CO,Gastroenterology,38,1.54
+CO,Other,37,1.5
+CO,Neurology,35,1.41
+CO,Pediatric Medicine,30,1.21
+CO,Podiatry,30,1.21
+CO,Ophthalmology,29,1.17
+CO,Dermatology,28,1.13
+CO,Otolaryngology,25,1.01
+CO,Urology,23,0.93
+CO,Oncology,22,0.89
+CO,Nephrology,17,0.69
+CO,Pulmonary Disease,15,0.61
+CO,Physical Medicine and Rehabilitation,13,0.53
+CO,Sports Medicine,11,0.44
+CO,Geriatric Medicine,10,0.4
+CO,Critical Care (Intensivists),10,0.4
+CO,Social Worker,10,0.4
+CO,Allergy/Immunology,10,0.4
+CO,Rheumatology,9,0.36
+CO,Pathology,9,0.36
+CO,Infectious Disease,8,0.32
+CO,Psychiatry,8,0.32
+CO,Psychology,7,0.28
+CO,Chiropractic,5,0.2
+CO,Therapy,5,0.2
+FL,Anesthesiology,21,18.42
+FL,Internal Medicine,16,14.04
+FL,Emergency Medicine,14,12.28
+FL,Nurse,13,11.4
+FL,Physician Assistant,10,8.77
+FL,Radiology,8,7.02
+FL,Family Practice,7,6.14
+FL,Neurology,7,6.14
+FL,Obstetrics/Gynecology,6,5.26
+FL,Surgery,6,5.26
+FL,Neonatal-Perinatal Medicine,6,5.26
+GA,Nurse,47,41.59
+GA,Family Practice,22,19.47
+GA,Anesthesiology,12,10.62
+GA,Physician Assistant,12,10.62
+GA,Emergency Medicine,9,7.96
+GA,Internal Medicine,6,5.31
+GA,Surgery,5,4.42
+IA,Nurse,53,26.77
+IA,Physician Assistant,32,16.16
+IA,Family Practice,27,13.64
+IA,Other,14,7.07
+IA,Anesthesiology,14,7.07
+IA,Emergency Medicine,13,6.57
+IA,Hospitalist,11,5.56
+IA,Therapy,11,5.56
+IA,Surgery,9,4.55
+IA,Internal Medicine,8,4.04
+IA,Social Worker,6,3.03
+ID,Emergency Medicine,5,50.0
+ID,Family Practice,5,50.0
+IL,Emergency Medicine,22,25.29
+IL,Radiology,12,13.79
+IL,Nurse,10,11.49
+IL,Anesthesiology,9,10.34
+IL,Hospitalist,9,10.34
+IL,Internal Medicine,8,9.2
+IL,Family Practice,6,6.9
+IL,Physician Assistant,6,6.9
+IL,Obstetrics/Gynecology,5,5.75
+IN,Anesthesiology,13,25.0
+IN,Radiology,10,19.23
+IN,Internal Medicine,7,13.46
+IN,Emergency Medicine,7,13.46
+IN,Physician Assistant,5,9.62
+IN,Nurse,5,9.62
+IN,Surgery,5,9.62
+KS,Nurse,67,38.29
+KS,Family Practice,26,14.86
+KS,Physician Assistant,18,10.29
+KS,Surgery,15,8.57
+KS,Pediatric Medicine,9,5.14
+KS,Obstetrics/Gynecology,9,5.14
+KS,Internal Medicine,8,4.57
+KS,Anesthesiology,8,4.57
+KS,Ophthalmology,5,2.86
+KS,Optometry,5,2.86
+KS,Chiropractic,5,2.86
+KY,Nurse,164,23.33
+KY,Anesthesiology,128,18.21
+KY,Physician Assistant,112,15.93
+KY,Surgery,55,7.82
+KY,Family Practice,43,6.12
+KY,Internal Medicine,37,5.26
+KY,Emergency Medicine,33,4.69
+KY,Cardiology,22,3.13
+KY,Obstetrics/Gynecology,20,2.84
+KY,Hospitalist,15,2.13
+KY,Radiology,12,1.71
+KY,Pulmonary Disease,10,1.42
+KY,Podiatry,10,1.42
+KY,Neurology,10,1.42
+KY,Gastroenterology,8,1.14
+KY,Pain Management,7,1.0
+KY,Oncology,6,0.85
+KY,Pediatric Medicine,6,0.85
+KY,Ophthalmology,5,0.71
+LA,Anesthesiology,11,44.0
+LA,Emergency Medicine,8,32.0
+LA,Nurse,6,24.0
+MA,Anesthesiology,9,37.5
+MA,Hospitalist,5,20.83
+MA,Radiology,5,20.83
+MA,Family Practice,5,20.83
+MD,Anesthesiology,8,100.0
+MI,Emergency Medicine,29,40.28
+MI,Physician Assistant,10,13.89
+MI,Internal Medicine,10,13.89
+MI,Hospitalist,9,12.5
+MI,Surgery,8,11.11
+MI,Family Practice,6,8.33
+MN,Nurse,44,25.58
+MN,Family Practice,27,15.7
+MN,Physician Assistant,26,15.12
+MN,Anesthesiology,22,12.79
+MN,Surgery,16,9.3
+MN,Emergency Medicine,14,8.14
+MN,Radiology,14,8.14
+MN,Internal Medicine,9,5.23
+MO,Anesthesiology,11,35.48
+MO,Radiology,8,25.81
+MO,Emergency Medicine,7,22.58
+MO,Nurse,5,16.13
+NC,Physician Assistant,12,26.09
+NC,Anesthesiology,12,26.09
+NC,Emergency Medicine,9,19.57
+NC,Nurse,7,15.22
+NC,Surgery,6,13.04
+ND,Nurse,167,34.15
+ND,Physician Assistant,60,12.27
+ND,Family Practice,59,12.07
+ND,Anesthesiology,50,10.22
+ND,Surgery,30,6.13
+ND,Internal Medicine,24,4.91
+ND,Obstetrics/Gynecology,14,2.86
+ND,Pediatric Medicine,13,2.66
+ND,Radiology,11,2.25
+ND,Hospitalist,11,2.25
+ND,Emergency Medicine,11,2.25
+ND,Therapy,10,2.04
+ND,Other,9,1.84
+ND,Chiropractic,8,1.64
+ND,Ophthalmology,7,1.43
+ND,Psychiatry,5,1.02
+NE,Nurse,527,24.17
+NE,Physician Assistant,239,10.96
+NE,Family Practice,216,9.91
+NE,Anesthesiology,184,8.44
+NE,Surgery,121,5.55
+NE,Internal Medicine,94,4.31
+NE,Obstetrics/Gynecology,91,4.17
+NE,Hospitalist,77,3.53
+NE,Radiology,69,3.17
+NE,Other,67,3.07
+NE,Therapy,54,2.48
+NE,Pediatric Medicine,43,1.97
+NE,Cardiology,43,1.97
+NE,Psychiatry,39,1.79
+NE,Gastroenterology,31,1.42
+NE,Emergency Medicine,29,1.33
+NE,Neurology,19,0.87
+NE,Otolaryngology,19,0.87
+NE,Pathology,18,0.83
+NE,Pulmonary Disease,17,0.78
+NE,Podiatry,16,0.73
+NE,Urology,16,0.73
+NE,Nephrology,14,0.64
+NE,Physical Medicine and Rehabilitation,14,0.64
+NE,Oncology,13,0.6
+NE,Psychology,13,0.6
+NE,Social Worker,13,0.6
+NE,Endocrinology,12,0.55
+NE,Infectious Disease,11,0.5
+NE,Ophthalmology,10,0.46
+NE,Audiologist,9,0.41
+NE,Dietitian/Nutrition Professional,9,0.41
+NE,Dermatology,7,0.32
+NE,Optometry,6,0.28
+NE,Neonatal-Perinatal Medicine,5,0.23
+NE,Pain Management,5,0.23
+NE,Allergy/Immunology,5,0.23
+NE,Rheumatology,5,0.23
+NJ,Emergency Medicine,9,52.94
+NJ,Internal Medicine,8,47.06
+NM,Physician Assistant,7,30.43
+NM,Family Practice,6,26.09
+NM,Anesthesiology,5,21.74
+NM,Emergency Medicine,5,21.74
+NV,Internal Medicine,88,13.21
+NV,Surgery,71,10.66
+NV,Nurse,66,9.91
+NV,Anesthesiology,63,9.46
+NV,Physician Assistant,52,7.81
+NV,Obstetrics/Gynecology,41,6.16
+NV,Pediatric Medicine,39,5.86
+NV,Cardiology,39,5.86
+NV,Emergency Medicine,38,5.71
+NV,Family Practice,36,5.41
+NV,Hospitalist,22,3.3
+NV,Radiology,17,2.55
+NV,Gastroenterology,16,2.4
+NV,Nephrology,13,1.95
+NV,Podiatry,12,1.8
+NV,Neurology,11,1.65
+NV,Oncology,11,1.65
+NV,Otolaryngology,9,1.35
+NV,Other,8,1.2
+NV,Pulmonary Disease,8,1.2
+NV,Ophthalmology,6,0.9
+NY,Emergency Medicine,45,33.58
+NY,Anesthesiology,30,22.39
+NY,Internal Medicine,13,9.7
+NY,Physician Assistant,13,9.7
+NY,Radiology,10,7.46
+NY,Hospitalist,9,6.72
+NY,Nurse,8,5.97
+NY,Other,6,4.48
+OH,Nurse,356,18.36
+OH,Anesthesiology,229,11.81
+OH,Family Practice,175,9.03
+OH,Internal Medicine,158,8.15
+OH,Physician Assistant,137,7.07
+OH,Obstetrics/Gynecology,112,5.78
+OH,Surgery,111,5.72
+OH,Emergency Medicine,98,5.05
+OH,Hospitalist,84,4.33
+OH,Ophthalmology,48,2.48
+OH,Other,47,2.42
+OH,Radiology,42,2.17
+OH,Cardiology,36,1.86
+OH,Oncology,28,1.44
+OH,Psychiatry,24,1.24
+OH,Dermatology,23,1.19
+OH,Gastroenterology,23,1.19
+OH,Podiatry,23,1.19
+OH,Otolaryngology,19,0.98
+OH,Neurology,18,0.93
+OH,Chiropractic,15,0.77
+OH,Endocrinology,14,0.72
+OH,Nephrology,14,0.72
+OH,Physical Medicine and Rehabilitation,13,0.67
+OH,Pain Management,11,0.57
+OH,Optometry,11,0.57
+OH,Pathology,11,0.57
+OH,Urology,10,0.52
+OH,Rheumatology,10,0.52
+OH,Pulmonary Disease,9,0.46
+OH,Pediatric Medicine,9,0.46
+OH,Infectious Disease,8,0.41
+OH,Allergy/Immunology,7,0.36
+OH,Critical Care (Intensivists),6,0.31
+OK,Emergency Medicine,6,100.0
+OR,Nurse,82,20.97
+OR,Physician Assistant,72,18.41
+OR,Family Practice,71,18.16
+OR,Emergency Medicine,24,6.14
+OR,Surgery,19,4.86
+OR,Other,18,4.6
+OR,Internal Medicine,17,4.35
+OR,Anesthesiology,10,2.56
+OR,Obstetrics/Gynecology,10,2.56
+OR,Hospitalist,10,2.56
+OR,Radiology,9,2.3
+OR,Podiatry,9,2.3
+OR,Pediatric Medicine,8,2.05
+OR,Chiropractic,8,2.05
+OR,Gastroenterology,7,1.79
+OR,Urology,6,1.53
+OR,Ophthalmology,6,1.53
+OR,Oncology,5,1.28
+PA,Emergency Medicine,32,35.16
+PA,Internal Medicine,12,13.19
+PA,Hospitalist,10,10.99
+PA,Anesthesiology,9,9.89
+PA,Radiology,7,7.69
+PA,Physician Assistant,6,6.59
+PA,Surgery,5,5.49
+PA,Family Practice,5,5.49
+PA,Nurse,5,5.49
+SC,Emergency Medicine,8,100.0
+SD,Nurse,11,68.75
+SD,Family Practice,5,31.25
+TN,Nurse,287,33.49
+TN,Internal Medicine,97,11.32
+TN,Anesthesiology,88,10.27
+TN,Family Practice,59,6.88
+TN,Physician Assistant,53,6.18
+TN,Surgery,46,5.37
+TN,Cardiology,33,3.85
+TN,Radiology,22,2.57
+TN,Hospitalist,21,2.45
+TN,Neurology,19,2.22
+TN,Oncology,16,1.87
+TN,Gastroenterology,13,1.52
+TN,Ophthalmology,12,1.4
+TN,Otolaryngology,11,1.28
+TN,Podiatry,10,1.17
+TN,Nephrology,10,1.17
+TN,Urology,9,1.05
+TN,Rheumatology,8,0.93
+TN,Other,8,0.93
+TN,Pathology,7,0.82
+TN,Pulmonary Disease,7,0.82
+TN,Dermatology,6,0.7
+TN,Optometry,5,0.58
+TN,Emergency Medicine,5,0.58
+TN,Obstetrics/Gynecology,5,0.58
+TX,Nurse,430,13.08
+TX,Anesthesiology,331,10.07
+TX,Internal Medicine,265,8.06
+TX,Family Practice,253,7.69
+TX,Surgery,226,6.87
+TX,Physician Assistant,192,5.84
+TX,Emergency Medicine,186,5.66
+TX,Cardiology,157,4.77
+TX,Radiology,157,4.77
+TX,Hospitalist,137,4.17
+TX,Obstetrics/Gynecology,93,2.83
+TX,Gastroenterology,73,2.22
+TX,Neurology,68,2.07
+TX,Pediatric Medicine,59,1.79
+TX,Pathology,51,1.55
+TX,Pulmonary Disease,50,1.52
+TX,Oncology,49,1.49
+TX,Nephrology,48,1.46
+TX,Otolaryngology,48,1.46
+TX,Ophthalmology,41,1.25
+TX,Dermatology,41,1.25
+TX,Urology,38,1.16
+TX,Other,37,1.13
+TX,Infectious Disease,27,0.82
+TX,Endocrinology,27,0.82
+TX,Critical Care (Intensivists),25,0.76
+TX,Neonatal-Perinatal Medicine,25,0.76
+TX,Psychiatry,24,0.73
+TX,Podiatry,22,0.67
+TX,Physical Medicine and Rehabilitation,20,0.61
+TX,Rheumatology,16,0.49
+TX,Allergy/Immunology,15,0.46
+TX,General Practice,15,0.46
+TX,Chiropractic,11,0.33
+TX,Pain Management,10,0.3
+TX,Optometry,8,0.24
+TX,Geriatric Medicine,7,0.21
+TX,Hospice and Palliative Care,6,0.18
+UT,Nurse,157,20.55
+UT,Physician Assistant,126,16.49
+UT,Family Practice,89,11.65
+UT,Surgery,59,7.72
+UT,Emergency Medicine,48,6.28
+UT,Anesthesiology,43,5.63
+UT,Internal Medicine,35,4.58
+UT,Pediatric Medicine,32,4.19
+UT,Obstetrics/Gynecology,30,3.93
+UT,Radiology,20,2.62
+UT,Podiatry,17,2.23
+UT,Otolaryngology,15,1.96
+UT,Cardiology,12,1.57
+UT,Ophthalmology,10,1.31
+UT,Psychiatry,9,1.18
+UT,Neurology,9,1.18
+UT,Gastroenterology,8,1.05
+UT,Hospitalist,7,0.92
+UT,Urology,7,0.92
+UT,Other,6,0.79
+UT,Physical Medicine and Rehabilitation,5,0.65
+UT,Social Worker,5,0.65
+UT,Nephrology,5,0.65
+UT,Dermatology,5,0.65
+UT,Pain Management,5,0.65
+VA,Physician Assistant,10,22.22
+VA,Anesthesiology,9,20.0
+VA,Psychiatry,8,17.78
+VA,Radiology,7,15.56
+VA,Hospitalist,6,13.33
+VA,Emergency Medicine,5,11.11
+WA,Nurse,482,14.77
+WA,Physician Assistant,338,10.36
+WA,Family Practice,332,10.17
+WA,Internal Medicine,241,7.38
+WA,Anesthesiology,222,6.8
+WA,Surgery,200,6.13
+WA,Other,169,5.18
+WA,Hospitalist,160,4.9
+WA,Emergency Medicine,118,3.62
+WA,Radiology,85,2.6
+WA,Obstetrics/Gynecology,82,2.51
+WA,Pediatric Medicine,82,2.51
+WA,Therapy,69,2.11
+WA,Cardiology,64,1.96
+WA,Gastroenterology,55,1.69
+WA,Podiatry,45,1.38
+WA,Oncology,39,1.19
+WA,Neurology,36,1.1
+WA,Pulmonary Disease,35,1.07
+WA,Dietitian/Nutrition Professional,34,1.04
+WA,Ophthalmology,33,1.01
+WA,Urology,32,0.98
+WA,Otolaryngology,29,0.89
+WA,Pathology,23,0.7
+WA,Critical Care (Intensivists),22,0.67
+WA,Dermatology,22,0.67
+WA,Physical Medicine and Rehabilitation,21,0.64
+WA,Psychology,20,0.61
+WA,Optometry,19,0.58
+WA,Nephrology,19,0.58
+WA,Infectious Disease,17,0.52
+WA,Psychiatry,16,0.49
+WA,Audiologist,15,0.46
+WA,Rheumatology,15,0.46
+WA,Social Worker,14,0.43
+WA,Endocrinology,11,0.34
+WA,General Practice,11,0.34
+WA,Sleep Medicine,8,0.25
+WA,Chiropractic,8,0.25
+WA,Hospice and Palliative Care,7,0.21
+WA,Pain Management,7,0.21
+WA,Allergy/Immunology,7,0.21
+WI,Emergency Medicine,7,100.0
+WV,Nurse,11,64.71
+WV,Physician Assistant,6,35.29

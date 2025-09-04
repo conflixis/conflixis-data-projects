@@ -1,0 +1,148 @@
+# Healthcare COI Analytics Configuration - CommonSpirit Health
+# Configuration for CommonSpirit Health analysis
+
+health_system:
+  name: CommonSpirit Health
+  short_name: commonspirit
+  npi_file: data/inputs/CommonSpirit-npis.csv
+analysis:
+  start_year: 2020
+  end_year: 2024
+  components:
+    open_payments: true
+    prescriptions: true
+    correlations: true
+    risk_assessment: true
+    provider_vulnerability: true
+    consecutive_years: true
+    payment_tiers: true
+bigquery:
+  project_id: data-analytics-389803
+  dataset: conflixis_agent
+  temp_dataset: temp
+  tables:
+    open_payments: op_general_all_aggregate_static
+    prescriptions: PHYSICIAN_RX_2020_2024
+    provider_npis: commonspirit_provider_npis
+  max_rows: 1000000
+  timeout_seconds: 600
+thresholds:
+  payment:
+    high_single_payment: 5000
+    high_annual_total: 10000
+    suspicious_roi: 1000
+  prescription:
+    high_volume_percentile: 90
+    high_cost_percentile: 90
+  risk_score:
+    low: 30
+    medium: 60
+    high: 80
+    critical: 90
+payment_categories:
+- Compensation for services other than consulting
+- Consulting Fee
+- Food and Beverage
+- Travel and Lodging
+- Education
+- Gift
+- Grant
+- Honoraria
+- Royalty or License
+- Current or prospective ownership or investment interest
+focus_drugs:
+- name: OZEMPIC
+  category: GLP-1 Agonist
+  high_cost: true
+- name: HUMIRA
+  category: Biologic
+  high_cost: true
+- name: ELIQUIS
+  category: Anticoagulant
+  high_cost: true
+- name: JARDIANCE
+  category: SGLT2 Inhibitor
+  high_cost: true
+- name: TRULICITY
+  category: GLP-1 Agonist
+  high_cost: true
+- name: ENBREL
+  category: Biologic
+  high_cost: true
+- name: STELARA
+  category: Biologic
+  high_cost: true
+- name: XARELTO
+  category: Anticoagulant
+  high_cost: true
+- name: TRELEGY
+  category: COPD
+  high_cost: true
+- name: KRYSTEXXA
+  category: Gout
+  high_cost: true
+provider_types:
+  physicians:
+  - MD
+  - DO
+  mid_level:
+  - NP
+  - PA
+  other:
+  - DPM
+  - OD
+  - DDS
+  - PharmD
+reports:
+  output_formats:
+  - markdown
+  - pdf
+  - excel
+  sections:
+  - executive_summary
+  - payment_overview
+  - prescription_patterns
+  - correlation_analysis
+  - provider_vulnerability
+  - risk_assessment
+  - consecutive_years
+  - payment_tiers
+  - recommendations
+  - appendix
+  visualizations:
+    generate_charts: true
+    chart_format: png
+    chart_dpi: 300
+    color_scheme: conflixis
+  metadata:
+    author: Conflixis Data Analytics Team
+    department: Provider Intelligence
+    confidentiality: Confidential - Internal Use Only
+notifications:
+  enabled: false
+  smtp_server: smtp.gmail.com
+  smtp_port: 587
+  from_email: analytics@conflixis.com
+  to_emails:
+  - team@conflixis.com
+logging:
+  level: INFO
+  format: '%(asctime)s - %(name)s - %(levelname)s - %(message)s'
+  file: logs/analysis.log
+performance:
+  parallel_processing: true
+  max_workers: 4
+  chunk_size: 10000
+  cache_results: true
+  cache_dir: data/.cache
+quality_checks:
+  validate_npis: true
+  check_duplicates: true
+  verify_specialties: true
+  minimum_providers: 100
+advanced:
+  use_sampling: false
+  sample_size: 1000
+  debug_mode: false
+  save_intermediate_results: true
+  compression: gzip
