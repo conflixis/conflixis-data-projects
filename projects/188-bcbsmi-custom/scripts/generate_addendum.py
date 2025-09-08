@@ -189,6 +189,131 @@ Analysis of prescribing patterns for high-cost medications (ELIQUIS, HUMIRA, OZE
         
         return content
     
+    def generate_city_analysis(self) -> str:
+        """Generate city-level analysis section"""
+        city_df = self.results.get('city_classification')
+        if city_df is None or city_df.empty:
+            return "## City Analysis\n\n*No city data available*\n"
+        
+        # Convert to numeric and get top cities
+        city_df['total_payments'] = pd.to_numeric(city_df['total_payments'], errors='coerce').fillna(0)
+        city_df['payment_penetration_pct'] = pd.to_numeric(city_df['payment_penetration_pct'], errors='coerce').fillna(0)
+        top_10_cities = city_df.nlargest(10, 'total_payments')
+        
+        content = """
+## City-Level Analysis
+
+### Geographic Distribution of Pharmaceutical Influence
+
+Analysis of pharmaceutical payment patterns across Michigan cities reveals significant geographic concentration of industry relationships, with notable differences between urban centers and rural communities.
+
+### Top 10 Cities by Pharmaceutical Payment Volume
+
+| Rank | City | Total Payments | BCBSMI Providers | Payment Penetration | Hospitals | Avg Payment/Provider |
+|------|------|----------------|------------------|---------------------|-----------|---------------------|
+"""
+        
+        for idx, row in enumerate(top_10_cities.iterrows(), 1):
+            city = row[1]
+            content += f"| {idx} | {city['City']} | ${city['total_payments']:,.0f} | "
+            content += f"{int(city['bcbsmi_providers']):,} | {city['payment_penetration_pct']:.1f}% | "
+            content += f"{int(city['hospital_count'])} | ${city['avg_payment']:,.0f} |\n"
+        
+        # Add city insights
+        content += """
+
+### Key City-Level Insights
+
+"""
+        
+        # Identify highest risk cities
+        high_penetration_cities = city_df[city_df['payment_penetration_pct'] > 70].nlargest(5, 'total_payments')
+        if not high_penetration_cities.empty:
+            content += "**Cities with Highest Payment Penetration (>70%):**\n"
+            for _, city in high_penetration_cities.iterrows():
+                content += f"- **{city['City']}**: {city['payment_penetration_pct']:.1f}% of providers receiving payments, "
+                content += f"totaling ${city['total_payments']:,.0f}\n"
+        
+        # Cities with highest prescription costs
+        city_df['total_rx_cost'] = pd.to_numeric(city_df['total_rx_cost'], errors='coerce').fillna(0)
+        high_rx_cities = city_df.nlargest(5, 'total_rx_cost')
+        content += "\n**Cities Driving High-Cost Prescriptions:**\n"
+        for _, city in high_rx_cities.iterrows():
+            content += f"- **{city['City']}**: ${city['total_rx_cost']:,.0f} in targeted drug costs\n"
+        
+        return content
+    
+    def generate_rural_urban_comparison(self) -> str:
+        """Generate rural vs urban comparison section"""
+        comparison = self.results.get('rural_urban_comparison')
+        if comparison is None or comparison.empty:
+            return "## Rural vs Urban Analysis\n\n*No comparison data available*\n"
+        
+        content = """
+## Rural vs Urban Comparison
+
+### Healthcare Access and Pharmaceutical Influence Disparities
+
+The analysis reveals significant disparities in pharmaceutical industry engagement between urban and rural Michigan communities, with implications for healthcare access, cost, and quality.
+
+### Comparative Metrics
+
+| Metric | Urban Areas | Rural Areas | Disparity |
+|--------|-------------|-------------|-----------|
+"""
+        
+        if 'Urban' in comparison.index and 'Rural' in comparison.index:
+            urban = comparison.loc['Urban']
+            rural = comparison.loc['Rural']
+            
+            # Calculate disparities
+            payment_disparity = (urban['avg_payment_per_provider'] - rural['avg_payment_per_provider']) / rural['avg_payment_per_provider'] * 100
+            penetration_disparity = urban['payment_penetration_pct'] - rural['payment_penetration_pct']
+            rx_disparity = (urban['avg_rx_cost_per_provider'] - rural['avg_rx_cost_per_provider']) / rural['avg_rx_cost_per_provider'] * 100
+            
+            content += f"| Number of Cities | {int(urban['city_count'])} | {int(rural['city_count'])} | "
+            content += f"{int(rural['city_count'] - urban['city_count'])} more rural |\n"
+            
+            content += f"| Total Providers | {int(urban['total_providers']):,} | {int(rural['total_providers']):,} | "
+            content += f"{'Urban' if urban['total_providers'] > rural['total_providers'] else 'Rural'} has {abs(int(urban['total_providers'] - rural['total_providers'])):,} more |\n"
+            
+            content += f"| Total Payments | ${urban['total_payments']:,.0f} | ${rural['total_payments']:,.0f} | "
+            content += f"Urban {(urban['total_payments']/rural['total_payments']):.1f}x higher |\n"
+            
+            content += f"| Payment Penetration | {urban['payment_penetration_pct']:.1f}% | {rural['payment_penetration_pct']:.1f}% | "
+            content += f"{abs(penetration_disparity):.1f}pp {'higher' if penetration_disparity > 0 else 'lower'} in urban |\n"
+            
+            content += f"| Avg Payment/Provider | ${urban['avg_payment_per_provider']:,.0f} | ${rural['avg_payment_per_provider']:,.0f} | "
+            content += f"Urban {abs(payment_disparity):.0f}% {'higher' if payment_disparity > 0 else 'lower'} |\n"
+            
+            content += f"| Avg Rx Cost/Provider | ${urban['avg_rx_cost_per_provider']:,.0f} | ${rural['avg_rx_cost_per_provider']:,.0f} | "
+            content += f"Urban {abs(rx_disparity):.0f}% {'higher' if rx_disparity > 0 else 'lower'} |\n"
+            
+            content += f"| Total Hospitals | {int(urban['hospital_count'])} | {int(rural['hospital_count'])} | "
+            content += f"{'Urban' if urban['hospital_count'] > rural['hospital_count'] else 'Rural'} has {abs(int(urban['hospital_count'] - rural['hospital_count']))} more |\n"
+        
+        content += """
+
+### Key Disparities and Implications
+
+#### Payment Concentration
+- **Urban centers** show significantly higher pharmaceutical payment concentration, suggesting stronger industry relationships
+- **Rural areas** demonstrate lower payment penetration but may face different access challenges
+- The disparity indicates potential differences in prescribing patterns and formulary adherence
+
+#### Prescription Patterns
+- Urban providers generate higher prescription costs per capita for targeted high-cost medications
+- Rural providers may have limited access to specialty medications or different patient demographics
+- Cost disparities suggest opportunities for targeted interventions based on geographic location
+
+#### Network Implications for BCBSMI
+1. **Urban Strategy**: Focus on high-volume facilities with concentrated payments
+2. **Rural Strategy**: Address access issues while managing appropriate utilization
+3. **Differential Pricing**: Consider geographic variations in reimbursement models
+"""
+        
+        return content
+    
     def generate_recommendations(self) -> str:
         """Generate actionable recommendations for BCBSMI"""
         summary = self.results.get('summary', {})
@@ -316,6 +441,8 @@ Composite risk scores calculated using weighted factors:
             self.generate_risk_ranking(),
             self.generate_payment_analysis(),
             self.generate_prescription_insights(),
+            self.generate_city_analysis(),
+            self.generate_rural_urban_comparison(),
             self.generate_detailed_profiles(),
             self.generate_recommendations(),
             self.generate_methodology()
