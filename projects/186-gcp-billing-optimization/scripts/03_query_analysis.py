@@ -13,7 +13,7 @@ from google.oauth2 import service_account
 def setup_client():
     """Setup BigQuery client with credentials."""
     from pathlib import Path
-    env_file = Path(__file__).parent.parent.parent / ".env"
+    env_file = Path(__file__).parent.parent / ".env"
     if env_file.exists():
         with open(env_file, 'r') as f:
             content = f.read()

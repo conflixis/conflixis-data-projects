@@ -24,7 +24,8 @@ Optimizing the `conflixis_agent` dataset to reduce BigQuery costs from **$1,471/
 ## Implementation Tasks
 
 ### Week 1: Data Harmonization
-- [ ] Run schema analysis script
+- [x] Run schema analysis script
+- [x] Identify data type mismatches - Found NPI with NUMERIC, INT64, STRING types
 - [ ] Create harmonized views for all tables with NPI columns
 - [ ] Test joins without CAST operations
 - [ ] Validate data consistency
@@ -63,7 +64,7 @@ Optimizing the `conflixis_agent` dataset to reduce BigQuery costs from **$1,471/
 ### Resolved Issues
 | Date | Issue | Resolution |
 |------|-------|------------|
-| - | - | - |
+| 2025-09-08 | Script path issues after reorganization | Fixed .env file path references |
 
 ## Performance Metrics
 
@@ -116,6 +117,12 @@ SELECT * FROM conflixis_agent.table_name;
 - Project restructured with clear folder organization
 - Created tracking documentation
 - Ready to begin Week 1 implementation
+- Schema analysis completed successfully:
+  - Confirmed 83% of joins require CAST operations
+  - Found NPI column with 3 different data types (NUMERIC, INT64, STRING)
+  - Identified 5 tables needing optimization
+  - 0% of tables have clustering (major performance opportunity)
+  - Only 40% of tables are partitioned
 
 ---
 
