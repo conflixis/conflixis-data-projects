@@ -1,10 +1,10 @@
-# Healthcare COI Analytics Configuration - Northwell Health
-# Configuration for Northwell Health analysis
+# Healthcare COI Analytics Configuration - Blue Cross Blue Shield Michigan
+# Configuration for BCBSMI analysis
 
 health_system:
-  name: "Northwell Health"
-  short_name: "northwell"
-  npi_file: "data/inputs/northwell-npis.csv"
+  name: "Blue Cross Blue Shield Michigan"
+  short_name: "bcbsmi"
+  npi_file: "data/inputs/bcbsmi-npis.csv"
   
 analysis:
   start_year: 2020
@@ -30,11 +30,11 @@ bigquery:
   tables:
     open_payments: "op_general_all_aggregate_static_optimized"
     prescriptions: "PHYSICIAN_RX_2020_2024_optimized"  # Medicare Part D claims data
-    provider_npis: "northwell_provider_npis"  # Will be created
+    provider_npis: "bcbsmi_provider_npis"  # Will be created
   
   # Query limits
   max_rows: 1000000
-  timeout_seconds: 600
+  timeout_seconds: 900  # 15 minutes
 
 # Risk Assessment Thresholds
 thresholds:
