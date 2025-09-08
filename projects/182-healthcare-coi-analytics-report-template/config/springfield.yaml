@@ -23,13 +23,13 @@ analysis:
 # BigQuery Configuration
 bigquery:
   project_id: "data-analytics-389803"
-  dataset: "conflixis_agent"
+  dataset: "conflixis_data_projects"
   temp_dataset: "temp"  # Temporary dataset for intermediate tables
   
   # Table names
   tables:
-    open_payments: "op_general_all_aggregate_static"
-    prescriptions: "PHYSICIAN_RX_2020_2024"  # Medicare Part D claims data
+    open_payments: "op_general_all_aggregate_static_optimized"
+    prescriptions: "PHYSICIAN_RX_2020_2024_optimized"  # Medicare Part D claims data
     provider_npis: "springfield_provider_npis"  # Will be created
   
   # Query limits

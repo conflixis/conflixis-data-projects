@@ -474,7 +474,7 @@ class BigQueryAnalyzer:
         correlation_query = f"""
         WITH provider_summary AS (
             SELECT
-                COALESCE(CAST(op.physician_id AS STRING), CAST(rx.NPI AS STRING)) as provider_id,
+                COALESCE(op.physician_id, rx.NPI) as provider_id,
                 COALESCE(op_total, 0) as total_payments,
                 COALESCE(op_count, 0) as payment_transactions,
                 COALESCE(rx_cost, 0) as total_rx_cost,
@@ -495,7 +495,7 @@ class BigQueryAnalyzer:
                 FROM {self.rx_summary}
                 GROUP BY NPI
             ) rx
-            ON CAST(op.physician_id AS STRING) = CAST(rx.NPI AS STRING)
+            ON op.physician_id = rx.NPI
         )
         SELECT
             COUNT(*) as total_providers,
@@ -524,7 +524,7 @@ class BigQueryAnalyzer:
                 SUM(rx.total_cost) as total_rx_cost
             FROM {self.op_summary} op
             INNER JOIN {self.rx_summary} rx
-            ON CAST(op.physician_id AS STRING) = CAST(rx.NPI AS STRING)
+            ON op.physician_id = rx.NPI
             GROUP BY op.physician_id
             HAVING SUM(op.total_amount) > 0
         )
@@ -553,7 +553,7 @@ class BigQueryAnalyzer:
                 SUM(rx.total_cost) / COUNT(DISTINCT rx.rx_year) as rx_total
             FROM {self.rx_summary} rx
             LEFT JOIN {self.op_summary} op
-            ON CAST(rx.NPI AS STRING) = CAST(op.physician_id AS STRING)
+            ON rx.NPI = op.physician_id
             GROUP BY rx.provider_type, rx.NPI
         )
         SELECT
@@ -586,7 +586,7 @@ class BigQueryAnalyzer:
                 SUM(rx.total_cost) / COUNT(DISTINCT rx.rx_year) as rx_total_yearly_avg
             FROM {self.rx_summary} rx
             LEFT JOIN {self.op_summary} op
-            ON CAST(rx.NPI AS STRING) = CAST(op.physician_id AS STRING)
+            ON rx.NPI = op.physician_id
             GROUP BY rx.BRAND_NAME, rx.NPI
         ),
         drug_metrics AS (
@@ -657,7 +657,7 @@ class BigQueryAnalyzer:
                 COALESCE(pr.rx_total, 0) as rx_total,
                 COALESCE(pr.rx_claims, 0) as rx_claims
             FROM provider_totals pt
-            LEFT JOIN provider_rx pr ON CAST(pt.physician_id AS STRING) = CAST(pr.NPI AS STRING)
+            LEFT JOIN provider_rx pr ON pt.physician_id = pr.NPI
         )
         SELECT
             payment_tier as tier,
@@ -697,7 +697,7 @@ class BigQueryAnalyzer:
                 SUM(rx.total_cost) / COUNT(DISTINCT rx.rx_year) as total_rx_cost,
                 SUM(rx.total_claims) as total_claims
             FROM {self.rx_summary} rx
-            LEFT JOIN {self.op_summary} op ON CAST(rx.NPI AS STRING) = CAST(op.physician_id AS STRING)
+            LEFT JOIN {self.op_summary} op ON rx.NPI = op.physician_id
             GROUP BY rx.provider_type, rx.NPI
         )
         SELECT
@@ -731,7 +731,7 @@ class BigQueryAnalyzer:
                 SUM(op.total_amount) as total_payments,
                 SUM(rx.total_cost) as total_rx_value
             FROM {self.op_summary} op
-            LEFT JOIN {self.rx_summary} rx ON CAST(op.physician_id AS STRING) = CAST(rx.NPI AS STRING)
+            LEFT JOIN {self.rx_summary} rx ON op.physician_id = rx.NPI
             GROUP BY op.physician_id
         ),
         year_groups AS (
@@ -795,7 +795,7 @@ class BigQueryAnalyzer:
         risk_query = f"""
         WITH provider_risk AS (
             SELECT
-                COALESCE(CAST(op.physician_id AS STRING), CAST(rx.NPI AS STRING)) as provider_id,
+                COALESCE(op.physician_id, rx.NPI) as provider_id,
                 COALESCE(op_total, 0) as payment_total,
                 COALESCE(rx_cost, 0) as rx_total,
                 COALESCE(op_percentile, 0) as payment_percentile,
@@ -816,7 +816,7 @@ class BigQueryAnalyzer:
                 FROM {self.rx_summary}
                 GROUP BY NPI
             ) rx
-            ON CAST(op.physician_id AS STRING) = CAST(rx.NPI AS STRING)
+            ON op.physician_id = rx.NPI
         )
         SELECT
             COUNT(CASE WHEN payment_percentile >= 0.9 AND rx_percentile >= 0.9 THEN 1 END) as high_risk_count,
@@ -836,7 +836,7 @@ class BigQueryAnalyzer:
         top_risk_query = f"""
         WITH provider_risk AS (
             SELECT
-                COALESCE(CAST(op.physician_id AS STRING), CAST(rx.NPI AS STRING)) as provider_id,
+                COALESCE(op.physician_id, rx.NPI) as provider_id,
                 COALESCE(op.first_name, '') as first_name,
                 COALESCE(op.last_name, '') as last_name,
                 COALESCE(op.specialty, rx.specialty) as specialty,
@@ -861,7 +861,7 @@ class BigQueryAnalyzer:
                 FROM {self.rx_summary}
                 GROUP BY NPI
             ) rx
-            ON CAST(op.physician_id AS STRING) = CAST(rx.NPI AS STRING)
+            ON op.physician_id = rx.NPI
             WHERE COALESCE(op_total, 0) > 10000 OR COALESCE(rx_cost, 0) > 1000000
         )
         SELECT *
@@ -879,7 +879,7 @@ class BigQueryAnalyzer:
         risk_distribution_query = f"""
         WITH provider_risk AS (
             SELECT
-                COALESCE(CAST(op.physician_id AS STRING), CAST(rx.NPI AS STRING)) as provider_id,
+                COALESCE(op.physician_id, rx.NPI) as provider_id,
                 COALESCE(op_total, 0) as payment_total,
                 COALESCE(rx_cost, 0) as rx_total,
                 COALESCE(op_percentile, 0) as payment_percentile,
@@ -905,7 +905,7 @@ class BigQueryAnalyzer:
                 FROM {self.rx_summary}
                 GROUP BY NPI
             ) rx
-            ON CAST(op.physician_id AS STRING) = CAST(rx.NPI AS STRING)
+            ON op.physician_id = rx.NPI
         )
         SELECT
             risk_level,

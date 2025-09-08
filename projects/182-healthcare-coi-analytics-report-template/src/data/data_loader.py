@@ -221,19 +221,34 @@ class DataLoader:
         
         logger.info(f"Uploading {len(df):,} NPIs to BigQuery table: {table_id}")
         
+        # Determine available columns and create appropriate schema
+        schema_fields = [bigquery.SchemaField("NPI", "STRING")]
+        upload_columns = ['NPI']
+        
+        # Check for name columns (different formats)
+        if 'FULL_NAME' in df.columns:
+            schema_fields.append(bigquery.SchemaField("FULL_NAME", "STRING"))
+            upload_columns.append('FULL_NAME')
+        elif 'EMPLOYEE NAME' in df.columns:
+            # Map EMPLOYEE NAME to FULL_NAME for consistency
+            df['FULL_NAME'] = df['EMPLOYEE NAME']
+            schema_fields.append(bigquery.SchemaField("FULL_NAME", "STRING"))
+            upload_columns.append('FULL_NAME')
+        
+        # Check for specialty column
+        if 'PRIMARY_SPECIALTY' in df.columns:
+            schema_fields.append(bigquery.SchemaField("PRIMARY_SPECIALTY", "STRING"))
+            upload_columns.append('PRIMARY_SPECIALTY')
+        
         # Configure upload job
         job_config = bigquery.LoadJobConfig(
             write_disposition="WRITE_TRUNCATE",  # Replace table if exists
-            schema=[
-                bigquery.SchemaField("NPI", "STRING"),
-                bigquery.SchemaField("FULL_NAME", "STRING"),
-                bigquery.SchemaField("PRIMARY_SPECIALTY", "STRING"),
-            ]
+            schema=schema_fields
         )
         
         # Upload to BigQuery
         job = self.bq.client.load_table_from_dataframe(
-            df[['NPI', 'FULL_NAME', 'PRIMARY_SPECIALTY']] if 'FULL_NAME' in df.columns else df[['NPI']],
+            df[upload_columns],
             table_id,
             job_config=job_config
         )
@@ -339,7 +354,7 @@ class DataLoader:
         query = f"""
         WITH provider_payments AS (
             SELECT 
-                CAST(covered_recipient_npi AS STRING) as physician_id,
+                covered_recipient_npi as physician_id,
                 covered_recipient_first_name as first_name,
                 covered_recipient_last_name as last_name,
                 physician as provider_type,
@@ -356,7 +371,7 @@ class DataLoader:
                 EXISTS (
                     SELECT 1 
                     FROM `{self.config['bigquery']['project_id']}.{temp_dataset}.{npi_table}` npi
-                    WHERE CAST(op.covered_recipient_npi AS STRING) = npi.NPI
+                    WHERE op.covered_recipient_npi = CAST(npi.NPI AS INT64)
                 )
                 AND program_year BETWEEN {start_year} AND {end_year}
                 AND total_amount_of_payment_usdollars > 0
@@ -637,7 +652,7 @@ class DataLoader:
                 `{self.config['bigquery']['project_id']}.{self.config['bigquery']['dataset']}.{self.config['bigquery']['tables']['prescriptions']}` rx
             INNER JOIN 
                 `{self.config['bigquery']['project_id']}.{temp_dataset}.{npi_table}` npi
-                ON CAST(rx.NPI AS STRING) = npi.NPI
+                ON rx.NPI = CAST(npi.NPI AS INT64)
             WHERE 
                 rx.CLAIM_YEAR BETWEEN {start_year} AND {end_year}
                 AND rx.PRESCRIPTIONS > 0
@@ -645,7 +660,7 @@ class DataLoader:
         ),
         provider_info AS (
             SELECT 
-                CAST(po.NPI AS STRING) AS NPI,
+                po.NPI,
                 po.CREDENTIAL,
                 po.SPECIALTY_PRIMARY,
                 CASE 
@@ -654,10 +669,10 @@ class DataLoader:
                     WHEN po.CREDENTIAL IN ('PA', 'PA-C') THEN 'Physician Assistant'
                     ELSE 'Other'
                 END AS provider_type_category
-            FROM `{self.config['bigquery']['project_id']}.{self.config['bigquery']['dataset']}.PHYSICIANS_OVERVIEW` po
+            FROM `{self.config['bigquery']['project_id']}.{self.config['bigquery']['dataset']}.PHYSICIANS_OVERVIEW_optimized` po
             INNER JOIN 
                 `{self.config['bigquery']['project_id']}.{temp_dataset}.{npi_table}` npi
-                ON CAST(po.NPI AS STRING) = npi.NPI
+                ON po.NPI = CAST(npi.NPI AS INT64)
         )
         SELECT 
             r.NPI,
@@ -675,7 +690,7 @@ class DataLoader:
             SUM(r.unique_patients) as total_beneficiaries,
             AVG(r.avg_cost_per_rx) as avg_cost_per_claim
         FROM provider_rx r
-        LEFT JOIN provider_info p ON CAST(r.NPI AS STRING) = CAST(p.NPI AS STRING)
+        LEFT JOIN provider_info p ON r.NPI = p.NPI
         GROUP BY 1,2,3,4,5,6,7,8,9
         """
         
@@ -935,7 +950,7 @@ class DataLoader:
         query = f"""
         CREATE OR REPLACE TABLE {monthly_table_path} AS
         SELECT 
-            CAST(covered_recipient_npi AS STRING) as physician_id,
+            covered_recipient_npi as physician_id,
             program_year as payment_year,
             EXTRACT(MONTH FROM CAST(date_of_payment AS DATE)) as payment_month,
             nature_of_payment_or_transfer_of_value as payment_category,
@@ -950,7 +965,7 @@ class DataLoader:
             AND EXISTS (
                 SELECT 1 
                 FROM `{self.config['bigquery']['project_id']}.{temp_dataset}.{npi_table}` npi
-                WHERE CAST(covered_recipient_npi AS STRING) = npi.NPI
+                WHERE covered_recipient_npi = CAST(npi.NPI AS INT64)
             )
         GROUP BY 1,2,3,4,5,6
         """

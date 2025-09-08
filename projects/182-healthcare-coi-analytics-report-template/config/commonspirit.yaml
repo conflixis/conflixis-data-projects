@@ -18,7 +18,7 @@ analysis:
     payment_tiers: true
 bigquery:
   project_id: data-analytics-389803
-  dataset: conflixis_agent
+  dataset: conflixis_data_projects
   temp_dataset: temp
   tables:
     open_payments: op_general_all_aggregate_static
