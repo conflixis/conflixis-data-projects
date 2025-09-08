@@ -1,0 +1,51 @@
+# === Engine & fonts ===
+pdf-engine: xelatex
+variables:
+  mainfont: "DejaVu Sans"
+  sansfont: "TeX Gyre Heros"
+  monofont: "Fira Code"
+  fontsize: 11pt
+  linestretch: 1.35  # More breathing room between lines
+
+# === Page layout ===
+variables:
+  geometry:
+    - top=1.5in
+    - bottom=1.5in
+    - left=1.1in
+    - right=1.1in
+    - headheight=35pt
+    - headsep=25pt
+    - footskip=35pt
+    - includehead
+    - includefoot
+  colorlinks: true
+  linkcolor: ConflixisBlue
+  urlcolor: ConflixisBlue
+  toccolor: ConflixisGreen
+  citecolor: ConflixisGreen
+
+# === Structure ===
+toc: true
+toc-depth: 2
+number-sections: true  # Keep section numbers for navigation
+highlight-style: tango  # Use a supported style
+
+# === Tables ===
+columns: 90  # Wider tables
+
+# === Header / Footer (fancyhdr via header-includes) ===
+include-in-header:
+  - header-enhanced.tex
+
+# === Metadata ===
+metadata:
+  title: "Northwell Health — Healthcare Financial Relationships Analysis"
+  subtitle: "Comprehensive Conflict of Interest Investigation Report"
+  author: "Conflixis Data Analytics Division"
+  date: "September 2, 2025"
+  abstract: |
+    This investigative report analyzes pharmaceutical industry financial relationships
+    with healthcare providers at Northwell Health, examining $114.7 million in payments
+    to 11,102 providers from 2020-2024. The analysis identifies patterns of influence,
+    risk concentrations, and provides actionable compliance recommendations.

@@ -1,0 +1,128 @@
+% === Packages ===
+\usepackage{fontspec}
+\usepackage{fancyhdr}
+\usepackage{xcolor}
+\usepackage{graphicx}
+\usepackage{lastpage}
+\usepackage{etoolbox}
+\usepackage{titlesec}
+\usepackage{tcolorbox}
+\usepackage{tikz}
+\usepackage{pagecolor}
+\usepackage{afterpage}
+\usepackage{hyperref}
+\usepackage{geometry}
+
+% === Color Definitions ===
+% Conflixis brand colors
+\definecolor{ConflixisGreen}{HTML}{0E320D}
+\definecolor{ConflixisGold}{HTML}{E7AF62}
+\definecolor{ConflixisOrange}{HTML}{EF8E73}
+\definecolor{ConflixisAqua}{HTML}{85B8A5}
+\definecolor{ConflixisCream}{HTML}{FFFBE8}
+\definecolor{ConflixisGray}{HTML}{6B6B6B}
+\definecolor{ConflixisLightGray}{HTML}{F5F5F5}
+\definecolor{ConflixisBlue}{HTML}{4C94ED}
+\definecolor{ConflixisDarkGreen}{HTML}{0A2819}
+
+% === Section Formatting ===
+% Make sections more visually appealing
+\titleformat{\section}
+  {\Large\bfseries\color{ConflixisGreen}}
+  {\thesection}
+  {1em}
+  {}
+
+\titleformat{\subsection}
+  {\large\bfseries\color{ConflixisDarkGreen}}
+  {\thesubsection}
+  {1em}
+  {}
+
+\titleformat{\subsubsection}
+  {\normalsize\bfseries\color{ConflixisBlue}}
+  {\thesubsubsection}
+  {1em}
+  {}
+
+% === Header & Footer Styling ===
+\pagestyle{fancy}
+\fancyhf{}
+
+% --- Header ---
+\fancyhead[L]{\small\textcolor{ConflixisGreen}{\leftmark}}
+\fancyhead[C]{\small\textcolor{ConflixisGray}{Healthcare COI Analysis}}
+\fancyhead[R]{
+  \raisebox{-0.2\height}{
+    \includegraphics[height=10mm]{/home/incent/conflixis-data-projects/docs/design-system/conflixis-design-system/assets/logos/conflixis-logo.png}
+  }
+}
+
+% --- Footer ---
+\fancyfoot[L]{\small\textcolor{ConflixisGray}{\textit{Conflixis Data Analytics} | Confidential}}
+\fancyfoot[C]{\small\textcolor{ConflixisGray}{Northwell Health Analysis}}
+\fancyfoot[R]{\small\textcolor{ConflixisGray}{Page \thepage\ of \pageref{LastPage}}}
+
+% --- Line Separators with gradient effect ---
+\renewcommand{\headrulewidth}{1.5pt}
+\renewcommand{\footrulewidth}{0.5pt}
+
+% Color the header and footer rules
+\renewcommand{\headrule}{{\color{ConflixisGold}\hrule height \headrulewidth}}
+\renewcommand{\footrule}{{\color{ConflixisLightGray}\hrule height \footrulewidth}}
+
+% === Title Page Style ===
+\fancypagestyle{plain}{%
+  \fancyhf{}%
+  \fancyfoot[C]{\small\textcolor{ConflixisGray}{Page \thepage\ of \pageref{LastPage}}}%
+  \renewcommand{\headrulewidth}{0pt}%
+  \renewcommand{\footrulewidth}{0.5pt}%
+}
+
+% === Table Styling ===
+\tcbuselibrary{skins,breakable}
+
+% Style for better looking tables
+\renewcommand{\arraystretch}{1.3}
+
+% === Hyperlink Styling ===
+\hypersetup{
+  colorlinks=true,
+  linkcolor=ConflixisBlue,
+  filecolor=ConflixisBlue,
+  urlcolor=ConflixisBlue,
+  citecolor=ConflixisGreen,
+  pdftitle={Northwell Health COI Analysis},
+  pdfauthor={Conflixis Data Analytics},
+  pdfsubject={Healthcare Financial Relationships Analysis},
+  pdfkeywords={COI, Healthcare, Pharmaceutical, Payments, Analysis}
+}
+
+% === Quote/Callout Box Environment ===
+\newtcolorbox{calloutbox}{
+  colback=ConflixisLightGray!10,
+  colframe=ConflixisGold,
+  boxrule=1pt,
+  arc=4pt,
+  left=10pt,
+  right=10pt,
+  top=5pt,
+  bottom=5pt,
+  breakable
+}
+
+% === Executive Summary Box ===
+\newtcolorbox{execsummary}{
+  colback=ConflixisCream!30,
+  colframe=ConflixisGreen,
+  boxrule=2pt,
+  arc=4pt,
+  left=15pt,
+  right=15pt,
+  top=10pt,
+  bottom=10pt,
+  breakable,
+  title={\large\bfseries Executive Summary},
+  coltitle=white,
+  colbacktitle=ConflixisGreen
+}

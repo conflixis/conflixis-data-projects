@@ -1,0 +1,44 @@
+# === Engine & fonts ===
+pdf-engine: xelatex
+variables:
+  mainfont: "DejaVu Sans"
+  sansfont: "TeX Gyre Heros"
+  monofont: "Fira Code"
+  fontsize: 11pt
+  linestretch: 1.2
+
+# === Page layout ===
+# generous bottom margin to fit footer text + page numbers
+variables:
+  geometry:
+    - top=1in
+    - bottom=1.1in
+    - left=1in
+    - right=1in
+    - headheight=20pt
+    - includehead
+    - includefoot
+  colorlinks: true
+  linkcolor: ConflixisOrange
+  urlcolor: ConflixisOrange
+  toccolor: ConflixisGreen
+
+# === Structure ===
+toc: true
+toc-depth: 3
+number-sections: true
+highlight-style: tango
+
+# === Tables ===
+# (Pandoc uses longtable/booktabs automatically; keep widths sensible)
+columns: 80
+
+# === Header / Footer (fancyhdr via header-includes) ===
+include-in-header:
+  - header.tex
+
+# === Metadata fallbacks (can be overridden by MD front matter / -M) ===
+metadata:
+  title: "Regional Academic Medical Center — Conflict of Interest Analysis"
+  author: "Conflixis Data Analytics Team"
+  date: "August 31, 2025"

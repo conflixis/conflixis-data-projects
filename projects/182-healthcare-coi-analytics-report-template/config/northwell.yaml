@@ -1,0 +1,198 @@
+# Healthcare COI Analytics Configuration - Northwell Health
+# Configuration for Northwell Health analysis
+
+health_system:
+  name: "Northwell Health"
+  short_name: "northwell"
+  npi_file: "data/inputs/northwell-npis.csv"
+  
+analysis:
+  start_year: 2020
+  end_year: 2024
+  
+  # Include specific analysis components
+  components:
+    open_payments: true
+    prescriptions: true
+    correlations: true
+    risk_assessment: true
+    provider_vulnerability: true
+    consecutive_years: true
+    payment_tiers: true
+
+# BigQuery Configuration
+bigquery:
+  project_id: "data-analytics-389803"
+  dataset: "conflixis_agent"
+  temp_dataset: "temp"  # Temporary dataset for intermediate tables
+  
+  # Table names
+  tables:
+    open_payments: "op_general_all_aggregate_static"
+    prescriptions: "PHYSICIAN_RX_2020_2024"  # Medicare Part D claims data
+    provider_npis: "northwell_provider_npis"  # Will be created
+  
+  # Query limits
+  max_rows: 1000000
+  timeout_seconds: 600
+
+# Risk Assessment Thresholds
+thresholds:
+  # Payment thresholds
+  payment:
+    high_single_payment: 5000
+    high_annual_total: 10000
+    suspicious_roi: 1000  # ROI > 1000x is flagged
+    
+  # Prescription thresholds  
+  prescription:
+    high_volume_percentile: 90  # Top 10% by volume
+    high_cost_percentile: 90    # Top 10% by cost
+    
+  # Risk scores (0-100)
+  risk_score:
+    low: 30
+    medium: 60
+    high: 80
+    critical: 90
+
+# Payment Categories to Analyze
+payment_categories:
+  - "Compensation for services other than consulting"
+  - "Consulting Fee"
+  - "Food and Beverage"
+  - "Travel and Lodging"
+  - "Education"
+  - "Gift"
+  - "Grant"
+  - "Honoraria"
+  - "Royalty or License"
+  - "Current or prospective ownership or investment interest"
+
+# High-Risk Drugs to Focus On
+focus_drugs:
+  - name: "OZEMPIC"
+    category: "GLP-1 Agonist"
+    high_cost: true
+    
+  - name: "HUMIRA"
+    category: "Biologic"
+    high_cost: true
+    
+  - name: "ELIQUIS"
+    category: "Anticoagulant"
+    high_cost: true
+    
+  - name: "JARDIANCE"
+    category: "SGLT2 Inhibitor"
+    high_cost: true
+    
+  - name: "TRULICITY"
+    category: "GLP-1 Agonist"
+    high_cost: true
+    
+  - name: "ENBREL"
+    category: "Biologic"
+    high_cost: true
+    
+  - name: "STELARA"
+    category: "Biologic"
+    high_cost: true
+    
+  - name: "XARELTO"
+    category: "Anticoagulant"
+    high_cost: true
+    
+  - name: "TRELEGY"
+    category: "COPD"
+    high_cost: true
+    
+  - name: "KRYSTEXXA"
+    category: "Gout"
+    high_cost: true
+
+# Provider Type Analysis
+provider_types:
+  physicians:
+    - "MD"
+    - "DO"
+  mid_level:
+    - "NP"
+    - "PA"
+  other:
+    - "DPM"
+    - "OD"
+    - "DDS"
+    - "PharmD"
+
+# Report Configuration
+reports:
+  # Output formats
+  output_formats:
+    - markdown
+    - pdf
+    - excel
+    
+  # Report sections to include
+  sections:
+    - executive_summary
+    - payment_overview
+    - prescription_patterns
+    - correlation_analysis
+    - provider_vulnerability
+    - risk_assessment
+    - consecutive_years
+    - payment_tiers
+    - recommendations
+    - appendix
+    
+  # Visualization settings
+  visualizations:
+    generate_charts: true
+    chart_format: "png"
+    chart_dpi: 300
+    color_scheme: "conflixis"  # Uses Conflixis brand colors
+    
+  # Report metadata
+  metadata:
+    author: "Conflixis Data Analytics Team"
+    department: "Provider Intelligence"
+    confidentiality: "Confidential - Internal Use Only"
+    
+# Email Configuration (optional)
+notifications:
+  enabled: false
+  smtp_server: "smtp.gmail.com"
+  smtp_port: 587
+  from_email: "analytics@conflixis.com"
+  to_emails:
+    - "team@conflixis.com"
+  
+# Logging Configuration
+logging:
+  level: "INFO"  # DEBUG, INFO, WARNING, ERROR
+  format: "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
+  file: "logs/analysis.log"
+  
+# Performance Settings
+performance:
+  parallel_processing: true
+  max_workers: 4
+  chunk_size: 10000
+  cache_results: true
+  cache_dir: "data/.cache"
+
+# Data Quality Checks
+quality_checks:
+  validate_npis: true
+  check_duplicates: true
+  verify_specialties: true
+  minimum_providers: 100  # Warn if fewer providers than this
+  
+# Advanced Settings
+advanced:
+  use_sampling: false  # Set to true for testing with subset of data
+  sample_size: 1000
+  debug_mode: false
+  save_intermediate_results: true
+  compression: "gzip"  # For intermediate files

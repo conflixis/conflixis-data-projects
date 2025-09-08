@@ -1,0 +1,47 @@
+% === Packages ===
+\usepackage{fontspec}
+\usepackage{fancyhdr}
+\usepackage{xcolor}
+\usepackage{graphicx}
+\usepackage{lastpage} % Required for "Page N of Total"
+\usepackage{etoolbox} % For patching commands
+
+% === Color Definitions ===
+% Conflixis brand colors
+\definecolor{ConflixisGreen}{HTML}{0E320D}
+\definecolor{ConflixisGold}{HTML}{E7AF62}
+\definecolor{ConflixisOrange}{HTML}{EF8E73}
+\definecolor{ConflixisAqua}{HTML}{85B8A5}
+\definecolor{ConflixisCream}{HTML}{FFFBE8}
+\definecolor{ConflixisGray}{HTML}{E2DFDC}
+
+% === Header & Footer Styling ===
+\pagestyle{fancy}
+\fancyhf{} % Clear all header and footer fields
+
+% --- Header ---
+\fancyhead[L]{\textcolor{ConflixisGreen}{\leftmark}}
+\fancyhead[R]{\includegraphics[height=10mm]{/home/incent/conflixis-data-projects/src/conversion/template/assets/conflixis-logo.png}}
+
+% --- Footer ---
+\fancyfoot[L]{\textcolor{ConflixisGray}{Conflixis Data Analytics | Confidential}}
+\fancyfoot[R]{\textcolor{ConflixisGray}{Page \thepage\ of \pageref{LastPage}}}
+
+% --- Line Separators ---
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\footrulewidth}{0.4pt}
+
+% Patch fancyhdr to color the rules
+\makeatletter
+\patchcmd{\@fancyhead}{\rlap}{\rlap\color{ConflixisGold}}{}{}
+\patchcmd{\@fancyfoot}{\rlap}{\rlap\color{ConflixisGold}}{}{}
+\makeatother
+
+% === Adjustments for Title Page ===
+\fancypagestyle{plain}{%
+  \fancyhf{}%
+  \fancyfoot[L]{\textcolor{ConflixisGray}{Conflixis Data Analytics | Confidential}}%
+  \fancyfoot[R]{\textcolor{ConflixisGray}{Page \thepage\ of \pageref{LastPage}}}%
+  \renewcommand{\headrulewidth}{0pt}%
+  \renewcommand{\footrulewidth}{0.4pt}%
+}
