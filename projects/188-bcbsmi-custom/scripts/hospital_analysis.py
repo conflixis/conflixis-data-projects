@@ -103,21 +103,42 @@ class HospitalAnalyzer:
             SELECT DISTINCT CAST(NPI AS INT64) as NPI 
             FROM `data-analytics-389803.temp.bcbsmi_provider_npis`
         ),
-        hospital_payments AS (
+        -- Get PRIMARY facility for each provider (using rank by affiliation)
+        primary_facilities AS (
             SELECT 
+                f.NPI,
                 f.AFFILIATED_NAME as Facility_Name,
                 f.AFFILIATED_HQ_CITY as City,
-                f.NPI,
-                SUM(op.total_amount_of_payment_usdollars) as provider_payments,
-                COUNT(DISTINCT op.record_id) as payment_count,
-                COUNT(DISTINCT op.applicable_manufacturer_or_applicable_gpo_making_payment_name) as unique_manufacturers
+                ROW_NUMBER() OVER (PARTITION BY f.NPI ORDER BY f.AFFILIATED_NAME) as facility_rank
             FROM `data-analytics-389803.conflixis_data_projects.PHYSICIANS_FACILITY_AFFILIATIONS_CURRENT_optimized` f
             INNER JOIN bcbsmi_npis b ON f.NPI = b.NPI
-            LEFT JOIN `data-analytics-389803.conflixis_data_projects.op_general_all_aggregate_static_optimized` op
-                ON f.NPI = op.covered_recipient_npi
-                AND op.program_year BETWEEN 2020 AND 2024
             WHERE f.AFFILIATED_HQ_STATE = 'MI'
-            GROUP BY f.AFFILIATED_NAME, f.AFFILIATED_HQ_CITY, f.NPI
+        ),
+        -- Get payments for BCBSMI providers  
+        provider_payments AS (
+            SELECT 
+                b.NPI,
+                SUM(op.total_amount_of_payment_usdollars) as total_provider_payments,
+                COUNT(DISTINCT op.record_id) as payment_count,
+                COUNT(DISTINCT op.applicable_manufacturer_or_applicable_gpo_making_payment_name) as unique_manufacturers
+            FROM bcbsmi_npis b
+            LEFT JOIN `data-analytics-389803.conflixis_data_projects.op_general_all_aggregate_static_optimized` op
+                ON b.NPI = op.covered_recipient_npi
+                AND op.program_year BETWEEN 2020 AND 2024
+            GROUP BY b.NPI
+        ),
+        -- Join payments with PRIMARY facility only
+        hospital_payments AS (
+            SELECT 
+                pf.Facility_Name,
+                pf.City,
+                pf.NPI,
+                p.total_provider_payments as provider_payments,
+                p.payment_count,
+                p.unique_manufacturers
+            FROM primary_facilities pf
+            INNER JOIN provider_payments p ON pf.NPI = p.NPI
+            WHERE pf.facility_rank = 1  -- PRIMARY facility only
         )
         SELECT 
             Facility_Name,
@@ -150,23 +171,34 @@ class HospitalAnalyzer:
             SELECT DISTINCT CAST(NPI AS INT64) as NPI 
             FROM `data-analytics-389803.temp.bcbsmi_provider_npis`
         ),
-        hospital_prescriptions AS (
+        -- Get PRIMARY facility for each provider
+        primary_facilities AS (
             SELECT 
+                f.NPI,
                 f.AFFILIATED_NAME as Facility_Name,
                 f.AFFILIATED_HQ_CITY as City,
+                ROW_NUMBER() OVER (PARTITION BY f.NPI ORDER BY f.AFFILIATED_NAME) as facility_rank
+            FROM `data-analytics-389803.conflixis_data_projects.PHYSICIANS_FACILITY_AFFILIATIONS_CURRENT_optimized` f
+            INNER JOIN bcbsmi_npis b ON f.NPI = b.NPI
+            WHERE f.AFFILIATED_HQ_STATE = 'MI'
+        ),
+        -- Get prescriptions for providers at their PRIMARY facility
+        hospital_prescriptions AS (
+            SELECT 
+                pf.Facility_Name,
+                pf.City,
                 rx.BRAND_NAME,
                 SUM(rx.PAYMENTS) as total_cost,
                 SUM(rx.PRESCRIPTIONS) as total_prescriptions,
-                COUNT(DISTINCT f.NPI) as prescribing_providers
-            FROM `data-analytics-389803.conflixis_data_projects.PHYSICIANS_FACILITY_AFFILIATIONS_CURRENT_optimized` f
-            INNER JOIN bcbsmi_npis b ON f.NPI = b.NPI
+                COUNT(DISTINCT pf.NPI) as prescribing_providers
+            FROM primary_facilities pf
             INNER JOIN `data-analytics-389803.conflixis_data_projects.PHYSICIAN_RX_2020_2024_optimized` rx
-                ON f.NPI = rx.NPI
-            WHERE f.AFFILIATED_HQ_STATE = 'MI'
+                ON pf.NPI = rx.NPI
+            WHERE pf.facility_rank = 1  -- PRIMARY facility only
                 AND rx.CLAIM_YEAR BETWEEN 2020 AND 2024
                 AND rx.BRAND_NAME IN ('ELIQUIS', 'HUMIRA', 'OZEMPIC', 'TRULICITY', 
                                       'JARDIANCE', 'XARELTO', 'ENBREL', 'STELARA')
-            GROUP BY f.AFFILIATED_NAME, f.AFFILIATED_HQ_CITY, rx.BRAND_NAME
+            GROUP BY pf.Facility_Name, pf.City, rx.BRAND_NAME
         )
         SELECT 
             Facility_Name,
@@ -196,54 +228,85 @@ class HospitalAnalyzer:
             SELECT DISTINCT CAST(NPI AS INT64) as NPI 
             FROM `data-analytics-389803.temp.bcbsmi_provider_npis`
         ),
-        city_payments AS (
+        -- Get PRIMARY facility for each provider
+        primary_facilities AS (
             SELECT 
+                f.NPI,
+                f.AFFILIATED_NAME as Facility_Name,
                 f.AFFILIATED_HQ_CITY as City,
-                COUNT(DISTINCT f.NPI) as total_providers,
-                COUNT(DISTINCT b.NPI) as bcbsmi_providers,
-                COUNT(DISTINCT op.covered_recipient_npi) as providers_with_payments,
-                SUM(op.total_amount_of_payment_usdollars) as total_payments,
-                COUNT(DISTINCT op.record_id) as total_transactions,
-                COUNT(DISTINCT f.AFFILIATED_NAME) as hospital_count
-            FROM `data-analytics-389803.conflixis_data_projects.PHYSICIANS_FACILITY_AFFILIATIONS_CURRENT_optimized` f
-            LEFT JOIN bcbsmi_npis b ON f.NPI = b.NPI
-            LEFT JOIN `data-analytics-389803.conflixis_data_projects.op_general_all_aggregate_static_optimized` op
-                ON f.NPI = op.covered_recipient_npi
-                AND op.program_year BETWEEN 2020 AND 2024
-            WHERE f.AFFILIATED_HQ_STATE = 'MI'
-            GROUP BY f.AFFILIATED_HQ_CITY
-        ),
-        city_rx AS (
-            SELECT 
-                f.AFFILIATED_HQ_CITY as City,
-                SUM(rx.PAYMENTS) as total_rx_cost,
-                SUM(rx.PRESCRIPTIONS) as total_rx_count
+                ROW_NUMBER() OVER (PARTITION BY f.NPI ORDER BY f.AFFILIATED_NAME) as facility_rank
             FROM `data-analytics-389803.conflixis_data_projects.PHYSICIANS_FACILITY_AFFILIATIONS_CURRENT_optimized` f
             INNER JOIN bcbsmi_npis b ON f.NPI = b.NPI
-            INNER JOIN `data-analytics-389803.conflixis_data_projects.PHYSICIAN_RX_2020_2024_optimized` rx
-                ON f.NPI = rx.NPI
             WHERE f.AFFILIATED_HQ_STATE = 'MI'
-                AND rx.CLAIM_YEAR BETWEEN 2020 AND 2024
+        ),
+        -- Get provider payments
+        provider_payments AS (
+            SELECT 
+                b.NPI,
+                SUM(op.total_amount_of_payment_usdollars) as total_payments,
+                COUNT(DISTINCT op.record_id) as transactions
+            FROM bcbsmi_npis b
+            LEFT JOIN `data-analytics-389803.conflixis_data_projects.op_general_all_aggregate_static_optimized` op
+                ON b.NPI = op.covered_recipient_npi
+                AND op.program_year BETWEEN 2020 AND 2024
+            GROUP BY b.NPI
+        ),
+        -- Get provider prescriptions
+        provider_rx AS (
+            SELECT 
+                b.NPI,
+                SUM(rx.PAYMENTS) as total_rx_cost,
+                SUM(rx.PRESCRIPTIONS) as total_rx_count
+            FROM bcbsmi_npis b
+            INNER JOIN `data-analytics-389803.conflixis_data_projects.PHYSICIAN_RX_2020_2024_optimized` rx
+                ON b.NPI = rx.NPI
+            WHERE rx.CLAIM_YEAR BETWEEN 2020 AND 2024
                 AND rx.BRAND_NAME IN ('ELIQUIS', 'HUMIRA', 'OZEMPIC', 'TRULICITY', 
                                       'JARDIANCE', 'XARELTO', 'ENBREL', 'STELARA')
-            GROUP BY f.AFFILIATED_HQ_CITY
+            GROUP BY b.NPI
+        ),
+        -- Aggregate by city using PRIMARY facilities only
+        city_aggregates AS (
+            SELECT 
+                pf.City,
+                COUNT(DISTINCT pf.NPI) as bcbsmi_providers,
+                COUNT(DISTINCT CASE WHEN pp.total_payments > 0 THEN pf.NPI END) as providers_with_payments,
+                SUM(pp.total_payments) as total_payments,
+                SUM(pp.transactions) as total_transactions,
+                SUM(pr.total_rx_cost) as total_rx_cost,
+                SUM(pr.total_rx_count) as total_rx_count,
+                COUNT(DISTINCT pf.Facility_Name) as hospital_count
+            FROM primary_facilities pf
+            LEFT JOIN provider_payments pp ON pf.NPI = pp.NPI
+            LEFT JOIN provider_rx pr ON pf.NPI = pr.NPI
+            WHERE pf.facility_rank = 1  -- PRIMARY facility only
+            GROUP BY pf.City
+        ),
+        -- Get total providers in each city (not just BCBSMI)
+        total_providers AS (
+            SELECT 
+                AFFILIATED_HQ_CITY as City,
+                COUNT(DISTINCT NPI) as total_providers
+            FROM `data-analytics-389803.conflixis_data_projects.PHYSICIANS_FACILITY_AFFILIATIONS_CURRENT_optimized`
+            WHERE AFFILIATED_HQ_STATE = 'MI'
+            GROUP BY AFFILIATED_HQ_CITY
         )
         SELECT 
-            cp.City,
-            cp.total_providers,
-            cp.bcbsmi_providers,
-            cp.providers_with_payments,
-            ROUND(cp.providers_with_payments * 100.0 / NULLIF(cp.total_providers, 0), 2) as payment_penetration_pct,
-            cp.total_payments,
-            ROUND(cp.total_payments / NULLIF(cp.providers_with_payments, 0), 2) as avg_payment,
-            cp.total_transactions,
-            COALESCE(cr.total_rx_cost, 0) as total_rx_cost,
-            COALESCE(cr.total_rx_count, 0) as total_rx_count,
-            cp.hospital_count
-        FROM city_payments cp
-        LEFT JOIN city_rx cr ON cp.City = cr.City
-        WHERE cp.total_providers >= 10
-        ORDER BY cp.total_payments DESC
+            ca.City,
+            tp.total_providers,
+            ca.bcbsmi_providers,
+            ca.providers_with_payments,
+            ROUND(ca.providers_with_payments * 100.0 / NULLIF(ca.bcbsmi_providers, 0), 2) as payment_penetration_pct,
+            ca.total_payments,
+            ROUND(ca.total_payments / NULLIF(ca.providers_with_payments, 0), 2) as avg_payment,
+            ca.total_transactions,
+            COALESCE(ca.total_rx_cost, 0) as total_rx_cost,
+            COALESCE(ca.total_rx_count, 0) as total_rx_count,
+            ca.hospital_count
+        FROM city_aggregates ca
+        LEFT JOIN total_providers tp ON ca.City = tp.City
+        WHERE ca.bcbsmi_providers >= 10
+        ORDER BY ca.total_payments DESC
         """
         
         print("Analyzing city-level patterns...")
