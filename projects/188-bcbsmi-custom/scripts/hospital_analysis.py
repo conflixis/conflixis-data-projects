@@ -103,21 +103,42 @@ class HospitalAnalyzer:
             SELECT DISTINCT CAST(NPI AS INT64) as NPI 
             FROM `data-analytics-389803.temp.bcbsmi_provider_npis`
         ),
-        hospital_payments AS (
+        -- Get PRIMARY facility for each provider (using rank by affiliation)
+        primary_facilities AS (
             SELECT 
+                f.NPI,
                 f.AFFILIATED_NAME as Facility_Name,
                 f.AFFILIATED_HQ_CITY as City,
-                f.NPI,
-                SUM(op.total_amount_of_payment_usdollars) as provider_payments,
-                COUNT(DISTINCT op.record_id) as payment_count,
-                COUNT(DISTINCT op.applicable_manufacturer_or_applicable_gpo_making_payment_name) as unique_manufacturers
+                ROW_NUMBER() OVER (PARTITION BY f.NPI ORDER BY f.AFFILIATED_NAME) as facility_rank
             FROM `data-analytics-389803.conflixis_data_projects.PHYSICIANS_FACILITY_AFFILIATIONS_CURRENT_optimized` f
             INNER JOIN bcbsmi_npis b ON f.NPI = b.NPI
-            LEFT JOIN `data-analytics-389803.conflixis_data_projects.op_general_all_aggregate_static_optimized` op
-                ON f.NPI = op.covered_recipient_npi
-                AND op.program_year BETWEEN 2020 AND 2024
             WHERE f.AFFILIATED_HQ_STATE = 'MI'
-            GROUP BY f.AFFILIATED_NAME, f.AFFILIATED_HQ_CITY, f.NPI
+        ),
+        -- Get payments for BCBSMI providers  
+        provider_payments AS (
+            SELECT 
+                b.NPI,
+                SUM(op.total_amount_of_payment_usdollars) as total_provider_payments,
+                COUNT(DISTINCT op.record_id) as payment_count,
+                COUNT(DISTINCT op.applicable_manufacturer_or_applicable_gpo_making_payment_name) as unique_manufacturers
+            FROM bcbsmi_npis b
+            LEFT JOIN `data-analytics-389803.conflixis_data_projects.op_general_all_aggregate_static_optimized` op
+                ON b.NPI = op.covered_recipient_npi
+                AND op.program_year BETWEEN 2020 AND 2024
+            GROUP BY b.NPI
+        ),
+        -- Join payments with PRIMARY facility only
+        hospital_payments AS (
+            SELECT 
+                pf.Facility_Name,
+                pf.City,
+                pf.NPI,
+                p.total_provider_payments as provider_payments,
+                p.payment_count,
+                p.unique_manufacturers
+            FROM primary_facilities pf
+            INNER JOIN provider_payments p ON pf.NPI = p.NPI
+            WHERE pf.facility_rank = 1  -- PRIMARY facility only
         )
         SELECT 
             Facility_Name,
@@ -150,23 +171,34 @@ class HospitalAnalyzer:
             SELECT DISTINCT CAST(NPI AS INT64) as NPI 
             FROM `data-analytics-389803.temp.bcbsmi_provider_npis`
         ),
-        hospital_prescriptions AS (
+        -- Get PRIMARY facility for each provider
+        primary_facilities AS (
             SELECT 
+                f.NPI,
                 f.AFFILIATED_NAME as Facility_Name,
                 f.AFFILIATED_HQ_CITY as City,
+                ROW_NUMBER() OVER (PARTITION BY f.NPI ORDER BY f.AFFILIATED_NAME) as facility_rank
+            FROM `data-analytics-389803.conflixis_data_projects.PHYSICIANS_FACILITY_AFFILIATIONS_CURRENT_optimized` f
+            INNER JOIN bcbsmi_npis b ON f.NPI = b.NPI
+            WHERE f.AFFILIATED_HQ_STATE = 'MI'
+        ),
+        -- Get prescriptions for providers at their PRIMARY facility
+        hospital_prescriptions AS (
+            SELECT 
+                pf.Facility_Name,
+                pf.City,
                 rx.BRAND_NAME,
                 SUM(rx.PAYMENTS) as total_cost,
                 SUM(rx.PRESCRIPTIONS) as total_prescriptions,
-                COUNT(DISTINCT f.NPI) as prescribing_providers
-            FROM `data-analytics-389803.conflixis_data_projects.PHYSICIANS_FACILITY_AFFILIATIONS_CURRENT_optimized` f
-            INNER JOIN bcbsmi_npis b ON f.NPI = b.NPI
+                COUNT(DISTINCT pf.NPI) as prescribing_providers
+            FROM primary_facilities pf
             INNER JOIN `data-analytics-389803.conflixis_data_projects.PHYSICIAN_RX_2020_2024_optimized` rx
-                ON f.NPI = rx.NPI
-            WHERE f.AFFILIATED_HQ_STATE = 'MI'
+                ON pf.NPI = rx.NPI
+            WHERE pf.facility_rank = 1  -- PRIMARY facility only
                 AND rx.CLAIM_YEAR BETWEEN 2020 AND 2024
                 AND rx.BRAND_NAME IN ('ELIQUIS', 'HUMIRA', 'OZEMPIC', 'TRULICITY', 
                                       'JARDIANCE', 'XARELTO', 'ENBREL', 'STELARA')
-            GROUP BY f.AFFILIATED_NAME, f.AFFILIATED_HQ_CITY, rx.BRAND_NAME
+            GROUP BY pf.Facility_Name, pf.City, rx.BRAND_NAME
         )
         SELECT 
             Facility_Name,
@@ -188,6 +220,153 @@ class HospitalAnalyzer:
         print(f"Analyzed prescriptions for {len(df):,} hospitals")
         self.results['hospital_prescriptions'] = df
         return df
+    
+    def analyze_city_patterns(self) -> pd.DataFrame:
+        """Analyze pharmaceutical influence patterns by city"""
+        query = """
+        WITH bcbsmi_npis AS (
+            SELECT DISTINCT CAST(NPI AS INT64) as NPI 
+            FROM `data-analytics-389803.temp.bcbsmi_provider_npis`
+        ),
+        -- Get PRIMARY facility for each provider
+        primary_facilities AS (
+            SELECT 
+                f.NPI,
+                f.AFFILIATED_NAME as Facility_Name,
+                f.AFFILIATED_HQ_CITY as City,
+                ROW_NUMBER() OVER (PARTITION BY f.NPI ORDER BY f.AFFILIATED_NAME) as facility_rank
+            FROM `data-analytics-389803.conflixis_data_projects.PHYSICIANS_FACILITY_AFFILIATIONS_CURRENT_optimized` f
+            INNER JOIN bcbsmi_npis b ON f.NPI = b.NPI
+            WHERE f.AFFILIATED_HQ_STATE = 'MI'
+        ),
+        -- Get provider payments
+        provider_payments AS (
+            SELECT 
+                b.NPI,
+                SUM(op.total_amount_of_payment_usdollars) as total_payments,
+                COUNT(DISTINCT op.record_id) as transactions
+            FROM bcbsmi_npis b
+            LEFT JOIN `data-analytics-389803.conflixis_data_projects.op_general_all_aggregate_static_optimized` op
+                ON b.NPI = op.covered_recipient_npi
+                AND op.program_year BETWEEN 2020 AND 2024
+            GROUP BY b.NPI
+        ),
+        -- Get provider prescriptions
+        provider_rx AS (
+            SELECT 
+                b.NPI,
+                SUM(rx.PAYMENTS) as total_rx_cost,
+                SUM(rx.PRESCRIPTIONS) as total_rx_count
+            FROM bcbsmi_npis b
+            INNER JOIN `data-analytics-389803.conflixis_data_projects.PHYSICIAN_RX_2020_2024_optimized` rx
+                ON b.NPI = rx.NPI
+            WHERE rx.CLAIM_YEAR BETWEEN 2020 AND 2024
+                AND rx.BRAND_NAME IN ('ELIQUIS', 'HUMIRA', 'OZEMPIC', 'TRULICITY', 
+                                      'JARDIANCE', 'XARELTO', 'ENBREL', 'STELARA')
+            GROUP BY b.NPI
+        ),
+        -- Aggregate by city using PRIMARY facilities only
+        city_aggregates AS (
+            SELECT 
+                pf.City,
+                COUNT(DISTINCT pf.NPI) as bcbsmi_providers,
+                COUNT(DISTINCT CASE WHEN pp.total_payments > 0 THEN pf.NPI END) as providers_with_payments,
+                SUM(pp.total_payments) as total_payments,
+                SUM(pp.transactions) as total_transactions,
+                SUM(pr.total_rx_cost) as total_rx_cost,
+                SUM(pr.total_rx_count) as total_rx_count,
+                COUNT(DISTINCT pf.Facility_Name) as hospital_count
+            FROM primary_facilities pf
+            LEFT JOIN provider_payments pp ON pf.NPI = pp.NPI
+            LEFT JOIN provider_rx pr ON pf.NPI = pr.NPI
+            WHERE pf.facility_rank = 1  -- PRIMARY facility only
+            GROUP BY pf.City
+        ),
+        -- Get total providers in each city (not just BCBSMI)
+        total_providers AS (
+            SELECT 
+                AFFILIATED_HQ_CITY as City,
+                COUNT(DISTINCT NPI) as total_providers
+            FROM `data-analytics-389803.conflixis_data_projects.PHYSICIANS_FACILITY_AFFILIATIONS_CURRENT_optimized`
+            WHERE AFFILIATED_HQ_STATE = 'MI'
+            GROUP BY AFFILIATED_HQ_CITY
+        )
+        SELECT 
+            ca.City,
+            tp.total_providers,
+            ca.bcbsmi_providers,
+            ca.providers_with_payments,
+            ROUND(ca.providers_with_payments * 100.0 / NULLIF(ca.bcbsmi_providers, 0), 2) as payment_penetration_pct,
+            ca.total_payments,
+            ROUND(ca.total_payments / NULLIF(ca.providers_with_payments, 0), 2) as avg_payment,
+            ca.total_transactions,
+            COALESCE(ca.total_rx_cost, 0) as total_rx_cost,
+            COALESCE(ca.total_rx_count, 0) as total_rx_count,
+            ca.hospital_count
+        FROM city_aggregates ca
+        LEFT JOIN total_providers tp ON ca.City = tp.City
+        WHERE ca.bcbsmi_providers >= 10
+        ORDER BY ca.total_payments DESC
+        """
+        
+        print("Analyzing city-level patterns...")
+        df = self.client.query(query).to_dataframe()
+        print(f"Analyzed {len(df):,} Michigan cities")
+        self.results['city_analysis'] = df
+        return df
+    
+    def classify_rural_urban(self) -> pd.DataFrame:
+        """Classify cities as rural or urban and compare patterns"""
+        # Major Michigan cities - population > 50,000
+        major_cities = [
+            'Detroit', 'Grand Rapids', 'Warren', 'Sterling Heights', 'Lansing',
+            'Ann Arbor', 'Flint', 'Dearborn', 'Livonia', 'Troy', 'Westland',
+            'Farmington Hills', 'Kalamazoo', 'Wyoming', 'Southfield', 'Rochester Hills',
+            'Taylor', 'St. Clair Shores', 'Pontiac', 'Royal Oak', 'Novi', 'Battle Creek',
+            'Dearborn Heights', 'East Lansing', 'Roseville', 'Kentwood', 'Saginaw',
+            'Portage', 'Forest Hills', 'Birmingham', 'Holland'
+        ]
+        
+        city_df = self.results.get('city_analysis')
+        if city_df is None:
+            print("Need to run city analysis first")
+            return pd.DataFrame()
+        
+        # Classify cities
+        city_df['area_type'] = city_df['City'].apply(
+            lambda x: 'Urban' if x in major_cities else 'Rural'
+        )
+        
+        # Calculate rural vs urban aggregates
+        rural_urban_comparison = city_df.groupby('area_type').agg({
+            'total_providers': 'sum',
+            'bcbsmi_providers': 'sum',
+            'providers_with_payments': 'sum',
+            'total_payments': 'sum',
+            'total_transactions': 'sum',
+            'total_rx_cost': 'sum',
+            'total_rx_count': 'sum',
+            'hospital_count': 'sum',
+            'City': 'count'
+        }).rename(columns={'City': 'city_count'})
+        
+        # Calculate derived metrics
+        rural_urban_comparison['avg_payment_per_provider'] = (
+            rural_urban_comparison['total_payments'] / 
+            rural_urban_comparison['providers_with_payments']
+        )
+        rural_urban_comparison['payment_penetration_pct'] = (
+            rural_urban_comparison['providers_with_payments'] * 100.0 / 
+            rural_urban_comparison['total_providers']
+        )
+        rural_urban_comparison['avg_rx_cost_per_provider'] = (
+            rural_urban_comparison['total_rx_cost'] / 
+            rural_urban_comparison['bcbsmi_providers']
+        )
+        
+        self.results['rural_urban_comparison'] = rural_urban_comparison
+        self.results['city_classification'] = city_df
+        return rural_urban_comparison
     
     def calculate_risk_scores(self) -> pd.DataFrame:
         """Calculate composite risk scores for hospitals"""
@@ -311,7 +490,7 @@ class HospitalAnalyzer:
     def run_full_analysis(self):
         """Run complete hospital analysis pipeline"""
         print("=" * 80)
-        print("BCBSMI HOSPITAL ANALYSIS")
+        print("BCBSMI HOSPITAL ANALYSIS - ENHANCED WITH CITY & RURAL/URBAN INSIGHTS")
         print("=" * 80)
         
         # Load NPIs
@@ -322,14 +501,40 @@ class HospitalAnalyzer:
         self.analyze_hospital_payments()
         self.analyze_prescription_patterns()
         
+        # NEW: City-level analysis
+        self.analyze_city_patterns()
+        self.classify_rural_urban()
+        
         # Calculate risk scores
         risk_df = self.calculate_risk_scores()
         
         # Generate summary
         summary = self.generate_summary_statistics()
         
+        # Add city and rural/urban summary
+        if 'city_analysis' in self.results:
+            city_df = self.results['city_analysis']
+            # Convert to numeric for nlargest operation
+            city_df['total_payments'] = pd.to_numeric(city_df['total_payments'], errors='coerce').fillna(0)
+            summary['total_cities_analyzed'] = len(city_df)
+            summary['top_5_cities_by_payments'] = city_df.nlargest(5, 'total_payments')[
+                ['City', 'total_payments', 'bcbsmi_providers', 'payment_penetration_pct']
+            ].to_dict('records')
+        
+        if 'rural_urban_comparison' in self.results:
+            summary['rural_urban_comparison'] = self.results['rural_urban_comparison'].to_dict()
+        
+        self.results['summary'] = summary
+        
         # Save results
         self.save_results()
+        
+        # Save additional city data
+        if 'city_classification' in self.results:
+            output_dir = Path(__file__).parent.parent / "data"
+            city_file = output_dir / f"city_analysis_{datetime.now().strftime('%Y%m%d_%H%M%S')}.csv"
+            self.results['city_classification'].to_csv(city_file, index=False)
+            print(f"Saved city analysis to: {city_file}")
         
         print("\n" + "=" * 80)
         print("ANALYSIS COMPLETE")
@@ -338,6 +543,7 @@ class HospitalAnalyzer:
         # Print key findings
         print(f"\n📊 Key Findings:")
         print(f"  Hospitals analyzed: {summary['total_hospitals_analyzed']}")
+        print(f"  Cities analyzed: {summary.get('total_cities_analyzed', 0)}")
         print(f"  Total BCBSMI providers: {summary['total_bcbsmi_providers']:,}")
         print(f"  Total payments: ${summary['total_payments']:,.0f}")
         print(f"  Total prescription cost: ${summary['total_prescription_cost']:,.0f}")
@@ -346,6 +552,21 @@ class HospitalAnalyzer:
         print(f"\n🏥 Top 5 Hospitals by Risk Score:")
         for hosp in summary['top_5_hospitals_by_risk']:
             print(f"  - {hosp['Facility_Name']}, {hosp['City']}: Score {hosp['composite_risk_score']:.1f} ({hosp['risk_category']})")
+        
+        if 'top_5_cities_by_payments' in summary:
+            print(f"\n🏙️ Top 5 Cities by Pharmaceutical Payments:")
+            for city in summary['top_5_cities_by_payments']:
+                print(f"  - {city['City']}: ${city['total_payments']:,.0f} ({city['payment_penetration_pct']:.1f}% penetration)")
+        
+        if 'rural_urban_comparison' in self.results:
+            rural_urban = self.results['rural_urban_comparison']
+            print(f"\n🌾 Rural vs Urban Comparison:")
+            for area_type in rural_urban.index:
+                print(f"  {area_type}:")
+                print(f"    - Cities: {int(rural_urban.loc[area_type, 'city_count'])}")
+                print(f"    - Total payments: ${rural_urban.loc[area_type, 'total_payments']:,.0f}")
+                print(f"    - Payment penetration: {rural_urban.loc[area_type, 'payment_penetration_pct']:.1f}%")
+                print(f"    - Avg payment per provider: ${rural_urban.loc[area_type, 'avg_payment_per_provider']:,.0f}")
         
         return self.results
 
