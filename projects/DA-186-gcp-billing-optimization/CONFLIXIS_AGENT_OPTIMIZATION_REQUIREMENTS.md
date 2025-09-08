@@ -2,7 +2,9 @@
 
 ## Executive Summary
 
-**CRITICAL**: The `data-analytics-389803.conflixis_agent` dataset requires immediate optimization to eliminate **$43,950/month** in unnecessary BigQuery costs.
+**CRITICAL**: The `data-analytics-389803.conflixis_agent` dataset requires immediate optimization to eliminate **$1,397/day** in unnecessary BigQuery costs when queries are actively running.
+
+**SOLUTION**: Create optimized tables in the new `data-analytics-389803.conflixis_data_projects` dataset while keeping original tables in `conflixis_agent` for comparison and validation.
 
 ### Key Issues Identified:
 - **83% of joins require expensive CAST operations** due to data type mismatches
@@ -11,9 +13,9 @@
 - **NPI columns have 3 different data types** (NUMERIC, INT64, STRING) across tables
 
 ### Financial Impact:
-- **Current Cost**: $1,471/day ($44,130/month)
-- **After Optimization**: ~$74/day ($2,220/month)
-- **Monthly Savings**: $41,910 (95% reduction)
+- **Current Cost**: $1,471/day when queries run
+- **After Optimization**: ~$74/day when queries run
+- **Daily Savings**: ~$1,397 (95% reduction)
 
 ---
 
@@ -72,33 +74,35 @@ ON CAST(op.physician_id AS STRING) = CAST(rx.NPI AS STRING)
 ### Phase 1: Immediate Data Harmonization (Week 1)
 **Goal**: Eliminate CAST operations without modifying source tables
 
+**Note**: All optimized tables will be created in the `conflixis_data_projects` dataset, allowing side-by-side comparison with original tables in the `conflixis_agent` dataset.
+
 ```sql
 -- 1. Create harmonized view for PHYSICIANS_FACILITY_AFFILIATIONS_CURRENT
-CREATE OR REPLACE VIEW `data-analytics-389803.conflixis_agent.v_PHYSICIANS_FACILITY_AFFILIATIONS_CURRENT_harmonized` AS
+CREATE OR REPLACE VIEW `data-analytics-389803.conflixis_data_projects.v_PHYSICIANS_FACILITY_AFFILIATIONS_CURRENT_harmonized` AS
 SELECT 
     CAST(NPI AS INT64) as NPI,
     * EXCEPT(NPI)
-FROM `data-analytics-389803.conflixis_agent.PHYSICIANS_FACILITY_AFFILIATIONS_CURRENT`;
+FROM `data-analytics-389803.conflixis_data_projects.PHYSICIANS_FACILITY_AFFILIATIONS_CURRENT`;
 
 -- 2. Create harmonized view for PHYSICIANS_OVERVIEW
-CREATE OR REPLACE VIEW `data-analytics-389803.conflixis_agent.v_PHYSICIANS_OVERVIEW_harmonized` AS
+CREATE OR REPLACE VIEW `data-analytics-389803.conflixis_data_projects.v_PHYSICIANS_OVERVIEW_harmonized` AS
 SELECT 
     CAST(NPI AS INT64) as NPI,
     * EXCEPT(NPI)
-FROM `data-analytics-389803.conflixis_agent.PHYSICIANS_OVERVIEW`;
+FROM `data-analytics-389803.conflixis_data_projects.PHYSICIANS_OVERVIEW`;
 
 -- 3. Create harmonized view for rx_op_enhanced_full
-CREATE OR REPLACE VIEW `data-analytics-389803.conflixis_agent.v_rx_op_enhanced_full_harmonized` AS
+CREATE OR REPLACE VIEW `data-analytics-389803.conflixis_data_projects.v_rx_op_enhanced_full_harmonized` AS
 SELECT 
     CAST(NPI AS INT64) as NPI,
     * EXCEPT(NPI)
-FROM `data-analytics-389803.conflixis_agent.rx_op_enhanced_full`;
+FROM `data-analytics-389803.conflixis_data_projects.rx_op_enhanced_full`;
 
 -- 4. Update queries to use harmonized views
 -- Replace all instances of:
---   FROM conflixis_agent.PHYSICIANS_FACILITY_AFFILIATIONS_CURRENT
+--   FROM conflixis_data_projects.PHYSICIANS_FACILITY_AFFILIATIONS_CURRENT
 -- With:
---   FROM conflixis_agent.v_PHYSICIANS_FACILITY_AFFILIATIONS_CURRENT_harmonized
+--   FROM conflixis_data_projects.v_PHYSICIANS_FACILITY_AFFILIATIONS_CURRENT_harmonized
 ```
 
 **Expected Impact**: 
@@ -111,30 +115,30 @@ FROM `data-analytics-389803.conflixis_agent.rx_op_enhanced_full`;
 
 ```sql
 -- 1. Optimize PHYSICIANS_FACILITY_AFFILIATIONS_CURRENT
-CREATE OR REPLACE TABLE `data-analytics-389803.conflixis_agent.PHYSICIANS_FACILITY_AFFILIATIONS_CURRENT_optimized`
+CREATE OR REPLACE TABLE `data-analytics-389803.conflixis_data_projects.PHYSICIANS_FACILITY_AFFILIATIONS_CURRENT_optimized`
 PARTITION BY DATE(CAST(last_updated AS DATE))  -- Or appropriate date field
 CLUSTER BY NPI, SPECIALTY_PRIMARY
 AS 
 SELECT 
     CAST(NPI AS INT64) as NPI,
     * EXCEPT(NPI)
-FROM `data-analytics-389803.conflixis_agent.PHYSICIANS_FACILITY_AFFILIATIONS_CURRENT`;
+FROM `data-analytics-389803.conflixis_data_projects.PHYSICIANS_FACILITY_AFFILIATIONS_CURRENT`;
 
 -- 2. Optimize rx_op_enhanced_full
-CREATE OR REPLACE TABLE `data-analytics-389803.conflixis_agent.rx_op_enhanced_full_optimized`
+CREATE OR REPLACE TABLE `data-analytics-389803.conflixis_data_projects.rx_op_enhanced_full_optimized`
 PARTITION BY payment_year  -- Assuming year field exists
 CLUSTER BY NPI, manufacturer_name
 AS 
 SELECT 
     CAST(NPI AS INT64) as NPI,
     * EXCEPT(NPI)
-FROM `data-analytics-389803.conflixis_agent.rx_op_enhanced_full`;
+FROM `data-analytics-389803.conflixis_data_projects.rx_op_enhanced_full`;
 
 -- 3. Add clustering to already partitioned tables
-ALTER TABLE `data-analytics-389803.conflixis_agent.PHYSICIAN_RX_2020_2024`
+ALTER TABLE `data-analytics-389803.conflixis_data_projects.PHYSICIAN_RX_2020_2024`
 SET OPTIONS (clustering_columns = ['NPI', 'drug_name']);
 
-ALTER TABLE `data-analytics-389803.conflixis_agent.op_general_all_aggregate_static`
+ALTER TABLE `data-analytics-389803.conflixis_data_projects.op_general_all_aggregate_static`
 SET OPTIONS (clustering_columns = ['physician_id', 'year']);
 ```
 
@@ -148,7 +152,7 @@ SET OPTIONS (clustering_columns = ['physician_id', 'year']);
 
 ```sql
 -- 1. Create materialized view for Open Payments summaries
-CREATE MATERIALIZED VIEW `data-analytics-389803.conflixis_agent.mv_op_summary_by_npi_year`
+CREATE MATERIALIZED VIEW `data-analytics-389803.conflixis_data_projects.mv_op_summary_by_npi_year`
 PARTITION BY payment_year
 CLUSTER BY NPI
 AS 
@@ -159,11 +163,11 @@ SELECT
     COUNT(DISTINCT manufacturer_name) as unique_manufacturers,
     AVG(total_amount) as avg_payment,
     MAX(total_amount) as max_payment
-FROM `data-analytics-389803.conflixis_agent.rx_op_enhanced_full_optimized`
+FROM `data-analytics-389803.conflixis_data_projects.rx_op_enhanced_full_optimized`
 GROUP BY NPI, payment_year;
 
 -- 2. Create materialized view for prescription patterns
-CREATE MATERIALIZED VIEW `data-analytics-389803.conflixis_agent.mv_rx_patterns_by_npi`
+CREATE MATERIALIZED VIEW `data-analytics-389803.conflixis_data_projects.mv_rx_patterns_by_npi`
 PARTITION BY EXTRACT(YEAR FROM prescription_date)
 CLUSTER BY NPI, drug_name
 AS
@@ -173,7 +177,7 @@ SELECT
     EXTRACT(YEAR FROM prescription_date) as rx_year,
     SUM(total_claim_count) as total_claims,
     SUM(total_drug_cost) as total_cost
-FROM `data-analytics-389803.conflixis_agent.PHYSICIAN_RX_2020_2024`
+FROM `data-analytics-389803.conflixis_data_projects.PHYSICIAN_RX_2020_2024`
 GROUP BY NPI, drug_name, rx_year;
 ```
 
@@ -188,16 +192,16 @@ GROUP BY NPI, drug_name, rx_year;
 ```sql
 -- BEFORE (expensive):
 SELECT *
-FROM conflixis_agent.rx_op_enhanced_full rx
-JOIN conflixis_agent.PHYSICIANS_OVERVIEW p
+FROM conflixis_data_projects.rx_op_enhanced_full rx
+JOIN conflixis_data_projects.PHYSICIANS_OVERVIEW p
 ON CAST(rx.NPI AS STRING) = CAST(p.NPI AS STRING)
 WHERE rx.payment_year = 2024;
 -- Cost: $73.55 (scans 12.94 TB)
 
 -- AFTER (optimized):
 SELECT *
-FROM conflixis_agent.rx_op_enhanced_full_optimized rx
-JOIN conflixis_agent.PHYSICIANS_OVERVIEW_optimized p
+FROM conflixis_data_projects.rx_op_enhanced_full_optimized rx
+JOIN conflixis_data_projects.PHYSICIANS_OVERVIEW_optimized p
 ON rx.NPI = p.NPI
 WHERE rx.payment_year = 2024;
 -- Cost: $3.68 (scans 0.65 TB with partition pruning)
@@ -212,24 +216,23 @@ Based on September 2-3, 2025 billing data:
 - **22 UUID-named jobs** running daily
 - Each job scans **12.94 TB** 
 - Cost per query: **$73.55**
-- Daily cost: **$1,618.10**
-- Monthly cost: **$48,543**
+- Daily cost when queries run: **$1,618.10**
 
 ### Optimization Scenarios
 
-| Optimization Level | Data Scanned | Cost/Query | Daily Cost | Monthly Cost | Savings |
-|-------------------|--------------|------------|------------|--------------|---------|
-| **Current State** | 12.94 TB | $73.55 | $1,618 | $48,543 | - |
-| **Phase 1: Harmonization** | 12.94 TB | $58.84 | $1,294 | $38,834 | $9,709 |
-| **Phase 2: Partitioning** | 1.29 TB | $7.36 | $162 | $4,854 | $43,689 |
-| **Phase 3: Clustering** | 0.65 TB | $3.68 | $81 | $2,427 | $46,116 |
-| **Phase 4: Mat. Views** | 0.10 TB | $0.63 | $14 | $414 | $48,129 |
-| **Full Optimization** | 0.05 TB | $0.31 | $6.82 | $205 | $48,338 |
+| Optimization Level | Data Scanned | Cost/Query | Daily Cost | Daily Savings |
+|-------------------|--------------|------------|------------|--------------|
+| **Current State** | 12.94 TB | $73.55 | $1,618 | - |
+| **Phase 1: Harmonization** | 12.94 TB | $58.84 | $1,294 | $324 |
+| **Phase 2: Partitioning** | 1.29 TB | $7.36 | $162 | $1,456 |
+| **Phase 3: Clustering** | 0.65 TB | $3.68 | $81 | $1,537 |
+| **Phase 4: Mat. Views** | 0.10 TB | $0.63 | $14 | $1,604 |
+| **Full Optimization** | 0.05 TB | $0.31 | $6.82 | $1,611 |
 
 ### ROI Calculation
 - **Implementation Cost**: ~40 hours of engineering time
-- **Monthly Savings**: $48,338
-- **Annual Savings**: $580,056
+- **Daily Savings (when queries run)**: ~$1,611
+- **Estimated Annual Savings**: ~$580,000 (assuming queries run most days)
 - **Payback Period**: < 1 week
 
 ---
@@ -354,8 +357,8 @@ def run_baseline_tests(client):
             SELECT 
                 COUNT(*) as record_count,
                 COUNT(DISTINCT rx.NPI) as unique_providers
-            FROM `data-analytics-389803.conflixis_agent.rx_op_enhanced_full` rx
-            JOIN `data-analytics-389803.conflixis_agent.PHYSICIANS_OVERVIEW` p
+            FROM `data-analytics-389803.conflixis_data_projects.rx_op_enhanced_full` rx
+            JOIN `data-analytics-389803.conflixis_data_projects.PHYSICIANS_OVERVIEW` p
             ON CAST(rx.NPI AS STRING) = CAST(p.NPI AS STRING)
             WHERE rx.payment_year = 2024
             """
@@ -368,7 +371,7 @@ def run_baseline_tests(client):
                 NPI,
                 SUM(total_amount) as total_payments,
                 COUNT(DISTINCT manufacturer_name) as manufacturer_count
-            FROM `data-analytics-389803.conflixis_agent.rx_op_enhanced_full`
+            FROM `data-analytics-389803.conflixis_data_projects.rx_op_enhanced_full`
             WHERE payment_year >= 2023
             GROUP BY NPI
             HAVING total_payments > 10000
@@ -383,8 +386,8 @@ def run_baseline_tests(client):
                 p.SPECIALTY_PRIMARY,
                 rx.drug_name,
                 SUM(rx.total_claim_count) as claims
-            FROM `data-analytics-389803.conflixis_agent.PHYSICIAN_RX_2020_2024` rx
-            JOIN `data-analytics-389803.conflixis_agent.PHYSICIANS_FACILITY_AFFILIATIONS_CURRENT` p
+            FROM `data-analytics-389803.conflixis_data_projects.PHYSICIAN_RX_2020_2024` rx
+            JOIN `data-analytics-389803.conflixis_data_projects.PHYSICIANS_FACILITY_AFFILIATIONS_CURRENT` p
             ON CAST(rx.NPI AS INT64) = CAST(p.NPI AS NUMERIC)
             GROUP BY p.NPI, p.SPECIALTY_PRIMARY, rx.drug_name
             ORDER BY claims DESC
@@ -500,8 +503,8 @@ def run_optimized_tests(client):
             SELECT 
                 COUNT(*) as record_count,
                 COUNT(DISTINCT rx.NPI) as unique_providers
-            FROM `data-analytics-389803.conflixis_agent.rx_op_enhanced_full_optimized` rx
-            JOIN `data-analytics-389803.conflixis_agent.PHYSICIANS_OVERVIEW_optimized` p
+            FROM `data-analytics-389803.conflixis_data_projects.rx_op_enhanced_full_optimized` rx
+            JOIN `data-analytics-389803.conflixis_data_projects.PHYSICIANS_OVERVIEW_optimized` p
             ON rx.NPI = p.NPI  -- No CAST needed!
             WHERE rx.payment_year = 2024
             """
@@ -514,7 +517,7 @@ def run_optimized_tests(client):
                 NPI,
                 total_payments,
                 unique_manufacturers
-            FROM `data-analytics-389803.conflixis_agent.mv_op_summary_by_npi_year`
+            FROM `data-analytics-389803.conflixis_data_projects.mv_op_summary_by_npi_year`
             WHERE payment_year >= 2023
               AND total_payments > 10000
             """
@@ -528,8 +531,8 @@ def run_optimized_tests(client):
                 p.SPECIALTY_PRIMARY,
                 rx.drug_name,
                 SUM(rx.total_claim_count) as claims
-            FROM `data-analytics-389803.conflixis_agent.PHYSICIAN_RX_2020_2024_optimized` rx
-            JOIN `data-analytics-389803.conflixis_agent.PHYSICIANS_FACILITY_AFFILIATIONS_CURRENT_optimized` p
+            FROM `data-analytics-389803.conflixis_data_projects.PHYSICIAN_RX_2020_2024_optimized` rx
+            JOIN `data-analytics-389803.conflixis_data_projects.PHYSICIANS_FACILITY_AFFILIATIONS_CURRENT_optimized` p
             ON rx.NPI = p.NPI  -- Direct INT64 join
             WHERE rx.rx_year = 2024  -- Partition pruning
             GROUP BY p.NPI, p.SPECIALTY_PRIMARY, rx.drug_name
@@ -688,7 +691,7 @@ python validate_savings.py \
 
 ```sql
 -- Real-time optimization monitoring
-CREATE OR REPLACE VIEW `conflixis_agent.v_optimization_monitoring` AS
+CREATE OR REPLACE VIEW `conflixis_data_projects.v_optimization_monitoring` AS
 WITH daily_metrics AS (
   SELECT 
     DATE(creation_time) as query_date,
@@ -722,7 +725,7 @@ If optimization causes issues:
 
 ```sql
 -- Quick rollback to original tables
-CREATE OR REPLACE VIEW `conflixis_agent.v_EMERGENCY_ROLLBACK` AS
+CREATE OR REPLACE VIEW `conflixis_data_projects.v_EMERGENCY_ROLLBACK` AS
 SELECT 'USE ORIGINAL TABLES' as instruction,
        'UPDATE ALL QUERIES TO REMOVE _optimized SUFFIX' as action;
 
@@ -737,7 +740,7 @@ WHERE query CONTAINS '_optimized';
 ## Appendix: Full SQL Implementation Scripts
 
 The complete SQL implementation scripts are available at:
-- `/home/incent/conflixis-data-projects/projects/201-gcp-billing-analysis/conflixis_agent_optimization.sql`
+- `/home/incent/conflixis-data-projects/projects/DA-186-gcp-billing-optimization/conflixis_agent_optimization.sql`
 
 For questions or assistance with implementation, contact the Data Analytics team.
 

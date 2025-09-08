@@ -28,10 +28,10 @@ confirm() {
 # =========================================
 
 
-# Dataset: conflixis_agent
+# Dataset: conflixis_data_projects
 # Potential Savings: $86.87/month
-if confirm "Optimize storage for conflixis_agent?"; then
-    echo "Analyzing table age for conflixis_agent..."
+if confirm "Optimize storage for conflixis_data_projects?"; then
+    echo "Analyzing table age for conflixis_data_projects..."
     
     # Command to identify tables not accessed in 90 days
     # Note: Adjust dataset and project names as needed
@@ -46,7 +46,7 @@ if confirm "Optimize storage for conflixis_agent?"; then
             WHEN type = 2 THEN "VIEW"
             ELSE "OTHER"
         END as table_type
-    FROM `conflixis_agent.__TABLES__`
+    FROM `conflixis_data_projects.__TABLES__`
     WHERE TIMESTAMP_MILLIS(GREATEST(creation_time, IFNULL(last_modified_time, 0))) < TIMESTAMP_SUB(CURRENT_TIMESTAMP(), INTERVAL 90 DAY)
     ORDER BY size_bytes DESC'
     

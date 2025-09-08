@@ -102,7 +102,7 @@ def analyze_table_access_patterns(client):
     # Get information about the most accessed tables
     query = """
     SELECT 
-        'conflixis_agent' as dataset_name,
+        'conflixis_data_projects' as dataset_name,
         table_name,
         TIMESTAMP_MILLIS(creation_time) as created,
         TIMESTAMP_MILLIS(IFNULL(last_modified_time, creation_time)) as last_modified,
@@ -119,7 +119,7 @@ def analyze_table_access_patterns(client):
             THEN 'LONG_TERM_ELIGIBLE'
             ELSE 'ACTIVE'
         END as storage_recommendation
-    FROM `data-analytics-389803.conflixis_agent.__TABLES__`
+    FROM `data-analytics-389803.conflixis_data_projects.__TABLES__`
     WHERE size_bytes > 0
     ORDER BY size_bytes DESC
     LIMIT 20
@@ -167,7 +167,7 @@ def analyze_query_optimization_opportunities(client):
         ddl,
         REGEXP_EXTRACT(ddl, r'PARTITION BY ([^\\s]+)') as partition_column,
         REGEXP_EXTRACT(ddl, r'CLUSTER BY \\(([^)]+)\\)') as clustering_columns
-    FROM `data-analytics-389803.conflixis_agent.INFORMATION_SCHEMA.TABLES`
+    FROM `data-analytics-389803.conflixis_data_projects.INFORMATION_SCHEMA.TABLES`
     WHERE table_type = 'BASE TABLE'
         AND table_name NOT LIKE '%_view%'
     LIMIT 10

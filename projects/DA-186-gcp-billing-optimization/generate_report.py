@@ -429,7 +429,7 @@ def generate_html_report(chart_data, service_data):
                         • Sept 2-3: 20+ queries at $73.55 each<br>
                         • UUID-named jobs suggest automated/scheduled processes<br>
                         • Peak hours: 9 AM, 12 PM, 9 PM<br>
-                        • Affected dataset: conflixis_agent<br>
+                        • Affected dataset: conflixis_data_projects<br>
                         • Total anomalous spend: ~$1,500 in 2 days
                     </div>
                 </div>

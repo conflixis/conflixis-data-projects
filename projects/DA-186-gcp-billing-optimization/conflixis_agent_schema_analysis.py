@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Analyze conflixis_agent dataset schema to identify optimization opportunities.
+Analyze conflixis_data_projects dataset schema to identify optimization opportunities.
 Focus on data type mismatches, partitioning, and clustering issues.
 """
 
@@ -37,7 +37,7 @@ def setup_client():
     return bigquery.Client(credentials=credentials, project="data-analytics-389803")
 
 def analyze_table_metadata(client):
-    """Get detailed table metadata from conflixis_agent dataset."""
+    """Get detailed table metadata from conflixis_data_projects dataset."""
     
     print("=" * 80)
     print("CONFLIXIS_AGENT DATASET SCHEMA ANALYSIS")
@@ -56,14 +56,14 @@ def analyze_table_metadata(client):
             WHEN type = 2 THEN 'VIEW'
             ELSE 'OTHER'
         END as table_type
-    FROM `data-analytics-389803.conflixis_agent.__TABLES__`
+    FROM `data-analytics-389803.conflixis_data_projects.__TABLES__`
     WHERE size_bytes > 0
     ORDER BY size_bytes DESC
     """
     
     try:
         tables_df = client.query(query).to_dataframe()
-        print(f"\n📊 Found {len(tables_df)} tables/views in conflixis_agent dataset")
+        print(f"\n📊 Found {len(tables_df)} tables/views in conflixis_data_projects dataset")
         print(f"Total size: {tables_df['size_gb'].sum():.2f} GB")
         print(f"Total rows: {tables_df['row_count'].sum():,.0f}")
         
@@ -88,7 +88,7 @@ def analyze_column_schemas(client, tables_df):
         is_nullable,
         is_partitioning_column,
         clustering_ordinal_position
-    FROM `data-analytics-389803.conflixis_agent.INFORMATION_SCHEMA.COLUMNS`
+    FROM `data-analytics-389803.conflixis_data_projects.INFORMATION_SCHEMA.COLUMNS`
     WHERE LOWER(column_name) IN ('physician_id', 'physician_npi', 'npi', 
                                   'provider_id', 'provider_npi', 'physician_profile_id',
                                   'covered_recipient_npi', 'physician_primary_type')
@@ -143,7 +143,7 @@ def analyze_partitioning_clustering(client):
         ddl,
         REGEXP_EXTRACT(ddl, r'PARTITION BY ([^\\s]+)') as partition_column,
         REGEXP_EXTRACT(ddl, r'CLUSTER BY \\(([^)]+)\\)') as clustering_columns
-    FROM `data-analytics-389803.conflixis_agent.INFORMATION_SCHEMA.TABLES`
+    FROM `data-analytics-389803.conflixis_data_projects.INFORMATION_SCHEMA.TABLES`
     WHERE table_type = 'BASE TABLE'
     """
     
@@ -196,7 +196,7 @@ def analyze_join_patterns(client):
             table_name,
             column_name,
             data_type
-        FROM `data-analytics-389803.conflixis_agent.INFORMATION_SCHEMA.COLUMNS`
+        FROM `data-analytics-389803.conflixis_data_projects.INFORMATION_SCHEMA.COLUMNS`
         WHERE LOWER(column_name) IN ('physician_id', 'physician_npi', 'npi', 
                                       'provider_id', 'provider_npi')
     )
@@ -274,7 +274,7 @@ def generate_recommendations(tables_df, columns_df, identifier_analysis,
      SELECT 
          CAST({col_name} AS INT64) as {col_name}_int64,
          * EXCEPT({col_name})
-     FROM `data-analytics-389803.conflixis_agent.{analysis['tables'][0]}`
+     FROM `data-analytics-389803.conflixis_data_projects.{analysis['tables'][0]}`
             """)
     
     # 2. Partitioning recommendations
@@ -286,11 +286,11 @@ def generate_recommendations(tables_df, columns_df, identifier_analysis,
     SELECT DISTINCT
         table_name,
         column_name
-    FROM `data-analytics-389803.conflixis_agent.INFORMATION_SCHEMA.COLUMNS`
+    FROM `data-analytics-389803.conflixis_data_projects.INFORMATION_SCHEMA.COLUMNS`
     WHERE data_type IN ('DATE', 'DATETIME', 'TIMESTAMP')
       AND table_name IN (
         SELECT table_name
-        FROM `data-analytics-389803.conflixis_agent.INFORMATION_SCHEMA.TABLES`
+        FROM `data-analytics-389803.conflixis_data_projects.INFORMATION_SCHEMA.TABLES`
         WHERE table_type = 'BASE TABLE'
       )
     ORDER BY table_name
@@ -331,10 +331,10 @@ def generate_recommendations(tables_df, columns_df, identifier_analysis,
             print(f"     Action: Add clustering on NPI/physician_id columns")
             print(f"     SQL:")
             print(f"""
-     CREATE OR REPLACE TABLE `data-analytics-389803.conflixis_agent.{table}_optimized`
+     CREATE OR REPLACE TABLE `data-analytics-389803.conflixis_data_projects.{table}_optimized`
      PARTITION BY DATE(date_column)  -- Replace with actual date column
      CLUSTER BY physician_id, npi    -- Replace with actual columns
-     AS SELECT * FROM `data-analytics-389803.conflixis_agent.{table}`
+     AS SELECT * FROM `data-analytics-389803.conflixis_data_projects.{table}`
             """)
     
     # 4. Materialized view recommendations
@@ -410,7 +410,7 @@ def calculate_cost_impact(tables_df, cast_required):
 def generate_implementation_script(recommendations):
     """Generate SQL script for implementing optimizations."""
     
-    script_path = "/home/incent/conflixis-data-projects/projects/201-gcp-billing-analysis/conflixis_agent_optimization.sql"
+    script_path = "/home/incent/conflixis-data-projects/projects/DA-186-gcp-billing-optimization/conflixis_data_projects_optimization.sql"
     
     with open(script_path, 'w') as f:
         f.write("-- CONFLIXIS_AGENT OPTIMIZATION SCRIPT\n")
@@ -426,11 +426,11 @@ def generate_implementation_script(recommendations):
             if rec['type'] == 'DATA_TYPE':
                 for table in rec['tables'][:3]:  # First 3 tables as examples
                     f.write(f"-- Harmonize {rec['column']} in {table}\n")
-                    f.write(f"CREATE OR REPLACE VIEW `data-analytics-389803.conflixis_agent.v_{table}_harmonized` AS\n")
+                    f.write(f"CREATE OR REPLACE VIEW `data-analytics-389803.conflixis_data_projects.v_{table}_harmonized` AS\n")
                     f.write(f"SELECT \n")
                     f.write(f"    CAST({rec['column']} AS INT64) as {rec['column']}_int64,\n")
                     f.write(f"    * EXCEPT({rec['column']})\n")
-                    f.write(f"FROM `data-analytics-389803.conflixis_agent.{table}`;\n\n")
+                    f.write(f"FROM `data-analytics-389803.conflixis_data_projects.{table}`;\n\n")
         
         f.write("\n-- =========================================\n")
         f.write("-- PHASE 2: PARTITIONING AND CLUSTERING\n")
@@ -440,10 +440,10 @@ def generate_implementation_script(recommendations):
             if rec['type'] == 'PARTITIONING':
                 f.write(f"-- Optimize {rec['table']}\n")
                 f.write(f"-- TODO: Replace date_column with actual date field\n")
-                f.write(f"CREATE OR REPLACE TABLE `data-analytics-389803.conflixis_agent.{rec['table']}_optimized`\n")
+                f.write(f"CREATE OR REPLACE TABLE `data-analytics-389803.conflixis_data_projects.{rec['table']}_optimized`\n")
                 f.write(f"PARTITION BY DATE(date_column)\n")
                 f.write(f"CLUSTER BY physician_id, npi  -- Adjust based on actual columns\n")
-                f.write(f"AS SELECT * FROM `data-analytics-389803.conflixis_agent.{rec['table']}`;\n\n")
+                f.write(f"AS SELECT * FROM `data-analytics-389803.conflixis_data_projects.{rec['table']}`;\n\n")
     
     print(f"\n📝 Implementation script saved to: {script_path}")
     
@@ -484,7 +484,7 @@ def main():
     
     print(f"""
 🔍 KEY FINDINGS:
-- {len(tables_df)} tables in conflixis_agent dataset
+- {len(tables_df)} tables in conflixis_data_projects dataset
 - {len(cast_required)} join patterns require expensive CAST operations
 - {len([r for r in recommendations if r['type'] == 'DATA_TYPE'])} data type inconsistencies found
 - {len([r for r in recommendations if r['type'] == 'PARTITIONING'])} tables need partitioning
