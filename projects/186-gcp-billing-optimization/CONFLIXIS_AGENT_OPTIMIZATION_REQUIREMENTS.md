@@ -740,7 +740,7 @@ WHERE query CONTAINS '_optimized';
 ## Appendix: Full SQL Implementation Scripts
 
 The complete SQL implementation scripts are available at:
-- `/home/incent/conflixis-data-projects/projects/DA-186-gcp-billing-optimization/conflixis_agent_optimization.sql`
+- `/home/incent/conflixis-data-projects/projects/186-gcp-billing-optimization/conflixis_agent_optimization.sql`
 
 For questions or assistance with implementation, contact the Data Analytics team.
 

@@ -410,7 +410,7 @@ def calculate_cost_impact(tables_df, cast_required):
 def generate_implementation_script(recommendations):
     """Generate SQL script for implementing optimizations."""
     
-    script_path = "/home/incent/conflixis-data-projects/projects/DA-186-gcp-billing-optimization/conflixis_data_projects_optimization.sql"
+    script_path = "/home/incent/conflixis-data-projects/projects/186-gcp-billing-optimization/conflixis_data_projects_optimization.sql"
     
     with open(script_path, 'w') as f:
         f.write("-- CONFLIXIS_AGENT OPTIMIZATION SCRIPT\n")
