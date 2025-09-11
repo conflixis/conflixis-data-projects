@@ -1,0 +1,10 @@
+ALCON PHARMACEUTICAL PAYMENT ANALYSIS - SUMMARY STATISTICS
+============================================================
+
+Total Payments: $29,703,057.51
+Total Records: 65,938
+Unique NPIs: 17,722
+Average Payment: $450.47
+Median Payment: $21.01
+
+High-Risk Providers: 1
