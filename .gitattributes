@@ -1,0 +1,32 @@
+# Treat PDF files as binary to prevent text diffing
+*.pdf binary
+
+# Treat images as binary
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.svg binary
+
+# Treat compressed files as binary
+*.zip binary
+*.tar.gz binary
+*.gz binary
+
+# Treat data files as binary
+*.parquet binary
+*.pkl binary
+*.h5 binary
+*.model binary
+*.weights binary
+
+# Ensure consistent line endings for text files
+*.py text eol=lf
+*.md text eol=lf
+*.txt text eol=lf
+*.json text eol=lf
+*.yaml text eol=lf
+*.yml text eol=lf
+*.csv text eol=lf
+*.sh text eol=lf
+*.R text eol=lf
