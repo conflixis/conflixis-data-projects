@@ -1,0 +1,467 @@
+{
+  "timestamp": "2025-08-28T09:32:12.584329",
+  "total_attempted": 64,
+  "successful": 10,
+  "already_exist": 0,
+  "failed": 54,
+  "results": [
+    {
+      "success": true,
+      "org": "Beaumont Health",
+      "url": "https://www.beaumont.org/docs/default-source/compliance/conflict-of-interest-policy.pdf",
+      "filename": "data/raw/policies/Beaumont_Health_681c3bc8.pdf",
+      "size": 366541,
+      "status": "downloaded"
+    },
+    {
+      "success": true,
+      "org": "Children's Hospital of Philadelphia",
+      "url": "https://www.chop.edu/sites/default/files/conflict-of-interest-policy.pdf",
+      "filename": "data/raw/policies/Children's_Hospital_of_Philadelphia_e0f5d0a6.pdf",
+      "size": 568195,
+      "status": "downloaded"
+    },
+    {
+      "success": true,
+      "org": "Geisinger",
+      "url": "https://www.geisinger.org/-/media/geisinger/pdfs/compliance/conflict-of-interest-policy.pdf",
+      "filename": "data/raw/policies/Geisinger_95e3857a.pdf",
+      "size": 17047,
+      "status": "downloaded"
+    },
+    {
+      "success": true,
+      "org": "Intermountain Health",
+      "url": "https://intermountainhealthcare.org/ckr-ext/Dcmnt?ncid=521025464",
+      "filename": "data/raw/policies/Intermountain_Health_2075b1b2.pdf",
+      "size": 23,
+      "status": "downloaded"
+    },
+    {
+      "success": true,
+      "org": "Legacy Health",
+      "url": "https://www.legacyhealth.org/-/media/files/pdf/compliance/conflict-of-interest-policy.pdf",
+      "filename": "data/raw/policies/Legacy_Health_ad8949c7.pdf",
+      "size": 57433,
+      "status": "downloaded"
+    },
+    {
+      "success": true,
+      "org": "SCL Health",
+      "url": "https://www.sclhealth.org/-/media/files/compliance/conflict-of-interest-policy.pdf",
+      "filename": "data/raw/policies/SCL_Health_a3186b6f.pdf",
+      "size": 364330,
+      "status": "downloaded"
+    },
+    {
+      "success": true,
+      "org": "SSM Health",
+      "url": "https://www.ssmhealth.com/docs/default-source/compliance/conflict-of-interest-policy.pdf",
+      "filename": "data/raw/policies/SSM_Health_feb613bc.pdf",
+      "size": 51438,
+      "status": "downloaded"
+    },
+    {
+      "success": true,
+      "org": "Spectrum Health",
+      "url": "https://www.spectrumhealth.org/-/media/spectrumhealth/documents/compliance/conflict-of-interest-policy.pdf",
+      "filename": "data/raw/policies/Spectrum_Health_64bb0614.pdf",
+      "size": 366541,
+      "status": "downloaded"
+    },
+    {
+      "success": true,
+      "org": "University of Miami Health",
+      "url": "https://umiamihealth.org/~/media/compliance/conflict-of-interest-policy.pdf",
+      "filename": "data/raw/policies/University_of_Miami_Health_5a46afe2.pdf",
+      "size": 129325,
+      "status": "downloaded"
+    },
+    {
+      "success": true,
+      "org": "Veterans Health Administration",
+      "url": "https://www.va.gov/ethics/docs/conflict-of-interest-policy.pdf",
+      "filename": "data/raw/policies/Veterans_Health_Administration_6cd22729.pdf",
+      "size": 70855,
+      "status": "downloaded"
+    },
+    {
+      "success": false,
+      "org": "AdventHealth",
+      "url": "https://www.adventhealth.com/-/media/adventhealth/documents/compliance/conflict-of-interest-policy.pdf",
+      "error": "HTTP 404",
+      "status": "failed"
+    },
+    {
+      "success": false,
+      "org": "Advocate Aurora Health",
+      "url": "https://www.advocateaurorahealth.org/-/media/documents/compliance/conflict-of-interest-policy.pdf",
+      "error": "HTTP 404",
+      "status": "failed"
+    },
+    {
+      "success": false,
+      "org": "Ascension",
+      "url": "https://www.ascension.org/-/media/ascension/compliance-and-ethics/conflict-of-interest-policy.pdf",
+      "error": "HTTP 500",
+      "status": "failed"
+    },
+    {
+      "success": false,
+      "org": "Avera Health",
+      "url": "https://www.avera.org/app/files/public/conflict-of-interest-policy.pdf",
+      "error": "HTTP 404",
+      "status": "failed"
+    },
+    {
+      "success": false,
+      "org": "Banner Health",
+      "url": "https://www.bannerhealth.com/-/media/files/compliance/conflict-of-interest-policy.pdf",
+      "error": "HTTP 403",
+      "status": "failed"
+    },
+    {
+      "success": false,
+      "org": "Baptist Health South Florida",
+      "url": "https://baptisthealth.net/baptist-health-news/wp-content/uploads/conflict-of-interest-policy.pdf",
+      "error": "HTTP 404",
+      "status": "failed"
+    },
+    {
+      "success": false,
+      "org": "Baylor Scott & White Health",
+      "url": "https://www.bswhealth.com/SiteCollectionDocuments/about/compliance/conflict-of-interest-policy.pdf",
+      "error": "HTTP 404",
+      "status": "failed"
+    },
+    {
+      "success": false,
+      "org": "Bon Secours Mercy Health",
+      "url": "https://www.bsmhealth.org/-/media/mercy-health/documents/compliance/conflict-of-interest-policy.pdf",
+      "error": "HTTP 404",
+      "status": "failed"
+    },
+    {
+      "success": false,
+      "org": "Carolinas HealthCare System",
+      "url": "https://atriumhealth.org/-/media/atrium/documents/compliance/conflict-of-interest-policy.pdf",
+      "error": "HTTP 404",
+      "status": "failed"
+    },
+    {
+      "success": false,
+      "org": "Cedars-Sinai",
+      "url": "https://www.cedars-sinai.org/content/dam/cedars-sinai/corporate/conflict-of-interest-policy.pdf",
+      "error": "HTTP 404",
+      "status": "failed"
+    },
+    {
+      "success": false,
+      "org": "Children's Healthcare of Atlanta",
+      "url": "https://www.choa.org/-/media/files/choa/documents/compliance/conflict-of-interest-policy.pdf",
+      "error": "HTTP 404",
+      "status": "failed"
+    },
+    {
+      "success": false,
+      "org": "Children's Hospital Colorado",
+      "url": "https://www.childrenscolorado.org/globalassets/documents/healthcare-professionals/conflict-of-interest-policy.pdf",
+      "error": "HTTP 404",
+      "status": "failed"
+    },
+    {
+      "success": false,
+      "org": "Children's Hospital Los Angeles",
+      "url": "https://www.chla.org/sites/default/files/atoms/files/conflict-of-interest-policy.pdf",
+      "error": "HTTP 403",
+      "status": "failed"
+    },
+    {
+      "success": false,
+      "org": "ChristianaCare",
+      "url": "https://christianacare.org/documents/conflict-of-interest-policy.pdf",
+      "error": "HTTP 404",
+      "status": "failed"
+    },
+    {
+      "success": false,
+      "org": "Cincinnati Children's",
+      "url": "https://www.cincinnatichildrens.org/-/media/cincinnati-childrens/home/research/compliance/conflict-of-interest-policy.pdf",
+      "error": "HTTP 404",
+      "status": "failed"
+    },
+    {
+      "success": false,
+      "org": "Cleveland Clinic",
+      "url": "https://my.clevelandclinic.org/-/media/files/org/locations/compliance/conflict-of-interest-policy.pdf",
+      "error": "HTTP 404",
+      "status": "failed"
+    },
+    {
+      "success": false,
+      "org": "CommonSpirit Health",
+      "url": "https://www.commonspirit.org/-/media/project/commonspirit/commonspirit/pdf/conflict-of-interest-policy.pdf",
+      "error": "HTTP 404",
+      "status": "failed"
+    },
+    {
+      "success": false,
+      "org": "Dignity Health",
+      "url": "https://www.dignityhealth.org/-/media/documents/compliance/conflict-of-interest-policy.pdf",
+      "error": "HTTP 404",
+      "status": "failed"
+    },
+    {
+      "success": false,
+      "org": "Froedtert Health",
+      "url": "https://www.froedtert.com/sites/default/files/conflict-of-interest-policy.pdf",
+      "error": "HTTP 404",
+      "status": "failed"
+    },
+    {
+      "success": false,
+      "org": "HCA Healthcare",
+      "url": "https://hcahealthcare.com/ethics/assets/docs/conflict-of-interest-policy.pdf",
+      "error": "HTTP 404",
+      "status": "failed"
+    },
+    {
+      "success": false,
+      "org": "Hackensack Meridian Health",
+      "url": "https://www.hackensackmeridianhealth.org/-/media/project/hmh/hmh/public/compliance/conflict-of-interest-policy.pdf",
+      "error": "HTTP 500",
+      "status": "failed"
+    },
+    {
+      "success": false,
+      "org": "Henry Ford Health",
+      "url": "https://www.henryford.com/-/media/files/henry-ford/compliance/conflict-of-interest-policy.pdf",
+      "error": "HTTP 404",
+      "status": "failed"
+    },
+    {
+      "success": false,
+      "org": "Hoag Health",
+      "url": "https://www.hoag.org/documents/conflict-of-interest-policy.pdf",
+      "error": "HTTP 404",
+      "status": "failed"
+    },
+    {
+      "success": false,
+      "org": "Jefferson Health",
+      "url": "https://www.jeffersonhealth.org/content/dam/jeff-health/compliance/conflict-of-interest-policy.pdf",
+      "error": "HTTP 404",
+      "status": "failed"
+    },
+    {
+      "success": false,
+      "org": "Johns Hopkins Medicine",
+      "url": "https://www.hopkinsmedicine.org/som/faculty/policies/facultypolicies/conflict-of-interest-policy.pdf",
+      "error": "HTTP 403",
+      "status": "failed"
+    },
+    {
+      "success": false,
+      "org": "Kaiser Permanente",
+      "url": "https://healthy.kaiserpermanente.org/static/health/pdfs/conflict-of-interest-policy.pdf",
+      "error": "HTTP 410",
+      "status": "failed"
+    },
+    {
+      "success": false,
+      "org": "Mass General Brigham",
+      "url": "https://www.massgeneralbrigham.org/notices/conflict-of-interest-policy.pdf",
+      "error": "HTTP 404",
+      "status": "failed"
+    },
+    {
+      "success": false,
+      "org": "MemorialCare",
+      "url": "https://www.memorialcare.org/sites/default/files/media/conflict-of-interest-policy.pdf",
+      "error": "HTTP 403",
+      "status": "failed"
+    },
+    {
+      "success": false,
+      "org": "NYU Langone Health",
+      "url": "https://nyulangone.org/files/conflict-of-interest-policy.pdf",
+      "error": "HTTP 404",
+      "status": "failed"
+    },
+    {
+      "success": false,
+      "org": "Nationwide Children's Hospital",
+      "url": "https://www.nationwidechildrens.org/-/media/nch/documents/compliance/conflict-of-interest-policy.pdf",
+      "error": "HTTP 404",
+      "status": "failed"
+    },
+    {
+      "success": false,
+      "org": "NewYork-Presbyterian",
+      "url": "https://www.nyp.org/documents/conflict-of-interest-policy.pdf",
+      "error": "HTTP 404",
+      "status": "failed"
+    },
+    {
+      "success": false,
+      "org": "Northwell Health",
+      "url": "https://www.northwell.edu/sites/northwell.edu/files/conflict-of-interest-policy.pdf",
+      "error": "HTTP 404",
+      "status": "failed"
+    },
+    {
+      "success": false,
+      "org": "OSF HealthCare",
+      "url": "https://www.osfhealthcare.org/media/filer_public/conflict-of-interest-policy.pdf",
+      "error": "HTTP 404",
+      "status": "failed"
+    },
+    {
+      "success": false,
+      "org": "Ochsner Health",
+      "url": "https://www.ochsner.org/-/media/files/ochsner/compliance/conflict-of-interest-policy.pdf",
+      "error": "HTTP 404",
+      "status": "failed"
+    },
+    {
+      "success": false,
+      "org": "Orlando Health",
+      "url": "https://www.orlandohealth.com/-/media/files/orlandohealth/compliance/conflict-of-interest-policy.pdf",
+      "error": "HTTP 403",
+      "status": "failed"
+    },
+    {
+      "success": false,
+      "org": "PeaceHealth",
+      "url": "https://www.peacehealth.org/sites/default/files/conflict-of-interest-policy.pdf",
+      "error": "HTTP 404",
+      "status": "failed"
+    },
+    {
+      "success": false,
+      "org": "Penn State Health",
+      "url": "https://www.pennstatehealth.org/sites/default/files/conflict-of-interest-policy.pdf",
+      "error": "HTTP 404",
+      "status": "failed"
+    },
+    {
+      "success": false,
+      "org": "Providence",
+      "url": "https://www.providence.org/-/media/project/psjh/shared/documents/compliance/conflict-of-interest-policy.pdf",
+      "error": "HTTP 404",
+      "status": "failed"
+    },
+    {
+      "success": false,
+      "org": "Rush University Medical Center",
+      "url": "https://www.rush.edu/sites/default/files/conflict-of-interest-policy.pdf",
+      "error": "HTTP 404",
+      "status": "failed"
+    },
+    {
+      "success": false,
+      "org": "Sanford Health",
+      "url": "https://www.sanfordhealth.org/-/media/org/files/compliance/conflict-of-interest-policy.pdf",
+      "error": "HTTP 404",
+      "status": "failed"
+    },
+    {
+      "success": false,
+      "org": "Scripps Health",
+      "url": "https://www.scripps.org/sparkle-assets/documents/conflict-of-interest-policy.pdf",
+      "error": "HTTP 404",
+      "status": "failed"
+    },
+    {
+      "success": false,
+      "org": "Seattle Children's",
+      "url": "https://www.seattlechildrens.org/globalassets/documents/healthcare-professionals/conflict-of-interest-policy.pdf",
+      "error": "HTTP 404",
+      "status": "failed"
+    },
+    {
+      "success": false,
+      "org": "Sharp HealthCare",
+      "url": "https://www.sharp.com/about/compliance/conflict-of-interest-policy.pdf",
+      "error": "HTTP 404",
+      "status": "failed"
+    },
+    {
+      "success": false,
+      "org": "Stanford Health Care",
+      "url": "https://stanfordhealthcare.org/content/dam/SHC/compliance/conflict-of-interest-policy.pdf",
+      "error": "HTTP 404",
+      "status": "failed"
+    },
+    {
+      "success": false,
+      "org": "Sutter Health",
+      "url": "https://www.sutterhealth.org/pdf/compliance/conflict-of-interest-policy.pdf",
+      "error": "HTTP 429",
+      "status": "failed"
+    },
+    {
+      "success": false,
+      "org": "Swedish Health Services",
+      "url": "https://www.swedish.org/about/compliance/conflict-of-interest-policy.pdf",
+      "error": "HTTP 404",
+      "status": "failed"
+    },
+    {
+      "success": false,
+      "org": "Tampa General Hospital",
+      "url": "https://www.tgh.org/sites/default/files/conflict-of-interest-policy.pdf",
+      "error": "HTTP 404",
+      "status": "failed"
+    },
+    {
+      "success": false,
+      "org": "Texas Children's Hospital",
+      "url": "https://www.texaschildrens.org/sites/default/files/conflict-of-interest-policy.pdf",
+      "error": "HTTP 404",
+      "status": "failed"
+    },
+    {
+      "success": false,
+      "org": "Trinity Health",
+      "url": "https://www.trinity-health.org/assets/documents/compliance/conflict-of-interest-policy.pdf",
+      "error": "HTTP 404",
+      "status": "failed"
+    },
+    {
+      "success": false,
+      "org": "UC Health",
+      "url": "https://www.uchealth.org/-/media/files/compliance/conflict-of-interest-policy.pdf",
+      "error": "HTTP 403",
+      "status": "failed"
+    },
+    {
+      "success": false,
+      "org": "UPMC",
+      "url": "https://www.upmc.com/-/media/upmc/about/compliance/conflict-of-interest-policy.pdf",
+      "error": "HTTP 404",
+      "status": "failed"
+    },
+    {
+      "success": false,
+      "org": "UnityPoint Health",
+      "url": "https://www.unitypoint.org/filesimages/compliance/conflict-of-interest-policy.pdf",
+      "error": "HTTP 404",
+      "status": "failed"
+    },
+    {
+      "success": false,
+      "org": "WellSpan Health",
+      "url": "https://www.wellspan.org/media/conflict-of-interest-policy.pdf",
+      "error": "HTTP 404",
+      "status": "failed"
+    },
+    {
+      "success": false,
+      "org": "Yale New Haven Health",
+      "url": "https://www.ynhh.org/-/media/files/ynhhs/compliance/conflict-of-interest-policy.pdf",
+      "error": "HTTP 403",
+      "status": "failed"
+    }
+  ]
+}

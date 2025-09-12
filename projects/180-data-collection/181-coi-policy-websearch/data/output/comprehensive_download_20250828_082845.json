@@ -1,0 +1,441 @@
+{
+  "timestamp": "2025-08-28T08:28:45.859343",
+  "total_attempted": 63,
+  "successful": 32,
+  "failed": 31,
+  "results": [
+    {
+      "success": true,
+      "org": "Albany Med Health System",
+      "filename": "data/raw/policies/Albany_Med_Health_System_262e8377.pdf",
+      "status": "already_exists"
+    },
+    {
+      "success": true,
+      "org": "American Cancer Society",
+      "url": "https://www.cancer.org/content/dam/cancer-org/online-documents/en/pdf/policies/financial-conflict-of-interest-policy.pdf",
+      "filename": "data/raw/policies/American_Cancer_Society_5062a593.pdf",
+      "size": 266334,
+      "status": "downloaded"
+    },
+    {
+      "success": true,
+      "org": "American College of Surgeons",
+      "filename": "data/raw/policies/American_College_of_Surgeons_2a1b07c0.pdf",
+      "status": "already_exists"
+    },
+    {
+      "success": true,
+      "org": "American Society of Gene & Cell Therapy",
+      "filename": "data/raw/policies/American_Society_of_Gene_and_Cell_Therapy_93698ffd.html",
+      "status": "already_exists"
+    },
+    {
+      "success": true,
+      "org": "American Society of Nephrology",
+      "url": "https://www.asn-online.org/terms/ASN_FCOI_Policy.pdf",
+      "filename": "data/raw/policies/American_Society_of_Nephrology_1b45cea0.pdf",
+      "size": 188042,
+      "status": "downloaded"
+    },
+    {
+      "success": true,
+      "org": "Atrium Health",
+      "url": "https://atriumhealth.org/documents/fcoi-chs-cor-40-17.pdf",
+      "filename": "data/raw/policies/Atrium_Health_9ce5badc.pdf",
+      "size": 59063,
+      "status": "downloaded"
+    },
+    {
+      "success": true,
+      "org": "Atrium Health Wake Forest Baptist",
+      "url": "https://www.wakehealth.edu/-/media/wakeforest/clinical/files/about-us/conflict-of-interest-policy.pdf",
+      "filename": "data/raw/policies/Atrium_Health_Wake_Forest_Baptist_216474d9.pdf",
+      "size": 943526,
+      "status": "downloaded"
+    },
+    {
+      "success": true,
+      "org": "Boston Children's Hospital",
+      "filename": "data/raw/policies/Boston_Children's_Hospital_c46d2ff9.pdf",
+      "status": "already_exists"
+    },
+    {
+      "success": true,
+      "org": "Brown University Health",
+      "filename": "data/raw/policies/Brown_University_Health_e91df176.pdf",
+      "status": "already_exists"
+    },
+    {
+      "success": true,
+      "org": "Children's Mercy",
+      "filename": "data/raw/policies/Children's_Mercy_ecc1d37b.pdf",
+      "status": "already_exists"
+    },
+    {
+      "success": true,
+      "org": "Children's National Hospital",
+      "url": "https://childrensnational.org/-/media/cnhs-site/files/research-and-education/conflict-of-interest-policy.pdf?la=en",
+      "filename": "data/raw/policies/Children's_National_Hospital_938f5b50.pdf",
+      "size": 313921,
+      "status": "downloaded"
+    },
+    {
+      "success": true,
+      "org": "GE HealthCare",
+      "url": "https://www.gehealthcare.com/-/media/GEHC/US/Files/About-Us/Suppliers/Terms-and-conditions/Disclosures/FinancialDisclosures--ConflictsPolicyrelatedPHSFundedResearchWebsite",
+      "filename": "data/raw/policies/GE_HealthCare_1aed756b.pdf",
+      "size": 391684,
+      "status": "downloaded"
+    },
+    {
+      "success": true,
+      "org": "Hospital for Special Surgery",
+      "filename": "data/raw/policies/Hospital_for_Special_Surgery_3596a506.pdf",
+      "status": "already_exists"
+    },
+    {
+      "success": true,
+      "org": "Intermountain Healthcare",
+      "filename": "data/raw/policies/Intermountain_Healthcare_dc199ce1.pdf",
+      "status": "already_exists"
+    },
+    {
+      "success": true,
+      "org": "La Jolla Institute for Immunology",
+      "url": "https://www.lji.org/lji-conflict-of-interest-policy-2022/",
+      "filename": "data/raw/policies/La_Jolla_Institute_for_Immunology_ae60ab74.html",
+      "size": 527238,
+      "status": "downloaded"
+    },
+    {
+      "success": true,
+      "org": "Mayo Clinic",
+      "filename": "data/raw/policies/Mayo_Clinic_2c6f29e4.pdf",
+      "status": "already_exists"
+    },
+    {
+      "success": true,
+      "org": "Mayo Clinic Research",
+      "filename": "data/raw/policies/Mayo_Clinic_Research_d5ff9687.pdf",
+      "status": "already_exists"
+    },
+    {
+      "success": true,
+      "org": "Memorial Sloan Kettering",
+      "filename": "data/raw/policies/Memorial_Sloan_Kettering_5d2de1c8.pdf",
+      "status": "already_exists"
+    },
+    {
+      "success": true,
+      "org": "National Bureau of Economic Research",
+      "url": "https://www.nber.org/sites/default/files/2020-02/NBER_ResearchFCOI_Policy.pdf",
+      "filename": "data/raw/policies/National_Bureau_of_Economic_Research_4812b0ce.pdf",
+      "size": 71210,
+      "status": "downloaded"
+    },
+    {
+      "success": true,
+      "org": "Nemours Children's Health",
+      "filename": "data/raw/policies/Nemours_Children's_Health_a1da3148.pdf",
+      "status": "already_exists"
+    },
+    {
+      "success": true,
+      "org": "Northwestern Medicine",
+      "filename": "data/raw/policies/Northwestern_Medicine_ac29457b.html",
+      "status": "already_exists"
+    },
+    {
+      "success": true,
+      "org": "Osivax",
+      "filename": "data/raw/policies/Osivax_3fecde57.pdf",
+      "status": "already_exists"
+    },
+    {
+      "success": true,
+      "org": "Penn Medicine",
+      "filename": "data/raw/policies/Penn_Medicine_b213a917.pdf",
+      "status": "already_exists"
+    },
+    {
+      "success": true,
+      "org": "Public Health Institute",
+      "url": "https://www.phi.org/wp-content/uploads/2021/01/Public-Health-Institute-Financial-Conflict-of-Interest-Policy.pdf",
+      "filename": "data/raw/policies/Public_Health_Institute_35d3596f.pdf",
+      "size": 482752,
+      "status": "downloaded"
+    },
+    {
+      "success": true,
+      "org": "Stanley Manne Children's Research Institute",
+      "filename": "data/raw/policies/Stanley_Manne_Children's_Research_Institute_3283f4ec.pdf",
+      "status": "already_exists"
+    },
+    {
+      "success": true,
+      "org": "Stony Brook Medicine",
+      "filename": "data/raw/policies/Stony_Brook_Medicine_69c2aaad.pdf",
+      "status": "already_exists"
+    },
+    {
+      "success": true,
+      "org": "UCSF Medical",
+      "url": "https://policies.ucsf.edu/policy/100-20",
+      "filename": "data/raw/policies/UCSF_Medical_f58c1cd7.pdf",
+      "size": 17604,
+      "status": "downloaded"
+    },
+    {
+      "success": true,
+      "org": "Unity Health Toronto",
+      "filename": "data/raw/policies/Unity_Health_Toronto_19968447.pdf",
+      "status": "already_exists"
+    },
+    {
+      "success": true,
+      "org": "University of Colorado Anschutz",
+      "url": "https://research.cuanschutz.edu/docs/librariesprovider178/coi-resources/federal-regulations/coi-policy-and-procedures-_version-13_final.pdf?sfvrsn=bced37bb_2",
+      "filename": "data/raw/policies/University_of_Colorado_Anschutz_a24df40a.pdf",
+      "size": 431915,
+      "status": "downloaded"
+    },
+    {
+      "success": true,
+      "org": "University of South Carolina",
+      "filename": "data/raw/policies/University_of_South_Carolina_d5040e36.pdf",
+      "status": "already_exists"
+    },
+    {
+      "success": true,
+      "org": "Virtua Health",
+      "filename": "data/raw/policies/Virtua_Health_5bb10d3a.pdf",
+      "status": "already_exists"
+    },
+    {
+      "success": true,
+      "org": "Vitalant Research Institute",
+      "url": "https://research.vitalant.org/getattachment/Objectivity-in-Research/HRG0156_policy.pdf.aspx?lang=en-US",
+      "filename": "data/raw/policies/Vitalant_Research_Institute_af2e5cc3.pdf",
+      "size": 105124,
+      "status": "downloaded"
+    },
+    {
+      "success": false,
+      "org": "Ascension Health",
+      "url": "https://healthcare.ascension.org/-/media/healthcare/compliance/conflict-of-interest-policy.pdf",
+      "error": "HTTP 404",
+      "status": "failed"
+    },
+    {
+      "success": false,
+      "org": "Atrium Health Carolina",
+      "url": "https://atriumhealth.org/-/media/atrium/documents/coi-policy.pdf",
+      "error": "HTTP 404",
+      "status": "failed"
+    },
+    {
+      "success": false,
+      "org": "Banner Health",
+      "url": "https://www.bannerhealth.com/-/media/files/project/bh/coi-policy.pdf",
+      "error": "HTTP 404",
+      "status": "failed"
+    },
+    {
+      "success": false,
+      "org": "Baylor Scott & White",
+      "url": "https://www.bswhealth.com/SiteCollectionDocuments/about/compliance/conflict-of-interest-policy.pdf",
+      "error": "HTTP 404",
+      "status": "failed"
+    },
+    {
+      "success": false,
+      "org": "Cedars-Sinai",
+      "url": "https://www.cedars-sinai.org/content/dam/cedars-sinai/research/documents/irb/conflict-of-interest-policy.pdf",
+      "error": "HTTP 404",
+      "status": "failed"
+    },
+    {
+      "success": false,
+      "org": "Cleveland Clinic",
+      "url": "https://my.clevelandclinic.org/-/scassets/files/org/about/integrity-agreement.pdf",
+      "error": "HTTP 404",
+      "status": "failed"
+    },
+    {
+      "success": false,
+      "org": "Columbia University Medical",
+      "url": "https://www.cuimc.columbia.edu/research/conflict-interest-and-research",
+      "error": "HTTP 404",
+      "status": "failed"
+    },
+    {
+      "success": false,
+      "org": "CommonSpirit Health",
+      "url": "https://www.commonspirit.org/content/dam/commonspirit/pdfs/Conflict-of-Interest-Policy.pdf",
+      "error": "HTTP 404",
+      "status": "failed"
+    },
+    {
+      "success": false,
+      "org": "Duke Health",
+      "url": "https://policies.duke.edu/sites/default/files/2020-03/COI_Policy.pdf",
+      "error": "HTTP 404",
+      "status": "failed"
+    },
+    {
+      "success": false,
+      "org": "Emory Healthcare",
+      "url": "https://www.emoryhealthcare.org/ui/pdfs/vendor-coi-policy.pdf",
+      "error": "HTTP 404",
+      "status": "failed"
+    },
+    {
+      "success": false,
+      "org": "HCA Healthcare",
+      "url": "https://hcahealthcare.com/util/documents/ethics/conflict-of-interest-policy.pdf",
+      "error": "HTTP 404",
+      "status": "failed"
+    },
+    {
+      "success": false,
+      "org": "Harvard Medical School",
+      "url": "https://hms.harvard.edu/sites/default/files/assets/Sites/Integrity/files/HMS_COI_Policy.pdf",
+      "error": "HTTP 404",
+      "status": "failed"
+    },
+    {
+      "success": false,
+      "org": "Houston Methodist",
+      "url": "https://www.houstonmethodist.org/-/media/pdf/for-health-professionals/hmri/coi-policy.pdf",
+      "error": "HTTP 404",
+      "status": "failed"
+    },
+    {
+      "success": false,
+      "org": "Johns Hopkins Medicine",
+      "url": "https://www.hopkinsmedicine.org/research/resources/offices-policies/ora/policies/conflict_of_interest.html",
+      "error": "HTTP 403",
+      "status": "failed"
+    },
+    {
+      "success": false,
+      "org": "Kaiser Permanente",
+      "url": "https://healthy.kaiserpermanente.org/content/dam/kporg/final/documents/directories/codes-of-conduct/principles-responsibilities-medical-group-en.pdf",
+      "error": "HTTP 404",
+      "status": "failed"
+    },
+    {
+      "success": false,
+      "org": "Mass General Brigham",
+      "url": "https://www.massgeneralbrigham.org/notices/conflict-of-interest",
+      "error": "HTTP 404",
+      "status": "failed"
+    },
+    {
+      "success": false,
+      "org": "Michigan Medicine",
+      "url": "https://www.uofmhealth.org/provider/policies/conflict-of-interest",
+      "error": "HTTP 404",
+      "status": "failed"
+    },
+    {
+      "success": false,
+      "org": "Mount Sinai Health",
+      "url": "https://icahn.mssm.edu/files/ISMMS/Assets/Research/COI/coi_policy.pdf",
+      "error": "HTTP 404",
+      "status": "failed"
+    },
+    {
+      "success": false,
+      "org": "NYU Langone",
+      "url": "https://med.nyu.edu/research/office-science-research/conflict-interest",
+      "error": "HTTP 404",
+      "status": "failed"
+    },
+    {
+      "success": false,
+      "org": "Prisma Health",
+      "url": "https://prismahealth.org/getmedia/76a9ff04-3a2a-47d3-9aa0-e503883bca2e/Prisma-Health-Conflict-of-Interest.pdf",
+      "error": "HTTP 403",
+      "status": "failed"
+    },
+    {
+      "success": false,
+      "org": "Providence Health",
+      "url": "https://www.providence.org/-/media/Project/psjh/providence/socal/Files/about/compliance/coi-policy.pdf",
+      "error": "HTTP 404",
+      "status": "failed"
+    },
+    {
+      "success": false,
+      "org": "Stanford Medicine",
+      "url": "https://med.stanford.edu/coi/documents/stanford-som-coi-policy.pdf",
+      "error": "HTTP 404",
+      "status": "failed"
+    },
+    {
+      "success": false,
+      "org": "Sutter Health",
+      "url": "https://www.sutterhealth.org/pdf/vendors/conflict-of-interest-policy.pdf",
+      "error": "HTTP 429",
+      "status": "failed"
+    },
+    {
+      "success": false,
+      "org": "UCLA Medical",
+      "url": "https://medschool.ucla.edu/sites/default/files/site/coi-policy-2020.pdf",
+      "error": "HTTP 404",
+      "status": "failed"
+    },
+    {
+      "success": false,
+      "org": "UCSD Health",
+      "url": "https://blink.ucsd.edu/research/compliance/conflict-of-interest/index.html",
+      "error": "HTTP 404",
+      "status": "failed"
+    },
+    {
+      "success": false,
+      "org": "UNC Health",
+      "url": "https://research.unc.edu/human-research-ethics/researchers/conflict-of-interest/",
+      "error": "HTTP 404",
+      "status": "failed"
+    },
+    {
+      "success": false,
+      "org": "UPMC",
+      "url": "https://www.upmc.com/-/media/upmc/about/compliance/documents/conflictofinterestpolicy.pdf",
+      "error": "HTTP 404",
+      "status": "failed"
+    },
+    {
+      "success": false,
+      "org": "University of Pittsburgh Medical",
+      "url": "https://www.coi.pitt.edu/sites/default/files/documents/CoI%20Policy.pdf",
+      "error": "HTTP 404",
+      "status": "failed"
+    },
+    {
+      "success": false,
+      "org": "Vanderbilt Medical",
+      "url": "https://www.vanderbilt.edu/generalcounsel/files/COI_Policy.pdf",
+      "error": "HTTP 404",
+      "status": "failed"
+    },
+    {
+      "success": false,
+      "org": "Washington University Medical",
+      "url": "https://research.wustl.edu/conflict-of-interest-financial-disclosure/",
+      "error": "HTTP 404",
+      "status": "failed"
+    },
+    {
+      "success": false,
+      "org": "Yale New Haven Health",
+      "url": "https://medicine.yale.edu/research/human-research/resources/policies/conflictofinterest/",
+      "error": "HTTP 404",
+      "status": "failed"
+    }
+  ]
+}

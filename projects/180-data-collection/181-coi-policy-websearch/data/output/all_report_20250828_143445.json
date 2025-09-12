@@ -1,0 +1,232 @@
+{
+  "timestamp": "2025-08-28T14:34:45.500839",
+  "collection_name": "all",
+  "total_attempted": 33,
+  "successful": 1,
+  "already_exist": 10,
+  "failed": 22,
+  "results": [
+    {
+      "success": true,
+      "org": "Boston Children's Hospital",
+      "filename": "data/raw/policies/Boston_Children's_Hospital_c46d2ff9.pdf",
+      "status": "already_exists"
+    },
+    {
+      "success": true,
+      "org": "Children's Hospital of Philadelphia",
+      "filename": "data/raw/policies/Children's_Hospital_of_Philadelphia_e0f5d0a6.pdf",
+      "status": "already_exists"
+    },
+    {
+      "success": true,
+      "org": "Children's Mercy",
+      "filename": "data/raw/policies/Children's_Mercy_ecc1d37b.pdf",
+      "status": "already_exists"
+    },
+    {
+      "success": true,
+      "org": "Children's National Hospital",
+      "filename": "data/raw/policies/Children's_National_Hospital_938f5b50.pdf",
+      "status": "already_exists"
+    },
+    {
+      "success": true,
+      "org": "Johns Hopkins Medicine",
+      "url": "https://www.hopkinsmedicine.org/research/resources/offices-policies/ora/policies/conflict_of_interest.html",
+      "filename": "data/raw/policies/Johns_Hopkins_Medicine_9408bf44.html",
+      "size": 43392,
+      "status": "downloaded"
+    },
+    {
+      "success": true,
+      "org": "Mayo Clinic",
+      "filename": "data/raw/policies/Mayo_Clinic_2c6f29e4.pdf",
+      "status": "already_exists"
+    },
+    {
+      "success": true,
+      "org": "Nemours Children's Health",
+      "filename": "data/raw/policies/Nemours_Children's_Health_a1da3148.pdf",
+      "status": "already_exists"
+    },
+    {
+      "success": true,
+      "org": "Northwestern Medicine",
+      "filename": "data/raw/policies/Northwestern_Medicine_ac29457b.html",
+      "status": "already_exists"
+    },
+    {
+      "success": true,
+      "org": "Penn Medicine",
+      "filename": "data/raw/policies/Penn_Medicine_b213a917.pdf",
+      "status": "already_exists"
+    },
+    {
+      "success": true,
+      "org": "Stanley Manne Children's Research Institute",
+      "filename": "data/raw/policies/Stanley_Manne_Children's_Research_Institute_3283f4ec.pdf",
+      "status": "already_exists"
+    },
+    {
+      "success": true,
+      "org": "UCSF Medical",
+      "filename": "data/raw/policies/UCSF_Medical_f58c1cd7.pdf",
+      "status": "already_exists"
+    },
+    {
+      "success": false,
+      "org": "Cedars-Sinai",
+      "url": "https://www.cedars-sinai.org/content/dam/cedars-sinai/research/documents/irb/conflict-of-interest-policy.pdf",
+      "error": "HTTP 404",
+      "status": "failed"
+    },
+    {
+      "success": false,
+      "org": "Children's Healthcare of Atlanta",
+      "url": "https://www.choa.org/-/media/files/choa/documents/compliance/conflict-of-interest-policy.pdf",
+      "error": "HTTP 404",
+      "status": "failed"
+    },
+    {
+      "success": false,
+      "org": "Children's Hospital Colorado",
+      "url": "https://www.childrenscolorado.org/globalassets/documents/healthcare-professionals/conflict-of-interest-policy.pdf",
+      "error": "HTTP 404",
+      "status": "failed"
+    },
+    {
+      "success": false,
+      "org": "Children's Hospital Los Angeles",
+      "url": "https://www.chla.org/sites/default/files/atoms/files/conflict-of-interest-policy.pdf",
+      "error": "HTTP 404",
+      "status": "failed"
+    },
+    {
+      "success": false,
+      "org": "Cincinnati Children's",
+      "url": "https://www.cincinnatichildrens.org/-/media/cincinnati-childrens/home/research/compliance/conflict-of-interest-policy.pdf",
+      "error": "HTTP 404",
+      "status": "failed"
+    },
+    {
+      "success": false,
+      "org": "Cleveland Clinic",
+      "url": "https://my.clevelandclinic.org/-/scassets/files/org/about/integrity-agreement.pdf",
+      "error": "HTTP 404",
+      "status": "failed"
+    },
+    {
+      "success": false,
+      "org": "Columbia University Medical",
+      "url": "https://www.cuimc.columbia.edu/research/conflict-interest-and-research",
+      "error": "HTTP 404",
+      "status": "failed"
+    },
+    {
+      "success": false,
+      "org": "Duke Health",
+      "url": "https://policies.duke.edu/sites/default/files/2020-03/COI_Policy.pdf",
+      "error": "HTTP 404",
+      "status": "failed"
+    },
+    {
+      "success": false,
+      "org": "Emory Healthcare",
+      "url": "https://www.emoryhealthcare.org/ui/pdfs/vendor-coi-policy.pdf",
+      "error": "HTTP 404",
+      "status": "failed"
+    },
+    {
+      "success": false,
+      "org": "Mass General Brigham",
+      "url": "https://www.massgeneralbrigham.org/notices/conflict-of-interest",
+      "error": "HTTP 404",
+      "status": "failed"
+    },
+    {
+      "success": false,
+      "org": "Michigan Medicine",
+      "url": "https://www.uofmhealth.org/provider/policies/conflict-of-interest",
+      "error": "HTTP 404",
+      "status": "failed"
+    },
+    {
+      "success": false,
+      "org": "Mount Sinai Health",
+      "url": "https://icahn.mssm.edu/files/ISMMS/Assets/Research/COI/coi_policy.pdf",
+      "error": "HTTP 404",
+      "status": "failed"
+    },
+    {
+      "success": false,
+      "org": "NYU Langone",
+      "url": "https://med.nyu.edu/research/office-science-research/conflict-interest",
+      "error": "HTTP 404",
+      "status": "failed"
+    },
+    {
+      "success": false,
+      "org": "Nationwide Children's Hospital",
+      "url": "https://www.nationwidechildrens.org/-/media/nch/documents/compliance/conflict-of-interest-policy.pdf",
+      "error": "HTTP 404",
+      "status": "failed"
+    },
+    {
+      "success": false,
+      "org": "NewYork-Presbyterian",
+      "url": "https://www.nyp.org/documents/conflict-of-interest-policy.pdf",
+      "error": "HTTP 404",
+      "status": "failed"
+    },
+    {
+      "success": false,
+      "org": "Seattle Children's",
+      "url": "https://www.seattlechildrens.org/globalassets/documents/healthcare-professionals/conflict-of-interest-policy.pdf",
+      "error": "HTTP 404",
+      "status": "failed"
+    },
+    {
+      "success": false,
+      "org": "Stanford Medicine",
+      "url": "https://med.stanford.edu/coi/documents/stanford-som-coi-policy.pdf",
+      "error": "HTTP 404",
+      "status": "failed"
+    },
+    {
+      "success": false,
+      "org": "Texas Children's Hospital",
+      "url": "https://www.texaschildrens.org/sites/default/files/conflict-of-interest-policy.pdf",
+      "error": "HTTP 404",
+      "status": "failed"
+    },
+    {
+      "success": false,
+      "org": "UCLA Medical",
+      "url": "https://medschool.ucla.edu/sites/default/files/site/coi-policy-2020.pdf",
+      "error": "HTTP 404",
+      "status": "failed"
+    },
+    {
+      "success": false,
+      "org": "UPMC",
+      "url": "https://www.upmc.com/-/media/upmc/about/compliance/documents/conflictofinterestpolicy.pdf",
+      "error": "HTTP 404",
+      "status": "failed"
+    },
+    {
+      "success": false,
+      "org": "Vanderbilt Medical",
+      "url": "https://www.vanderbilt.edu/generalcounsel/files/COI_Policy.pdf",
+      "error": "HTTP 404",
+      "status": "failed"
+    },
+    {
+      "success": false,
+      "org": "Yale New Haven Health",
+      "url": "https://medicine.yale.edu/research/human-research/resources/policies/conflictofinterest/",
+      "error": "HTTP 404",
+      "status": "failed"
+    }
+  ]
+}

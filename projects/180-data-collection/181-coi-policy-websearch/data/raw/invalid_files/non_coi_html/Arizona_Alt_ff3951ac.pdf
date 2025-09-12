@@ -1,0 +1,1110 @@
+﻿<!doctype html>
+<html lang="en"><!-- InstanceBegin template="/Templates/azahcccs_main.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="">
+<meta name="author" content="">
+
+
+
+﻿<!doctype html>
+
+<!-- Azure Migration - Commented GTM Section -->
+ <!-- Google Tag Manager -->
+<!--<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-NLV7D6T');</script>-->
+<!-- End Google Tag Manager -->
+
+
+ <!-- Bootstrap Core CSS -->
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
+    
+     <!-- Bootstrap Accessibility CSS -->
+    <link href="/css/bootstrap-accessibility.css" rel="stylesheet">
+
+    <!-- Custom Theme CSS -->
+    <link href="/css/half-slider.css" rel="stylesheet">
+    
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <!-- Plugin CSS -->
+    <link rel="stylesheet" type="text/css" href="/css/yamm.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,300,600,400" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" type="text/css" href="/plugins/BacktoTop/demo/css/backTop.css">
+    
+    <!-- AHCCCS CSS -->
+<!--	<link rel="stylesheet" type="text/css" href="css/navigation.css">
+-->    <link rel="stylesheet" type="text/css" href="/css/wholesitestyle.css?v=1.4">
+
+<!-- Font Awesome -->
+<!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">-->
+<link rel="stylesheet" type="text/css" href="/fonts/font-awesome-4.5.0/css/font-awesome.min.css">
+<link rel="stylesheet" type="text/css" href="/fonts/fontawesome-free-6.4.2-web/css/all.min.css">
+<!-- Favicon -->
+<link rel="shortcut icon" href="/AHCCCSFavicon.ico" type="image/x-icon" />
+
+<!-- Google Site Ownership Verification -->
+<meta name="google-site-verification" content="yVNq2wCOvLS1LByf35usOEN12X_fEGUuk2FMtyBuWRw" />
+
+    <!-- CSS for AVA Chat -->
+    <link rel="stylesheet" href="/css/ava.css?v=2.1" />
+
+<!-- InstanceBeginEditable name="doctitle" -->
+<meta http-equiv="refresh" content="7;URL=https://azahcccs.gov" />
+
+<title>Page/Document not found</title>
+
+<!-- InstanceEndEditable -->
+<!-- InstanceBeginEditable name="head" -->
+<!-- InstanceEndEditable -->
+</head>
+
+<body>
+﻿<!doctype html>
+
+<!-- Azure Migration - Commented GTM Section -->
+<!-- Google Tag Manager (noscript) -->
+<!--<noscript>
+<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NLV7D6T"
+height="0" width="0" style="display:none;visibility:hidden"></iframe>
+</noscript>-->
+<!-- End Google Tag Manager (noscript) -->
+
+<!-- Global site tag (gtag.js) - Google Analytics 4 implementation -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-CJKBYY2DK4"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-CJKBYY2DK4');
+</script>
+<!-- End Google Analytics 4 implementation -->
+<style>
+.skip-link {
+  position: absolute;
+  overflow: hidden;
+  top: auto;
+  left: -10000px;
+  width: 1px;
+  height: 1px;
+}
+
+.skip-link:focus {
+  top: 50px;
+  left: 0px;
+  width: auto;
+  height: auto;
+}
+</style>
+
+<!-- header -->
+<a href="#maincontent" class="skip-link" role="link"
+       aria-label="Skip directly to main content">Skip to Main Content</a>
+
+
+<header id="banner" class="container">
+  <div class="center-block">
+    <div class="col-md-3"> <a href="/" tabindex="-1" aria-hidden="true"><img src="/img/AHCCCSLogo.PNG" alt="" id="banner-left" style="max-width:100%;"/></a> </div>
+    <div class="col-md-5"> <img src="/img/AHCCCSHeader.jpg" alt="" id="banner-right" style="max-width:100%;"/> </div>
+    <div class="col-md-4"> 
+      <script>
+  (function() {  
+    var cx = '016416319741515762556:nfpz2wqmsus';
+    var gcse = document.createElement('script');
+    gcse.type = 'text/javascript';
+    gcse.async = true;
+    gcse.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') +
+        '//cse.google.com/cse.js?cx=' + cx;
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(gcse, s);
+  })();
+</script> 
+      <!-- Default sorting by Relevance -->
+      <gcse:searchbox-only enableAutoComplete="true" resultsURL ="/searchresults.html" sort_by=""></gcse:searchbox-only>
+      <div> <small><a href="/advancedsearch.html">Advanced search</a></small> </div>
+      <!--<div>
+      	 <img src='/img/twitter.png'/>
+      	 <img src='/img/wordpress.png'/>
+	  </div>--> 
+    </div>
+  </div>
+</header>
+
+<!-- Navigation -->
+<div id="topNavWrapper">
+  <nav id="topnavbar" class="navbar navbar-default navbar-static-top yamm" role="navigation" aria-label="Main">
+    <div class="container"> 
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#topnav-menu"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+        <!--                <a class="navbar-brand" href="#">Start Bootstrap</a>
+--> 
+      </div>
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse" id="topnav-menu" role="navigation">
+	<ul  class="nav navbar-nav">
+		<li> <a href="/">HOME</a> </li>
+		<li class="dropdown">
+			<a href="#" class="dropdown-toggle" data-toggle="dropdown">AHCCCS INFO</a>
+			<ul class="dropdown-menu">
+				<li>
+					<div class="yamm-content">
+						<div class="row">
+							<ul class="col-sm-6 list-unstyled">
+								<li>
+									<p class="h3"> <a href="/AHCCCS/AboutUs/index.html">About Us</a> </p>
+								</li>
+								<li><a href="/shared/acronyms.html">Acronyms</a></li>
+								<li><a href="/AHCCCS/AboutUs/programdescription.html">AHCCCS Programs</a></li>
+								<li><a href="/AHCCCS/AboutUs/awardsandstudies.html">Awards &amp; Studies</a></li>
+								<!--<li><a href="/AHCCCS/AboutUs/directorbiography.html">Director's Biography</a></li>-->
+								<li><a href="/shared/news.html">News &amp; Press Releases</a></li>
+								<li><a href="/AHCCCS/PublicNotices/CommunityPresentations.html">Community Presentations</a></li>
+								<li><a href="/AHCCCS/AboutUs/#CStrategicPlan">Strategic Plan</a></li>
+								<li>
+									<p class="h3"> <a href="/AHCCCS/PublicNotices/">Public Notices</a> </p>
+								</li>
+								<li><a href="/AHCCCS/AboutUs/PrivateSectorPartners/">Private Sector Partners</a></li>
+								<li>
+									<p class="h3"> <a href="/AHCCCS/ProgramPlanning/">Program Planning</a> </p>
+								</li>
+								<li>
+									<p class="h3"> <a href="/AHCCCS/HealthcareAdvocacy/">Healthcare Advocacy</a> </p>
+								</li>
+								
+								<li><a href="/AHCCCS/HealthcareAdvocacy/ohr.html">Office of Human Rights</a></li>
+								<li><a href="/AHCCCS/HealthcareAdvocacy/OIFA.html">Office of Individual and Family Affairs</a></li>
+								<li><a href="/Members/AlreadyCovered/MemberResources/Foster/">Resources for Foster/Kinship/Adoptive Families</a></li>
+							</ul>
+							<ul class="col-sm-6 list-unstyled">
+								<li>
+									<p class="h3"> <a href="/AHCCCS/Initiatives/">Initiatives</a> </p>
+								</li>
+								<li><a href="/AHCCCS/Initiatives/BehavioralHealthServices/">Accessing Behavioral Health Services in Schools</a></li>
+								<li><a href="/AHCCCS/Initiatives/AHCCCSCompleteCare/">AHCCCS Complete Care</a></li>
+								<li><a href="/AHCCCS/Initiatives/AHCCCSWPCI/">AHCCCS Whole Person Care Initiative (WPCI)</a></li>
+								<li><a href="/AHCCCS/Initiatives/ArizonaOlmsteadPlan/">Arizona Olmstead Plan</a></li>
+								<li><a href="/AHCCCS/Initiatives/CareCoordination/">Care Coordination &amp; Integration</a></li>
+                                <li><a href="/PlansProviders/OtherProviderProgramsAndInitiatives/qualifyingproviders.html">Differential Adjusted Payments (DAP)</a></li>
+								<li><a href="/AHCCCS/Initiatives/EVV/">Electronic Visit Verification</a></li>
+								<!--<li><a href="/AHCCCS/Initiatives/ET3/">Emergency Triage, Treat and Transport (ET3)</a></li>-->
+								<li><a href="/AHCCCS/Initiatives/AHP/">AHCCCS Housing Programs</a></li>
+								<!-- <li><a href="/AHCCCS/Initiatives/HEC/">Health Equity Committee</a></li> -->
+								<li><a href="/AHCCCS/Initiatives/HIT/">Health Information Technology (HIT)</a></li>
+                                <li><a href="/AHCCCS/Initiatives/MES/" >MES Modernization Program</a></li><!---->
+								<li><a href="/AHCCCS/Initiatives/PaymentModernization/">Payment Modernization</a></li>
+								<li><a href="/PlansProviders/TargetedInvestments/">Targeted Investments</a></li>
+								<li><a href="/AHCCCS/Initiatives/Telehealth/">Telehealth Services</a></li>
+								<li>
+									<p class="h3"> <a href="/AHCCCS/CommitteesAndWorkgroups/">Committees and Workgroups</a> </p>
+								</li>
+								<li>
+									<p class="h3"> <a href="/ahcccs/transparency/">Transparency</a> </p>
+								</li>
+                                
+							</ul>
+						</div>
+					</div>
+				</li>
+			</ul>
+		</li>
+		<li class="dropdown">
+			<a href="#" class="dropdown-toggle" data-toggle="dropdown">MEMBERS/APPLICANTS</a>
+			<ul class="dropdown-menu">
+				<li>
+					<div class="yamm-content">
+						<div class="row">
+							<ul class="col-sm-6 list-unstyled">
+								<li>
+									<p class="h3"> <a href="/Members/ProgramsAndCoveredServices/">Programs &amp; Covered Services</a> </p>
+								</li>
+								<li><a href="/Members/ProgramsAndCoveredServices/availablehealthplans.html">Available Health Plans</a></li>
+								<li><a href="/Members/ProgramsAndCoveredServices/ProviderListings/">Online Provider Directory</a></li>
+								<li>
+									<p class="h3"><a href="/Members/BehavioralHealthServices/">Behavioral Health Services</a></p>
+								</li>
+								<li><a href="/Members/BehavioralHealthServices/OpioidUseDisorderAndTreatment/">Opioid Use Disorder and Treatment</a></li>
+								<li><a href="/Members/AlreadyCovered/MemberResources/SMIDesignation.html">SMI Designation &amp; Service</a></li>
+								<li>
+									<p class="h3"><a href="/Members/GetCovered/">Get Covered</a></p>
+								</li>
+								<li><a href="/Members/GetCovered/apply.html">How To Apply</a></li>
+								<li><a href="/Members/AlreadyCovered/PremiumsandCopayments/copayments.html">Potential Costs</a></li>
+								<li><a href="/Members/AlreadyCovered/RightsAndResponsibilities/">Rights &amp; Responsibilities</a></li>
+								<li>
+									<p class="h3"><a href="/ACMS/default.aspx" target="_blank">Report Concerns About Quality of Care Received</a></p>
+								</li>
+							</ul>
+							<ul class="col-sm-6 list-unstyled">
+								<li>
+									<p class="h3"> <a href="/Members/AlreadyCovered/coveredservices.html">Already Covered</a> </p>
+								</li>
+								<li><a href="/Members/AlreadyCovered/coveredservices.html">Covered Services</a></li>
+								<li><a href="/Members/AlreadyCovered/EligibilityInformation.html">Eligibility Information</a></li>
+								<li><a href="/Members/membernews.html">Member News</a></li>
+								<li><a href="/Members/AlreadyCovered/PremiumsandCopayments/copayments.html">Copayments</a></li>
+								<li><a href="/Members/AlreadyCovered/PremiumsandCopayments/premiums.html">Premium Payments</a></li>
+								<li><a href="/Members/AlreadyCovered/MemberResources/">Member Resources</a></li>
+								<li><a href="/Members/AlreadyCovered/RightsAndResponsibilities/">Rights &amp; Responsibilities</a></li>
+								<li>
+									<p class="h3"><a href="/Members/Publications/">AHCCCS Publications</a></p>
+								</li>
+								<li>
+									<p class="h3"><a href="/Resources/guidesmanualspolicies/eligibilitypolicy/eligibilitypolicymanual/index.html#t=Introduction%2FHome.htm">Eligibility Policy Manual</a></p>
+								</li>
+								<li>
+									<p class="h3"><a href="/Members/Pharmacy/">Pharmacy</a></p>
+								</li>
+                                <li><p class="h3"><a href="/Members/UnauthorizedMarketplaceEnrollment.html">Unauthorized Marketplace Plan Enrollment</a></p>
+                                    </li>
+							</ul>
+						</div>
+					</div>
+				</li>
+			</ul>
+		</li>
+		<li class="dropdown yamm-fw">
+			<a href="#" class="dropdown-toggle" data-toggle="dropdown">PLANS/PROVIDERS</a>
+			<ul class="dropdown-menu">
+				<li>
+					<div class="yamm-content">
+						<div class="row">
+							<div class="col-md-4">
+								<ul class="list-unstyled">
+									<li><p class="h3"> <a href="https://ao.azahcccs.gov/" target="_blank" rel="noreferrer">AHCCCS Online</a> </p></li>
+                                    <li>
+										<p class="h3"> <a href="/APEP">AHCCCS Provider Enrollment Portal (APEP)</a> </p>
+									</li>
+									<li><p class="h3"> <a href="https://qmportal.azahcccs.gov/Account/Login.aspx" target="_blank" rel="noreferrer">QM Portal</a> </p></li>
+									<hr>
+									<li>
+										<p class="h3"> <a href="/PlansProviders/HealthPlans/encounters.html">Health Plans</a> </p>
+									</li>
+									<li><a href="/PlansProviders/HealthPlans/meetingsevents.html">MCO Update Meetings</a></li>
+									<li><a href="/PlansProviders/HealthPlans/minimumsubcontractprovisions.html">Minimum Subcontract Provisions</a></li>
+									<li><a href="/PlansProviders/HealthPlans/tpl.html">Reporting Third-Party Liability</a></li>
+									<li><a href="/PlansProviders/HealthPlans/emcr.html">ALTCS Electronic Member Change Request (EMCR)</a></li>
+									<li><a href="/PlansProviders/HealthPlans/purchasing.html">Solicitations &amp; Contracts</a></li>
+									<li><a href="/PlansProviders/HealthPlans/encounters.html">Encounters</a></li>
+									<li><a href="/PlansProviders/HealthPlans/Reinsurance/">Reinsurance</a></li>
+									<li><a href="/PlansProviders/HealthPlans/strategy.html">Quality Assessment and Performance Improvement Strategy</a></li>
+									<li><a href="/PlansProviders/HealthPlans/technicalconsortiumandworkgroups.html">Technical Consortium and Workgroups</a></li>
+								</ul>
+								<ul class="list-unstyled">
+									<li>
+										<p class="h3"><a href="/PlansProviders/FeeForServiceHealthPlans/">Fee-For-Service Health Plans</a></p>
+									</li>
+									<li><a href="/PlansProviders/FeeForServiceHealthPlans/PriorAuthorization/index.html">Prior Authorization</a></li>
+									<li><a href="/PlansProviders/RatesAndBilling/FFS/claimscustomerservice.html">Claims</a></li>
+									<li><a href="/PlansProviders/FeeForServiceHealthPlans/ProgramsAndPopulations/">Programs and Populations</a></li>
+									<li><a href="/PlansProviders/FeeForServiceHealthPlans/MedicareSavingsPrograms/">Medicare Savings Programs</a></li>
+									<li>
+										<p class="h3"> <a href="/PlansProviders/GuidesManualsPolicies/index.html">Guides - Manuals - Policies</a> </p>
+									</li>
+								</ul>
+							</div>
+                            
+							<div class="col-md-4">
+								<ul class="list-unstyled menu-column">
+									 <li>
+										<p class="h3"> <a href="/providerconnect">AHCCCS Provider Connect</a> </p>
+									</li>
+									<li>
+										<p class="h3"> <a href="/PlansProviders/OtherProviderProgramsAndInitiatives/">Other Provider Programs and Initiatives</a> </p>
+									</li>
+									<li><a href="/PlansProviders/CurrentProviders/ASAM.html">ASAM CONTINUUM Implementation</a></li>
+									<li><a href="/PlansProviders/CurrentProviders/CRSreferrals.html">CRS Referrals</a></li>
+									<li><a href="/PlansProviders/OtherProviderProgramsAndInitiatives/qualifyingproviders.html">Differential Adjusted Payment (DAP)</a></li>
+									<li> <a href="/PlansProviders/CurrentProviders/DCW/">Direct Care Workers</a> </li>
+                                    <li> <a href="/PlansProviders/OtherProviderProgramsAndInitiatives/Doula.html">Doula Providers</a> </li>
+									<li><a href="/PlansProviders/OtherProviderProgramsAndInitiatives/ET3.html">Emergency Triage, Treat and Transport (ET3)</a></li>
+									<li><a href="/PlansProviders/NewProviders/freestandingemergencydepartments.html">Free Standing Emergency Department</a></li>
+									<li><a href="/PlansProviders/OtherProviderProgramsAndInitiatives/IDme.html">ID.me Identity Verification</a></li>
+									<li ><a href="/PlansProviders/OtherProviderProgramsAndInitiatives/LHA.html">Licensed Health Aides</a></li>
+									<li><a href="/PlansProviders/CurrentProviders/nursingfacilityinfo.html">Nursing Facility Information</a></li>
+									<li><a href="/PlansProviders/OtherProviderProgramsAndInitiatives/PERM.html">Payment Error Rate Measurement (PERM)</a></li>
+									<li><a href="/PlansProviders/CurrentProviders/PASRR.html">Pre-Admission Screening and Resident Review (PASRR)</a></li>
+									<li><a href="/PlansProviders/CurrentProviders/AHCCCSonline.html">Provider Website</a></li>
+									<li><a href="/PlansProviders/NewProviders/ROPA.html">ROPA</a> </li>
+									<li><a href="/PlansProviders/CurrentProviders/SDAC.html">Self Directed Attendant Care</a></li>
+									<li><a href="/PlansProviders/NewProviders/treatandrefer.html">Treat &amp; Refer</a></li>
+									<li><a href="/PlansProviders/CurrentProviders/providersurvey.html">Provider Survey</a></li>
+									<li><a href="/PlansProviders/CurrentProviders/NEMTproviders.html">Non-Emergency Medical Transportation</a></li>
+								</ul>
+							</div>
+							<div class="col-md-4">
+								<ul class="list-unstyled menu-column">
+									<li>
+										<p class="h3"> <a href="/PlansProviders/RatesAndBilling/">Rates and Billing</a> </p>
+									</li>
+									<li><a href="/PlansProviders/RatesAndBilling/ManagedCare/">Managed Care</a></li>
+									<li><a href="/PlansProviders/RatesAndBilling/FFS/">Fee-for-Service</a></li>
+									<li><a href="/PlansProviders/RatesAndBilling/copayments.html">Copayments</a></li>
+									<li><a href="/PlansProviders/RatesAndBilling/FFS/FQHC-RHC.html">FQHC &amp; RHC</a></li>
+									<li><a href="/PlansProviders/RatesAndBilling/HospitalAssessment.html">Hospital Assessment</a></li>
+									<li><a href="/PlansProviders/RatesAndBilling/presumptiveeligibility.html">Hospital Presumptive Eligibility</a></li>
+									<li><a href="/PlansProviders/RatesAndBilling/hosptialReimbursement.html">Hospital Reimbursement</a></li>
+									<li><a href="/PlansProviders/RatesAndBilling/NursingFacilAssmt.html">Nursing Facility Assessment</a></li>
+									<li><a href="/PlansProviders/RatesAndBilling/">Health Plan Compliance Concerns</a></li>
+									<li> </li>
+									<li>
+										<p class="h3"> <a href="/PlansProviders/MedicalCodingResources.html">Medical Coding Resources</a> </p>
+									</li>
+									<li>
+										<p class="h3"> <a href="/PlansProviders/Pharmacy/">Pharmacy</a> </p>
+									</li>
+									<li>
+										<p class="h3"><a href="/PlansProviders/TargetedInvestments/">Targeted Investments</a></p>
+									</li>
+									<li>
+										<p class="h3"><a href="/PlansProviders/Demographics/">Demographics, Social Determinants and Outcomes</a></p>
+									</li>
+									<li>
+										<p class="h3"><a href="/PlansProviders/EHR/">EHR Incentive Program<br />
+											<small><em>(now called Promoting Interoperability Program)</em></small></a>
+										</p>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</li>
+			</ul>
+		</li>
+		<li class="dropdown yamm-fw">
+			<a href="#" class="dropdown-toggle" data-toggle="dropdown">AMERICAN INDIANS</a>
+			<ul class="dropdown-menu">
+				<li>
+					<div class="yamm-content">
+						<div class="row">
+							<ul class="col-md-6 list-unstyled">
+								<li>
+									<p class="h3"> <a href="/AmericanIndians/TribalRelations/">Tribal Relations</a> </p>
+								</li>
+								<li> <a href="/AmericanIndians/TribalConsultation/">Tribal Consultations</a> </li>
+								<li> <a href="/AmericanIndians/TribalRelations/triballiason.html">Tribal Liaison</a> </li>
+                                <li> <a href="/AmericanIndians/TribalRelations/resources.html">Tribal Resources</a> </li>
+								<li>
+									<p class="h3"> <a href="/AmericanIndians/TribalCourtProceduresForInvoluntaryCommitment/">Tribal Court Procedures for Involuntary Commitment</a> </p>
+								</li>
+								<li>
+									<p class="h3"> <a href="/AmericanIndians/AIHP/">American Indian Health Program</a> </p>
+								</li>
+								<li><a href="/AHCCCS/Initiatives/AHCCCSCompleteCare/">Integration</a></li>
+								<li><a href="/AmericanIndians/AIHP/technicalassistance.html">Technical Assistance and Training</a></li>
+								<li>
+									<p class="h3"><a href="/AmericanIndians/AmericanIndianMedicalHome/">American Indian Medical Home</a></p>
+								</li>
+								<li>
+									<p class="h3"> <a href="/AmericanIndians/AmericanIndianHealthFacilities/">American Indian Health Facilities</a> </p>
+								</li>
+								<li>
+									<p class="h3"> <a href="/AmericanIndians/Applicants/">Applicants</a> </p>
+								</li>
+								<li>
+									<p class="h3"> <a href="/AmericanIndians/Members/">Members</a> </p>
+								</li>
+							</ul>
+							<ul class=" col-md-6 list-unstyled">
+								<li>
+									<p class="h3"> <a href="/AmericanIndians/Providers/">Provider Resources</a> </p>
+								</li>
+								<li> <a href="/AmericanIndians/Providers/IHS638meeting.html">IHS/638 Quarterly Meeting Handouts</a> </li>
+								<li>
+									<p class="h3"> <a href="/AmericanIndians/LongTermCareCaseManagement/">Tribal Arizona Long Term Care System</a> </p>
+								</li>
+								<li><a href="/AmericanIndians/LongTermCareCaseManagement/CaseToolManagementDigitalToolBox/index.html">Tribal ALTCS Digital Tool Box</a></li>
+								<li><a href="/AmericanIndians/LongTermCareCaseManagement/#ImportantLinks">Subscribe to Tribal ALTCS News</a></li>
+								<li><a href="/AmericanIndians/LongTermCareCaseManagement/claimsresolutionresourses.html">Claims Resolution Resources</a></li>
+								<li>
+									<p class="h3"><a href="/AmericanIndians/HealthPlans/FeeForService/healthplans.html">Fee-for-Service (FFS) Health Plans</a> </p>
+								</li>
+								<li>
+									<p class="h3"> <a href="/AmericanIndians/HealthPlans/FeeForService/FFS_Rates_Billing.html">FFS Rates and Billing</a> </p>
+								</li>
+								<li>
+									<p class="h3"><a href="/AmericanIndians/Pharmacy/">Pharmacy</a></p>
+								</li>
+								<li>
+									<p class="h3"><a href="/PlansProviders/GuidesManualsPolicies/">Guides - Manuals - Policies</a></p>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</li>
+			</ul>
+		</li>
+		<li class="dropdown yamm-fw">
+			<a href="#" class="dropdown-toggle" data-toggle="dropdown">RESOURCES</a>
+			<ul class="dropdown-menu">
+				<li>
+					<div class="yamm-content">
+						<div class="row">
+							<div class="col-md-4">
+								<ul class="list-unstyled">
+									<li>
+										<p class="h3"> <a href="/Resources/OversightOfHealthPlans/AdministrativeActions/">Oversight of Health Plans</a> </p>
+									</li>
+									<li><a href="/Resources/OversightOfHealthPlans/AdministrativeActions/">Administrative Actions</a></li>
+									<li><a href="/Resources/OversightOfHealthPlans/contractedhealthplan.html">Contracted Health Plan Audited Financial Statements</a></li>
+									<li><a href="/Resources/OversightOfHealthPlans/changeownership.html">Change in Ownership Activities</a></li>
+									<li><a href="/Resources/OversightOfHealthPlans/OpReviews.html">Operational Reviews</a></li>
+									<li><a href="/Resources/OversightOfHealthPlans/quality.html">Quality and Performance Improvement</a></li>
+									<li><a href="/Resources/OversightOfHealthPlans/">Request to Lift Enrollment CAP</a></li>
+									<li><a href="/Resources/OversightOfHealthPlans/SystemOfCare.html">System Of Care</a></li>
+									<li>
+										<p class="h3"> <a href="/Resources/GovernmentalOversight/sessions.html">Governmental Oversight</a> </p>
+									</li>
+									<li><a href="/Resources/GovernmentalOversight/lra.html">Federal and State Requirements</a></li>
+									<li><a href="/Resources/GovernmentalOversight/sessions.html">Legislative Sessions</a></li>
+									<li><a href="/Resources/Federal/waiver.html">Waiver</a></li>
+									<li><a href="/Resources/StatePlans/">State Plans</a></li>
+									<li><a href="/Resources/GovernmentalOversight/proposals.html">Budget Proposals</a></li>
+									<li><a href="/Resources/GovernmentalOversight/County_Acute_Care_Contributions.html">County Acute Care Contributions</a></li>
+									<li>
+										<p class="h3"><a href="/Resources/HPRC/">Health Plan Report Card</a> </p>
+									</li>
+                                    <li>
+										<p class="h3"><a href="/Resources/VoterRegistration.html">Voter Registration Forms and Information</a></p>
+									</li>
+								</ul>
+							</div>
+							<div class="col-md-4">
+								<ul class="list-unstyled menu-column">
+									<li>
+										<p class="h3"> <a href="/Resources/Reports/federal.html">Reports</a> </p>
+									</li>
+									<li><a href="/Resources/Reports/dashboards.html">Dashboards</a></li>
+									<li><a href="/Resources/Reports/federal.html">Reports to CMS</a></li>
+									<li><a href="/Resources/Reports/state.html">Reports to the Legislature</a></li>
+									<li><a href="/Resources/Reports/population.html">Population Reports</a></li>
+									<li><a href="/Resources/Reports/providerpopreport.html">Enrollment Reports by Health Plan</a></li>
+									<li><a href="/Resources/Reports/index.html">Financial Reports</a></li>
+									<li><a href="/Resources/Reports/behaviorhealth.html">Behavioral Health Reports</a></li>
+									<li>
+										<p class="h3"> <a href="/Resources/OversightOfHealthPlans/SolicitationsAndContracts/">Solicitations &amp; Contracts</a> </p>
+									</li>
+									<li><a href="/Resources/OversightOfHealthPlans/SolicitationsAndContracts/index.html">Solicitations, Contracts &amp; Purchasing</a></li>
+									<li><a href="/Resources/OversightOfHealthPlans/SolicitationsAndContracts/open.html">Open Solicitations</a></li>
+									<li><a href="/Resources/OversightOfHealthPlans/SolicitationsAndContracts/closed.html">Closed Solicitations</a></li>
+									<li><a href="/Resources/OversightOfHealthPlans/SolicitationsAndContracts/contracts.html">Contract Amendments</a></li>
+									<li><a href="/Resources/OversightOfHealthPlans/SolicitationsAndContracts/medicareagreements.html">Medicare D-SNP Agreements</a></li>
+									<li><a href="/Resources/OversightOfHealthPlans/SolicitationsAndContracts/bidderslibrary.html">Bidders Library</a></li>
+									<li><a href="/Resources/OversightOfHealthPlans/SolicitationsAndContracts/vendors.html">Vendor Registration</a></li>
+									<li>
+										<p class="h3"><a href="/Resources/PublicHealth/">Public Health</a></p>
+									</li>
+									<li><a href="/AHCCCS/AboutUs/covid19.html">COVID-19 Information</a></li>
+									<li><a href="/Resources/PublicHealth/monkeypox.html" target="_blank" rel="noreferrer">Mpox Virus and Vaccination Information</a></li>
+								</ul>
+							</div>
+							<div class="col-md-4">
+								<ul class="list-unstyled menu-column">
+									<li>
+										<p class="h3"> <a href="/PlansProviders/GuidesManualsPolicies/index.html">Guides - Manuals - Policies</a> </p>
+									</li>
+									<li>
+										<p class="h3"> <a href="/Resources/Training/DFSM_Training.html">Training</a> </p>
+									</li>
+									<li> <a href="/Resources/Training/DFSM_Training.html">Fee-for-Service Provider Training</a> </li>
+									<li> <a href="/Resources/Training/MCO_Provider_Training.html">MCO Provider Training</a> </li>
+									<li>
+										<p class="h3"> <a href="/Resources/Grants/GrantsAdministration.html">Grants</a> </p>
+									</li>
+									<li><a href="/Resources/Grants/FFATA/">Federal Funding Accountability and Transparency Act</a></li>
+									<li>
+									<li><a href="/Resources/Grants/">Current Grants</a></li>
+									</li>  
+									<li>
+										<p class="h3"> <a href="/Resources/EDI/EDItechnicalworkgroups.html">Electronic Data Interchange (EDI)</a> </p>
+									</li>
+									<li><a href="/Resources/EDI/EDITechnicaldocuments.html">EDI Technical Documents</a></li>
+									<li><a href="/Resources/EDI/EDITesting.html">EDI Testing</a></li>
+									<li><a href="/Resources/EDI/EDIchanges.html">EDI Change Notices</a></li>
+									<li>
+										<p class="h3"> <a href="/Resources/CommunityPartners/HEAplus.html">Community Partner Assistor Organization (CP-AO) </a> </p>
+									</li>
+									<li>
+										<p class="h3"> <a href="/Resources/GuidesManualsPolicies/pharmacyupdates.html">Pharmacy</a> </p>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</li>
+			</ul>
+		</li>
+		<li class="dropdown">
+			<a href="#" class="dropdown-toggle" data-toggle="dropdown">FRAUD PREVENTION</a>
+			<ul class="dropdown-menu">
+				<li>
+					<div class="yamm-content">
+						<div class="row">
+							<div>
+								<ul class="list-unstyled">
+									<li>
+										<p class="h3"> <a href="/Fraud/AboutOIG/">About OIG</a> </p>
+									</li>
+									<li>
+										<p class="h3"> <a href="/Fraud/ReportFraud/">Report Fraud</a> </p>
+									</li>
+									<li>
+										<p class="h3"> <a href="/Fraud/Providers/">Provider Self-Disclosure</a> </p>
+									</li>
+									<li>
+										<p class="h3"> <a href="/Fraud/Providers/actions.html">Provider Suspensions &amp; Terminations</a> </p>
+									</li>									
+									<li>
+										<p class="h3"> <a href="/Fraud/OIG_News.html">OIG in the News</a> </p>
+									</li>
+                                    <li>
+                                        <p class="h3"><a href="/Fraud/SoberLivingFraud.html">Sober Living Fraud Response</a></p>
+                                    </li>
+                                    <li>
+                                        <p class="h3"><a href="/Fraud/RecoveryAuditProgram.html">Recovery Audit Program</a></p>
+                                    </li>
+                                    <li>
+                                        <p class="h3"><a href="/Fraud/Providers/StateExclusionList.html">State Exclusion List</a></p>
+                                    </li>
+                                    <li><p class="h3"><a href="/Members/UnauthorizedMarketplaceEnrollment.html">Unauthorize Marketplace Plan Enrollment</a></p></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</li>
+			</ul>
+		</li>
+		<li> <a href="/BehavioralHealth/crisis.html">CRISIS SERVICES</a> </li>
+	</ul>
+	<!--Search Bar--> 
+	<!-- <form class="navbar-form navbar-right" role="search">
+		<div class="input-group">
+		    <input type="text" class="form-control" placeholder="Search this site">
+		    <span class="input-group-btn">
+		        <button type="submit" class="btn btn-default">
+		        <span class="glyphicon glyphicon-search"></span>
+		        </button>
+		    </span>
+		</div>
+		</form>--> 
+	<!--End Search Bar--> 
+	<!--<script>
+		(function() {
+		  var cx = '011986694886584059706:jxqckkrww_s';
+		  var gcse = document.createElement('script');
+		  gcse.type = 'text/javascript';
+		  gcse.async = true;
+		  gcse.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') +
+		      '//cse.google.com/cse.js?cx=' + cx;
+		  var s = document.getElementsByTagName('script')[0];
+		  s.parentNode.insertBefore(gcse, s);
+		})();
+		</script>
+		<gcse:searchbox-only></gcse:searchbox-only>--> 
+</div>
+      <!-- /.navbar-collapse --> 
+    </div>
+    <!-- /.container --> 
+  </nav>
+</div>
+
+
+<!-- alert
+<div class="alert alert-warning" aria-live="polite">
+			<p class="text-center"><strong>Posted on 3/14/2025 @ 10:23AM </strong></p>
+			<p  class="text-center">AHCCCS has received confirmation that its mainframe system connectivity is fully restored. Thank you for your patience. </p>
+	</div>
+ -->
+ 
+ 
+<!--Breadcrumb--> 
+<!--<div class="container"> 
+  <script src="/js/breadcrumb.js"></script> 
+</div>
+-->
+<div class="container">
+<!-- InstanceBeginEditable name="body" -->
+<!--Start Breadcrumb-->
+<div id="breadcrumb" class="row">
+	<ul class="breadcrumb">
+        <li><a href="/">Home</a></li>
+        <li class="active">This Page</li>
+    </ul>
+</div>
+<!--End Breadcrumb-->
+<div class="row row-centered">
+	<h1>Page/Document Not Found</h1>
+	<p>Sorry, the requested page/document has been removed or no longer exists.<br/>
+	You will be redirected to the <a href="/">AHCCCS Home Page</a> shortly. </p>
+</div>
+<!--End main content-->
+<!-- InstanceEndEditable -->
+</div>
+<!doctype html>
+
+<!-- Start AVA chat -->
+<img id="logo" tabindex="0" class="bot-icon" src="/assets/icons/AZP_Bot_Icon.png" onclick="botIcon()" alt="logo" style="display: flex;">
+  <img id="close-logo" tabindex="0" class="bot-icon" src="/assets/icons/AZP_Bot_Close.png" alt="logo" style="display: none;">
+  <div id="CTA_block" class="CTA" style="display: flex;">
+    <span id="cross" class="cross_on_bot_icon cross_on_close_icon" onclick="closeCTA()">+</span>
+    <div onclick="botIcon()" style="cursor:pointer;">
+      <div id="CTA_text" class="CTA_text CTA_text_container">Hi! I'm AVA, the AHCCCS Virtual Assistant.</div>
+      <div id="CTA_text_newline" class="CTA_text_newline CTA_text_container_close">
+        Click me for assistance.
+      </div>
+    </div>
+  </div>
+  <div class="main-container close" id="main-container" role="application" style="display: none;">
+    <div id="chat-wrapper" style="display: flex; flex-direction: column">
+      <!-- To handle keyboard operations Remove OnClick from below chat_on div-->
+      <div id="chat_on" class="headerUp" style="display: none;" tabindex="0">
+        <img id="logo_img" class="logo_img" src="/assets/icons/AZP_Bot_Icon.png" alt="Logo">
+        <h2 id="toggle-open" class="header-text toggle-icon-open">
+          AVA
+          <button class="close_icon">
+            <img id="imageToggle" class="minMax_close" src="/assets/icons/maxIcon.png" alt="Image 1" onclick="toggleImage()">
+
+            <!-- To handle keyboard operations Add id="close" in below img tag-->
+            <img id="close" class="icon_close" onclick="refreshChat()" src="/assets/icons/refresh-icon.png" alt="Close icon for closing chat window for virtual agent">
+          </button>
+        </h2>
+      </div>
+      <!-- To handle keyboard operations Remove OnClick from below chat_off div-->
+      <div id="chat_off" class="headerDown" style="display: block;" tabindex="0">
+        <h2 id="toggle-close" class="header-text">
+          <button class="btn_iconClose">
+            <img id="arrowUp" class="icon_up" src="/assets/icons/open.png" alt="Arrow up icon for opening chat window for virtual agent">
+          </button>
+        </h2>
+      </div>
+      <!-- <div class="redHeader"></div> -->
+      <div id="chat-window" class="chat-frame-class" style="display: none;">
+        <iframe id="chat-frame" scrolling="no" frameborder="0" aria-label="" src=""></iframe>
+      </div>
+    </div>
+  </div>
+  <!-- End AVA chat -->
+
+<!-- Archive -->
+<div id="archive">
+	Can't find what you're looking for? Please visit the <a href="https://archive.azahcccs.gov/" target="_blank" rel="noreferrer">AHCCCS Document Archive</a>.
+</div>
+
+<!-- Footer -->
+        <footer>
+				<div id="footer-container" class="navbar navbar-default navbar-bottom">
+					<div id="footer-content" class="container">
+						<div class="row">
+							<div class="col-md-3">
+								<section>
+									<strong>
+										AHCCCS
+									</strong>
+									<br/>
+									<address>
+										150 N. 18th Ave.
+										<br>
+										Phoenix, AZ 85007
+										<br>
+										<a href="https://maps.app.goo.gl/gysCkK35Ych49LtW8" target="_blank" rel="noreferrer">Find Us On Google Maps </a>
+									</address>
+
+									<p>
+										Phone: 602-417-4000
+										<br>
+										Toll Free: 1-800-654-8713
+									</p>
+								</section>
+							</div>
+							<div class="col-md-3">
+								<section>
+									<strong>For Members</strong>
+									<br/>
+									<p>
+										<a href="/Members/GetCovered/apply.html">How to Apply</a>
+										<br>
+										<a href="/Members/AlreadyCovered/coveredservices.html">Covered Services</a>
+										<br>
+										<a href="/Members/AlreadyCovered/PremiumsandCopayments/premiums.html">Pay Your Premium</a>
+										<br>
+										<a href="/Members/GetCovered/Categories/children.html">Health Insurance for Children</a>
+									</p>
+								</section>
+							</div>
+							<div class="col-md-3">
+								<section>
+									<strong>For Providers</strong>
+									<br/>
+									<p>
+										<a href="/PlansProviders/APEP/ProviderEnrollment.html">Provider Enrollment</a>
+										<br>
+										<a href="/PlansProviders/CurrentProviders/AHCCCSonline.html">AHCCCSOnline Website</a>	
+										<br>
+										<a href="/PlansProviders/GuidesManualsPolicies/index.html">Policy Manuals</a>		
+										<br>
+										<a href="/PlansProviders/RatesAndBilling/FFS/">Fee-for-Service Fee Schedules</a>			
+														
+									</p>
+								</section>
+							</div>
+							<div class="col-md-3">
+								<section>
+									<strong>About</strong>
+									<br/>
+									<p>
+										<a href="/shared/AHCCCScontacts.html" target="_blank">Contact Us</a>
+										<br>
+										<a href="/PlansProviders/AHCCCSlistserve.html">Subscribe to Newsletters</a>
+										<br>
+										<a href="https://jobs.azahcccs.gov/" target="_blank" rel="noreferrer">Careers</a><!---->
+										<br>
+										<a href="/shared/news.html">News &amp; Press Releases</a>
+									</p>
+									
+									<div class="social-media-icons">
+                                        <a href="https://www.facebook.com/AHCCCSgov" target="_blank" class="no-icon" rel="noreferrer">
+											<i class="fa-brands fa-facebook" style="font-size: 2em"></i>&nbsp;
+											<span class="sr-only  sr-only-focusable">AHCCCS Facebook page</span>
+<!--       										<img src="/img/twitter.png" alt="AHCCCS Twitter" />
+-->       									</a>
+										<a href="https://www.instagram.com/ahcccsgov/" target="_blank" class="no-icon" rel="noreferrer">
+											<i class="fa-brands fa-instagram" style="font-size: 2em"></i>&nbsp;
+											<span class="sr-only  sr-only-focusable">AHCCCS Instagram</span>
+<!--       										<img src="/img/instagram.png" alt="AHCCCS Twitter" />
+-->       									</a>
+										<a href="https://twitter.com/AHCCCSgov" target="_blank" class="no-icon" rel="noreferrer">										
+											<i class="fa-brands fa-x-twitter" style="font-size: 2em"></i><!--		-->&nbsp;
+											<span class="sr-only  sr-only-focusable">AHCCCS Twitter</span>
+       										
+       									</a>
+       									<!-- <a href="https://blogs.azahcccs.gov/" target="_blank" rel="noreferrer">
+       										<i class="fa-brands fa-wordpress" style="font-size: 2em"></i>&nbsp; -->
+<!--       										<img src="/img/wordpress.png" alt="AHCCCS Wordpress Blog"/>
+-->       									<!-- </a> -->
+                                        <a href="https://www.linkedin.com/company/ahcccs" target="_blank" class="no-icon" rel="noreferrer">
+											<i class="fa-brands fa-linkedin" style="font-size: 2em"></i>&nbsp;
+											<span class="sr-only  sr-only-focusable">AHCCCS on LinkedIn</span>
+<!--       										<img src="/img/twitter.png" alt="AHCCCS Twitter" />
+-->       									</a>
+                                        <a href="https://www.youtube.com/user/AzAHCCCS/featured" target="_blank" class="no-icon" rel="noreferrer">
+											<i class="fa-brands fa-youtube" style="font-size: 2em"></i>
+											<span class="sr-only  sr-only-focusable">AHCCCS YouTube page</span>
+<!--       										<img src="/img/twitter.png" alt="AHCCCS Twitter" />
+-->       									</a>
+                                        
+									</div>
+								</section>
+							</div>
+						</div>
+
+					</div>
+
+					<div id="footer-bottom" class="container">
+						<div class="col-md-6 col-md-offset-3 col-sm-12 row-centered">
+						<a href="/shared/webmaster.html">Contact Webmaster</a>
+						|
+						<a href="/shared/webprivacypolicy.html">Web Privacy Policy</a>
+						|
+						<a href="http://az.gov/policies" target="_blank" rel="noreferrer">Web Accessibility Policy</a>
+
+						</div>
+						<div class="col-md-3 col-sm-12" >
+							<div style="float:right;">
+
+								&copy; Copyright
+										<script>
+											var today = new Date();
+											var yr = today.getFullYear();
+											document.write(yr);
+										</script>
+										AHCCCS
+							</div>
+						</div>        
+
+					</div>
+				</div>
+            </footer>
+			<a id="backTop">Back To Top</a>
+    
+
+    
+    
+<!-- jQuery -->
+
+<script src="/js/jquery.js"></script>
+<!-- Bootstrap Core JavaScript -->
+<script src="/js/bootstrap.min.js"></script>
+
+<!-- Sliver -->
+<script src="https://static.az.gov/sliver/sliver.js" type="text/javascript"></script>
+
+<!-- Bootstrap Accessibility JavaScript 
+    <script src="/js/bootstrap-accessibility.js"></script>
+-->
+
+<!-- Script for TypeHead.js -->
+<script src="/js/typehead.js"></script>
+
+<!-- Script to Activate the Carousel -->
+<script>
+    $('.carousel').carousel({
+        interval: 5000, //changes the speed
+		pause: 'hover' 
+    });
+	/*Per https://github.com/twbs/bootstrap/issues/1955
+	Hover would not pause carousel on Google Chrome unless the following was added*/
+	$('.carousel').hover(
+    function() {
+        $(this).carousel('pause');
+    },
+    function() {
+        $(this).carousel('cycle');
+    }
+);
+    </script>
+
+<!--Back to top plugin-->
+<script src="/plugins/BacktoTop/src/jquery.backTop.min.js"></script>
+<script>
+	<!--Script for back to top plugin-->
+    	$(document).ready( function() {
+			$('#backTop').backTop({
+			
+			  // the scroll position in px from the top
+			  'position' : 400,
+			
+			  // scroll animation speed
+			  'speed' : 1000,
+			
+			  // red, white, black or green
+			  'color' : 'black',
+			});
+		});
+
+    </script>
+<script>
+		$('#topnavbar').affix({
+      offset: {
+        top: $('header').height()
+      }
+});	
+    </script>
+<script type="text/javascript">
+  $("#sidenav .panel-heading").click(function(){
+		$("#sidenav .panel-heading").removeClass("active");
+		$(this).addClass("active");
+   });
+   
+	$(function() {				
+	  // Custom code for plus and minus on nested side nav
+	  $(".panel-group .i-square").click(function() {
+		   OnSideNavPlusOrMinus($(this));
+	  });
+	  
+	  $(".panel-group .list-group-item-nested a").keydown(function(e) {	      		  
+			var code = e.keyCode || e.which;
+ 			if(code == 13) { //Enter keycode
+				OnSideNavPlusOrMinus($(this).find(".i-square"));	
+ 			}
+	  });
+	  	
+	  $(".panel-group .i-square").each(function() {		 
+		   if ($(this).parent().parent().find(".panel-body-nested").first().hasClass("in")) {
+				  $(this).addClass("fa-minus-square-o").removeClass("fa-plus-square-o"); 
+			 } 
+			 else {
+				 $(this).addClass("fa-plus-square-o").removeClass("fa-minus-square-o");
+			}	
+	  });
+	  
+	  $(".panel-group .i-square").hover(function() {		 
+		   if ($(this)[0].hasAttribute("style") == false) {
+				  $(this).attr("style", "color: #2C7AAE"); 
+			 } 
+			 else {
+				  $(this).removeAttr("style"); 
+			}	
+	  });
+	  	  
+	  // Custom code for caret down/up on side nav
+	  $("#sidenav .panel-heading .panel-title a").each(function() {
+	  	  if (($(this).hasClass("collapsed") || $(this).attr("class") == undefined) && 
+		  		$(this).parent().parent().attr("class") != "panel-heading current-section") {
+				$(this).find(".fa-caret-up").addClass("fa-caret-down").removeClass("fa-caret-up");					
+		   } 
+		   else {
+				$(this).find(".fa-caret-down").addClass("fa-caret-up").removeClass("fa-caret-down");
+		  } 		  	
+	  }); 
+	  
+	  $("#sidenav .panel-heading .panel-title a").click(function() {	
+		  CollapseAllPanelHeadingsSideNav();		   
+	  	  if (($(this).hasClass("collapsed") || $(this).attr("class") == undefined && 
+		  		$(this).parent().parent().attr("class") != "panel-heading current-section")) {
+				$(this).find(".fa-caret-down").addClass("fa-caret-up").removeClass("fa-caret-down");
+		   } 
+		   else {
+				$(this).find(".fa-caret-up").addClass("fa-caret-down").removeClass("fa-caret-up");
+		  } 		  	
+	  });	  
+	
+	 // Custom code for caret down/up on accordion
+	  $("div[role='main'] .panel-heading .panel-title a").each(function() {	
+	  	 var thisIsToggle = $(this).attr("data-toggle");
+		  	  	
+		 if(thisIsToggle != undefined){ 
+	  	  	if (($(this).hasClass("collapsed") || $(this).attr("class") == undefined) && 
+		  		$(this).parent().parent().attr("class") != "panel-heading current-section" &&			
+				$($(this).attr("href")).hasClass("in") == false) {
+				$(this).find(".fa-caret-up").addClass("fa-caret-down").removeClass("fa-caret-up");					
+		   	} 
+		   	else {
+				$(this).find(".fa-caret-down").addClass("fa-caret-up").removeClass("fa-caret-down");				
+		  	} 		  	
+		 }
+	  }); 
+	  
+	  $("div[role='main'] .panel-heading .panel-title a").click(function() {	
+		  CollapseAllPanelHeadingsAccordion($(this)); 
+		  
+		  var thisIsToggle = $(this).attr("data-toggle");
+		  	  	
+		  if(thisIsToggle != undefined) { 
+	  	  	if (($(this).hasClass("collapsed") || $(this).attr("class") == undefined) &&
+		  	$($(this).attr("href")).hasClass("in") == false) {
+				$(this).find(".fa-caret-down").addClass("fa-caret-up").removeClass("fa-caret-down");
+		   	} 
+		   	else {
+				$(this).find(".fa-caret-up").addClass("fa-caret-down").removeClass("fa-caret-up");
+		  	} 
+		  }
+	  });	  
+	});
+		
+	function OnSideNavPlusOrMinus(element) {
+		if (element.parent().parent().find(".panel-body-nested").first().hasClass("in")) {
+				element.addClass("fa-plus-square-o").removeClass("fa-minus-square-o");
+		   } 
+		   else {
+				element.addClass("fa-minus-square-o").removeClass("fa-plus-square-o");
+		  } 
+		  
+		  element.focus();
+	}
+		
+	function CollapseAllPanelHeadingsSideNav()
+	{
+		$("#sidenav .panel-heading .panel-title a").each(function() { 
+			if($(this).attr("class") != "collapse"){
+		 		$(this).find(".fa-caret-up").addClass("fa-caret-down").removeClass("fa-caret-up");
+			}
+		});
+	}
+	
+	function CollapseAllPanelHeadingsAccordion(element)
+	{		
+		$("div[role='main'] .panel-heading .panel-title a").each(function() { 
+			// Only clear link carets whos parent's are the same
+            if(element.parent().parent().parent().parent().attr("id") == 
+				$(this).parent().parent().parent().parent().attr("id")) {
+		
+				if($(this).attr("class") != "collapse"){
+		 			$(this).find(".fa-caret-up").addClass("fa-caret-down").removeClass("fa-caret-up");
+				}
+			}
+		});
+	}
+</script>
+<!--Begin Google Translate-->
+<div style="text-align: center;margin-bottom: 10px;" id="google_translate_element"></div>
+<script type="text/javascript">
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
+}
+</script>
+<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script> 
+<!--End Google Translate-->
+<!--Being Google Analytics-->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-81124404-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+<!--End Google Analytics-->
+<!-- Code for getting scrolling to work properly because of the main menu being fixed in Chrome/Firefox -->
+<script>
+   $(document).ready(function() {
+        
+        // Tested Chrome/FireFox/IE/Edge/Chromium Edge
+        var shiftWindow = function() {
+            var numberToShift = 0;
+            var ua = window.navigator.userAgent;
+            var isMSIE = ua.indexOf("MSIE "); // IE
+            //var edge = ua.indexOf("Edge"); // Edge
+            var chromium = ua.indexOf("Edg"); // Chromium Edge
+            var isChrome = !!window.chrome && (!!window.chrome.webstore || !!window.chrome.runtime);
+
+           
+            // If Internet Explorer / IE 11 / Edge
+            //if (msie > 0 || !!navigator.userAgent.match(/Trident.*rv\:11\./) || edge > 0 || chromium > 0 || isChrome) 
+            // If Google Chrome shift focus
+            if(isChrome && chromium == false)
+            {  
+                numberToShift = -60;
+                if (window.location.hash) 
+                {
+                    if ($(window.location.hash).is('h1') == false && $(window.location.hash).is('h2') == false &&
+                    $(window.location.hash).is('h3') == false && $(window.location.hash).is('h4') == false &&
+                    $(window.location.hash).is('h5') == false && $(window.location.hash).is('h6') == false) {
+                        numberToShift = -100;
+                    }
+                }
+            } 
+            else if(isMSIE)
+            {
+                numberToShift = -70;
+                if (window.location.hash) 
+                {
+                    if ($(window.location.hash).is('h1') == false && $(window.location.hash).is('h2') == false &&
+                    $(window.location.hash).is('h3') == false && $(window.location.hash).is('h4') == false &&
+                    $(window.location.hash).is('h5') == false && $(window.location.hash).is('h6') == false) {
+                        numberToShift = -60;
+                    }
+                }
+            }
+            setTimeout(function(){scrollBy(0, numberToShift);}, 500);            
+        };
+        window.addEventListener("hashchange", shiftWindow);
+
+        function load() {
+            if (window.location.hash) shiftWindow();
+        }
+
+        load();
+    });
+</script>
+
+<!-- Script for AVA Chat -->
+<script aria-hidden="true" src="/js/ava.js?v=2.1" defer></script>
+<!-- InstanceBeginEditable name="pageScripts" -->
+<!-- InstanceEndEditable -->
+
+</body>
+<!-- InstanceEnd --></html>
+
+

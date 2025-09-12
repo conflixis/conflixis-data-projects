@@ -1,0 +1,1888 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+    <head>
+
+
+	<!-- Added Google Analytics 4 (GA4) 2022-12-20 -->
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-1V1D6GRFKL"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+    
+      gtag('config', 'G-1V1D6GRFKL');
+    </script>
+
+
+
+    <meta charset="UTF-8"/>
+    <title>404</title>
+    
+    
+    <meta name="template" content="content-page"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    
+
+    
+    
+<link rel="stylesheet" href="/etc.clientlibs/fppc-v2/clientlibs/clientlib-base.css" type="text/css">
+
+
+
+
+
+    
+    
+    
+
+    
+
+    
+    
+    
+
+    
+    
+    
+
+    <!-- fppc v2 lines -->
+    <!-- TODO check if useful
+    <meta data-sly-call="" data-sly-unwrap></meta>
+     -->
+    
+    <!--/* Support for page view statistics and MVT start */
+    <meta data-sly-call="" data-sly-unwrap></meta>
+    -->
+    
+    <!--
+    <script type="text/javascript">
+        {
+            window.setTimeout(function() {
+                $CQ.getScript("?path=");
+            }, 1);
+        }
+    </script>
+    -->
+    
+    
+    
+    <!--  Google site verification -->
+    <meta name="google-site-verification" content="9RrCtSHJdAZXpdEugAMciimZOargRFw_M1Zuf5f1HxI"/>
+    
+    <!-- Use highest compatibility mode -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    
+    <!-- http://t.co/dKP3o1e -->
+    <meta name="HandheldFriendly" content="True"/> <!-- for Blackberry, AvantGo -->
+    <meta name="MobileOptimized" content="320"/> <!-- for Windows mobile -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0"/>
+    
+    <!-- CSS for all browsers TODO: most likely not needed
+    <meta data-sly-call="" data-sly-unwrap></meta>
+    -->
+    
+    <!-- selectivizr.com, emulates CSS3 pseudo-classes and attribute selectors in Internet Explorer 6-8 -->
+    <!--[if (lt IE 9) & (!IEMobile)]>
+    <script src="/etc/designs/fppc/clientlib-site/js/libs/selectivizr-min.js"></script>
+    <![endif]-->
+    
+    <!-- modernizr.com, feature detection
+    <script src="/etc/designs/fppc/clientlib-site/js/libs/modernizr-2.0.6.min.js"></script>
+    -->
+
+    
+    <link rel="apple-touch-icon" sizes="144x144" href="/etc/designs/fppc/clientlib-site/images/fppc/apple-touch-icon-144x144.png"/><!-- For iPad 3-->
+    <link rel="apple-touch-icon" sizes="114x114" href="/etc/designs/fppc/clientlib-site/images/fppc/apple-touch-icon-114x114.png"/><!-- For iPhone 4 -->
+    <link rel="apple-touch-icon" sizes="72x72" href="/etc/designs/fppc/clientlib-site/images/fppc/apple-touch-icon-72x72.png"/><!-- For iPad 1-->
+    <link rel="apple-touch-icon" href="/etc/designs/fppc/clientlib-site/images/fppc/apple-touch-icon-57x57.png"/><!-- For iPhone 3G, iPod Touch and Android -->
+    <link rel="shortcut icon" href="/etc/designs/fppc/clientlib-site/images/fppc/apple-touch-icon-57x57.png"/><!-- For Nokia -->
+    <link rel="shortcut icon" href="/etc/designs/fppc/favicon.ico"/><!-- For everything else -->
+    
+    <!--Microsoft. Activate ClearType. -->
+    <!--[if IE]>
+    <meta http-equiv="cleartype" content="on">
+    <![endif]-->
+    
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="/etc/designs/fppc/clientlib-site/js/libs/html5shiv.min.js"></script>
+      <script src="/etc/designs/fppc/clientlib-site/js/libs/respond.min.js"></script>
+    <![endif]-->
+	
+	<!--  TODO, check if needed
+    <title></title>
+     -->
+
+	<!-- Global site tag (gtag.js) - Google Ads: 663414591 ADDED 2022-04-29 --> 
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-663414591"></script> 
+    <script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'AW-663414591'); </script> 
+
+
+</head>
+    <body class="primary page basicpage">
+        
+        
+            
+
+
+
+            
+<div class="root responsivegrid off-canvas-enabled">
+
+
+<div class="aem-Grid aem-Grid--12 aem-Grid--default--12 ">
+    
+    <div class="header aem-GridColumn aem-GridColumn--default--12">
+
+
+<header role="banner" id="header" class="global-header">
+	<div id="skip-to-content"><a href="#main-content">Skip to Main Content</a></div>
+	
+	
+    <!-- Branding -->
+    <div class="branding">   
+        <div class="header-organization-banner">
+        <a href="https://dispatchl.fppc.loc/" title="Back to FPPC Homepage">
+        	<img src="https://lunar.fppc.ca.gov:443/etc.clientlibs/fppc-v2/clientlibs/clientlib-site/resources/fppc/california-fppc-logo.png" alt="California Fair Political Practices Commission"/>
+        </a>
+        </div>
+    </div>
+
+    <div class="mobile-controls">
+	<span class="mobile-control toggle-menu"><span class="ca-gov-icon-menu" aria-hidden="true"></span><span class="sr-only">Menu</span></span>
+	<span class="mobile-control toggle-search"><span class="ca-gov-icon-search" aria-hidden="true"></span><span class="sr-only">Search</span></span>
+</div>
+
+    <div class="navigation-search oc-menu small-search">
+    	<div id="head-search" class="search-container"><!--
+<form id="local_form" method="get" onSubmit="event.preventDefault(); return false();">
+<div class="textfield-container">
+	<label for="search_local_textfield" accesskey="s" class="sr-only">Search</label>
+	<input type="text" name="q" class="cq-auto-clear search-textfield" tabindex="0"
+			value="" id="search_local_textfield" size="35" 
+			onfocus="if(this.value=='Search')this.value=''" 
+			onblur="if(this.value=='')this.value='Search'"
+			onKeyPress="if(event.keyCode==13)goSearch()">
+	 </div>
+	 <div class="submit-container">
+		<button type="submit" onclick="goSearch()">
+			<span class="ca-gov-icon-search">
+				<span class="sr-only">Search</span>
+			</span>
+		</button>
+	</div>
+	<script>String.prototype.trim=function(){return(this.replace(/(^\s+)|(\s+$)/g, ""))}</script>
+</form>
+-->
+<a href="https://fppc.ca.gov/search0.html" class="btn btn-impact site-search-button">Search <span class="ca-gov-icon-search" aria-hidden="true"></span></a>
+</div>
+    	<div><nav id="navigation" class="main-navigation megadropdown off-canvas">
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+    
+        
+            <ul id="nav_list" class="top-level-nav">
+                
+    
+        <li class="nav-item">
+            
+    <a class="first-level-link has-sub" href="https://fppc.ca.gov/about-fppc.html">About FPPC</a>
+
+            
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+    
+        <div class="sub-nav">
+            <ul class="second-level-nav">
+                
+    
+    
+        <li>
+            
+    <a class="second-level-link" href="https://fppc.ca.gov/about-fppc/what-the-fppc-does.html">What The FPPC Does</a>
+    <div class="link-description">Learn about the FPPC&#39;s responsibilities and functions.</div>
+
+            
+    
+        
+    
+        
+    
+        
+    
+        
+    
+    
+
+        </li>
+    
+
+            
+                
+    
+    
+        <li>
+            
+    <a class="second-level-link" href="https://fppc.ca.gov/about-fppc/organization-and-responsibilities.html">Organization &amp; Responsibilities</a>
+    <div class="link-description">Information about the structure and functions of the FPPC and its various divisions.</div>
+
+            
+    
+        
+    
+        
+    
+    
+
+        </li>
+    
+
+            
+                
+    
+    
+        <li>
+            
+    <a class="second-level-link" href="https://fppc.ca.gov/about-fppc/about-the-political-reform-act.html">About the Political Reform Act</a>
+    <div class="link-description">Read about the landmark law that created the FPPC.</div>
+
+            
+        </li>
+    
+
+            
+                
+    
+    
+        <li>
+            
+    <a class="second-level-link" href="https://fppc.ca.gov/about-fppc/hearings-meetings-workshops.html">Hearings, Meetings and Workshops</a>
+    <div class="link-description">View information about the Commission&#39;s upcoming hearings, meetings and workshops.</div>
+
+            
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+    
+
+        </li>
+    
+
+            
+                
+    
+    
+        <li>
+            
+    <a class="second-level-link" href="https://fppc.ca.gov/about-fppc/annual-report.html">Annual Report</a>
+    <div class="link-description">View the statistics and case summaries in the Commission&#39;s annual report.</div>
+
+            
+        </li>
+    
+
+            
+                
+    
+    
+        <li>
+            
+    <a class="second-level-link" href="https://fppc.ca.gov/media/public-records-request.html">Public Records Request</a>
+    <div class="link-description">Submit a public records request for any publicly available information held by the FPPC.</div>
+
+            
+        </li>
+    
+
+            
+                
+    
+    
+        <li>
+            
+    <a class="second-level-link" href="https://fppc.ca.gov/about-fppc/job-opportunities.html">Employment Opportunities</a>
+    <div class="link-description">See what exciting jobs are currently available at the FPPC.</div>
+
+            
+        </li>
+    
+
+            
+                
+    
+    
+        <li>
+            
+    <a class="second-level-link" href="https://fppc.ca.gov/about-fppc/contact-us.html">Contact Us</a>
+    <div class="link-description">Contact us at (866) 275-3772 or advice@fppc.ca.gov for expert guidance on your responsibilities under the Act. Reach out for inquiries, assistance, or to stay informed about ethical and transparent governance. Our team offers telephone and online advice for individuals seeking essential guidance.</div>
+
+            
+    
+        
+    
+        
+    
+        
+    
+    
+
+        </li>
+    
+
+            
+                
+    
+    
+        <li>
+            
+    <a class="second-level-link" href="https://fppc.ca.gov/events.html">Events</a>
+    <div class="link-description"></div>
+
+            
+        </li>
+    
+
+            
+                
+    
+    
+        <li>
+            
+    <a class="second-level-link" href="https://fppc.ca.gov/about-fppc/accessibility.html">Accessibility Policy</a>
+    <div class="link-description"></div>
+
+            
+        </li>
+    
+
+            </ul>
+        </div>
+    
+
+        </li>
+    
+    
+
+            
+                
+    
+        <li class="nav-item">
+            
+    <a class="first-level-link has-sub" href="https://fppc.ca.gov/the-law.html">The Law</a>
+
+            
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+    
+        <div class="sub-nav">
+            <ul class="second-level-nav">
+                
+    
+    
+        <li>
+            
+    <a class="second-level-link" href="https://fppc.ca.gov/the-law/ConflictofInterestCodeExemptions.html">Conflict of Interest Code Exemptions</a>
+    <div class="link-description"></div>
+
+            
+        </li>
+    
+
+            
+                
+    
+    
+        <li>
+            
+    <a class="second-level-link" href="https://fppc.ca.gov/the-law/recent-changes-to-the-political-reform-act.html">Recent Changes to the Political Reform Act</a>
+    <div class="link-description"></div>
+
+            
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+    
+
+        </li>
+    
+
+            
+                
+    
+    
+        <li>
+            
+    <a class="second-level-link" href="https://fppc.ca.gov/transparency/Legislation.html">Pending Legislation</a>
+    <div class="link-description">Legislation related to the Political Reform Act or the Commission, and positions taken by the Commission.</div>
+
+            
+        </li>
+    
+
+            
+                
+    
+    
+        <li>
+            
+    <a class="second-level-link" href="https://fppc.ca.gov/the-law/the-political-reform-act.html">The Political Reform Act</a>
+    <div class="link-description">View the full version of the Political Reform Act.</div>
+
+            
+    
+        
+    
+    
+
+        </li>
+    
+
+            
+                
+    
+    
+        <li>
+            
+    <a class="second-level-link" href="https://fppc.ca.gov/the-law/fppc-regulations.html">FPPC Regulations</a>
+    <div class="link-description">View an index of FPPC regulations or information about newly adopted, amended, repealed or proposed regulations. </div>
+
+            
+    
+        
+    
+        
+    
+        
+    
+        
+    
+    
+
+        </li>
+    
+
+            
+                
+    
+    
+        <li>
+            
+    <a class="second-level-link" href="https://fppc.ca.gov/the-law/opinions-and-advice-letters.html">Advice Letters and Commission Opinions</a>
+    <div class="link-description">Search through FPPC advice letters and Commission Opinions.</div>
+
+            
+    
+        
+    
+        
+    
+    
+
+        </li>
+    
+
+            
+                
+    
+    
+        <li>
+            
+    <a class="second-level-link" href="https://fppc.ca.gov/the-law/local-ordinances.html">Local Campaign Ordinances</a>
+    <div class="link-description">View the campaign finance laws from localities across California. </div>
+
+            
+        </li>
+    
+
+            </ul>
+        </div>
+    
+
+        </li>
+    
+    
+
+            
+                
+    
+        <li class="nav-item">
+            
+    <a class="first-level-link has-sub" href="https://fppc.ca.gov/learn.html">Learn</a>
+
+            
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+    
+        <div class="sub-nav">
+            <ul class="second-level-nav">
+                
+    
+    
+        <li>
+            
+    <a class="second-level-link" href="https://fppc.ca.gov/learn/campaign-rules.html">Campaign Rules</a>
+    <div class="link-description">View filing schedules, contribution limits, campaign forms, changes to campaign laws, candidate toolkits, advertising rules and other helpful information about campaigns. </div>
+
+            
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+    
+
+        </li>
+    
+
+            
+                
+    
+    
+        <li>
+            
+    <a class="second-level-link" href="https://fppc.ca.gov/learn/conflicts-of-interest-rules.html">Conflicts of Interest Rules</a>
+    <div class="link-description">Learn what constitutes a conflict of interest and how to determine if someone should be disqualified from participating in a governmental decision.</div>
+
+            
+        </li>
+    
+
+            
+                
+    
+    
+        <li>
+            
+    <a class="second-level-link" href="https://fppc.ca.gov/learn/section-1090.html">Section 1090</a>
+    <div class="link-description">Learn about conflicts of interest in governmental contracts and how to determine if an official or agency is prohibited from making a decision concerning a contract.</div>
+
+            
+        </li>
+    
+
+            
+                
+    
+    
+        <li>
+            
+    <a class="second-level-link" href="https://fppc.ca.gov/learn/lobbyist-rules.html">Lobbyist Rules</a>
+    <div class="link-description">Learn how to register as a lobbyist, report lobbying activity, ethics course requirements or view helpful manuals.</div>
+
+            
+    
+        
+    
+        
+    
+    
+
+        </li>
+    
+
+            
+                
+    
+    
+        <li>
+            
+    <a class="second-level-link" href="https://fppc.ca.gov/learn/rules-on-conflict-of-interest-codes.html">Rules on Conflict of Interest Codes</a>
+    <div class="link-description">Information on what a conflict of interest code is, how to update them, and who is required to be listed. </div>
+
+            
+    
+        
+    
+        
+    
+        
+    
+        
+    
+    
+
+        </li>
+    
+
+            
+                
+    
+    
+        <li>
+            
+    <a class="second-level-link" href="https://fppc.ca.gov/learn/guidance-for-filing-officers-.html">Guidance for Filing Officers </a>
+    <div class="link-description">Helpful tools for filing officers dealing with campaign statements or the Form 700.</div>
+
+            
+    
+        
+    
+        
+    
+        
+    
+        
+    
+    
+
+        </li>
+    
+
+            
+                
+    
+    
+        <li>
+            
+    <a class="second-level-link" href="https://fppc.ca.gov/learn/public-officials-and-employees-rules-.html">Public Officials and Employees Rules </a>
+    <div class="link-description">Resources for public officials and employees about ethics training, gifts, conflicts of interest and other rules every public servant must follow. </div>
+
+            
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+    
+
+        </li>
+    
+
+            
+                
+    
+    
+        <li>
+            
+    <a class="second-level-link" href="https://fppc.ca.gov/learn/San-Bernardino-Candidate-Information.html">San Bernardino County Candidates</a>
+    <div class="link-description"></div>
+
+            
+        </li>
+    
+
+            
+                
+    
+    
+        <li>
+            
+    <a class="second-level-link" href="https://fppc.ca.gov/learn/San-Bernardino-City-Candidate-Information.html">San Bernardino City Candidates</a>
+    <div class="link-description"></div>
+
+            
+        </li>
+    
+
+            
+                
+    
+    
+        <li>
+            
+    <a class="second-level-link" href="https://fppc.ca.gov/learn/training-and-outreach.html">Training &amp; Outreach</a>
+    <div class="link-description">View resources and upcoming training opportunities for candidates, treasurers, committees, filing officers, conflict of interest code reviewers and Form 700 filers.  </div>
+
+            
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+    
+
+        </li>
+    
+
+            
+                
+    
+    
+        <li>
+            
+    <a class="second-level-link" href="https://fppc.ca.gov/learn/PREP.html">Political Reform Education Program (PREP)</a>
+    <div class="link-description">The purpose of the Political Reform Education Program (PREP) is to allow for the education of Respondents who have little or no experience with the Political Reform Act and commit minor violations, in lieu of monetary penalties. </div>
+
+            
+    
+        
+    
+    
+
+        </li>
+    
+
+            
+                
+    
+    
+        <li>
+            
+    <a class="second-level-link" href="https://fppc.ca.gov/learn/whats-new.html">What&#39;s New</a>
+    <div class="link-description"></div>
+
+            
+        </li>
+    
+
+            
+                
+    
+    
+        <li>
+            
+    <a class="second-level-link" href="https://fppc.ca.gov/learn/Contribution-Limits-City-and-County-Candidates.html">Contribution Limits: City and County Candidates</a>
+    <div class="link-description"></div>
+
+            
+        </li>
+    
+
+            
+                
+    
+    
+        <li>
+            
+    <a class="second-level-link" href="https://fppc.ca.gov/media/factsheets.html">Fact Sheets</a>
+    <div class="link-description">View factsheets developed to answer commonly asked questions.</div>
+
+            
+        </li>
+    
+
+            
+                
+    
+    
+        <li>
+            
+    <a class="second-level-link" href="https://fppc.ca.gov/learn/pay-to-play-limits-and-prohibitions.html">Pay-to-Play Limits and Prohibitions</a>
+    <div class="link-description"></div>
+
+            
+        </li>
+    
+
+            
+                
+    
+    
+        <li>
+            
+    <a class="second-level-link" href="https://fppc.ca.gov/learn/2024-election.html">2024 Election</a>
+    <div class="link-description"></div>
+
+            
+        </li>
+    
+
+            </ul>
+        </div>
+    
+
+        </li>
+    
+    
+
+            
+                
+    
+        <li class="nav-item">
+            
+    <a class="first-level-link has-sub" href="https://fppc.ca.gov/advice.html">Advice</a>
+
+            
+    
+        
+    
+        
+    
+        
+    
+        
+    
+    
+        <div class="sub-nav">
+            <ul class="second-level-nav">
+                
+    
+    
+        <li>
+            
+    <a class="second-level-link" href="https://fppc.ca.gov/advice/get-advice.html">Informal Advice</a>
+    <div class="link-description">Request informal advice about your obligations under the Act.</div>
+
+            
+        </li>
+    
+
+            
+                
+    
+    
+        <li>
+            
+    <a class="second-level-link" href="https://fppc.ca.gov/advice/formal-advice.html">Formal Advice</a>
+    <div class="link-description">Request formal written advice from the FPPC. </div>
+
+            
+        </li>
+    
+
+            
+                
+    
+    
+        <li>
+            
+    <a class="second-level-link" href="https://fppc.ca.gov/advice/advice-opinion-search.html">Search Advice Letters</a>
+    <div class="link-description"></div>
+
+            
+    
+        
+    
+    
+
+        </li>
+    
+
+            
+                
+    
+    
+        <li>
+            
+    <a class="second-level-link" href="https://fppc.ca.gov/advice/opinion-search.html">Search Commission Opinions</a>
+    <div class="link-description"></div>
+
+            
+        </li>
+    
+
+            </ul>
+        </div>
+    
+
+        </li>
+    
+    
+
+            
+                
+    
+        <li class="nav-item">
+            
+    <a class="first-level-link has-sub" href="https://fppc.ca.gov/enforcement.html">Enforcement</a>
+
+            
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+    
+        <div class="sub-nav">
+            <ul class="second-level-nav">
+                
+    
+    
+        <li>
+            
+    <a class="second-level-link" href="https://fppc.ca.gov/enforcement/file-a-complaint.html">File a Complaint</a>
+    <div class="link-description">Anyone who suspects a violation of the Act should file a complaint with the FPPC</div>
+
+            
+        </li>
+    
+
+            
+                
+    
+    
+        <li>
+            
+    <a class="second-level-link" href="https://fppc.ca.gov/enforcement/EnfDivCaseResults.html">Case Results</a>
+    <div class="link-description">Search through cases that have been closed by the FPPC.</div>
+
+            
+    
+        
+    
+        
+    
+    
+
+        </li>
+    
+
+            
+                
+    
+    
+        <li>
+            
+    <a class="second-level-link" href="https://fppc.ca.gov/enforcement/enforcement-division-reports.html">Enforcement Division Reports</a>
+    <div class="link-description">View statistics and summaries of major cases prosecuted by the Enforcement Division. </div>
+
+            
+        </li>
+    
+
+            
+                
+    
+    
+        <li>
+            
+    <a class="second-level-link" href="https://fppc.ca.gov/enforcement/contact-enforcement.html">Contact Enforcement </a>
+    <div class="link-description">Contact information for the Enforcement Division. </div>
+
+            
+        </li>
+    
+
+            
+                
+    
+    
+        <li>
+            
+    <a class="second-level-link" href="https://fppc.ca.gov/enforcement/pay-enforcement-penalty.html">Pay an Enforcement Penalty</a>
+    <div class="link-description">FPPC’s Electronic Payment System for Enforcement Penalties</div>
+
+            
+        </li>
+    
+
+            
+                
+    
+    
+        <li>
+            
+    <a class="second-level-link" href="https://fppc.ca.gov/enforcement/adwatch.html">FPPC-AdWATCH</a>
+    <div class="link-description">Pro-active Campaign Advertising Compliance Program</div>
+
+            
+        </li>
+    
+
+            
+                
+    
+    
+        <li>
+            
+    <a class="second-level-link" href="https://fppc.ca.gov/enforcement/complaint-and-case-information-portal.html">Complaint and Case Information Portal</a>
+    <div class="link-description">Find Information related to Complaints and Cases. </div>
+
+            
+    
+        
+    
+    
+
+        </li>
+    
+
+            
+                
+    
+    
+        <li>
+            
+    <a class="second-level-link" href="https://fppc.ca.gov/enforcement/policy-directives.html">Policy Directives</a>
+    <div class="link-description">Learn about and view the Commission’s Policy Directives regarding the Enforcement Division.</div>
+
+            
+        </li>
+    
+
+            </ul>
+        </div>
+    
+
+        </li>
+    
+    
+
+            
+                
+    
+        <li class="nav-item">
+            
+    <a class="first-level-link has-sub" href="https://fppc.ca.gov/transparency.html">Transparency Portal</a>
+
+            
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+    
+        <div class="sub-nav">
+            <ul class="second-level-nav">
+                
+    
+    
+        <li>
+            
+    <a class="second-level-link" href="https://fppc.ca.gov/transparency/form-700-filed-by-public-officials.html">Search FPPC Letters, Forms, Opinions and Case Closures</a>
+    <div class="link-description">Search Form 700s, behested payment reports, advice letters Commission opinions and other forms filed with the FPPC.</div>
+
+            
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+    
+
+        </li>
+    
+
+            
+                
+    
+    
+        <li>
+            
+    <a class="second-level-link" href="https://fppc.ca.gov/transparency/behested-payments.html">Behested Payments</a>
+    <div class="link-description">Find who is making and receiving behested payments, and the amounts.</div>
+
+            
+        </li>
+    
+
+            
+                
+    
+    
+        <li>
+            
+    <a class="second-level-link" href="https://fppc.ca.gov/transparency/top-contributors.html">Top Contributor Lists</a>
+    <div class="link-description">View the top contributors to ballot measures and independent expenditure committees supporting or opposing candidates</div>
+
+            
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+    
+
+        </li>
+    
+
+            
+                
+    
+    
+        <li>
+            
+    <a class="second-level-link" href="https://fppc.ca.gov/transparency/heat-map1.html">Heat Map</a>
+    <div class="link-description">Find out where violations occur across California. </div>
+
+            
+    
+        
+    
+        
+    
+        
+    
+    
+
+        </li>
+    
+
+            
+                
+    
+    
+        <li>
+            
+    <a class="second-level-link" href="https://fppc.ca.gov/media/public-records-request.html">Public Records Request</a>
+    <div class="link-description">Submit a public records request for any publicly available information held by the FPPC.</div>
+
+            
+        </li>
+    
+
+            
+                
+    
+    
+        <li>
+            
+    <a class="second-level-link" href="https://fppc.ca.gov/transparency/Legislation.html">Pending Legislation</a>
+    <div class="link-description">Legislation related to the Political Reform Act or the Commission, and positions taken by the Commission.</div>
+
+            
+        </li>
+    
+
+            
+                
+    
+    
+        <li>
+            
+    <a class="second-level-link" href="https://fppc.ca.gov/transparency/Special-Reports.html">Special Reports</a>
+    <div class="link-description"></div>
+
+            
+    
+        
+    
+    
+
+        </li>
+    
+
+            
+                
+    
+    
+        <li>
+            
+    <a class="second-level-link" href="https://fppc.ca.gov/enforcement/complaint-and-case-information-portal.html">Complaint and Case Information Portal</a>
+    <div class="link-description">Find Information related to Complaints and Cases. </div>
+
+            
+        </li>
+    
+
+            
+                
+    
+    
+        <li>
+            
+    <a class="second-level-link" href="https://fppc.ca.gov/transparency/registered-to-lobby.html">Registered to Lobby</a>
+    <div class="link-description"></div>
+
+            
+        </li>
+    
+
+            
+                
+    
+    
+        <li>
+            
+    <a class="second-level-link" href="https://fppc.ca.gov/transparency/audit-program.html">Audit Program</a>
+    <div class="link-description">Learn about the FPPC audit program and view entities who have been selected for random audits.</div>
+
+            
+    
+        
+    
+    
+
+        </li>
+    
+
+            
+                
+    
+    
+        <li>
+            
+    <a class="second-level-link" href="https://fppc.ca.gov/transparency/800-series-forms-search.html">800 Series Forms Search</a>
+    <div class="link-description"></div>
+
+            
+    
+        
+    
+    
+
+        </li>
+    
+
+            </ul>
+        </div>
+    
+
+        </li>
+    
+    
+
+            
+                
+    
+        <li class="nav-item">
+            
+    <a class="first-level-link has-sub" href="https://fppc.ca.gov/media.html">Media Center</a>
+
+            
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+    
+        <div class="sub-nav">
+            <ul class="second-level-nav">
+                
+    
+    
+        <li>
+            
+    <a class="second-level-link" href="https://fppc.ca.gov/media/press-releases.html">News Releases</a>
+    <div class="link-description">View news releases put out by the FPPC.</div>
+
+            
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+    
+
+        </li>
+    
+
+            
+                
+    
+    
+        <li>
+            
+    <a class="second-level-link" href="https://fppc.ca.gov/about-fppc/hearings-meetings-workshops/current-agenda.html">Agenda</a>
+    <div class="link-description">View the items to be discussed at the Commission&#39;s upcoming hearing. </div>
+
+            
+        </li>
+    
+
+            
+                
+    
+    
+        <li>
+            
+    <a class="second-level-link" href="https://fppc.ca.gov/media/fppc-annual-report.html">Annual Report</a>
+    <div class="link-description">View the statistics and case summaries in the Commission&#39;s annual report.</div>
+
+            
+        </li>
+    
+
+            
+                
+    
+    
+        <li>
+            
+    <a class="second-level-link" href="https://fppc.ca.gov/media/media-faq.html">Media FAQs</a>
+    <div class="link-description"></div>
+
+            
+        </li>
+    
+
+            
+                
+    
+    
+        <li>
+            
+    <a class="second-level-link" href="https://fppc.ca.gov/media/public-records-request.html">Public Records Request</a>
+    <div class="link-description">Submit a public records request for any publicly available information held by the FPPC.</div>
+
+            
+        </li>
+    
+
+            
+                
+    
+    
+        <li>
+            
+    <a class="second-level-link" href="https://fppc.ca.gov/media/factsheets.html">Fact Sheets</a>
+    <div class="link-description">View factsheets developed to answer commonly asked questions.</div>
+
+            
+        </li>
+    
+
+            
+                
+    
+    
+        <li>
+            
+    <a class="second-level-link" href="https://fppc.ca.gov/media/informational-videos.html">Informational Videos</a>
+    <div class="link-description">Learn more about what the FPPC does and how you can find help</div>
+
+            
+        </li>
+    
+
+            
+                
+    
+    
+        <li>
+            
+    <a class="second-level-link" href="https://fppc.ca.gov/media/fppc-youtube.html">FPPC YouTube</a>
+    <div class="link-description"></div>
+
+            
+        </li>
+    
+
+            </ul>
+        </div>
+    
+
+        </li>
+    
+    
+
+            </ul>
+        
+    
+</nav>
+
+    
+</div>
+    </div>
+
+</header></div>
+<div class="responsivegrid main-primary aem-GridColumn aem-GridColumn--default--12">
+
+
+<div class="aem-Grid aem-Grid--12 aem-Grid--default--12 ">
+    
+    
+    
+</div>
+</div>
+<div class="responsivegrid addContainer main-content aem-GridColumn--default--none aem-GridColumn aem-GridColumn--default--10 aem-GridColumn--offset--default--1">
+
+
+<div class="aem-Grid aem-Grid--default--10 aem-Grid--tablet--10 aem-Grid--offset--tablet--1 aem-Grid--phone--10 aem-Grid--offset--phone--1 aem-Grid--breakpoints--10 aem-Grid--offset--breakpoints--1 ">
+    
+    <div class="breadcrumb container aem-GridColumn aem-GridColumn--default--10">
+<nav class="cmp-breadcrumb" aria-label="Breadcrumb">
+    <ol class="cmp-breadcrumb__list" itemscope itemtype="http://schema.org/BreadcrumbList">
+        <li class="cmp-breadcrumb__item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+            <a href="https://dispatchl.fppc.loc/" class="cmp-breadcrumb__item-link" itemprop="item">
+                <span itemprop="name">Home</span>
+            </a>
+            <meta itemprop="position" content="1"/>
+        </li>
+    
+        <li class="cmp-breadcrumb__item cmp-breadcrumb__item--active" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+            
+                <span itemprop="name">404</span>
+            
+            <meta itemprop="position" content="2"/>
+        </li>
+    </ol>
+</nav>
+
+    
+</div>
+<div class="responsivegrid main-primary addCol aem-GridColumn--breakpoints--12 aem-GridColumn--default--none aem-GridColumn--offset--breakpoints--0 aem-GridColumn--offset--phone--0 aem-GridColumn--offset--default--0 aem-GridColumn--offset--tablet--0 aem-GridColumn--tablet--10 aem-GridColumn--phone--none aem-GridColumn--breakpoints--none aem-GridColumn--tablet--none aem-GridColumn--phone--10 aem-GridColumn aem-GridColumn--default--7">
+
+
+<div class="aem-Grid aem-Grid--7 aem-Grid--default--7 ">
+    
+    <div class="title title-left aem-GridColumn aem-GridColumn--default--7">
+<div class="cmp-title">
+    <h1 class="cmp-title__text">Page Not Found</h1>
+</div>
+
+    
+
+</div>
+<div class="text aem-GridColumn aem-GridColumn--default--7">
+<div class="cmp-text">
+    <p>Welcome to the new FPPC.ca.gov. You have reached this page as a result of following a website link where the target page does not exist. This information may have been moved or deleted by the originating agency.</p>
+<p>If you are following a bookmarked link, you may find the information you are seeking is to use the FPPC.ca.gov search engine. Simply enter your search terms into the search box in the menu bar above and press enter.</p>
+<p>You should remove the old bookmark and create a new bookmark.</p>
+<p>Thank you for using <a href="https://dispatchl.fppc.loc/">www.fppc.ca.gov</a>.</p>
+<p>Back to <a href="https://dispatchl.fppc.loc/">www.fppc.ca.gov home page</a><br />
+</p>
+
+</div>
+
+    
+
+</div>
+<div class="page-search aem-GridColumn aem-GridColumn--default--7">
+
+
+
+
+
+
+
+
+
+
+</div>
+<div class="experiencefragment aem-GridColumn aem-GridColumn--default--7">
+
+    
+        
+    
+    
+</div>
+
+    
+</div>
+</div>
+<div class="responsivegrid main-secondary addCol aem-GridColumn--offset--tablet--0 aem-GridColumn--tablet--10 aem-GridColumn--default--none aem-GridColumn--phone--none aem-GridColumn--tablet--none aem-GridColumn--phone--10 aem-GridColumn aem-GridColumn--offset--phone--0 aem-GridColumn--default--3 aem-GridColumn--offset--default--0">
+
+
+<div class="aem-Grid aem-Grid--6 aem-Grid--default--6 ">
+    
+    <div class="experiencefragment aem-GridColumn aem-GridColumn--default--6">
+
+    
+        
+    
+    
+</div>
+
+    
+</div>
+</div>
+
+    
+</div>
+</div>
+<div class="footer aem-GridColumn aem-GridColumn--default--12">
+
+
+<footer id="footer" class="section-overstated global-footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-4 col-sm-push-8">
+                <div>
+
+    
+    
+    
+    <div class="cmp-container">
+        
+        <div class="text">
+<div class="cmp-text">
+    <p>Follow Us</p>
+
+</div>
+
+    
+
+</div>
+<div class="icon-list">
+
+<div class="list-iconic">
+	<ul class="social-media">
+		<li>
+			<a href="https://twitter.com/CA_FPPC" aria-label="Twitter">
+			<span class="fppc-icon-twitter"></span>
+				
+					
+				
+								
+			</a>
+		</li>
+	
+		<li>
+			<a href="https://www.youtube.com/user/CAFPPC/videos" aria-label="YouTube">
+			<span class="fppc-icon-youtube"></span>
+				
+					
+				
+								
+			</a>
+		</li>
+	
+		<li>
+			<a href="/about-fppc/contact-us.html" aria-label="Mail">
+			<span class="fppc-icon-mail"></span>
+				
+					
+				
+								
+			</a>
+		</li>
+	</ul>
+</div>
+
+    
+</div>
+<div class="text">
+<div class="cmp-text">
+    <p><a href="mailto:webmaster@fppc.ca.gov">Website Comments and Suggestions</a></p>
+
+</div>
+
+    
+
+</div>
+
+        
+    </div>
+
+</div>
+            </div>
+
+            <div class="col-sm-8 col-sm-pull-4">
+                <div>
+                <ul class="foot-links">
+                    <li><a href="#top">Back to top</a></li>
+                <li class="first ">
+                        <a href="https://fppc.ca.gov/toolbar/privacy-policy.html">Privacy Policy</a>
+                    </li><li class="">
+                        <a href="https://fppc.ca.gov/toolbar/mailing-list.html">Mailing List</a>
+                    </li><li class="">
+                        <a href="https://fppc.ca.gov/toolbar/sitemap.html">Sitemap</a>
+                    </li><li class="">
+                        <a href="https://fppc.ca.gov/toolbar/contact.html">Contact</a>
+                    </li><li class="last">
+                        <a href="https://fppc.ca.gov/toolbar/accessibility.html">Accessibility Policy</a>
+                    </li></ul>
+</div>
+                <div class="copyright">
+                    Copyright &copy; <script type="text/javascript">document.write(new Date().getFullYear());</script> California Fair Political Practices Commission
+                </div>
+            </div>
+
+            <div class="badges-n-banners col-sm-12">
+                <a href="https://registertovote.ca.gov">
+                    <img src="https://lunar.fppc.ca.gov:443/etc.clientlibs/fppc-v2/clientlibs/clientlib-site/resources/fppc/register-to-vote-badge.png" alt="Register to Vote: California online votor registration"/>
+                </a>
+            </div>
+        </div>
+    </div>
+</footer></div>
+
+    
+</div>
+</div>
+
+
+            
+    
+    
+    
+    
+<script src="/etc.clientlibs/fppc-v2/clientlibs/clientlib-base.js"></script>
+
+
+
+    
+    
+
+
+
+    
+
+    
+
+    
+
+
+
+<!-- TODO fppc v2 Extra Decorative Content 
+<div class="decoration-last">&nbsp;</div> 
+-->
+
+
+<!--Scripts-->
+
+<!-- FPPC Google Analytics -->
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-22860881-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })()
+
+</script>
+
+<!-- CA.GOV Google Analytics -->
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-3419582-2']);  // for state-wide analytics - do not remove or change
+  _gaq.push(['_setDomainName', '.ca.gov']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+
+            
+
+        
+    </body>
+</html>

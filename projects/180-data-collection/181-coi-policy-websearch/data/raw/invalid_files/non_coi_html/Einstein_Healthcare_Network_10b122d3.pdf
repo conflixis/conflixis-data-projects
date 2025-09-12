@@ -1,0 +1,186 @@
+<!--
+* Copyright 2020 Adobe. All rights reserved.
+* This file is licensed to you under the Apache License, Version 2.0 (the "License");
+* you may not use this file except in compliance with the License. You may obtain a copy
+* of the License at http://www.apache.org/licenses/LICENSE-2.0
+*
+* Unless required by applicable law or agreed to in writing, software distributed under
+* the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR REPRESENTATIONS
+* OF ANY KIND, either express or implied. See the License for the specific language
+* governing permissions and limitations under the License.
+-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+
+    
+
+    <!--Data Layer to enable rich data collection and targeting-->
+        <script>
+            var digitalData = {
+                "page": {
+                    "pageInfo" : {
+                        "pageName": "Home"
+                        }
+                    }
+            };
+        </script>
+
+    <!-- Adobe Target Launch Script -->
+    <script async></script>
+    <!-- End AEM Target Integration -->
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-WR4M2L');</script>
+    <!-- End Google Tag Manager -->
+
+    <!-- Freshpaint Implementation -->
+    <script type="text/javascript">(function(c,a){if(!a.__SV){var b=window;try{var d,m,j,k=b.location,f=k.hash;d=function(a,b){return(m=a.match(RegExp(b+"=([^&]*)")))?m[1]:null};f&&d(f,"fpState")&&(j=JSON.parse(decodeURIComponent(d(f,"fpState"))),"fpeditor"===j.action&&(b.sessionStorage.setItem("_fpcehash",f),history.replaceState(j.desiredHash||"",c.title,k.pathname+k.search)))}catch(n){}var l,h;window.freshpaint=a;a._i=[];a.init=function(b,d,g){function c(b,i){var a=i.split(".");2==a.length&&(b=b[a[0]],i=a[1]);b[i]=function(){b.push([i].concat(Array.prototype.slice.call(arguments,0)))}}var e=a;"undefined"!==typeof g?e=a[g]=[]:g="freshpaint";e.people=e.people||[];e.toString=function(b){var a="freshpaint";"freshpaint"!==g&&(a+="."+g);b||(a+=" (stub)");return a};e.people.toString=function(){return e.toString(1)+".people (stub)"};l="disable time_event track track_pageview track_links track_forms track_with_groups add_group set_group remove_group register register_once alias unregister identify name_tag set_config reset opt_in_tracking opt_out_tracking has_opted_in_tracking has_opted_out_tracking clear_opt_in_out_tracking people.set people.set_once people.unset people.increment people.append people.union people.track_charge people.clear_charges people.delete_user people.remove people group page alias ready addEventProperties addInitialEventProperties removeEventProperty addPageviewProperties".split(" ");for(h=0;h<l.length;h++)c(e,l[h]);var f="set set_once union unset remove delete".split(" ");e.get_group=function(){function a(c){b[c]=function(){call2_args=arguments;call2=[c].concat(Array.prototype.slice.call(call2_args,0));e.push([d,call2])}}for(var b={},d=["get_group"].concat(Array.prototype.slice.call(arguments,0)),c=0;c<f.length;c++)a(f[c]);return b};a._i.push([b,d,g])};a.__SV=1.4;b=c.createElement("script");b.type="text/javascript";b.async=!0;b.src="undefined"!==typeof FRESHPAINT_CUSTOM_LIB_URL?FRESHPAINT_CUSTOM_LIB_URL:"//perfalytics.com/static/js/freshpaint.js";(d=c.getElementsByTagName("script")[0])?d.parentNode.insertBefore(b,d):c.head.appendChild(b)}})(document,window.freshpaint||[]);freshpaint.init("d4258f85-a102-4a84-bb41-ce338b0f9936");freshpaint.page();</script>
+    
+    <meta charset="UTF-8"/>
+    <title>Einstein | Jefferson Health</title>
+
+    <link rel="canonical"/>
+
+    
+    
+
+    <meta name="google-site-verification" content="FZ6_No9_GmTxx_wU6exSecncn2kzaRhUlnX3mjCG7ck"/>
+
+    <meta name="twitter:card" content="summary"/>
+    <meta name="twitter:site" content="@TJUHospital"/>
+    <meta name="twitter:creator" content="@TJUHospital"/>
+    <meta property="og:url" content="https://www.jeffersonhealth.org/einstein"/>
+    <meta property="og:title" content="Einstein | Jefferson Health"/>
+    
+    <meta property="og:image" content="https://www.jeffersonhealth.org/content/dam/health2021/images/photos/photo-shoots/people/clinical/einstein-landing-banner.jpg"/>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <meta name="robots" content="index"/>
+    <meta name="contentType" content="general"/>
+    <meta name="group"/>
+    <meta name="tags"/>
+
+    
+    
+    
+    
+    
+
+    
+
+    <!-- Adobe Fonts -->
+<link rel="stylesheet" href="https://use.typekit.net/giw0cmc.css"/>
+<!-- End Adobe Fonts -->
+
+
+    
+    
+<link rel="stylesheet" href="/etc.clientlibs/health2021/clientlibs/clientlib-base.min.25413da8ed49e2f6878793bc637872aa.css" type="text/css">
+
+
+
+
+
+
+<meta name="theme-color" content="#000000"/>
+<link rel="icon" href="/etc.clientlibs/health2021/clientlibs/clientlib-react/resources/images/icons/favicon.ico"/>
+<link rel="apple-touch-icon" href="/etc.clientlibs/health2021/clientlibs/clientlib-react/resources/images/icons/favicon.ico"/>
+
+<!-- AEM page model -->
+
+    
+    <meta property="cq:pagemodel_root_url" content="/einstein.model.json"/>
+    
+    <meta property="cq:errorpages" content="/errors"/>
+
+
+
+
+
+
+
+
+
+    
+    
+    
+
+    
+
+    
+    
+    
+<link rel="stylesheet" href="/etc.clientlibs/health2021/clientlibs/clientlib-react.min.a2131d9911f09ceaf76519ae1d4fcb5b.css" type="text/css">
+
+
+
+    
+
+    
+    
+</head>
+
+  <body class="page basicpage">
+    
+    
+      
+
+
+
+      <!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WR4M2L" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+<noscript>You need to enable JavaScript to run this app.</noscript>
+<div id="root"></div>
+<div id="jh-modal-root"></div>
+
+      
+    
+    
+<script src="/etc.clientlibs/health2021/clientlibs/clientlib-react-vendors.min.b49584524c1a1ad19e8af71c1805463e.js"></script>
+<script src="/etc.clientlibs/health2021/clientlibs/clientlib-react-common.min.b96da54aedd58382611eb3bd3ea80e9a.js"></script>
+<script src="/etc.clientlibs/health2021/clientlibs/clientlib-react.min.0f934666a8f4b20ee0d272ae2a4462bd.js"></script>
+
+
+
+    
+    
+    
+<script src="/etc.clientlibs/core/wcm/components/commons/site/clientlibs/container.min.0a6aff292f5cc42142779cde92054524.js"></script>
+<script src="/etc.clientlibs/health2021/clientlibs/clientlib-base.min.2cfb68e36db52f6cb122cfdd1eea781c.js"></script>
+
+
+
+
+
+
+
+<!--BEGIN QUALTRICS WEBSITE FEEDBACK SNIPPET-->
+<script type='text/javascript'>
+    (function(){var g=function(e,h,f,g){
+    this.get=function(a){for(var a=a+"=",c=document.cookie.split(";"),b=0,e=c.length;b<e;b++){for(var d=c[b];" "==d.charAt(0);)d=d.substring(1,d.length);if(0==d.indexOf(a))return d.substring(a.length,d.length)}return null};
+    this.set=function(a,c){var b="",b=new Date;b.setTime(b.getTime()+6048E5);b="; expires="+b.toGMTString();document.cookie=a+"="+c+b+"; path=/; "};
+    this.check=function(){var a=this.get(f);if(a)a=a.split(":");else if(100!=e)"v"==h&&(e=Math.random()>=e/100?0:100),a=[h,e,0],this.set(f,a.join(":"));else return!0;var c=a[1];if(100==c)return!0;switch(a[0]){case "v":return!1;case "r":return c=a[2]%Math.floor(100/c),a[2]++,this.set(f,a.join(":")),!c}return!0};
+    this.go=function(){if(this.check()){var a=document.createElement("script");a.type="text/javascript";a.src=g;document.body&&document.body.appendChild(a)}};
+    this.start=function(){var t=this;"complete"!==document.readyState?window.addEventListener?window.addEventListener("load",function(){t.go()},!1):window.attachEvent&&window.attachEvent("onload",function(){t.go()}):t.go()};};
+    try{(new g(100,"r","QSI_S_ZN_eR4APEs8sqqlsSa","https://zner4apes8sqqlssa-jefferson.siteintercept.qualtrics.com/SIE/?Q_ZID=ZN_eR4APEs8sqqlsSa")).start()}catch(i){}})();
+    </script><div id='ZN_eR4APEs8sqqlsSa'><!--DO NOT REMOVE-CONTENTS PLACED HERE--></div>
+<!--END WEBSITE FEEDBACK SNIPPET-->
+
+    
+
+    
+
+    
+    
+    
+
+      
+
+    
+  </body>
+</html>

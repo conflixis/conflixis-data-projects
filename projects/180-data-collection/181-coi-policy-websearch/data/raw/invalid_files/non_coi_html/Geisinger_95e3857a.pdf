@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<!-- saved from url=(0048)https://author.geisinger.org/zzztest/maintenance -->
+<html>
+  <head>
+    <title>Page Unavailable</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=Windows-1252">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <style>
+    body {
+      background-color: #0076CF;
+      color: #6c6463;
+      font-size: calc(16px + (24 - 16) * (100vw - 300px) / (1600 - 300));
+      font-family: Calibri, 'Trebuchet MS', sans-serif;
+      line-height: 1.5;
+      text-align: center;
+    }
+
+    a:link,
+    a:visited,
+    a:hover,
+    a:active {
+      color: #0076CF;
+	}
+
+    .container {
+      background-color: #fff;
+      border-radius: 10px;
+      max-width: 700px;
+      padding: 3rem;
+      margin: 2rem auto 1rem;
+    }
+
+    .section {
+      padding: 1rem;
+      text-align: left;
+    }
+
+    .header {
+      font-weight: bold;
+    }
+
+    .logo {
+      width: 85%;
+      margin: 0 auto;
+    }
+
+    .message {
+      font-size: calc(20px + (32 - 22) * (100vw - 300px) / (1600 - 300));
+      padding: 1rem 1rem 0;
+    }
+
+    ul {
+      margin: 0;
+      list-style-type: none;
+    }
+
+    ul.covid {
+      margin: 0;
+      list-style-type: circle;
+    }
+
+    ul.leaders {
+      max-width: 40em;
+      padding: 0;
+      overflow-x: hidden;
+      list-style: none;
+      font-size: 1.2rem;
+    }
+
+    ul.leaders li:after {
+      float: left;
+      width: 0;
+      white-space: nowrap;
+      content: ". . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ";
+    }
+
+    ul.leaders span:first-child {
+      padding-right: 0.33em;
+      background: white;
+    }
+    ul.leaders a {
+      text-decoration: none;
+      font-weight: 600;
+    }
+    ul.leaders span+span {
+      float: right;
+      padding-left: 0.33em;
+      background: white;
+      position: relative;
+      z-index: 1;
+    }
+
+    @media only screen and (max-width: 1024px) {
+      ul.leaders li:after {
+        content: '';
+      }
+
+      ul.leaders span {
+        display: block;
+        width: 100%;
+      }
+
+      body{
+        font-size: 1.2rem;
+      }
+    }
+
+  </style>
+</head>
+
+<body data-new-gr-c-s-check-loaded="14.1223.0" data-gr-ext-installed="">
+  <div class="container">
+    <div class="logo">
+      <svg viewBox="-36 0 300 80" width="50%" height="100%">
+        <image width="220" height="80" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="data:img/png;base64,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"></image>
+      </svg>
+    </div>
+    <div class="message">We're sorry, this page is currently unavailable.</div>
+    <div>Reference: <script language="javascript">if ((new URL(window.location.href)).searchParams.get("_event_transid") !== undefined) document.write((new URL(window.location.href)).searchParams.get("_event_transid"));</script></div>
+    <div><p style="color:#0076CF; display:none;"><strong>All Geisinger locations are open and providing patient care. Please arrive as scheduled for your appointment unless you hear from a member of your care team. Our teams are working to resolve any issues created by today’s global technology outage. We appreciate your patience if you experience any delays during your visit.</strong></p></div>
+    <div>&nbsp;</div>
+    <div>Please use <a href="https://mycarecompass.org/">this link</a> to access <a href="https://mycarecompass.org/">MyChart</a>.</div>
+    <div>&nbsp;</div>
+    <div>Use the numbers below to reach the service you need. Thanks for your patience.</div>
+    <div class="section">
+      <div class="header">Geisinger</div>
+      <div class="content">
+        <ul class="leaders">
+          <li>
+            <span>Appointment scheduling</span>
+            <span>
+              <a href="tel:800-275-6401">800-275-6401</a>
+            </span>
+          </li>
+          <li>
+            <span>Billing services</span>
+            <span>
+              <a href="tel:800-640-4206">800-640-4206</a>
+            </span>
+          </li>
+
+          <li>
+            <span>Geisinger Medical Center</span>
+            <span>
+              <a href="tel:570-271-6211">570-271-6211</a>
+            </span>
+          </li>
+          <li>
+            <span>Geisinger Bloomsburg</span>
+            <span>
+              <a href="tel:570-387-2100">570-387-2100</a>
+            </span>
+          </li>
+          <li>
+            <span>Geisinger Shamokin</span>
+            <span>
+              <a href="tel:570-644-4200">570-644-4200</a>
+            </span>
+          </li>
+          <li>
+            <span>Geisinger Medical Center Muncy</span>
+            <span>
+              <a href="tel:570-308-2600">570-308-2600</a>
+            </span>
+          </li>
+          <li>
+            <span>Geisinger Community Medical Center</span>
+            <span>
+              <a href="tel:570-308-2600">570-308-2600</a>
+            </span>
+          </li>
+          <li>
+            <span>Geisinger Wyoming Valley</span>
+            <span>
+              <a href="tel:570-808-7300">570-808-7300</a>
+            </span>
+          </li>
+          <li>
+            <span>Geisinger South Wilkes-Barre</span>
+            <span>
+              <a href="tel:570-808-3100">570-808-3100</a>
+            </span>
+          </li>
+          <li>
+            <span>Geisinger Lewistown</span>
+            <span>
+              <a href="tel:717-248-5411">717-248-5411</a>
+            </span>
+          </li>
+          <li>
+            <span>Geisinger Jersey Shore</span>
+            <span>
+              <a href="tel:570-398-0100">570-398-0100</a>
+            </span>
+          </li>
+          <li>
+            <span>Silver Circle - Bloomsburg</span>
+            <span>
+              <a href="tel:570-214-2143">570-214-2143</a>
+            </span>
+          </li>
+          <li>
+            <span>Silver Circle - Shamokin</span>
+            <span>
+              <a href="tel:570-214-3162">570-214-3162</a>
+            </span>
+          </li>
+          <li>
+            <span>Silver Circle - Danville Geisinger Medical</span>
+            <span>
+              <a href="tel:570-214-2438">570-214-2438</a>
+            </span>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="section">
+      <div class="header">Geisinger Health Plan</div>
+      <div class="content">
+        <ul class="leaders">
+          <li>
+            <span>HMO, PPO with referral members</span>
+            <span>
+              <a href="tel:800-447-4000">800-447-4000</a> or
+              <a href="tel:570-271-8760">570-271-8760</a>
+            </span>
+          </li>
+          <li>
+            <span>PPO with no referral &amp; self-funded members</span>
+            <span>
+              <a href="tel:800-504-0443">800-504-0443</a> or
+              <a href="tel:570-271-8770">570-271-8770</a>
+            </span>
+          </li>
+          <li>
+            <span>Geisinger Gold members</span>
+            <span>
+              <a href="tel:800-498-9731">800-498-9731</a> or
+              <a href="tel:570-271-8771">570-271-8771</a>
+            </span>
+          </li>
+          <li>
+            <span>GHP Family members</span>
+            <span>
+              <a href="tel:855-227-1302">855-227-1302</a>
+            </span>
+          </li>
+          <li>
+            <span>GHP Kids members</span>
+            <span>
+              <a href="tel:866-621-5235">866-621-5235</a>
+            </span>
+          </li>
+          <li>
+            <span>Marketplace members</span>
+            <span>
+              <a href="tel:866-379-4489">866-379-4489</a>
+            </span>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="section">
+      <div class="header">Geisinger College of Health Sciences</div>
+      <div class="content">
+        <ul class="leaders">
+          <li>
+            <span>Geisinger College of Health Sciences</span>
+            <span>
+              <a href="tel:570-504-7000">570-504-7000</a>
+            </span>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="section">
+      <div class="header">Media questions</div>
+      <div class="content">
+        <ul class="leaders">
+          <li>
+            <span>Email</span>
+			<span><a href="mailto:media@geisinger.edu">media@geisinger.edu</a></span>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div>Stay connected via Geisinger's social media - @GeisingerHealth on
+      <a href="https://www.facebook.com/GeisingerHealth">Facebook</a> &amp;
+      <a href="https://x.com/GeisingerHealth">X</a>
+    </div>
+  </div>
+
+<grammarly-desktop-integration data-grammarly-shadow-root="true"><template shadowrootmode="open"><style>
+      div.grammarly-desktop-integration {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        white-space: nowrap;
+        border: 0;
+        -moz-user-select: none;
+        -webkit-user-select: none;
+        -ms-user-select:none;
+        user-select:none;
+      }
+
+      div.grammarly-desktop-integration:before {
+        content: attr(data-content);
+      }
+    </style><div aria-label="grammarly-integration" role="group" tabindex="-1" class="grammarly-desktop-integration" data-content="{&quot;mode&quot;:&quot;full&quot;,&quot;isActive&quot;:true,&quot;isUserDisabled&quot;:false}"></div></template></grammarly-desktop-integration></body></html>

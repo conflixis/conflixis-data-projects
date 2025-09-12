@@ -1,0 +1,647 @@
+{
+  "timestamp": "2025-08-28T15:20:18.651507",
+  "summary": {
+    "total_analyzed": 77,
+    "confirmed_coi": 32,
+    "likely_coi": 2,
+    "possible_coi": 0,
+    "non_coi": 0,
+    "dead_files": 1,
+    "unclear": 13,
+    "errors": 29
+  },
+  "detailed_results": {
+    "coi_policies": [
+      {
+        "path": "academic_medical_centers/University_of_Colorado_Anschutz_a24df40a.pdf",
+        "name": "University_of_Colorado_Anschutz_a24df40a.pdf",
+        "category": "academic_medical_centers",
+        "size_kb": 421.7919921875,
+        "detected_type": "coi_policy",
+        "confidence_score": 37,
+        "text_preview": "UNIVERSITY OF COLORADO DENVER | ANSCHUTZ MEDICAL CAMPUS PROCEDURES FOR EVALUATING CONFLICTS OF INTEREST AND COMMITMENT (Effective August 2023) Conflict of Interest Procedures August 2023 Version 13 i TABLE OF CONTENTS 1. Overview: Conflict of Interest and Commitment ............................................................................... 1 1.1. Conflict of Interest Official ....................................................................................................... 1 1.2. Confl"
+      },
+      {
+        "path": "academic_medical_centers/University_of_South_Carolina_d5040e36.pdf",
+        "name": "University_of_South_Carolina_d5040e36.pdf",
+        "category": "academic_medical_centers",
+        "size_kb": 288.0859375,
+        "detected_type": "coi_policy",
+        "confidence_score": 30,
+        "text_preview": "CONFLICT OF INTEREST POLICY INTRODUCTION As an important part of its research, education, and public service missions, the University of South Carolina School of Medicine- Columbia (SOM) actively participates in, and encourages, interactions with the private and public sectors. However, the SOM recognizes that in some circumstances with these interactions, the mission or values of the SOM and University of South Carolina as well as the professional and ethical conduct of its faculty or staff mig"
+      },
+      {
+        "path": "academic_medical_centers/Stanford_Health_Care_d1f4eb2d.pdf",
+        "name": "Stanford_Health_Care_d1f4eb2d.pdf",
+        "category": "academic_medical_centers",
+        "size_kb": 295.58984375,
+        "detected_type": "coi_policy",
+        "confidence_score": 20,
+        "text_preview": "Last Approval Date: This policy applies to: June 2024 \uf0fe Stanford Health Care \uf0fe Stanford Medicine Children\u2019s Health \uf0fe Stanford Health Care \u2013 Tri- Valley Name of Policy: Conflict of Interest for Medical Staff Page 1 of 7 Departments Affected: All Departments I. PURPOSE: A. To safeguard the integrity and reputation of Stanford Health Care (SHC), Stanford Health Care-Tri-Valley (SHC Tri-Valley) and Stanford Medicine Children\u2019s Health (SMCH) and their Medical Staffs, by fostering the proper and unbia"
+      },
+      {
+        "path": "other_healthcare/Osivax_3fecde57.pdf",
+        "name": "Osivax_3fecde57.pdf",
+        "category": "other_healthcare",
+        "size_kb": 211.283203125,
+        "detected_type": "coi_policy",
+        "confidence_score": 53,
+        "text_preview": "Conflict of interest Policy Purpose The National Institutes of Health (NIH) has adopted regulations (42 CFR Part 50 Subpart F and 45 CFR Part 94) on Promoting Objectivity in Research. These regulations describe the actions an individual and an organization must take to promote objectivity in research. The regulations apply to all NIH funded grants, cooperative agreements, research contracts (but not Phase 1 Small Business Innovations Research or Small Business Technology Transfer program grants)"
+      },
+      {
+        "path": "research_professional_orgs/Public_Health_Institute_35d3596f.pdf",
+        "name": "Public_Health_Institute_35d3596f.pdf",
+        "category": "research_professional_orgs",
+        "size_kb": 471.4375,
+        "detected_type": "coi_policy",
+        "confidence_score": 66,
+        "text_preview": "FINANCIAL CONFLICT OF INTEREST POLICY 1. POLICY OVERVIEW The Public Health Institute (PHI) is committed to forward-thinking research that supports some of the most complex public health challenges facing the world. PHI understands the responsibility it assumes in conducting research in a manner that promotes and preserves public trust. The purpose of this Financial Conflict of Interest (FCOI) policy is to assure the objectivity with which PHI\u2019s research programs are designed, managed, conducted,"
+      },
+      {
+        "path": "research_professional_orgs/Vitalant_Research_Institute_af2e5cc3.pdf",
+        "name": "Vitalant_Research_Institute_af2e5cc3.pdf",
+        "category": "research_professional_orgs",
+        "size_kb": 102.66015625,
+        "detected_type": "coi_policy",
+        "confidence_score": 42,
+        "text_preview": "DOCUMENT REV. SPONSOR HRG0156 2 HR Page 1 of 10 Financial Conflict of Interest Policy for Public Health Service Funding Purpose Federal regulations require that institutions applying for or receiving federal Public Health Service (PHS) grants, cooperative agreements, and contracts promote objectivity in research and adopt and comply with a Financial Conflict of Interest Policy to provide a reasonable expectation that the research performed by the institution will be free from bias resulting from"
+      },
+      {
+        "path": "research_professional_orgs/American_Society_of_Nephrology_1b45cea0.pdf",
+        "name": "American_Society_of_Nephrology_1b45cea0.pdf",
+        "category": "research_professional_orgs",
+        "size_kb": 183.634765625,
+        "detected_type": "coi_policy",
+        "confidence_score": 38,
+        "text_preview": "AMERICAN SOCIETY OF NEPHROLOGY FINANCIAL CONFLICT OF INTEREST POLICY APPLICABLE TO NATIONAL INSTITUTES OF HEALTH AWARDS The Federal Public Health Service has implemented guidelines (42 CFR Part 50 Subpart F and 45 CFR Part 94) concerning the Advancement of Neutrality in Research. These guidelines outline the necessary steps for both individuals and organizations to foster impartiality in research activities funded by the Public Health Service (PHS) and the National Institutes of Health. These gu"
+      },
+      {
+        "path": "research_professional_orgs/National_Bureau_of_Economic_Research_4812b0ce.pdf",
+        "name": "National_Bureau_of_Economic_Research_4812b0ce.pdf",
+        "category": "research_professional_orgs",
+        "size_kb": 69.541015625,
+        "detected_type": "coi_policy",
+        "confidence_score": 61,
+        "text_preview": "NATIONAL BUREAU OF ECONOMIC RESEARCH Research Financial Conflict of Interest Policy Background A conflict of interest occurs when an individual\u2019s private interests, and his or her professional obligations, diverge in ways that might lead an independent observer to reasonably question whether the individuals\u2019 professional actions or decisions are determined by considerations of personal gain, financial or otherwise. A conflict of interest depends on the situation, and not the character or actions"
+      },
+      {
+        "path": "research_professional_orgs/GE_HealthCare_1aed756b.pdf",
+        "name": "GE_HealthCare_1aed756b.pdf",
+        "category": "research_professional_orgs",
+        "size_kb": 382.50390625,
+        "detected_type": "coi_policy",
+        "confidence_score": 43,
+        "text_preview": "HTIC Policy Guide Administrative and Legal Procedures 1.45 \u2013 Financial Disclosures and Conflicts related to Public Health Service (PHS) Funded Research Government Operations October 2023 HTIC Niskayuna Site I. Overview The purpose of this Policy is to set forth the GE HealthCare Technology & Innovation Center (HTIC) process for addressing significant financial conflicts of interest for Public Health Service (PHS) funded research. This Policy supplements other Company conflict of interest policie"
+      },
+      {
+        "path": "research_professional_orgs/American_College_of_Surgeons_2a1b07c0.pdf",
+        "name": "American_College_of_Surgeons_2a1b07c0.pdf",
+        "category": "research_professional_orgs",
+        "size_kb": 104.30859375,
+        "detected_type": "coi_policy",
+        "confidence_score": 31,
+        "text_preview": "Policy #BR-040 Page 1 AMERICAN COLLEGE OF SURGEONS Policy and Procedure Title: Conflict of Interest Policy \u2014 Officers, Officers-Elect, Board of Regents, Board of Governors Executive Committee, the Chief Executive Officer, Editor-in-Chief of the Journal of the American College Surgeons and its affiliated organizations. Approved by: Board of Regents Effective Date: June 7, 2002- Revised February 8, 2013 Purpose: To define, identify, and resolve potential conflicts of interest on the part of office"
+      },
+      {
+        "path": "research_professional_orgs/American_Cancer_Society_5062a593.pdf",
+        "name": "American_Cancer_Society_5062a593.pdf",
+        "category": "research_professional_orgs",
+        "size_kb": 260.091796875,
+        "detected_type": "coi_policy",
+        "confidence_score": 48,
+        "text_preview": "AMERICAN CANCER SOCIETY, INC. FINANCIAL CONFLICT OF INTEREST POLICY FOR PROMOTING OBJECTIVITY IN RESEARCH Introduction The American Cancer Society, Inc. (\u201cACS\u201d) seeks excellence in the discovery and dissemination of knowledge regarding the cause, prevention, detection and diagnosis, treatment, survivorship and health policy of cancer. It is the responsibility of all individuals engaged in Research at ACS to discharge their duties in a manner that promotes and preserves public trust, proper stewa"
+      },
+      {
+        "path": "major_health_systems/Mayo_Clinic_Institutional_COI.pdf",
+        "name": "Mayo_Clinic_Institutional_COI.pdf",
+        "category": "major_health_systems",
+        "size_kb": 145.3427734375,
+        "detected_type": "coi_policy",
+        "confidence_score": 42,
+        "text_preview": "9/1/22, 11:02 AM Policies and Procedures - UCM System Conflict of Interest Institutional Conflict of Interest Policy Scope This policy applies to all Mayo Clinic Personnel related to any Mayo Clinic Clinical Practice, Education, Research, Purchasing, or Administrative activity. Purpose The purpose of this policy is to set forth the mechanisms for identifying, disclosing, reviewing, and managing potential Institutional Conflicts of Interest (Institutional COI). Policy Institutional COI describes"
+      },
+      {
+        "path": "major_health_systems/RWJBarnabas_Health_2749ad54.pdf",
+        "name": "RWJBarnabas_Health_2749ad54.pdf",
+        "category": "major_health_systems",
+        "size_kb": 125.3759765625,
+        "detected_type": "coi_policy",
+        "confidence_score": 26,
+        "text_preview": "Policy: Conflict of Interest Policy Type: Administrative (ADM) / Human Resources Applicable To: Newark Beth Israel Medical Center & Children\u2019s Hospital of New Jersey , RWJBarnabas Health Medical Group, RWJBarnabas Health Corporate Services, Children\u2019s Specialized Hospital, RWJ University Hospital Rahway, RWJ University Hospital Somerset, RWJ University Hospital, Trinitas Regional Medical Center, RWJBarnabas Health Behavioral Health Center, Jersey City Medical Center, RWJ University Hospital Hami"
+      },
+      {
+        "path": "major_health_systems/Hospital_for_Special_Surgery_(HSS)_3596a506.pdf",
+        "name": "Hospital_for_Special_Surgery_(HSS)_3596a506.pdf",
+        "category": "major_health_systems",
+        "size_kb": 611.513671875,
+        "detected_type": "coi_policy",
+        "confidence_score": 48,
+        "text_preview": "Appendix C Hospital for Special Surgery Policies on Conflicts of Interest Policy on Conflicts of Interest in Research Activities A. Introduction Hospital for Special Surgery (HSS) is committed to the highest standards of conduct in research in support of HSS\u2019 core mission. Relationships with the commercial sector can play an important role in supporting HSS\u2019 research mission, and Institutional and individual Financial Interests, such as gifts, payments, royalty income, and equity, may arise in t"
+      },
+      {
+        "path": "major_health_systems/Virtua_Health_5bb10d3a.pdf",
+        "name": "Virtua_Health_5bb10d3a.pdf",
+        "category": "major_health_systems",
+        "size_kb": 229.978515625,
+        "detected_type": "coi_policy",
+        "confidence_score": 49,
+        "text_preview": "MANUAL TITLE POLICY NAME Administrative Leadership Manual Virtua Public Health Service (PHS) Research Financial Conflict of Interest Policy MANUAL OWNER DATE OF ISSUE DATE OF LAST DATE OF EFFECTIVE Office of Research 07/01/2013 REVIEW REVISION DATE Administration 03/08/2018, 03/5/2021, 03/08/2018, 07/01/2013, 7/14/22 07/14/2022 3/5/2021, 07/14/2022 REVIEW REVIEWED / APPROVED BY: (Committees) INTERVAL Office of Research Administration, Office of General Counsel, Office of Compliance, Conflict of"
+      },
+      {
+        "path": "major_health_systems/Nuvance_Health_e843882c.pdf",
+        "name": "Nuvance_Health_e843882c.pdf",
+        "category": "major_health_systems",
+        "size_kb": 150.9345703125,
+        "detected_type": "coi_policy",
+        "confidence_score": 31,
+        "text_preview": "Docusign Envelope ID: 3E02AAAC-727E-4E4C-AE4B-671DBA698A1E POLICY INFORMATION Policy Title: Conflict of Interest Policy and Procedure Departmental Owner: Chief Compliance, Audit, and Privacy Officer Version Effective Date: March 31, 2025 Last Reviewed: March 31, 2025 SCOPE This policy applies to the following individuals and/or groups: \u2612All Covered Individuals (e.g., all Nuvance workforce members, business affiliates, and agents) as defined below under Definitions. This policy applies to all Nuv"
+      },
+      {
+        "path": "major_health_systems/Kaiser_Permanente_Research_COI.pdf",
+        "name": "Kaiser_Permanente_Research_COI.pdf",
+        "category": "major_health_systems",
+        "size_kb": 106.3740234375,
+        "detected_type": "coi_policy",
+        "confidence_score": 32,
+        "text_preview": "Kaiser Permanente policy on conflicts of interest in research Our policy on Financial Research Conflicts of Interest (FCOIs) can be found on this page. Questions may be directed to NCRSP@kp.org. \u2022 1.0 Policy Statement \u2022 2.0 Purpose \u2022 3.0 Scope/Coverage \u2022 4.0 Definitions \u2022 5.0 Provisions \u2022 6.0 References/Appendices \u2022 7.0 Approval \u2022 Appendix 1: Glossary of Policy Terms \u2022 Appendix 2: Reporting Requirements to U.S. Public Health Service \u2022 Appendix 3: Content Requirements of Plans to Manage Financial"
+      },
+      {
+        "path": "major_health_systems/Atrium_Health_9ce5badc.pdf",
+        "name": "Atrium_Health_9ce5badc.pdf",
+        "category": "major_health_systems",
+        "size_kb": 57.6787109375,
+        "detected_type": "coi_policy",
+        "confidence_score": 38,
+        "text_preview": "CAROLINAS HEALTHCARE SYSTEM Category: Corporate Compliance Policy: Conflicts of Interest Number: COR 40.17 Date of Issue: 08/91 Reviewed / Revised: 11/12 CONFLICTS OF INTEREST SUMMARY STATEMENT A conflict of interest occurs when an individual, including his or her immediate family, or an institution enters into any type of relationship that interferes with or compromises, or gives the appearance of compromising, the professional judgment or obligations of the individual or institution. A conflic"
+      },
+      {
+        "path": "major_health_systems/Mayo_Clinic_Research_d5ff9687.pdf",
+        "name": "Mayo_Clinic_Research_d5ff9687.pdf",
+        "category": "major_health_systems",
+        "size_kb": 250.365234375,
+        "detected_type": "coi_policy",
+        "confidence_score": 32,
+        "text_preview": "Conflict of Interest in Research Policy Addendum for PHS/NIH- funded Research I. Regulations Regarding Conflicts of Interest in PHS/NIH-funded Research (42 CFR Part 50, Subpart F-\u201cPromoting Objectivity in Research\u201d) A. Purpose These regulations promote objectivity in research by establishing standards that provide a reasonable expectation that the design, conduct, and reporting of research funded under Public Health Service (PHS) grants or cooperative agreements will be free from bias resulting"
+      },
+      {
+        "path": "major_health_systems/Mayo_Clinic_2c6f29e4.pdf",
+        "name": "Mayo_Clinic_2c6f29e4.pdf",
+        "category": "major_health_systems",
+        "size_kb": 344.99609375,
+        "detected_type": "coi_policy",
+        "confidence_score": 38,
+        "text_preview": "Conflict of Interest Policy Approved May 2016 Mayo Clinic Board of Governors Table of Contents I. Overview .................................................................................................................................................................4 A. Guiding Principles ...........................................................................................................................................4 B. What is a Conflict of Interest? ................................"
+      },
+      {
+        "path": "major_health_systems/Stony_Brook_Medicine_69c2aaad.pdf",
+        "name": "Stony_Brook_Medicine_69c2aaad.pdf",
+        "category": "major_health_systems",
+        "size_kb": 177.283203125,
+        "detected_type": "coi_policy",
+        "confidence_score": 26,
+        "text_preview": "Conflict of Interest Policy Effective Date: 01/01/2020 Reviewed: 12/20/2021, 12/12/2022, 12/8/2023 RESPONSIBLE PERSON: Stony Brook Accountable Care Organization, LLC Compliance Officer PURPOSE: The Board of Directors (\u201cthe Board\u201d) is committed to meeting its fiduciary responsibilities and maintaining its duty of loyalty to Stony Brook Accountable Care Organization, LLC (SB-ACO). To this end, the Board will exercise vigilance in identifying any conflicts of interest. The Board will also maintain"
+      },
+      {
+        "path": "major_health_systems/Allina_Health_ad2447b0.pdf",
+        "name": "Allina_Health_ad2447b0.pdf",
+        "category": "major_health_systems",
+        "size_kb": 783.6455078125,
+        "detected_type": "coi_policy",
+        "confidence_score": 39,
+        "text_preview": "System-wide Policy: Outside Interests and Conflicts Management Reference #: SYS-COMPLIANCE-909 Origination Date: October 2019 Next Review Date: August 2025 Effective Date: December 2023 Approval Date: December 2023 Approved By: Audit and Compliance Committee of the Board System-wide Policy Ownership Group: Compliance Department System Policy Information Resource: Office of Outside Interests & Conflicts Management (OICM) Stakeholder Groups Enterprise Risk Oversight Committee Legal Department Rese"
+      },
+      {
+        "path": "major_health_systems/Atrium_Health_Wake_Forest_Baptist_216474d9.pdf",
+        "name": "Atrium_Health_Wake_Forest_Baptist_216474d9.pdf",
+        "category": "major_health_systems",
+        "size_kb": 921.412109375,
+        "detected_type": "coi_policy",
+        "confidence_score": 55,
+        "text_preview": "Type: Tier II Policy on Conflict Effective Date: July 1, 2018 of Interest Revised Date: May 22, 2018 Contact: WFBMC Conflict of Interest Office Approval Signature: Date Approved: May 23, 2018 Typed Name and Title: Julie A. Freischlag, M.D., Chief Executive Officer and Dean TABLE OF CONTENTS I. General Purpose 2 A. Scope of Policy B. Responsible Parties II. Conflict of Interest and Disclosure 2 III. Conflict of Interest in Research 3 A. Human Subject Research B. Compliance with PHS Regulation 42"
+      },
+      {
+        "path": "major_health_systems/Albany_Med_Health_System_262e8377.pdf",
+        "name": "Albany_Med_Health_System_262e8377.pdf",
+        "category": "major_health_systems",
+        "size_kb": 151.869140625,
+        "detected_type": "coi_policy",
+        "confidence_score": 36,
+        "text_preview": "Conflict of Interest Policy PURPOSE The Albany Med Health System (the \u201cSystem\u201d; \u201cAlbany Med\u201d) exists to serve the major health care needs of surrounding communities by providing medical education, biomedical research, patient care and charitable services. Many activities undertaken in service of the System\u2019s mission require that the public rely on the competence, professionalism and diligence of the System and its people to safeguard and promote the well-being of the community. To deserve the co"
+      },
+      {
+        "path": "major_health_systems/Cambridge_Memorial_Hospital_d9fa4197.pdf",
+        "name": "Cambridge_Memorial_Hospital_d9fa4197.pdf",
+        "category": "major_health_systems",
+        "size_kb": 194.345703125,
+        "detected_type": "coi_policy",
+        "confidence_score": 23,
+        "text_preview": "BOARD MANUAL SUBJECT: Conflict of Interest Policy NO.: 2-A-36 SECTION: Structure, Roles and Responsibilities APPROVED BY: Board of Directors DATE: June 28, 2023 Preamble This conflict of interest policy is intended to ensure the highest business and ethical standards and the protection of the integrity of the Board, its committees, employees, professional staff, volunteers, students, and contractors of Cambridge Memorial Hospital (CMH). All persons acting on behalf of the Hospital (defined below"
+      },
+      {
+        "path": "major_health_systems/Memorial_Sloan_Kettering_5d2de1c8.pdf",
+        "name": "Memorial_Sloan_Kettering_5d2de1c8.pdf",
+        "category": "major_health_systems",
+        "size_kb": 336.380859375,
+        "detected_type": "coi_policy",
+        "confidence_score": 38,
+        "text_preview": "Conflict of Interest Program Billing Compliance COMP-C001: Conflict of Interest and Comm(Fiutnmctioen nNatm e) Title Conflict of Interest and Commitment Number COMP-C001 Version Date 6/3/2025 Department Contact COI Program at 212-639-7612 or ecoi@mskcc.org Table of Contents Policy Section Page(s) 1. Introduction 1-2 2. Applicability 2 3. External Interests, Relationships, and Activities 2-4 4. Conflict of Commitment 4-5 5. Conflict of Interest Disclosure 5-8 6. Conflict Reviews 8-9 7. Conflict D"
+      },
+      {
+        "path": "major_health_systems/Cone_Health_34700c96.pdf",
+        "name": "Cone_Health_34700c96.pdf",
+        "category": "major_health_systems",
+        "size_kb": 246.5400390625,
+        "detected_type": "coi_policy",
+        "confidence_score": 31,
+        "text_preview": "Policy: Conflict of Interest Department Responsible: Date Approved: SW-Corp Compliance Audit 08/24/2020 Effective Date: Next Review Date: 08/24/2020 06/18/2023 PURPOSE: The purpose of this policy is to identify situations in which a team member may have an actual or potential conflict of interest and to assure that the conflict of interest is eliminated or, where appropriate, that internal controls are implemented or disclosure is made to mitigate the effect of the conflict of interest. This pol"
+      },
+      {
+        "path": "childrens_hospitals/Children's_Mercy_ecc1d37b.pdf",
+        "name": "Children's_Mercy_ecc1d37b.pdf",
+        "category": "childrens_hospitals",
+        "size_kb": 108.609375,
+        "detected_type": "coi_policy",
+        "confidence_score": 40,
+        "text_preview": "THE CHILDREN\u2019S MERCY HOSPITAL ADMINISTRATIVE POLICIES MANUAL TITLE: Reporting and Mitigation of Conflicts of Interest and Conflicts of Commitment Policy EFFECTIVE: 11/2021 REVISION DATE: REVIEWED WITH NO CHANGES: RETIRED: PURPOSE: To establish requirements for reporting of relationships and interests that may constitute conflicts of interest or conflicts of commitment and mitigation of identified conflicts. Note: This document replaces the Conflict of Interest Policy. LOCATION/SCOPE: This policy"
+      },
+      {
+        "path": "childrens_hospitals/Children's_Hospital_of_Philadelphia_e0f5d0a6.pdf",
+        "name": "Children's_Hospital_of_Philadelphia_e0f5d0a6.pdf",
+        "category": "childrens_hospitals",
+        "size_kb": 554.8779296875,
+        "detected_type": "coi_policy",
+        "confidence_score": 35,
+        "text_preview": "THE CHILDREN\u2019S HOSPITAL OF PHILADELPHIA No. A-3-1 Page 1 of 24 Title: ADMINISTRATIVE Effective Date: POLICY MANUAL CONFLICTS OF INTEREST 7/01/2019 TABLE OF CONTENTS POLICY PURPOSE SCOPE RELATED POLICIES I . DEFINITIONS I I. ADMINISTRATION OF THE POLICY I II. GENERAL PRINCIPLES I V. SPECIAL PRINCIPLES FOR HOSPITAL PERSONNEL REGARDING COMPANIES WITH WHICH THE HOSPITAL HAS A SIGNIFICANT EXTERNAL RELATIONSHIP V. ANNUAL DISCLOSURES VI. FINANCIAL CONFLICTS OF INTEREST IN RESEARCH VII. CONSULTING RELAT"
+      },
+      {
+        "path": "childrens_hospitals/Children's_National_Hospital_938f5b50.pdf",
+        "name": "Children's_National_Hospital_938f5b50.pdf",
+        "category": "childrens_hospitals",
+        "size_kb": 306.5634765625,
+        "detected_type": "coi_policy",
+        "confidence_score": 25,
+        "text_preview": "POLICY NAME: Conflicts of Interest POLICY ID: C\u201014 DEPARTMENT: Corporate Compliance POLICY LAST UPDATED DATE: POLICY EFFECTIVE DATE: 09/26/1990 09/09/2020 I. POLICY STATEMENT All Children's National employees, and in particular those who are authorized to: \u2022 spend Children's National funds; \u2022 enter into contracts; \u2022 hire independent contractors or; \u2022 purchase supplies or materials or services for Children's National agree to use their authority solely in Children\u2019s National\u2019s best interests. Emp"
+      },
+      {
+        "path": "childrens_hospitals/Boston_Children's_Hospital_c46d2ff9.pdf",
+        "name": "Boston_Children's_Hospital_c46d2ff9.pdf",
+        "category": "childrens_hospitals",
+        "size_kb": 193.595703125,
+        "detected_type": "coi_policy",
+        "confidence_score": 33,
+        "text_preview": "Status Active PolicyStat ID 12124025 Effective 11/30/2021 Owner Alisia Lamborghini Next Review 11/29/2024 Department Compliance Applicability Boston Children's Hospital- Policies & Procedures Chapter / Activities Tags outside US, Annual Disclosure, Consulting + 17 more COPY Conflict of Interest and Commitment Policy/Procedure Internal Approval SVP, Chief Compliance Officer Scope This policy applies to all Boston Children\u2019s Hospital (BCH) administrative, operational, clinical departments, and hos"
+      },
+      {
+        "path": "childrens_hospitals/Stanley_Manne_Children's_Research_Institute_3283f4ec.pdf",
+        "name": "Stanley_Manne_Children's_Research_Institute_3283f4ec.pdf",
+        "category": "childrens_hospitals",
+        "size_kb": 405.6201171875,
+        "detected_type": "coi_policy",
+        "confidence_score": 23,
+        "text_preview": "Conflicts of Interest and Commitment in Research Owner: Jessica Poppenk Approver: Brenda Paulsen Site: Organizational L ast Reviewed: 10/24/2024 A. The purpose of this policy is to confirm Children\u2019s Hospital of Chicago Medical Center\u2019s (the \u201cMedical Center\u2019s\u201d) commitment to fulfill its responsibility to manage, reduce, or eliminate any actual or potential Conflict of Interest that may be presented by a financial interest of an Investigator (as defined in this policy), in accordance with applica"
+      }
+    ],
+    "likely_coi_policies": [
+      {
+        "path": "federal-state/California_CDPH_Employee_COI.pdf",
+        "name": "California_CDPH_Employee_COI.pdf",
+        "category": "federal-state",
+        "size_kb": 140.810546875,
+        "detected_type": "likely_coi_policy",
+        "confidence_score": 18,
+        "text_preview": "State of California\u2014Health and Human Services Agency California Department of Public Health\u2014WIC Program Employee Conflict of Interest Statement I have read and do understand the California WIC Program\u2019s Conflict of Interest policy. By signing below, I am agreeing to always follow the policy by: 1. Certifying that neither I nor any individual related to me by blood or marriage has any financial interest in any vendor, farmer, or farmers\u2019 market authorized to accept WIC food benefits. 2. Not showi"
+      },
+      {
+        "path": "federal-state/Texas_HHS_PEFC_COI_Policy.pdf",
+        "name": "Texas_HHS_PEFC_COI_Policy.pdf",
+        "category": "federal-state",
+        "size_kb": 1412.6845703125,
+        "detected_type": "likely_coi_policy",
+        "confidence_score": 18,
+        "text_preview": "Psychiatric Drug Formulary State Hospitals & State Supported Living Centers & Community Mental Health Centers 2025 18T Approved October 2024 Updated July 2025 Texas HHS Psychiatric Drug Formulary 2025 Introduction 1 Table of Contents Introduction ...................................................................................................... 4 Members of the HHSC Psychiatric Executive Formulary Committee ................... 7 HHS Psychiatric Drug Formulary editor .........................."
+      }
+    ],
+    "possible_coi_policies": [],
+    "non_coi_documents": {},
+    "dead_or_corrupted": [
+      {
+        "path": "academic_medical_centers/Brown_University_Health_e91df176.pdf",
+        "name": "Brown_University_Health_e91df176.pdf",
+        "category": "academic_medical_centers",
+        "size_kb": 421.26171875,
+        "detected_type": "dead_or_corrupted",
+        "confidence_score": 0
+      }
+    ],
+    "unclear": [
+      {
+        "path": "academic_medical_centers/Emory_Healthcare_44e7fa9f.html",
+        "name": "Emory_Healthcare_44e7fa9f.html",
+        "category": "academic_medical_centers",
+        "size_kb": 3.3935546875,
+        "reason": "Non-PDF format - manual review needed"
+      },
+      {
+        "path": "academic_medical_centers/Vanderbilt_4415f885.html",
+        "name": "Vanderbilt_4415f885.html",
+        "category": "academic_medical_centers",
+        "size_kb": 41.7724609375,
+        "reason": "Non-PDF format - manual review needed"
+      },
+      {
+        "path": "academic_medical_centers/Northwestern_Medicine_ac29457b.html",
+        "name": "Northwestern_Medicine_ac29457b.html",
+        "category": "academic_medical_centers",
+        "size_kb": 14.9619140625,
+        "reason": "Non-PDF format - manual review needed"
+      },
+      {
+        "path": "research_professional_orgs/La_Jolla_Institute_for_Immunology_ae60ab74.html",
+        "name": "La_Jolla_Institute_for_Immunology_ae60ab74.html",
+        "category": "research_professional_orgs",
+        "size_kb": 514.880859375,
+        "reason": "Non-PDF format - manual review needed"
+      },
+      {
+        "path": "research_professional_orgs/American_Society_of_Gene_and_Cell_Therapy_93698ffd.html",
+        "name": "American_Society_of_Gene_and_Cell_Therapy_93698ffd.html",
+        "category": "research_professional_orgs",
+        "size_kb": 57.359375,
+        "reason": "Non-PDF format - manual review needed"
+      },
+      {
+        "path": "federal-state/Minnesota_Alt_3c82fbf2.html",
+        "name": "Minnesota_Alt_3c82fbf2.html",
+        "category": "federal-state",
+        "size_kb": 21.1142578125,
+        "reason": "Non-PDF format - manual review needed"
+      },
+      {
+        "path": "federal-state/California_Alt_349b1559.pdf",
+        "name": "California_Alt_349b1559.pdf",
+        "category": "federal-state",
+        "size_kb": 125.9501953125,
+        "detected_type": "unclear",
+        "confidence_score": 0,
+        "text_preview": "State of California\u2014Health and Human Services Agency Department of Health Care Services JENNIFER KENT EDMUND G. BROWN JR. DIRECTOR GOVERNOR DATE: July 17, 2017 ALL PLAN LETTER 17-010 (REVISED) TO: ALL MEDI-CAL MANAGED CARE HEALTH PLANS SUBJECT: NON-EMERGENCY MEDICAL AND NON-MEDICAL TRANSPORTATION SERVICES PURPOSE: This All Plan Letter (APL) provides Medi-Cal managed care health plans (MCPs) with guidance regarding Non-Emergency Medical Transportation (NEMT) and Non-Medical Transportation (NMT) s"
+      },
+      {
+        "path": "federal-state/Wisconsin_Dept_of_Health_Services_84dd6048.pdf",
+        "name": "Wisconsin_Dept_of_Health_Services_84dd6048.pdf",
+        "category": "federal-state",
+        "size_kb": 902.7861328125,
+        "detected_type": "unclear",
+        "confidence_score": 0,
+        "text_preview": "Instructions Related to 837 Health Care Claim/Encounter: Professional (837P) Transactions Based on ASC X12 Implementation Guide Companion Guide Version Number: 2.0 June 2, 2025 X12_837P_X12N/005010X22 P-00265 (06/2025) ForwardHealth Companion Guide for 5010 837P This template is Copyright\u00a9 2010 by the Workgroup for Electronic Data Interchange (WEDI) and the Data Interchange Standards Association (DISA), on behalf of the Accredited Standards Committee (ASC) X12. All rights reserved. It may be fre"
+      },
+      {
+        "path": "federal-state/Florida_Alt_c2dbc8f5.pdf",
+        "name": "Florida_Alt_c2dbc8f5.pdf",
+        "category": "federal-state",
+        "size_kb": 564.9462890625,
+        "detected_type": "unclear",
+        "confidence_score": 0,
+        "text_preview": "Share Tweet Share this Page: RON DESANTIS GOVERNOR MARY C. MAYHEW SECRETARY Home | About Us | Medicaid | Licensure & Regulation | Report Fraud | Report Medicaid Issue/Complaint FLORIDA MEDICAID A Division of the Agency for Health Care Administration Florida Medicaid Health Care Alert April 14, 2020 Provider Type(s): All Update: New FAQs Posted to Agency's COVID-19 Website This alert is to notify providers that the Agency for Health Care Administration (Agency) has posted an updated Frequently As"
+      },
+      {
+        "path": "federal-state/North_Carolina_DHHS_fe178725.pdf",
+        "name": "North_Carolina_DHHS_fe178725.pdf",
+        "category": "federal-state",
+        "size_kb": 264.2841796875,
+        "detected_type": "unclear",
+        "confidence_score": 0,
+        "text_preview": "North Carolina Department of Health and Human Services Division of Mental Health, Developmental Disabilities and Substance Abuse Services Pat McCrory Aldona Z. Wos, M.D. Governor Ambassador (Ret.) Secretary Secretary DHHS Courtney M. Cantrell, PhD Division Director November 26, 2014 Dear Psychiatric Residential Treatment Provider, The Division of Mental Health, Developmental Disabilities, and Substance Abuse Services is requesting that each Psychiatric Residential Treatment Facility (PRTF) in th"
+      },
+      {
+        "path": "federal-state/Mississippi_State_Dept_of_Health_4ab768ec.pdf",
+        "name": "Mississippi_State_Dept_of_Health_4ab768ec.pdf",
+        "category": "federal-state",
+        "size_kb": 1725.7744140625,
+        "detected_type": "unclear",
+        "confidence_score": 0,
+        "text_preview": "REGULATIONS GOVERNING LICENSURE OF CHILD CARE FACILITIES Mississippi State Department of Health www.HealthyMS.com 601-364-2827 Office of Health Protection \u2013 Office of Licensure Bureau of Child Care Licensure Post Office Box 1700 Jackson, MS 39215-1700 Amended: January 12, 2022, Effective February 12, 2022 THIS PAGE INTENTIONALLY LEFT BLANK IMPORTANT PHONE NUMBERS & OTHER INFORMATION* MISSISSIPPI DEPARTMENT OF CHILD PROTECTION SERVICES (MDCPS) CHILD ABUSE HOTLINE (TOLL FREE) ....................."
+      },
+      {
+        "path": "federal-state/FDA_Ethics_d1f090fd.pdf",
+        "name": "FDA_Ethics_d1f090fd.pdf",
+        "category": "federal-state",
+        "size_kb": 115.609375,
+        "detected_type": "unclear",
+        "confidence_score": 0,
+        "text_preview": "Safety review update of codeine use in children; new Boxed Warning and Contraindication on use after tonsillectomy and/or adenoidectomy This update is in follow-up to the FDA Drug Safety Communication: Codeine use in certain children after tonsillectomy and/or adenoidectomy may lead to rare, but life- threatening adverse events or death issued on 8/15/2012. Safety Announcement [2-20-2013] The U.S. Food and Drug Administration (FDA) is updating the public about new actions being taken to address"
+      },
+      {
+        "path": "major_health_systems/Johns_Hopkins_Medicine_9408bf44.html",
+        "name": "Johns_Hopkins_Medicine_9408bf44.html",
+        "category": "major_health_systems",
+        "size_kb": 42.375,
+        "reason": "Non-PDF format - manual review needed"
+      }
+    ],
+    "errors": [
+      {
+        "path": "academic_medical_centers/University_of_Miami_Health_5a46afe2.pdf",
+        "name": "University_of_Miami_Health_5a46afe2.pdf",
+        "category": "academic_medical_centers",
+        "size_kb": 126.2939453125,
+        "error": "No /Root object! - Is this really a PDF?"
+      },
+      {
+        "path": "academic_medical_centers/Penn_Medicine_b213a917.pdf",
+        "name": "Penn_Medicine_b213a917.pdf",
+        "category": "academic_medical_centers",
+        "size_kb": 17.3173828125,
+        "error": "No /Root object! - Is this really a PDF?"
+      },
+      {
+        "path": "academic_medical_centers/UCSF_dfa056f2.pdf",
+        "name": "UCSF_dfa056f2.pdf",
+        "category": "academic_medical_centers",
+        "size_kb": 13.853515625,
+        "error": "No /Root object! - Is this really a PDF?"
+      },
+      {
+        "path": "federal-state/National_Science_Foundation_181ed196.pdf",
+        "name": "National_Science_Foundation_181ed196.pdf",
+        "category": "federal-state",
+        "size_kb": 62.0537109375,
+        "error": "No /Root object! - Is this really a PDF?"
+      },
+      {
+        "path": "federal-state/Alaska_Alt_0a99c318.pdf",
+        "name": "Alaska_Alt_0a99c318.pdf",
+        "category": "federal-state",
+        "size_kb": 184.6240234375,
+        "error": "No /Root object! - Is this really a PDF?"
+      },
+      {
+        "path": "federal-state/Connecticut_Dept_of_Public_Health_1d776678.pdf",
+        "name": "Connecticut_Dept_of_Public_Health_1d776678.pdf",
+        "category": "federal-state",
+        "size_kb": 22.5517578125,
+        "error": "No /Root object! - Is this really a PDF?"
+      },
+      {
+        "path": "federal-state/VA_Research_82fba279.pdf",
+        "name": "VA_Research_82fba279.pdf",
+        "category": "federal-state",
+        "size_kb": 11.091796875,
+        "error": "No /Root object! - Is this really a PDF?"
+      },
+      {
+        "path": "federal-state/Alabama_Dept_of_Public_Health_ed8b8b6e.pdf",
+        "name": "Alabama_Dept_of_Public_Health_ed8b8b6e.pdf",
+        "category": "federal-state",
+        "size_kb": 38.330078125,
+        "error": "No /Root object! - Is this really a PDF?"
+      },
+      {
+        "path": "federal-state/Utah_Dept_of_Health_e3a4095a.pdf",
+        "name": "Utah_Dept_of_Health_e3a4095a.pdf",
+        "category": "federal-state",
+        "size_kb": 16.994140625,
+        "error": "No /Root object! - Is this really a PDF?"
+      },
+      {
+        "path": "federal-state/Pennsylvania_Dept_of_Health_5cb21368.pdf",
+        "name": "Pennsylvania_Dept_of_Health_5cb21368.pdf",
+        "category": "federal-state",
+        "size_kb": 179.7978515625,
+        "error": "No /Root object! - Is this really a PDF?"
+      },
+      {
+        "path": "federal-state/NewYork_Attachment_9.pdf",
+        "name": "NewYork_Attachment_9.pdf",
+        "category": "federal-state",
+        "size_kb": 0.8974609375,
+        "error": "No /Root object! - Is this really a PDF?"
+      },
+      {
+        "path": "federal-state/Kansas_Dept_of_Health_f75fa3b8.pdf",
+        "name": "Kansas_Dept_of_Health_f75fa3b8.pdf",
+        "category": "federal-state",
+        "size_kb": 1.021484375,
+        "error": "No /Root object! - Is this really a PDF?"
+      },
+      {
+        "path": "federal-state/Illinois_Alt_34e0eb49.pdf",
+        "name": "Illinois_Alt_34e0eb49.pdf",
+        "category": "federal-state",
+        "size_kb": 88.9794921875,
+        "error": "No /Root object! - Is this really a PDF?"
+      },
+      {
+        "path": "federal-state/Iowa_Dept_of_Public_Health_62b984d8.pdf",
+        "name": "Iowa_Dept_of_Public_Health_62b984d8.pdf",
+        "category": "federal-state",
+        "size_kb": 212.7197265625,
+        "error": "No /Root object! - Is this really a PDF?"
+      },
+      {
+        "path": "federal-state/NewYork_Attachment_A.pdf",
+        "name": "NewYork_Attachment_A.pdf",
+        "category": "federal-state",
+        "size_kb": 0.8974609375,
+        "error": "No /Root object! - Is this really a PDF?"
+      },
+      {
+        "path": "federal-state/Arizona_Alt_ff3951ac.pdf",
+        "name": "Arizona_Alt_ff3951ac.pdf",
+        "category": "federal-state",
+        "size_kb": 50.3916015625,
+        "error": "No /Root object! - Is this really a PDF?"
+      },
+      {
+        "path": "federal-state/New_York_Alt_b5744346.pdf",
+        "name": "New_York_Alt_b5744346.pdf",
+        "category": "federal-state",
+        "size_kb": 27.685546875,
+        "error": "No /Root object! - Is this really a PDF?"
+      },
+      {
+        "path": "federal-state/Arizona_Dept_of_Health_Services_2fa2b2aa.pdf",
+        "name": "Arizona_Dept_of_Health_Services_2fa2b2aa.pdf",
+        "category": "federal-state",
+        "size_kb": 56.2587890625,
+        "error": "No /Root object! - Is this really a PDF?"
+      },
+      {
+        "path": "major_health_systems/Community_Health_Systems_826cf6c3.pdf",
+        "name": "Community_Health_Systems_826cf6c3.pdf",
+        "category": "major_health_systems",
+        "size_kb": 146.4150390625,
+        "error": "No /Root object! - Is this really a PDF?"
+      },
+      {
+        "path": "major_health_systems/Baystate_Health_250802b1.pdf",
+        "name": "Baystate_Health_250802b1.pdf",
+        "category": "major_health_systems",
+        "size_kb": 142.43359375,
+        "error": "No /Root object! - Is this really a PDF?"
+      },
+      {
+        "path": "major_health_systems/SCL_Health_a3186b6f.pdf",
+        "name": "SCL_Health_a3186b6f.pdf",
+        "category": "major_health_systems",
+        "size_kb": 355.791015625,
+        "error": "No /Root object! - Is this really a PDF?"
+      },
+      {
+        "path": "major_health_systems/SSM_Health_feb613bc.pdf",
+        "name": "SSM_Health_feb613bc.pdf",
+        "category": "major_health_systems",
+        "size_kb": 50.232421875,
+        "error": "No /Root object! - Is this really a PDF?"
+      },
+      {
+        "path": "major_health_systems/Veterans_Health_Administration_6cd22729.pdf",
+        "name": "Veterans_Health_Administration_6cd22729.pdf",
+        "category": "major_health_systems",
+        "size_kb": 69.1943359375,
+        "error": "No /Root object! - Is this really a PDF?"
+      },
+      {
+        "path": "major_health_systems/Einstein_Healthcare_Network_10b122d3.pdf",
+        "name": "Einstein_Healthcare_Network_10b122d3.pdf",
+        "category": "major_health_systems",
+        "size_kb": 8.1259765625,
+        "error": "No /Root object! - Is this really a PDF?"
+      },
+      {
+        "path": "major_health_systems/Spectrum_Health_64bb0614.pdf",
+        "name": "Spectrum_Health_64bb0614.pdf",
+        "category": "major_health_systems",
+        "size_kb": 357.9501953125,
+        "error": "No /Root object! - Is this really a PDF?"
+      },
+      {
+        "path": "major_health_systems/Geisinger_95e3857a.pdf",
+        "name": "Geisinger_95e3857a.pdf",
+        "category": "major_health_systems",
+        "size_kb": 16.6474609375,
+        "error": "No /Root object! - Is this really a PDF?"
+      },
+      {
+        "path": "major_health_systems/Catholic_Health_Initiatives_c5f26a6b.pdf",
+        "name": "Catholic_Health_Initiatives_c5f26a6b.pdf",
+        "category": "major_health_systems",
+        "size_kb": 201.94140625,
+        "error": "No /Root object! - Is this really a PDF?"
+      },
+      {
+        "path": "major_health_systems/Covenant_Health_8e0a8334.pdf",
+        "name": "Covenant_Health_8e0a8334.pdf",
+        "category": "major_health_systems",
+        "size_kb": 204.8857421875,
+        "error": "No /Root object! - Is this really a PDF?"
+      },
+      {
+        "path": "major_health_systems/Legacy_Health_ad8949c7.pdf",
+        "name": "Legacy_Health_ad8949c7.pdf",
+        "category": "major_health_systems",
+        "size_kb": 56.0869140625,
+        "error": "No /Root object! - Is this really a PDF?"
+      }
+    ]
+  }
+}

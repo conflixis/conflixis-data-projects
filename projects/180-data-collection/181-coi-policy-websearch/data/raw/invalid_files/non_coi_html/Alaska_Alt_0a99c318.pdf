@@ -1,0 +1,4184 @@
+
+
+
+<!doctype html>
+<html lang="en">
+<head>
+    
+
+<meta charset="utf-8">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- meta data and OG data -->
+<meta name="description" content="Healthy and resilient Alaskans today and tomorrow">
+
+<!-- Twitter Card data -->
+<meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="State of Alaska | Department of Health">
+<meta name="twitter:title" content="Division of Public Health">
+<meta name="twitter:description" content="Healthy and resilient Alaskans today and tomorrow">
+    <meta name="twitter:image" content="https://health.alaska.gov/media/frsl5qod/logo.png?width=800">
+
+<!-- Open Graph data -->
+<meta property="og:type" content="Website" />
+<meta property="og:url" content="https://health.alaska.gov/en/division-of-public-health/" />
+<meta property="og:title" content="Division of Public Health" />
+<meta property="og:description" content="Healthy and resilient Alaskans today and tomorrow" />
+    <meta property="og:image" content="https://health.alaska.gov/media/frsl5qod/logo.png?width=800" />
+
+<meta property="og:site_name" content="State of Alaska | Department of Health" />
+
+<!-- Translated Versions -->
+		<link rel='alternate' hreflang='en-us' href='https://health.alaska.gov/en/division-of-public-health/' />
+		<link rel='alternate' hreflang='x-default' href='https://health.alaska.gov/en/division-of-public-health/' />
+
+
+<link rel="canonical" href="https://health.alaska.gov/en/division-of-public-health/" />
+
+<title>Division of Public Health | State of Alaska | Department of Health</title>
+
+
+<meta name='pageid' content='2036'>
+
+
+
+    <!-- Favicon -->
+<link rel="shortcut icon" type="image/x-icon" href="/assets/DOH/images/favicon.ico">
+<link rel="icon" type="image/x-icon" href="/assets/DOH/images/favicon.ico">
+
+
+    <link rel="stylesheet" href="/assets/DOH/css/app.css?v=DQAkvvom6aAsVOrZa2eHF04zEheMBuSYPly9wN73ZWY">
+
+    
+<script>
+    dataLayer = [];
+</script>
+
+    <!-- Google Tag Manager -->
+    <script>
+(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-KCNPLLS');</script>
+    <!-- End Google Tag Manager -->
+
+    
+
+
+    <!-- OneTrust Cookies Consent Notice start for health.alaska.gov -->
+<script src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js"  type="text/javascript" charset="UTF-8" data-domain-script="0195710a-201d-7ab7-afa6-98970b6bff1a-test" ></script>
+<script type="text/javascript">
+function OptanonWrapper() { }
+</script>
+<!-- OneTrust Cookies Consent Notice end for health.alaska.gov --> 
+    <script async="async" src="/App_Plugins/UmbracoForms/Assets/promise-polyfill/dist/polyfill.min.js?v=13.5.0" type="application/javascript"></script><script async="async" src="/App_Plugins/UmbracoForms/Assets/aspnet-client-validation/dist/aspnet-validation.min.js?v=13.5.0" type="application/javascript"></script>
+<script>let url="/umbraco/engage/pagedata/ping",pageviewId="a189e541e3ff4b01a8c88b60d5de70cc";if("function"==typeof navigator.sendBeacon&&"function"==typeof Blob){let e=new Blob([pageviewId],{type:"text/plain"});navigator.sendBeacon(url,e)}else{let a=new XMLHttpRequest;a.open("POST",url,1),a.setRequestHeader("Content-Type","text/plain"),a.send(pageviewId)}</script></head>
+
+<body class="landing-page">
+    
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KCNPLLS" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
+    <link rel="stylesheet" href="/assets/DOH/css/main-navigation.css?cb=1.0.0.0" />
+
+<nav role="navigation" class="header mobile-nav-close" data-module="mainNavigation">
+    <div class="header__inner js-header-inner">
+
+        <div class="header__top-navigation">
+            <!-- Quick links bar -->
+            <div class="grid-container">
+                <div class="grid-x header__main-global-wrapper">
+                    <div class="cell small-2 large-3">
+                        <div class="alaska-logo__wrapper">
+                            <a
+                                class="alaska-logo"
+                                href="https://alaska.gov/"
+                                target="_blank"
+                            >
+                                <img
+                                    src="/media/eyvd3kbt/alaska-logo.png"
+                                    class="alaska-logo__image"
+                                    alt="Alaska Logo"
+                                />
+                            </a>
+                        </div>
+                    </div>
+                    <div class="cell small-2 large-start-9 large-4">
+                        <div class="header__top-navigation-row">
+<a href="https://my.alaska.gov/" class="header__quick-link breadcrumb js-quick-link" target="_blank" rel="noopener">
+	MyAlaska
+</a><a href="https://alaska.gov/akdir1.html" class="header__quick-link breadcrumb js-quick-link" target="_blank" rel="noopener">
+	Departments
+</a>                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="header__logo-row">
+            <div class="grid-container header__logo-container">
+                <div class="site-logo__wrapper">
+                    <div class="header__logo-title-wrapper">
+                        <a class="site-logo" href="https://health.alaska.gov/en">
+                            <span class="visually-hidden"></span>
+                            <img src="/media/mwjpaqgg/doh-beveled-1.svg" class="site-logo__image" alt="DOH Beveled 1" />
+                        </a>
+                    </div>
+
+                    <div class="header__title-wrapper">
+                        <span class="body header__title-line-1 small-body">State of Alaska</span>
+                        <span class="t4">Department of Health</span>
+                    </div>
+                </div>
+
+                <div class="header__search-wrapper">
+                    <div class="header__desktop-search header__desktop-search--search-enabled">
+                        <span class="header__open-search-btn js-open-search-btn "></span>
+                    </div>
+<a href="#" class="burger js-burger-nav">
+    <span class="visually-hidden">Open Navigation</span>
+    <span class="burger__bar1"></span>
+    <span class="burger__bar2"></span>
+    <span class="burger__bar3"></span>
+</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="grid-container">
+            <div class="js-search-row header__search-row">
+<div class="header-search-bar" data-module="searchBar" data-endpoint="/umbraco/api/autocomplete">
+    <div class="header-search-bar__inner header-search-bar--search-enabled">
+        <form action="/en/search-results/"
+            class="header-search-bar__form js-search-form header-search-bar__form--search-enabled"
+            method="get">
+            <label for="header-search-1c57b57e-23b4-459e-9f05-4e15209a77bb" class="visually-hidden">Search site :</label>
+            <input id="header-search-1c57b57e-23b4-459e-9f05-4e15209a77bb" type="text" name="search"
+                class="header-search-bar__search-field js-search-textfield  t2 header-search-bar__search-field--search-enabled"
+                placeholder="Ask a question..." value="" />
+            <div
+                class="js-clear-btn header-search-bar__clear-wrapper hidden header-search-bar__clear-wrapper--search-enabled">
+                <span class="header-search-bar__clear-text body">Clear</span>
+                <span class="header-search-bar__clear-icon"></span>
+            </div>
+            <button type="submit" class="header-search-bar__submit-button js-submit-button" disabled aria-label="Submit Search">
+                <svg alt="Submit Search Icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24"
+                    height="24" class="header-search-bar__search-icon">
+                    <circle cx="11" cy="11" r="8" stroke="white" stroke-width="2" fill="none" />
+                    <line x1="17" y1="17" x2="21" y2="21" stroke="white" stroke-width="2" />
+                </svg>
+            </button>
+        </form>
+        <div class="header-search-bar__search-options">
+        </div>
+        <div class="header-search-bar__auto-complete js-auto-complete">
+            <ul class="header-search-bar__auto-complete-list js-auto-complete-list">
+            </ul>
+        </div>
+
+        <div class="header-search-bar__popular-searches js-popular-searches">
+            <p
+                class="header-search-bar__popular-searches-title body header-search-bar__popular-searches-title--search-enabled">
+                Popular searches right now</p>
+            <div class="header-search-bar__popular-searches-wrapper">
+                <a href="/en/search-results/?search=SNAP" class="header-search-bar__popular-searches-links caption">
+                    SNAP
+                </a>
+                <a href="/en/search-results/?search=Medicaid" class="header-search-bar__popular-searches-links caption">
+                    Medicaid
+                </a>
+                <a href="/en/search-results/?search=Medicare" class="header-search-bar__popular-searches-links caption">
+                    Medicare
+                </a>
+                <a href="/en/search-results/?search=Order+vital+records" class="header-search-bar__popular-searches-links caption">
+                    Order vital records
+                </a>
+                <a href="/en/search-results/?search=Order+birth+certificates" class="header-search-bar__popular-searches-links caption">
+                    Order birth certificates
+                </a>
+                <a href="/en/search-results/?search=Submit+Report+of+Harm" class="header-search-bar__popular-searches-links caption">
+                    Submit Report of Harm
+                </a>
+                <a href="/en/search-results/?search=Measles" class="header-search-bar__popular-searches-links caption">
+                    Measles
+                </a>
+                <a href="/en/search-results/?search=The+One+Big+Beautiful+Bill+Act+(OBBBA)+-+Impacts+to+Alaska" class="header-search-bar__popular-searches-links caption">
+                    The One Big Beautiful Bill Act (OBBBA) - Impacts to Alaska
+                </a>
+                <a href="/en/search-results/?search=Quit+tobacco" class="header-search-bar__popular-searches-links caption">
+                    Quit tobacco
+                </a>
+            </div>
+        </div>
+    </div>
+</div>            </div>
+        </div>
+
+        <div class="header__navigation-row">
+            <div class="grid-container">
+                <div class="header__navigation-wrapper js-top-navigation">
+                    <!-- Desktop navigation -->
+<div class="primary-navigation primary-navigation--desktop">
+    <ul class="primary-navigation__list js-primary-navigation-list">
+            <li class="primary-navigation__list-item js-nav-list-item   ">
+                <a href="/en/" class="primary-navigation__link js-primary-navigation-link js-mobile-menu-toggle " target="_self"  >
+                    <span class="body primary-navigation__nav-menu-link">Home</span>
+
+                </a>
+
+
+            </li>
+
+            <li class="primary-navigation__list-item js-nav-list-item   primary-navigation--has-sub-navigation">
+                <a href="/en/services/" class="primary-navigation__link js-primary-navigation-link js-mobile-menu-toggle " target="_self"  >
+                    <span class="body primary-navigation__nav-menu-link">Services</span>
+                        <span class="primary-navigation__nav-caret"></span>
+
+                </a>
+
+
+                    <div class="sub-navigation js-sub-navigation ">
+                        <div class="grid-container sub-navigation__inner js-sub-navigation-inner">
+                         <div class="grid-x sub-navigation__main-global-wrapper">
+                            <div class="sub-navigation__col sub-navigation__col--links cell large-3">
+<ul class="sub-navigation__link-list">
+    <li class="sub-navigation__link js-secondary-navigation-link">
+        <a class="small-body sub-navigation__link-line" href="/en/services/background-check-program/" target="_self">Background Check Program</a>
+    </li>
+    <li class="sub-navigation__link js-secondary-navigation-link">
+        <a class="small-body sub-navigation__link-line" href="/en/topics/child-care/" target="_self">Child Care</a>
+    </li>
+    <li class="sub-navigation__link js-secondary-navigation-link">
+        <a class="small-body sub-navigation__link-line" href="/en/topics/child-health-development/" target="_self">Child Health &amp; Development</a>
+    </li>
+    <li class="sub-navigation__link js-secondary-navigation-link">
+        <a class="small-body sub-navigation__link-line" href="/en/topics/chronic-diseases/" target="_self">Chronic Diseases</a>
+    </li>
+    <li class="sub-navigation__link js-secondary-navigation-link">
+        <a class="small-body sub-navigation__link-line" href="/en/services/denali-kidcare/" target="_self">Denali KidCare</a>
+    </li>
+    <li class="sub-navigation__link js-secondary-navigation-link">
+        <a class="small-body sub-navigation__link-line" href="/en/topics/disability-care/" target="_self">Disability Care</a>
+    </li>
+</ul>
+                            </div>
+                            <div class="sub-navigation__col sub-navigation__col--links cell large-3">
+<ul class="sub-navigation__link-list">
+    <li class="sub-navigation__link js-secondary-navigation-link">
+        <a class="small-body sub-navigation__link-line" href="/en/services/division-of-public-assistance-dpa-services/" target="_self">Division of Public Assistance (DPA) Services</a>
+    </li>
+    <li class="sub-navigation__link js-secondary-navigation-link">
+        <a class="small-body sub-navigation__link-line" href="/en/topics/employment-assistance/" target="_self">Employment Assistance</a>
+    </li>
+    <li class="sub-navigation__link js-secondary-navigation-link">
+        <a class="small-body sub-navigation__link-line" href="/en/topics/environmental-health/" target="_self">Environmental Health</a>
+    </li>
+    <li class="sub-navigation__link js-secondary-navigation-link">
+        <a class="small-body sub-navigation__link-line" href="/en/topics/financial-assistance/" target="_self">Financial Assistance</a>
+    </li>
+    <li class="sub-navigation__link js-secondary-navigation-link">
+        <a class="small-body sub-navigation__link-line" href="/en/topics/health-care-coverage/" target="_self">Health Care Coverage</a>
+    </li>
+    <li class="sub-navigation__link js-secondary-navigation-link">
+        <a class="small-body sub-navigation__link-line" href="/en/topics/health-care-facilities/" target="_self">Health Care Facilities</a>
+    </li>
+</ul>
+                            </div>
+                            <div class="sub-navigation__col sub-navigation__col--links cell large-3">
+<ul class="sub-navigation__link-list">
+    <li class="sub-navigation__link js-secondary-navigation-link">
+        <a class="small-body sub-navigation__link-line" href="/en/topics/infectious-diseases/" target="_self">Infectious Diseases</a>
+    </li>
+    <li class="sub-navigation__link js-secondary-navigation-link">
+        <a class="small-body sub-navigation__link-line" href="/en/topics/injury-prevention/" target="_self">Injury Prevention</a>
+    </li>
+    <li class="sub-navigation__link js-secondary-navigation-link">
+        <a class="small-body sub-navigation__link-line" href="/en/services/division-of-public-assistance-dpa-services/apply-for-medicaid/" target="_self">Apply for Medicaid</a>
+    </li>
+    <li class="sub-navigation__link js-secondary-navigation-link">
+        <a class="small-body sub-navigation__link-line" href="/en/topics/mental-health/" target="_self">Mental Health</a>
+    </li>
+    <li class="sub-navigation__link js-secondary-navigation-link">
+        <a class="small-body sub-navigation__link-line" href="/en/topics/nutrition/" target="_self">Nutrition</a>
+    </li>
+</ul>
+                            </div>
+                            <div class="sub-navigation__col sub-navigation__col--links cell large-3">
+<ul class="sub-navigation__link-list">
+    <li class="sub-navigation__link js-secondary-navigation-link">
+        <a class="small-body sub-navigation__link-line" href="/en/topics/senior-care/" target="_self">Senior Care</a>
+    </li>
+    <li class="sub-navigation__link js-secondary-navigation-link">
+        <a class="small-body sub-navigation__link-line" href="/en/topics/substance-abuse/" target="_self">Substance Use &amp; Treatment</a>
+    </li>
+    <li class="sub-navigation__link js-secondary-navigation-link">
+        <a class="small-body sub-navigation__link-line" href="/en/topics/vital-records-and-certificates/" target="_self">Vital Records &amp; Certificates</a>
+    </li>
+    <li class="sub-navigation__link js-secondary-navigation-link">
+        <a class="small-body sub-navigation__link-line" href="/en/topics/womens-health/" target="_self">Women's Health</a>
+    </li>
+</ul>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+            </li>
+
+            <li class="primary-navigation__list-item js-nav-list-item   primary-navigation--has-sub-navigation">
+                <a href="/en/for-providers-professionals/" class="primary-navigation__link js-primary-navigation-link js-mobile-menu-toggle " target="_self"  >
+                    <span class="body primary-navigation__nav-menu-link">For Providers &amp; Professionals</span>
+                        <span class="primary-navigation__nav-caret"></span>
+
+                </a>
+
+
+                    <div class="sub-navigation js-sub-navigation ">
+                        <div class="grid-container sub-navigation__inner js-sub-navigation-inner">
+                         <div class="grid-x sub-navigation__main-global-wrapper">
+                            <div class="sub-navigation__col sub-navigation__col--links cell large-3">
+<ul class="sub-navigation__link-list">
+    <li class="sub-navigation__link js-secondary-navigation-link">
+        <a class="small-body sub-navigation__link-line" href="/en/for-providers-professionals/for-providers-clinicians/" target="_self">For Providers &amp; Clinicians</a>
+    </li>
+    <li class="sub-navigation__link js-secondary-navigation-link">
+        <a class="small-body sub-navigation__link-line" href="/en/for-providers-professionals/for-health-care-facilities/" target="_self">For Healthcare Facilities</a>
+    </li>
+    <li class="sub-navigation__link js-secondary-navigation-link">
+        <a class="small-body sub-navigation__link-line" href="/en/for-providers-professionals/for-school-professionals/" target="_self">For School Professionals</a>
+    </li>
+    <li class="sub-navigation__link js-secondary-navigation-link">
+        <a class="small-body sub-navigation__link-line" href="/en/for-providers-professionals/for-businesses/" target="_self">For Businesses</a>
+    </li>
+</ul>
+                            </div>
+                            <div class="sub-navigation__col sub-navigation__col--links cell large-3">
+<ul class="sub-navigation__link-list">
+    <li class="sub-navigation__link js-secondary-navigation-link">
+        <a class="small-body sub-navigation__link-line" href="/en/services/centralized-reporting/" target="_self">Centralized Reporting: Submit A Critical Incident Report</a>
+    </li>
+    <li class="sub-navigation__link js-secondary-navigation-link">
+        <a class="small-body sub-navigation__link-line" href="/en/topics/certificates-and-licensing/" target="_self">Certificates &amp; Licensing</a>
+    </li>
+    <li class="sub-navigation__link js-secondary-navigation-link">
+        <a class="small-body sub-navigation__link-line" href="/en/services/medicaid-provider-assistance/" target="_self">Medicaid Provider Assistance</a>
+    </li>
+    <li class="sub-navigation__link js-secondary-navigation-link">
+        <a class="small-body sub-navigation__link-line" href="/en/topics/research-and-statistics/" target="_self">Research &amp; Statistics</a>
+    </li>
+    <li class="sub-navigation__link js-secondary-navigation-link">
+        <a class="small-body sub-navigation__link-line" href="/en/services/vactrak/" target="_self">VacTrAK Immunization Information System</a>
+    </li>
+</ul>
+                            </div>
+                            <div class="sub-navigation__col sub-navigation__col--links cell large-3">
+<ul class="sub-navigation__link-list">
+    <li class="sub-navigation__link js-secondary-navigation-link">
+        <a class="small-body sub-navigation__link-line" href="/en/division-of-public-health/alaska-public-laboratories/" target="_self">Alaska State Public Health Laboratories (ASPHL)</a>
+    </li>
+    <li class="sub-navigation__link js-secondary-navigation-link">
+        <a class="small-body sub-navigation__link-line" href="/en/services/background-check-program/" target="_self">Background Check Program</a>
+    </li>
+    <li class="sub-navigation__link js-secondary-navigation-link">
+        <a class="small-body sub-navigation__link-line" href="/en/topics/grants-and-contracts/" target="_self">Grants &amp; Contracts</a>
+    </li>
+    <li class="sub-navigation__link js-secondary-navigation-link">
+        <a class="small-body sub-navigation__link-line" href="/en/education/child-care/how-to-become-a-licensed-child-care-provider/" target="_self">How to become a Licensed Child Care Provider</a>
+    </li>
+</ul>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+            </li>
+
+            <li class="primary-navigation__list-item js-nav-list-item primary-navigation__list-item--is-active  primary-navigation--has-sub-navigation">
+                <a href="/en/divisions/" class="primary-navigation__link js-primary-navigation-link js-mobile-menu-toggle primary-navigation__link--is-active" target="_self"  >
+                    <span class="body primary-navigation__nav-menu-link">Divisions</span>
+                        <span class="primary-navigation__nav-caret"></span>
+
+                </a>
+
+
+                    <div class="sub-navigation js-sub-navigation ">
+                        <div class="grid-container sub-navigation__inner js-sub-navigation-inner">
+                         <div class="grid-x sub-navigation__main-global-wrapper">
+                            <div class="sub-navigation__col sub-navigation__col--links cell large-3">
+<ul class="sub-navigation__link-list">
+    <li class="sub-navigation__link js-secondary-navigation-link">
+        <a class="small-body sub-navigation__link-line" href="/en/office-of-the-commissioner/" target="_self">Office of the Commissioner</a>
+    </li>
+    <li class="sub-navigation__link js-secondary-navigation-link">
+        <a class="small-body sub-navigation__link-line" href="/en/division-of-behavioral-health/" target="_self">Behavioral Health</a>
+    </li>
+    <li class="sub-navigation__link js-secondary-navigation-link">
+        <a class="small-body sub-navigation__link-line" href="/en/division-of-finance-and-management/" target="_self">Finance and Management Services</a>
+    </li>
+    <li class="sub-navigation__link js-secondary-navigation-link">
+        <a class="small-body sub-navigation__link-line" href="/en/division-of-health-care-services/" target="_self">Health Care Services</a>
+    </li>
+</ul>
+                            </div>
+                            <div class="sub-navigation__col sub-navigation__col--links cell large-3">
+<ul class="sub-navigation__link-list">
+    <li class="sub-navigation__link js-secondary-navigation-link">
+        <a class="small-body sub-navigation__link-line" href="/en/division-of-public-assistance/" target="_self">Public Assistance</a>
+    </li>
+    <li class="sub-navigation__link js-secondary-navigation-link">
+        <a class="small-body sub-navigation__link-line" href="/en/division-of-public-health/" target="_self">Public Health</a>
+    </li>
+    <li class="sub-navigation__link js-secondary-navigation-link">
+        <a class="small-body sub-navigation__link-line" href="/en/senior-and-disabilities-services/" target="_self">Senior and Disabilities Services</a>
+    </li>
+</ul>
+                            </div>
+                            <div class="sub-navigation__col sub-navigation__col--links cell large-3">
+<ul class="sub-navigation__link-list">
+    <li class="sub-navigation__link js-secondary-navigation-link">
+        <a class="small-body sub-navigation__link-line" href="/en/division-of-behavioral-health/alcoholism-and-drug-abuse-board/" target="_self">Advisory Board on Alcoholism and Drug Abuse (ABADA)</a>
+    </li>
+    <li class="sub-navigation__link js-secondary-navigation-link">
+        <a class="small-body sub-navigation__link-line" href="/en/senior-and-disabilities-services/alaska-commission-on-aging/" target="_self">Alaska Commission on Aging</a>
+    </li>
+    <li class="sub-navigation__link js-secondary-navigation-link">
+        <a class="small-body sub-navigation__link-line" href="/en/office-of-the-commissioner/alaska-mental-health-board/" target="_self">Alaska Mental Health Board</a>
+    </li>
+    <li class="sub-navigation__link js-secondary-navigation-link">
+        <a class="small-body sub-navigation__link-line" href="/en/senior-and-disabilities-services/governors-council-on-disabilities/" target="_self">Governor's Council on Disabilities and Special Education</a>
+    </li>
+    <li class="sub-navigation__link js-secondary-navigation-link">
+        <a class="small-body sub-navigation__link-line" href="/en/division-of-behavioral-health/statewide-suicide-prevention/" target="_self">Statewide Suicide Prevention Council</a>
+    </li>
+</ul>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+            </li>
+
+            <li class="primary-navigation__list-item js-nav-list-item   ">
+                <a href="/en/news/" class="primary-navigation__link js-primary-navigation-link js-mobile-menu-toggle " target="_self"  >
+                    <span class="body primary-navigation__nav-menu-link">News</span>
+
+                </a>
+
+
+            </li>
+
+            <li class="primary-navigation__list-item js-nav-list-item   ">
+                <a href="/en/education/help/" class="primary-navigation__link js-primary-navigation-link js-mobile-menu-toggle " target="_self"  >
+                    <span class="body primary-navigation__nav-menu-link">Help</span>
+
+                </a>
+
+
+            </li>
+
+    </ul>
+</div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="header__mobile-navigation js-mobile-navigaton">
+        <!-- Mobile navigation -->
+
+<div class="primary-navigation primary-navigation--mobile">
+<div class="mobile-search js-search-wrapper" data-module="mobileSearch">
+    <div class="grid-container mobile-search__wrapper">
+        <form
+            class="mobile-search__form js-search-form"
+            data-expanded="false"
+            action="/en/search-results/"
+            method="GET"
+        >
+            <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="placeholder-icon"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+            >
+                <path
+                    opacity="0.15"
+                    d="M18 10.5C18 14.6421 14.6421 18 10.5 18C6.35786 18 3 14.6421 3 10.5C3 6.35786 6.35786 3 10.5 3C14.6421 3 18 6.35786 18 10.5Z"
+                    fill="white"
+                />
+                <path
+                    d="M20 20L15.8033 15.8033M18 10.5C18 6.35786 14.6421 3 10.5 3C6.35786 3 3 6.35786 3 10.5C3 14.6421 6.35786 18 10.5 18C14.6421 18 18 14.6421 18 10.5Z"
+                    stroke="white"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                />
+            </svg>
+            <span class="mobile-search__search-label js-search-label">Search</span>
+            <label for="mobile-search-1c57b57e-23b4-459e-9f05-4e15209a77bb" class="visually-hidden">Search site :</label>
+            <input
+                id="mobile-search-1c57b57e-23b4-459e-9f05-4e15209a77bb"
+                type="text"
+                class="mobile-search__search-input body js-search-input"
+                name="search"
+                placeholder="Ask a question..."
+            />
+            <button type="submit" class="mobile-search__search-button" aria-label="Submit Search">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                    <path
+                        opacity="0.15"
+                        d="M18 10.5C18 14.6421 14.6421 18 10.5 18C6.35786 18 3 14.6421 3 10.5C3 6.35786 6.35786 3 10.5 3C14.6421 3 18 6.35786 18 10.5Z"
+                        fill="white"
+                    />
+                    <path
+                        d="M20 20L15.8033 15.8033M18 10.5C18 6.35786 14.6421 3 10.5 3C6.35786 3 3 6.35786 3 10.5C3 14.6421 6.35786 18 10.5 18C14.6421 18 18 14.6421 18 10.5Z"
+                        stroke="white"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                    />
+                </svg>
+            </button>
+        </form>
+        <div class="mobile-search__popular-searches mobile-search__popular-searches--hidden js-mobile-popular-searches">
+            <p
+                class="mobile-search__popular-searches-title body mobile-search__popular-searches-title--search-enabled"
+            >
+                
+            </p>
+            <div class="mobile-search__popular-searches-wrapper">
+                <a href="/en/search-results/?search=SNAP" class="mobile-search__popular-searches-links caption">
+                    SNAP
+                </a>
+                <a href="/en/search-results/?search=Medicaid" class="mobile-search__popular-searches-links caption">
+                    Medicaid
+                </a>
+                <a href="/en/search-results/?search=Medicare" class="mobile-search__popular-searches-links caption">
+                    Medicare
+                </a>
+                <a href="/en/search-results/?search=Order+vital+records" class="mobile-search__popular-searches-links caption">
+                    Order vital records
+                </a>
+                <a href="/en/search-results/?search=Order+birth+certificates" class="mobile-search__popular-searches-links caption">
+                    Order birth certificates
+                </a>
+                <a href="/en/search-results/?search=Submit+Report+of+Harm" class="mobile-search__popular-searches-links caption">
+                    Submit Report of Harm
+                </a>
+                <a href="/en/search-results/?search=Measles" class="mobile-search__popular-searches-links caption">
+                    Measles
+                </a>
+                <a href="/en/search-results/?search=The+One+Big+Beautiful+Bill+Act+(OBBBA)+-+Impacts+to+Alaska" class="mobile-search__popular-searches-links caption">
+                    The One Big Beautiful Bill Act (OBBBA) - Impacts to Alaska
+                </a>
+                <a href="/en/search-results/?search=Quit+tobacco" class="mobile-search__popular-searches-links caption">
+                    Quit tobacco
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="grid-container">
+    <ul class="primary-navigation__list js-primary-navigation-list">
+            <li class="primary-navigation__list-item js-nav-list-item   ">
+                <a href="/en/" class="primary-navigation__link js-primary-navigation-link js-mobile-menu-toggle " target="_self"  >
+                    <span class="body primary-navigation__nav-menu-link">Home</span>
+                        <span class="primary-navigation__nav-caret"></span>
+
+                </a>
+
+
+            </li>
+
+            <li class="primary-navigation__list-item js-nav-list-item   primary-navigation--has-sub-navigation">
+                <a href="/en/services/" class="primary-navigation__link js-primary-navigation-link js-mobile-menu-toggle " target="_self"  >
+                    <span class="body primary-navigation__nav-menu-link">Services</span>
+                        <span class="primary-navigation__nav-caret"></span>
+
+                </a>
+
+
+                    <div class="sub-navigation js-sub-navigation ">
+                        <div class="grid-container sub-navigation__inner js-sub-navigation-inner">
+                         <div class="grid-x sub-navigation__main-global-wrapper">
+                            <div class="sub-navigation__col sub-navigation__col--links cell large-3">
+<ul class="sub-navigation__link-list">
+    <li class="sub-navigation__link js-secondary-navigation-link">
+        <a class="small-body sub-navigation__link-line" href="/en/services/background-check-program/" target="_self">Background Check Program</a>
+    </li>
+    <li class="sub-navigation__link js-secondary-navigation-link">
+        <a class="small-body sub-navigation__link-line" href="/en/topics/child-care/" target="_self">Child Care</a>
+    </li>
+    <li class="sub-navigation__link js-secondary-navigation-link">
+        <a class="small-body sub-navigation__link-line" href="/en/topics/child-health-development/" target="_self">Child Health &amp; Development</a>
+    </li>
+    <li class="sub-navigation__link js-secondary-navigation-link">
+        <a class="small-body sub-navigation__link-line" href="/en/topics/chronic-diseases/" target="_self">Chronic Diseases</a>
+    </li>
+    <li class="sub-navigation__link js-secondary-navigation-link">
+        <a class="small-body sub-navigation__link-line" href="/en/services/denali-kidcare/" target="_self">Denali KidCare</a>
+    </li>
+    <li class="sub-navigation__link js-secondary-navigation-link">
+        <a class="small-body sub-navigation__link-line" href="/en/topics/disability-care/" target="_self">Disability Care</a>
+    </li>
+</ul>
+                            </div>
+                            <div class="sub-navigation__col sub-navigation__col--links cell large-3">
+<ul class="sub-navigation__link-list">
+    <li class="sub-navigation__link js-secondary-navigation-link">
+        <a class="small-body sub-navigation__link-line" href="/en/services/division-of-public-assistance-dpa-services/" target="_self">Division of Public Assistance (DPA) Services</a>
+    </li>
+    <li class="sub-navigation__link js-secondary-navigation-link">
+        <a class="small-body sub-navigation__link-line" href="/en/topics/employment-assistance/" target="_self">Employment Assistance</a>
+    </li>
+    <li class="sub-navigation__link js-secondary-navigation-link">
+        <a class="small-body sub-navigation__link-line" href="/en/topics/environmental-health/" target="_self">Environmental Health</a>
+    </li>
+    <li class="sub-navigation__link js-secondary-navigation-link">
+        <a class="small-body sub-navigation__link-line" href="/en/topics/financial-assistance/" target="_self">Financial Assistance</a>
+    </li>
+    <li class="sub-navigation__link js-secondary-navigation-link">
+        <a class="small-body sub-navigation__link-line" href="/en/topics/health-care-coverage/" target="_self">Health Care Coverage</a>
+    </li>
+    <li class="sub-navigation__link js-secondary-navigation-link">
+        <a class="small-body sub-navigation__link-line" href="/en/topics/health-care-facilities/" target="_self">Health Care Facilities</a>
+    </li>
+</ul>
+                            </div>
+                            <div class="sub-navigation__col sub-navigation__col--links cell large-3">
+<ul class="sub-navigation__link-list">
+    <li class="sub-navigation__link js-secondary-navigation-link">
+        <a class="small-body sub-navigation__link-line" href="/en/topics/infectious-diseases/" target="_self">Infectious Diseases</a>
+    </li>
+    <li class="sub-navigation__link js-secondary-navigation-link">
+        <a class="small-body sub-navigation__link-line" href="/en/topics/injury-prevention/" target="_self">Injury Prevention</a>
+    </li>
+    <li class="sub-navigation__link js-secondary-navigation-link">
+        <a class="small-body sub-navigation__link-line" href="/en/services/division-of-public-assistance-dpa-services/apply-for-medicaid/" target="_self">Apply for Medicaid</a>
+    </li>
+    <li class="sub-navigation__link js-secondary-navigation-link">
+        <a class="small-body sub-navigation__link-line" href="/en/topics/mental-health/" target="_self">Mental Health</a>
+    </li>
+    <li class="sub-navigation__link js-secondary-navigation-link">
+        <a class="small-body sub-navigation__link-line" href="/en/topics/nutrition/" target="_self">Nutrition</a>
+    </li>
+</ul>
+                            </div>
+                            <div class="sub-navigation__col sub-navigation__col--links cell large-3">
+<ul class="sub-navigation__link-list">
+    <li class="sub-navigation__link js-secondary-navigation-link">
+        <a class="small-body sub-navigation__link-line" href="/en/topics/senior-care/" target="_self">Senior Care</a>
+    </li>
+    <li class="sub-navigation__link js-secondary-navigation-link">
+        <a class="small-body sub-navigation__link-line" href="/en/topics/substance-abuse/" target="_self">Substance Use &amp; Treatment</a>
+    </li>
+    <li class="sub-navigation__link js-secondary-navigation-link">
+        <a class="small-body sub-navigation__link-line" href="/en/topics/vital-records-and-certificates/" target="_self">Vital Records &amp; Certificates</a>
+    </li>
+    <li class="sub-navigation__link js-secondary-navigation-link">
+        <a class="small-body sub-navigation__link-line" href="/en/topics/womens-health/" target="_self">Women's Health</a>
+    </li>
+</ul>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+            </li>
+
+            <li class="primary-navigation__list-item js-nav-list-item   primary-navigation--has-sub-navigation">
+                <a href="/en/for-providers-professionals/" class="primary-navigation__link js-primary-navigation-link js-mobile-menu-toggle " target="_self"  >
+                    <span class="body primary-navigation__nav-menu-link">For Providers &amp; Professionals</span>
+                        <span class="primary-navigation__nav-caret"></span>
+
+                </a>
+
+
+                    <div class="sub-navigation js-sub-navigation ">
+                        <div class="grid-container sub-navigation__inner js-sub-navigation-inner">
+                         <div class="grid-x sub-navigation__main-global-wrapper">
+                            <div class="sub-navigation__col sub-navigation__col--links cell large-3">
+<ul class="sub-navigation__link-list">
+    <li class="sub-navigation__link js-secondary-navigation-link">
+        <a class="small-body sub-navigation__link-line" href="/en/for-providers-professionals/for-providers-clinicians/" target="_self">For Providers &amp; Clinicians</a>
+    </li>
+    <li class="sub-navigation__link js-secondary-navigation-link">
+        <a class="small-body sub-navigation__link-line" href="/en/for-providers-professionals/for-health-care-facilities/" target="_self">For Healthcare Facilities</a>
+    </li>
+    <li class="sub-navigation__link js-secondary-navigation-link">
+        <a class="small-body sub-navigation__link-line" href="/en/for-providers-professionals/for-school-professionals/" target="_self">For School Professionals</a>
+    </li>
+    <li class="sub-navigation__link js-secondary-navigation-link">
+        <a class="small-body sub-navigation__link-line" href="/en/for-providers-professionals/for-businesses/" target="_self">For Businesses</a>
+    </li>
+</ul>
+                            </div>
+                            <div class="sub-navigation__col sub-navigation__col--links cell large-3">
+<ul class="sub-navigation__link-list">
+    <li class="sub-navigation__link js-secondary-navigation-link">
+        <a class="small-body sub-navigation__link-line" href="/en/services/centralized-reporting/" target="_self">Centralized Reporting: Submit A Critical Incident Report</a>
+    </li>
+    <li class="sub-navigation__link js-secondary-navigation-link">
+        <a class="small-body sub-navigation__link-line" href="/en/topics/certificates-and-licensing/" target="_self">Certificates &amp; Licensing</a>
+    </li>
+    <li class="sub-navigation__link js-secondary-navigation-link">
+        <a class="small-body sub-navigation__link-line" href="/en/services/medicaid-provider-assistance/" target="_self">Medicaid Provider Assistance</a>
+    </li>
+    <li class="sub-navigation__link js-secondary-navigation-link">
+        <a class="small-body sub-navigation__link-line" href="/en/topics/research-and-statistics/" target="_self">Research &amp; Statistics</a>
+    </li>
+    <li class="sub-navigation__link js-secondary-navigation-link">
+        <a class="small-body sub-navigation__link-line" href="/en/services/vactrak/" target="_self">VacTrAK Immunization Information System</a>
+    </li>
+</ul>
+                            </div>
+                            <div class="sub-navigation__col sub-navigation__col--links cell large-3">
+<ul class="sub-navigation__link-list">
+    <li class="sub-navigation__link js-secondary-navigation-link">
+        <a class="small-body sub-navigation__link-line" href="/en/division-of-public-health/alaska-public-laboratories/" target="_self">Alaska State Public Health Laboratories (ASPHL)</a>
+    </li>
+    <li class="sub-navigation__link js-secondary-navigation-link">
+        <a class="small-body sub-navigation__link-line" href="/en/services/background-check-program/" target="_self">Background Check Program</a>
+    </li>
+    <li class="sub-navigation__link js-secondary-navigation-link">
+        <a class="small-body sub-navigation__link-line" href="/en/topics/grants-and-contracts/" target="_self">Grants &amp; Contracts</a>
+    </li>
+    <li class="sub-navigation__link js-secondary-navigation-link">
+        <a class="small-body sub-navigation__link-line" href="/en/education/child-care/how-to-become-a-licensed-child-care-provider/" target="_self">How to become a Licensed Child Care Provider</a>
+    </li>
+</ul>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+            </li>
+
+            <li class="primary-navigation__list-item js-nav-list-item primary-navigation__list-item--is-active  primary-navigation--has-sub-navigation">
+                <a href="/en/divisions/" class="primary-navigation__link js-primary-navigation-link js-mobile-menu-toggle primary-navigation__link--is-active" target="_self"  >
+                    <span class="body primary-navigation__nav-menu-link">Divisions</span>
+                        <span class="primary-navigation__nav-caret"></span>
+
+                </a>
+
+
+                    <div class="sub-navigation js-sub-navigation ">
+                        <div class="grid-container sub-navigation__inner js-sub-navigation-inner">
+                         <div class="grid-x sub-navigation__main-global-wrapper">
+                            <div class="sub-navigation__col sub-navigation__col--links cell large-3">
+<ul class="sub-navigation__link-list">
+    <li class="sub-navigation__link js-secondary-navigation-link">
+        <a class="small-body sub-navigation__link-line" href="/en/office-of-the-commissioner/" target="_self">Office of the Commissioner</a>
+    </li>
+    <li class="sub-navigation__link js-secondary-navigation-link">
+        <a class="small-body sub-navigation__link-line" href="/en/division-of-behavioral-health/" target="_self">Behavioral Health</a>
+    </li>
+    <li class="sub-navigation__link js-secondary-navigation-link">
+        <a class="small-body sub-navigation__link-line" href="/en/division-of-finance-and-management/" target="_self">Finance and Management Services</a>
+    </li>
+    <li class="sub-navigation__link js-secondary-navigation-link">
+        <a class="small-body sub-navigation__link-line" href="/en/division-of-health-care-services/" target="_self">Health Care Services</a>
+    </li>
+</ul>
+                            </div>
+                            <div class="sub-navigation__col sub-navigation__col--links cell large-3">
+<ul class="sub-navigation__link-list">
+    <li class="sub-navigation__link js-secondary-navigation-link">
+        <a class="small-body sub-navigation__link-line" href="/en/division-of-public-assistance/" target="_self">Public Assistance</a>
+    </li>
+    <li class="sub-navigation__link js-secondary-navigation-link">
+        <a class="small-body sub-navigation__link-line" href="/en/division-of-public-health/" target="_self">Public Health</a>
+    </li>
+    <li class="sub-navigation__link js-secondary-navigation-link">
+        <a class="small-body sub-navigation__link-line" href="/en/senior-and-disabilities-services/" target="_self">Senior and Disabilities Services</a>
+    </li>
+</ul>
+                            </div>
+                            <div class="sub-navigation__col sub-navigation__col--links cell large-3">
+<ul class="sub-navigation__link-list">
+    <li class="sub-navigation__link js-secondary-navigation-link">
+        <a class="small-body sub-navigation__link-line" href="/en/division-of-behavioral-health/alcoholism-and-drug-abuse-board/" target="_self">Advisory Board on Alcoholism and Drug Abuse (ABADA)</a>
+    </li>
+    <li class="sub-navigation__link js-secondary-navigation-link">
+        <a class="small-body sub-navigation__link-line" href="/en/senior-and-disabilities-services/alaska-commission-on-aging/" target="_self">Alaska Commission on Aging</a>
+    </li>
+    <li class="sub-navigation__link js-secondary-navigation-link">
+        <a class="small-body sub-navigation__link-line" href="/en/office-of-the-commissioner/alaska-mental-health-board/" target="_self">Alaska Mental Health Board</a>
+    </li>
+    <li class="sub-navigation__link js-secondary-navigation-link">
+        <a class="small-body sub-navigation__link-line" href="/en/senior-and-disabilities-services/governors-council-on-disabilities/" target="_self">Governor's Council on Disabilities and Special Education</a>
+    </li>
+    <li class="sub-navigation__link js-secondary-navigation-link">
+        <a class="small-body sub-navigation__link-line" href="/en/division-of-behavioral-health/statewide-suicide-prevention/" target="_self">Statewide Suicide Prevention Council</a>
+    </li>
+</ul>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+            </li>
+
+            <li class="primary-navigation__list-item js-nav-list-item   ">
+                <a href="/en/news/" class="primary-navigation__link js-primary-navigation-link js-mobile-menu-toggle " target="_self"  >
+                    <span class="body primary-navigation__nav-menu-link">News</span>
+                        <span class="primary-navigation__nav-caret"></span>
+
+                </a>
+
+
+            </li>
+
+            <li class="primary-navigation__list-item js-nav-list-item   ">
+                <a href="/en/education/help/" class="primary-navigation__link js-primary-navigation-link js-mobile-menu-toggle " target="_self"  >
+                    <span class="body primary-navigation__nav-menu-link">Help</span>
+                        <span class="primary-navigation__nav-caret"></span>
+
+                </a>
+
+
+            </li>
+
+    </ul>
+    </div>
+</div>
+        <div class="header__mobile-quick-links">
+
+            <div class="header__mobile-quick-links-wrapper">
+                <a href="https://my.alaska.gov/" class="header__mobile-quick-link caption js-quick-link" target="_blank" rel="external"> MyAlaska</a rel="external">
+                <a href="https://alaska.gov/akdir1.html" class="header__mobile-quick-link caption js-quick-link" target="_blank" rel="external"> Departments</a rel="external">
+            </div>
+            <div class="header__link-logo">
+                <img
+                    src="/media/eyvd3kbt/alaska-logo.png"
+                    class="alaska-logo__image"
+                    alt="Alaska Logo"
+                />
+            </div>
+
+        </div>
+    </div>
+</nav>
+
+    <main role="main">
+    
+
+<link rel="stylesheet" href="/assets/DOH/css/page-header-content.css?cb=1.0.0.0" />
+
+<header
+    class="page-header page-header--content component "
+    data-module="pageHeader"
+>
+    <div class="page-header__content-outer page-header__content-outer--background-maingradient-text-white">
+        <div class="page-header__content page-header__content--background-maingradient-text-white grid-container">
+            <div class="grid-x">
+                <div class="page-header__content-inner cell medium-3 large-8">
+<div class="breadcrumbs-wrapper">
+    <div
+        class="breadcrumbs breadcrumbs--default"
+    >
+        <span class="breadcrumbs__home-icon"></span>
+
+        <ul class="breadcrumbs__list">
+            <li class="breadcrumbs__list-item">
+                <a href="/en/" class="breadcrumbs__link breadcrumb">Home</a>
+            </li>
+            <li class="breadcrumbs__list-item">
+                <a href="/en/division-of-public-health/" class="breadcrumbs__link breadcrumb">Division of Public Health</a>
+            </li>
+        </ul>
+    </div>
+</div>
+                    <h1 class="page-header__title page-header__title--background-maingradient-text-white t1">Division of Public Health</h1>
+                    <p class="page-header__intro page-header__intro--background-maingradient-text-white t5">Healthy and resilient Alaskans today and tomorrow</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<link media="all" rel="stylesheet" href="/assets/DOH/css/anchor-link-list.css?cb=1.0.0.0" />
+
+<div
+    class="anchor-link-list anchor-link-list--hidden component js-link-container"
+    data-module="anchorLinkList"
+    data-module-eager
+>
+    <div class="grid-container js-link-container">
+        <div class="anchor-link-list__dropdown-container js-dropdown-container">
+            <div class="anchor-link-list__current-section js-current-section">
+                <div class="anchor-link-list__dropdown-title-wrapper">
+                    <span>Current Section</span>
+                </div>
+                <div class="anchor-link-list__dropdown-current-section-wrapper">
+                    <span class="anchor-link-list__section-title js-current-section-title body"></span>
+                    <span class="anchor-link-list__dropdown-icon js-current-section-icon"></span>
+                </div>
+            </div>
+        </div>
+
+        <template>
+            <li class="anchor-link-list__list-item js-item">
+                <a class="anchor-link-list__link js-link small-body"></a>
+            </li>
+        </template>
+
+        <ul class="anchor-link-list__list js-list"></ul>
+    </div>
+</div>
+
+
+
+<link rel="stylesheet" href="/assets/DOH/css/block-grid.css?v=TBsmHtFbhr8ltEB0hMGiPFz9L_BVnhRPhXfYZDiXX_0" />
+
+<div class="umb-block-grid"
+     data-grid-columns="12;"
+     style="--umb-block-grid--grid-columns: 12;">
+    
+<div class="umb-block-grid__layout-container">
+        <div
+            class="umb-block-grid__layout-item"
+            data-content-element-type-alias="anchorPoint"
+            data-content-element-type-key="e1fe741f-e490-4671-b49f-a4cb4be3dd6a"
+            data-element-udi="umb://element/8cb1f59051294fd7a91347212f9951f3"
+            data-col-span="12"
+            data-row-span="1"
+            style=" --umb-block-grid--item-column-span: 12; --umb-block-grid--item-row-span: 1; ">
+
+<div id="who-we-are" data-title="Who we are" class="js-anchor-link" data-ishidden="False"></div>
+        </div>
+        <div
+            class="umb-block-grid__layout-item"
+            data-content-element-type-alias="twoColumnTextLeftSection"
+            data-content-element-type-key="e67f03b6-449d-478d-97d6-4ddf0a15ed12"
+            data-element-udi="umb://element/c2fb5abf9cdd4277b0204d682b4f4d07"
+            data-col-span="12"
+            data-row-span="1"
+            style=" --umb-block-grid--item-column-span: 12; --umb-block-grid--item-row-span: 1; ">
+
+<section class="umb-block-grid__section  ">
+    
+<div class="umb-block-grid__area-container"
+     style="--umb-block-grid--area-grid-columns: 12;">
+
+<div class="umb-block-grid__area"
+     data-area-col-span="6"
+     data-area-row-span="1"
+     data-area-alias="text"
+     style="--umb-block-grid--grid-columns: 6;--umb-block-grid--area-column-span: 6; --umb-block-grid--area-row-span: 1;">
+    
+<div class="umb-block-grid__layout-container">
+        <div
+            class="umb-block-grid__layout-item"
+            data-content-element-type-alias="richText"
+            data-content-element-type-key="5b498587-4576-43dd-968b-7d9e553806be"
+            data-element-udi="umb://element/af6ea9d292144f00a9d0b835aa2ac0d6"
+            data-col-span="6"
+            data-row-span="1"
+            style=" --umb-block-grid--item-column-span: 6; --umb-block-grid--item-row-span: 1; ">
+
+    <link rel="stylesheet" href="/assets/DOH/css/rich-text.css?cb=1.0.0.0">
+
+<div class="richtext component" data-module="richText"><h2>Who we are</h2>
+<p>The Alaska Division of Public Health provides essential health services statewide, focusing on prevention and access to quality care. It works within a larger system that includes Tribal, local, and regional health providers.</p></div>
+
+
+        </div>
+</div>
+
+</div>
+
+<div class="umb-block-grid__area"
+     data-area-col-span="1"
+     data-area-row-span="1"
+     data-area-alias="gutter"
+     style="--umb-block-grid--grid-columns: 1;--umb-block-grid--area-column-span: 1; --umb-block-grid--area-row-span: 1;">
+    
+</div>
+
+<div class="umb-block-grid__area"
+     data-area-col-span="5"
+     data-area-row-span="1"
+     data-area-alias="right"
+     style="--umb-block-grid--grid-columns: 5;--umb-block-grid--area-column-span: 5; --umb-block-grid--area-row-span: 1;">
+    
+<div class="umb-block-grid__layout-container">
+        <div
+            class="umb-block-grid__layout-item"
+            data-content-element-type-alias="imageDefault"
+            data-content-element-type-key="503c43b2-f0d9-44a0-9245-c41f275c7efb"
+            data-element-udi="umb://element/6a3c237e0fab4595ad55bf58af4e2fd1"
+            data-col-span="4"
+            data-row-span="1"
+            style=" --umb-block-grid--item-column-span: 4; --umb-block-grid--item-row-span: 1; ">
+
+<link media="all" rel="stylesheet" href="/assets/DOH/css/image-default.css?cb=1.0.0.0">
+
+<div class="image component">
+                <div class="image__container" >
+<picture>
+        <source media="(max-width: 840px)" class="small-image" type="image/webp" srcset="/media/u0eeg1z5/img_8465.jpg?width=840&amp;quality=85&amp;format=webp" />
+        <source media="(min-width: 841px)" class="medium-image" type="image/webp" srcset="/media/u0eeg1z5/img_8465.jpg?width=1920&amp;quality=85&amp;format=webp" />
+        <source media="(max-width: 840px)" class="small-image" type="image/jpeg" srcset="/media/u0eeg1z5/img_8465.jpg?width=840&amp;quality=85" />
+        <source media="(min-width: 841px)" class="medium-image" type="image/jpeg" srcset="/media/u0eeg1z5/img_8465.jpg?width=1920&amp;quality=85" />
+    <img src="/media/u0eeg1z5/img_8465.jpg" loading="lazy" width="1920"  alt="IMG 8465">
+</picture>
+                </div>
+</div>
+
+
+        </div>
+</div>
+
+</div>
+</div>
+
+</section>
+        </div>
+        <div
+            class="umb-block-grid__layout-item"
+            data-content-element-type-alias="anchorPoint"
+            data-content-element-type-key="e1fe741f-e490-4671-b49f-a4cb4be3dd6a"
+            data-element-udi="umb://element/62981953d08640bdb7e30d008af18751"
+            data-col-span="12"
+            data-row-span="1"
+            style=" --umb-block-grid--item-column-span: 12; --umb-block-grid--item-row-span: 1; ">
+
+<div id="what-we-do" data-title="What we do" class="js-anchor-link" data-ishidden="False"></div>
+        </div>
+        <div
+            class="umb-block-grid__layout-item"
+            data-content-element-type-alias="twoColumnTextRightSection"
+            data-content-element-type-key="4626e062-1792-47fd-87c1-3370f1906855"
+            data-element-udi="umb://element/0b706975edb944fd915361833c3c1848"
+            data-col-span="12"
+            data-row-span="1"
+            style=" --umb-block-grid--item-column-span: 12; --umb-block-grid--item-row-span: 1; ">
+
+<section class="umb-block-grid__section two-column  ">
+    
+<div class="umb-block-grid__area-container"
+     style="--umb-block-grid--area-grid-columns: 12;">
+
+<div class="umb-block-grid__area"
+     data-area-col-span="5"
+     data-area-row-span="1"
+     data-area-alias="left"
+     style="--umb-block-grid--grid-columns: 5;--umb-block-grid--area-column-span: 5; --umb-block-grid--area-row-span: 1;">
+    
+<div class="umb-block-grid__layout-container">
+        <div
+            class="umb-block-grid__layout-item"
+            data-content-element-type-alias="imageDefault"
+            data-content-element-type-key="503c43b2-f0d9-44a0-9245-c41f275c7efb"
+            data-element-udi="umb://element/b760f7796b4c4041b04a86448cbed457"
+            data-col-span="4"
+            data-row-span="1"
+            style=" --umb-block-grid--item-column-span: 4; --umb-block-grid--item-row-span: 1; ">
+
+
+<div class="image component">
+                <div class="image__container" >
+<picture>
+        <source media="(max-width: 840px)" class="small-image" type="image/webp" srcset="/media/dbrdayai/img_8431.jpg?width=840&amp;quality=85&amp;format=webp" />
+        <source media="(min-width: 841px)" class="medium-image" type="image/webp" srcset="/media/dbrdayai/img_8431.jpg?width=1920&amp;quality=85&amp;format=webp" />
+        <source media="(max-width: 840px)" class="small-image" type="image/jpeg" srcset="/media/dbrdayai/img_8431.jpg?width=840&amp;quality=85" />
+        <source media="(min-width: 841px)" class="medium-image" type="image/jpeg" srcset="/media/dbrdayai/img_8431.jpg?width=1920&amp;quality=85" />
+    <img src="/media/dbrdayai/img_8431.jpg" loading="lazy" width="1920"  alt="IMG 8431">
+</picture>
+                </div>
+</div>
+
+
+        </div>
+</div>
+
+</div>
+
+<div class="umb-block-grid__area"
+     data-area-col-span="1"
+     data-area-row-span="1"
+     data-area-alias="gutter"
+     style="--umb-block-grid--grid-columns: 1;--umb-block-grid--area-column-span: 1; --umb-block-grid--area-row-span: 1;">
+    
+</div>
+
+<div class="umb-block-grid__area"
+     data-area-col-span="6"
+     data-area-row-span="1"
+     data-area-alias="text"
+     style="--umb-block-grid--grid-columns: 6;--umb-block-grid--area-column-span: 6; --umb-block-grid--area-row-span: 1;">
+    
+<div class="umb-block-grid__layout-container">
+        <div
+            class="umb-block-grid__layout-item"
+            data-content-element-type-alias="richText"
+            data-content-element-type-key="5b498587-4576-43dd-968b-7d9e553806be"
+            data-element-udi="umb://element/4ec3b11c301a4a8ca01a7def0ee3f233"
+            data-col-span="6"
+            data-row-span="1"
+            style=" --umb-block-grid--item-column-span: 6; --umb-block-grid--item-row-span: 1; ">
+
+
+<div class="richtext component" data-module="richText"><h2>What we do</h2>
+<p>The Division of Public Health connects Alaskans to federal programs, training, oversight, and specialized health services. We provide up-to-date health data for leaders and residents to track health trends, set priorities, and evaluate programs. Regulations focus on safety and quality while reducing administrative burdens.</p>
+<p>We support communities working toward a vision of healthy, resilient Alaskans.</p></div>
+
+
+        </div>
+</div>
+
+</div>
+</div>
+
+</section>
+        </div>
+        <div
+            class="umb-block-grid__layout-item"
+            data-content-element-type-alias="anchorPoint"
+            data-content-element-type-key="e1fe741f-e490-4671-b49f-a4cb4be3dd6a"
+            data-element-udi="umb://element/96c863fbb604473f8935fc302ab2d3a6"
+            data-col-span="12"
+            data-row-span="1"
+            style=" --umb-block-grid--item-column-span: 12; --umb-block-grid--item-row-span: 1; ">
+
+<div id="public-health-data-hub" data-title="Public Health Data Hub" class="js-anchor-link" data-ishidden="False"></div>
+        </div>
+        <div
+            class="umb-block-grid__layout-item"
+            data-content-element-type-alias="twoColumnTextLeftSection"
+            data-content-element-type-key="e67f03b6-449d-478d-97d6-4ddf0a15ed12"
+            data-element-udi="umb://element/acbde34c8ad94002ab74d7a386e0993e"
+            data-col-span="12"
+            data-row-span="1"
+            style=" --umb-block-grid--item-column-span: 12; --umb-block-grid--item-row-span: 1; ">
+
+<section class="umb-block-grid__section  ">
+    
+<div class="umb-block-grid__area-container"
+     style="--umb-block-grid--area-grid-columns: 12;">
+
+<div class="umb-block-grid__area"
+     data-area-col-span="6"
+     data-area-row-span="1"
+     data-area-alias="text"
+     style="--umb-block-grid--grid-columns: 6;--umb-block-grid--area-column-span: 6; --umb-block-grid--area-row-span: 1;">
+    
+<div class="umb-block-grid__layout-container">
+        <div
+            class="umb-block-grid__layout-item"
+            data-content-element-type-alias="richText"
+            data-content-element-type-key="5b498587-4576-43dd-968b-7d9e553806be"
+            data-element-udi="umb://element/471ebac3cb5c4537a09160be8327d0c1"
+            data-col-span="6"
+            data-row-span="1"
+            style=" --umb-block-grid--item-column-span: 6; --umb-block-grid--item-row-span: 1; ">
+
+
+<div class="richtext component" data-module="richText"><h2>Public Health Data Dashboard Hub</h2>
+<p>This tool helps you find and use information by exploring data on different topics</p>
+
+<a href="https://dph-data-hub-alaska-dhss.hub.arcgis.com/" data-module="cta" class="cta  " target="_blank" role="button"  rel="noopener">
+	Visit the Public Health Data Dashboard Hub
+</a>
+
+</div>
+
+
+        </div>
+</div>
+
+</div>
+
+<div class="umb-block-grid__area"
+     data-area-col-span="1"
+     data-area-row-span="1"
+     data-area-alias="gutter"
+     style="--umb-block-grid--grid-columns: 1;--umb-block-grid--area-column-span: 1; --umb-block-grid--area-row-span: 1;">
+    
+</div>
+
+<div class="umb-block-grid__area"
+     data-area-col-span="5"
+     data-area-row-span="1"
+     data-area-alias="right"
+     style="--umb-block-grid--grid-columns: 5;--umb-block-grid--area-column-span: 5; --umb-block-grid--area-row-span: 1;">
+    
+<div class="umb-block-grid__layout-container">
+        <div
+            class="umb-block-grid__layout-item"
+            data-content-element-type-alias="imageDefault"
+            data-content-element-type-key="503c43b2-f0d9-44a0-9245-c41f275c7efb"
+            data-element-udi="umb://element/2187bf1533874c85bc6412cdba151362"
+            data-col-span="4"
+            data-row-span="1"
+            style=" --umb-block-grid--item-column-span: 4; --umb-block-grid--item-row-span: 1; ">
+
+
+<div class="image component">
+                <div class="image__container" >
+<picture>
+        <source media="(max-width: 840px)" class="small-image" type="image/webp" srcset="/media/m3tbi432/data-and-reports_ghetty_1393902223.jpg?width=840&amp;quality=85&amp;format=webp" />
+        <source media="(min-width: 841px)" class="medium-image" type="image/webp" srcset="/media/m3tbi432/data-and-reports_ghetty_1393902223.jpg?width=1920&amp;quality=85&amp;format=webp" />
+        <source media="(max-width: 840px)" class="small-image" type="image/jpeg" srcset="/media/m3tbi432/data-and-reports_ghetty_1393902223.jpg?width=840&amp;quality=85" />
+        <source media="(min-width: 841px)" class="medium-image" type="image/jpeg" srcset="/media/m3tbi432/data-and-reports_ghetty_1393902223.jpg?width=1920&amp;quality=85" />
+    <img src="/media/m3tbi432/data-and-reports_ghetty_1393902223.jpg" loading="lazy" width="1920"  alt="Data And Reports Ghetty 1393902223">
+</picture>
+                </div>
+</div>
+
+
+        </div>
+</div>
+
+</div>
+</div>
+
+</section>
+        </div>
+        <div
+            class="umb-block-grid__layout-item"
+            data-content-element-type-alias="anchorPoint"
+            data-content-element-type-key="e1fe741f-e490-4671-b49f-a4cb4be3dd6a"
+            data-element-udi="umb://element/223a1e53a4524a89bf105689e96dc8a9"
+            data-col-span="12"
+            data-row-span="1"
+            style=" --umb-block-grid--item-column-span: 12; --umb-block-grid--item-row-span: 1; ">
+
+<div id="opioids-in-alaska" data-title="Opioids in Alaska" class="js-anchor-link" data-ishidden="False"></div>
+        </div>
+        <div
+            class="umb-block-grid__layout-item"
+            data-content-element-type-alias="twoColumnTextRightSection"
+            data-content-element-type-key="4626e062-1792-47fd-87c1-3370f1906855"
+            data-element-udi="umb://element/ff631b7066824a0eaa34f7be78051981"
+            data-col-span="12"
+            data-row-span="1"
+            style=" --umb-block-grid--item-column-span: 12; --umb-block-grid--item-row-span: 1; ">
+
+<section class="umb-block-grid__section two-column  ">
+    
+<div class="umb-block-grid__area-container"
+     style="--umb-block-grid--area-grid-columns: 12;">
+
+<div class="umb-block-grid__area"
+     data-area-col-span="5"
+     data-area-row-span="1"
+     data-area-alias="left"
+     style="--umb-block-grid--grid-columns: 5;--umb-block-grid--area-column-span: 5; --umb-block-grid--area-row-span: 1;">
+    
+<div class="umb-block-grid__layout-container">
+        <div
+            class="umb-block-grid__layout-item"
+            data-content-element-type-alias="imageDefault"
+            data-content-element-type-key="503c43b2-f0d9-44a0-9245-c41f275c7efb"
+            data-element-udi="umb://element/2126a70689c74d51ac20f517a6efb14b"
+            data-col-span="4"
+            data-row-span="1"
+            style=" --umb-block-grid--item-column-span: 4; --umb-block-grid--item-row-span: 1; ">
+
+
+<div class="image component">
+                <div class="image__container" >
+<picture>
+        <source media="(max-width: 840px)" class="small-image" type="image/webp" srcset="/media/q2ipufze/img_e0669.jpg?width=840&amp;quality=85&amp;format=webp" />
+        <source media="(min-width: 841px)" class="medium-image" type="image/webp" srcset="/media/q2ipufze/img_e0669.jpg?width=1920&amp;quality=85&amp;format=webp" />
+        <source media="(max-width: 840px)" class="small-image" type="image/jpeg" srcset="/media/q2ipufze/img_e0669.jpg?width=840&amp;quality=85" />
+        <source media="(min-width: 841px)" class="medium-image" type="image/jpeg" srcset="/media/q2ipufze/img_e0669.jpg?width=1920&amp;quality=85" />
+    <img src="/media/q2ipufze/img_e0669.jpg" loading="lazy" width="1920"  alt="IMG E0669">
+</picture>
+                </div>
+</div>
+
+
+        </div>
+</div>
+
+</div>
+
+<div class="umb-block-grid__area"
+     data-area-col-span="1"
+     data-area-row-span="1"
+     data-area-alias="gutter"
+     style="--umb-block-grid--grid-columns: 1;--umb-block-grid--area-column-span: 1; --umb-block-grid--area-row-span: 1;">
+    
+</div>
+
+<div class="umb-block-grid__area"
+     data-area-col-span="6"
+     data-area-row-span="1"
+     data-area-alias="text"
+     style="--umb-block-grid--grid-columns: 6;--umb-block-grid--area-column-span: 6; --umb-block-grid--area-row-span: 1;">
+    
+<div class="umb-block-grid__layout-container">
+        <div
+            class="umb-block-grid__layout-item"
+            data-content-element-type-alias="richText"
+            data-content-element-type-key="5b498587-4576-43dd-968b-7d9e553806be"
+            data-element-udi="umb://element/b33d38af3d004896a93fd7fee8144de7"
+            data-col-span="6"
+            data-row-span="1"
+            style=" --umb-block-grid--item-column-span: 6; --umb-block-grid--item-row-span: 1; ">
+
+
+<div class="richtext component" data-module="richText"><h2>Opioids dashboard</h2>
+<p>​The Opioid Dashboard is updated throughout the year and features summary statistics and data about emergency room visits, ​​​overdose deaths, naloxone statistics, ​and other publications and resources.</p>
+
+<a href="/en/education/alaska-substance-use-dashboard/" data-module="cta" class="cta  " target="_self" role="button"  >
+	Alaska Substance Use Dashboard
+</a>
+
+</div>
+
+
+        </div>
+</div>
+
+</div>
+</div>
+
+</section>
+        </div>
+        <div
+            class="umb-block-grid__layout-item"
+            data-content-element-type-alias="anchorPoint"
+            data-content-element-type-key="e1fe741f-e490-4671-b49f-a4cb4be3dd6a"
+            data-element-udi="umb://element/74fa0351523c41d0b1702859aedbacc8"
+            data-col-span="12"
+            data-row-span="1"
+            style=" --umb-block-grid--item-column-span: 12; --umb-block-grid--item-row-span: 1; ">
+
+<div id="health-survey" data-title="Health Survey" class="js-anchor-link" data-ishidden="False"></div>
+        </div>
+        <div
+            class="umb-block-grid__layout-item"
+            data-content-element-type-alias="gridContainerSection"
+            data-content-element-type-key="333e4a93-8516-45f0-afca-f91a416c59ed"
+            data-element-udi="umb://element/6001b008c1114a5588c56908dd90844e"
+            data-col-span="12"
+            data-row-span="1"
+            style=" --umb-block-grid--item-column-span: 12; --umb-block-grid--item-row-span: 1; ">
+
+
+<section class="umb-block-grid__section   ">
+    
+<div class="umb-block-grid__area-container"
+     style="--umb-block-grid--area-grid-columns: 12;">
+
+<div class="umb-block-grid__area"
+     data-area-col-span="12"
+     data-area-row-span="1"
+     data-area-alias="centre"
+     style="--umb-block-grid--grid-columns: 12;--umb-block-grid--area-column-span: 12; --umb-block-grid--area-row-span: 1;">
+    
+<div class="umb-block-grid__layout-container">
+        <div
+            class="umb-block-grid__layout-item"
+            data-content-element-type-alias="richText"
+            data-content-element-type-key="5b498587-4576-43dd-968b-7d9e553806be"
+            data-element-udi="umb://element/3187acac129c48b88a87b6069bcb1f7c"
+            data-col-span="10"
+            data-row-span="1"
+            style=" --umb-block-grid--item-column-span: 10; --umb-block-grid--item-row-span: 1; ">
+
+
+<div class="richtext component" data-module="richText"><h2 data-start="188" data-end="233">Got a Call or Text About a Health Survey?</h2>
+<p>The Alaska Department of Health, Division of Public Health, often asks people across the state to take part in health surveys. These surveys help us track health trends, improve programs, and better serve Alaskans.</p>
+<p>You might be contacted by mail, phone, text, or email. If you're chosen, your input helps us understand what’s working, and what needs work, when it comes to public health in Alaska. Multiple call attempts to a single phone number are typically required to improve validity of the data.</p>
+<h3>What to Expect from a Real Survey</h3>
+<ul>
+<li>A clear message about the topic</li>
+<li>Confirmation it's from the Department of Health</li>
+<li>Contact information for questions about the survey</li>
+<li>Contact information for the State employee responsible for the survey project</li>
+</ul>
+<h3>Surveys We Do</h3>
+<ul>
+<li>Online Surveys – Short surveys on topics like tobacco use and chronic disease. You may get a text from <a href="tel:9072690344" aria-label="phone">(907) 269 - 0344</a aria-label="phone"> with a survey link. The survey is done using the Alchemer platform.</li>
+<li>The Behavioral Risk Factor Surveillance System (BRFSS) – Annual phone survey for adults about health habits (like diet, exercise, and more)
+<ul>
+<li><strong>Contact:</strong> BRFSS Coordinator – <a href="tel:9072698127" aria-label="phone">(907) 269 - 8127;</a aria-label="phone"> <a href="mailto:brfss@alaska.gov" aria-label="email">brfss@alaska.gov</a aria-label="email"></li>
+</ul>
+</li>
+<li>The Pregnancy Risk Assessment Monitoring System (PRAMS) – Mailed survey for new moms about pregnancy and birth
+<ul>
+<li><strong>Contact:</strong> PRAMS Coordinator – <a href="tel:8882693470" aria-label="phone">(888) 269 - 3470</a aria-label="phone">;<a href="mailto:mch-epi@alaska.gov" aria-label="email">mch-epi@alaska.gov</a aria-label="email"></li>
+</ul>
+</li>
+<li>The Childhood Understanding Behaviors Survey (CUBS) – Follows up with PRAMS moms when their child turns 3
+<ul>
+<li><strong>Contact:</strong> CUBS Coordinator – <a href="tel:8882693470" aria-label="phone">(888) 269 - 3470</a aria-label="phone">;<a href="mailto:mch-epi@alaska.gov" aria-label="email">mch-epi@alaska.gov</a aria-label="email"> </li>
+</ul>
+</li>
+</ul>
+<p> </p>
+<p> </p></div>
+
+
+        </div>
+</div>
+
+</div>
+</div>
+
+</section>
+        </div>
+        <div
+            class="umb-block-grid__layout-item"
+            data-content-element-type-alias="signpostCardCollection"
+            data-content-element-type-key="6a45963f-177d-4569-bf7b-2d85377d3957"
+            data-element-udi="umb://element/18d10607f4484079acd85190bef8ba53"
+            data-col-span="12"
+            data-row-span="1"
+            style=" --umb-block-grid--item-column-span: 12; --umb-block-grid--item-row-span: 1; ">
+
+<link rel="stylesheet" href="/assets/DOH/css/card-collection.css?cb=1.0.0.0" />
+
+
+<div
+    class="card-collection component  card-collection--light-gray card-collection--9-cards "
+>
+    <div class="grid-container">
+        <h3 class="t2  card-collection__section-title">Sections of Public Health</h3>
+        <div class="grid-x">
+            <div
+                class="cell card-collection__card-wrapper  "
+            >
+<a href="/en/division-of-public-health/alaska-public-laboratories/" target="_self" 
+    class="standard-card standard-card--link 
+    " tabindex="0">
+    <div class="standard-card__wrapper">
+        <h4 class="t6 standard-card__title">Alaska State Public Health Laboratories (ASPHL)</h4>
+    </div>
+
+        <div class="standard-card__labels-wrapper">
+        </div>
+</a>            </div>
+            <div
+                class="cell card-collection__card-wrapper  "
+            >
+<a href="/en/division-of-public-health/chronic-disease-prevention/" target="_self" 
+    class="standard-card standard-card--link 
+    " tabindex="0">
+    <div class="standard-card__wrapper">
+        <h4 class="t6 standard-card__title">Chronic Disease Prevention &amp; Health Promotion (CDPHP)</h4>
+    </div>
+
+        <div class="standard-card__labels-wrapper">
+        </div>
+</a>            </div>
+            <div
+                class="cell card-collection__card-wrapper  "
+            >
+<a href="/en/division-of-public-health/epidemiology/" target="_self" 
+    class="standard-card standard-card--link 
+    " tabindex="0">
+    <div class="standard-card__wrapper">
+        <h4 class="t6 standard-card__title">Epidemiology</h4>
+    </div>
+
+        <div class="standard-card__labels-wrapper">
+        </div>
+</a>            </div>
+            <div
+                class="cell card-collection__card-wrapper  "
+            >
+<a href="/en/division-of-public-health/health-analytics-vital-records/" target="_self" 
+    class="standard-card standard-card--link 
+    " tabindex="0">
+    <div class="standard-card__wrapper">
+        <h4 class="t6 standard-card__title">Health Analytics and Vital Records</h4>
+    </div>
+
+        <div class="standard-card__labels-wrapper">
+        </div>
+</a>            </div>
+            <div
+                class="cell card-collection__card-wrapper  "
+            >
+<a href="/en/division-of-public-health/osmap/" target="_self" 
+    class="standard-card standard-card--link 
+    " tabindex="0">
+    <div class="standard-card__wrapper">
+        <h4 class="t6 standard-card__title">Office of Substance Misuse and Addiction Prevention (OSMAP)</h4>
+    </div>
+
+        <div class="standard-card__labels-wrapper">
+        </div>
+</a>            </div>
+            <div
+                class="cell card-collection__card-wrapper  "
+            >
+<a href="/en/division-of-public-health/public-health-nursing/" target="_self" 
+    class="standard-card standard-card--link 
+    " tabindex="0">
+    <div class="standard-card__wrapper">
+        <h4 class="t6 standard-card__title">Public Health Nursing</h4>
+    </div>
+
+        <div class="standard-card__labels-wrapper">
+        </div>
+</a>            </div>
+            <div
+                class="cell card-collection__card-wrapper  "
+            >
+<a href="/en/division-of-public-health/rural-community-health/" target="_self" 
+    class="standard-card standard-card--link 
+    " tabindex="0">
+    <div class="standard-card__wrapper">
+        <h4 class="t6 standard-card__title">Rural and Community Health Systems</h4>
+    </div>
+
+        <div class="standard-card__labels-wrapper">
+        </div>
+</a>            </div>
+            <div
+                class="cell card-collection__card-wrapper  "
+            >
+<a href="/en/division-of-public-health/state-medical-examiner/" target="_self" 
+    class="standard-card standard-card--link 
+    " tabindex="0">
+    <div class="standard-card__wrapper">
+        <h4 class="t6 standard-card__title">State Medical Examiner's Office</h4>
+    </div>
+
+        <div class="standard-card__labels-wrapper">
+        </div>
+</a>            </div>
+            <div
+                class="cell card-collection__card-wrapper  "
+            >
+<a href="/en/division-of-public-health/women-children-family-health/" target="_self" 
+    class="standard-card standard-card--link 
+    " tabindex="0">
+    <div class="standard-card__wrapper">
+        <h4 class="t6 standard-card__title">Women's, Children's and Family Health</h4>
+    </div>
+
+        <div class="standard-card__labels-wrapper">
+        </div>
+</a>            </div>
+        </div> 
+    </div>
+</div>
+
+
+        </div>
+        <div
+            class="umb-block-grid__layout-item"
+            data-content-element-type-alias="anchorPoint"
+            data-content-element-type-key="e1fe741f-e490-4671-b49f-a4cb4be3dd6a"
+            data-element-udi="umb://element/ff03fe6c241040ec9e41195a3fc92bc4"
+            data-col-span="12"
+            data-row-span="1"
+            style=" --umb-block-grid--item-column-span: 12; --umb-block-grid--item-row-span: 1; ">
+
+<div id="news" data-title="News" class="js-anchor-link" data-ishidden="False"></div>
+        </div>
+        <div
+            class="umb-block-grid__layout-item"
+            data-content-element-type-alias="newsListing"
+            data-content-element-type-key="c24f1b4f-b037-416d-9c28-dc592a85c8a9"
+            data-element-udi="umb://element/aae83442a88f4caaa1dba113fda4aaa1"
+            data-col-span="12"
+            data-row-span="1"
+            style=" --umb-block-grid--item-column-span: 12; --umb-block-grid--item-row-span: 1; ">
+
+<link rel="stylesheet" href="/assets/DOH/css/news-listings.css?cb=1.0.0.0" />
+
+<div
+    class="news-listings component"
+    data-module="newsListings"
+    data-featured=""
+    data-page-size="999"
+    data-load-less="Load Less"
+    data-load-more="Load More"
+>
+
+    <div
+        class="grid-container news-listings__read-more-wrapper "
+    >
+        <h3 class="t2 news-listings__title">News</h3>
+        <div class="grid-x js-quick-link news-listings__news-items js-news-items">
+<div class="news-item">
+    <a href="/media/qz3bqs3u/alaska-birth-defect-registry-reporting-guide.pdf" class="news-item__link" target="_blank">
+        <div class="news-item__wrapper">
+            <h4 class="news-item__title t5">Alaska Birth Defect Registry Reporting Guide</h4>
+            <div class="news-item__date-wrapper">
+                <span class="news-item__doc-type caption">PDF</span>
+                <span class="news-item__date caption">08/28/2025</span>
+                <span class="news-item__link-icon"></span>
+            </div>
+        </div>
+    </a>
+</div>
+<div class="news-item">
+    <a href="/media/lxdibqte/akphan_20240621_cdc_han_00509.pdf" class="news-item__link" target="_blank">
+        <div class="news-item__wrapper">
+            <h4 class="news-item__title t5">AKPHAN CDC 6/21/24</h4>
+            <div class="news-item__date-wrapper">
+                <span class="news-item__doc-type caption">PDF</span>
+                <span class="news-item__date caption">08/28/2025</span>
+                <span class="news-item__link-icon"></span>
+            </div>
+        </div>
+    </a>
+</div>
+<div class="news-item">
+    <a href="/media/twrdq3ul/240328_pr_phab-accredidation.pdf" class="news-item__link" target="_blank">
+        <div class="news-item__wrapper">
+            <h4 class="news-item__title t5">240328_PR_PHAB-Accredidation</h4>
+            <div class="news-item__date-wrapper">
+                <span class="news-item__doc-type caption">PDF</span>
+                <span class="news-item__date caption">08/28/2025</span>
+                <span class="news-item__link-icon"></span>
+            </div>
+        </div>
+    </a>
+</div>
+        </div>
+    </div>
+</div>
+        </div>
+        <div
+            class="umb-block-grid__layout-item"
+            data-content-element-type-alias="anchorPoint"
+            data-content-element-type-key="e1fe741f-e490-4671-b49f-a4cb4be3dd6a"
+            data-element-udi="umb://element/8b3219b19d3845d2b6c574cc0501e442"
+            data-col-span="12"
+            data-row-span="1"
+            style=" --umb-block-grid--item-column-span: 12; --umb-block-grid--item-row-span: 1; ">
+
+<div id="resources" data-title="Resources" class="js-anchor-link" data-ishidden="False"></div>
+        </div>
+        <div
+            class="umb-block-grid__layout-item"
+            data-content-element-type-alias="gridContainerSection"
+            data-content-element-type-key="333e4a93-8516-45f0-afca-f91a416c59ed"
+            data-element-udi="umb://element/26d253f457e346bc8df70acd56760cf3"
+            data-col-span="12"
+            data-row-span="1"
+            style=" --umb-block-grid--item-column-span: 12; --umb-block-grid--item-row-span: 1; ">
+
+
+<section class="umb-block-grid__section   ">
+    
+<div class="umb-block-grid__area-container"
+     style="--umb-block-grid--area-grid-columns: 12;">
+
+<div class="umb-block-grid__area"
+     data-area-col-span="12"
+     data-area-row-span="1"
+     data-area-alias="centre"
+     style="--umb-block-grid--grid-columns: 12;--umb-block-grid--area-column-span: 12; --umb-block-grid--area-row-span: 1;">
+    
+<div class="umb-block-grid__layout-container">
+        <div
+            class="umb-block-grid__layout-item"
+            data-content-element-type-alias="richText"
+            data-content-element-type-key="5b498587-4576-43dd-968b-7d9e553806be"
+            data-element-udi="umb://element/1ce08e68dfd04db396a1bc646193ce01"
+            data-col-span="10"
+            data-row-span="1"
+            style=" --umb-block-grid--item-column-span: 10; --umb-block-grid--item-row-span: 1; ">
+
+
+<div class="richtext component" data-module="richText"><h2>Resources</h2></div>
+
+
+        </div>
+</div>
+
+</div>
+</div>
+
+</section>
+        </div>
+        <div
+            class="umb-block-grid__layout-item"
+            data-content-element-type-alias="signpostCardCollection"
+            data-content-element-type-key="6a45963f-177d-4569-bf7b-2d85377d3957"
+            data-element-udi="umb://element/72fdd6b660b7423fa52cae795e59f231"
+            data-col-span="12"
+            data-row-span="1"
+            style=" --umb-block-grid--item-column-span: 12; --umb-block-grid--item-row-span: 1; ">
+
+
+
+<div
+    class="card-collection component  card-collection--light-gray card-collection--6-cards "
+>
+    <div class="grid-container">
+        <h3 class="t2  card-collection__section-title">Forms</h3>
+        <div class="grid-x">
+            <div
+                class="cell card-collection__card-wrapper  "
+            >
+<a href="/media/2kwpbuyt/frmstd.pdf" target="_blank" 
+    class="standard-card standard-card--link 
+    " tabindex="0">
+    <div class="standard-card__wrapper">
+        <h4 class="t6 standard-card__title">Confidential HIV/STD Report Form (1)</h4>
+    </div>
+
+    <div class="standard-card__link-icon-wrapper">
+        <div class="standard-card__labels-wrapper">
+        </div>
+        <span class="standard-card__link-icon"></span>
+    </div>
+</a>            </div>
+            <div
+                class="cell card-collection__card-wrapper  "
+            >
+<a href="/media/3dbdefar/confidentialinfectiousdiseasereportform_8132025.pdf" target="_blank" 
+    class="standard-card standard-card--link 
+    " tabindex="0">
+    <div class="standard-card__wrapper">
+        <h4 class="t6 standard-card__title">Confidential Infectious Disease Report Form</h4>
+    </div>
+
+    <div class="standard-card__link-icon-wrapper">
+        <div class="standard-card__labels-wrapper">
+        </div>
+        <span class="standard-card__link-icon"></span>
+    </div>
+</a>            </div>
+            <div
+                class="cell card-collection__card-wrapper  "
+            >
+<a href="/media/faxe25cl/newbornbloodspot_dbsrequestform.pdf" target="_blank" 
+    class="standard-card standard-card--link 
+    " tabindex="0">
+    <div class="standard-card__wrapper">
+        <h4 class="t6 standard-card__title">Dried Bloodspot Request Form</h4>
+    </div>
+
+    <div class="standard-card__link-icon-wrapper">
+        <div class="standard-card__labels-wrapper">
+        </div>
+        <span class="standard-card__link-icon"></span>
+    </div>
+</a>            </div>
+            <div
+                class="cell card-collection__card-wrapper  "
+            >
+<a href="/media/t3yklxwu/ltcf-employee-influenza-vaccination-tracking-form_sample-form.docx" target="_blank" 
+    class="standard-card standard-card--link 
+    " tabindex="0">
+    <div class="standard-card__wrapper">
+        <h4 class="t6 standard-card__title">Employee Influenza Vaccination Tracking Form</h4>
+    </div>
+
+    <div class="standard-card__link-icon-wrapper">
+        <div class="standard-card__labels-wrapper">
+        </div>
+        <span class="standard-card__link-icon"></span>
+    </div>
+</a>            </div>
+            <div
+                class="cell card-collection__card-wrapper  "
+            >
+<a href="/media/mgom3noy/influenza-and-sars-cov-outbreak-report-form_updated42525.pdf" target="_blank" 
+    class="standard-card standard-card--link 
+    " tabindex="0">
+    <div class="standard-card__wrapper">
+        <h4 class="t6 standard-card__title">Influenza and SARS CoV Outbreak Report Form</h4>
+    </div>
+
+    <div class="standard-card__link-icon-wrapper">
+        <div class="standard-card__labels-wrapper">
+        </div>
+        <span class="standard-card__link-icon"></span>
+    </div>
+</a>            </div>
+            <div
+                class="cell card-collection__card-wrapper  "
+            >
+<a href="/media/ueyhm5g1/form_perinatalhealthpublicationorders.pdf" target="_blank" 
+    class="standard-card standard-card--link 
+    " tabindex="0">
+    <div class="standard-card__wrapper">
+        <h4 class="t6 standard-card__title">Perinatal Program Publications Order Form</h4>
+    </div>
+
+    <div class="standard-card__link-icon-wrapper">
+        <div class="standard-card__labels-wrapper">
+        </div>
+        <span class="standard-card__link-icon"></span>
+    </div>
+</a>            </div>
+        </div> 
+    </div>
+</div>
+
+
+        </div>
+        <div
+            class="umb-block-grid__layout-item"
+            data-content-element-type-alias="signpostCardCollection"
+            data-content-element-type-key="6a45963f-177d-4569-bf7b-2d85377d3957"
+            data-element-udi="umb://element/2d5a6c5a3f8c46ccbe300d1e31fde3c9"
+            data-col-span="12"
+            data-row-span="1"
+            style=" --umb-block-grid--item-column-span: 12; --umb-block-grid--item-row-span: 1; ">
+
+
+
+<div
+    class="card-collection component  card-collection--powder-blue-2 card-collection--10-cards "
+>
+    <div class="grid-container">
+        <h3 class="t2  card-collection__section-title">Related Services</h3>
+        <div class="grid-x">
+            <div
+                class="cell card-collection__card-wrapper  "
+            >
+<a href="https://findtreatment.gov/" target="_blank" 
+    class="standard-card standard-card--link 
+    " tabindex="0">
+    <div class="standard-card__wrapper">
+        <h4 class="t6 standard-card__title">Find a behavioral health provider</h4>
+        <div class="standard-card__subline-wrapper ">
+            <p class="body">Resource for people seeking treatment for mental and substance use disorders</p>
+        </div>
+    </div>
+
+    <div class="standard-card__link-icon-wrapper">
+        <div class="standard-card__labels-wrapper">
+            <span class="standard-card__labels-public caption">Public</span>
+        </div>
+        <span class="standard-card__link-icon"></span>
+    </div>
+</a>            </div>
+            <div
+                class="cell card-collection__card-wrapper  "
+            >
+<a href="https://akccis.com/client/home" target="_blank" 
+    class="standard-card standard-card--link 
+    " tabindex="0">
+    <div class="standard-card__wrapper">
+        <h4 class="t6 standard-card__title">Find a Child Care Provider</h4>
+        <div class="standard-card__subline-wrapper ">
+            <p class="body">Find licensed providers or those in the Child Care Assistance Program</p>
+        </div>
+    </div>
+
+    <div class="standard-card__link-icon-wrapper">
+        <div class="standard-card__labels-wrapper">
+            <span class="standard-card__labels-public caption">Public</span>
+        </div>
+        <span class="standard-card__link-icon"></span>
+    </div>
+</a>            </div>
+            <div
+                class="cell card-collection__card-wrapper  "
+            >
+<a href="https://www.iknowmine.org/product/sti-self-test-kit/" target="_blank" 
+    class="standard-card standard-card--link 
+    " tabindex="0">
+    <div class="standard-card__wrapper">
+        <h4 class="t6 standard-card__title">Free STD Testing Kit</h4>
+        <div class="standard-card__subline-wrapper ">
+            <p class="body">Order a free self-testing kit for gonorrhea, chlamydia, and trichomoniasis</p>
+        </div>
+    </div>
+
+    <div class="standard-card__link-icon-wrapper">
+        <div class="standard-card__labels-wrapper">
+            <span class="standard-card__labels-public caption">Public</span>
+        </div>
+        <span class="standard-card__link-icon"></span>
+    </div>
+</a>            </div>
+            <div
+                class="cell card-collection__card-wrapper  "
+            >
+<a href="https://health.alaska.gov/en/services/marriage-license/" target="_blank" 
+    class="standard-card standard-card--link 
+    " tabindex="0">
+    <div class="standard-card__wrapper">
+        <h4 class="t6 standard-card__title">Marriage License</h4>
+        <div class="standard-card__subline-wrapper ">
+            <p class="body">Find the application and information you need to file for a marriage license</p>
+        </div>
+    </div>
+
+    <div class="standard-card__link-icon-wrapper">
+        <div class="standard-card__labels-wrapper">
+            <span class="standard-card__labels-public caption">Public</span>
+        </div>
+        <span class="standard-card__link-icon"></span>
+    </div>
+</a>            </div>
+            <div
+                class="cell card-collection__card-wrapper  "
+            >
+<a href="https://health.alaska.gov/en/services/newborn-bloodspot-screening/" target="_blank" 
+    class="standard-card standard-card--link 
+    " tabindex="0">
+    <div class="standard-card__wrapper">
+        <h4 class="t6 standard-card__title">Newborn Bloodspot Screening Program</h4>
+        <div class="standard-card__subline-wrapper ">
+            <p class="body">Screens infants for hidden conditions that may cause disability or death</p>
+        </div>
+    </div>
+
+    <div class="standard-card__link-icon-wrapper">
+        <div class="standard-card__labels-wrapper">
+            <span class="standard-card__labels-providers caption">Providers</span>
+            <span class="standard-card__labels-public caption">Public</span>
+        </div>
+        <span class="standard-card__link-icon"></span>
+    </div>
+</a>            </div>
+            <div
+                class="cell card-collection__card-wrapper  "
+            >
+<a href="https://www.vitalchek.com/v/" target="_blank" 
+    class="standard-card standard-card--link 
+    " tabindex="0">
+    <div class="standard-card__wrapper">
+        <h4 class="t6 standard-card__title">Order Copies of Vital Records</h4>
+        <div class="standard-card__subline-wrapper ">
+            <p class="body">Order certified copies of vital records online</p>
+        </div>
+    </div>
+
+    <div class="standard-card__link-icon-wrapper">
+        <div class="standard-card__labels-wrapper">
+            <span class="standard-card__labels-providers caption">Providers</span>
+            <span class="standard-card__labels-public caption">Public</span>
+        </div>
+        <span class="standard-card__link-icon"></span>
+    </div>
+</a>            </div>
+            <div
+                class="cell card-collection__card-wrapper  "
+            >
+<a href="https://www.surveymonkey.com/r/AKPoisonHelpMaterials" target="_blank" 
+    class="standard-card standard-card--link 
+    " tabindex="0">
+    <div class="standard-card__wrapper">
+        <h4 class="t6 standard-card__title">Order Free Poison Control Materials</h4>
+        <div class="standard-card__subline-wrapper ">
+            <p class="body">Order online to free poison control materials</p>
+        </div>
+    </div>
+
+    <div class="standard-card__link-icon-wrapper">
+        <div class="standard-card__labels-wrapper">
+            <span class="standard-card__labels-providers caption">Providers</span>
+            <span class="standard-card__labels-public caption">Public</span>
+        </div>
+        <span class="standard-card__link-icon"></span>
+    </div>
+</a>            </div>
+            <div
+                class="cell card-collection__card-wrapper  "
+            >
+<a href="https://www.kansaspoisoncenter.com/" target="_blank" 
+    class="standard-card standard-card--link 
+    " tabindex="0">
+    <div class="standard-card__wrapper">
+        <h4 class="t6 standard-card__title">Poison Center Help line</h4>
+        <div class="standard-card__subline-wrapper ">
+            <p class="body">24-hour help line with trained pharmacists to help with poisoning or overdoses</p>
+        </div>
+    </div>
+
+    <div class="standard-card__link-icon-wrapper">
+        <div class="standard-card__labels-wrapper">
+            <span class="standard-card__labels-providers caption">Providers</span>
+            <span class="standard-card__labels-public caption">Public</span>
+        </div>
+        <span class="standard-card__link-icon"></span>
+    </div>
+</a>            </div>
+            <div
+                class="cell card-collection__card-wrapper  "
+            >
+<a href="https://public.govdelivery.com/accounts/AKDHSS/subscriber/topics?qsp=AKDHSS_2" target="_blank" 
+    class="standard-card standard-card--link 
+    " tabindex="0">
+    <div class="standard-card__wrapper">
+        <h4 class="t6 standard-card__title">Subscribe to Public Health Updates</h4>
+        <div class="standard-card__subline-wrapper ">
+            <p class="body">Receive email or texts to get the latest public health information</p>
+        </div>
+    </div>
+
+    <div class="standard-card__link-icon-wrapper">
+        <div class="standard-card__labels-wrapper">
+            <span class="standard-card__labels-providers caption">Providers</span>
+            <span class="standard-card__labels-public caption">Public</span>
+        </div>
+        <span class="standard-card__link-icon"></span>
+    </div>
+</a>            </div>
+            <div
+                class="cell card-collection__card-wrapper  "
+            >
+<a href="https://health.alaska.gov/en/services/where-to-find-vaccines/" target="_blank" 
+    class="standard-card standard-card--link 
+    " tabindex="0">
+    <div class="standard-card__wrapper">
+        <h4 class="t6 standard-card__title">Where to find vaccines</h4>
+    </div>
+
+    <div class="standard-card__link-icon-wrapper">
+        <div class="standard-card__labels-wrapper">
+            <span class="standard-card__labels-providers caption">Providers</span>
+            <span class="standard-card__labels-public caption">Public</span>
+        </div>
+        <span class="standard-card__link-icon"></span>
+    </div>
+</a>            </div>
+        </div> 
+    </div>
+</div>
+
+
+        </div>
+        <div
+            class="umb-block-grid__layout-item"
+            data-content-element-type-alias="signpostCardCollection"
+            data-content-element-type-key="6a45963f-177d-4569-bf7b-2d85377d3957"
+            data-element-udi="umb://element/3f5b63b73977456cbd328e0183a7d893"
+            data-col-span="12"
+            data-row-span="1"
+            style=" --umb-block-grid--item-column-span: 12; --umb-block-grid--item-row-span: 1; ">
+
+
+
+<div
+    class="card-collection component  card-collection--white card-collection--5-cards "
+>
+    <div class="grid-container">
+        <h3 class="t2  card-collection__section-title">Related Education</h3>
+        <div class="grid-x">
+            <div
+                class="cell card-collection__card-wrapper  "
+            >
+<a href="https://health.alaska.gov/en/education/alaska-breastfeeding-initiative/" target="_blank" 
+    class="standard-card standard-card--link 
+    " tabindex="0">
+    <div class="standard-card__wrapper">
+        <h4 class="t6 standard-card__title">Alaska Breastfeeding Initiative (ABI)</h4>
+    </div>
+
+    <div class="standard-card__link-icon-wrapper">
+        <div class="standard-card__labels-wrapper">
+        </div>
+        <span class="standard-card__link-icon"></span>
+    </div>
+</a>            </div>
+            <div
+                class="cell card-collection__card-wrapper  "
+            >
+<a href="https://health.alaska.gov/en/education/botulism/" target="_blank" 
+    class="standard-card standard-card--link 
+    " tabindex="0">
+    <div class="standard-card__wrapper">
+        <h4 class="t6 standard-card__title">Botulism</h4>
+    </div>
+
+    <div class="standard-card__link-icon-wrapper">
+        <div class="standard-card__labels-wrapper">
+        </div>
+        <span class="standard-card__link-icon"></span>
+    </div>
+</a>            </div>
+            <div
+                class="cell card-collection__card-wrapper  "
+            >
+<a href="https://health.alaska.gov/en/education/laboratory-test-directory/" target="_blank" 
+    class="standard-card standard-card--link 
+    " tabindex="0">
+    <div class="standard-card__wrapper">
+        <h4 class="t6 standard-card__title">Laboratory Test Directory</h4>
+    </div>
+
+    <div class="standard-card__link-icon-wrapper">
+        <div class="standard-card__labels-wrapper">
+        </div>
+        <span class="standard-card__link-icon"></span>
+    </div>
+</a>            </div>
+            <div
+                class="cell card-collection__card-wrapper  "
+            >
+<a href="https://health.alaska.gov/en/education/drugs-and-alcohol/opioids-prevention-and-recovery/" target="_blank" 
+    class="standard-card standard-card--link 
+    " tabindex="0">
+    <div class="standard-card__wrapper">
+        <h4 class="t6 standard-card__title">Opioids Prevention and Recovery</h4>
+    </div>
+
+    <div class="standard-card__link-icon-wrapper">
+        <div class="standard-card__labels-wrapper">
+        </div>
+        <span class="standard-card__link-icon"></span>
+    </div>
+</a>            </div>
+            <div
+                class="cell card-collection__card-wrapper  "
+            >
+<a href="https://dph-data-hub-alaska-dhss.hub.arcgis.com/" target="_blank" 
+    class="standard-card standard-card--link 
+    " tabindex="0">
+    <div class="standard-card__wrapper">
+        <h4 class="t6 standard-card__title">Public Health Data Dashboard Hub</h4>
+    </div>
+
+    <div class="standard-card__link-icon-wrapper">
+        <div class="standard-card__labels-wrapper">
+        </div>
+        <span class="standard-card__link-icon"></span>
+    </div>
+</a>            </div>
+        </div> 
+    </div>
+</div>
+
+
+        </div>
+        <div
+            class="umb-block-grid__layout-item"
+            data-content-element-type-alias="signpostCardCollection"
+            data-content-element-type-key="6a45963f-177d-4569-bf7b-2d85377d3957"
+            data-element-udi="umb://element/56e0568945374822938a272d1e6913a6"
+            data-col-span="12"
+            data-row-span="1"
+            style=" --umb-block-grid--item-column-span: 12; --umb-block-grid--item-row-span: 1; ">
+
+
+
+<div
+    class="card-collection component  card-collection--light-gray card-collection--0-cards "
+>
+    <div class="grid-container">
+        <h3 class="t2  card-collection__section-title">Contacts</h3>
+        <div class="grid-x">
+        </div> 
+    </div>
+</div>
+
+
+        </div>
+        <div
+            class="umb-block-grid__layout-item"
+            data-content-element-type-alias="signpostCardCollection"
+            data-content-element-type-key="6a45963f-177d-4569-bf7b-2d85377d3957"
+            data-element-udi="umb://element/9871d3dbd4cf4da58a891d3a04068382"
+            data-col-span="12"
+            data-row-span="1"
+            style=" --umb-block-grid--item-column-span: 12; --umb-block-grid--item-row-span: 1; ">
+
+
+
+<div
+    class="card-collection component  card-collection--light-gray card-collection--3-cards "
+>
+    <div class="grid-container">
+        <h3 class="t2  card-collection__section-title">Trainings</h3>
+        <div class="grid-x">
+            <div
+                class="cell card-collection__card-wrapper  "
+            >
+<a href="/media/fvchcabr/alaska-school-and-child-care-immunizations-requirements-packet.pdf" target="_blank" 
+    class="standard-card standard-card--link 
+    " tabindex="0">
+    <div class="standard-card__wrapper">
+        <h4 class="t6 standard-card__title">Alaska School and Child Care Immunizations Requirements Packet</h4>
+    </div>
+
+    <div class="standard-card__link-icon-wrapper">
+        <div class="standard-card__labels-wrapper">
+        </div>
+        <span class="standard-card__link-icon"></span>
+    </div>
+</a>            </div>
+            <div
+                class="cell card-collection__card-wrapper  "
+            >
+<a href="/media/bq2fg2mh/appendixa-examplepricesubmittalsheet.pdf" target="_blank" 
+    class="standard-card standard-card--link 
+    " tabindex="0">
+    <div class="standard-card__wrapper">
+        <h4 class="t6 standard-card__title">Appendix A &#8211; Example Price Submittal Sheet</h4>
+    </div>
+
+    <div class="standard-card__link-icon-wrapper">
+        <div class="standard-card__labels-wrapper">
+        </div>
+        <span class="standard-card__link-icon"></span>
+    </div>
+</a>            </div>
+            <div
+                class="cell card-collection__card-wrapper  "
+            >
+<a href="/media/vv0n5xv4/burial-transit-instructions-7.pdf" target="_blank" 
+    class="standard-card standard-card--link 
+    " tabindex="0">
+    <div class="standard-card__wrapper">
+        <h4 class="t6 standard-card__title">Burial Transit instructions 7</h4>
+    </div>
+
+    <div class="standard-card__link-icon-wrapper">
+        <div class="standard-card__labels-wrapper">
+        </div>
+        <span class="standard-card__link-icon"></span>
+    </div>
+</a>            </div>
+        </div> 
+    </div>
+</div>
+
+
+        </div>
+        <div
+            class="umb-block-grid__layout-item"
+            data-content-element-type-alias="signpostCardCollection"
+            data-content-element-type-key="6a45963f-177d-4569-bf7b-2d85377d3957"
+            data-element-udi="umb://element/270680caee5f4f8caf76fe337c5facda"
+            data-col-span="12"
+            data-row-span="1"
+            style=" --umb-block-grid--item-column-span: 12; --umb-block-grid--item-row-span: 1; ">
+
+
+
+<div
+    class="card-collection component  card-collection--light-gray card-collection--1-cards "
+>
+    <div class="grid-container">
+        <h3 class="t2  card-collection__section-title">Data and reports</h3>
+        <div class="grid-x">
+            <div
+                class="cell card-collection__card-wrapper  "
+            >
+<a href="/media/o24bv3by/2023-alaska-induced-terminations-annual-report.pdf" target="_blank" 
+    class="standard-card standard-card--link 
+    " tabindex="0">
+    <div class="standard-card__wrapper">
+        <h4 class="t6 standard-card__title">2023 Alaska Induced Terminations Annual Report</h4>
+    </div>
+
+    <div class="standard-card__link-icon-wrapper">
+        <div class="standard-card__labels-wrapper">
+        </div>
+        <span class="standard-card__link-icon"></span>
+    </div>
+</a>            </div>
+        </div> 
+    </div>
+</div>
+
+
+        </div>
+        <div
+            class="umb-block-grid__layout-item"
+            data-content-element-type-alias="signpostCardCollection"
+            data-content-element-type-key="6a45963f-177d-4569-bf7b-2d85377d3957"
+            data-element-udi="umb://element/f0fa79df24114e679ad22cc535584ba1"
+            data-col-span="12"
+            data-row-span="1"
+            style=" --umb-block-grid--item-column-span: 12; --umb-block-grid--item-row-span: 1; ">
+
+
+
+<div
+    class="card-collection component  card-collection--light-gray card-collection--82-cards  card-collection--flat-list "
+>
+    <div class="grid-container">
+        <h3 class="t2  card-collection__section-title">Other Related Resources</h3>
+        <div class="grid-x">
+            <div
+                class="cell card-collection__card-wrapper  card-collection__card-wrapper--flat-list"
+            >
+<a href="/media/shhkeipn/tcl-20230112-former-foster-care-youth.pdf" target="_blank" 
+    class="standard-card standard-card--link 
+    " tabindex="0">
+    <div class="standard-card__wrapper">
+        <h4 class="t6 standard-card__title">01/12/2023: Former Foster Care Youth</h4>
+    </div>
+
+    <div class="standard-card__link-icon-wrapper">
+        <div class="standard-card__labels-wrapper">
+        </div>
+        <span class="standard-card__link-icon"></span>
+    </div>
+</a>            </div>
+            <div
+                class="cell card-collection__card-wrapper  card-collection__card-wrapper--flat-list"
+            >
+<a href="/media/3zxfwpci/tcl-20230118-hcbs-waiver-renewals.pdf" target="_blank" 
+    class="standard-card standard-card--link 
+    " tabindex="0">
+    <div class="standard-card__wrapper">
+        <h4 class="t6 standard-card__title">01/18: HCBS Waiver Renewals</h4>
+    </div>
+
+    <div class="standard-card__link-icon-wrapper">
+        <div class="standard-card__labels-wrapper">
+        </div>
+        <span class="standard-card__link-icon"></span>
+    </div>
+</a>            </div>
+            <div
+                class="cell card-collection__card-wrapper  card-collection__card-wrapper--flat-list"
+            >
+<a href="/media/3h0ejs5x/tcl-20240126-air.pdf" target="_blank" 
+    class="standard-card standard-card--link 
+    " tabindex="0">
+    <div class="standard-card__wrapper">
+        <h4 class="t6 standard-card__title">01/26/2024: All-Inclusive Rate Tribal Consultation Letter</h4>
+    </div>
+
+    <div class="standard-card__link-icon-wrapper">
+        <div class="standard-card__labels-wrapper">
+        </div>
+        <span class="standard-card__link-icon"></span>
+    </div>
+</a>            </div>
+            <div
+                class="cell card-collection__card-wrapper  card-collection__card-wrapper--flat-list"
+            >
+<a href="/media/ul0kv4v0/tcl-20250130-consultation-four-walls-spa.pdf" target="_blank" 
+    class="standard-card standard-card--link 
+    " tabindex="0">
+    <div class="standard-card__wrapper">
+        <h4 class="t6 standard-card__title">01/30/2025: Consultation Four Walls SPA</h4>
+    </div>
+
+    <div class="standard-card__link-icon-wrapper">
+        <div class="standard-card__labels-wrapper">
+        </div>
+        <span class="standard-card__link-icon"></span>
+    </div>
+</a>            </div>
+            <div
+                class="cell card-collection__card-wrapper  card-collection__card-wrapper--flat-list"
+            >
+<a href="/media/1ppnxbs0/tcl-20230210-pharmacy-counseling-signature-waiver.pdf" target="_blank" 
+    class="standard-card standard-card--link 
+    " tabindex="0">
+    <div class="standard-card__wrapper">
+        <h4 class="t6 standard-card__title">02/10/2023:  Pharmacy Counseling Signature Waiver</h4>
+    </div>
+
+    <div class="standard-card__link-icon-wrapper">
+        <div class="standard-card__labels-wrapper">
+        </div>
+        <span class="standard-card__link-icon"></span>
+    </div>
+</a>            </div>
+            <div
+                class="cell card-collection__card-wrapper  card-collection__card-wrapper--flat-list"
+            >
+<a href="/media/m4qjzfub/tcl-20240311-hcbs-waiver-amendments.pdf" target="_blank" 
+    class="standard-card standard-card--link 
+    " tabindex="0">
+    <div class="standard-card__wrapper">
+        <h4 class="t6 standard-card__title">03/11/2024: 1915(c) Home and Community Based Service Waiver Amendments</h4>
+    </div>
+
+    <div class="standard-card__link-icon-wrapper">
+        <div class="standard-card__labels-wrapper">
+        </div>
+        <span class="standard-card__link-icon"></span>
+    </div>
+</a>            </div>
+            <div
+                class="cell card-collection__card-wrapper  card-collection__card-wrapper--flat-list"
+            >
+<a href="/media/yyibn01u/tcl-20240319-bh-prior-authorizations-and-service-limitations.pdf" target="_blank" 
+    class="standard-card standard-card--link 
+    " tabindex="0">
+    <div class="standard-card__wrapper">
+        <h4 class="t6 standard-card__title">03/19/2024: Prior Authorizations and Service Limitations</h4>
+    </div>
+
+    <div class="standard-card__link-icon-wrapper">
+        <div class="standard-card__labels-wrapper">
+        </div>
+        <span class="standard-card__link-icon"></span>
+    </div>
+</a>            </div>
+            <div
+                class="cell card-collection__card-wrapper  card-collection__card-wrapper--flat-list"
+            >
+<a href="/media/dvtlsnl2/tcl-correction-to-disaster-relief-spa.pdf" target="_blank" 
+    class="standard-card standard-card--link 
+    " tabindex="0">
+    <div class="standard-card__wrapper">
+        <h4 class="t6 standard-card__title">04/04/2023: Correction of the Disaster Relief State Plan Amendment (dSPA)</h4>
+    </div>
+
+    <div class="standard-card__link-icon-wrapper">
+        <div class="standard-card__labels-wrapper">
+        </div>
+        <span class="standard-card__link-icon"></span>
+    </div>
+</a>            </div>
+            <div
+                class="cell card-collection__card-wrapper  card-collection__card-wrapper--flat-list"
+            >
+<a href="/media/4pnb3atn/tcl-20230405-extend-dspa-flexibility-pharmacy-dispensing-fee.pdf" target="_blank" 
+    class="standard-card standard-card--link 
+    " tabindex="0">
+    <div class="standard-card__wrapper">
+        <h4 class="t6 standard-card__title">04/05/2023: dSPA Extension - Pharmacy Dispensing Fee (Amended 4/26/23)</h4>
+    </div>
+
+    <div class="standard-card__link-icon-wrapper">
+        <div class="standard-card__labels-wrapper">
+        </div>
+        <span class="standard-card__link-icon"></span>
+    </div>
+</a>            </div>
+            <div
+                class="cell card-collection__card-wrapper  card-collection__card-wrapper--flat-list"
+            >
+<a href="/media/wiilosxa/tcl-20230405-spa-extend-fee-for-service-pa-suspension-for-bh-services.pdf" target="_blank" 
+    class="standard-card standard-card--link 
+    " tabindex="0">
+    <div class="standard-card__wrapper">
+        <h4 class="t6 standard-card__title">04/05/2023: SPA Continued Suspension of State Plan Behavioral Health Medicaid Service Prior Authorizations (Amended 4/26/23)</h4>
+    </div>
+
+    <div class="standard-card__link-icon-wrapper">
+        <div class="standard-card__labels-wrapper">
+        </div>
+        <span class="standard-card__link-icon"></span>
+    </div>
+</a>            </div>
+            <div
+                class="cell card-collection__card-wrapper  card-collection__card-wrapper--flat-list"
+            >
+<a href="/media/d4wdmnwo/tcl-20230411-dspa-extension-of-first-aid-and-cpr-flexibility.pdf" target="_blank" 
+    class="standard-card standard-card--link 
+    " tabindex="0">
+    <div class="standard-card__wrapper">
+        <h4 class="t6 standard-card__title">04/11/2023: dSPA Extension of First Aid and CPR flexibility (Amended 4/26/23)</h4>
+    </div>
+
+    <div class="standard-card__link-icon-wrapper">
+        <div class="standard-card__labels-wrapper">
+        </div>
+        <span class="standard-card__link-icon"></span>
+    </div>
+</a>            </div>
+            <div
+                class="cell card-collection__card-wrapper  card-collection__card-wrapper--flat-list"
+            >
+<a href="/media/biwnmh4w/tcl-20240426-interim-pharmacy-dispensing-fee.pdf" target="_blank" 
+    class="standard-card standard-card--link 
+    " tabindex="0">
+    <div class="standard-card__wrapper">
+        <h4 class="t6 standard-card__title">04/26/2024: Interim Pharmacy Dispensing Fee Tribal Consultation Letter</h4>
+    </div>
+
+    <div class="standard-card__link-icon-wrapper">
+        <div class="standard-card__labels-wrapper">
+        </div>
+        <span class="standard-card__link-icon"></span>
+    </div>
+</a>            </div>
+            <div
+                class="cell card-collection__card-wrapper  card-collection__card-wrapper--flat-list"
+            >
+<a href="/media/g45i02yq/tcl-240429-continuation-of-phe-related-enhanced-pharmacy-dispensing-fee.pdf" target="_blank" 
+    class="standard-card standard-card--link 
+    " tabindex="0">
+    <div class="standard-card__wrapper">
+        <h4 class="t6 standard-card__title">04/29/2024: Consultation of PHE-Related Enhanced Pharmacy Dispensing Fee</h4>
+    </div>
+
+    <div class="standard-card__link-icon-wrapper">
+        <div class="standard-card__labels-wrapper">
+        </div>
+        <span class="standard-card__link-icon"></span>
+    </div>
+</a>            </div>
+            <div
+                class="cell card-collection__card-wrapper  card-collection__card-wrapper--flat-list"
+            >
+<a href="/media/00xnnpuq/tcl-20240514-continuation-of-bh-suspensions-of-service-limitations.pdf" target="_blank" 
+    class="standard-card standard-card--link 
+    " tabindex="0">
+    <div class="standard-card__wrapper">
+        <h4 class="t6 standard-card__title">05/14/2024: Continuation of BH Suspensions of Service Limitations</h4>
+    </div>
+
+    <div class="standard-card__link-icon-wrapper">
+        <div class="standard-card__labels-wrapper">
+        </div>
+        <span class="standard-card__link-icon"></span>
+    </div>
+</a>            </div>
+            <div
+                class="cell card-collection__card-wrapper  card-collection__card-wrapper--flat-list"
+            >
+<a href="/media/4l5dofzz/tcl-20230720-drg-des-dsh.pdf" target="_blank" 
+    class="standard-card standard-card--link 
+    " tabindex="0">
+    <div class="standard-card__wrapper">
+        <h4 class="t6 standard-card__title">07/20/2023: DRG, DES-DSH State Plan Amendment</h4>
+    </div>
+
+    <div class="standard-card__link-icon-wrapper">
+        <div class="standard-card__labels-wrapper">
+        </div>
+        <span class="standard-card__link-icon"></span>
+    </div>
+</a>            </div>
+            <div
+                class="cell card-collection__card-wrapper  card-collection__card-wrapper--flat-list"
+            >
+<a href="/media/rkujgz45/tcl-20230728-update-fee-schedule-effective-dates.pdf" target="_blank" 
+    class="standard-card standard-card--link 
+    " tabindex="0">
+    <div class="standard-card__wrapper">
+        <h4 class="t6 standard-card__title">07/28/2023: Amended Update to Fee Schedule Dates State Plan Amendment</h4>
+    </div>
+
+    <div class="standard-card__link-icon-wrapper">
+        <div class="standard-card__labels-wrapper">
+        </div>
+        <span class="standard-card__link-icon"></span>
+    </div>
+</a>            </div>
+            <div
+                class="cell card-collection__card-wrapper  card-collection__card-wrapper--flat-list"
+            >
+<a href="/media/naono5du/tcl-20230906-hcbs-waiver-amendment.pdf" target="_blank" 
+    class="standard-card standard-card--link 
+    " tabindex="0">
+    <div class="standard-card__wrapper">
+        <h4 class="t6 standard-card__title">09/06/2023: IDD, APDD, CCMC, and ISW Waiver Amendments</h4>
+    </div>
+
+    <div class="standard-card__link-icon-wrapper">
+        <div class="standard-card__labels-wrapper">
+        </div>
+        <span class="standard-card__link-icon"></span>
+    </div>
+</a>            </div>
+            <div
+                class="cell card-collection__card-wrapper  card-collection__card-wrapper--flat-list"
+            >
+<a href="/media/ohmhkd5c/tcl-20231009-advanced-practice-dental-hygienists.pdf" target="_blank" 
+    class="standard-card standard-card--link 
+    " tabindex="0">
+    <div class="standard-card__wrapper">
+        <h4 class="t6 standard-card__title">10/10/2023: Advanced Practice Dental Hygienists</h4>
+    </div>
+
+    <div class="standard-card__link-icon-wrapper">
+        <div class="standard-card__labels-wrapper">
+        </div>
+        <span class="standard-card__link-icon"></span>
+    </div>
+</a>            </div>
+            <div
+                class="cell card-collection__card-wrapper  card-collection__card-wrapper--flat-list"
+            >
+<a href="/media/0mvfzjiy/tcl-20231013-acip-recommended-vaccines-administration.pdf" target="_blank" 
+    class="standard-card standard-card--link 
+    " tabindex="0">
+    <div class="standard-card__wrapper">
+        <h4 class="t6 standard-card__title">10/13/2023:  ACIP Recommended Vaccines and Administration for Adults</h4>
+    </div>
+
+    <div class="standard-card__link-icon-wrapper">
+        <div class="standard-card__labels-wrapper">
+        </div>
+        <span class="standard-card__link-icon"></span>
+    </div>
+</a>            </div>
+            <div
+                class="cell card-collection__card-wrapper  card-collection__card-wrapper--flat-list"
+            >
+<a href="/media/eecaqftg/tcl-20241014-tc-letter-drg-reimbursed-hospitals-inpatient-stay-authorizations-and-1915k-cfc-services-alignment.pdf" target="_blank" 
+    class="standard-card standard-card--link 
+    " tabindex="0">
+    <div class="standard-card__wrapper">
+        <h4 class="t6 standard-card__title">10/14/2024: DRG Reimbursed Hospitals</h4>
+    </div>
+
+    <div class="standard-card__link-icon-wrapper">
+        <div class="standard-card__labels-wrapper">
+        </div>
+        <span class="standard-card__link-icon"></span>
+    </div>
+</a>            </div>
+            <div
+                class="cell card-collection__card-wrapper  card-collection__card-wrapper--flat-list"
+            >
+<a href="/media/hmuhk5ze/tcl-20231016-postpartum-extension-and-pw-fpl.pdf" target="_blank" 
+    class="standard-card standard-card--link 
+    " tabindex="0">
+    <div class="standard-card__wrapper">
+        <h4 class="t6 standard-card__title">10/16/2023: Extension of Medicaid Postpartum Coverage and a New Pregnant Women Eligibility Group</h4>
+    </div>
+
+    <div class="standard-card__link-icon-wrapper">
+        <div class="standard-card__labels-wrapper">
+        </div>
+        <span class="standard-card__link-icon"></span>
+    </div>
+</a>            </div>
+            <div
+                class="cell card-collection__card-wrapper  card-collection__card-wrapper--flat-list"
+            >
+<a href="/media/mgdb50rx/tcl-241231-consultation-justice-invovled-youth-spa.pdf" target="_blank" 
+    class="standard-card standard-card--link 
+    " tabindex="0">
+    <div class="standard-card__wrapper">
+        <h4 class="t6 standard-card__title">12/31/2024: Consultation Justice Involved Youth SPA</h4>
+    </div>
+
+    <div class="standard-card__link-icon-wrapper">
+        <div class="standard-card__labels-wrapper">
+        </div>
+        <span class="standard-card__link-icon"></span>
+    </div>
+</a>            </div>
+            <div
+                class="cell card-collection__card-wrapper  card-collection__card-wrapper--flat-list"
+            >
+<a href="https://health.alaska.gov/en/education/diabetes-education/about-diabetes/" target="_blank" 
+    class="standard-card standard-card--link 
+    " tabindex="0">
+    <div class="standard-card__wrapper">
+        <h4 class="t6 standard-card__title">About Diabetes</h4>
+    </div>
+
+    <div class="standard-card__link-icon-wrapper">
+        <div class="standard-card__labels-wrapper">
+        </div>
+        <span class="standard-card__link-icon"></span>
+    </div>
+</a>            </div>
+            <div
+                class="cell card-collection__card-wrapper  card-collection__card-wrapper--flat-list"
+            >
+<a href="/media/nyojrz04/akb-c_cptcodeslist.pdf" target="_blank" 
+    class="standard-card standard-card--link 
+    " tabindex="0">
+    <div class="standard-card__wrapper">
+        <h4 class="t6 standard-card__title">AKB C_CPTCodesList</h4>
+    </div>
+
+    <div class="standard-card__link-icon-wrapper">
+        <div class="standard-card__labels-wrapper">
+        </div>
+        <span class="standard-card__link-icon"></span>
+    </div>
+</a>            </div>
+            <div
+                class="cell card-collection__card-wrapper  card-collection__card-wrapper--flat-list"
+            >
+<a href="https://health.alaska.gov/en/resources/alaska-respond/" target="_blank" 
+    class="standard-card standard-card--link 
+    " tabindex="0">
+    <div class="standard-card__wrapper">
+        <h4 class="t6 standard-card__title">Alaska Respond</h4>
+    </div>
+
+    <div class="standard-card__link-icon-wrapper">
+        <div class="standard-card__labels-wrapper">
+        </div>
+        <span class="standard-card__link-icon"></span>
+    </div>
+</a>            </div>
+            <div
+                class="cell card-collection__card-wrapper  card-collection__card-wrapper--flat-list"
+            >
+<a href="https://health.alaska.gov/en/resources/anchorage-itinerant-public-health-nursing/" target="_blank" 
+    class="standard-card standard-card--link 
+    " tabindex="0">
+    <div class="standard-card__wrapper">
+        <h4 class="t6 standard-card__title">Anchorage Itinerant Public Health Nursing</h4>
+    </div>
+
+    <div class="standard-card__link-icon-wrapper">
+        <div class="standard-card__labels-wrapper">
+        </div>
+        <span class="standard-card__link-icon"></span>
+    </div>
+</a>            </div>
+            <div
+                class="cell card-collection__card-wrapper  card-collection__card-wrapper--flat-list"
+            >
+<a href="/media/e5mbg4wo/tcc-20230427-continued-suspension-of-msp-bh-service-prior-authorizations-kit-provider-response-02.pdf" target="_blank" 
+    class="standard-card standard-card--link 
+    " tabindex="0">
+    <div class="standard-card__wrapper">
+        <h4 class="t6 standard-card__title">April 27, 2023 Response from KIT provider (2)</h4>
+    </div>
+
+    <div class="standard-card__link-icon-wrapper">
+        <div class="standard-card__labels-wrapper">
+        </div>
+        <span class="standard-card__link-icon"></span>
+    </div>
+</a>            </div>
+            <div
+                class="cell card-collection__card-wrapper  card-collection__card-wrapper--flat-list"
+            >
+<a href="/media/tbkd0keo/tcc-20230828-fee-schedule-dates.pdf" target="_blank" 
+    class="standard-card standard-card--link 
+    " tabindex="0">
+    <div class="standard-card__wrapper">
+        <h4 class="t6 standard-card__title">August 28, 2023 Response from SCF</h4>
+    </div>
+
+    <div class="standard-card__link-icon-wrapper">
+        <div class="standard-card__labels-wrapper">
+        </div>
+        <span class="standard-card__link-icon"></span>
+    </div>
+</a>            </div>
+            <div
+                class="cell card-collection__card-wrapper  card-collection__card-wrapper--flat-list"
+            >
+<a href="https://health.alaska.gov/en/resources/community-health-center-senior-access-program-chc-sap/" target="_blank" 
+    class="standard-card standard-card--link 
+    " tabindex="0">
+    <div class="standard-card__wrapper">
+        <h4 class="t6 standard-card__title">Community Health Center Senior Access Program (CHC-SAP)</h4>
+    </div>
+
+    <div class="standard-card__link-icon-wrapper">
+        <div class="standard-card__labels-wrapper">
+        </div>
+        <span class="standard-card__link-icon"></span>
+    </div>
+</a>            </div>
+            <div
+                class="cell card-collection__card-wrapper  card-collection__card-wrapper--flat-list"
+            >
+<a href="/media/1csg53ta/cpt1a_av_parentletter.pdf" target="_blank" 
+    class="standard-card standard-card--link 
+    " tabindex="0">
+    <div class="standard-card__wrapper">
+        <h4 class="t6 standard-card__title">CPT1A_AV_ParentLetter</h4>
+    </div>
+
+    <div class="standard-card__link-icon-wrapper">
+        <div class="standard-card__labels-wrapper">
+        </div>
+        <span class="standard-card__link-icon"></span>
+    </div>
+</a>            </div>
+            <div
+                class="cell card-collection__card-wrapper  card-collection__card-wrapper--flat-list"
+            >
+<a href="https://health.alaska.gov/en/resources/creating-soda-free-schools/" target="_blank" 
+    class="standard-card standard-card--link 
+    " tabindex="0">
+    <div class="standard-card__wrapper">
+        <h4 class="t6 standard-card__title">Creating Soda-Free Schools</h4>
+    </div>
+
+    <div class="standard-card__link-icon-wrapper">
+        <div class="standard-card__labels-wrapper">
+        </div>
+        <span class="standard-card__link-icon"></span>
+    </div>
+</a>            </div>
+            <div
+                class="cell card-collection__card-wrapper  card-collection__card-wrapper--flat-list"
+            >
+<a href="https://health.alaska.gov/en/resources/cutting-back-on-sugar-at-lunch/" target="_blank" 
+    class="standard-card standard-card--link 
+    " tabindex="0">
+    <div class="standard-card__wrapper">
+        <h4 class="t6 standard-card__title">Cutting Back on Sugar at Lunch</h4>
+    </div>
+
+    <div class="standard-card__link-icon-wrapper">
+        <div class="standard-card__labels-wrapper">
+        </div>
+        <span class="standard-card__link-icon"></span>
+    </div>
+</a>            </div>
+            <div
+                class="cell card-collection__card-wrapper  card-collection__card-wrapper--flat-list"
+            >
+<a href="/media/2objme51/tcr-20231222-licensed-behavioral-analyst-fee-schedule-effective-date.pdf" target="_blank" 
+    class="standard-card standard-card--link 
+    " tabindex="0">
+    <div class="standard-card__wrapper">
+        <h4 class="t6 standard-card__title">December 22, 2023 SOA Response to Tribal Comments</h4>
+    </div>
+
+    <div class="standard-card__link-icon-wrapper">
+        <div class="standard-card__labels-wrapper">
+        </div>
+        <span class="standard-card__link-icon"></span>
+    </div>
+</a>            </div>
+            <div
+                class="cell card-collection__card-wrapper  card-collection__card-wrapper--flat-list"
+            >
+<a href="https://health.alaska.gov/en/resources/dental-x-ray-devices/" target="_blank" 
+    class="standard-card standard-card--link 
+    " tabindex="0">
+    <div class="standard-card__wrapper">
+        <h4 class="t6 standard-card__title">Dental X-Ray Devices</h4>
+    </div>
+
+    <div class="standard-card__link-icon-wrapper">
+        <div class="standard-card__labels-wrapper">
+        </div>
+        <span class="standard-card__link-icon"></span>
+    </div>
+</a>            </div>
+            <div
+                class="cell card-collection__card-wrapper  card-collection__card-wrapper--flat-list"
+            >
+<a href="/media/a31nnoba/akdph_electroniccasereporting_onboardingprocess.pdf" target="_blank" 
+    class="standard-card standard-card--link 
+    " tabindex="0">
+    <div class="standard-card__wrapper">
+        <h4 class="t6 standard-card__title">Electronic Case Reporting Onboarding Process</h4>
+    </div>
+
+    <div class="standard-card__link-icon-wrapper">
+        <div class="standard-card__labels-wrapper">
+        </div>
+        <span class="standard-card__link-icon"></span>
+    </div>
+</a>            </div>
+            <div
+                class="cell card-collection__card-wrapper  card-collection__card-wrapper--flat-list"
+            >
+<a href="/media/rnxpv2fl/akdph_electroniclabreporting_onboardingprocess.pdf" target="_blank" 
+    class="standard-card standard-card--link 
+    " tabindex="0">
+    <div class="standard-card__wrapper">
+        <h4 class="t6 standard-card__title">Electronic Lab Reporting Onboarding Process</h4>
+    </div>
+
+    <div class="standard-card__link-icon-wrapper">
+        <div class="standard-card__labels-wrapper">
+        </div>
+        <span class="standard-card__link-icon"></span>
+    </div>
+</a>            </div>
+            <div
+                class="cell card-collection__card-wrapper  card-collection__card-wrapper--flat-list"
+            >
+<a href="/media/wotdnjsg/clia_fbx.pdf" target="_blank" 
+    class="standard-card standard-card--link 
+    " tabindex="0">
+    <div class="standard-card__wrapper">
+        <h4 class="t6 standard-card__title">Fairbanks Laboratory Certificate of Compliance</h4>
+    </div>
+
+    <div class="standard-card__link-icon-wrapper">
+        <div class="standard-card__labels-wrapper">
+        </div>
+        <span class="standard-card__link-icon"></span>
+    </div>
+</a>            </div>
+            <div
+                class="cell card-collection__card-wrapper  card-collection__card-wrapper--flat-list"
+            >
+<a href="/media/f3vbrve2/tcc-20240226-air.pdf" target="_blank" 
+    class="standard-card standard-card--link 
+    " tabindex="0">
+    <div class="standard-card__wrapper">
+        <h4 class="t6 standard-card__title">February 23, 2024 Response from ANHB</h4>
+    </div>
+
+    <div class="standard-card__link-icon-wrapper">
+        <div class="standard-card__labels-wrapper">
+        </div>
+        <span class="standard-card__link-icon"></span>
+    </div>
+</a>            </div>
+            <div
+                class="cell card-collection__card-wrapper  card-collection__card-wrapper--flat-list"
+            >
+<a href="/media/wt3cul3j/hb62-faq-002.pdf" target="_blank" 
+    class="standard-card standard-card--link 
+    " tabindex="0">
+    <div class="standard-card__wrapper">
+        <h4 class="t6 standard-card__title">HB62 FAQ (002)</h4>
+    </div>
+
+    <div class="standard-card__link-icon-wrapper">
+        <div class="standard-card__labels-wrapper">
+        </div>
+        <span class="standard-card__link-icon"></span>
+    </div>
+</a>            </div>
+            <div
+                class="cell card-collection__card-wrapper  card-collection__card-wrapper--flat-list"
+            >
+<a href="https://health.alaska.gov/en/resources/helping-kids-drink-more-water/" target="_blank" 
+    class="standard-card standard-card--link 
+    " tabindex="0">
+    <div class="standard-card__wrapper">
+        <h4 class="t6 standard-card__title">Helping Kids Drink More Water</h4>
+    </div>
+
+    <div class="standard-card__link-icon-wrapper">
+        <div class="standard-card__labels-wrapper">
+        </div>
+        <span class="standard-card__link-icon"></span>
+    </div>
+</a>            </div>
+            <div
+                class="cell card-collection__card-wrapper  card-collection__card-wrapper--flat-list"
+            >
+<a href="https://health.alaska.gov/en/resources/human-papillomavirus-hpv-vaccine/" target="_blank" 
+    class="standard-card standard-card--link 
+    " tabindex="0">
+    <div class="standard-card__wrapper">
+        <h4 class="t6 standard-card__title">Human Papillomavirus (HPV) Vaccine</h4>
+    </div>
+
+    <div class="standard-card__link-icon-wrapper">
+        <div class="standard-card__labels-wrapper">
+        </div>
+        <span class="standard-card__link-icon"></span>
+    </div>
+</a>            </div>
+            <div
+                class="cell card-collection__card-wrapper  card-collection__card-wrapper--flat-list"
+            >
+<a href="/media/4gnp2q3i/information-handout.pdf" target="_blank" 
+    class="standard-card standard-card--link 
+    " tabindex="0">
+    <div class="standard-card__wrapper">
+        <h4 class="t6 standard-card__title">Information handout</h4>
+    </div>
+
+    <div class="standard-card__link-icon-wrapper">
+        <div class="standard-card__labels-wrapper">
+        </div>
+        <span class="standard-card__link-icon"></span>
+    </div>
+</a>            </div>
+            <div
+                class="cell card-collection__card-wrapper  card-collection__card-wrapper--flat-list"
+            >
+<a href="https://health.alaska.gov/en/resources/integrated-hiv-prevention-and-care-plan/" target="_blank" 
+    class="standard-card standard-card--link 
+    " tabindex="0">
+    <div class="standard-card__wrapper">
+        <h4 class="t6 standard-card__title">Integrated HIV Prevention and Care Plan</h4>
+    </div>
+
+    <div class="standard-card__link-icon-wrapper">
+        <div class="standard-card__labels-wrapper">
+        </div>
+        <span class="standard-card__link-icon"></span>
+    </div>
+</a>            </div>
+            <div
+                class="cell card-collection__card-wrapper  card-collection__card-wrapper--flat-list"
+            >
+<a href="/media/jkepl51p/january-2-2025-soa-response-to-tribal-comments.pdf" target="_blank" 
+    class="standard-card standard-card--link 
+    " tabindex="0">
+    <div class="standard-card__wrapper">
+        <h4 class="t6 standard-card__title">January 2, 2025 SOA Response To Tribal Comments</h4>
+    </div>
+
+    <div class="standard-card__link-icon-wrapper">
+        <div class="standard-card__labels-wrapper">
+        </div>
+        <span class="standard-card__link-icon"></span>
+    </div>
+</a>            </div>
+            <div
+                class="cell card-collection__card-wrapper  card-collection__card-wrapper--flat-list"
+            >
+<a href="/media/cicdhmpv/tcr-20240103-response-to-tribal-comments-advanced-practice-dental-hygienists.pdf" target="_blank" 
+    class="standard-card standard-card--link 
+    " tabindex="0">
+    <div class="standard-card__wrapper">
+        <h4 class="t6 standard-card__title">January 3, 2024 SOA Response to Tribal Comments - Advanced Practice Dental Hygienists</h4>
+    </div>
+
+    <div class="standard-card__link-icon-wrapper">
+        <div class="standard-card__labels-wrapper">
+        </div>
+        <span class="standard-card__link-icon"></span>
+    </div>
+</a>            </div>
+            <div
+                class="cell card-collection__card-wrapper  card-collection__card-wrapper--flat-list"
+            >
+<a href="/media/a04ga5pn/tcr-20240103-postpartum-extension-new-pw-eligibilty-category.pdf" target="_blank" 
+    class="standard-card standard-card--link 
+    " tabindex="0">
+    <div class="standard-card__wrapper">
+        <h4 class="t6 standard-card__title">January 3, 2024 SOA Response to Tribal Comments - Medicaid Postpartum Coverage and a New Pregnant Women Eligibility Group</h4>
+    </div>
+
+    <div class="standard-card__link-icon-wrapper">
+        <div class="standard-card__labels-wrapper">
+        </div>
+        <span class="standard-card__link-icon"></span>
+    </div>
+</a>            </div>
+            <div
+                class="cell card-collection__card-wrapper  card-collection__card-wrapper--flat-list"
+            >
+<a href="/media/h3ig0hge/tcr-20240620-continuation-of-bh-suspension-of-service-limitations.pdf" target="_blank" 
+    class="standard-card standard-card--link 
+    " tabindex="0">
+    <div class="standard-card__wrapper">
+        <h4 class="t6 standard-card__title">June 20, 2024 SOA Response to Tribal Comments</h4>
+    </div>
+
+    <div class="standard-card__link-icon-wrapper">
+        <div class="standard-card__labels-wrapper">
+        </div>
+        <span class="standard-card__link-icon"></span>
+    </div>
+</a>            </div>
+            <div
+                class="cell card-collection__card-wrapper  card-collection__card-wrapper--flat-list"
+            >
+<a href="/media/4pxdf4zr/tcr-20230623-dspa-extension-pharmacy-dispensing-fee.pdf" target="_blank" 
+    class="standard-card standard-card--link 
+    " tabindex="0">
+    <div class="standard-card__wrapper">
+        <h4 class="t6 standard-card__title">June 23, 2023 SOA Response to Tribal Comments - dSPA Extension - Pharmacy Dispensing Fee</h4>
+    </div>
+
+    <div class="standard-card__link-icon-wrapper">
+        <div class="standard-card__labels-wrapper">
+        </div>
+        <span class="standard-card__link-icon"></span>
+    </div>
+</a>            </div>
+            <div
+                class="cell card-collection__card-wrapper  card-collection__card-wrapper--flat-list"
+            >
+<a href="/media/d2gglndl/tcr-20230623-continued-suspension-of-msp-bh-service-prior-authorizations-soa-response-tcc.pdf" target="_blank" 
+    class="standard-card standard-card--link 
+    " tabindex="0">
+    <div class="standard-card__wrapper">
+        <h4 class="t6 standard-card__title">June 23, 2023 SOA Response to Tribal Comments - SPA Continued Suspension of State Plan Behavioral Health Medicaid Service Prior Authorizations</h4>
+    </div>
+
+    <div class="standard-card__link-icon-wrapper">
+        <div class="standard-card__labels-wrapper">
+        </div>
+        <span class="standard-card__link-icon"></span>
+    </div>
+</a>            </div>
+            <div
+                class="cell card-collection__card-wrapper  card-collection__card-wrapper--flat-list"
+            >
+<a href="/media/13ud02ah/tcr-240627-interim-pharmacy-dispensing-fee.pdf" target="_blank" 
+    class="standard-card standard-card--link 
+    " tabindex="0">
+    <div class="standard-card__wrapper">
+        <h4 class="t6 standard-card__title">June 27, 2024 Response to Tribal Comments</h4>
+    </div>
+
+    <div class="standard-card__link-icon-wrapper">
+        <div class="standard-card__labels-wrapper">
+        </div>
+        <span class="standard-card__link-icon"></span>
+    </div>
+</a>            </div>
+            <div
+                class="cell card-collection__card-wrapper  card-collection__card-wrapper--flat-list"
+            >
+<a href="https://health.alaska.gov/en/resources/making-physical-activity-easier/" target="_blank" 
+    class="standard-card standard-card--link 
+    " tabindex="0">
+    <div class="standard-card__wrapper">
+        <h4 class="t6 standard-card__title">Making Physical Activity Easier</h4>
+    </div>
+
+    <div class="standard-card__link-icon-wrapper">
+        <div class="standard-card__labels-wrapper">
+        </div>
+        <span class="standard-card__link-icon"></span>
+    </div>
+</a>            </div>
+            <div
+                class="cell card-collection__card-wrapper  card-collection__card-wrapper--flat-list"
+            >
+<a href="/media/p1ijyrtz/tcr-20230314-hcbs-rate-increase-and-rebasing.pdf" target="_blank" 
+    class="standard-card standard-card--link 
+    " tabindex="0">
+    <div class="standard-card__wrapper">
+        <h4 class="t6 standard-card__title">March 14, 2023 SOA Response to Tribal Comments</h4>
+    </div>
+
+    <div class="standard-card__link-icon-wrapper">
+        <div class="standard-card__labels-wrapper">
+        </div>
+        <span class="standard-card__link-icon"></span>
+    </div>
+</a>            </div>
+            <div
+                class="cell card-collection__card-wrapper  card-collection__card-wrapper--flat-list"
+            >
+<a href="/media/meunw5tq/tcr-20240321-air.pdf" target="_blank" 
+    class="standard-card standard-card--link 
+    " tabindex="0">
+    <div class="standard-card__wrapper">
+        <h4 class="t6 standard-card__title">March 21, 2024 SOA Response to Tribal Comments</h4>
+    </div>
+
+    <div class="standard-card__link-icon-wrapper">
+        <div class="standard-card__labels-wrapper">
+        </div>
+        <span class="standard-card__link-icon"></span>
+    </div>
+</a>            </div>
+            <div
+                class="cell card-collection__card-wrapper  card-collection__card-wrapper--flat-list"
+            >
+<a href="/media/viqdqjic/tcr-20230328-renewal-application-sud-treatment-bh-1115-waiver.pdf" target="_blank" 
+    class="standard-card standard-card--link 
+    " tabindex="0">
+    <div class="standard-card__wrapper">
+        <h4 class="t6 standard-card__title">March 28, 2023 SOA Response to Tribal Comments</h4>
+    </div>
+
+    <div class="standard-card__link-icon-wrapper">
+        <div class="standard-card__labels-wrapper">
+        </div>
+        <span class="standard-card__link-icon"></span>
+    </div>
+</a>            </div>
+            <div
+                class="cell card-collection__card-wrapper  card-collection__card-wrapper--flat-list"
+            >
+<a href="/media/dzengmcn/mch-success-stories.pdf" target="_blank" 
+    class="standard-card standard-card--link 
+    " tabindex="0">
+    <div class="standard-card__wrapper">
+        <h4 class="t6 standard-card__title">Maternal Child Health Success Stories</h4>
+    </div>
+
+    <div class="standard-card__link-icon-wrapper">
+        <div class="standard-card__labels-wrapper">
+        </div>
+        <span class="standard-card__link-icon"></span>
+    </div>
+</a>            </div>
+            <div
+                class="cell card-collection__card-wrapper  card-collection__card-wrapper--flat-list"
+            >
+<a href="/media/hqxhpvmc/tcc-20230517-extend-dspa-flexibility-pharmacy-dispensing-fee-crna-response.pdf" target="_blank" 
+    class="standard-card standard-card--link 
+    " tabindex="0">
+    <div class="standard-card__wrapper">
+        <h4 class="t6 standard-card__title">May 17, 2023 Response from CRNA - Pharmacy Dispensing Fee</h4>
+    </div>
+
+    <div class="standard-card__link-icon-wrapper">
+        <div class="standard-card__labels-wrapper">
+        </div>
+        <span class="standard-card__link-icon"></span>
+    </div>
+</a>            </div>
+            <div
+                class="cell card-collection__card-wrapper  card-collection__card-wrapper--flat-list"
+            >
+<a href="/media/1skd4dlx/tcc-20230517-extend-dspa-flexibility-pharmacy-dispensing-fee-nshc-response.pdf" target="_blank" 
+    class="standard-card standard-card--link 
+    " tabindex="0">
+    <div class="standard-card__wrapper">
+        <h4 class="t6 standard-card__title">May 17, 2023 Response from NSHC - Pharmacy Dispensing Fee</h4>
+    </div>
+
+    <div class="standard-card__link-icon-wrapper">
+        <div class="standard-card__labels-wrapper">
+        </div>
+        <span class="standard-card__link-icon"></span>
+    </div>
+</a>            </div>
+            <div
+                class="cell card-collection__card-wrapper  card-collection__card-wrapper--flat-list"
+            >
+<a href="/media/cl0oboft/tcc-20230517-extend-dspa-flexibility-pharmacy-dispensing-fee-scf-response.pdf" target="_blank" 
+    class="standard-card standard-card--link 
+    " tabindex="0">
+    <div class="standard-card__wrapper">
+        <h4 class="t6 standard-card__title">May 17, 2023 Response from SCF -  Pharmacy Dispensing Fee</h4>
+    </div>
+
+    <div class="standard-card__link-icon-wrapper">
+        <div class="standard-card__labels-wrapper">
+        </div>
+        <span class="standard-card__link-icon"></span>
+    </div>
+</a>            </div>
+            <div
+                class="cell card-collection__card-wrapper  card-collection__card-wrapper--flat-list"
+            >
+<a href="/media/z2olawsm/tcc-20240523-continuation-of-bh-suspension-of-service-limitations.pdf" target="_blank" 
+    class="standard-card standard-card--link 
+    " tabindex="0">
+    <div class="standard-card__wrapper">
+        <h4 class="t6 standard-card__title">May 23, 2024 Response from ANHB</h4>
+    </div>
+
+    <div class="standard-card__link-icon-wrapper">
+        <div class="standard-card__labels-wrapper">
+        </div>
+        <span class="standard-card__link-icon"></span>
+    </div>
+</a>            </div>
+            <div
+                class="cell card-collection__card-wrapper  card-collection__card-wrapper--flat-list"
+            >
+<a href="/media/qnyntukb/may-23-2024-response-from-anthc.pdf" target="_blank" 
+    class="standard-card standard-card--link 
+    " tabindex="0">
+    <div class="standard-card__wrapper">
+        <h4 class="t6 standard-card__title">May 23, 2024 Response From ANTHC</h4>
+    </div>
+
+    <div class="standard-card__link-icon-wrapper">
+        <div class="standard-card__labels-wrapper">
+        </div>
+        <span class="standard-card__link-icon"></span>
+    </div>
+</a>            </div>
+            <div
+                class="cell card-collection__card-wrapper  card-collection__card-wrapper--flat-list"
+            >
+<a href="/media/ie3gtzt3/tcc-20230508-continued-suspension-of-msp-bh-service-prior-authorizations-apia-response.pdf" target="_blank" 
+    class="standard-card standard-card--link 
+    " tabindex="0">
+    <div class="standard-card__wrapper">
+        <h4 class="t6 standard-card__title">May 8, 2023 Response from APIA</h4>
+    </div>
+
+    <div class="standard-card__link-icon-wrapper">
+        <div class="standard-card__labels-wrapper">
+        </div>
+        <span class="standard-card__link-icon"></span>
+    </div>
+</a>            </div>
+            <div
+                class="cell card-collection__card-wrapper  card-collection__card-wrapper--flat-list"
+            >
+<a href="/media/qqfohsvz/strategylist_npmsandspms.pdf" target="_blank" 
+    class="standard-card standard-card--link 
+    " tabindex="0">
+    <div class="standard-card__wrapper">
+        <h4 class="t6 standard-card__title">MCH Block Grant 2020-2024 State Action Plan</h4>
+    </div>
+
+    <div class="standard-card__link-icon-wrapper">
+        <div class="standard-card__labels-wrapper">
+        </div>
+        <span class="standard-card__link-icon"></span>
+    </div>
+</a>            </div>
+            <div
+                class="cell card-collection__card-wrapper  card-collection__card-wrapper--flat-list"
+            >
+<a href="https://health.alaska.gov/en/resources/medicaid-tribal-consultation/" target="_blank" 
+    class="standard-card standard-card--link 
+    " tabindex="0">
+    <div class="standard-card__wrapper">
+        <h4 class="t6 standard-card__title">Medicaid Tribal Consultation</h4>
+    </div>
+
+    <div class="standard-card__link-icon-wrapper">
+        <div class="standard-card__labels-wrapper">
+        </div>
+        <span class="standard-card__link-icon"></span>
+    </div>
+</a>            </div>
+            <div
+                class="cell card-collection__card-wrapper  card-collection__card-wrapper--flat-list"
+            >
+<a href="https://health.alaska.gov/en/resources/meeting-physical-education-standards/" target="_blank" 
+    class="standard-card standard-card--link 
+    " tabindex="0">
+    <div class="standard-card__wrapper">
+        <h4 class="t6 standard-card__title">Meeting Physical Education Standards</h4>
+    </div>
+
+    <div class="standard-card__link-icon-wrapper">
+        <div class="standard-card__labels-wrapper">
+        </div>
+        <span class="standard-card__link-icon"></span>
+    </div>
+</a>            </div>
+            <div
+                class="cell card-collection__card-wrapper  card-collection__card-wrapper--flat-list"
+            >
+<a href="/media/m5old5sa/06-5871-doh-notice-of-privacy-practices.pdf" target="_blank" 
+    class="standard-card standard-card--link 
+    " tabindex="0">
+    <div class="standard-card__wrapper">
+        <h4 class="t6 standard-card__title">Notice of Use of Private Health Care Information</h4>
+    </div>
+
+    <div class="standard-card__link-icon-wrapper">
+        <div class="standard-card__labels-wrapper">
+        </div>
+        <span class="standard-card__link-icon"></span>
+    </div>
+</a>            </div>
+            <div
+                class="cell card-collection__card-wrapper  card-collection__card-wrapper--flat-list"
+            >
+<a href="/media/pxdihazp/november-25-2024-response-from-anhb.pdf" target="_blank" 
+    class="standard-card standard-card--link 
+    " tabindex="0">
+    <div class="standard-card__wrapper">
+        <h4 class="t6 standard-card__title">November 25, 2024 Response From ANHB</h4>
+    </div>
+
+    <div class="standard-card__link-icon-wrapper">
+        <div class="standard-card__labels-wrapper">
+        </div>
+        <span class="standard-card__link-icon"></span>
+    </div>
+</a>            </div>
+            <div
+                class="cell card-collection__card-wrapper  card-collection__card-wrapper--flat-list"
+            >
+<a href="/media/sfjgdyfr/november-25-2024-response-from-anthc.pdf" target="_blank" 
+    class="standard-card standard-card--link 
+    " tabindex="0">
+    <div class="standard-card__wrapper">
+        <h4 class="t6 standard-card__title">November 25, 2024 Response From ANTHC</h4>
+    </div>
+
+    <div class="standard-card__link-icon-wrapper">
+        <div class="standard-card__labels-wrapper">
+        </div>
+        <span class="standard-card__link-icon"></span>
+    </div>
+</a>            </div>
+            <div
+                class="cell card-collection__card-wrapper  card-collection__card-wrapper--flat-list"
+            >
+<a href="/media/bsbcmzmj/tcc-20231127-advanced-practice-dental-hygienist-spa.pdf" target="_blank" 
+    class="standard-card standard-card--link 
+    " tabindex="0">
+    <div class="standard-card__wrapper">
+        <h4 class="t6 standard-card__title">November 27, 2023 Response from ANHB -  Advanced Practice Dental Hygienists</h4>
+    </div>
+
+    <div class="standard-card__link-icon-wrapper">
+        <div class="standard-card__labels-wrapper">
+        </div>
+        <span class="standard-card__link-icon"></span>
+    </div>
+</a>            </div>
+            <div
+                class="cell card-collection__card-wrapper  card-collection__card-wrapper--flat-list"
+            >
+<a href="/media/1gtnir3i/tcc-20231127-postpartum-coverage-and-eligibility-extension-spa.pdf" target="_blank" 
+    class="standard-card standard-card--link 
+    " tabindex="0">
+    <div class="standard-card__wrapper">
+        <h4 class="t6 standard-card__title">November 27, 2023 Response from ANHB -  Extension of Medicaid Postpartum Coverage</h4>
+    </div>
+
+    <div class="standard-card__link-icon-wrapper">
+        <div class="standard-card__labels-wrapper">
+        </div>
+        <span class="standard-card__link-icon"></span>
+    </div>
+</a>            </div>
+            <div
+                class="cell card-collection__card-wrapper  card-collection__card-wrapper--flat-list"
+            >
+<a href="/media/u0qjg3rt/tcl-20221019-hcbs-rate-increase-and-rebasing.pdf" target="_blank" 
+    class="standard-card standard-card--link 
+    " tabindex="0">
+    <div class="standard-card__wrapper">
+        <h4 class="t6 standard-card__title">October 19, 2022 Consultation Letter</h4>
+    </div>
+
+    <div class="standard-card__link-icon-wrapper">
+        <div class="standard-card__labels-wrapper">
+        </div>
+        <span class="standard-card__link-icon"></span>
+    </div>
+</a>            </div>
+            <div
+                class="cell card-collection__card-wrapper  card-collection__card-wrapper--flat-list"
+            >
+<a href="https://health.alaska.gov/en/education/drugs-and-alcohol/tobacco-nicotine-and-vaping/provider-resources/" target="_blank" 
+    class="standard-card standard-card--link 
+    " tabindex="0">
+    <div class="standard-card__wrapper">
+        <h4 class="t6 standard-card__title">Provider Resources</h4>
+    </div>
+
+    <div class="standard-card__link-icon-wrapper">
+        <div class="standard-card__labels-wrapper">
+        </div>
+        <span class="standard-card__link-icon"></span>
+    </div>
+</a>            </div>
+            <div
+                class="cell card-collection__card-wrapper  card-collection__card-wrapper--flat-list"
+            >
+<a href="https://health.alaska.gov/en/resources/community-gardens-provide-healthy-food/" target="_blank" 
+    class="standard-card standard-card--link 
+    " tabindex="0">
+    <div class="standard-card__wrapper">
+        <h4 class="t6 standard-card__title">Providing Healthy Food for Schools through Community Gardens</h4>
+    </div>
+
+    <div class="standard-card__link-icon-wrapper">
+        <div class="standard-card__labels-wrapper">
+        </div>
+        <span class="standard-card__link-icon"></span>
+    </div>
+</a>            </div>
+            <div
+                class="cell card-collection__card-wrapper  card-collection__card-wrapper--flat-list"
+            >
+<a href="https://health.alaska.gov/en/resources/public-health-nursing-services/" target="_blank" 
+    class="standard-card standard-card--link 
+    " tabindex="0">
+    <div class="standard-card__wrapper">
+        <h4 class="t6 standard-card__title">Public Health Nursing Services</h4>
+    </div>
+
+    <div class="standard-card__link-icon-wrapper">
+        <div class="standard-card__labels-wrapper">
+        </div>
+        <span class="standard-card__link-icon"></span>
+    </div>
+</a>            </div>
+            <div
+                class="cell card-collection__card-wrapper  card-collection__card-wrapper--flat-list"
+            >
+<a href="https://health.alaska.gov/en/resources/school-and-childcare-immunization-requirements/" target="_blank" 
+    class="standard-card standard-card--link 
+    " tabindex="0">
+    <div class="standard-card__wrapper">
+        <h4 class="t6 standard-card__title">School and Childcare Immunization Requirements</h4>
+    </div>
+
+    <div class="standard-card__link-icon-wrapper">
+        <div class="standard-card__labels-wrapper">
+        </div>
+        <span class="standard-card__link-icon"></span>
+    </div>
+</a>            </div>
+            <div
+                class="cell card-collection__card-wrapper  card-collection__card-wrapper--flat-list"
+            >
+<a href="https://health.alaska.gov/en/resources/serving-locally-sourced-foods-to-students/" target="_blank" 
+    class="standard-card standard-card--link 
+    " tabindex="0">
+    <div class="standard-card__wrapper">
+        <h4 class="t6 standard-card__title">Serving Locally Sourced Foods to Students</h4>
+    </div>
+
+    <div class="standard-card__link-icon-wrapper">
+        <div class="standard-card__labels-wrapper">
+        </div>
+        <span class="standard-card__link-icon"></span>
+    </div>
+</a>            </div>
+            <div
+                class="cell card-collection__card-wrapper  card-collection__card-wrapper--flat-list"
+            >
+<a href="/media/e1yi5ili/smp-section-419-attachment-b.pdf" target="_blank" 
+    class="standard-card standard-card--link 
+    " tabindex="0">
+    <div class="standard-card__wrapper">
+        <h4 class="t6 standard-card__title">SMP Section 4.19 Attachment B</h4>
+    </div>
+
+    <div class="standard-card__link-icon-wrapper">
+        <div class="standard-card__labels-wrapper">
+        </div>
+        <span class="standard-card__link-icon"></span>
+    </div>
+</a>            </div>
+            <div
+                class="cell card-collection__card-wrapper  card-collection__card-wrapper--flat-list"
+            >
+<a href="https://health.alaska.gov/en/resources/state-laboratories-clinical-laboratory-improvement-amendments/" target="_blank" 
+    class="standard-card standard-card--link 
+    " tabindex="0">
+    <div class="standard-card__wrapper">
+        <h4 class="t6 standard-card__title">State Laboratories Clinical Laboratory Improvement Amendments</h4>
+    </div>
+
+    <div class="standard-card__link-icon-wrapper">
+        <div class="standard-card__labels-wrapper">
+        </div>
+        <span class="standard-card__link-icon"></span>
+    </div>
+</a>            </div>
+            <div
+                class="cell card-collection__card-wrapper  card-collection__card-wrapper--flat-list"
+            >
+<a href="/media/nfecyz3o/tcr-20230928-fee-schedule-dates.pdf" target="_blank" 
+    class="standard-card standard-card--link 
+    " tabindex="0">
+    <div class="standard-card__wrapper">
+        <h4 class="t6 standard-card__title">TCR-20230928 Fee Schedule Dates</h4>
+    </div>
+
+    <div class="standard-card__link-icon-wrapper">
+        <div class="standard-card__labels-wrapper">
+        </div>
+        <span class="standard-card__link-icon"></span>
+    </div>
+</a>            </div>
+            <div
+                class="cell card-collection__card-wrapper  card-collection__card-wrapper--flat-list"
+            >
+<a href="https://health.alaska.gov/en/resources/training-tools-for-healthy-schools-e-learning-series-school-health/" target="_blank" 
+    class="standard-card standard-card--link 
+    " tabindex="0">
+    <div class="standard-card__wrapper">
+        <h4 class="t6 standard-card__title">Training Tools for Healthy Schools E-Learning Series | School Health</h4>
+    </div>
+
+    <div class="standard-card__link-icon-wrapper">
+        <div class="standard-card__labels-wrapper">
+        </div>
+        <span class="standard-card__link-icon"></span>
+    </div>
+</a>            </div>
+            <div
+                class="cell card-collection__card-wrapper  card-collection__card-wrapper--flat-list"
+            >
+<a href="/media/wtbdtjwd/vfc-provider-list.pdf" target="_blank" 
+    class="standard-card standard-card--link 
+    " tabindex="0">
+    <div class="standard-card__wrapper">
+        <h4 class="t6 standard-card__title">VFC Enrolled Provider List for Alaska</h4>
+    </div>
+
+    <div class="standard-card__link-icon-wrapper">
+        <div class="standard-card__labels-wrapper">
+        </div>
+        <span class="standard-card__link-icon"></span>
+    </div>
+</a>            </div>
+            <div
+                class="cell card-collection__card-wrapper  card-collection__card-wrapper--flat-list"
+            >
+<a href="https://health.alaska.gov/en/resources/wic-approved-foods/" target="_blank" 
+    class="standard-card standard-card--link 
+    " tabindex="0">
+    <div class="standard-card__wrapper">
+        <h4 class="t6 standard-card__title">WIC Approved Foods</h4>
+    </div>
+
+    <div class="standard-card__link-icon-wrapper">
+        <div class="standard-card__labels-wrapper">
+        </div>
+        <span class="standard-card__link-icon"></span>
+    </div>
+</a>            </div>
+            <div
+                class="cell card-collection__card-wrapper  card-collection__card-wrapper--flat-list"
+            >
+<a href="https://health.alaska.gov/en/resources/womens-childrens-family-health-mch-title-v-block-grant/" target="_blank" 
+    class="standard-card standard-card--link 
+    " tabindex="0">
+    <div class="standard-card__wrapper">
+        <h4 class="t6 standard-card__title">Women's, Children's &amp; Family Health MCH Title V Block Grant</h4>
+    </div>
+
+    <div class="standard-card__link-icon-wrapper">
+        <div class="standard-card__labels-wrapper">
+        </div>
+        <span class="standard-card__link-icon"></span>
+    </div>
+</a>            </div>
+        </div> 
+    </div>
+</div>
+
+
+        </div>
+        <div
+            class="umb-block-grid__layout-item"
+            data-content-element-type-alias="signpostCardCollection"
+            data-content-element-type-key="6a45963f-177d-4569-bf7b-2d85377d3957"
+            data-element-udi="umb://element/dce17592424349568437a055f4d49d67"
+            data-col-span="12"
+            data-row-span="1"
+            style=" --umb-block-grid--item-column-span: 12; --umb-block-grid--item-row-span: 1; ">
+
+
+
+<div
+    class="card-collection component  card-collection--powder-blue-1 card-collection--20-cards  card-collection--flat-list "
+>
+    <div class="grid-container">
+        <h3 class="t2  card-collection__section-title">Other Related Organizations</h3>
+        <div class="grid-x">
+            <div
+                class="cell card-collection__card-wrapper  card-collection__card-wrapper--flat-list"
+            >
+<a href="https://health.alaska.gov/en/education/adolescent-health/" target="_blank" 
+    class="standard-card standard-card--link 
+    " tabindex="0">
+    <div class="standard-card__wrapper">
+        <h4 class="t6 standard-card__title">Adolescent Health</h4>
+    </div>
+
+    <div class="standard-card__link-icon-wrapper">
+        <div class="standard-card__labels-wrapper">
+        </div>
+        <span class="standard-card__link-icon"></span>
+    </div>
+</a>            </div>
+            <div
+                class="cell card-collection__card-wrapper  card-collection__card-wrapper--flat-list"
+            >
+<a href="https://health.alaska.gov/en/division-of-public-health/women-children-family-health/adolescent-health-program/" target="_blank" 
+    class="standard-card standard-card--link 
+    " tabindex="0">
+    <div class="standard-card__wrapper">
+        <h4 class="t6 standard-card__title">Adolescent Health Program</h4>
+    </div>
+
+    <div class="standard-card__link-icon-wrapper">
+        <div class="standard-card__labels-wrapper">
+        </div>
+        <span class="standard-card__link-icon"></span>
+    </div>
+</a>            </div>
+            <div
+                class="cell card-collection__card-wrapper  card-collection__card-wrapper--flat-list"
+            >
+<a href="https://health.alaska.gov/en/division-of-public-health/rural-community-health/emergency-medical-services-ems/" target="_blank" 
+    class="standard-card standard-card--link 
+    " tabindex="0">
+    <div class="standard-card__wrapper">
+        <h4 class="t6 standard-card__title">Alaska Emergency Medical Services (EMS)</h4>
+    </div>
+
+    <div class="standard-card__link-icon-wrapper">
+        <div class="standard-card__labels-wrapper">
+        </div>
+        <span class="standard-card__link-icon"></span>
+    </div>
+</a>            </div>
+            <div
+                class="cell card-collection__card-wrapper  card-collection__card-wrapper--flat-list"
+            >
+<a href="https://health.alaska.gov/en/division-of-public-health/chronic-disease-prevention/alaska-health-systems-collaboration-unit/" target="_blank" 
+    class="standard-card standard-card--link 
+    " tabindex="0">
+    <div class="standard-card__wrapper">
+        <h4 class="t6 standard-card__title">Alaska Health Systems Collaboration Unit</h4>
+    </div>
+
+    <div class="standard-card__link-icon-wrapper">
+        <div class="standard-card__labels-wrapper">
+        </div>
+        <span class="standard-card__link-icon"></span>
+    </div>
+</a>            </div>
+            <div
+                class="cell card-collection__card-wrapper  card-collection__card-wrapper--flat-list"
+            >
+<a href="https://health.alaska.gov/en/division-of-public-health/women-children-family-health/maternal-and-child-death-review/" target="_blank" 
+    class="standard-card standard-card--link 
+    " tabindex="0">
+    <div class="standard-card__wrapper">
+        <h4 class="t6 standard-card__title">Alaska Maternal and Child Death Review (MCDR)</h4>
+    </div>
+
+    <div class="standard-card__link-icon-wrapper">
+        <div class="standard-card__labels-wrapper">
+        </div>
+        <span class="standard-card__link-icon"></span>
+    </div>
+</a>            </div>
+            <div
+                class="cell card-collection__card-wrapper  card-collection__card-wrapper--flat-list"
+            >
+<a href="https://health.alaska.gov/en/division-of-public-health/alaska-public-laboratories/" target="_blank" 
+    class="standard-card standard-card--link 
+    " tabindex="0">
+    <div class="standard-card__wrapper">
+        <h4 class="t6 standard-card__title">Alaska State Public Health Laboratories (ASPHL)</h4>
+    </div>
+
+    <div class="standard-card__link-icon-wrapper">
+        <div class="standard-card__labels-wrapper">
+        </div>
+        <span class="standard-card__link-icon"></span>
+    </div>
+</a>            </div>
+            <div
+                class="cell card-collection__card-wrapper  card-collection__card-wrapper--flat-list"
+            >
+<a href="https://health.alaska.gov/en/division-of-public-health/epidemiology/immunization/alaska-vaccine-assessment/" target="_blank" 
+    class="standard-card standard-card--link 
+    " tabindex="0">
+    <div class="standard-card__wrapper">
+        <h4 class="t6 standard-card__title">Alaska Vaccine Assessment Program (AVAP)</h4>
+    </div>
+
+    <div class="standard-card__link-icon-wrapper">
+        <div class="standard-card__labels-wrapper">
+        </div>
+        <span class="standard-card__link-icon"></span>
+    </div>
+</a>            </div>
+            <div
+                class="cell card-collection__card-wrapper  card-collection__card-wrapper--flat-list"
+            >
+<a href="https://health.alaska.gov/en/division-of-public-health/alaska-public-laboratories/analytical-chemistry-program/" target="_blank" 
+    class="standard-card standard-card--link 
+    " tabindex="0">
+    <div class="standard-card__wrapper">
+        <h4 class="t6 standard-card__title">Analytical Chemistry Program</h4>
+    </div>
+
+    <div class="standard-card__link-icon-wrapper">
+        <div class="standard-card__labels-wrapper">
+        </div>
+        <span class="standard-card__link-icon"></span>
+    </div>
+</a>            </div>
+            <div
+                class="cell card-collection__card-wrapper  card-collection__card-wrapper--flat-list"
+            >
+<a href="https://health.alaska.gov/en/division-of-public-health/chronic-disease-prevention/brfss/" target="_blank" 
+    class="standard-card standard-card--link 
+    " tabindex="0">
+    <div class="standard-card__wrapper">
+        <h4 class="t6 standard-card__title">Behavioral Risk Factor Surveillance System (BRFSS)</h4>
+    </div>
+
+    <div class="standard-card__link-icon-wrapper">
+        <div class="standard-card__labels-wrapper">
+        </div>
+        <span class="standard-card__link-icon"></span>
+    </div>
+</a>            </div>
+            <div
+                class="cell card-collection__card-wrapper  card-collection__card-wrapper--flat-list"
+            >
+<a href="https://health.alaska.gov/en/division-of-public-health/alaska-public-laboratories/special-pathogens-program/" target="_blank" 
+    class="standard-card standard-card--link 
+    " tabindex="0">
+    <div class="standard-card__wrapper">
+        <h4 class="t6 standard-card__title">Bioterrorism/Special Pathogens Program</h4>
+    </div>
+
+    <div class="standard-card__link-icon-wrapper">
+        <div class="standard-card__labels-wrapper">
+        </div>
+        <span class="standard-card__link-icon"></span>
+    </div>
+</a>            </div>
+            <div
+                class="cell card-collection__card-wrapper  card-collection__card-wrapper--flat-list"
+            >
+<a href="https://health.alaska.gov/en/division-of-public-health/chronic-disease-prevention/alaskas-diabetes-prevention-and-control-program/" target="_blank" 
+    class="standard-card standard-card--link 
+    " tabindex="0">
+    <div class="standard-card__wrapper">
+        <h4 class="t6 standard-card__title">Diabetes Prevention and Control Program</h4>
+    </div>
+
+    <div class="standard-card__link-icon-wrapper">
+        <div class="standard-card__labels-wrapper">
+        </div>
+        <span class="standard-card__link-icon"></span>
+    </div>
+</a>            </div>
+            <div
+                class="cell card-collection__card-wrapper  card-collection__card-wrapper--flat-list"
+            >
+<a href="https://health.alaska.gov/en/division-of-public-health/epidemiology/environmental-public-health/" target="_blank" 
+    class="standard-card standard-card--link 
+    " tabindex="0">
+    <div class="standard-card__wrapper">
+        <h4 class="t6 standard-card__title">Environmental Public Health</h4>
+    </div>
+
+    <div class="standard-card__link-icon-wrapper">
+        <div class="standard-card__labels-wrapper">
+        </div>
+        <span class="standard-card__link-icon"></span>
+    </div>
+</a>            </div>
+            <div
+                class="cell card-collection__card-wrapper  card-collection__card-wrapper--flat-list"
+            >
+<a href="https://health.alaska.gov/en/division-of-public-health/epidemiology/hiv-std/" target="_blank" 
+    class="standard-card standard-card--link 
+    " tabindex="0">
+    <div class="standard-card__wrapper">
+        <h4 class="t6 standard-card__title">HIV/STD Program</h4>
+    </div>
+
+    <div class="standard-card__link-icon-wrapper">
+        <div class="standard-card__labels-wrapper">
+        </div>
+        <span class="standard-card__link-icon"></span>
+    </div>
+</a>            </div>
+            <div
+                class="cell card-collection__card-wrapper  card-collection__card-wrapper--flat-list"
+            >
+<a href="https://health.alaska.gov/en/division-of-public-health/epidemiology/infectious-disease/" target="_blank" 
+    class="standard-card standard-card--link 
+    " tabindex="0">
+    <div class="standard-card__wrapper">
+        <h4 class="t6 standard-card__title">Infectious Disease Program</h4>
+    </div>
+
+    <div class="standard-card__link-icon-wrapper">
+        <div class="standard-card__labels-wrapper">
+        </div>
+        <span class="standard-card__link-icon"></span>
+    </div>
+</a>            </div>
+            <div
+                class="cell card-collection__card-wrapper  card-collection__card-wrapper--flat-list"
+            >
+<a href="https://health.alaska.gov/en/division-of-public-health/epidemiology/injury-surveillance/" target="_blank" 
+    class="standard-card standard-card--link 
+    " tabindex="0">
+    <div class="standard-card__wrapper">
+        <h4 class="t6 standard-card__title">Injury Surveillance Program (ISP)</h4>
+    </div>
+
+    <div class="standard-card__link-icon-wrapper">
+        <div class="standard-card__labels-wrapper">
+        </div>
+        <span class="standard-card__link-icon"></span>
+    </div>
+</a>            </div>
+            <div
+                class="cell card-collection__card-wrapper  card-collection__card-wrapper--flat-list"
+            >
+<a href="https://health.alaska.gov/en/division-of-public-health/rural-community-health/office-of-healthcare-access/" target="_blank" 
+    class="standard-card standard-card--link 
+    " tabindex="0">
+    <div class="standard-card__wrapper">
+        <h4 class="t6 standard-card__title">Office of Healthcare Access</h4>
+    </div>
+
+    <div class="standard-card__link-icon-wrapper">
+        <div class="standard-card__labels-wrapper">
+        </div>
+        <span class="standard-card__link-icon"></span>
+    </div>
+</a>            </div>
+            <div
+                class="cell card-collection__card-wrapper  card-collection__card-wrapper--flat-list"
+            >
+<a href="https://health.alaska.gov/en/division-of-public-health/chronic-disease-prevention/physical-activity-and-nutrition/" target="_blank" 
+    class="standard-card standard-card--link 
+    " tabindex="0">
+    <div class="standard-card__wrapper">
+        <h4 class="t6 standard-card__title">Physical Activity and Nutrition Program</h4>
+    </div>
+
+    <div class="standard-card__link-icon-wrapper">
+        <div class="standard-card__labels-wrapper">
+        </div>
+        <span class="standard-card__link-icon"></span>
+    </div>
+</a>            </div>
+            <div
+                class="cell card-collection__card-wrapper  card-collection__card-wrapper--flat-list"
+            >
+<a href="https://health.alaska.gov/en/division-of-public-health/chronic-disease-prevention/school-health/" target="_blank" 
+    class="standard-card standard-card--link 
+    " tabindex="0">
+    <div class="standard-card__wrapper">
+        <h4 class="t6 standard-card__title">School Health Program</h4>
+    </div>
+
+    <div class="standard-card__link-icon-wrapper">
+        <div class="standard-card__labels-wrapper">
+        </div>
+        <span class="standard-card__link-icon"></span>
+    </div>
+</a>            </div>
+            <div
+                class="cell card-collection__card-wrapper  card-collection__card-wrapper--flat-list"
+            >
+<a href="https://health.alaska.gov/en/division-of-public-health/rural-community-health/sharp-advisory-council/" target="_blank" 
+    class="standard-card standard-card--link 
+    " tabindex="0">
+    <div class="standard-card__wrapper">
+        <h4 class="t6 standard-card__title">SHARP Advisory Council</h4>
+    </div>
+
+    <div class="standard-card__link-icon-wrapper">
+        <div class="standard-card__labels-wrapper">
+        </div>
+        <span class="standard-card__link-icon"></span>
+    </div>
+</a>            </div>
+            <div
+                class="cell card-collection__card-wrapper  card-collection__card-wrapper--flat-list"
+            >
+<a href="https://health.alaska.gov/en/division-of-public-health/chronic-disease-prevention/tobacco-prevention-and-control/" target="_blank" 
+    class="standard-card standard-card--link 
+    " tabindex="0">
+    <div class="standard-card__wrapper">
+        <h4 class="t6 standard-card__title">Tobacco Prevention and Control Program (TPCP)</h4>
+    </div>
+
+    <div class="standard-card__link-icon-wrapper">
+        <div class="standard-card__labels-wrapper">
+        </div>
+        <span class="standard-card__link-icon"></span>
+    </div>
+</a>            </div>
+        </div> 
+    </div>
+</div>
+
+
+        </div>
+</div>
+
+</div>
+
+
+<link rel="stylesheet" href="/assets/DOH/css/contact-component.css?cb=1.0.0.0" />
+
+<div
+    class="contact-component contact-component--single-cards component "
+>
+    <div class="grid-container">
+        <div class="grid-x">
+            <div
+                class="cell medium-2 large-6 contact-component__heading"
+            >
+                <h2 class="contact-component__title t2">Contact us</h2>
+            </div>
+<div class="cell medium-2 large-6 contact-component__card">
+    <div class="contact-component__card-heading">
+        <h3 class="t6">Public Health</h3>
+    </div>
+    <div class="contact-component__card-details">
+        <div class="contact-component__card-details__item">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                <path
+                    opacity="0.15"
+                    d="M21 18.0001V6.00008C21 5.72393 20.8881 5.47393 20.7071 5.29297L20.5 5.50008L13.4142 12.5859C12.6332 13.3669 11.3668 13.3669 10.5858 12.5859L3.5 5.50008L3.29289 5.29297C3.11193 5.47393 3 5.72393 3 6.00008V18.0001C3 18.5524 3.44772 19.0001 4 19.0001H20C20.5523 19.0001 21 18.5524 21 18.0001Z"
+                    fill="#1E76BF"
+                />
+                <path
+                    d="M3.29289 5.29289C3.47386 5.11193 3.72386 5 4 5H20C20.2761 5 20.5261 5.11193 20.7071 5.29289M3.29289 5.29289C3.11193 5.47386 3 5.72386 3 6V18C3 18.5523 3.44772 19 4 19H20C20.5523 19 21 18.5523 21 18V6C21 5.72386 20.8881 5.47386 20.7071 5.29289M3.29289 5.29289L10.5858 12.5858C11.3668 13.3668 12.6332 13.3668 13.4142 12.5858L20.7071 5.29289"
+                    stroke="#1E76BF"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                />
+            </svg>
+            <a href="mailto:doh.dph.info@alaska.gov" class="small-body" aria-label="email">doh.dph.info@alaska.gov</a aria-label="email">
+        </div>
+    </div>
+</div>
+        </div>
+    </div>
+</div>
+
+
+
+    </main>
+
+    <link rel="stylesheet" href="/assets/DOH/css/footer.css?cb=1.0.0.0">
+
+<footer role="contentinfo" class="site-footer " data-module="footer">
+    <div class="site-footer__container-outer">
+    <div class="grid-container site-footer__container">
+        <div class="grid-x">
+            <div class="cell medium-4 large-2">
+                <div class="site-footer__logo-wrapper">
+                            <a href="https://health.alaska.gov/en" class="site-footer__logo-link" title="">
+
+                            <img src="/media/mwjpaqgg/doh-beveled-1.svg" class="site-footer__logo-image" alt="DOH Beveled 1" />
+                        </a>
+
+                    <div class="site-footer__title-wrapper">
+                        <span class="small-body footer__title-line-1">State of Alaska | Department of Health</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="cell medium-4 large-4">
+                <div class="site-footer__links-wrapper">
+                        <ul class="site-footer__footer-links">
+                                <li class="site-footer__footer-link-item">
+                                    <a href="/en/education/our-commitment-to-accessibility/" class="small-body site-footer__footer-link" target="_self">
+                                        Accessibility
+                                    </a>
+                                </li>
+                                <li class="site-footer__footer-link-item">
+                                    <a href="https://alaska.access.preservica.com/uncategorized/SO_16bf7a08-d2ff-4da6-add8-a7bc480ce56f/" class="small-body site-footer__footer-link" target="_blank">
+                                        Archives
+                                    </a>
+                                </li>
+                                <li class="site-footer__footer-link-item">
+                                    <a href="https://www.governmentjobs.com/careers/alaska?department[0]=Health&amp;sort=PositionTitle%7CAscending&amp;page=1" class="small-body site-footer__footer-link" target="_blank">
+                                        Careers
+                                    </a>
+                                </li>
+                                <li class="site-footer__footer-link-item">
+                                    <a href="https://www.alaska.gov/" class="small-body site-footer__footer-link" target="_blank">
+                                        State of Alaska
+                                    </a>
+                                </li>
+                                <li class="site-footer__footer-link-item">
+                                    <a href="https://www.alaska.gov/employeeHome.html" class="small-body site-footer__footer-link" target="_blank">
+                                        State Employees
+                                    </a>
+                                </li>
+                                <li class="site-footer__footer-link-item">
+                                    <a href="https://sp.dhss.alaska.gov/intranet/home/Pages/Home.aspx" class="small-body site-footer__footer-link" target="_blank">
+                                        Intranet
+                                    </a>
+                                </li>
+                                <li class="site-footer__footer-link-item">
+                                    <a href="https://my.alaska.gov/" class="small-body site-footer__footer-link" target="_blank">
+                                        myAlaska
+                                    </a>
+                                </li>
+                                <li class="site-footer__footer-link-item">
+                                    <a href="https://www.alaska.gov/akdir1.html" class="small-body site-footer__footer-link" target="_blank">
+                                        Departments
+                                    </a>
+                                </li>
+                        </ul>
+                </div>
+            </div>
+
+             <div class="cell medium-4 large-2">
+               <div class="site-footer__links-wrapper">
+<div class="social-links js-social-links">
+    <a
+        class="social-links__link js-social-link"
+        href="https://www.facebook.com/doh.alaska"
+        target="_blank"
+        data-type="facebook"
+        rel="noopener"
+    >
+        <span class="social-links__link-icon social-links__link-icon--facebook"></span>
+        <span class="social-links__link-text">Facebook</span>
+    </a>
+    <a
+        class="social-links__link js-social-link"
+        href="https://www.linkedin.com/company/alaskadhss"
+        target="_blank"
+        data-type="linkedin"
+        rel="noopener"
+    >
+        <span class="social-links__link-icon social-links__link-icon--linkedin"></span>
+        <span class="social-links__link-text">LinkedIn</span>
+    </a>
+    <a
+        class="social-links__link js-social-link"
+        href="https://www.youtube.com/alaskadhss"
+        target="_blank"
+        data-type="youtube"
+        rel="noopener"
+    >
+        <span class="social-links__link-icon social-links__link-icon--youtube"></span>
+        <span class="social-links__link-text">YouTube</span>
+    </a>
+</div>
+                </div>
+            </div>
+
+            <div class="cell medium-4 large-start-10 large-3">
+                <div class="site-footer__address-wrapper">
+                        <div class="site-footer__text small-body"><div><p><a href="/en/resources/department-contacts/" title="Department Contacts">Department contact information</a></p>
+<p><a href="mailto:doh.info@alaska.gov" aria-label="email">doh.info@alaska.gov</a aria-label="email"></p></div><div><div>
+<div>3601 C Street, Suite 902</div>
+<div>
+<div>
+<div>Anchorage, Alaska 99503<br><a href="mailto:doh.info@alaska.gov" title="doh.info@alaska.gov" aria-label="email"></a aria-label="email"></div>
+<div>350 Main Street, Suite 404<br>Juneau, AK 99811</div>
+</div>
+</div>
+</div>
+<p>&nbsp;</p>
+<p>&nbsp;</p></div></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <div class="site-footer__language-container-outer">
+    <div class="grid-container site-footer__container site-footer__language-container">
+        <div class="grid-x">
+            <div class="cell medium-4 large-3">
+                <div class="site-footer__greeting-wrapper">
+                    <a class="site-footer__greeting-link" href="https://education.alaska.gov/anlpac/Languages" target="_blank">
+                        <span class="site-footer__greeting-headline large-body">S&#225;n uu d&#225;ng g&#237;idang?</span>
+                        <span class="small-body site-footer__greeting-subline">(Xaat K&#237;l) Hello, how are you?</span>
+                    </a>
+                </div>
+            </div>
+
+
+             <div class="cell medium-4 large-start-12 large-1">
+               <div class="site-footer__up-icon-wrapper">
+                    <a href="#top" class="site-footer__up-icon-link" aria-label="Back to Top"></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+ <div class="site-footer__copyright-wrapper-outer">
+    <div class="grid-container site-footer__copyright-wrapper">
+        <div class="site-footer__footer-copyright-links">
+                <ul class="site-footer__hygiene-links body-small">
+                        <li class="site-footer__hygiene-link-item">
+                            <a href="/en/" class="site-footer__hygiene-link breadcrumb" target="_self">
+                                Department of Health
+                            </a>
+                        </li>
+                        <li class="site-footer__hygiene-link-item">
+                            <a href="mailto:doh.webmaster.info@alaska.gov" class="site-footer__hygiene-link breadcrumb" target="_blank">
+                                Email the Webmaster
+                            </a>
+                        </li>
+                </ul>
+            <div class="site-footer__copyright-text breadcrumb">Copyright © State of Alaska</div>
+
+        </div>
+    </div>
+    </div>
+</footer>
+
+
+    <script type="module" src="/assets/DOH/js/app.js?v=bCQJoanjEZE0McZvaa8EqsiCfnoVYVAbXLeVk6r7e3Y"></script>
+
+
+    
+<script async src="https://siteimproveanalytics.com/js/siteanalyze_6294358.js"></script>
+	
+	
+
+
+
+ 
+<script>typeof umbracoEngage!=="undefined"&&umbracoEngage.analytics&&umbracoEngage.analytics.init("a189e541-e3ff-4b01-a8c8-8b60d5de70cc")</script></body>
+</html>
