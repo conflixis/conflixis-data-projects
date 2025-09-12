@@ -62,6 +62,18 @@ class BigQueryAnalyzer:
         """
         self.client = bq_client
         self.config = config
+        
+        # Load analysis thresholds
+        try:
+            from src.config.analysis_config import ANALYSIS_THRESHOLDS
+            self.config['analysis_thresholds'] = ANALYSIS_THRESHOLDS
+        except ImportError:
+            # Fallback to defaults if config not found
+            self.config['analysis_thresholds'] = {
+                'min_payment_for_influence': 1000,
+                'min_rx_for_analysis': 1000
+            }
+        
         self.start_year = start_year
         self.end_year = end_year
         self.lineage_tracker = lineage_tracker
@@ -685,36 +697,108 @@ class BigQueryAnalyzer:
             payment_tiers_df = pd.DataFrame()
         results['payment_tiers'] = payment_tiers_df
         
-        # Provider vulnerability DataFrame
-        # Fixed to handle year dimension in summary table
+        # Provider vulnerability DataFrame with proper thresholds and categorization
         provider_vulnerability_query = f"""
-        WITH provider_metrics AS (
+        -- Provider Type Analysis with proper thresholds and categorization
+        WITH all_providers AS (
+            -- Get all unique NPIs from both rx and payment tables
+            SELECT DISTINCT NPI 
+            FROM {self.rx_summary}
+            UNION DISTINCT
+            SELECT DISTINCT physician_id as NPI 
+            FROM {self.op_summary}
+        ),
+        provider_info AS (
+            -- Get provider types from PHYSICIANS_OVERVIEW
             SELECT
-                COALESCE(rx.provider_type, 'Unknown') as provider_type,
-                rx.NPI,
-                COALESCE(SUM(op.total_amount), 0) as total_payments,
-                -- Fix: Average across years instead of summing
-                SUM(rx.total_cost) / COUNT(DISTINCT rx.rx_year) as total_rx_cost,
-                SUM(rx.total_claims) as total_claims
-            FROM {self.rx_summary} rx
-            LEFT JOIN {self.op_summary} op ON rx.NPI = op.physician_id
-            GROUP BY rx.provider_type, rx.NPI
+                ap.NPI,
+                CASE
+                    WHEN po.ROLE_NAME = 'Physician' THEN 'Physician'
+                    WHEN po.ROLE_NAME = 'Hospitalist' THEN 'Physician'
+                    WHEN po.ROLE_NAME = 'Nurse Practitioner' THEN 'Nurse Practitioner'
+                    WHEN po.ROLE_NAME = 'Physician Assistant' THEN 'Physician Assistant'
+                    WHEN po.ROLE_NAME IN ('Certified Registered Nurse Anesthetist', 'Certified Nurse Midwife') THEN 'Advanced Practice Nurse'
+                    WHEN po.ROLE_NAME = 'Dentist' THEN 'Dentist'
+                    WHEN po.NPI IS NULL THEN 'Provider Type Unknown'
+                    WHEN po.ROLE_NAME IS NULL THEN 'No Role Specified'
+                    ELSE 'Other Healthcare Professional'
+                END AS base_provider_type
+            FROM all_providers ap
+            LEFT JOIN `{self.config['bigquery']['project_id']}.{self.config['bigquery']['dataset']}.PHYSICIANS_OVERVIEW_optimized` po
+                ON po.NPI = ap.NPI
+        ),
+        provider_metrics AS (
+            -- Get payment and prescription totals
+            SELECT
+                pi.NPI,
+                pi.base_provider_type,
+                COALESCE(rx.total_rx_cost, 0) as total_rx_cost,
+                COALESCE(op.total_payments, 0) as total_payments
+            FROM provider_info pi
+            LEFT JOIN (
+                SELECT NPI, SUM(total_cost) as total_rx_cost
+                FROM {self.rx_summary}
+                GROUP BY NPI
+            ) rx ON pi.NPI = rx.NPI
+            LEFT JOIN (
+                SELECT physician_id as NPI, SUM(total_amount) as total_payments
+                FROM {self.op_summary}
+                GROUP BY physician_id
+            ) op ON pi.NPI = op.NPI
+        ),
+        categorized_providers AS (
+            SELECT
+                -- Categorize based on prescription threshold
+                CASE
+                    WHEN total_rx_cost <= {self.config.get('analysis_thresholds', {}).get('min_rx_for_analysis', 1000)} THEN
+                        CASE
+                            WHEN total_payments > {self.config.get('analysis_thresholds', {}).get('min_payment_for_influence', 1000)} THEN 'Low-Prescribers WITH Payments'
+                            ELSE 'Low-Prescribers NO Payments'
+                        END
+                    ELSE base_provider_type
+                END AS provider_type,
+                NPI,
+                total_rx_cost,
+                total_payments,
+                CASE 
+                    WHEN total_payments > {self.config.get('analysis_thresholds', {}).get('min_payment_for_influence', 1000)} THEN 1 
+                    ELSE 0 
+                END as has_significant_payments
+            FROM provider_metrics
         )
         SELECT
             provider_type,
             COUNT(DISTINCT NPI) as provider_count,
-            COUNT(DISTINCT CASE WHEN total_payments > 0 THEN NPI END) as providers_with_payments,
-            AVG(total_payments) as avg_payments,
-            AVG(total_rx_cost) as avg_rx_cost,
-            AVG(CASE WHEN total_payments > 0 THEN total_rx_cost END) as avg_rx_with_payments,
-            AVG(CASE WHEN total_payments = 0 THEN total_rx_cost END) as avg_rx_without_payments,
-            SAFE_DIVIDE(
-                AVG(CASE WHEN total_payments > 0 THEN total_rx_cost END),
-                AVG(CASE WHEN total_payments = 0 THEN total_rx_cost END)
-            ) as influence_factor
-        FROM provider_metrics
+            COUNT(DISTINCT CASE WHEN has_significant_payments = 1 THEN NPI END) as providers_with_payments,
+            COUNT(DISTINCT CASE WHEN has_significant_payments = 0 THEN NPI END) as providers_without_payments,
+            
+            -- Payment metrics
+            ROUND(SUM(CASE WHEN has_significant_payments = 1 THEN total_payments END), 0) as total_payments_sum,
+            ROUND(AVG(CASE WHEN has_significant_payments = 1 THEN total_payments END), 0) as avg_payments,
+            
+            -- Prescription metrics
+            ROUND(SUM(CASE WHEN has_significant_payments = 0 THEN total_rx_cost END), 0) as total_rx_no_payments,
+            ROUND(SUM(CASE WHEN has_significant_payments = 1 THEN total_rx_cost END), 0) as total_rx_with_payments,
+            ROUND(AVG(CASE WHEN has_significant_payments = 0 THEN total_rx_cost END), 0) as avg_rx_without_payments,
+            ROUND(AVG(CASE WHEN has_significant_payments = 1 THEN total_rx_cost END), 0) as avg_rx_with_payments,
+            
+            -- Influence factor (null for low prescriber categories)
+            CASE
+                WHEN provider_type LIKE 'Low-Prescribers%' THEN NULL
+                ELSE ROUND(
+                    SAFE_DIVIDE(
+                        AVG(CASE WHEN has_significant_payments = 1 THEN total_rx_cost END),
+                        AVG(CASE WHEN has_significant_payments = 0 THEN total_rx_cost END)
+                    ), 1)
+            END as influence_factor
+        FROM categorized_providers
         GROUP BY provider_type
-        ORDER BY provider_count DESC
+        ORDER BY
+            CASE 
+                WHEN provider_type LIKE 'Low-Prescribers%' THEN 999
+                ELSE 0
+            END,
+            provider_count DESC
         """
         provider_vuln_df, status = self._run_query(provider_vulnerability_query, "provider_type_vulnerability")
         if status == "failed":

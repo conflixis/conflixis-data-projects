@@ -321,6 +321,54 @@ class CorrelationAnalyzer:
         logger.info(f"Analyzed vulnerability for {len(vulnerability_df)} provider types")
         return vulnerability_df
     
+    def validate_results(self, df: pd.DataFrame, metric_name: str) -> pd.DataFrame:
+        """
+        Validate analysis results for data quality issues
+        
+        Args:
+            df: Results dataframe
+            metric_name: Name of the metric being validated
+            
+        Returns:
+            DataFrame with validation flags added
+        """
+        try:
+            from src.config.analysis_config import ANALYSIS_THRESHOLDS
+        except ImportError:
+            # Fallback to defaults if config not found
+            ANALYSIS_THRESHOLDS = {
+                'max_reasonable_influence': 10,
+                'max_reasonable_avg_rx': 5_000_000
+            }
+        
+        df = df.copy()
+        df['data_quality_flags'] = ''
+        
+        # Check influence factors
+        if 'influence_factor' in df.columns:
+            mask = df['influence_factor'] > ANALYSIS_THRESHOLDS['max_reasonable_influence']
+            df.loc[mask, 'data_quality_flags'] += 'HIGH_INFLUENCE;'
+            if mask.any():
+                logger.warning(f"{metric_name}: {mask.sum()} rows with influence factor > {ANALYSIS_THRESHOLDS['max_reasonable_influence']}x")
+        
+        # Check average Rx values
+        if 'avg_rx_with_payments' in df.columns:
+            mask = df['avg_rx_with_payments'] > ANALYSIS_THRESHOLDS['max_reasonable_avg_rx']
+            df.loc[mask, 'data_quality_flags'] += 'HIGH_RX_VALUE;'
+            if mask.any():
+                logger.warning(f"{metric_name}: {mask.sum()} rows with avg Rx > ${ANALYSIS_THRESHOLDS['max_reasonable_avg_rx']:,}")
+        
+        # Check for percentage-based influence metrics
+        if 'rx_cost_influence_pct' in df.columns:
+            # Convert percentage to factor (e.g., 100% = 2x)
+            factor_equivalent = (df['rx_cost_influence_pct'] / 100) + 1
+            mask = factor_equivalent > ANALYSIS_THRESHOLDS['max_reasonable_influence']
+            df.loc[mask, 'data_quality_flags'] += 'HIGH_INFLUENCE_PCT;'
+            if mask.any():
+                logger.warning(f"{metric_name}: {mask.sum()} rows with influence percentage > {(ANALYSIS_THRESHOLDS['max_reasonable_influence'] - 1) * 100}%")
+        
+        return df
+    
     def analyze_temporal_correlations(self) -> Dict[str, Any]:
         """Analyze how correlations change over time"""
         temporal = {}
