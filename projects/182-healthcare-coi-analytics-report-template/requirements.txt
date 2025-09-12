@@ -5,7 +5,7 @@
 pandas==2.0.3
 numpy==1.24.3
 openpyxl==3.1.2
-pyarrow==12.0.1  # Parquet file support
+pyarrow==14.0.1  # Parquet file support (CVE-2023-47248 fixed)
 
 # Google Cloud & BigQuery
 google-cloud-bigquery==3.11.3
@@ -34,13 +34,13 @@ tabulate==0.9.0  # Table formatting
 weasyprint==59.0  # Optional: HTML to PDF
 
 # Utilities
-tqdm==4.65.0  # Progress bars
+tqdm==4.66.3  # Progress bars (CVE-2024-34062 fixed)
 click==8.1.6  # CLI interface
 
 # Development & Testing
 pytest==7.4.0
 pytest-cov==4.1.0
-black==23.7.0  # Code formatting
+black==24.3.0  # Code formatting (CVE-2024-21503 fixed)
 flake8==6.0.0  # Linting
 mypy==1.4.1  # Type checking
 
