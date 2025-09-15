@@ -167,7 +167,14 @@ class ClaudeLLMClient:
                             formatted_value = f"{int(sub_value):,}"
                         # Check if this is an influence factor or multiplier
                         elif 'factor' in sub_key.lower() or 'multiplier' in sub_key.lower():
-                            formatted_value = f"{sub_value:.1f}x" if sub_value > 1 else f"{sub_value:.3f}"
+                            if sub_value == -1.0:
+                                formatted_value = "N/A - Baseline"
+                            elif sub_value == 0.0:
+                                formatted_value = "0.0"
+                            elif sub_value > 1:
+                                formatted_value = f"{sub_value:.1f}x"
+                            else:
+                                formatted_value = f"{sub_value:.3f}"
                         # Check if this is explicitly a payment or cost field (monetary)
                         elif any(word in sub_key.lower() for word in ['payment', 'cost', 'value', 'amount', 'rx']):
                             if sub_value > 1000000:
@@ -231,7 +238,14 @@ class ClaudeLLMClient:
                     formatted_v = f"{int(v):,}"
                 # Check if this is an influence factor or multiplier
                 elif 'factor' in k.lower() or 'multiplier' in k.lower():
-                    formatted_v = f"{v:.1f}x" if v > 1 else f"{v:.3f}"
+                    if v == -1.0:
+                        formatted_v = "N/A - Baseline"
+                    elif v == 0.0:
+                        formatted_v = "0.0"
+                    elif v > 1:
+                        formatted_v = f"{v:.1f}x"
+                    else:
+                        formatted_v = f"{v:.3f}"
                 # Check if this is explicitly a payment or cost field (monetary)
                 elif any(word in k.lower() for word in ['payment', 'cost', 'value', 'amount', 'rx']):
                     if v > 1000000:

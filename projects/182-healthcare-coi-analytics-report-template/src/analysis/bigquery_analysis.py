@@ -782,9 +782,10 @@ class BigQueryAnalyzer:
             ROUND(AVG(CASE WHEN has_significant_payments = 0 THEN total_rx_cost END), 0) as avg_rx_without_payments,
             ROUND(AVG(CASE WHEN has_significant_payments = 1 THEN total_rx_cost END), 0) as avg_rx_with_payments,
             
-            -- Influence factor (null for low prescriber categories)
+            -- Influence factor (special handling for low prescriber categories)
             CASE
-                WHEN provider_type LIKE 'Low-Prescribers%' THEN NULL
+                WHEN provider_type = 'Low-Prescribers NO Payments' THEN 0.0  -- No influence possible
+                WHEN provider_type = 'Low-Prescribers WITH Payments' THEN -1.0  -- Special marker for baseline group
                 ELSE ROUND(
                     SAFE_DIVIDE(
                         AVG(CASE WHEN has_significant_payments = 1 THEN total_rx_cost END),
@@ -1049,8 +1050,14 @@ class BigQueryAnalyzer:
             - "failed": Query failed to execute
         """
         try:
-            job = self.client.query(query)
-            df = job.to_dataframe()
+            # Handle both BigQueryConnector and raw bigquery.Client
+            if hasattr(self.client, 'query') and hasattr(self.client, 'client'):
+                # This is a BigQueryConnector - use its query method which returns DataFrame
+                df = self.client.query(query)
+            else:
+                # This is a raw bigquery.Client - need to call to_dataframe()
+                job = self.client.query(query)
+                df = job.to_dataframe()
             
             if df.empty:
                 logger.info(f"[{query_name}] Query executed successfully but returned 0 rows")
