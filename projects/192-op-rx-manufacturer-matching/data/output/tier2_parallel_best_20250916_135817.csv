@@ -1,0 +1,28 @@
+op_manufacturer_id,op_manufacturer_name,rx_manufacturer_name,match_rank,final_score,is_match,confidence_source,fuzzy_score,ai_score,blocking_key
+100000331808,"Aurobindo Pharma USA, Inc.",Aurobindo Pharma Limited,1,64.42666666666666,True,ai_enhanced,71.06666666666666,60.0,A
+100000011034,Almirall LLC,Almirall LLC,1,100.0,True,fuzzy_high_confidence,100.0,,A
+100000776814,"Aimmune Therapeutics, Inc.",Aimmune Therapeutics,1,100.0,True,fuzzy_high_confidence,100.0,,A
+100001326929,SCPHARMACEUTICALS INC.,scPharmaceuticals Inc,1,100.0,True,fuzzy_high_confidence,100.0,,S
+100000181762,Strongbridge US INC.,Strongbridge US Inc,1,100.0,True,fuzzy_high_confidence,100.0,,S
+100000000289,ConvaTec Inc.,ConvaTec Inc,1,100.0,True,fuzzy_high_confidence,100.0,,C
+100000481813,"CATALYST PHARMACEUTICALS, INC.",Catalyst Pharmaceuticals Inc,1,100.0,True,fuzzy_high_confidence,100.0,,C
+100000506817,"Clinigen, Inc.",Clinigen Limited,1,100.0,True,fuzzy_high_confidence,100.0,,C
+100000196799,MITSUBISHI TANABE PHARMA CORPORATION,Mitsubishi Tanabe Pharma America Inc,1,78.9857142857143,True,ai_enhanced,69.96428571428572,85.0,M
+100000010405,BioMarin Pharmaceutical Inc.,BioMarin Pharmaceutical Inc,1,100.0,True,fuzzy_high_confidence,100.0,,B
+100000000234,"Boehringer Ingelheim Pharmaceuticals, Inc.",Boehringer Ingelheim Pharmaceuticals Inc,1,100.0,True,fuzzy_high_confidence,100.0,,B
+100000010742,Photocure Inc,Photocure Inc,1,100.0,True,fuzzy_high_confidence,100.0,,P
+100001176930,Immunocore Limited,Immunocore Commercial LLC,1,70.11336405529954,True,ai_enhanced,62.78341013824885,75.0,I
+100000601811,Ironshore Pharmaceuticals Inc.,Ironshore Pharmaceuticals Inc,1,100.0,True,fuzzy_high_confidence,100.0,,I
+100000000058,Novartis Pharma AG,Novartis Pharmaceuticals Corporation,1,75.81731601731602,True,ai_enhanced,62.04329004329004,85.0,N
+100000186746,"Neurocrine BioSciences, Inc.",Neurocrine Biosciences Inc,1,100.0,True,fuzzy_high_confidence,100.0,,N
+100001351950,ORPHALAN INC,Orphalan SA,1,72.77799043062201,True,ai_enhanced,69.44497607655502,75.0,O
+100000961857,"TG Therapeutics, Inc.",TG Therapeutics Inc,1,100.0,True,fuzzy_high_confidence,100.0,,T
+100000061352,"Grifols Diagnostic Solutions, Inc.",GRIFOLS USA LLC,1,60.632858837069364,True,ai_enhanced,54.08214709267341,65.0,G
+100000771818,"Global Blood Therapeutics, Inc.",Global Blood Therapeutics Inc A subsidiary of Pfizer Inc,1,76.16913086913087,True,ai_enhanced,62.92282717282717,85.0,G
+100000005365,Ferring International Pharmascience Center US,Ferring Pharmaceuticals,1,62.02326280709913,True,ai_enhanced,50.05815701774781,70.0,F
+100000011182,"Leadiant Biosciences, Inc.",Leadiant Biosciences Inc,1,100.0,True,fuzzy_high_confidence,100.0,,L
+100000501826,"Kyowa Kirin Pharmaceutical Development, Inc",KYOWA KIRIN INC,1,64.53512352309345,True,ai_enhanced,56.33780880773362,70.0,K
+100001346932,Krystal Biotech Inc,Krystal Biotech Inc,1,100.0,True,fuzzy_high_confidence,100.0,,K
+100000136415,HRA Pharma,HRA Pharma America Inc,1,77.03809523809524,True,ai_enhanced,65.09523809523809,85.0,H
+100000005468,UPSHER-SMITH LABORATORIES LLC,Upsher-Smith Laboratories Inc,1,100.0,True,fuzzy_high_confidence,100.0,,U
+100000011216,Jubilant HollisterStier LLC,Jubilant HollisterStier LLC,1,100.0,True,fuzzy_high_confidence,100.0,,J

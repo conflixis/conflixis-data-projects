@@ -1,0 +1,1266 @@
+op_manufacturer_id,op_manufacturer_name,rx_manufacturer_name,final_score,is_match,blocking_key,match_rank
+100000000204,ABBVIE INC.,AbbVie Inc,100.0,True,A,1
+100000966840,ACACIA PHARMA INC,Acacia Pharma Ltd,100.0,True,A,1
+100000141529,ACADIA Pharmaceuticals Inc,ACADIA Pharmaceuticals Inc,100.0,True,A,1
+100000956826,"ACCORD HEALTHCARE, INC.",Accord Healthcare,100.0,True,A,1
+100000961860,"ADC Therapeutics America, Inc.",ADC Therapeutics America Inc,100.0,True,A,1
+100000191757,"AEGEA Medical, Inc.",Arise Medical LLC,59.11643356643357,False,A,1
+100000231819,AERIN MEDICAL INC.,Arise Medical LLC,64.70192307692307,False,A,1
+100001226925,AGEPHA Pharma FZ LLC,AGEPHA Pharma USA LLC,65.66507621857521,False,A,1
+100000151558,"AI Therapeutics, Inc.",Agile Therapeutics Inc,67.79025974025974,False,A,1
+100000776814,"AIMMUNE THERAPEUTICS, INC.",Aimmune Therapeutics,100.0,True,A,1
+100000521827,AKEBIA THERAPEUTICS INC,Akebia Therapeutics Inc,100.0,True,A,1
+100001056884,"ALBIREO PHARMA, INC.",Albireo Pharma Inc,100.0,True,A,1
+100000196817,"ALCRESTA THERAPEUTICS, INC.",Akcea Therapeutics Inc,64.64436543848309,False,A,1
+100000010705,"ALK-Abello, Inc",ALK-Abello Inc,100.0,True,A,1
+100000221800,ALON MEDICAL TECHNOLOGY,Allison Medical Inc,50.775949959016316,False,A,1
+100000010948,"AMAG Pharmaceuticals, Inc.",AMAG Pharmaceuticals Inc,100.0,True,A,1
+100000291828,"AMDT Holdings, Inc.",AVADIM HOLDINGS INC,60.23521261347348,False,A,1
+100000971883,"ANI Pharmaceuticals, Inc.",ANI Pharmaceuticals Inc,100.0,True,A,1
+100000151575,APTEVO THERAPEUTICS INC,Aptevo BioTherapeutics LLC,68.56395145291167,False,A,1
+100000501813,"AQUESTIVE THERAPEUTICS, INC.",Aquestive Therapeutics,100.0,True,A,1
+100000005507,"ARBOR PHARMACEUTICALS, INC.",Arbor Pharmaceuticals,100.0,True,A,1
+100001136887,"ARENA PHARMACEUTICALS, INC.",Areva Pharmaceuticals,71.80952380952381,False,A,1
+100001156891,"ARGENX US, INC.",argenx US,100.0,True,A,1
+100000010702,"ARGON MEDICAL DEVICES, INC.",Arise Medical LLC,51.022678302090064,False,A,1
+100000196870,ARKIS BIOSCIENCES INC,Abraxis BioScience LLC,64.72773109243698,False,A,1
+100000231820,ARRAY BIOPHARMA INC,Array BioPharma Inc,100.0,True,A,1
+100000000129,"ASCEND THERAPEUTICS US, LLC",ASCEND Therapeutics US LLC,100.0,True,A,1
+100000000129,"ASCEND Therapeutics US, LLC",ASCEND Therapeutics US LLC,100.0,True,A,1
+100000010920,"ASD SPECIALTY HEALTHCARE, LLC",ACI Healthcare USA Inc,53.66061165845649,False,A,1
+100000010920,"ASD Specialty Healthcare, LLC",ACI Healthcare USA Inc,53.66061165845649,False,A,1
+100000061294,"ASPEN SURGICAL PRODUCTS, INC.",Aplicare Products LLC,52.89697890025575,False,A,1
+100000281816,"AVITA MEDICAL AMERICAS, LLC",Arise Medical LLC,51.5551948051948,False,A,1
+100000005414,AXOGEN,Alvogen,59.425824175824175,False,A,1
+100000151699,"AYTU BioPharma, Inc.",Aytu BioPharma Inc,100.0,True,A,1
+100001176922,"Aadi Bioscience, Inc.",Aadi Bioscience,100.0,True,A,1
+100000000204,AbbVie Inc.,AbbVie Inc,100.0,True,A,1
+100000010680,Abbott Laboratories,Alcon Laboratories Inc,61.03026889368146,False,A,1
+100000076383,"Ablative Solutions, Inc.",API Solutions Inc,60.09399979403486,False,A,1
+100001021883,Acarix USA Inc.,argenx US,50.33777089783281,False,A,1
+100000776816,"Acceleron Pharma, Inc.",Akron Pharma,61.59537337662337,False,A,1
+100001051884,"Access Pro Medical, LLC",Arise Medical LLC,52.560578271658215,False,A,1
+100000821819,"Accutron, Inc.",AGOURON,52.026785714285715,False,A,1
+100000456811,"AcelRx Pharmaceuticals, Inc.",AcelRx Pharmaceuticals Inc,100.0,True,A,1
+100000196863,"Acella Pharmaceuticals, LLC",ACELLA PHARMACEUTICALS,100.0,True,A,1
+100000196872,Acerta Pharma LLC,Averitas Pharma Inc,65.07252747252747,False,A,1
+100000736811,Acerus Pharmaceuticals Corporation,Acerus Pharmaceuticals Corporation,100.0,True,A,1
+100000956827,Acessa Health Inc.,ACETRIS HEALTH LLC,61.50822325822326,False,A,1
+100000196775,Acessa Health Inc.,ACETRIS HEALTH LLC,61.50822325822326,False,A,1
+100000196862,"Acist Medical Systems, Inc.",Arise Medical LLC,52.183013065366005,False,A,1
+100000010800,"Acorda Therapeutics, Inc",Acorda Therapeutics Inc,100.0,True,A,1
+100000981882,Acrotech Biopharma Inc.,Acrotech Biopharma Inc,100.0,True,A,1
+100000981882,Acrotech Biopharma LLC,Acrotech Biopharma Inc,100.0,True,A,1
+100000010813,"Actelion Pharmaceuticals US, Inc.",Actelion Pharmaceuticals US Inc,100.0,True,A,1
+100000010476,"Actelion Pharmaceuticals, Ltd",Actelion Pharmaceuticals US Inc,72.6078431372549,False,A,1
+100000061309,Acteon Inc,Alcon Inc,54.96363636363637,False,A,1
+100000010499,"Active Medical, LLC",Arise Medical LLC,62.417480667480675,False,A,1
+100000046275,"Actuated Medical, Inc.",Arise Medical LLC,52.60908488063661,False,A,1
+100000316819,"Acutus Medical, Inc.",Arise Medical LLC,57.4446793946794,False,A,1
+100000806845,"Adagio Medical, Inc.",Allison Medical Inc,58.459056460780594,False,A,1
+100000226811,"Adamas Pharmaceuticals, Inc.",Armas Pharmaceuticals Inc,69.51934884457573,False,A,1
+100000151657,"Adare Pharmaceuticals, Inc.",Adare Pharmaceuticals Inc,100.0,True,A,1
+100000826830,Addivation Medical LLC,Allison Medical Inc,55.18506493506494,False,A,1
+100000506820,Adlon Therapeutics L.P.,Adlon Therapeutics LP,100.0,True,A,1
+100000196773,Advanced Accelerator Applications,Advanced Accelerator Applications USA Inc,72.67567567567568,False,A,1
+100000010424,"Advanced Bionics, LLC",Advanced Generic Corporation,58.49193548387097,False,A,1
+100000011015,"Advanced Critical Devices, Inc.",Advanced Generic Corporation,51.221376306620215,False,A,1
+100000000142,"Advanced Orthopaedic Solutions, Inc.",Advanced Derm Solutions LLC,59.81567834567073,False,A,1
+100000506822,Advanced Oxygen Therapy Inc.,Advanced Generic Corporation,57.09045833782861,False,A,1
+100000005391,"Advanced Respiratory, Inc",Advanced Generic Corporation,51.881196581196576,False,A,1
+100000216803,"Aerie Pharmaceuticals, Inc.",Aries Pharmaceuticals Inc,70.36428571428571,False,A,1
+100000231819,Aerin Medical Inc.,Arise Medical LLC,64.70192307692307,False,A,1
+100000005660,"Aesculap Biologics, LLC",ADMA Biologics Inc,58.18281175346392,False,A,1
+100000010830,"Afaxys, Inc.",Afaxys Pharma LLC,60.48987854251012,False,A,1
+100000010552,"Affordable Pharmaceuticals, LLC",Affordable Pharmaceuticals LLC,100.0,True,A,1
+100000005605,Agfa HealthCare Corporation,Accord Healthcare,57.98800904977375,False,A,1
+100001448151,"Agile Devices, Inc.",Agile Therapeutics Inc,51.720768478832994,False,A,1
+100000921825,"Agile Therapeutics, Inc.",Agile Therapeutics Inc,100.0,True,A,1
+100000000260,"Agiliti Health, Inc.",Allegiant Health,56.09111721611722,False,A,1
+100000181751,"Agios Pharmaceuticals, Inc.",Agios Pharmaceuticals Inc,100.0,True,A,1
+100001351974,Aidoc Medical Ltd,Allison Medical Inc,60.393406593406596,False,A,1
+100000776814,"Aimmune Therapeutics, Inc.",Aimmune Therapeutics,100.0,True,A,1
+100000476820,"Akcea Therapeutics, Inc.",Akcea Therapeutics Inc,100.0,True,A,1
+100000961835,Akorn Operating Company LLC,Akorn Operating Company LLC,100.0,True,A,1
+100000010866,"Akorn, Inc.",Akorn,100.0,True,A,1
+100000196813,"Alafair Biosciences, Inc.",Aadi Bioscience,63.35892672858617,False,A,1
+100000196813,"Alafair Biosciences,Inc.",Aadi Bioscience,59.56814086814087,False,A,1
+100000005436,Alcon Puerto Rico Inc,Alcon Inc,53.79144385026738,False,A,1
+100000000218,Alcon Research LLC,Alcon Research Ltd,100.0,True,A,1
+100000005405,Alcon Vision LLC,Alcon Inc,58.83823529411765,False,A,1
+100000196817,"Alcresta Therapeutics, Inc.",Akcea Therapeutics Inc,64.64436543848309,False,A,1
+100000141510,"Alevio, LLC",Alexso Inc,52.666666666666664,False,A,1
+100000005462,"Alexion Pharmaceuticals, Inc.",Alexion Pharmaceuticals Inc,100.0,True,A,1
+100000010936,"Alexza Pharmaceuticals, Inc.",Alexza Pharmaceuticals Inc,100.0,True,A,1
+100000806821,"Alfasigma USA, Inc.",Alfasigma USA Inc,100.0,True,A,1
+100000056293,"Alimera Sciences, Inc.",Alimera Sciences Inc,100.0,True,A,1
+100000000255,"Alkermes, Inc.",Alkermes Inc,100.0,True,A,1
+100000005631,Allerderm  Laboratories,Ascend Laboratories LLC,58.52409120084024,False,A,1
+100000000278,"Allergan, Inc.",Allergan Inc,100.0,True,A,1
+100001447952,Alliance Medical,Allison Medical Inc,63.28067617866005,False,A,1
+100000966852,"Allotrope Medical, Inc",Arise Medical LLC,57.56794186205951,False,A,1
+100000081390,Almatica Pharma LLC,ALMATICA PHARMA INC,100.0,True,A,1
+100000011034,Almirall LLC,Almirall LLC,100.0,True,A,1
+100000481817,Alnylam Pharmaceuticals Inc.,Alnylam Pharmaceuticals Inc,100.0,True,A,1
+100000221800,Alon Medical Technology,Allison Medical Inc,50.775949959016316,False,A,1
+100000121360,AltaThera Pharmaceuticals LLC,ALTATHERA Pharmaceuticals LLC,100.0,True,A,1
+100000946823,Althera Pharmaceuticals LLC,Althera Pharmaceuticals LLC,100.0,True,A,1
+100000156747,Alvogen Inc,Alvogen,100.0,True,A,1
+100000961854,Alydia Health,Allegiant Health,57.11110441282855,False,A,1
+100000010379,Amarin Pharma Inc.,Amarin Pharma Inc,100.0,True,A,1
+100000536812,Amaros Medical,Arise Medical LLC,62.06596551596552,False,A,1
+100000071386,American National Red Cross,American Antibiotics Inc,50.2725949599698,False,A,1
+100000010599,American Orthodontics Corporation,American Antibiotics Inc,56.89608013937282,False,A,1
+100000010540,American Regent,American Regent Inc,100.0,True,A,1
+100000521818,"American Rheumatology Network, LLC",American Regent Inc,52.843745803865744,False,A,1
+100000061311,"American Surgical Company, LLC",American Regent Inc,51.381925465838506,False,A,1
+100000010602,AmerisourceBergen Drug Corporation,AmerisourceBergen Drug Corporation,100.0,True,A,1
+100000000203,Amgen Inc.,Amgen Inc,100.0,True,A,1
+100000381810,"Amicus Therapeutics, Inc.",Amicus Therapeutics US LLC,72.029933481153,False,A,1
+100000126368,Amneal Pharmaceuticals LLC,Amneal Pharmaceuticals,100.0,True,A,1
+100000010926,"Amniox Medical, Inc.",Allison Medical Inc,58.83926429642322,False,A,1
+100000000273,"Amphastar Pharmaceuticals, Inc.",Amphastar Pharmaceuticals Inc,100.0,True,A,1
+100000576811,Amryt Pharma Holdings Ltd,AVADIM HOLDINGS INC,52.35621118012422,False,A,1
+100001351941,"Amylyx Pharmaceuticals, Inc.",Amylyx Pharmaceuticals Inc,100.0,True,A,1
+100000151633,"Ancora Heart, Inc.",Acorda Therapeutics Inc,51.996232812363694,False,A,1
+100000826858,Angelini Pharma Inc.,Accelis Pharma,58.459056460780594,False,A,1
+100000010397,"Anika Therapeutics, Inc.",Akcea Therapeutics Inc,66.41035353535354,False,A,1
+100000010707,Ansell Healthcare Products LLC,Aplicare Products LLC,54.003630432495,False,A,1
+100000076367,"Antares Pharma, Inc.",Antares Pharma Inc,100.0,True,A,1
+100000966838,Anuncia Medical Inc.,Arise Medical LLC,54.07559107559107,False,A,1
+100000931823,"Apellis Pharmaceuticals, Inc.",Apellis Pharmaceuticals Inc,100.0,True,A,1
+100000071356,Apotex Inc.,Apotex Corporation,100.0,True,A,1
+100000005730,Applied Medical Corporation,Arise Medical LLC,59.908558108558104,False,A,1
+100000971879,"Applied Therapeutics, inc.",Agile Therapeutics Inc,63.94496904024767,False,A,1
+100000151615,"Aprecia Pharmaceuticals, LLC",Aprecia Pharmaceuticals LLC,100.0,True,A,1
+100000971837,Apria Healthcare LLC,Accord Healthcare,59.38261254887776,False,A,1
+100000151575,Aptevo Therapeutics Inc,Aptevo BioTherapeutics LLC,68.56395145291167,False,A,1
+100000010554,"Aptis Medical, LLC",Arise Medical LLC,64.20963818789906,False,A,1
+100000046274,Apyx Medical Corporation,Arise Medical LLC,56.243016194331986,False,A,1
+100000005507,"Arbor Pharmaceuticals, Inc.",Arbor Pharmaceuticals,100.0,True,A,1
+100001401996,"Arbutus Medical, Inc",Arise Medical LLC,60.42184482184482,False,A,1
+100001351977,Archimmune Therapeutics Inc.,Aimmune Therapeutics,69.54326112882735,False,A,1
+100001449962,Arcuro Medical Inc,Arise Medical LLC,57.39718992762471,False,A,1
+100001351935,"Arcutis Biotherapeutics, Inc.",Arcutis Biotherapeutics Inc,100.0,True,A,1
+100001146890,"Ardelyx, Inc.",Ardelyx Inc,100.0,True,A,1
+100001136889,Argentum Medical,Arise Medical LLC,58.32106112278526,False,A,1
+100000306807,Arjo Inc.,Akron,52.90833333333333,False,A,1
+100000005371,"Arthrex, Inc.",Athem,52.17142857142857,False,A,1
+100000811819,"Arya Medical, Inc.",Arise Medical LLC,61.01025641025641,False,A,1
+100000201772,Asahi Kasei Pharma Corporation,Acacia Pharma Ltd,54.84242907630005,False,A,1
+100000826822,Ascend Laboratories LLC,Ascend Laboratories LLC,100.0,True,A,1
+100000941823,Ascendis Pharma Inc,Ascendis Pharma Endocrinology Inc,62.415360501567406,False,A,1
+100000941823,"Ascendis Pharma, Inc.",Ascendis Pharma Endocrinology Inc,62.415360501567406,False,A,1
+100000010992,"Ascension Orthopedics, Inc.",ASCEND Therapeutics,51.07142857142857,False,A,1
+100001341936,Asklepios Biopharmaceutical Inc.,Alexion Pharmaceuticals Inc,59.876505016722405,False,A,1
+100000061294,"Aspen Surgical Products, Inc.",Aplicare Products LLC,52.89697890025575,False,A,1
+100001450863,"Aspero Medical, Inc.",Arise Medical LLC,62.2028167082515,False,A,1
+100000000324,"Assertio Therapeutics, Inc.",Assertio Therapeutics Inc,100.0,True,A,1
+100000010371,Astellas Pharma Europe BV,Astellas Pharma US Inc,63.23321118158327,False,A,1
+100001449427,Astellas Pharma Europe Ltd,Astellas Pharma US Inc,65.48232323232322,False,A,1
+100000005406,Astellas Pharma Global Development,Astellas Pharma US Inc,57.08809817633347,False,A,1
+100000010648,Astellas Pharma Inc,Astellas Pharma US Inc,71.31818181818181,False,A,1
+100000000137,Astellas Pharma US Inc,Astellas Pharma US Inc,100.0,True,A,1
+100001351931,Astellas US LLC,Astellas Pharma US Inc,64.38505747126436,False,A,1
+100000000160,AstraZeneca AB,AstraZeneca Pharmaceuticals LP,54.83466533466533,False,A,1
+100000000146,AstraZeneca Pharmaceuticals LP,AstraZeneca Pharmaceuticals LP,100.0,True,A,1
+100000010370,AstraZeneca UK Limited,AstraZeneca Pharmaceuticals LP,56.19830169830169,False,A,1
+100000136488,"Astute Medical, Inc.",Arise Medical LLC,62.26596551596552,False,A,1
+100000000265,"Asuragen, Inc.",Amgen Inc,51.508119658119654,False,A,1
+100001116892,"Athena Bioscience, LLC",Athena Bioscience LLC,100.0,True,A,1
+100000211778,"Athenex Pharmaceutical Division, LLC",Athenex Pharmaceutical Division LLC,100.0,True,A,1
+100001448594,"Atland Pharmaceuticals, LLC",Atland Pharmaceuticals LLC,100.0,True,A,1
+100000010403,Atos Medical Inc,Arise Medical LLC,60.943356643356644,False,A,1
+100001286928,"Atrility Medical, Inc.",Arise Medical LLC,58.04243350040764,False,A,1
+100000010784,Atrium Medical Corporation,Arise Medical LLC,61.675056425056425,False,A,1
+100001341949,"Aucta Pharmaceuticals, Inc.",Aucta Pharmaceuticals Inc,100.0,True,A,1
+100000656812,Augmedics Inc.,AuroMedics Pharma LLC,50.98491704374057,False,A,1
+100000961841,"Aurinia Pharma U.S., Inc.",Aurinia Pharma US Inc,100.0,True,A,1
+100000331808,"Aurobindo Pharma USA, Inc.",Aurobindo Pharma Limited,70.5111111111111,False,A,1
+100000216789,Austin Medical Ventures Inc,AUSTIN PHARMACEUTICALS LLC,51.33949469115709,False,A,1
+100001351971,Auxano Medical LLC,Allison Medical Inc,54.735468953834776,False,A,1
+100000786824,"Avadel CNS Pharmaceuticals, LLC",Avadel CNS Pharmaceuticals LLC,100.0,True,A,1
+100000005729,"Avanir Pharmaceuticals, Inc.",Avanir Pharmaceuticals Inc,100.0,True,A,1
+100000076358,Avanos Medical,Arise Medical LLC,57.4446793946794,False,A,1
+100001449896,"Avation Medical, Inc.",Allison Medical Inc,61.77142857142857,False,A,1
+100000221807,Avenu Medical Inc.,Arise Medical LLC,59.56643356643357,False,A,1
+100000971865,"Aveo Pharmaceuticals, Inc.",AVEO Pharmaceuticals Inc,100.0,True,A,1
+100001386985,Averitas Pharma Inc.,Averitas Pharma Inc,100.0,True,A,1
+100000966855,"Avertix Medical, Inc",Arise Medical LLC,60.66456043956044,False,A,1
+100000005383,"Avid Radiopharmaceuticals, Inc.",Avion Pharmaceuticals,63.212681159420285,False,A,1
+100000005590,Avion Pharmaceuticals,Avion Pharmaceuticals,100.0,True,A,1
+100000281816,"Avita Medical Americas, LLC",Arise Medical LLC,51.5551948051948,False,A,1
+100000281816,"Avita Medical Americas, Llc",Arise Medical LLC,51.5551948051948,False,A,1
+100000046242,"Avreo, Inc",AvKARE,56.730303030303034,False,A,1
+100001449294,"Avvisto Therapeutics, LLC",Avvisto Therapeutics LLC,100.0,True,A,1
+100001448085,"Avyxa Pharma, LLC",Avyxa Pharma LLC,100.0,True,A,1
+100001111886,"Axsome Therapeutics, Inc.",Axsome Therapeutics Inc,100.0,True,A,1
+100000151699,"Aytu BioPharma, Inc.",Aytu BioPharma Inc,100.0,True,A,1
+100000151699,"Aytu Bioscience, Inc",Aytu BioScience Inc,100.0,True,A,1
+100000191770,"Aziyo Biologics, Inc.",ADMA Biologics Inc,58.23262946448853,False,A,1
+100000316828,"Azurity Pharmaceuticals, Inc.",Azurity Pharmaceuticals,100.0,True,A,1
+100000000316,B. Braun Medical Inc.,B Braun Medical Inc,100.0,True,B,1
+100000061350,B. Braun Medical UK Ltd.,B Braun Medical Inc,71.31818181818181,False,B,1
+100000061385,B. Braun Melsungen AG,B Braun Medical Inc,52.956993006993,False,B,1
+100000151635,"BAMBOO THERAPEUTICS, INC.",Burke Therapeutics,58.40365844864996,False,B,1
+100000116366,"BANNER LIFE SCIENCES, LLC",Banner Life Sciences LLC,100.0,True,B,1
+100000646811,BAUDAX BIO INC.,Baudax Bio Inc,100.0,True,B,1
+100000011010,BAXTER HEALTHCARE,Baxter Healthcare Company,100.0,True,B,1
+100001351982,BESINS HEALTHCARE IRELAND LIMITED,Baxter Healthcare Company,50.83660130718954,False,B,1
+100000426811,"BIOCODEX, INC.",BIOCODEX INC,100.0,True,B,1
+100000010557,BIOCOMPOSITES INC,Biocompatibles Inc,57.93264143264143,False,B,1
+100000061387,"BIODELIVERY SCIENCES INTERNATIONAL, INC.",BioDelivery Sciences International Inc,100.0,True,B,1
+100000000143,"BIOLASE, INC.",BPI Labs LLC,51.513965201465204,False,B,1
+100000005634,BIONESS INC,Biogen,51.485897435897435,False,B,1
+100001450664,BIOPROTECT LTD.,Biofrontera Inc,53.37902711323764,False,B,1
+100000010579,BIOTRONIK INC.,BioRamo LLC,51.386752136752136,False,B,1
+100000181764,BIOVERATIV THERAPEUTICS INC.,Bioverativ Therapeutics Inc,100.0,True,B,1
+100000116365,"BISCO, INC.",Bestco Inc,55.63030303030303,False,B,1
+100000801825,BLUEWIND MEDICAL,Blueprint Medicines Corporation,54.67238661169051,False,B,1
+100000011033,BRACCO DIAGNOSTICS INC.,Bracco Diagnostics Inc,100.0,True,B,1
+100000005416,BSN Medical Inc,Bajaj Medical LLC,59.13492209544841,False,B,1
+100000011079,"BTG INTERNATIONAL, INC.",BTG International Inc,100.0,True,B,1
+100000011079,"BTG International, Inc.",BTG International Inc,100.0,True,B,1
+100000010864,Bacterin International Inc,BTG International Inc,62.570728172839175,False,B,1
+100000005714,"Balt USA, LLC",Baxalta US Inc,59.58888888888889,False,B,1
+100000116366,"Banner Life Sciences, LLC",Banner Life Sciences LLC,100.0,True,B,1
+100000186747,"Bardy Diagnostics, Inc.",Bracco Diagnostics Inc,60.796450304259636,False,B,1
+100000646811,Baudax Bio Inc.,Baudax Bio Inc,100.0,True,B,1
+100001116887,Bausch & Lomb Americas Inc.,Bausch & Lomb Americas Inc,100.0,True,B,1
+100000226816,"Bausch & Lomb, a division of Bausch Health US, LLC",Bausch & Lomb Incorporated,55.191375623663575,False,B,1
+100000010935,"Bausch Health US, LLC",Bausch Health US LLC,100.0,True,B,1
+100000796825,Bavarian Nordic A/S,Bavarian Nordic A/S,100.0,True,B,1
+100000011010,Baxter Healthcare,Baxter Healthcare Company,100.0,True,B,1
+100000005467,Bayer HealthCare Pharmaceuticals Inc.,Bayer HealthCare Pharmaceuticals Inc,100.0,True,B,1
+100000005409,Bayer Healthcare LLC,Baxter Healthcare Company,67.63280779396398,False,B,1
+100000005467,Bayer Healthcare Pharmaceuticals Inc.,Bayer HealthCare Pharmaceuticals Inc,100.0,True,B,1
+100000010954,Baylis Medical Company Inc,Bajaj Medical LLC,56.79015059015059,False,B,1
+100000010624,"Beaver-Visitec International, Inc.",BTG International Inc,58.04036964248065,False,B,1
+100000005485,"Becton, Dickinson and Company",Becton Dickinson and Company,100.0,True,B,1
+100000826834,"BeiGene (Suzhou) Co., Ltd.",Beigene Usa Inc,53.24431533378902,False,B,1
+100000826835,BeiGene Switzerland GmbH,Beigene Usa Inc,53.64393939393939,False,B,1
+100000826832,"BeiGene USA, Inc.",Beigene Usa Inc,100.0,True,B,1
+100000826833,"BeiGene, Ltd.",Beigene Usa Inc,66.13131313131314,False,B,1
+100000000071,Benco Dental Supply Co.,Benco Dental,65.99151103565364,False,B,1
+100000010870,"Bio Products Laboratory USA, Inc.",Bio Products Laboratory Limited,71.75555555555556,False,B,1
+100000005577,"Bio-Rad Laboratories, Inc.",Bedford Laboratories,63.71535947712418,False,B,1
+100000136528,"BioCryst Pharmaceuticals, Inc.",BioCryst Pharmaceuticals Inc,100.0,True,B,1
+100000061387,"BioDelivery Sciences International, Inc.",BioDelivery Sciences International Inc,100.0,True,B,1
+100000011147,"BioFire Diagnostics, LLC",Bracco Diagnostics Inc,58.09342841026144,False,B,1
+100001251928,"BioLineRx USA, Inc.",BioLineRx USA Inc,100.0,True,B,1
+100000010405,BioMarin Pharmaceutical Inc.,BioMarin Pharmaceutical Inc,100.0,True,B,1
+100000010519,"BioPro, Inc.",BioRamo LLC,59.878205128205124,False,B,1
+100000221803,"BioSig Technologies, Inc.",Biocon Biologics Inc,50.01321211683054,False,B,1
+100000196811,"BioTrace Medical, Inc.",B Braun Medical Inc,53.17726322363419,False,B,1
+100001326931,"BioXcel Therapeutics, Inc.",BioXcel Therapeutics Inc,100.0,True,B,1
+100001449028,Biobeat USA Inc.,BioLineRx USA Inc,52.032634032634036,False,B,1
+100000010557,Biocomposites Inc,Biocompatibles Inc,57.93264143264143,False,B,1
+100001351968,Biocon Biologics Inc,Biocon Biologics Inc,100.0,True,B,1
+100001449526,Biodermis LLC,BioRamo LLC,50.83730158730159,False,B,1
+100001181887,Biofrontera Bioscience GmbH,Biofrontera Inc,58.485380116959064,False,B,1
+100000151660,Biofrontera Inc.,Biofrontera Inc,100.0,True,B,1
+100000000193,"Biogen, Inc.",Biogen,100.0,True,B,1
+100000121361,"Biogennix, LLC",Biogen,64.0,False,B,1
+100001106888,Biohaven Pharmaceutical Holding Company Ltd.,BioMarin Pharmaceutical Inc,59.243753571243055,False,B,1
+100000806824,"Biohaven Pharmaceuticals, Inc.",BE Pharmaceuticals Inc,65.20580808080808,False,B,1
+100001449361,Biolase MG LLC,Biogen MA Inc,50.41783625730994,False,B,1
+100000481818,"Bioptics, Inc.",Biocompatibles Inc,51.109848484848484,False,B,1
+100000981879,"Biorez, Inc.",Biogen,53.27272727272727,False,B,1
+100000000302,Bioventus LLC,Biogen,54.52777777777778,False,B,1
+100000116365,"Bisco, Inc.",Bestco Inc,55.63030303030303,False,B,1
+100000151603,Blue Earth Diagnostics Limited,Blue Earth Diagnostics,100.0,True,B,1
+100000010698,"Blue Sky Bio, LLC",bluebird bio Inc,52.625,False,B,1
+100001341938,BlueRock Therapeutics LP,Burke Therapeutics,60.93452380952381,False,B,1
+100000756811,Blueprint Medicines Corporation,Blueprint Medicines Corporation,100.0,True,B,1
+100000151566,"Boehringer Ingelheim (China) Investment Co., Ltd.",Boehringer Ingelheim Pharmaceuticals Inc,54.653113553113556,False,B,1
+100000151605,Boehringer Ingelheim (Phil.) Inc.,Boehringer Ingelheim Pharmaceuticals Inc,61.223893954745016,False,B,1
+100000151606,Boehringer Ingelheim AB,Boehringer Ingelheim Pharmaceuticals Inc,62.28658723098407,False,B,1
+100000010538,Boehringer Ingelheim Canada Ltd.Ltee,Boehringer Ingelheim Pharmaceuticals Inc,55.62381257240412,False,B,1
+100000061367,Boehringer Ingelheim Del Ecuador Cia. Ltda.,Boehringer Ingelheim Pharmaceuticals Inc,54.90734544926618,False,B,1
+100000061358,Boehringer Ingelheim Do Brasil Quimica e Farmaceutical Ltda.,Boehringer Ingelheim Pharmaceuticals Inc,53.74383104957172,False,B,1
+100000076362,Boehringer Ingelheim Espana S.A.,Boehringer Ingelheim Pharmaceuticals Inc,59.39781144781145,False,B,1
+100000010438,Boehringer Ingelheim France S.A.S.,Boehringer Ingelheim Pharmaceuticals Inc,60.370365912373614,False,B,1
+100000010663,Boehringer Ingelheim Hong Kong Ltd.,Boehringer Ingelheim Pharmaceuticals Inc,56.21400800457405,False,B,1
+100000806825,Boehringer Ingelheim India Pvt. Ltd.,Boehringer Ingelheim Pharmaceuticals Inc,58.31881118881119,False,B,1
+100000151577,Boehringer Ingelheim India Pvt. Ltd.,Boehringer Ingelheim Pharmaceuticals Inc,58.31881118881119,False,B,1
+100000005541,Boehringer Ingelheim International GmbH,Boehringer Ingelheim Pharmaceuticals Inc,57.52197802197802,False,B,1
+100000136457,Boehringer Ingelheim Israel Ltd.,Boehringer Ingelheim Pharmaceuticals Inc,63.21040189125296,False,B,1
+100000136460,Boehringer Ingelheim Italia S.p.A.,Boehringer Ingelheim Pharmaceuticals Inc,60.16051868304761,False,B,1
+100000010662,Boehringer Ingelheim Korea LTD.,Boehringer Ingelheim Pharmaceuticals Inc,62.72065343641468,False,B,1
+100000061373,Boehringer Ingelheim MENA (Scientific Office) FZ-LLC,Boehringer Ingelheim Pharmaceuticals Inc,53.1184528586168,False,B,1
+100000010890,Boehringer Ingelheim Malaysia Sdn. Bhd.,Boehringer Ingelheim Pharmaceuticals Inc,57.48507045070578,False,B,1
+100000010495,Boehringer Ingelheim Mexico SA de CV,Boehringer Ingelheim Pharmaceuticals Inc,57.520865335381465,False,B,1
+100000061371,Boehringer Ingelheim Norway KS,Boehringer Ingelheim Pharmaceuticals Inc,58.510294117647064,False,B,1
+100000136532,Boehringer Ingelheim Peru S.A.C,Boehringer Ingelheim Pharmaceuticals Inc,61.95550405000755,False,B,1
+100000010823,Boehringer Ingelheim Pharma GmbH & Co.KG,Boehringer Ingelheim Pharmaceuticals Inc,57.78581896096615,False,B,1
+100000000234,"Boehringer Ingelheim Pharmaceuticals, Inc.",Boehringer Ingelheim Pharmaceuticals Inc,100.0,True,B,1
+100000010431,Boehringer Ingelheim Pty Ltd,Boehringer Ingelheim Pharmaceuticals Inc,63.826581027667984,False,B,1
+100000010824,Boehringer Ingelheim RCV GmbH & Co KG,Boehringer Ingelheim Pharmaceuticals Inc,54.14893007181143,False,B,1
+100000010940,Boehringer Ingelheim S.A.,Boehringer Ingelheim Pharmaceuticals Inc,63.38686971685978,False,B,1
+100000806852,Boehringer Ingelheim Saudi Arabia Trading,Boehringer Ingelheim Pharmaceuticals Inc,55.001812019631615,False,B,1
+100000011161,Boehringer Ingelheim Singapore Pte. Ltd.,Boehringer Ingelheim Pharmaceuticals Inc,57.45074696545285,False,B,1
+100000191756,Boehringer Ingelheim South Africa (Pty) Ltd,Boehringer Ingelheim Pharmaceuticals Inc,56.20693890027691,False,B,1
+100000010664,Boehringer Ingelheim Taiwan Ltd.,Boehringer Ingelheim Pharmaceuticals Inc,61.92373522458629,False,B,1
+100000246819,Boehringer Ingelheim USA,Boehringer Ingelheim Pharmaceuticals Inc,63.6780303030303,False,B,1
+100000246820,"Boehringer Ingelheim, Unipessoal, Lda.",Boehringer Ingelheim Pharmaceuticals Inc,57.444984322455284,False,B,1
+100000005629,Bolton Medical Inc,B Braun Medical Inc,54.07313129149711,False,B,1
+100000011033,Bracco Diagnostics Inc.,Bracco Diagnostics Inc,100.0,True,B,1
+100000151625,Braeburn Inc.,Braeburn Inc,100.0,True,B,1
+100000005463,"Brainlab, Inc.",Blaine Labs Inc,55.85752734107997,False,B,1
+100000000153,"Braintree Laboratories, Inc.",Braintree Laboratories Inc,100.0,True,B,1
+100001156890,"Breas Medical, Inc.",B Braun Medical Inc,60.44585414585414,False,B,1
+100000005517,Bristol Myers Squibb Company,Bristol-Myers Squibb Company,71.22631578947369,False,B,1
+100000646813,Broncus Medical,B Braun Medical Inc,57.34880952380953,False,B,1
+100001326930,"bluebird bio, Inc.",bluebird bio Inc,100.0,True,B,1
+100000521812,CAIRE Inc.,Cara Incorporated,53.233333333333334,False,C,1
+100001176934,CALLIDITAS THERAPEUTICS US INC.,Calliditas Therapeutics AB,69.95086342229199,False,C,1
+100000010445,CARDINAL HEALTH 108 LLC,Cardinal Health 107 LLC,71.7823613086771,False,C,1
+100000010444,CARDINAL HEALTH 200 LLC,CARDINAL HEALTH INC,70.25077399380805,False,C,1
+100000010443,CARDINAL HEALTH 414 LLC,Cardinal Health 414 LLC,100.0,True,C,1
+100000010463,CARDINAL HEALTH INC,CARDINAL HEALTH INC,100.0,True,C,1
+100000010856,"CARDIVA MEDICAL, INC.",CARDINAL HEALTH INC,53.476190476190474,False,C,1
+100000481813,"CATALYST PHARMACEUTICALS, INC.",Catalyst Pharmaceuticals Inc,100.0,True,C,1
+100000010498,"CBA Associates, LLC",CarWin Pharmaceutical Associates LLC,50.20225155279503,False,C,1
+100000861821,CENTERLINE BIOMEDICAL INC.,Clearside Biomedical Inc,60.07094373016181,False,C,1
+100000721813,"CENTERMED, INC.",Centrix Inc,51.751831501831504,False,C,1
+100000010860,"CHIESI USA, INC.",Chiesi USA Inc,100.0,True,C,1
+100000141543,CIPLA USA INC.,Cipla USA Inc,100.0,True,C,1
+100000506817,"CLINIGEN, INC.",Clinigen Limited,100.0,True,C,1
+100000556811,"CMP Pharma, Inc.",CMP Pharma Inc,100.0,True,C,1
+100001351953,"COLGATE ORAL PHARMACEUTICALS, INC.",Colgate Oral Pharmaceuticals Inc,100.0,True,C,1
+100000011212,COLOPLAST CORP,Coloplast Corporation,100.0,True,C,1
+100000931826,CORDIS US CORP.,Cordavis Limited,57.115546218487395,False,C,1
+100000005563,CSL Behring,CSL Behring,100.0,True,C,1
+100001221924,CSL Plasma Inc.,Cal Pharma,54.3,False,C,1
+100001141888,CTI BioPharma Corp.,CTI BioPharma Corporation,100.0,True,C,1
+100000216796,CYCLE PHARMACEUTICALS INC,Cycle Pharmaceuticals Ltd,100.0,True,C,1
+100000000225,"Cadwell Industries, INC",Cetylite Industries Inc,57.367913025807766,False,C,1
+100000951823,"Cala Health, Inc.",CARDINAL HEALTH INC,61.03123543123543,False,C,1
+100001176934,Calliditas Therapeutics US Inc.,Calliditas Therapeutics AB,69.95086342229199,False,C,1
+100000196841,Camber Spine Technologies LLC,Cambridge Therapeutics Technologies LLC,54.81214285714286,False,C,1
+100000291839,"CapsoVision, Inc.",COVIDIEN INC,50.07515948963317,False,C,1
+100001166892,"Caption Health, Inc.",CARDINAL HEALTH INC,57.47995223167637,False,C,1
+100000010445,Cardinal Health 108 LLC,Cardinal Health 107 LLC,71.7823613086771,False,C,1
+100000010446,Cardinal Health 110 LLC,Cardinal Health 110 Inc,100.0,True,C,1
+100000010444,Cardinal Health 200 LLC,CARDINAL HEALTH INC,70.25077399380805,False,C,1
+100000010443,Cardinal Health 414 LLC,Cardinal Health 414 LLC,100.0,True,C,1
+100000010463,Cardinal Health Inc,CARDINAL HEALTH INC,100.0,True,C,1
+100000005538,Cardinal Health PR 120 Inc,CARDINAL HEALTH INC,67.42383292383292,False,C,1
+100000841823,Cardiologs Technologies,Carlsbad Technology Inc,55.15235779666558,False,C,1
+100000005711,"Carestream Dental, LLC",CareStream Health Inc,64.02058823529411,False,C,1
+100000000328,"Carestream Health, Inc.",CareStream Health Inc,100.0,True,C,1
+100000506824,"Catalent Pharma Solutions, LLC",Catalyst Pharmaceuticals Inc,55.10039929015084,False,C,1
+100000481813,"Catalyst Pharmaceuticals, Inc.",Catalyst Pharmaceuticals Inc,100.0,True,C,1
+100000000343,Celgene Corporation,Celgene Corporation,100.0,True,C,1
+100001449460,Celltrion Healthcare Canada Ltd.,CELLTRION USA INC,52.979063207324074,False,C,1
+100000196823,"Celltrion Healthcare Co., Ltd",CELLTRION USA INC,55.330512482686395,False,C,1
+100001351954,Celltrion USA Inc.,CELLTRION USA INC,100.0,True,C,1
+100000191764,"Celltrion, Inc.",CELLTRION USA INC,67.7132867132867,False,C,1
+100000010417,"CeloNova BioSciences, Inc.",Coherus BioSciences Inc,55.29777219102346,False,C,1
+100000861821,Centerline Biomedical Inc.,Clearside Biomedical Inc,60.07094373016181,False,C,1
+100000086356,Centrix Inc,Centrix Inc,100.0,True,C,1
+100000151710,Cerapedics Inc.,Cipla Therapeutics Inc,51.442857142857136,False,C,1
+100000151710,"Cerapedics, Inc.",Cipla Therapeutics Inc,51.442857142857136,False,C,1
+100000086393,Cerner Corporation,Cerecor Inc,59.878205128205124,False,C,1
+100001346931,"Cerveau Technologies, Inc.",Cambridge Therapeutics Technologies LLC,52.12814422419686,False,C,1
+100000196795,"Change Healthcare Technologies, LLC",Cambridge Therapeutics Technologies LLC,51.02104964001516,False,C,1
+100000010860,"Chiesi USA, Inc.",Chiesi USA Inc,100.0,True,C,1
+100000010434,"Chugai Pharmaceutical Co., Ltd.",Chadwick Pharmaceuticals Inc,61.34444444444444,False,C,1
+100000011072,Circassia Inc.,Circassia Pharmaceuticals Inc,56.60941176470588,False,C,1
+100000011072,Circassia Pharmaceuticals Inc,Circassia Pharmaceuticals Inc,100.0,True,C,1
+100001376987,Circinus Medical Technology LLC,Carlsbad Technology Inc,53.191882738619434,False,C,1
+100000681811,"Civica, Inc.",Civica,100.0,True,C,1
+100000010523,"Clariance, Inc.",Cara Incorporated,50.769230769230774,False,C,1
+100000826853,Clarius Mobile Health Corp.,CARDINAL HEALTH INC,50.746428571428574,False,C,1
+100000811820,Clarus Therapeutics Inc.,Cipla Therapeutics Inc,64.85731370164731,False,C,1
+100000010828,"Clinical Technology, Inc",Carlsbad Technology Inc,56.351389838231945,False,C,1
+100000506817,Clinigen Inc,Clinigen Limited,100.0,True,C,1
+100000506817,"Clinigen, Inc.",Clinigen Limited,100.0,True,C,1
+100000010887,"Clinisys, Inc.",Clinigen Limited,51.69230769230769,False,C,1
+100000191752,"Clovis Oncology, Inc.",Clovis Oncology Inc,100.0,True,C,1
+100000561811,"CoapTech, Inc.",ConvaTec Inc,58.5,False,C,1
+100001306930,Coastal Medical Technologies LLC,Carlsbad Technology Inc,50.298117301231805,False,C,1
+100001306930,Coastal Medical Technologies Llc,Carlsbad Technology Inc,50.298117301231805,False,C,1
+100000010542,Cochlear Ltd,CoTherix Inc,50.392857142857146,False,C,1
+100000506819,Coherus Biosciences Inc.,Coherus BioSciences Inc,100.0,True,C,1
+100001351953,"Colgate Oral Pharmaceuticals, Inc.",Colgate Oral Pharmaceuticals Inc,100.0,True,C,1
+100000151565,"Collegium Pharmaceutical, Inc.",Collegium Pharmaceutical Inc,100.0,True,C,1
+100000011212,Coloplast Corp,Coloplast Corporation,100.0,True,C,1
+100000321807,Colorado Therapeutics LLC,Cipla Therapeutics Inc,61.997559228406,False,C,1
+100000136477,Concordia Laboratories Inc.,Coria Laboratories,67.38383838383838,False,C,1
+100000136478,Concordia Pharmaceuticals Inc.,Concordia Pharmaceuticals Inc,100.0,True,C,1
+100000000289,ConvaTec Inc.,ConvaTec Inc,100.0,True,C,1
+100000005513,"CooperSurgical, Inc.",CooperSurgical Inc,100.0,True,C,1
+100000005728,CooperVision Inc.,CooperSurgical Inc,50.476937536148064,False,C,1
+100001448227,CorMedix Inc.,Cordavis Limited,50.29166666666667,False,C,1
+100000000247,Corcept Therapeutics,Corcept Therapeutics Incorporated,100.0,True,C,1
+100000971894,Corcym Inc,Corium LLC,52.666666666666664,False,C,1
+100000005411,Cordis Corporation,Cordavis Limited,65.10714285714286,False,C,1
+100001266926,Core Surgical Group,CooperSurgical Inc,55.92121718437508,False,C,1
+100000966856,"Corium, Inc.",Corium LLC,100.0,True,C,1
+100000966856,"Corium, LLC",Corium LLC,100.0,True,C,1
+100001036883,"Cornerstone Medical Associates, Inc.",CarWin Pharmaceutical Associates LLC,52.33706412614134,False,C,1
+100001448895,"Cortex, Inc.",CoTherix Inc,56.32034632034632,False,C,1
+100000481814,Cosette Pharmaceuticals Inc.,Cosette Pharmaceuticals Inc,100.0,True,C,1
+100000000083,Covidien LP,COVIDIEN INC,68.6555023923445,False,C,1
+100000316823,Covis Pharma GmBH,Covis Pharma US Inc,64.01316526610644,False,C,1
+100000316823,Covis Pharma GmbH,Covis Pharma US Inc,64.01316526610644,False,C,1
+100001166887,CraniUS LLC,Cordavis Limited,51.513965201465204,False,C,1
+100000011237,"Cranial Technologies, Inc",Carlsbad Technology Inc,52.88318713450292,False,C,1
+100000010517,"Cryo Specialty Medical, LLC",Cosmetic Specialty labs Inc,53.40677368652197,False,C,1
+100000966850,Cue Health Inc.,CVS Health,60.87279411764706,False,C,1
+100000005673,"Cumberland Pharmaceuticals, Inc.",Cumberland Pharmaceuticals Inc,100.0,True,C,1
+100000181753,Curium US LLC,Curium US LLC,100.0,True,C,1
+100000521825,Currax Pharmaceuticals LLC,Currax Pharmaceuticals LLC,100.0,True,C,1
+100000971838,Current Health Inc.,CareStream Health Inc,54.59248441312008,False,C,1
+100000216796,Cycle Pharmaceuticals Inc,Cycle Pharmaceuticals Ltd,100.0,True,C,1
+100000010687,DENTSPLY IH AB,DENTSPLY Pharmaceutical,52.25727533336229,False,D,1
+100000010676,DENTSPLY IH Inc.,DENTSPLY Pharmaceutical,55.47277866836354,False,D,1
+100000081366,DENTSPLY IH Ltd.,DENTSPLY Pharmaceutical,55.47277866836354,False,D,1
+100000010673,DENTSPLY LLC,DENTSPLY Pharmaceutical,56.10799438990182,False,D,1
+100000151647,"DPT Laboratories, Ltd.",Dakota Laboratories LLC,64.46078250060636,False,D,1
+100000000056,Daiichi Sankyo Company LTD,Daiichi Sankyo,100.0,True,D,1
+100000081372,Daiichi Sankyo Europe GmbH,Daiichi Sankyo,63.11538461538461,False,D,1
+100000000195,Daiichi Sankyo Inc.,Daiichi Sankyo,100.0,True,D,1
+100001448462,Day One Biopharmaceuticals,Day One Biopharmaceuticals Inc,100.0,True,D,1
+100000005601,"DePuy Synthes Products, Inc.",Dista Products Company,50.83874458874459,False,D,1
+100000141523,"DeRoyal Industries, Inc.",Dermarite Industries LLC,60.08201754385965,False,D,1
+100000776815,Deciphera Pharmaceuticals Inc.,Deciphera Pharmaceuticals LLC,100.0,True,D,1
+100001191924,"Delphinus Medical Technologies, Inc.",Dynavax Technologies Corporation,51.12916666666667,False,D,1
+100000010644,"Den-Mat Holdings, LLC",DEN-MAT HOLDINGS LLC,100.0,True,D,1
+100000196774,Dendreon Pharmaceuticals LLC,Dendreon Pharmaceuticals LLC,100.0,True,D,1
+100000011185,"Dental Health Products, Inc.",Dista Products Company,53.42911255411256,False,D,1
+100000010701,Dental Imaging Technologies Corp.,Dynavax Technologies Corporation,54.90847355490659,False,D,1
+100000191777,Dentsply IH China,DENTSPLY Pharmaceutical,50.44520748675436,False,D,1
+100000081366,Dentsply IH UK,DENTSPLY Pharmaceutical,52.60654768263464,False,D,1
+100000000185,Dentsply Sirona Inc,DENTSPLY Pharmaceutical,50.91315789473684,False,D,1
+100000010670,Dentsply US Prosthetics LLC,DENTSPLY Pharmaceutical,52.332248314345506,False,D,1
+100001156901,"Dermavant Sciences, Inc.",Dermavant Sciences Inc,100.0,True,D,1
+100000141541,Dexcel Pharma Technologies Ltd.,Dynavax Technologies Corporation,54.29352744442258,False,D,1
+100000000189,"Digestive Care, Inc.",Digestive Care Inc,100.0,True,D,1
+100001176911,"Dilon Technologies, Inc.",Dynavax Technologies Corporation,61.14367572156197,False,D,1
+100000231814,Direct Radiography Corporation,DIRECT RX,55.15250544662309,False,D,1
+100001351973,Dompe Farmaceutici S.p.A.,Dompé farmaceutici SpA,71.42857142857143,False,D,1
+100000316818,Dova Pharmaceuticals,DAVA Pharmaceuticals Inc,69.65526315789474,False,D,1
+100000005388,"Dr.Reddy's Laboratories,Inc.",DrReddys' Laboratories Inc,68.7299419729207,False,D,1
+100000000315,Duchesnay USA Incorporated,Duchesnay USA Inc,100.0,True,D,1
+100000151701,Dutch Ophthalmic Research Center (International) B.V.,Dutch Ophthalmic Research Center (International) BV,100.0,True,D,1
+100000151700,"Dutch Ophthalmic, USA",Dutch Ophthalmic Research Center (International) BV,54.222563947543236,False,D,1
+100000291836,Dynavax Technologies Corporation,Dynavax Technologies Corporation,100.0,True,D,1
+100000005499,"E.R. Squibb & Sons, L.L.C.",ER Squibb & Sons LLC,70.95454545454545,False,E,1
+100000061359,"EAGLE PHARMACEUTICALS, INC.",Eagle Pharmaceuticals Inc,100.0,True,E,1
+100001176900,"EDW Pharma, Inc.",EDW PHARMA,100.0,True,E,1
+100000956831,"EIGER BIOPHARMACEUTICALS, INC.",Eiger BioPharmaceuticals Inc,100.0,True,E,1
+100000000284,"EISAI CO., LTD.",Eisai Inc,65.79807692307692,False,E,1
+100000000136,EISAI INC.,Eisai Inc,100.0,True,E,1
+100000196820,"EMD Serono Research & Development Institute, Inc.",EMD Serono Inc,50.3939393939394,False,E,1
+100000000127,"EMD Serono, Inc.",EMD Serono Inc,100.0,True,E,1
+100000010751,"ENCORE MEDICAL, LP",EPIEN Medical Inc,53.34369943781709,False,E,1
+100000196791,"EPI Health, LLC",EPI Health Inc,100.0,True,E,1
+100000010593,ERBE USA INC,ENDO USA Inc,50.56730769230769,False,E,1
+100000010593,ERBE USA Inc,ENDO USA Inc,50.56730769230769,False,E,1
+100000151651,EUSA Pharma (US) LLC,Eywa Pharma Inc,54.31645499108735,False,E,1
+100000826827,"EVOKE PHARMA, INC.",Evoke Pharma Inc,100.0,True,E,1
+100000010981,"EXACTECH, INC.",Exact-Rx Inc,51.69230769230769,False,E,1
+100000501814,EYEVANCE PHARMACEUTICALS LLC,Eyevance Pharmaceuticals,100.0,True,E,1
+100000061359,"Eagle Pharmaceuticals, Inc.",Eagle Pharmaceuticals Inc,100.0,True,E,1
+100000000284,"Eisai Co., Ltd.",Eisai Inc,65.79807692307692,False,E,1
+100000000136,Eisai Inc.,Eisai Inc,100.0,True,E,1
+100000806823,"Eko Devices, Inc.",Emergent Devices Inc,53.657795055821374,False,E,1
+100000806823,"Eko Health, Inc.",EPI Health Inc,61.43529411764706,False,E,1
+100000011137,"Elekta Medical, S.A.",embecta Medical II LLC,55.47106325047501,False,E,1
+100000061324,Elevate Oral Care,Elevate Oral Care,100.0,True,E,1
+100001076884,Elevate Surgical CO,Elevate Oral Care,54.30812324929972,False,E,1
+100001076884,Elevate Surgical Co,Elevate Oral Care,54.30812324929972,False,E,1
+100000000088,Eli Lilly and Company,Eli Lilly and Company,100.0,True,E,1
+100000136367,"Elite Orthopedics, LLC",Elite Laboratories Inc,54.18239603533721,False,E,1
+100000136367,"Elite Orthopedics, Llc",Elite Laboratories Inc,54.18239603533721,False,E,1
+100000386809,Elucent Medical,EPIEN Medical Inc,60.726739926739924,False,E,1
+100001176947,Embecta Corp.,embecta Medical II LLC,57.766666666666666,False,E,1
+100000011074,Emergent BioSolutions Inc.,Emergent Devices Inc,51.030946278791106,False,E,1
+100000316813,"Emmaus Medical, Inc.",Emmaus Medical Inc,100.0,True,E,1
+100000781812,"Empire Medical, Inc",EPIEN Medical Inc,66.50543345543345,False,E,1
+100000136480,Encore Dermatology Inc.,Encore Dermatology Inc,100.0,True,E,1
+100000000285,Endo Pharmaceuticals Inc.,Endo Pharmaceuticals Inc,100.0,True,E,1
+100001411985,"Endo USA, Inc.",ENDO USA Inc,100.0,True,E,1
+100000151610,Endomagnetics Ltd,Endo Pharmaceuticals Inc,51.53694638694638,False,E,1
+100000961833,"Engage Uni, LLC",Egalet US Inc,50.33777089783281,False,E,1
+100001181915,"Enterra Medical, Inc.",Entera Health Inc,55.97849976110846,False,E,1
+100000941827,"Enzyvant Therapeutics, Inc.",Emerald Therapeutics LLC,56.12782969063457,False,E,1
+100001181893,"Epien Medical, Inc.",EPIEN Medical Inc,100.0,True,E,1
+100001351957,"Episurf Medical, Inc.",EPIEN Medical Inc,60.114785214785215,False,E,1
+100000756814,"Epizyme, Inc.",Epizyme Inc,100.0,True,E,1
+100000756814,"Epizyme, Inc.,",Epizyme Inc,66.13131313131314,False,E,1
+100000771817,"Esperion Therapeutics, Inc.",Esperion Therapeutics Inc,100.0,True,E,1
+100001448495,Esteve Pharmaceuticals LLC,Espero Pharmaceuticals Inc,65.23981794841872,False,E,1
+100000506812,"Eton Pharmaceuticals, Inc.",Eton Pharmaceuticals Inc,100.0,True,E,1
+100001181921,"EvoEndo, Inc",Evofem Inc,51.1025641025641,False,E,1
+100000781819,"Evofem Biosciences, Inc.",Evofem Inc,55.5,False,E,1
+100000826827,"Evoke Pharma, Inc.",Evoke Pharma Inc,100.0,True,E,1
+100000826828,ExThera Medical Corporation,EPIEN Medical Inc,54.444871794871794,False,E,1
+100001341934,Exact Sciences Corporation,EXELA PHARMA SCIENCES LLC,53.71861471861472,False,E,1
+100000010981,"Exactech, Inc.",Exact-Rx Inc,51.69230769230769,False,E,1
+100000010545,Exelixis Inc.,Exelixis Inc,100.0,True,E,1
+100000136420,"Exeltis, USA Inc.",Exeltis USA Inc,100.0,True,E,1
+100000971883,"Exeltis, USA Inc.",Exeltis USA Inc,100.0,True,E,1
+100000010378,Extremity Medical,EPIEN Medical Inc,53.42691622103387,False,E,1
+100000316826,"EyePoint Pharmaceuticals US, Inc.",EyePoint Pharmaceuticals US Inc,100.0,True,E,1
+100000501814,Eyevance Pharmaceuticals LLC,Eyevance Pharmaceuticals,100.0,True,E,1
+100000746812,FERRING PHARMACEUTICALS LIMITED,Ferring Pharmaceuticals,100.0,True,F,1
+100000005682,FIDIA PHARMA USA INC.,Fosun Pharma USA,56.35327635327636,False,F,1
+100000011231,FRESENIUS USA INC.,Fresenius Kabi USA LLC,67.09073614557485,False,F,1
+100000000293,"FRESENIUS USA MANUFACTURING, INC.",Fresenius Kabi USA LLC,56.96079749103943,False,F,1
+100001351942,"Fennec Pharmaceuticals, Inc.",Fennec Pharmaceuticals Inc,100.0,True,F,1
+100000061346,Ferring Inc.,Ferring Pharmaceuticals,54.2463768115942,False,F,1
+100000061328,Ferring Pharmaceuticals (Asia) Co. Ltd.,Ferring Pharmaceuticals,69.67735849056604,False,F,1
+100000005373,Ferring Pharmaceuticals AS,Ferring Pharmaceuticals,72.51098901098901,False,F,1
+100000000309,Ferring Pharmaceuticals Inc.,Ferring Pharmaceuticals,100.0,True,F,1
+100000005378,Ferring Pharmaceuticals LTD,Ferring Pharmaceuticals,100.0,True,F,1
+100000071382,Ferring Pharmaceuticals Ltd (UK),Ferring Pharmaceuticals,68.42897727272728,False,F,1
+100001156897,Ferring Pharmaceuticals Ltd.,Ferring Pharmaceuticals,100.0,True,F,1
+100000005512,Ferring Pharmaceuticals Private Limited,Ferring Pharmaceuticals,69.04062126642772,False,F,1
+100000136419,Ferring Pharmaceuticals Private Ltd,Ferring Pharmaceuticals,69.04062126642772,False,F,1
+100000061323,Ferring Pharmaceuticals Pty Ltd,Ferring Pharmaceuticals,71.75555555555556,False,F,1
+100000061341,Ferring Pharmaceuticals SA Rep Office Middle East,Ferring Pharmaceuticals,60.76927437641723,False,F,1
+100001171895,Ferring Pty Ltd,Ferring Pharmaceuticals,54.286522514143996,False,F,1
+100001156896,Ferring S.A.S.,Ferring Pharmaceuticals,53.30441309038698,False,F,1
+100000005682,Fidia Pharma USA Inc.,Fosun Pharma USA,56.35327635327636,False,F,1
+100000291812,"Flexion Therapeutics, Inc.",Flexion Therapeutics Inc,100.0,True,F,1
+100000000270,Flowonix Medical Incorporated,FNC MEDICAL CORPORATION,58.01705431508063,False,F,1
+100000141524,"Focal Therapeutics, Inc.",Fortovia Therapeutics Inc,61.87881562881562,False,F,1
+100001351956,Forma Medical,FNC MEDICAL CORPORATION,57.63492209544841,False,F,1
+100000206775,Forte Bio-Pharma LLC,Forte Bio-Pharma,100.0,True,F,1
+100000531811,"Fortovia Therapeutics, Inc.",Fortovia Therapeutics Inc,100.0,True,F,1
+100001351962,Fosun Pharma USA Inc.,Fosun Pharma USA,100.0,True,F,1
+100001131887,"Foundation Medical, LLC",FNC MEDICAL CORPORATION,56.04550679205852,False,F,1
+100001131887,"Foundation Medical, Llc",FNC MEDICAL CORPORATION,56.04550679205852,False,F,1
+100000191782,"Foundation Medicine, Inc.",Foundation Consumer Healthcare,51.7912577850807,False,F,1
+100000010706,"Fresenius Kabi USA, LLC",Fresenius Kabi USA LLC,100.0,True,F,1
+100000000293,"Fresenius USA Manufacturing, Inc.",Fresenius Kabi USA LLC,56.96079749103943,False,F,1
+100000000257,"Fresenius USA Marketing, Inc.",Fresenius Kabi USA LLC,58.87929871089817,False,F,1
+100000010757,"Freudenberg Medical, LLC",FNC MEDICAL CORPORATION,54.980382775119615,False,F,1
+100000010917,"Fujirebio Diagnostics, Incorporated",Future Diagnostics Llc,61.12881562881562,False,F,1
+100000196860,"Fuse Medical, Inc.",FNC MEDICAL CORPORATION,60.10830559600582,False,F,1
+100000916825,"G1 Therapeutics, Inc.",G1 Therapeutics Inc,100.0,True,G,1
+100000005511,GE HEALTHCARE,GE Healthcare,100.0,True,G,1
+100000005511,GE HealthCare,GE Healthcare,100.0,True,G,1
+100000005511,GE Healthcare,GE Healthcare,100.0,True,G,1
+100000000297,GENZYME CORPORATION,Genzyme Corporation,100.0,True,G,1
+100000066376,"GM Pharmaceuticals, Inc.",GM Pharmaceuticals,100.0,True,G,1
+100000151649,"GS Solutions, Inc.",GenPak Solutions LLC,62.257711038961034,False,G,1
+100000511818,"GT Medical Technologies, Inc",Genus Medical Technologies LLC,66.99409993444371,False,G,1
+100000010729,GUERBET LLC,Guerbet LLC,100.0,True,G,1
+100000486819,GW Pharma Limited,GLENVIEW PHARMA INC,60.86176470588235,False,G,1
+100000010375,"Galderma Laboratories, L.P.",Galderma Laboratories LP,100.0,True,G,1
+100000010953,Galen US Inc,Galen US Incorporated,100.0,True,G,1
+100001216925,"Galt Pharmaceuticals, LLC",Galt Pharmaceuticals LLC,100.0,True,G,1
+100001176960,"Galvanize Therapeutics, Inc",G1 Therapeutics Inc,60.56202761202761,False,G,1
+100000231815,"Gen-Probe, Inc.",GenBioPro Inc,52.91666666666667,False,G,1
+100000781813,"GenBioPro, Inc.",GenBioPro Inc,100.0,True,G,1
+100000000226,"Genentech USA, Inc.",Genentech Inc,67.7132867132867,False,G,1
+100000000089,"Genentech, Inc.",Genentech Inc,100.0,True,G,1
+100000806826,"Genetesis, Inc.",Genentech Inc,54.33333333333333,False,G,1
+100001351951,Genmab A/S,Genmab US Inc,61.7640350877193,False,G,1
+100001351960,Genmab BV,Genmab US Inc,59.97222222222222,False,G,1
+100000956830,"Genmab U.S., Inc.",Genmab US Inc,100.0,True,G,1
+100000010564,Gentleman Orthopedic Solutions,GenPak Solutions LLC,51.66123885172799,False,G,1
+100000971872,"Genus Medical Technologies, LLC",Genus Medical Technologies LLC,100.0,True,G,1
+100000000297,Genzyme Corporation,Genzyme Corporation,100.0,True,G,1
+100001448928,Geron Corporation,Geron Corporation,100.0,True,G,1
+100000000108,"Gilead Sciences, Inc.",Gilead Sciences,100.0,True,G,1
+100000000102,Glaukos Corporation,Glaukos Corporation,100.0,True,G,1
+100000005449,"GlaxoSmithKline, LLC.",GlaxoSmithKline LLC,100.0,True,G,1
+100000011170,"Glenmark Pharmaceuticals Inc., USA",Glenmark Pharmaceuticals Inc USA,100.0,True,G,1
+100000806820,Glenmark Pharmaceuticals Limited,Glenmark Pharmaceuticals Inc,100.0,True,G,1
+100000771818,"Global Blood Therapeutics, Inc.",Global Blood Therapeutics Inc A subsidiary of Pfizer Inc,62.53510273972603,False,G,1
+100000041242,"Grace Medical, Inc.",GRAXCELL PHARMACEUTICAL LLC,52.181856187290975,False,G,1
+100001451065,Granata Bio Corporation,Galaxy Bio Inc,52.40579322638146,False,G,1
+100000011229,"Greer Laboratories, Inc.",Greer Laboratories Inc,100.0,True,G,1
+100000136410,Grifols Canada Ltd.,GRIFOLS USA LLC,56.42121212121212,False,G,1
+100000061352,"Grifols Diagnostic Solutions, Inc.",GRIFOLS USA LLC,50.53513854566486,False,G,1
+100000005422,Grifols Therapeutics LLC,G1 Therapeutics Inc,62.04047619047619,False,G,1
+100000005420,"Grifols USA, LLC",GRIFOLS USA LLC,100.0,True,G,1
+100000005425,"Grifols, S.A.",GRIFOLS USA LLC,71.34632034632034,False,G,1
+100000786822,HARMONY BIOSCIENCES LLC,Harmony Biosciences LLC,100.0,True,H,1
+100000010643,HF Acquisition Co. LLC,HF Acquisition Co LLC DBA Health First,56.95141700404858,False,H,1
+100000005445,"HOSPIRA, INC.",Hospira Inc,100.0,True,H,1
+100000806849,HRA PHARMA RARE DISEASES,HRA Pharma Rare Diseases,100.0,True,H,1
+100000136415,HRA Pharma,HRA Pharma America Inc,63.666666666666664,False,H,1
+100000806849,HRA Pharma Rare Diseases,HRA Pharma Rare Diseases,100.0,True,H,1
+100000786822,Harmony Biosciences LLC,Harmony Biosciences LLC,100.0,True,H,1
+100000786822,Harmony Biosciences Llc,Harmony Biosciences LLC,100.0,True,H,1
+100001401987,"Harrow Eye, LLC",Harrow Eye LLC,100.0,True,H,1
+100000956828,Health Beacons Inc.,Health Mart,51.26211696799932,False,H,1
+100000521813,"HealthMyne, Inc.",Health Mart,54.12020202020202,False,H,1
+100000005555,Helena Laboratories Corporation,Hercon Laboratories Corporation,63.91353383458646,False,H,1
+100000000288,Helsinn Healthcare SA,Haw Par Healthcare Ltd,50.17994505494505,False,H,1
+100000151623,"Helsinn Therapeutics (U.S.), Inc.",Helsinn Therapeutics (US) Inc,100.0,True,H,1
+100001091885,"Henry Schein One, LLC",Henry Schein Inc,69.25,False,H,1
+100000005704,Henry Schein Practice Solutions Inc.,Henry Schein Inc,57.69617404351088,False,H,1
+100000005547,"Henry Schein, Inc.",Henry Schein Inc,100.0,True,H,1
+100000191747,"Heron Therapeutics, Inc.",Heron Therapeutics Inc,100.0,True,H,1
+100000136575,Hikma Pharmaceuticals USA,Hikma Pharmaceuticals USA,100.0,True,H,1
+100000136536,"Hill Dermaceuticals, Inc.",HILL DERMACEUTICALS INC,100.0,True,H,1
+100000000061,"Hill-Rom Holdings, Inc",Haleon US Holdings LLC,51.40486964016375,False,H,1
+100000010859,Hitachi Healthcare Americas Corp.,Haw Par Healthcare Ltd,50.08581349206349,False,H,1
+100000131389,Horizon Therapeutics plc,Horizon Therapeutics USA Inc,67.21969696969697,False,H,1
+100000161757,Hyhte Holdings Inc.,Haleon US Holdings LLC,51.08862303155781,False,H,1
+100000226810,IBSA Pharma Inc.,IBSA Pharma Inc,100.0,True,I,1
+100000010657,ICU Medical Inc,ICU Medical Inc,100.0,True,I,1
+100001171891,IDORSIA PHARMACEUTICALS US INC,Idorsia Pharmaceuticals Ltd,72.51098901098901,False,I,1
+100000571819,"ILLUMINOSS MEDICAL, INC.",ICU Medical Inc,54.548882655960696,False,I,1
+100001056885,IMPEL PHARMACEUTICALS INC.,Impel Pharmaceuticals Inc,100.0,True,I,1
+100000005568,"INOGEN, INC.",ImmunoGen Inc,62.59090909090909,False,I,1
+100000000239,INSTRUMENTATION LABORATORY COMPANY,International Laboratories LLC,59.13396127681842,False,I,1
+100000151645,"INTERCEPT PHARMACEUTICALS, INC.",Intercept Pharmaceuticals Inc,100.0,True,I,1
+100000011181,"INTERNATIONAL REHABILITATIVE SCIENCES, INC",International Laboratories LLC,53.949352840657184,False,I,1
+100000166739,IQ Med LLC,Insmed Incorporated,52.0,False,I,1
+100000601811,IRONSHORE PHARMACEUTICALS INC.,Ironshore Pharmaceuticals Inc,100.0,True,I,1
+100000000245,"IRONWOOD PHARMACEUTICALS, INC",Ironwood Pharmaceuticals Inc,100.0,True,I,1
+100001447154,ITF Therapeutics LLC,IJ Therapeutics LLC,66.97736175115207,False,I,1
+100000781818,"ITI, Inc. (d/b/a Intra-Cellular Therapies, Inc.)",Intra-Cellular Therapies Inc,60.78542780748663,False,I,1
+100000151574,"IZI Medical Products, LLC",ICU Medical Inc,51.61197458455523,False,I,1
+100000571819,"IlluminOss Medical, Inc.",ICU Medical Inc,54.548882655960696,False,I,1
+100000000063,"ImClone Systems, LLC",ImClone LLC,60.67272727272727,False,I,1
+100000126363,Imbio Inc.,IntraBio Inc,50.11923076923077,False,I,1
+100000126363,"Imbio, LLC",IntraBio Inc,50.11923076923077,False,I,1
+100000506821,Imbrium Therapeutics L.P.,IJ Therapeutics LLC,59.12146126185028,False,I,1
+100000061321,"Immucor, Inc.",ImmunoGen Inc,51.751831501831504,False,I,1
+100001306929,"ImmunoGen, Inc.",ImmunoGen Inc,100.0,True,I,1
+100001176930,Immunocore Limited,Immunocore Commercial LLC,61.00921658986175,False,I,1
+100000826831,"Immunomedics, Inc.",ImmunoGen Inc,54.65196078431373,False,I,1
+100000136494,InFront Medical LLC,ICU Medical Inc,56.700306710833026,False,I,1
+100000121364,"Inari Medical, Inc.",ICU Medical Inc,58.713869463869464,False,I,1
+100000806833,"Inceptus Medical, LLC",ICU Medical Inc,62.087737493987504,False,I,1
+100000000263,Incyte Corporation,Incyte Corporation,100.0,True,I,1
+100000826847,Indivior Canada Ltd,Indivior Inc,62.94782608695652,False,I,1
+100000136552,Indivior Inc.,Indivior Inc,100.0,True,I,1
+100000791824,"Innate Pharma, Inc",Ion Pharma LLC,59.03111351564037,False,I,1
+100000961852,Innocoll Incorporated,Innocoll Pharmaceuticals,55.5,False,I,1
+100000961852,Innocoll Pharmaceuticals Limited,Innocoll Pharmaceuticals,100.0,True,I,1
+100000005568,"Inogen, Inc.",ImmunoGen Inc,62.59090909090909,False,I,1
+100000010452,"Inova Diagnostics, Inc.",Iso-Tex Diagnostics Inc,59.66261326067027,False,I,1
+100000196847,"Insight Medical Systems, Inc.",Insight Pharmaceuticals,52.53260869565217,False,I,1
+100000461811,"Insmed, Inc.",Insmed Incorporated,100.0,True,I,1
+100000061308,"Inspire Medical Systems, Inc.",International Medication Systems Limited,51.81397044984001,False,I,1
+100001181903,InspireMD Ltd,Insmed Incorporated,52.861111111111114,False,I,1
+100000000239,Instrumentation Laboratory Company,International Laboratories LLC,59.13396127681842,False,I,1
+100000011187,Integer Holdings Corporation,Innocutis Holdings LLC,52.70152505446623,False,I,1
+100000971899,Integrum Inc.,InterMune Inc,57.39530812324929,False,I,1
+100000151645,"Intercept Pharmaceuticals, Inc.",Intercept Pharmaceuticals Inc,100.0,True,I,1
+100000591811,International Life Sciences,International Laboratories LLC,54.86527418438821,False,I,1
+100000010638,"Intersect ENT, Inc.",Intersect ENT Inc,100.0,True,I,1
+100000961834,Interventional Pain Technologies Inc.,International Laboratories LLC,52.11148657377106,False,I,1
+100000811821,Intra-Sana Laboratories,Intra-Sana Laboratories,100.0,True,I,1
+100000311807,IntraVu Inc.,IntraBio Inc,54.68452380952381,False,I,1
+100000791821,Intrinsic Therapeutics,INO THERAPEUTICS LLC,61.39825259630013,False,I,1
+100001176889,Intuity Medical Inc,ICU Medical Inc,59.201705312231624,False,I,1
+100001448561,Invivyd Inc,Invivyd Inc,100.0,True,I,1
+100001448628,"Iovance Biotherapeutics, Inc.",Iovance Biotherapeutics Inc,100.0,True,I,1
+100000010586,Ipsen Biopharm Limited,Ipsen Biopharmaceuticals Inc,60.5921052631579,False,I,1
+100000000123,"Ipsen Biopharmaceuticals, Inc",Ipsen Biopharmaceuticals Inc,100.0,True,I,1
+100000005526,Ipsen Bioscience Inc,Ipsen Biopharmaceuticals Inc,50.03173076923077,False,I,1
+100000005526,Ipsen Bioscience Inc.,Ipsen Biopharmaceuticals Inc,50.03173076923077,False,I,1
+100000010667,Ipsen Pharma SAS,Ion Pharma LLC,55.56201923076923,False,I,1
+100000601811,Ironshore Pharmaceuticals Inc.,Ironshore Pharmaceuticals Inc,100.0,True,I,1
+100000000245,"Ironwood Pharmaceuticals, Inc",Ironwood Pharmaceuticals Inc,100.0,True,I,1
+100000186754,Itamar Medical Inc,ICU Medical Inc,56.36239462292094,False,I,1
+100000231809,"Ivantis, Inc",Intendis Inc,51.36011904761905,False,I,1
+100000521828,icotec Medical Inc.,ICU Medical Inc,61.29350649350649,False,I,1
+100000971863,"intraFUSION GP, LLC",IntraBio Inc,52.635489510489506,False,I,1
+100001448861,J2 BIO-PHARMA LLC,JG Pharma,51.67832167832168,False,J,1
+100000136462,JACE Medical LLC,Journey Medical Corporation,57.968855218855225,False,J,1
+100000005637,JAZZ PHARMACEUTICALS INC.,Jazz Pharmaceuticals Inc,100.0,True,J,1
+100000010966,Jan Medical Inc.,Journey Medical Corporation,59.65170531223163,False,J,1
+100000000329,"Janssen Biotech, Inc.",Janssen Biotech Inc,100.0,True,J,1
+100000000232,"Janssen Pharmaceuticals, Inc",Janssen Pharmaceuticals Inc,100.0,True,J,1
+100000000325,"Janssen Products, LP",Janssen Products LP,100.0,True,J,1
+100000005637,Jazz Pharmaceuticals Inc.,Jazz Pharmaceuticals Inc,100.0,True,J,1
+100000000262,Johnson & Johnson Health Care Systems Inc.,Johnson & Johnson  Consumer  Inc,55.988899194209736,False,J,1
+100000196772,"Johnson & Johnson Surgical Vision, Inc.",Johnson & Johnson  Consumer  Inc,56.98369465238536,False,J,1
+100000005397,"Johnson & Johnson Vision Care, Inc.",Johnson & Johnson  Consumer  Inc,59.82922972780818,False,J,1
+100000005609,Johnson and Johnson International,Johnson & Johnson  Consumer  Inc,59.22109594953902,False,J,1
+100001451101,Joline Medical Inc,Journey Medical Corporation,63.00788177339901,False,J,1
+100000136374,Journey Medical Corporation,Journey Medical Corporation,100.0,True,J,1
+100000011167,Jubilant DraxImage Inc.,Jubilant DraxImage Inc,100.0,True,J,1
+100000011216,Jubilant HollisterStier LLC,Jubilant HollisterStier LLC,100.0,True,J,1
+100000961839,Jubilant Therapeutics Inc,Juno Therapeutics Inc,63.417588087866726,False,J,1
+100000010955,KADMON PHARMACEUTICALS LLC,Kadmon Pharmaceuticals LLC,100.0,True,K,1
+100000166741,KAMADA LTD.,Kamada Ltd,100.0,True,K,1
+100000181758,"KVK-Tech, Inc.",KVK-TECH INC,100.0,True,K,1
+100000486818,"Kala Pharmaceuticals, Inc.",Kartha Pharmaceuticals Inc,68.05025093446146,False,K,1
+100000166741,Kamada Ltd.,Kamada Ltd,100.0,True,K,1
+100000011179,Kaneka Medical America LLC,Kowa Pharmaceuticals America Inc,52.074675324675326,False,K,1
+100000011179,Kaneka Pharma America LLC,Kowa Pharmaceuticals America Inc,52.82764948084497,False,K,1
+100000806841,Karyopharm Therapeutics Inc.,Karyopharm Therapeutics Inc,100.0,True,K,1
+100000011093,Kedrion Biopharma Inc.,Kedrion Biopharma Inc,100.0,True,K,1
+100000086365,"Kedrion Biopharma, Inc.",Kedrion Biopharma Inc,100.0,True,K,1
+100000511819,Kedrion S.p.A.,Kedrion SpA,100.0,True,K,1
+100001351945,Kesin Pharma Corporation,Kesin Pharma,100.0,True,K,1
+100001449995,"Kiniksa Pharmaceuticals International, plc",Kiniksa Pharmaceuticals (UK) Ltd,60.435533214835814,False,K,1
+100000846825,"Kiniksa Pharmaceuticals, Ltd.",Kiniksa Pharmaceuticals (UK) Ltd,71.03291316526611,False,K,1
+100000216809,"Kite Pharma, Inc.",Kite Pharma Inc,100.0,True,K,1
+100000005379,"Kowa Pharmaceuticals America, Inc.",Kowa Pharmaceuticals America Inc,100.0,True,K,1
+100001346932,Krystal Biotech Inc,Krystal Biotech Inc,100.0,True,K,1
+100000231807,"Kyowa Kirin Co., Ltd",KYOWA KIRIN INC,70.15714285714286,False,K,1
+100000501826,"Kyowa Kirin Pharmaceutical Development, Inc",KYOWA KIRIN INC,53.5827067669173,False,K,1
+100000231808,Kyowa Kirin Services Ltd,KYOWA KIRIN INC,63.48870967741936,False,K,1
+100000010604,"Kyowa Kirin, Inc.",KYOWA KIRIN INC,100.0,True,K,1
+100000071367,"kaleo, Inc.",kaleo Inc,100.0,True,K,1
+100001401995,L&K Spine Inc,Landmark Supply Inc,50.21771561771562,False,L,1
+100000005400,"LANTHEUS MEDICAL IMAGING, INC.",Lantheus Medical Imaging Inc,100.0,True,L,1
+100000181752,LENOSS MEDICAL INC,Lukare Medical LLC,55.96894409937888,False,L,1
+100000000220,"LENSAR, Inc.",Leader,52.333333333333336,False,L,1
+100000005663,LEO Pharma AS,LEO Pharma Inc,69.74247491638796,False,L,1
+100000000258,LEO Pharma Inc.,LEO Pharma Inc,100.0,True,L,1
+100000291816,LES LABORATOIRES SERVIER,Larken Laboratories Inc,52.30984802121583,False,L,1
+100000961843,LINA Medical USA Inc,Lukare Medical LLC,53.60242673992674,False,L,1
+100000231830,La Jolla Pharmaceutical Company,La Jolla Pharmaceutical Company,100.0,True,L,1
+100000005400,"Lantheus Medical Imaging, Inc.",Lantheus Medical Imaging Inc,100.0,True,L,1
+100000011182,"Leadiant Biosciences, Inc.",Leadiant Biosciences Inc,100.0,True,L,1
+100001376989,Levita Magnetics International Corp.,LNK International Inc,56.04709431816652,False,L,1
+100000181746,"Lexicon Pharmaceuticals, Inc.",Lexicon Pharmaceuticals Inc,100.0,True,L,1
+100000886823,"Lexington Medical, Inc.",Lukare Medical LLC,50.81471697183272,False,L,1
+100000005636,Liberty Surgical Inc.,Liberty Pharmaceuticals Inc,53.02251552795032,False,L,1
+100000005636,"Liberty Surgical, Inc",Liberty Pharmaceuticals Inc,53.02251552795032,False,L,1
+100000136445,Liebel-Flarsheim LLC,Liebel-Flarsheim Company LLC,100.0,True,L,1
+100000131377,Life Molecular Imaging Ltd,Life Molecular Imaging Ltd,100.0,True,L,1
+100000010863,Luminex Molecular Diagnostics,Life Molecular Imaging Ltd,54.415747741102706,False,L,1
+100000000236,Lundbeck LLC,Lundbeck Pharmaceuticals LLC,55.5,False,L,1
+100000291821,Lupin Inc.,Lupin Pharma,58.83823529411765,False,L,1
+100001341942,Luye Pharma (USA) Ltd.,LEO Pharma Inc,55.015686274509804,False,L,1
+100000961869,"MACROGENICS, INC.",MacroGenics Inc,100.0,True,M,1
+100000136519,MAYNE PHARMA COMMERCIAL LLC,Mayne Pharma Commercial LLC,100.0,True,M,1
+100000136519,MAYNE PHARMA INC.,Mayne Pharma,100.0,True,M,1
+100000000354,"MDD US Operations, LLC",MDD US Operations LLC,100.0,True,M,1
+100000010999,MED-EL Corporation,Medefil Inc,59.878205128205124,False,M,1
+100000010466,MEDELA LLC,Medefil Inc,60.104395604395606,False,M,1
+100000061326,"MEDEXUS PHARMA, INC.",Medexus Pharma Inc,100.0,True,M,1
+100000966854,"MEDICAROID, INC.",Medarbor Llc,53.55833333333334,False,M,1
+100000471811,MEDICEM INC.,Medcore LLC,56.40659340659341,False,M,1
+100000005363,MEDICOMP INC,Medcore LLC,53.71314102564102,False,M,1
+100000010858,MEDIVATION INC.,MedVantx Inc,54.34583333333333,False,M,1
+100000010858,MEDIVATION LLC.,MedVantx Inc,54.34583333333333,False,M,1
+100000005431,MEDLINE INDUSTRIES LP,Medline Industries LP,100.0,True,M,1
+100000011192,MEDTEC LLC,Medcore LLC,51.485897435897435,False,M,1
+100000011192,"MEDTEC, Inc.",Medcore LLC,51.485897435897435,False,M,1
+100000000303,"MERIDIAN MEDICAL TECHNOLOGIES, INC.",Meridian Medical Technologies Inc,100.0,True,M,1
+100000005376,"MERZ NORTH AMERICA, INC.",Merz North America Inc,100.0,True,M,1
+100000486811,MILLICENT US INC,Millicent US Inc,100.0,True,M,1
+100000011013,"MIS Implants Technologies, Inc.",Meridian Medical Technologies Inc,51.83715548818997,False,M,1
+100000506814,"MIS Technologies, LLC",Meridian Medical Technologies Inc,55.42970032840723,False,M,1
+100000000186,MISSION PHARMACAL COMPANY,Mission Pharmacal,100.0,True,M,1
+100000191780,"MITSUBISHI TANABE PHARMA AMERICA, INC.",Mitsubishi Tanabe Pharma America Inc,100.0,True,M,1
+100000196799,MITSUBISHI TANABE PHARMA CORPORATION,Mitsubishi Tanabe Pharma America Inc,69.25,False,M,1
+100000191781,"MITSUBISHI TANABE PHARMA DEVELOPMENT AMERICA, INC.",Mitsubishi Tanabe Pharma America Inc,67.3753117143784,False,M,1
+100000191779,"MITSUBISHI TANABE PHARMA HOLDINGS AMERICA, INC.",Mitsubishi Tanabe Pharma America Inc,68.61082474604486,False,M,1
+100000136516,"MIZUHO AMERICA, INC.",Merz North America Inc,53.933229813664596,False,M,1
+100001448154,Madrigal Pharmaceuticals,Madrigal Pharmaceuticals Inc,100.0,True,M,1
+100000971856,"Mahana Therapeutics, Inc.",MC2 Therapeutics Ltd,62.11166385792066,False,M,1
+100000826829,Mallinckrodt Hospital Products Inc.,Mallinckrodt Hospital Products Inc,100.0,True,M,1
+100000005429,Mallinckrodt LLC,Mallinckrodt Inc,100.0,True,M,1
+100000151695,MannKind Corporation,Mannkind Corporation,100.0,True,M,1
+100000151695,Mannkind Corporation,Mannkind Corporation,100.0,True,M,1
+100000806858,"Manual Surgical Sciences, LLC",MATERNAL SCIENCE LLC,51.31216931216932,False,M,1
+100000010811,"Marine Polymer Technologies, Inc.",Meridian Medical Technologies Inc,53.67993860212751,False,M,1
+100001081885,"Marinus Pharmaceuticals, Inc.",Marinus Pharmaceuticals Inc,100.0,True,M,1
+100000246807,"Maruho Medical, Inc.",MCLAREN MEDICAL INC,58.04996555168969,False,M,1
+100001351928,"Masters Drug Company, Inc.",Mark Cuban Cost Plus Drug Company PBC,51.04125177809388,False,M,1
+100000011130,Materialise NV,MATERNAL SCIENCE LLC,53.79761904761905,False,M,1
+100000011027,"Mauna Kea Technologies, Inc.",Meridian Medical Technologies Inc,56.15891944964754,False,M,1
+100000010656,McKesson Corporation,McKesson Corporation,100.0,True,M,1
+100000971858,McKesson Drug Company LLC,McKesson Corporation,65.51282051282051,False,M,1
+100000010768,"McKesson Medical-Surgical, Inc.",McKesson Corporation,54.92969696969697,False,M,1
+100000971860,McKesson Plasma and Biologics LLC,McKesson Corporation,52.962721342031685,False,M,1
+100001351966,"McKesson Sourcing Services, Inc.",McKesson Corporation,54.393665158371036,False,M,1
+100000010520,"McKesson Specialty Care Distribution, LLC",Meijer Distribution Inc,52.20181869630087,False,M,1
+100000005700,Medartis Inc.,Medarbor Llc,51.69230769230769,False,M,1
+100000141538,Medela AG,Medefil Inc,52.392857142857146,False,M,1
+100000061326,"Medexus Pharma, Inc.",Medexus Pharma Inc,100.0,True,M,1
+100000471811,Medicem Inc.,Medcore LLC,56.40659340659341,False,M,1
+100000136411,Medicines360,The Medicines Company,54.56074481074481,False,M,1
+100000011086,"Medicrea USA, Corp.",Medunik USA,53.150032938076414,False,M,1
+100000136550,Medicure Pharma Inc.,Medecor Pharma LLC,63.250555766073006,False,M,1
+100000000134,"Medimetriks Pharmaceuticals, Inc.",Medimetriks Pharmaceuticals,100.0,True,M,1
+100000011206,"Medistim USA, Inc.",Medunik USA,53.587532938076414,False,M,1
+100000916824,Meditrina,MediLink A/S,51.05952380952381,False,M,1
+100000005494,"Medivance, Inc.",MedVantx Inc,56.252450980392155,False,M,1
+100000010598,Medivators Inc.,MedVantx Inc,54.05833333333334,False,M,1
+100000005431,Medline Industries LP,Medline Industries LP,100.0,True,M,1
+100000005431,"Medline Industries, Inc.",Medline Industries Inc,100.0,True,M,1
+100000010391,"Medtronic MiniMed, Inc.",Medtronic Neuromodulation,53.37420294377698,False,M,1
+100000010383,"Medtronic USA, Inc.",Medunik USA,57.45337995337995,False,M,1
+100000010384,"Medtronic Vascular, Inc.",Medtronic Neuromodulation,51.46183831672203,False,M,1
+100000000106,"Medtronic, Inc.",Medtronic Neuromodulation,56.60941176470588,False,M,1
+100001341927,"Meitheal Pharmaceuticals, Inc.",Meitheal Pharmaceuticals Inc,100.0,True,M,1
+100000196838,"Melinta Therapeutics, LLC",Melinta Therapeutics LLC,100.0,True,M,1
+100000746811,"Merakris Therapeutics, Inc.",Mirati Therapeutics Inc,63.68177797434763,False,M,1
+100000000053,Merck Sharp & Dohme Corporation,Merck Sharp & Dohme Corporation,100.0,True,M,1
+100000000053,Merck Sharp & Dohme LLC,Merck Sharp & Dohme Corporation,100.0,True,M,1
+100000196794,"Merete Technologies, Inc",Meridian Medical Technologies Inc,56.05846121306669,False,M,1
+100000136537,Merge Healthcare Incorporated,Mylan Consumer Healthcare Inc,54.48260497632449,False,M,1
+100000005376,"Merz North America, Inc.",Merz North America Inc,100.0,True,M,1
+100000005377,"Merz Pharmaceuticals, LLC",Merz Pharmaceuticals LLC,100.0,True,M,1
+100000816819,"Mesa Biotech, Inc.",Marina BioTech,59.54725274725275,False,M,1
+100001116890,Metacel Pharmaceuticals LLC,Metacel Pharmaceuticals LLC,100.0,True,M,1
+100000431811,Metuchen Pharmaceuticals,Metuchen Pharmaceuticals LLC,100.0,True,M,1
+100001171892,MicroPort NaviBot International LLC,Medicure International Inc,53.73894123391993,False,M,1
+100000010790,Microgenics Corporation,MacroGenics Inc,68.72727272727273,False,M,1
+100000826854,"Micromedics, Inc.",MacroGenics Inc,56.18181818181819,False,M,1
+100001451202,Midwest Medical Resources Inc,MHC Medical Products LLC,50.714254385964914,False,M,1
+100000806857,Mighty Oak Medical,MPM Medical LLC,51.73609965352252,False,M,1
+100000000188,"Milliken Healthcare Products, LLC",Mölnlycke Health Care US LLC,51.03427822177822,False,M,1
+100001376985,"Mirati Therapeutics, Inc.",Mirati Therapeutics Inc,100.0,True,M,1
+100001156888,"Mirum Pharmaceuticals, Inc.",Mirum Pharmaceuticals Inc,100.0,True,M,1
+100000010950,"Mirum Pharmaceuticals, Inc.",Mirum Pharmaceuticals Inc,100.0,True,M,1
+100001301927,"Mission Medical Distribution, LLC",Meijer Distribution Inc,53.44785963278133,False,M,1
+100000000186,Mission Pharmacal Company,Mission Pharmacal,100.0,True,M,1
+100000191780,"Mitsubishi Tanabe Pharma America, Inc.",Mitsubishi Tanabe Pharma America Inc,100.0,True,M,1
+100000196799,Mitsubishi Tanabe Pharma Corporation,Mitsubishi Tanabe Pharma America Inc,69.25,False,M,1
+100000191781,"Mitsubishi Tanabe Pharma Development America, Inc.",Mitsubishi Tanabe Pharma America Inc,67.3753117143784,False,M,1
+100000011188,"Mobius Therapeutics, LLC",Mobius Therapeutics LLC,100.0,True,M,1
+100000961851,"Moderna TX, Inc.",Moderna US Inc,63.04183006535948,False,M,1
+100000961851,"ModernaTX, Inc.",Moderna US Inc,59.02543859649123,False,M,1
+100000010368,"Molnlycke Health Care US, LLC",Molnlycke Health Care,72.29166666666667,False,M,1
+100000010630,Monaghan Medical Corporation,MPM Medical LLC,53.657795055821374,False,M,1
+100000000210,Monteris Medical Corporation,MPM Medical LLC,54.63412081339713,False,M,1
+100001331927,Mozarc Medical US LLC,MHC Medical Products LLC,53.97008152748518,False,M,1
+100001447255,"Music City Medical Technologies, LLC",Meridian Medical Technologies Inc,59.47790685796009,False,M,1
+100001176912,"Mycovia Pharmaceuticals, Inc.",Mycovia Pharmaceuticals Inc,100.0,True,M,1
+100000005518,Mylan Inc.,Mylan Specialty LP,53.050724637681164,False,M,1
+100000005575,Mylan Institutional Inc.,Mylan Institutional Inc,100.0,True,M,1
+100000191768,Mylan LLC,Mylan Specialty LP,53.050724637681164,False,M,1
+100000005572,Mylan Pharmaceuticals Inc.,Mylan Pharmaceuticals Inc,100.0,True,M,1
+100000005572,Mylan Specialty L.P.,Mylan Specialty LP,100.0,True,M,1
+100000005573,Mylan Specialty L.P.,Mylan Specialty LP,100.0,True,M,1
+100000931824,Myovant Sciences Inc.,MATERNAL SCIENCE LLC,53.892857142857146,False,M,1
+100000136378,"Myriad Genetic Laboratories, Inc.",Mayer Laboratories Inc,57.02598566308244,False,M,1
+100000806836,NATUS MEDICAL INCORPORATED,NOVANA MEDICAL LLC,57.05851338677426,False,N,1
+100000781815,"NDC MSV, Inc.",NDC Inc,59.0,False,N,1
+100000010697,"NEUROPACE, INC.",NeurogesX Inc,53.83333333333333,False,N,1
+100000010605,"NEW WORLD MEDICAL,INC.",New World Imports,51.72021611139258,False,N,1
+100001106885,"NOBELPHARMA AMERICA, LLC",NOBELPHARMA AMERICA LLC,100.0,True,N,1
+100000000228,NOVARTIS PHARMACEUTICALS CORPORATION,Novartis Pharmaceuticals Corporation,100.0,True,N,1
+100000616811,"NS Pharma, Inc.",NS Pharma Inc,100.0,True,N,1
+100000011233,NSK AMERICA CORPORATION,NOBELPHARMA AMERICA LLC,50.880382775119614,False,N,1
+100001448428,NURAMI MEDICAL LTD,NOVANA MEDICAL LLC,55.576190476190476,False,N,1
+100000446811,NX Development Corp.,NX DEVELOPMENT Corporation,100.0,True,N,1
+100000005488,"NXSTAGE MEDICAL, INC.",NOVANA MEDICAL LLC,53.519771607702644,False,N,1
+100000786819,"Nabriva Therapeutics, plc",Nabriva Therapeutics US Inc,68.50137122467059,False,N,1
+100000826844,"Nalu Medical, Inc.",NOVANA MEDICAL LLC,59.16673326673327,False,N,1
+100000376810,NanoHive Medical LLC,NOVANA MEDICAL LLC,56.974015567765576,False,N,1
+100000151642,Napo Pharmaceuticals Inc,Napo Pharmaceuticals Inc,100.0,True,N,1
+100000000065,National Dentex LLC,National Vitamin Company,51.569716626290955,False,N,1
+100000136557,"Neos Therapeutics, LP",Neos Therapeutics LP,100.0,True,N,1
+100000096361,Neovasc Medical Inc,NOVANA MEDICAL LLC,61.859601350118595,False,N,1
+100001036884,Neptune Medical Inc.,NOVANA MEDICAL LLC,53.74704433497537,False,N,1
+100000791823,"NeurAxis, Inc.",Neurelis Inc,58.5,False,N,1
+100000806859,"Neurelis, Inc.",Neurelis Inc,100.0,True,N,1
+100001141890,Neurent Medical Limited,NOVANA MEDICAL LLC,53.29704433497537,False,N,1
+100000000150,NeuroMetrix Inc,NeurogesX Inc,55.74242424242424,False,N,1
+100000171742,"NeuroVasc Technologies, Inc.",Novadaq Technologies Inc,60.346574658571555,False,N,1
+100000186746,"Neurocrine BioSciences, Inc.",Neurocrine Biosciences Inc,100.0,True,N,1
+100000186746,"Neurocrine Biosciences, Inc.",Neurocrine Biosciences Inc,100.0,True,N,1
+100000005450,"Neuronetics, Inc.",Neurelis Inc,57.04286283891547,False,N,1
+100000971885,"New American Therapeutics, Inc.",New American Therapeutics,100.0,True,N,1
+100001447453,Nexus Medical Technologies Llc,Novadaq Technologies Inc,53.14757525083612,False,N,1
+100000836821,Nipro Medical Corporation,NOVANA MEDICAL LLC,56.188948169382954,False,N,1
+100001321927,Noah Medical Corporation,NOVANA MEDICAL LLC,64.11721611721612,False,N,1
+100001449194,"Noctrix Health, Inc.",Novatris Consumer Health Inc,51.424934714408394,False,N,1
+100001151891,Nonagen Bioscience Corp,Nielsen BioSciences Inc,57.492913025807766,False,N,1
+100000010589,"Nonin Medical, Inc.",NOVANA MEDICAL LLC,61.00339113382592,False,N,1
+100001451061,"Nordic Pharma, Inc.",Nordic Pharma Inc,100.0,True,N,1
+100000010672,"NormaTec Industries, LP",National Pharma Industries Inc,52.39119944383103,False,N,1
+100000226823,"North American Rescue, LLC",New American Therapeutics,50.00248883077259,False,N,1
+100000326808,"Northgate Technologies, Inc.",Novadaq Technologies Inc,57.58311688311689,False,N,1
+100000000095,Novabone Products,Neptune Products LLC,56.31325510001981,False,N,1
+100000000058,Novartis Pharma AG,Novartis Pharmaceuticals Corporation,59.42424242424242,False,N,1
+100000000228,Novartis Pharmaceuticals Corporation,Novartis Pharmaceuticals Corporation,100.0,True,N,1
+100000136540,Novastep Inc.,Novatech SA,53.03673957621326,False,N,1
+100001281931,Novavax Inc,Novavax Inc,100.0,True,N,1
+100000000219,"Noven Pharmaceuticals, Inc.",Noble Pharmaceuticals LLC,68.52380952380952,False,N,1
+100000000221,"Noven Therapeutics, LLC",Noven Therapeutics LLC,100.0,True,N,1
+100000010956,Novian Health Inc.,NOVANA MEDICAL LLC,51.98115773115773,False,N,1
+100000000163,Novo Nordisk AS,Novo Nordisk,70.5111111111111,False,N,1
+100000000144,Novo Nordisk AS,Novo Nordisk,70.5111111111111,False,N,1
+100000000155,Novo Nordisk Health Care AG,Novo Nordisk,59.871794871794876,False,N,1
+100000000144,Novo Nordisk Inc,Novo Nordisk,100.0,True,N,1
+100000196804,"Novo Nordisk Research Center Seattle, Inc.",Novo Nordisk,55.5,False,N,1
+100000196804,"Novo Nordisk US Research & Development, Inc.",Novo Nordisk,54.05384615384615,False,N,1
+100000756812,Novonate Inc,Novatech SA,52.68446684894053,False,N,1
+100000081358,Nuo Therapeutics,Noven Therapeutics LLC,66.21973039215686,False,N,1
+100001448429,Nurami Medical Inc,NOVANA MEDICAL LLC,55.576190476190476,False,N,1
+100000010412,"Nuwellis, Inc.",Neurelis Inc,57.0,False,N,1
+100000216792,"Nvision Biomedical Technologies, Inc.",Novadaq Technologies Inc,52.453879401222856,False,N,1
+100000005488,"NxStage Medical, Inc.",NOVANA MEDICAL LLC,53.519771607702644,False,N,1
+100001306927,"nView medical, Inc",NOVANA MEDICAL LLC,56.63894816938295,False,N,1
+100000000320,"OCULUS, Inc.",Oculus Surgical Inc,58.2,False,O,1
+100000010553,"OMNIlife science, Inc",Ohemo Life Sciences Inc,56.60467196216347,False,O,1
+100000151639,"OPKO Pharmaceuticals, LLC",OPKO Pharmaceuticals LLC,100.0,True,O,1
+100000011175,ORGANOGENESIS INC.,Organon LLC,57.84615384615385,False,O,1
+100001351950,ORPHALAN INC,Orphalan SA,68.6555023923445,False,O,1
+100000151568,"OWP Pharmaceuticals, Inc.",OWP Pharmaceuticals Inc,100.0,True,O,1
+100000010699,"Octapharma USA, Inc.",Octapharma USA Inc,100.0,True,O,1
+100000076361,"Ocular Therapeutix, Inc.",Ocular Therapeutix Inc,100.0,True,O,1
+100000971864,Oculus Surgical Inc.,Oculus Surgical Inc,100.0,True,O,1
+100000136485,Omeros Corporation,Omeros Corporation,100.0,True,O,1
+100001449731,"On Target Laboratories, Inc",Owen Laboratories,59.90739141689953,False,O,1
+100000316824,"One Surgical, Inc.",Oculus Surgical Inc,58.7973544973545,False,O,1
+100000136407,"Onkos Surgical, Inc.",Oculus Surgical Inc,58.281900283624424,False,O,1
+100000011125,"OptiNose US, Inc.",OptiNose US Inc,100.0,True,O,1
+100000011125,"Optinose US, Inc.",OptiNose US Inc,100.0,True,O,1
+100000000312,"Optos, Inc.",OptiNose US Inc,51.84090909090909,False,O,1
+100000226818,"OraPharma, a division of Bausch Health US, LLC",OraPharma Inc,50.53214285714286,False,O,1
+100001447187,Orchard Therapeutics North America,Oliva Therapeutics LLC,50.962732528909,False,O,1
+100000061290,"Orexo US, Inc.",Orexo US Inc,100.0,True,O,1
+100000316831,OrganOx Ltd,Organon LLC,66.23076923076923,False,O,1
+100000011175,Organogenesis Inc.,Organon LLC,57.84615384615385,False,O,1
+100000866821,Organon LLC,Organon LLC,100.0,True,O,1
+100000866821,Organon Llc,Organon LLC,100.0,True,O,1
+100000011071,Orion Corporation,Organon LLC,50.81904761904762,False,O,1
+100000151558,OrphAI Therapeutics Inc.,Oliva Therapeutics LLC,62.23626422475107,False,O,1
+100000016250,Osmotica Pharmaceutical Corp.,Oba Pharmaceuticals Inc,61.383215070925395,False,O,1
+100000151634,"Otonomy, Inc.",Otonomy Inc,100.0,True,O,1
+100000010723,"Otsuka America Pharmaceutical, Inc.",Otsuka America Pharmaceutical Inc,100.0,True,O,1
+100000000112,"Otsuka Pharmaceutical Co., Ltd.",Otsuka America Pharmaceutical Inc,64.2091913948686,False,O,1
+100000010725,"Otsuka Pharmaceutical Development & Commercialization, Inc.",Otsuka America Pharmaceutical Inc,54.02352589938797,False,O,1
+100001351963,"Otter Pharmaceuticals, LLC",Oncor Pharmaceuticals,65.80219780219781,False,O,1
+100001451028,"Oxford Performance Materials, Inc.",Oxford Pharmaceuticals LLC,50.58035654675802,False,O,1
+100001156899,"Oyster Point Pharma, Inc.",Oyster Point Pharma,100.0,True,O,1
+100000486812,"PALETTE LIFE SCIENCES, INC.",Protein Sciences Corporation,51.710752648252644,False,P,1
+100000010989,"PAR Pharmaceutical, Inc.",Par Pharmaceutical,100.0,True,P,1
+100000011198,"PARI Respiratory Equipment, Inc.",Pari Respiratory Equipment Inc,100.0,True,P,1
+100000011158,"PATTERSON COMPANIES, INC.",Patterson Dental,53.75167004048583,False,P,1
+100000071378,PFIZER CANADA INC,Pfizer Inc,60.48987854251012,False,P,1
+100000841821,PFIZER CHILE S.A.,Pfizer Inc,58.2,False,P,1
+100000000286,PFIZER INC.,Pfizer Inc,100.0,True,P,1
+100000000167,PFIZER INTERNATIONAL LLC,Pfizer Inc,54.05384615384615,False,P,1
+100000136505,"PFIZER INVESTMENT CO., LTD",Pfizer Inc,54.05384615384615,False,P,1
+100000000323,PFIZER LIMITED,Pfizer Inc,100.0,True,P,1
+100000061400,PFIZER PHARMA GMBH,Pfizer Inc,55.5,False,P,1
+100000000294,PFIZER PHARMACEUTICALS LLC,Par Pharmaceuticals Inc,66.6064219557197,False,P,1
+100000841822,PFIZER S.A.,Pfizer Inc,67.0,False,P,1
+100000846822,PFIZER S.A.S.,Pfizer Inc,65.05,False,P,1
+100000846821,"PFIZER ZONA FRANCA, S.A.",Pfizer Inc,53.41269841269841,False,P,1
+100000000307,PHARMACIA & UPJOHN COMPANY LLC,Pharmacia & Upjohn Company LLC,100.0,True,P,1
+100000086396,PIRAMAL CRITICAL CARE,Piramal Critical Care,100.0,True,P,1
+100001146888,POLARIS TECHNOLOGY SOLUTIONS LLC,Palatin Technologies,51.195543758043755,False,P,1
+100000246827,"PORTOLA PHARMACEUTICALS, LLC",Portola Pharmaceuticals Inc,100.0,True,P,1
+100001449595,PRAMAND LLC,pH R&D LLC,52.50297619047619,False,P,1
+100000010596,"PRECISION SPINE, INC.",Precision Dose Inc,61.04729064039409,False,P,1
+100000771811,PRINCIPIA BIOPHARMA INC.,Porton Biopharma Limited,55.839592972816654,False,P,1
+100000506815,"PROGENICS PHARMACEUTICALS, INC.",Progenics Pharmaceuticals Inc,100.0,True,P,1
+100001181905,PROTEGA PHARMACEUTIALS INC,Protega Pharmaceuticals Inc,73.30390865173473,False,P,1
+100000191753,"PTC Therapeutics, Inc.",PTC Therapeutics Inc,100.0,True,P,1
+100000191750,"PUMA BIOTECHNOLOGY, INC.",Puma Biotechnology Inc,100.0,True,P,1
+100000000135,Pacira Pharmaceuticals Incorporated,Pacira Pharmaceuticals Inc,100.0,True,P,1
+100000291812,"Pacira Therapeutics, Inc.",PTC Therapeutics Inc,64.69404167746954,False,P,1
+100001066883,Paladin Technology Solutions,Palatin Technologies,58.02722007722008,False,P,1
+100000486812,"Palette Life Sciences, Inc.",Protein Sciences Corporation,51.710752648252644,False,P,1
+100000010989,"Par Pharmaceutical, Inc.",Par Pharmaceutical,100.0,True,P,1
+100000076379,"ParaPRO, LLC",ParaPRO LLC,100.0,True,P,1
+100000010964,"Paragon 28, Inc.",Paragon BioTeck Inc,56.64183006535948,False,P,1
+100000971875,"Paragonix Technologies, Inc.",Palatin Technologies,61.237806637806635,False,P,1
+100000476817,"Paratek Pharmaceuticals, Inc.",Paratek Pharmaceuticals Inc,100.0,True,P,1
+100000010807,"Parsolex GMP Center, Inc.",Parsolex Gmp Center Inc,100.0,True,P,1
+100000221806,"Partner Therapeutics, Inc.",Partner Therapeutics Inc,100.0,True,P,1
+100000966849,"Pear Therapeutics (US), Inc.",Pernix Therapeutics,60.44079109451381,False,P,1
+100000010374,Perrigo Company plc,Perrigo Company,56.95141700404858,False,P,1
+100000521826,Persion Pharmaceuticals LLC,Persion Pharmaceuticals LLC,100.0,True,P,1
+100000010392,"Peter Brasseler Holdings, LLC",Prestige Brands Holdings Inc,56.7,False,P,1
+100000000286,Pfizer Inc.,Pfizer Inc,100.0,True,P,1
+100000010419,Phadia US Inc.,Padagis US LLC,55.98377192982456,False,P,1
+100001176899,PharmaEssentia USA Corporation,Pharmaessentia Usa Corporation,100.0,True,P,1
+100000826825,Pharmaceutical Business Consultants Limited,Pharmaceutical Associates Inc,56.79148000935235,False,P,1
+100000801827,Pharmacosmos Therapeutics Inc.,Pharmacosmos Therapeutics Inc,100.0,True,P,1
+100000136439,"Pharmacyclics LLC, An AbbVie Company",Pharmacyclics LLC,61.19444444444444,False,P,1
+100000136439,"Pharmacyclics LLC, an AbbVie Company",Pharmacyclics LLC,61.19444444444444,False,P,1
+100000151690,"Pharming Healthcare, Inc.",Pharming Healthcare Inc,100.0,True,P,1
+100001176938,"Phathom Pharmaceuticals, Inc.",Phathom Pharmaceuticals Inc,100.0,True,P,1
+100000000198,Philips Electronics North America Corporation,Pharmaceutica North America,50.40165258022401,False,P,1
+100000000198,Philips North America LLC,Pharmaceutica North America,54.399198568316216,False,P,1
+100000136484,Phoenix Sleep Solutions LLC,PHOENIX HEALTHCARE SOLUTIONS LLC,58.51857264644988,False,P,1
+100000010742,Photocure Inc,Photocure Inc,100.0,True,P,1
+100001176906,PhotoniCare Inc,Photocure Inc,60.99134199134199,False,P,1
+100000151551,"Phraxis, Inc.",Pharmics Inc,52.24908424908425,False,P,1
+100000011193,"Pierre Fabre Pharmaceuticals, Inc.",Pierre Fabre Pharmaceuticals Inc,100.0,True,P,1
+100000000148,"Pinnacle Biologics, Inc",Pinnacle Biologics Inc,100.0,True,P,1
+100000136578,"Pinnacle Transplant Technologies, LLC",Palatin Technologies,54.561791497975705,False,P,1
+100000010528,"Pinnacle, Inc",Pinnacle Biologics Inc,59.871794871794876,False,P,1
+100000086396,Piramal Critical Care,Piramal Critical Care,100.0,True,P,1
+100001146888,Polaris Technology Solutions LLC,Palatin Technologies,51.195543758043755,False,P,1
+100000246827,"Portola Pharmaceuticals, LLC",Portola Pharmaceuticals Inc,100.0,True,P,1
+100001176892,Precision Medical Products Inc.,Precision Dose Inc,54.50561395126613,False,P,1
+100000686811,"Precision Medical Products, Inc.",Precision Dose Inc,54.50561395126613,False,P,1
+100000010596,"Precision Spine, Inc.",Precision Dose Inc,61.04729064039409,False,P,1
+100000000202,Premier Dental Products Company,Premier Dental Products Company,100.0,True,P,1
+100000951824,"Premier Healthcare Solutions, Inc.",PHOENIX HEALTHCARE SOLUTIONS LLC,64.12567385444744,False,P,1
+100000646812,Profound Medical Corp.,Profounda Inc,56.69926470588236,False,P,1
+100000506815,"Progenics Pharmaceuticals, Inc.",Progenics Pharmaceuticals Inc,100.0,True,P,1
+100000071362,"Prosidyan, Inc",ProStrakan Inc,50.62894736842105,False,P,1
+100000186750,Provepharm Inc.,Provepharm Inc,100.0,True,P,1
+100000000277,"PruGen, Inc. Pharmaceuticals",PruGen Inc Pharmaceuticals,100.0,True,P,1
+100000191750,"Puma Biotechnology, Inc.",Puma Biotechnology Inc,100.0,True,P,1
+100000005432,Purdue Pharma L.P.,Purdue Pharma LP,100.0,True,P,1
+100000521816,Purdue Pharmaceuticals L.P.,PruGen Pharmaceuticals,63.98500967117988,False,P,1
+100000010486,"PureLife, LLC",PureTek Corporation,53.62391774891775,False,P,1
+100001377000,"Pyros Pharmaceuticals, Inc.",Pyros Pharmaceuticals Inc,100.0,True,P,1
+100001376986,pharmaand GmbH,pharmaand GmbH,100.0,True,P,1
+100000626812,QAPEL MEDICAL INC,QOL Medical LLC,63.31911421911422,False,Q,1
+100000961866,"QED Therapeutics, Inc.",QED Therapeutics Inc,100.0,True,Q,1
+100000010804,"QOL Medical, LLC",QOL Medical LLC,100.0,True,Q,1
+100000005483,Quest Medical Inc.,QOL Medical LLC,58.63492209544841,False,Q,1
+100000136422,R-PHARM US LLC,R-Pharm US Operating LLC,61.833333333333336,False,R,1
+100000136422,R-Pharm US LLC,R-Pharm US Operating LLC,61.833333333333336,False,R,1
+100000010515,"RARE DISEASE THERAPEUTICS, INC.",Rare Disease Therapeutics Inc,100.0,True,R,1
+100000005385,REBISCAN,Resical Inc,53.23809523809524,False,R,1
+100000011082,RECORDATI_RARE_DISEASES_INC.,RECORDATI RARE DISEASES INC,50.802898550724635,False,R,1
+100001448152,"REVANCE THERAPEUTICS, INC.",Revance Therapeutics Inc,100.0,True,R,1
+100000136405,"ROCHE DIABETES CARE, INC.",Roche Laboratories Inc,51.12735385761702,False,R,1
+100000806853,"RTI SURGICAL, INC",Rayner Surgical Inc,58.86683501683502,False,R,1
+100000806853,"RTI Surgical, Inc",Rayner Surgical Inc,58.86683501683502,False,R,1
+100000181748,"Radius Health, Inc.",Radius Health Inc,100.0,True,R,1
+100000005680,RaySearch Laboratories AB (publ),Roche Laboratories Inc,53.314419934640526,False,R,1
+100001448052,Recor Medical Inc,Rockwell Medical Inc,53.910824807376535,False,R,1
+100000751811,RedHill Biopharma Inc.,RedHill Biopharma Ltd,100.0,True,R,1
+100000186749,"Reel Surgical, Inc.",Rayner Surgical Inc,60.270876949137815,False,R,1
+100000826839,"RefleXion Medical, Inc.",Rockwell Medical Inc,51.30788084464555,False,R,1
+100001351948,Reflow Medical Inc,Rockwell Medical Inc,56.42456501831502,False,R,1
+100000136416,"Regeneron Healthcare Solutions, Inc.",Regeneron Pharmaceuticals Inc,51.17611055611056,False,R,1
+100000000069,"Regeneron Pharmaceuticals, Inc.",Regeneron Pharmaceuticals Inc,100.0,True,R,1
+100000010783,"Remel, Inc.",Reliamed,50.96923076923076,False,R,1
+100000966859,RenalPro Medical Inc.,Rockwell Medical Inc,54.44230769230769,False,R,1
+100000005736,ResMed Corp,Reliamed,55.214285714285715,False,R,1
+100000005736,Resmed Corp,Reliamed,55.214285714285715,False,R,1
+100000010421,"Respicardia, Inc.",Resical Inc,54.81385281385282,False,R,1
+100000151546,Respire Medical Holdings LLC,Rising Pharma Holdings Inc,50.529150197628454,False,R,1
+100000005459,Rhodes Pharmaceuticals L.P.,Rhodes Pharmaceuticals L P,73.70014159509958,False,R,1
+100000966832,"Rhythm Pharmaceuticals, Inc.",Rhythm Pharmaceuticals Inc,100.0,True,R,1
+100000226808,"Rigel Pharmaceuticals, Inc.",Rigel Pharmaceuticals Inc,100.0,True,R,1
+100000010433,"Roanoke Area Surgical Lasers, LLC",Rayner Surgical Inc,51.025424912128656,False,R,1
+100000136405,"Roche Diabetes Care, Inc.",Roche Laboratories Inc,51.12735385761702,False,R,1
+100000005496,Rochester Medical Corporation,Rochester Pharmaceuticals,58.87117491441021,False,R,1
+100000010382,"Rockwell Medical, Inc.",Rockwell Medical Inc,100.0,True,R,1
+100000011162,"Romark Laboratories, LC",Romark Laboratories LC,100.0,True,R,1
+100000796823,"Route 92 Medical, Inc.",Rockwell Medical Inc,53.75,False,R,1
+100000000299,SANOFI PASTEUR INC.,Sanofi Pasteur Inc,100.0,True,S,1
+100000000067,SANOFI US SERVICES INC.,Sanofi US Corporation,61.833333333333336,False,S,1
+100000000076,SANOFI-AVENTIS U.S. LLC,sanofi-aventis US LLC,100.0,True,S,1
+100001447718,SC MEDICA,Suneva Medical Inc,53.444490114886534,False,S,1
+100000856821,"SCA Pharmaceuticals, LLC",SOLA Pharmaceuticals LLC,69.91144849302744,False,S,1
+100000221799,SCILEX PHARMACEUTICALS INC.,Scilex Pharmaceuticals Inc,100.0,True,S,1
+100001326929,SCPHARMACEUTICALS INC.,scPharmaceuticals Inc,100.0,True,S,1
+100000971833,"SCYNEXIS, Inc.",SCYNEXIS INC,100.0,True,S,1
+100000000279,SEAGEN INC.,Seagen Inc,100.0,True,S,1
+100000291809,SERVIER AFFAIRES MEDICALES,Servier Pharmaceuticals LLC,53.97369917866812,False,S,1
+100000246816,SERVIER PHARMACEUTICALS LLC,Servier Pharmaceuticals LLC,100.0,True,S,1
+100001176921,SHIELD THERAPEUTICS INC,Sage Therapeutics Inc,63.25655314757482,False,S,1
+100001448894,SHORLA ONCOLOGY INC.,Shorla Oncology Inc,100.0,True,S,1
+100000136433,"SI-TECHNOLOGY, LLC",SIGA Technologies Inc,57.3318250377074,False,S,1
+100000726811,"SK Life Science, Inc.",SK Life Science Inc,100.0,True,S,1
+100001447221,SMAIO USA CORPORATION,Sanofi US Corporation,52.74929971988796,False,S,1
+100000011088,SNAP Diagnostics LLC,Simple Diagnostics,62.22111344537815,False,S,1
+100000011178,"SOBI, INC",SOFIE Co,53.233333333333334,False,S,1
+100000041254,SPACELABS HEALTHCARE INC,Solco Healthcare LLC,56.54659645909646,False,S,1
+100000971888,"SPECTRA MEDICAL DEVICES, LLC",Spectra Medical Devices LLC,100.0,True,S,1
+100000011095,SPINEART USA INC,Sintetica US LLC,52.539855072463766,False,S,1
+100000151627,"SPR Therapeutics, Inc",Spark Therapeutics Inc,69.89663714948344,False,S,1
+100000010516,STERIS CORPORATION,SteriMax Inc,58.1801948051948,False,S,1
+100000010516,STERIS Corporation,SteriMax Inc,58.1801948051948,False,S,1
+100000821819,STERIS Corporation,SteriMax Inc,58.1801948051948,False,S,1
+100001326933,"STORZ MEDICAL America, Inc.",Spectra Medical Devices LLC,51.33405091285527,False,S,1
+100000136406,"STRATA Skin Sciences, Inc.",Strategic Sourcing Services,50.4714295647337,False,S,1
+100000151589,SUN PHARMACEUTICAL INDUSTRIES INC.,Sun Pharmaceutical Industries Inc,100.0,True,S,1
+100000011169,SWAN VALLEY MEDICAL INCORPORATED,Suneva Medical Inc,55.39038592985962,False,S,1
+100000081405,SWEDISH ORPHAN BIOVITRUM AB,SWEDISH ORPHAN BIOVITRUM AB (PUBL),70.36595949855352,False,S,1
+100000116376,"SYNERGY ORTHOPEDICS, LLC",Synergy Pharmaceuticals Inc,50.43172469216519,False,S,1
+100000441812,"Sage Therapeutics, Inc.",Sage Therapeutics Inc,100.0,True,S,1
+100000066366,Sagent Pharmaceuticals,Sagent Pharmaceuticals,100.0,True,S,1
+100000066366,"Sagent Pharmaceuticals, Inc.",Sagent Pharmaceuticals,100.0,True,S,1
+100000226817,"Salix Pharmaceuticals, a division of Bausch Health US, LLC",Salix Pharmaceuticals,58.348524762908326,False,S,1
+100000151582,"Saluda Medical Americas, Inc.",Spectra Medical Devices LLC,51.025815217391305,False,S,1
+100000011020,"Salutaris Medical Devices, Inc.",Spectra Medical Devices LLC,60.4713768115942,False,S,1
+100000000062,Sandoz Inc.,Sandoz,100.0,True,S,1
+100001331929,Santen Inc.,Santen Incorporated,100.0,True,S,1
+100000151581,Saol Therapeutics Inc.,Saol Therapeutics,100.0,True,S,1
+100000071374,"Saphena Medical, Inc.",Suneva Medical Inc,58.22151067323481,False,S,1
+100001151887,"Saranas, Inc.",Santarus Inc,52.761904761904766,False,S,1
+100000181760,"Sarepta Therapeutics, Inc.",Sarepta Therapeutics Inc,100.0,True,S,1
+100000221799,Scilex Pharmaceuticals Inc.,Scilex Pharmaceuticals Inc,100.0,True,S,1
+100000000279,Seagen Inc.,Seagen Inc,100.0,True,S,1
+100000066371,Sebela Pharmaceuticals Inc.,Sebela Pharmaceuticals Inc,100.0,True,S,1
+100000046272,Sechrist Industries Inc,Snap Medical Industries,52.59890844051659,False,S,1
+100000041253,"Second Sight Medical Products, Inc.",Swiss American Products,51.1258200184658,False,S,1
+100000476812,"Secura Bio, Inc.",Secura Bio Inc,100.0,True,S,1
+100001181909,"Seigla Medical, Inc.",Suneva Medical Inc,60.357142857142854,False,S,1
+100000011101,Sekisui Diagnostics LLC,Simple Diagnostics,57.85327689510993,False,S,1
+100000011101,"Sekisui Diagnostics, LLC",Simple Diagnostics,57.85327689510993,False,S,1
+100000010595,"Sensus Healthcare, Inc.",Solco Healthcare LLC,55.76051399580812,False,S,1
+100000191754,"Sentec, Inc.",Santen Incorporated,52.60606060606061,False,S,1
+100000131384,"Sentynl Therapeutics, Inc.",Sentynl Therapeutics Inc,100.0,True,S,1
+100000005685,Septodont Inc.,Septodont Inc,100.0,True,S,1
+100000136554,Seqirus USA Inc,Seqirus USA Inc,100.0,True,S,1
+100001450594,"Sequence LifeScience, Inc",SK Life Science Inc,57.47213064713065,False,S,1
+100001351933,"Seres Therapeutics, Inc.",Somerset Therapeutics LLC,65.33577533577534,False,S,1
+100000291809,Servier Affaires Medicales,Servier Pharmaceuticals LLC,53.97369917866812,False,S,1
+100000246816,Servier Pharmaceuticals LLC,Servier Pharmaceuticals LLC,100.0,True,S,1
+100000971847,"Shalby Advanced Technologies, Inc.",SIGA Technologies Inc,54.50412923790206,False,S,1
+100001176921,Shield Therapeutics Inc,Sage Therapeutics Inc,63.25655314757482,False,S,1
+100000005589,Shionogi Inc,Shionogi Inc,100.0,True,S,1
+100000191758,"ShockWave Medical, Inc",Suneva Medical Inc,53.06534556319021,False,S,1
+100000191758,"Shockwave Medical, Inc",Suneva Medical Inc,53.06534556319021,False,S,1
+100000010385,"Siesta Medical, Inc.",Suneva Medical Inc,60.357142857142854,False,S,1
+100000010984,"Silk Road Medical, Inc.",Suneva Medical Inc,50.07424776362157,False,S,1
+100000151543,Silony Medical Corp.,Suneva Medical Inc,55.19285714285714,False,S,1
+100000086364,"Silvergate Pharmaceuticals, Inc.",Silvergate Pharmaceuticals Inc,100.0,True,S,1
+100000010918,Sirtex Medical Inc,Suneva Medical Inc,55.642857142857146,False,S,1
+100000971841,"SmartPractice Allergen Bank, L.L.C.",SmartPractice Denmark ApS,54.63684453068154,False,S,1
+100000010709,"Smiths Medical ASD, Inc.",Smith & Nephew Medical Ltd,54.36165845648604,False,S,1
+100000136483,"Snoasis Medical, LLC",Suneva Medical Inc,57.77465390681282,False,S,1
+100000011178,"Sobi, Inc",SOFIE Co,53.233333333333334,False,S,1
+100000196839,"Soleno Therapeutics, Inc.",Saol Therapeutics,66.37647031081815,False,S,1
+100001447055,Solventum Corporation,Solventum US LLC,69.25,False,S,1
+100000796824,"Sonex Health, Inc.",Safecor Health LLC,54.748717948717946,False,S,1
+100000226812,"Spark Therapeutics, Inc.",Spark Therapeutics Inc,100.0,True,S,1
+100000846824,"Spectra Medical Devices, Inc.",Spectra Medical Devices LLC,100.0,True,S,1
+100000011115,Spectrum Pharmaceuticals Inc.,Spectrum Pharmaceuticals Inc,100.0,True,S,1
+100000011095,Spineart USA Inc,Sintetica US LLC,52.539855072463766,False,S,1
+100000081403,Spirus Medical LLC,Suneva Medical Inc,55.518944099378885,False,S,1
+100001447784,"SpringWorks Therapeutics, Inc.",SpringWorks Therapeutics Inc,100.0,True,S,1
+100000481815,Stemline Therapeutics Inc.,Stemline Therapeutics Inc,100.0,True,S,1
+100000000269,Stereotaxis Inc,SteriMax Inc,51.13197767145135,False,S,1
+100000005447,"SterilMed, Inc.",SteriMax Inc,56.54411764705882,False,S,1
+100000005447,"Sterilmed, Inc.",SteriMax Inc,56.54411764705882,False,S,1
+100000136444,Stimwave Technologies Incorporated,SIGA Technologies Inc,62.46704537077989,False,S,1
+100000776812,"Stradis Medical, LLC",Suneva Medical Inc,52.7136074819733,False,S,1
+100000000261,Strategic Dentistry LLC,Strategic Sourcing Service LLC,50.56426964848017,False,S,1
+100000756813,"Stratus Medical, LLC",STRATUS PHARMACEUTICALS INC,56.99614253023864,False,S,1
+100000000101,Streck LLC,Stratatech Corporation,50.583333333333336,False,S,1
+100000000101,"Streck, Inc.",Stratatech Corporation,50.583333333333336,False,S,1
+100000181762,Strongbridge US INC.,Strongbridge US Inc,100.0,True,S,1
+100000010437,"Sumitomo Dainippon Pharma Co., Ltd.",Sumitomo Pharma America Inc,54.93178438423424,False,S,1
+100001316929,"Sumitomo Pharma America, Inc.",Sumitomo Pharma America Inc,100.0,True,S,1
+100000010437,"Sumitomo Pharma Co., Ltd.",Sumitomo Pharma America Inc,66.12324322382959,False,S,1
+100000151589,Sun Pharmaceutical Industries Inc.,Sun Pharmaceutical Industries Inc,100.0,True,S,1
+100000791819,"SunTech Medical, Inc.",Suneva Medical Inc,62.161453201970446,False,S,1
+100000000254,Sunovion Pharmaceuticals Inc.,Sunovion Pharmaceuticals Inc,100.0,True,S,1
+100000011150,"Supernus Pharmaceuticals, Inc.",Supernus Pharmaceuticals,100.0,True,S,1
+100000000140,"Surefire Medical, Inc.",Suneva Medical Inc,56.658338038772825,False,S,1
+100000000318,"Surgalign Spine Technologies, Inc.",SIGA Technologies Inc,57.750511123989824,False,S,1
+100000081405,Swedish Orphan Biovitrum AB,SWEDISH ORPHAN BIOVITRUM AB (PUBL),70.36595949855352,False,S,1
+100001311927,"Swing Therapeutics, Inc.",Sage Therapeutics Inc,64.4099891569531,False,S,1
+100000011119,Synapse Biomedical Inc,Suneva Medical Inc,53.514550264550266,False,S,1
+100000136564,Synaptive Medical Inc.,Suneva Medical Inc,55.545090438807954,False,S,1
+100000010678,"Synergeyes, Inc.",Stallergenes,50.65200534759358,False,S,1
+100000116376,"Synergy Orthopedics, LLC",Synergy Pharmaceuticals Inc,50.43172469216519,False,S,1
+100000005611,Synthes USA Products LLC,Sage Products LLC,54.90741758241759,False,S,1
+100000005567,"Sysmex America, Inc.",Sunstar Americas Inc,50.48628364389234,False,S,1
+100000061343,Sysmex Inostics Inc,Simple Diagnostics,54.60649350649351,False,S,1
+100000005687,"TARO PHARMACEUTICALS USA, INC.",Taro Pharmaceuticals USA Inc,100.0,True,T,1
+100001450494,"TAS Medical, Inc.",Thompson Medical Solutions LLC,50.139082089082095,False,T,1
+100000391810,"TETRAPHASE PHARMACEUTICALS, INC.",Tetraphase Pharmaceuticals Inc,100.0,True,T,1
+100000961857,"TG THERAPEUTICS, INC.",TG Therapeutics Inc,100.0,True,T,1
+100000961857,"TG Therapeutics, Inc.",TG Therapeutics Inc,100.0,True,T,1
+100000071373,"TOLMAR Pharmaceuticals, Inc.",TOLMAR PHARMACEUTICALS INC,100.0,True,T,1
+100000010803,"TOLMAR, INC.",TOLMAR Inc,100.0,True,T,1
+100000291820,"TOPCON HEALTHCARE SOLUTIONS, INC.",Thompson Medical Solutions LLC,55.04960605432304,False,T,1
+100000010645,"TOPCON MEDICAL SYSTEMS, INC.",Thompson Medical Solutions LLC,54.19675499938657,False,T,1
+100000010889,"Takeda Pharmaceutical Company, Limited",Takeda Pharmaceuticals Amercia Inc,63.32341828126551,False,T,1
+100000000337,"Takeda Pharmaceuticals U.S.A., Inc.",Teva Pharmaceuticals USA,67.50279744538533,False,T,1
+100000005687,"Taro Pharmaceuticals USA, Inc.",Taro Pharmaceuticals USA Inc,100.0,True,T,1
+100001448294,"Tarsus Pharmaceuticals, Inc.",Tarsus Pharmaceuticals Inc,100.0,True,T,1
+100000276807,"Teikoku Pharma USA, Inc.",TPU Pharma Inc,53.55,False,T,1
+100000936823,"Teladoc Health, Inc.",Teva Women's Health Inc,51.731373889268625,False,T,1
+100001171890,Telix Pharmaceuticals,Telix Pharmaceuticals (US) Inc,70.69967266775777,False,T,1
+100000010494,Tenex Health Inc.,Teva Women's Health Inc,52.298279167253845,False,T,1
+100000181761,TerSera Therapeutics LLC,TerSera Therapeutics LLC,100.0,True,T,1
+100000010660,"Terumo BCT, Inc.",Terumo BCT Ltd,100.0,True,T,1
+100000000291,Terumo Medical Corporation,Terumo BCT Ltd,55.93291316526611,False,T,1
+100000391810,"Tetraphase Pharmaceuticals, Inc.",Tetraphase Pharmaceuticals Inc,100.0,True,T,1
+100000000141,"Teva Pharmaceuticals USA, Inc.",Teva Pharmaceuticals USA,100.0,True,T,1
+100001146887,Thea Pharma Inc.,Thea Pharma Inc,100.0,True,T,1
+100001448395,"TheraMicro, Inc.",TheracosBio LLC,54.77544563279857,False,T,1
+100001356985,"TheracosBio, LLC",TheracosBio LLC,100.0,True,T,1
+100000286807,"Theragen, Inc.",Theragnostics Inc,55.907051282051285,False,T,1
+100000010647,Theragenics Corporation,Theragnostics Inc,63.4016317016317,False,T,1
+100001450629,Therakos Healthcare LLC,Therakos Inc,59.00389863547758,False,T,1
+100000491811,"TherapeuticsMD, Inc.",TherapeuticsMD Inc,100.0,True,T,1
+100000071363,Theratechnologies Inc.,Theratechnologies Inc,100.0,True,T,1
+100000966835,"Thommen Medical USA, LLC",Thompson Medical Solutions LLC,50.076113056376215,False,T,1
+100000010959,"ThromboGenics, Inc.",ThromboGenics Inc,100.0,True,T,1
+100000010959,"Thrombogenics, Inc.",ThromboGenics Inc,100.0,True,T,1
+100000766811,"Thrombolex, Inc.",ThromboGenics Inc,56.44981517338496,False,T,1
+100000151680,"Titan Pharmaceuticals, Inc.",Titan Pharmaceuticals Inc,100.0,True,T,1
+100000010803,"Tolmar, Inc.",TOLMAR Inc,100.0,True,T,1
+100000010985,"Topera, Inc.",Toprail Chp Llc,51.0102495543672,False,T,1
+100000196818,"TrackX Technology, Inc.",Transfer Technology,59.87605126745193,False,T,1
+100000010939,"TransMedics, Inc.",Theragnostics Inc,51.7972027972028,False,T,1
+100000061305,"Travere Therapeutics, Inc.",Travere Therapeutics,100.0,True,T,1
+100000916823,"Trevena, Inc.",Trevena Inc,100.0,True,T,1
+100000000140,"TriSalus Life Sciences, Inc.",TILDE Sciences LLC,54.92196692196692,False,T,1
+100000971834,Triad Life Sciences Inc.,TILDE Sciences LLC,58.888799796694535,False,T,1
+100000011232,Tris Pharma Inc,Tris Pharma Inc,100.0,True,T,1
+100001381985,Turing Medical Technologies,Theratechnologies Inc,52.49884558055197,False,T,1
+100000010777,UCB GmBH,UCB Inc,56.903409090909086,False,U,1
+100000010777,UCB GmbH,UCB Inc,56.903409090909086,False,U,1
+100000010773,UCB SA,UCB Inc,61.583333333333336,False,U,1
+100000000073,"UCB, Inc.",UCB Inc,100.0,True,U,1
+100000181767,UNITED ORTHOPEDICS LLC,United Therapeutics Corporation,58.52848111269164,False,U,1
+100000005468,UPSHER-SMITH LABORATORIES LLC,Upsher-Smith Laboratories Inc,100.0,True,U,1
+100000776811,"UROGEN PHARMA, INC.",UroGen Pharma Inc,100.0,True,U,1
+100000000354,"US WorldMeds, LLC",US WorldMeds LLC,100.0,True,U,1
+100000901823,"USWM, LLC",USWM LLC,100.0,True,U,1
+100000196876,Ultragenyx Pharmaceutical Inc.,Ultragenyx Pharmaceutical Inc,100.0,True,U,1
+100000181767,United Orthopedics LLC,United Therapeutics Corporation,58.52848111269164,False,U,1
+100000010739,United Therapeutics Corporation,United Therapeutics Corporation,100.0,True,U,1
+100000005468,Upsher-Smith Laboratories LLC,Upsher-Smith Laboratories Inc,100.0,True,U,1
+100000776811,"UroGen Pharma, Inc.",UroGen Pharma Inc,100.0,True,U,1
+100001166889,VBI Vaccine (Delaware) Inc.,VBI Vaccines (Delaware) Inc,73.30390865173473,False,V,1
+100001166889,VBI Vaccines (Delaware) Inc.,VBI Vaccines (Delaware) Inc,100.0,True,V,1
+100000000184,VERTEX PHARMACEUTICALS INCORPORATED,Vertex Pharmaceuticals Incorporated,100.0,True,V,1
+100000005620,VIVUS LLC,VIVUS LLC,100.0,True,V,1
+100000005620,"VIVUS, Inc.",VIVUS LLC,100.0,True,V,1
+100000191775,"VYERA PHARMACEUTICALS, LLC",Vyera Pharmaceuticals LLC,100.0,True,V,1
+100000806848,VYNE Pharmaceuticals Inc.,Vyera Pharmaceuticals LLC,68.28682682315545,False,V,1
+100000000197,Validus Pharmaceuticals LLC,Validus Pharmaceuticals LLC,100.0,True,V,1
+100001351984,"Valinor Pharma, LLC",Valinor Pharma LLC,100.0,True,V,1
+100000010526,Valneva Austria GMBH,Valneva Scotland Ltd,50.195328282828285,False,V,1
+100000010526,Valneva Austria GmbH,Valneva Scotland Ltd,50.195328282828285,False,V,1
+100000010666,"Valneva USA, Inc.",Valneva Scotland Ltd,60.19486531986532,False,V,1
+100000010666,"Valneva Usa, Inc.",Valneva Scotland Ltd,60.19486531986532,False,V,1
+100000071361,Vanda Pharmaceuticals Inc.,Vanda Pharmaceuticals Inc,100.0,True,V,1
+100000071358,Vapotherm Inc,VistaPharm Inc,50.25275689223058,False,V,1
+100000151661,"Veloxis Pharmaceuticals, Inc.",Veloxis Pharmaceuticals Inc,100.0,True,V,1
+100000906823,"Veracyte, Inc.",Verastem Inc,59.0,False,V,1
+100000461814,"Verastem, Inc.",Verastem Inc,100.0,True,V,1
+100000000314,Verathon Inc.,Verastem Inc,51.69230769230769,False,V,1
+100000081401,Vericel Corporation,Vericel Corporation,100.0,True,V,1
+100000826826,Verity Pharmaceuticals Inc.,Verity Pharmaceuticals Inc,100.0,True,V,1
+100000851821,Verrica Pharmaceuticals Inc.,Verrica Pharmaceuticals Inc,100.0,True,V,1
+100000000184,Vertex Pharmaceuticals Incorporated,Vertex Pharmaceuticals Incorporated,100.0,True,V,1
+100001450459,"Vertical Orthopaedics, Inc.",Vertical Pharmaceuticals Inc,53.32142857142857,False,V,1
+100000011189,"Vertical Pharmaceuticals, LLC",Vertical Pharmaceuticals Inc,100.0,True,V,1
+100001156898,Veru Inc.,Veru Inc,100.0,True,V,1
+100000081386,Vifor (International) Ltd.,Vifor (International) Inc,100.0,True,V,1
+100000151638,"Vifor Pharma, Inc.",Vifor Pharma Inc,100.0,True,V,1
+100000005550,ViiV Healthcare Company,ViiV Healthcare Company,100.0,True,V,1
+100000806822,Virtus Pharmaceuticals LLC,Virtus Pharmaceuticals,100.0,True,V,1
+100000086359,"VistaPharm, Inc.",VistaPharm Inc,100.0,True,V,1
+100001341935,Vividion Therapeutics Inc.,VITRUVIAS THERAPEUTICS,59.34686018615747,False,V,1
+100000241807,Welcony Inc.,Welgo Llc,54.13333333333333,False,W,1
+100000196821,"West Therapeutics Development, LLC",West Therapeutics Development LLC,100.0,True,W,1
+100001241925,"Woven Orthopedic Technologies, LLC",Water-Jel Technologies,50.423582390113836,False,W,1
+100001448327,"X4 Pharmaceuticals, Inc.",X4 Pharmaceuticals Inc,100.0,True,X,1
+100000291834,Xellia Pharmaceuticals,Xellia Pharmaceuticals USA LLC,71.62179487179486,False,X,1
+100000781817,"Xeris Pharmaceuticals, Inc.",Xeris Pharmaceuticals Inc,100.0,True,X,1
+100000791820,Xiros Inc,Xiromed LLC,55.336507936507935,False,X,1
+100001131888,Xiros Limited,Xiromed LLC,55.336507936507935,False,X,1
+100000956824,"Y-mAbs Therapeutics, Inc.",Y-mAbs Therapeutics Inc,100.0,True,Y,1
+100001176924,Zambon USA Ltd.,Zambon USA Ltd,100.0,True,Z,1
+100000826821,Zealand Pharma A/S,Zealand Pharma US Inc,67.86519607843137,False,Z,1
+100000801822,"Zealand Pharma US, Inc.",Zealand Pharma US Inc,100.0,True,Z,1
+100000501821,"Zerigo Health, Inc.",ZO Skin Health Inc,52.83188478188478,False,Z,1
+100001448961,Zevra Therapeutics Inc,Zameer Pharmaceuticals LLC,50.75189393939394,False,Z,1
+100000005475,Zogenix Inc.,Zogenix Inc,100.0,True,Z,1
+100000151656,Zydus Pharmaceuticals (USA) Inc.,Zydus Pharmaceuticals (USA) Inc,100.0,True,Z,1
+100000136486,"Zyla Life Sciences, Inc.",Zyla Life Sciences US Inc,71.87912087912088,False,Z,1

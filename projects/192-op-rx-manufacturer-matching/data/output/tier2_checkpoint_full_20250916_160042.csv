@@ -1,0 +1,13 @@
+op_manufacturer_id,op_manufacturer_name,rx_manufacturer_name,match_rank,final_score,is_match,confidence_source,fuzzy_score,ai_score,blocking_key
+100000141529,ACADIA Pharmaceuticals Inc,ACADIA Pharmaceuticals Inc,1,100.0,True,fuzzy_high_confidence,100.0,,A
+100000000301,3M Company,3M Health Care,1,55.62857142857143,True,ai_enhanced,49.07142857142857,60.0,NUMERIC
+100000956826,"ACCORD HEALTHCARE, INC.",Accord Healthcare,1,100.0,True,fuzzy_high_confidence,100.0,,A
+100000956826,"ACCORD HEALTHCARE, INC.",Accord Healthcare Inc,2,100.0,True,fuzzy_high_confidence,100.0,,A
+100000966840,ACACIA PHARMA INC,Acacia Pharma Ltd,1,100.0,True,fuzzy_high_confidence,100.0,,A
+100000000204,ABBVIE INC.,AbbVie Inc,1,100.0,True,fuzzy_high_confidence,100.0,,A
+100000961860,"ADC Therapeutics America, Inc.",ADC Therapeutics America Inc,1,100.0,True,fuzzy_high_confidence,100.0,,A
+100001226925,AGEPHA Pharma FZ LLC,AGEPHA Pharma USA LLC,1,68.77595734218453,True,ai_enhanced,66.93989335546131,70.0,A
+100000521827,AKEBIA THERAPEUTICS INC,Akebia Therapeutics Inc,1,100.0,True,fuzzy_high_confidence,100.0,,A
+100000776814,"AIMMUNE THERAPEUTICS, INC.",Aimmune Therapeutics,1,100.0,True,fuzzy_high_confidence,100.0,,A
+100000776814,"AIMMUNE THERAPEUTICS, INC.",Aimmune Therapeutics Inc,2,100.0,True,fuzzy_high_confidence,100.0,,A
+100001056884,"ALBIREO PHARMA, INC.",Albireo Pharma Inc,1,100.0,True,fuzzy_high_confidence,100.0,,A
