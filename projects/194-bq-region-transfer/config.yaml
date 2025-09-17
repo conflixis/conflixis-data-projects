@@ -1,0 +1,59 @@
+# BigQuery Region Transfer Configuration
+# DA-194: BigQuery Region Transfer
+
+transfer:
+  # Source dataset configuration
+  source:
+    dataset: "op_20250702"
+    location: "us-east4"
+
+  # Destination dataset configuration
+  destination:
+    dataset: "op_20250702_US"
+    location: "US"
+
+  # Google Cloud Storage configuration
+  gcs:
+    bucket: "conflixis-temp"
+    cleanup_after_transfer: true
+
+  # Transfer behavior
+  options:
+    batch_size: 10  # Number of tables to process in parallel
+    verify_row_counts: true
+    preserve_partitioning: true
+    preserve_clustering: true
+    export_format: "PARQUET"  # Options: PARQUET, AVRO, JSON, CSV
+
+  # Retry configuration
+  retry:
+    max_attempts: 3
+    delay_seconds: 5
+
+# Logging configuration
+logging:
+  level: "INFO"  # DEBUG, INFO, WARNING, ERROR
+  file: "transfer.log"
+
+# Progress tracking
+progress:
+  file: "migration_progress.json"
+  checkpoint_frequency: 1  # Save progress after every N tables
+
+# Table filters (optional)
+filters:
+  # Only transfer tables matching these patterns
+  include_tables: []  # e.g., ["table1", "table2", "prefix_*"]
+
+  # Skip tables matching these patterns
+  exclude_tables: []  # e.g., ["temp_*", "backup_*"]
+
+  # Size limits
+  max_table_size_gb: null  # Skip tables larger than this
+
+# Monitoring (optional)
+monitoring:
+  send_notifications: false
+  webhook_url: null
+  email_on_completion: null
+  email_on_failure: null
