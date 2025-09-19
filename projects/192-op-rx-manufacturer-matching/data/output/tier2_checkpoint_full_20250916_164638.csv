@@ -1,0 +1,46 @@
+op_manufacturer_id,op_manufacturer_name,rx_manufacturer_name,match_rank,final_score,is_match,confidence_source,fuzzy_score,ai_score,blocking_key
+100000956826,"ACCORD HEALTHCARE, INC.",Accord Healthcare,1,100.0,True,fuzzy_high_confidence,100.0,,A
+100000956826,"ACCORD HEALTHCARE, INC.",Accord Healthcare Inc,2,100.0,True,fuzzy_high_confidence,100.0,,A
+100000000301,3M Company,3M Health Care,1,55.62857142857143,True,ai_enhanced,49.07142857142857,60.0,NUMERIC
+100000966840,ACACIA PHARMA INC,Acacia Pharma Ltd,1,100.0,True,fuzzy_high_confidence,100.0,,A
+100000000204,ABBVIE INC.,AbbVie Inc,1,100.0,True,fuzzy_high_confidence,100.0,,A
+100000000204,AbbVie Inc.,AbbVie Inc,2,100.0,True,fuzzy_high_confidence,100.0,,A
+100000141529,ACADIA Pharmaceuticals Inc,ACADIA Pharmaceuticals Inc,1,100.0,True,fuzzy_high_confidence,100.0,,A
+100000961860,"ADC Therapeutics America, Inc.",ADC Therapeutics America Inc,1,100.0,True,fuzzy_high_confidence,100.0,,A
+100000521827,AKEBIA THERAPEUTICS INC,Akebia Therapeutics Inc,1,100.0,True,fuzzy_high_confidence,100.0,,A
+100001226925,AGEPHA Pharma FZ LLC,AGEPHA Pharma USA LLC,1,68.77595734218453,True,ai_enhanced,66.93989335546131,70.0,A
+100000776814,"AIMMUNE THERAPEUTICS, INC.",Aimmune Therapeutics,1,100.0,True,fuzzy_high_confidence,100.0,,A
+100000776814,"AIMMUNE THERAPEUTICS, INC.",Aimmune Therapeutics Inc,2,100.0,True,fuzzy_high_confidence,100.0,,A
+100001056884,"ALBIREO PHARMA, INC.",Albireo Pharma Inc,1,100.0,True,fuzzy_high_confidence,100.0,,A
+100000501813,"AQUESTIVE THERAPEUTICS, INC.",Aquestive Therapeutics,1,100.0,True,fuzzy_high_confidence,100.0,,A
+100000005507,"ARBOR PHARMACEUTICALS, INC.",Arbor Pharmaceuticals,1,100.0,True,fuzzy_high_confidence,100.0,,A
+100000005507,"ARBOR PHARMACEUTICALS, INC.",Arbor Pharmaceuticals Inc,2,100.0,True,fuzzy_high_confidence,100.0,,A
+100000005507,"ARBOR PHARMACEUTICALS, INC.",Azurity Pharmaceuticals Inc (formerly Arbor Pharmaceuticals),3,69.07416391261873,True,ai_enhanced,45.18540978154684,85.0,A
+100000971883,"ANI Pharmaceuticals, Inc.",ANI Pharmaceuticals Inc,1,100.0,True,fuzzy_high_confidence,100.0,,A
+100000010948,"AMAG Pharmaceuticals, Inc.",AMAG Pharmaceuticals Inc,1,100.0,True,fuzzy_high_confidence,100.0,,A
+100000151575,APTEVO THERAPEUTICS INC,Aptevo BioTherapeutics LLC,1,66.71826350799392,True,ai_enhanced,69.29565876998483,65.0,A
+100000010705,"ALK-Abello, Inc",ALK-Abello Inc,1,100.0,True,fuzzy_high_confidence,100.0,,A
+100000010705,"ALK-Abello, Inc",ALK-Abello A S,2,72.65714285714286,True,ai_enhanced,69.14285714285714,75.0,A
+100000231820,ARRAY BIOPHARMA INC,Array BioPharma Inc,1,100.0,True,fuzzy_high_confidence,100.0,,A
+100001156891,"ARGENX US, INC.",argenx US,1,100.0,True,fuzzy_high_confidence,100.0,,A
+100000000129,"ASCEND Therapeutics US, LLC",ASCEND Therapeutics US LLC,1,100.0,True,fuzzy_high_confidence,100.0,,A
+100000000129,"ASCEND THERAPEUTICS US, LLC",ASCEND Therapeutics US LLC,2,100.0,True,fuzzy_high_confidence,100.0,,A
+100000000129,"ASCEND Therapeutics US, LLC",ASCEND Therapeutics,3,79.95831485587583,True,ai_enhanced,72.39578713968957,85.0,A
+100000151699,"AYTU BioPharma, Inc.",Aytu BioPharma Inc,1,100.0,True,fuzzy_high_confidence,100.0,,A
+100000151699,"AYTU BioPharma, Inc.",Aytu BioScience Inc,2,71.66239140170174,True,ai_enhanced,51.655978504254364,85.0,A
+100000151699,"AYTU BioPharma, Inc.",Aytu Therapeutics,3,58.04704677569953,True,ai_enhanced,47.61761693924881,65.0,A
+100001176922,"Aadi Bioscience, Inc.",Aadi Bioscience,1,100.0,True,fuzzy_high_confidence,100.0,,A
+100000456811,"AcelRx Pharmaceuticals, Inc.",AcelRx Pharmaceuticals Inc,1,100.0,True,fuzzy_high_confidence,100.0,,A
+100000196863,"Acella Pharmaceuticals, LLC",ACELLA PHARMACEUTICALS,1,100.0,True,fuzzy_high_confidence,100.0,,A
+100000196863,"Acella Pharmaceuticals, LLC",Acella Pharmaceuticals LLC,2,100.0,True,fuzzy_high_confidence,100.0,,A
+100000736811,Acerus Pharmaceuticals Corporation,Acerus Pharmaceuticals Corporation,1,100.0,True,fuzzy_high_confidence,100.0,,A
+100000981882,Acrotech Biopharma LLC,Acrotech Biopharma Inc,1,100.0,True,fuzzy_high_confidence,100.0,,A
+100000981882,Acrotech Biopharma LLC,Acrotech Biopharma LLC,2,100.0,True,fuzzy_high_confidence,100.0,,A
+100000981882,Acrotech Biopharma Inc.,Acrotech Biopharma Inc,3,100.0,True,fuzzy_high_confidence,100.0,,A
+100000010813,"Actelion Pharmaceuticals US, Inc.",Actelion Pharmaceuticals US Inc,1,100.0,True,fuzzy_high_confidence,100.0,,A
+100000010476,"Actelion Pharmaceuticals, Ltd",Actelion Pharmaceuticals US Inc,1,80.16078431372549,True,ai_enhanced,72.90196078431372,85.0,A
+100000010800,"Acorda Therapeutics, Inc",Acorda Therapeutics Inc,1,100.0,True,fuzzy_high_confidence,100.0,,A
+100000151657,"Adare Pharmaceuticals, Inc.",Adare Pharmaceuticals Inc,1,100.0,True,fuzzy_high_confidence,100.0,,A
+100000226811,"Adamas Pharmaceuticals, Inc.",Adamas Pharma LLC,1,67.3948051948052,True,ai_enhanced,63.48701298701299,70.0,A
+100000506820,Adlon Therapeutics L.P.,Adlon Therapeutics LP,1,88.58181818181818,True,ai_enhanced,71.45454545454545,100.0,A
+100000196773,Advanced Accelerator Applications,Advanced Accelerator Applications USA Inc,1,80.18455598455598,True,ai_enhanced,72.96138996138995,85.0,A

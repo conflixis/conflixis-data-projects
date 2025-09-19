@@ -1,0 +1,98 @@
+# OP-RX Manufacturer Name Matching Configuration
+# Based on successful Tier 2 matching methodology from DA-156
+
+# BigQuery Configuration
+bigquery:
+  project_id: "data-analytics-389803"
+  op_table: "OPR_PHYS_OTH.GNRL_PAYMENTS_optimized"
+  rx_table: "MDRX_PRESCRIPTIONS.MED_D_DATASETS_optimized"
+  output_dataset: "temp"
+  output_table: "manufacturer_name_mapping"
+
+# Matching Parameters (optimized for healthcare manufacturer names)
+matching:
+  # Fuzzy matching threshold (accept without AI if above this)
+  fuzzy_threshold: 85.0
+
+  # Final decision threshold
+  decision_threshold: 50.0
+
+  # Return top N matches per manufacturer
+  top_n_matches: 3
+
+  # AI model for enhancement
+  ai_model: "gpt-4o-mini"
+
+  # Maximum concurrent AI workers
+  max_workers: 30
+
+# Processing Configuration
+processing:
+  # Batch size for processing
+  batch_size: 100
+
+  # Enable AI enhancement for low-confidence matches
+  use_ai_enhancement: true
+
+  # Save intermediate results
+  save_interim: true
+
+# Output Configuration
+output:
+  # Include unmatched manufacturers in output
+  include_unmatched: true
+
+  # Minimum confidence to include in final mapping
+  min_confidence: 60.0
+
+  # Output formats
+  formats:
+    - csv
+    - json
+    - bigquery
+
+# Name Preprocessing Rules
+preprocessing:
+  # Remove common suffixes
+  remove_suffixes:
+    - "inc"
+    - "incorporated"
+    - "corp"
+    - "corporation"
+    - "llc"
+    - "ltd"
+    - "limited"
+    - "company"
+    - "co"
+    - "plc"
+    - "lp"
+    - "llp"
+    - "usa"
+    - "us"
+    - "america"
+    - "holdings"
+    - "group"
+
+  # Healthcare-specific abbreviation expansions
+  abbreviations:
+    "pharma": "pharmaceuticals"
+    "pharm": "pharmaceuticals"
+    "lab": "laboratories"
+    "labs": "laboratories"
+    "med": "medical"
+    "intl": "international"
+    "natl": "national"
+    "sci": "sciences"
+    "bio": "biological"
+    "diag": "diagnostics"
+    "surg": "surgical"
+    "inst": "instruments"
+    "dev": "devices"
+    "tech": "technologies"
+    "ther": "therapeutics"
+    "onc": "oncology"
+
+# Logging Configuration
+logging:
+  level: "INFO"
+  file: "logs/manufacturer_matching.log"
