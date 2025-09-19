@@ -90,6 +90,13 @@ scripts/legacy/
 *~
 .~*
 
+# QC and check scripts (temporary analysis)
+scripts/check_*.py
+scripts/qc_*.py
+
+# Root CONFIG.yaml (use config/ folder instead)
+CONFIG.yaml
+
 # BigQuery credentials
 service-account-key.json
 credentials.json
