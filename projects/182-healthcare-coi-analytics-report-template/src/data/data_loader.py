@@ -663,11 +663,14 @@ class DataLoader:
                 po.NPI,
                 po.CREDENTIAL,
                 po.SPECIALTY_PRIMARY,
-                CASE 
-                    WHEN po.CREDENTIAL IN ('MD', 'DO') THEN 'Physician'
-                    WHEN po.CREDENTIAL IN ('NP', 'CNP', 'ARNP', 'FNP', 'APRN') THEN 'Nurse Practitioner'
-                    WHEN po.CREDENTIAL IN ('PA', 'PA-C') THEN 'Physician Assistant'
-                    ELSE 'Other'
+                CASE
+                    WHEN po.ROLE_NAME = 'Physician' THEN 'Physician'
+                    WHEN po.ROLE_NAME = 'Hospitalist' THEN 'Physician'  -- Hospitalists are physicians
+                    WHEN po.ROLE_NAME = 'Nurse Practitioner' THEN 'Nurse Practitioner'
+                    WHEN po.ROLE_NAME = 'Physician Assistant' THEN 'Physician Assistant'
+                    WHEN po.ROLE_NAME IN ('Certified Registered Nurse Anesthetist', 'Certified Nurse Midwife') THEN 'Advanced Practice Nurse'
+                    WHEN po.ROLE_NAME = 'Dentist' THEN 'Dentist'
+                    ELSE 'Other Healthcare Professional'
                 END AS provider_type_category
             FROM `{self.config['bigquery']['project_id']}.{self.config['bigquery']['dataset']}.PHYSICIANS_OVERVIEW_optimized` po
             INNER JOIN 

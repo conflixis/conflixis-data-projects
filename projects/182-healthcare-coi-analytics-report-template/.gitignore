@@ -55,7 +55,8 @@ data/inputs/*
 # Reports folder - ignore all reports and figures
 reports/*.md
 reports/*.html
-reports/*.pdf
+# Allow PDFs to be version controlled for report tracking
+# reports/*.pdf
 reports/figures/*.png
 reports/figures/*.jpg
 reports/figures/*.svg

@@ -142,6 +142,7 @@ correlation_analysis:
 
 provider_vulnerability:
   data_required:
+    - all_provider_types
     - provider_type_comparison
     - pa_influence_metrics
     - np_influence_metrics
@@ -153,55 +154,54 @@ provider_vulnerability:
     Data provided:
     {data}
     
-    YOU HAVE BEEN PROVIDED WITH COMPLETE DATA. Look for these EXACT sections in the data above:
+    CRITICAL: Look for "All Provider Types" DataFrame first. This contains ALL provider categories with these columns:
+    - provider_type (category name)
+    - total_providers (count)
+    - providers_with_payments (count with >$1,000 payments)
+    - avg_rx_without_payments (average prescriptions for those without significant payments)
+    - avg_rx_with_payments (average prescriptions for those with significant payments)
+    - rx_cost_influence (influence factor as ratio)
+    - rx_cost_influence_pct (influence as percentage increase)
     
-    1. "Md Baseline:" section contains Physician data with:
-       - provider_count (number like 10,523)
-       - providers_with_payments (number like 8,858)  
-       - avg_rx_without_payments (dollar value)
-       - avg_rx_with_payments (dollar value)
-       - influence_factor (number with 'x' like 256.5x)
+    The DataFrame may include these provider types:
+    - Physician
+    - Physician Assistant
+    - Nurse Practitioner
+    - Dentist
+    - Other Healthcare Professional
+    - Low-Prescribers WITH Payments (providers with ≤$1,000 total prescriptions but received >$1,000 payments)
+    - Low-Prescribers NO Payments (providers with ≤$1,000 total prescriptions and ≤$1,000 payments)
     
-    2. "Pa Influence Metrics:" section contains Physician Assistant data with:
-       - provider_count (number like 1,140)
-       - providers_with_payments (number like 944)
-       - avg_rx_without_payments (dollar value)
-       - avg_rx_with_payments (dollar value)  
-       - influence_factor (number with 'x' like 238.4x)
-    
-    3. "Np Influence Metrics:" section contains Nurse Practitioner data with:
-       - provider_count (number like 2,087)
-       - providers_with_payments (number like 1,764)
-       - avg_rx_without_payments (dollar value)
-       - avg_rx_with_payments (dollar value)
-       - influence_factor (number with 'x' like 146.5x)
-    
-    CREATE THIS TABLE using the exact numbers from above:
+    MANDATORY: CREATE A COMPREHENSIVE TABLE including ALL 9 rows from the "All Provider Types" DataFrame:
     | Provider Type | Total Providers | With Payments | Avg Rx (No Pay) | Avg Rx (With Pay) | Influence Factor |
     |---------------|-----------------|---------------|-----------------|-------------------|------------------|
-    | Physicians (MD) | [use provider_count from Md Baseline] | [use providers_with_payments] | [use avg_rx_without_payments] | [use avg_rx_with_payments] | [use influence_factor] |
-    | Physician Assistants (PA) | [use provider_count from Pa Influence Metrics] | [use providers_with_payments] | [use avg_rx_without_payments] | [use avg_rx_with_payments] | [use influence_factor] |
-    | Nurse Practitioners (NP) | [use provider_count from Np Influence Metrics] | [use providers_with_payments] | [use avg_rx_without_payments] | [use avg_rx_with_payments] | [use influence_factor] |
+    [You MUST include ALL rows, including Low-Prescriber categories. If influence factor is 0.0, show "0.0". If -1.0, show "N/A - Baseline"]
     
     After the table, analyze:
-    - PAs show influence factor close to MDs (both over 200x)
-    - NPs show lower but still significant influence (around 150x)
-    - Implications for oversight and supervision
+    - Traditional provider patterns (Physicians, PAs, NPs)
+    - Other provider types if present (Dentists, Other Healthcare Professionals)
+    - Low-Prescriber categories if present (explain these are providers with minimal prescribing activity)
+    - Compare influence factors across ALL categories
+    - Implications for oversight across different provider types
     
-    ALL DATA IS PROVIDED ABOVE - DO NOT SAY "DATA NOT AVAILABLE"
-    
-    Key message: Mid-level providers show disproportionate influence from payments (ONLY if data supports this).
-    Use terms like "heightened susceptibility" and "vulnerability gap" ONLY with real data.
+    Structure the narrative:
+    1. Opening statement mentioning ALL 9 provider types analyzed
+    2. Present the complete data table (MUST include all 9 rows including both Low-Prescriber categories)
+    3. Discuss traditional providers (MD, PA, NP) patterns
+    4. Analyze other provider categories (Dentists, Other Healthcare Professionals, etc.)
+    5. MANDATORY: Explain Low-Prescriber categories (2,303 with NO payments, 339 WITH payments)
+       - These are providers with ≤$1,000 total prescriptions
+       - Important for understanding the full provider landscape
+    6. Compare and contrast influence patterns across all groups
+    7. Implications for targeted oversight strategies
     
     TONE GUIDELINES:
-    - Replace "vulnerability" and "susceptibility" with "variation" or "differences"
+    - Use "prescribing variations" not "vulnerability"
     - Present as "observed patterns across provider types"
-    - Avoid implying weakness or exploitation
-    - Use neutral terms: "payment patterns", "prescribing differences"
-    - Don't use: "heightened susceptibility", "vulnerability gap"
-    - Use: "prescribing variations", "differential patterns"
+    - Be neutral and factual about all provider categories
+    - Explain what Low-Prescriber categories represent if present
     
-    Length: 300-400 words
+    Length: 400-500 words
 
 payment_tiers:
   data_required:

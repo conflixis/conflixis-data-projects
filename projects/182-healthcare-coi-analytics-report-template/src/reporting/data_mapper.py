@@ -72,6 +72,8 @@ class SectionDataMapper:
             data_map['pa_influence_metrics'] = self._extract_pa_metrics(corr)
             data_map['np_influence_metrics'] = self._extract_np_metrics(corr)
             data_map['md_baseline'] = self._extract_md_baseline(corr)
+            # Add full provider types data for comprehensive reporting
+            data_map['all_provider_types'] = self._extract_all_provider_types(corr)
             data_map['specific_drug_examples'] = self._get_specific_drug_examples(corr)
         
         # Risk Assessment mappings
@@ -240,6 +242,15 @@ class SectionDataMapper:
                 return md_data.iloc[0].to_dict()
         
         return {}  # Return empty dict if no data available
+    
+    def _extract_all_provider_types(self, corr: Dict) -> pd.DataFrame:
+        """Extract all provider types from vulnerability analysis"""
+        # Check both possible keys (report_generator uses 'provider_vulnerability')
+        df = corr.get('provider_vulnerability', corr.get('provider_type_vulnerability', pd.DataFrame()))
+        if isinstance(df, pd.DataFrame) and not df.empty:
+            # Return the full DataFrame with all provider types
+            return df
+        return pd.DataFrame()  # Return empty DataFrame if no data available
     
     def _get_specific_drug_examples(self, corr: Dict) -> List[Dict]:
         """Get specific drug examples with high influence factors"""
